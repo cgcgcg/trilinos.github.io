@@ -58,7 +58,7 @@ jobs:
       uses: actions/cache/restore@5a3ec84eff668545956fd18022155c47e93e2684 # v4.2.3
       with:
         path: /home/runner/.cache/ccache
-        key: ccache
+        key: ccache-${{ env.DOC_REF }}
 
     - name: Build Trilinos
       run: |
@@ -75,7 +75,7 @@ jobs:
         GH_TOKEN: ${{ github.token }}
       run: |
         gh extension install actions/gh-actions-cache
-        gh actions-cache delete ccache --confirm
+        gh actions-cache delete ccache-${{ env.DOC_REF }} --confirm
       continue-on-error: true
 
     - name: Push new ccache cache for Trilinos build
@@ -83,7 +83,7 @@ jobs:
       uses: actions/cache/save@5a3ec84eff668545956fd18022155c47e93e2684 # v4.2.3
       with:
         path: /home/runner/.cache/ccache
-        key: ccache
+        key: ccache-${{ env.DOC_REF }}
 
     - name: Pull doxygen cache
       if: always()
@@ -91,7 +91,7 @@ jobs:
       uses: actions/cache/restore@1bd1e32a3bdc45362d1e726936510720a7c30a57 # v4.2.0
       with:
         path: ${{ env.TRILINOS_SOURCE }}/packages/*/doc/html
-        key: html
+        key: html-${{ env.DOC_REF }}
         
     - name: Run doxygen
       run: |
@@ -110,7 +110,7 @@ jobs:
       env:
         GH_TOKEN: ${{ github.token }}
       run: |
-        gh cache delete html
+        gh cache delete html-${{ env.DOC_REF }}
       continue-on-error: true
 
     - name: Push new doxygen cache
@@ -118,7 +118,7 @@ jobs:
       uses: actions/cache/save@1bd1e32a3bdc45362d1e726936510720a7c30a57 # v4.2.0
       with:
         path: ${{ env.TRILINOS_SOURCE }}/packages/*/doc/html
-        key: html
+        key: html-${{ env.DOC_REF }}
 
     - name: Copy html to webpages
       run: |
