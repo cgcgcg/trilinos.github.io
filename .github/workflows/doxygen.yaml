@@ -92,6 +92,13 @@ jobs:
         path: /home/runner/.cache/ccache
         key: ccache-${{ env.DOC_REF }}
 
+    - name: Copy XML files
+      run: |
+        mkdir ${{ env.TRILINOS_SOURCE }}/packages/belos/doc/html
+        ${{ env.TRILINOS_SOURCE }}/packages/belos/doc/copy_xml_to_src_html.py ${{ env.TRILINOS_BUILD }}
+        mkdir ${{ env.TRILINOS_SOURCE }}/packages/stratimikos/doc/html
+        ${{ env.TRILINOS_SOURCE }}/packages/stratimikos/doc/copy_xml_to_src_html.py ${{ env.TRILINOS_BUILD }}
+
     - name: Pull doxygen cache
       if: always()
       id: cache-restore
@@ -106,11 +113,6 @@ jobs:
         ./build_docs.pl
         popd
         
-    - name: Copy XML files
-      run: |
-        ${{ env.TRILINOS_SOURCE }}/packages/belos/doc/copy_xml_to_src_html.py ${{ env.TRILINOS_BUILD }}
-        ${{ env.TRILINOS_SOURCE }}/packages/stratimikos/doc/copy_xml_to_src_html.py ${{ env.TRILINOS_BUILD }}
-
     - name: Invalidate old doxygen cache
       if: ${{ steps.cache-restore.outputs.cache-hit }}
       shell: bash
