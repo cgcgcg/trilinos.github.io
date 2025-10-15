@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Error Messages &mdash; MueLu Tutorial 2023 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=86f27845" />
+
+  
+  
+        <script src="../_static/jquery.js?v=8dae8fb0"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=a4664895"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            MueLu Tutorial
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Beginners Tutorial</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="quick_start.html">Quick start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="level_smoothers.html">Level smoothers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multigrid_for_non_symmetric_problems.html">Multigrid for non-symmetric problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="useful_tools_for_analysis.html">Useful tools for analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cd_example.html">Challenge: CD example</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="xml_interface_for_advanced_users.html">XML interface for advanced users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="muelu_factories_for_transfer_operators.html">MueLu factories for transfer operators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rebalancing.html">Rebalancing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advanced_concepts.html">Advanced concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aggregation.html">Aggregation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="useful_commands_and_debugging.html">Useful commands and debugging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="challenge.html">Challenge: elasticity example</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Expert Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="multigrid_for_multiphysics.html">Multigrid for Multiphysics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user_api.html">Using MueLu in User Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml_parameterlist_interpreter.html">ML ParameterList interpreter</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MueLu Tutorial</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Error Messages</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/pages/error_messages.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="error-messages">
+<h1>Error Messages<a class="headerlink" href="#error-messages" title="Link to this heading"></a></h1>
+<p>This section summarizes typical error messages and hints how to address the underlying problem.</p>
+<section id="syntax-errors">
+<h2>Syntax errors<a class="headerlink" href="#syntax-errors" title="Link to this heading"></a></h2>
+<section id="parser-errors">
+<h3>Parser errors<a class="headerlink" href="#parser-errors" title="Link to this heading"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">XML</span> <span class="n">parse</span> <span class="n">error</span> <span class="n">at</span> <span class="n">line</span> <span class="mi">27</span><span class="p">:</span> <span class="n">file</span> <span class="n">ended</span> <span class="n">before</span> <span class="n">closing</span> <span class="n">element</span> <span class="s1">&#39;ParameterList&#39;</span> <span class="kn">from</span> <span class="nn">line</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>It seems like you forgot to close the <strong>&lt;ParameterList&gt;</strong> section that is opened in line 1 of the xml file.
+Close it by adding the line <strong>&lt;/ParameterList&gt;</strong> at the end of the (sub-)list.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">XML</span> <span class="n">parse</span> <span class="n">error</span> <span class="n">at</span> <span class="n">line</span> <span class="mi">15</span><span class="p">:</span> <span class="n">start</span> <span class="n">element</span> <span class="ow">not</span> <span class="n">well</span><span class="o">-</span><span class="n">formed</span><span class="p">:</span> <span class="n">invalid</span> <span class="n">character</span>
+</pre></div>
+</div>
+<p>Check line 15 for an invalid xml format.
+The reason can be, e.g., a missing closing character <strong>/&gt;</strong> for a parameter.</p>
+</section>
+<section id="parameter-list-errors">
+<h3>Parameter list errors<a class="headerlink" href="#parameter-list-errors" title="Link to this heading"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>All child nodes of a ParameterList must have a name attribute!
+</pre></div>
+</div>
+<p>You probably forgot to add a name attribute in one or more elements of your xml file, that is you used, e.g.,</p>
+<ul class="simple">
+<li><p>&lt;Parameter  type=”string” value=”RELAXATION”/&gt;</p></li>
+</ul>
+<p>instead of</p>
+<ul class="simple">
+<li><p>&lt;Parameter name=”smoother: type” type=”string” value=”RELAXATION”/&gt;</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Error</span><span class="p">,</span> <span class="n">the</span> <span class="n">parameter</span> <span class="p">{</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;smoother: type&quot;</span><span class="p">,</span><span class="nb">type</span><span class="o">=</span><span class="s2">&quot;int&quot;</span><span class="p">,</span><span class="n">value</span><span class="o">=</span><span class="s2">&quot;0&quot;</span><span class="p">}</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">parameter</span> <span class="p">(</span><span class="n">sub</span><span class="p">)</span><span class="nb">list</span> <span class="s2">&quot;ANONYMOUS&quot;</span> <span class="n">exists</span> <span class="ow">in</span> <span class="n">the</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">valid</span> <span class="n">parameters</span> <span class="n">but</span> <span class="n">has</span> <span class="n">the</span> <span class="n">wrong</span> <span class="nb">type</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>Choose the coorect type.
+The correct type depends on the parameter at hand.
+In this example, the correct type is “string”.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Use</span> <span class="n">the</span> <span class="n">correct</span> <span class="p">(</span><span class="n">proposed</span><span class="p">)</span> <span class="n">value</span> <span class="nb">type</span> <span class="k">for</span> <span class="n">the</span> <span class="n">given</span> <span class="n">parameter</span> <span class="n">name</span><span class="p">,</span> <span class="n">i</span><span class="o">.</span><span class="n">e</span><span class="o">.</span><span class="p">,</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>&lt;Parameter name=”smoother: type” type=”string” value=”RELAXATION”/&gt;</p></li>
+</ul>
+<p>instead of</p>
+<ul class="simple">
+<li><p>&lt;Parameter name=”smoother: type” type=”int” value=”RELAXATION”/&gt;</p></li>
+</ul>
+</section>
+</section>
+<section id="muelu-errors">
+<h2>MueLu errors<a class="headerlink" href="#muelu-errors" title="Link to this heading"></a></h2>
+<section id="general-errors">
+<h3>General errors<a class="headerlink" href="#general-errors" title="Link to this heading"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Throw</span> <span class="n">test</span> <span class="n">that</span> <span class="n">evaluated</span> <span class="n">to</span> <span class="n">true</span><span class="p">:</span> <span class="n">s_</span><span class="o">.</span><span class="n">is_null</span><span class="p">()</span>
+
+<span class="n">Smoother</span> <span class="k">for</span> <span class="n">Tpetra</span> <span class="n">was</span> <span class="ow">not</span> <span class="n">constructed</span>
+    <span class="n">during</span> <span class="n">request</span> <span class="k">for</span> <span class="n">data</span> <span class="s2">&quot;    PreSmoother&quot;</span> <span class="n">on</span> <span class="n">level</span> <span class="mi">0</span> <span class="n">by</span> <span class="n">factory</span> <span class="n">NoFactory</span>
+</pre></div>
+</div>
+<p>Failed to create a level smoother. Check the smoother blocks in your xml file.
+The error occurs, e.g., if there is a typing error in the <strong>smoother: type</strong> parameter.
+For example</p>
+<ul class="simple">
+<li><p>&lt;Parameter name=”smoother: type” type=”string” value=”REXATION”/&gt;</p></li>
+</ul>
+<p>would trigger above error since the smoother type should be <strong>RELAXATION</strong>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">IFPACK</span> <span class="n">ERROR</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="n">ifpack</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">Ifpack_PointRelaxation</span><span class="o">.</span><span class="n">cpp</span><span class="p">,</span> <span class="n">line</span> <span class="mi">117</span>
+</pre></div>
+</div>
+<p>Errors like this indicate that it is a problem within the <strong>smoother: params</strong> section. Most likely a (relaxation) smoother is requested which is not existing (e.g., <strong>Jadobi</strong> instead of <strong>Jacobi</strong>).</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Switch this example to Ifpack2.</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>The parameter name &quot;smother: type&quot; is not valid. Did you mean &quot;smoother: type&quot;?
+</pre></div>
+</div>
+<p>There is a typo in your parameter list.
+Locate the parameter and fix it (possibly using the suggestions, that come with the error message).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Throw</span> <span class="n">test</span> <span class="n">that</span> <span class="n">evaluated</span> <span class="n">to</span> <span class="n">true</span><span class="p">:</span> <span class="n">maxNodesPerAggregate</span> <span class="o">&lt;</span> <span class="n">minNodesPerAggregate</span>
+</pre></div>
+</div>
+<p>Choose the <strong>aggregation: min agg size</strong> parameter to be smaller than the <strong>aggregation: max agg size</strong> parameter for the aggregation routine.</p>
+</section>
+<section id="advanced-xml-file-format">
+<h3>Advanced XML file format<a class="headerlink" href="#advanced-xml-file-format" title="Link to this heading"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Throw</span> <span class="n">test</span> <span class="n">that</span> <span class="n">evaluated</span> <span class="n">to</span> <span class="n">true</span><span class="p">:</span> <span class="n">bIsZeroNSColumn</span> <span class="o">==</span> <span class="n">true</span>
+
+<span class="n">MueLu</span><span class="p">::</span><span class="n">TentativePFactory</span><span class="p">::</span><span class="n">MakeTentative</span><span class="p">:</span> <span class="n">fine</span> <span class="n">level</span> <span class="n">NS</span> <span class="n">part</span> <span class="n">has</span> <span class="n">a</span> <span class="n">zero</span> <span class="n">column</span>
+</pre></div>
+</div>
+<p>This error indicates that there is a problem with the provided near null space vectors. There are different reasons which can trigger this problem:</p>
+<ul class="simple">
+<li><p>The near null space vectors are not valid (containing zeros, wrong ordering of internal degrees of freedom).</p></li>
+</ul>
+<p>Please check your near null space vectors.
+Maybe there is an empty vector or the ordering of degrees of freedom for the linear operator
+does not match with the ordering of the near null space vectors.
+* The near null space vectors are correct but used in a wrong way (e.g., a wrong number of degrees of freedom).
+Check the screen output for wrong block dimensions (CoalesceDropFactory).
+* There is a problem with the aggregates.
+Validate the screen output and look for unusual (e.g. very small or empty) aggregates.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Throw</span> <span class="n">test</span> <span class="n">that</span> <span class="n">evaluated</span> <span class="n">to</span> <span class="n">true</span><span class="p">:</span> <span class="n">factoryManager_</span> <span class="o">==</span> <span class="n">null</span>
+
+<span class="n">MueLu</span><span class="p">::</span><span class="n">Level</span><span class="p">(</span><span class="mi">0</span><span class="p">)::</span><span class="n">GetFactory</span><span class="p">(</span><span class="n">Aggregates</span><span class="p">,</span> <span class="mi">0</span><span class="p">):</span> <span class="n">No</span> <span class="n">FactoryManager</span>
+</pre></div>
+</div>
+<p>This is a typical error when the dependency tree is screwed up.
+If aggregates and/or transfer operators are involved,
+one usually has forgotten some entries in the <strong>Hierarchy</strong> sublist of the extended XML file format
+for the internal factory managers.
+These errors can be quite tricky to fix.
+In general, it is a good idea to start with a working XML file and extend it step by step if possible.
+The following general strategies may help to track down the problem:</p>
+<ul class="simple">
+<li><p>Run the problem with <strong>verbosity=extreme</strong> to get as much screen output as possible.</p></li>
+</ul>
+<p>Check for unusual screen output (such as <strong>Nullspace factory</strong>).
+* Try to generate a graphical dependency tree as described in <a class="reference internal" href="useful_commands_and_debugging.html#useful-commands-and-debugging-dependencytrees"><span class="std std-ref">Dependency trees</span></a>.</p>
+<p>For example, above error is caused by the following XML file</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;MueLu&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Factories&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myTentativePFact&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;TentativePFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+<span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Hierarchy&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Levels&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;P&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myTentativePFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="cm">&lt;!--&lt;Parameter name=&quot;Nullspace&quot; type=&quot;string&quot; value=&quot;myTentativePFact&quot;/&gt;--&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+<span class="nt">&lt;/ParameterList&gt;</span>
+<span class="nt">&lt;/ParameterList&gt;</span>
+</pre></div>
+</div>
+<p>When looking at the error output, it seems to be a problem with aggregates.
+However, no special aggregation factory has been declared in the XML file.
+The only factory which has been introduced was a tentative prolongation factory for generating unsmoothed transfer operators.
+Therefore, one should start digging into the details of the <strong>TentativePFactory</strong> to find out,
+that the unsmoothed transfer operator factory is responsible both for creating the unsmoothed prolongator and the coarse level null space information.
+When looking at the screen output one should find that the last called/generated factory is a <strong>NullspaceFactory</strong>,
+which can also be a hint that the problem is the null space.</p>
+<p>When looking at the XML file,
+one can see that the <strong>myTentativePFact</strong> factory has been registered to be responsible for generating  the prolongator <span class="math notranslate nohighlight">\(P\)</span>,
+but the generating factory for the variable <strong>Nullspace</strong> is not declared.
+MueLu tries to generate the default null space,
+but since it does not know about <strong>myTentativePFact</strong> to be a <strong>TentativePFactory</strong>,
+which would already produce the needed information,
+the call ordering of the dependent factories (e.g., aggregation) gets mixed up.</p>
+<p>Note that the <strong>TentativePFactory</strong> is special.
+If you declare an explicit instance of the <strong>TentativePFactory</strong>,
+you always have to register it for generating the <strong>Nullspace</strong> variable, too.
+Only in very special cases, this would not be necessary.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is a general rule: if a factory generates more than one output variables,
+always make sure that all these output variables are properly defined in the <strong>FactoryManager</strong> list (or <strong>Hierarchy</strong> sublist in the xml files, respectively).</p>
+</div>
+<p>To solve above problem there are two possibilities:</p>
+<ul class="simple">
+<li><p>Following above comment, just register <strong>myTentativePFact</strong> for generating <strong>Nullspace</strong>.</p></li>
+</ul>
+<p>That is, just comment in the corresponding line in above xml file.
+* Alternatively, you can register <strong>myTentativePFact</strong> for generating <strong>Ptent</strong> (and <strong>P</strong>).
+This way you mark the <strong>myTentativePFact</strong> object to be used for generating the unsmoothed transfer operators
+(and state that they shall be used for the final prolongation operators).
+MueLu is smart enough to understand that the factory responsible for generating <strong>Ptent</strong> is also supposed to generate the null space vectors.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, The MueLu Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

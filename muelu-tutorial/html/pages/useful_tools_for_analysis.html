@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Useful tools for analysis &mdash; MueLu Tutorial 2023 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=86f27845" />
+
+  
+  
+        <script src="../_static/jquery.js?v=8dae8fb0"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=a4664895"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Challenge: CD example" href="cd_example.html" />
+    <link rel="prev" title="Multigrid for non-symmetric problems" href="multigrid_for_non_symmetric_problems.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            MueLu Tutorial
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Beginners Tutorial</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="quick_start.html">Quick start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="level_smoothers.html">Level smoothers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multigrid_for_non_symmetric_problems.html">Multigrid for non-symmetric problems</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Useful tools for analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#visualization-of-aggregates">Visualization of aggregates</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#technical-prerequisites">Technical prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#visualization-of-aggregates-with-muelu-using-vtk">Visualization of aggregates with MueLu using VTK</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#export-data">Export data</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cd_example.html">Challenge: CD example</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="xml_interface_for_advanced_users.html">XML interface for advanced users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="muelu_factories_for_transfer_operators.html">MueLu factories for transfer operators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rebalancing.html">Rebalancing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advanced_concepts.html">Advanced concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aggregation.html">Aggregation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="useful_commands_and_debugging.html">Useful commands and debugging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="challenge.html">Challenge: elasticity example</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Expert Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="multigrid_for_multiphysics.html">Multigrid for Multiphysics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user_api.html">Using MueLu in User Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml_parameterlist_interpreter.html">ML ParameterList interpreter</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MueLu Tutorial</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Useful tools for analysis</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/pages/useful_tools_for_analysis.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="useful-tools-for-analysis">
+<h1>Useful tools for analysis<a class="headerlink" href="#useful-tools-for-analysis" title="Link to this heading"></a></h1>
+<section id="visualization-of-aggregates">
+<h2>Visualization of aggregates<a class="headerlink" href="#visualization-of-aggregates" title="Link to this heading"></a></h2>
+<section id="technical-prerequisites">
+<h3>Technical prerequisites<a class="headerlink" href="#technical-prerequisites" title="Link to this heading"></a></h3>
+<p>MueLu allows one to export plain aggregation information in simple text files that may be interpreted by post-processing scripts to generate pictures from the raw data. The post-processing script provided with the MueLu tutorial is written in python and produces VTK output. Please make sure that you have all necessary python packages installed on your machine (including <strong>python-vtk</strong>).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The visualization script has successfully been tested with VTK 5.x. Note that it is not compatible to VTK 6.x.</p>
+</div>
+</section>
+<section id="visualization-of-aggregates-with-muelu-using-vtk">
+<h3>Visualization of aggregates with MueLu using VTK<a class="headerlink" href="#visualization-of-aggregates-with-muelu-using-vtk" title="Link to this heading"></a></h3>
+<p>We can visualize the aggregates using the vtk file format and a visualization program called ParaView. First add the parameter <strong>aggregation: export visualization data = true</strong> to the list of aggregation parameters. Use, e.g., the following xml file <strong>../../../test/tutorial/n2_easy_agg.xml</strong>.</p>
+<p>Run the <strong>hands-on.py</strong> script and select, e.g., the Laplace 2D example on a <span class="math notranslate nohighlight">\(50\times 50\)</span> mesh. Select above xml file for the multigrid parameters with the <strong>aggregation: export visualization data</strong> enabled. Run the program and then choose option 8 for post-processing the aggregates.</p>
+<a class="reference internal image-reference" href="../_images/tut1_14.png"><img alt="../_images/tut1_14.png" src="../_images/tut1_14.png" style="width: 10cm;" /></a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Be aware that without <strong>aggregation: export visualization data = true</strong> the post processing step for the aggregates will fail.</p>
+</div>
+<p>Once the visualization data is exported and post-processed you can run <em>ParaView</em> (if it is installed on your machine) and open the files <strong>aggs0.vtp</strong> and <strong>aggs1.vtp</strong> for visualization.</p>
+<p>Start <em>ParaView</em> and open the files <strong>aggs0.vtp</strong> and/or <strong>aggs1.vtp</strong>. Do not forget to press the <em>Apply</em> button to show the aggregates on screen.</p>
+<a class="reference internal image-reference" href="../_images/tut1_17.png"><img alt="../_images/tut1_17.png" src="../_images/tut1_17.png" style="width: 10cm;" /></a>
+<p>Then the aggregates should be visualized as follows.</p>
+<a class="reference internal image-reference" href="../_images/tut1_18.png"><img alt="../_images/tut1_18.png" src="../_images/tut1_18.png" style="width: 10cm;" /></a>
+<p>Here the colors represent the unique aggregate id. You can change the coloring in the left column from <em>Ids</em> to <em>proc</em> which denotes the owning processor of the aggregate.</p>
+<p>Figure <a class="reference internal" href="#useful-tools-for-analysis-figure-aggssymm"><span class="std std-ref">Aggregates for Laplace2D example on 50\times 50 mesh without dropping.</span></a> shows the aggregates for the Laplace2D problem on the different multigrid levels starting with an isotropic <span class="math notranslate nohighlight">\(50\times 50\)</span> mesh. No dropping of small entries was used when building the matrix graph (<strong>aggregation: drop tol=0.0</strong>). For visualization purposes the <em>midpoint</em> of each aggregate defines the coordinate of the supernode on the next coarser level. Be aware that these supernodes are purely algebraic. There is no coarse mesh for algebraic multigrid methods. As one can see from the colors an uncoupled aggregation strategy has been applied using 2 processors. The aggregates do not cross the processor boundaries.</p>
+<figure class="align-default" id="id1">
+<span id="useful-tools-for-analysis-figure-aggssymm"></span><a class="reference internal image-reference" href="../_images/aggsSymm.png"><img alt="../_images/aggsSymm.png" src="../_images/aggsSymm.png" style="width: 0.7px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 19 </span><span class="caption-text">Aggregates for Laplace2D example on <span class="math notranslate nohighlight">\(50\times 50\)</span> mesh without dropping.</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<div class="admonition-exercise-1 admonition">
+<p class="admonition-title">Exercise 1</p>
+<p>Repeat above steps for the <em>Recirc2D</em> example on a <span class="math notranslate nohighlight">\(50\times 50\)</span> mesh. Compare the aggregates from the <strong>../../../test/tutorial/n2_easy_agg.xml</strong> parameter file with the aggregates when using the <strong>../../../test/tutorial/n2_easy_agg2.xml</strong> parameter file, which drops some small entries of the fine level matrix <span class="math notranslate nohighlight">\(A\)</span> when building the graph.</p>
+</div>
+<div class="admonition-exercise-2 admonition">
+<p class="admonition-title">Exercise 2</p>
+<p>Vary the number of processors. Do not forget to export the aggregation data (option 7) after the simulation has rerun with a new number of processors. In <em>ParaView</em> choose the variable <em>proc</em> for the coloring. Then the color denotes the processor the aggregate belongs to. How do the aggregates change when switching from 2 to 3 processors?
+*  Try the solver parameters from <strong>../../../test/tutorial/s4c.xml</strong> or the <em>Recirc2D</em> example on a <span class="math notranslate nohighlight">\(50\times 50\)</span> mesh and compare them with the results for the <strong>../../../test/tutorial/s4a.xml</strong> and <strong>../../../test/tutorial/s4b.xml</strong> parameters. Which differences do you observe?</p>
+</div>
+<p>Figure <a class="reference internal" href="#useful-tools-for-analysis-figure-aggsnonsymm"><span class="std std-ref">Aggregates for Recirc2D example on 50\times 50 mesh with dropping.</span></a> shows the aggregates for the Recirc2D problem. When building the matrix graph, entries with values smaller than <span class="math notranslate nohighlight">\(0.01\)</span> were dropped. Obviously the shape of the aggregates follows the direction of convection of the example. Using an uncoupled aggregation method (i.e., <strong>aggregation: type = uncoupled</strong>) as default the aggregates do not cross processor boundaries.</p>
+<figure class="align-default" id="id2">
+<span id="useful-tools-for-analysis-figure-aggsnonsymm"></span><a class="reference internal image-reference" href="../_images/aggsNonSymm.png"><img alt="../_images/aggsNonSymm.png" src="../_images/aggsNonSymm.png" style="width: 0.7px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 20 </span><span class="caption-text">Aggregates for Recirc2D example on <span class="math notranslate nohighlight">\(50\times 50\)</span> mesh with dropping.</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="export-data">
+<span id="useful-tools-for-analysis-export-data"></span><h2>Export data<a class="headerlink" href="#export-data" title="Link to this heading"></a></h2>
+<p>For debugging purposes it can be very helpful to have a look at the coarse level matrices as well as the transfer operators. MueLu allows one to export the corresponding operators to the matrix market format such that the files can be imported, e.g., into MATLAB (or <a class="reference external" href="http://freemat.sourceforge.net/">FreeMat</a>) for some in-depth analysis.</p>
+<p>The following xml file writes the fine level operator and the coarse level operator as well as the prolongation and restriction operator to the hard disk using the filenames <strong>A_0.m</strong>, <strong>A_1.m</strong> as well as <strong>P_1.m</strong> and <strong>R_1.m</strong></p>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-number">Listing 4 </span><span class="caption-text">../../../test/tutorial/n2_easy_export.xml</span><a class="headerlink" href="#id3" title="Link to this code"></a></div>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;MueLu&quot;</span><span class="nt">&gt;</span>
+
+<span class="w">  </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;verbosity&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;high&quot;</span><span class="nt">/&gt;</span>
+
+<span class="w">  </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;max levels&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;3&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;coarse: max size&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;10&quot;</span><span class="nt">/&gt;</span>
+
+<span class="w">  </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;multigrid algorithm&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;unsmoothed&quot;</span><span class="nt">/&gt;</span>
+
+<span class="w">  </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;smoother: type&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;RELAXATION&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;smoother: params&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;relaxation: type&quot;</span><span class="w">  </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;Gauss-Seidel&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;relaxation: sweeps&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;3&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;relaxation: damping factor&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;double&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;0.7&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">  </span><span class="cm">&lt;!-- Export data --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;export data&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;A&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;{0,1}&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;P&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;{0,1}&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;R&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;{0}&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/ParameterList&gt;</span>
+<span class="nt">&lt;/ParameterList&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Be aware that there is no prolongator and restrictor on the finest level (level 0) since the transfer operators between level <span class="math notranslate nohighlight">\(\ell\)</span> and <span class="math notranslate nohighlight">\(\ell+1\)</span> are always associated with the coarse level <span class="math notranslate nohighlight">\(\ell +1\)</span> (for technical reasons). So, be not confused if there is no <strong>P_0.m</strong> and <strong>R_0.m</strong>. Only the operators are written to external files which really exist and are requested in the corresponding list in the xml parameters.</p>
+</div>
+<p>The exported files can easily imported into MATLAB and used for some in-depth analysis (determining the eigenvalue spectrum, sparsity pattern,…).</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="multigrid_for_non_symmetric_problems.html" class="btn btn-neutral float-left" title="Multigrid for non-symmetric problems" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="cd_example.html" class="btn btn-neutral float-right" title="Challenge: CD example" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, The MueLu Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

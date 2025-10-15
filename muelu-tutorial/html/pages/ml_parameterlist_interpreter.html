@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ML ParameterList interpreter &mdash; MueLu Tutorial 2023 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=86f27845" />
+
+  
+  
+        <script src="../_static/jquery.js?v=8dae8fb0"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=a4664895"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Using MueLu in User Applications" href="user_api.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            MueLu Tutorial
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Beginners Tutorial</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="quick_start.html">Quick start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="level_smoothers.html">Level smoothers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multigrid_for_non_symmetric_problems.html">Multigrid for non-symmetric problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="useful_tools_for_analysis.html">Useful tools for analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cd_example.html">Challenge: CD example</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="xml_interface_for_advanced_users.html">XML interface for advanced users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="muelu_factories_for_transfer_operators.html">MueLu factories for transfer operators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rebalancing.html">Rebalancing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advanced_concepts.html">Advanced concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aggregation.html">Aggregation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="useful_commands_and_debugging.html">Useful commands and debugging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="challenge.html">Challenge: elasticity example</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Expert Tutorials</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="multigrid_for_multiphysics.html">Multigrid for Multiphysics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user_api.html">Using MueLu in User Applications</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">ML ParameterList interpreter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#backwards-compatibility">Backwards compatibility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#c-part">C++ part</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#preparations">Preparations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#c-interface">C++ interface</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#footnotes">Footnotes</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MueLu Tutorial</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">ML ParameterList interpreter</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/pages/ml_parameterlist_interpreter.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ml-parameterlist-interpreter">
+<h1>ML ParameterList interpreter<a class="headerlink" href="#ml-parameterlist-interpreter" title="Link to this heading"></a></h1>
+<section id="backwards-compatibility">
+<h2>Backwards compatibility<a class="headerlink" href="#backwards-compatibility" title="Link to this heading"></a></h2>
+<p>ML <a class="footnote-reference brackets" href="#id4" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> is the predecessor multigrid package of MueLu in Trilinos and widely used in the community for smoothed aggregation multigrid methods.
+ML is implemented in C and known for its good performance properties.
+However, the disadvantage is that ML is harder to adapt to new applications and non-standard problems.
+Furthermore, ML uses its own internal data structure and is somewhat limited to the use with Epetra objects only.
+In contrast, MueLu provides a fully flexible multigrid framework which is designed to be adapted to any kind of new application with non-standard requirements.
+Furthermore, it is based on Xpetra and therefore can be used both with Epetra or Tpetra.
+Nevertheless, it is an important point to provide some kind of backwards compatibility to allow ML users to easily migrate to MueLu
+(or make experiments with MueLu without having to write to much new code).</p>
+<p>In this tutorial we present the <strong>MueLu::MLParameterListInterpreter</strong> which provides support for the most important ML parameters to be used with MueLu.</p>
+</section>
+<section id="c-part">
+<h2>C++ part<a class="headerlink" href="#c-part" title="Link to this heading"></a></h2>
+<section id="preparations">
+<h3>Preparations<a class="headerlink" href="#preparations" title="Link to this heading"></a></h3>
+<p>In order to use MueLu (instead or aside of ML) you first have to add it to your application.
+Please refer to the MueLu user guide for information about compilation and linking (see <a class="footnote-reference brackets" href="#id5" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>).
+Basically, if your application is already working with ML,
+you should only need to compile and install MueLu and make sure that the MueLu libraries are found by the linker.</p>
+</section>
+<section id="c-interface">
+<h3>C++ interface<a class="headerlink" href="#c-interface" title="Link to this heading"></a></h3>
+<p>In the following we assume that the linear operator <span class="math notranslate nohighlight">\(A\)</span> is available as <strong>RCP&lt;Xpetra::Matrix&gt; A</strong>.</p>
+<p>Then we create a parameter list and fill it with ML parameters.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w">      </span><span class="n">params</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rcp</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Teuchos</span><span class="o">::</span><span class="n">ParameterList</span><span class="p">());</span>
+
+<span class="w">      </span><span class="n">params</span><span class="o">-&gt;</span><span class="n">set</span><span class="p">(</span><span class="s">&quot;ML output&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span>
+<span class="w">      </span><span class="n">params</span><span class="o">-&gt;</span><span class="n">set</span><span class="p">(</span><span class="s">&quot;max levels&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+<span class="w">      </span><span class="n">params</span><span class="o">-&gt;</span><span class="n">set</span><span class="p">(</span><span class="s">&quot;smoother: type&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;symmetric Gauss-Seidel&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="n">params</span><span class="o">-&gt;</span><span class="n">set</span><span class="p">(</span><span class="s">&quot;coarse: type&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Amesos-KLU&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Please refer to the ML guide <a class="footnote-reference brackets" href="#id4" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> for a complete list of available parameters.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<blockquote>
+<div><p>Be aware that the MLParameterListInterpreter does not support all ML parameters,</p>
+</div></blockquote>
+<p>but only the most important ones (e.g., smoothers, transfer operators, rebalancing, …).</p>
+</div>
+<p>Instead of defining the ML parameters by hand in the ParameterList,
+you can also read in XML files with ML parameters using</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w">      </span><span class="n">params</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Teuchos</span><span class="o">::</span><span class="n">getParametersFromXmlFile</span><span class="p">(</span><span class="n">xmlFileName</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Next, you create a <strong>MLParameterListInterpreter</strong> object using the parameters
+and create a new <strong>MueLu::Hierarchy</strong> from it.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="n">MLParameterListInterpreter</span><span class="w"> </span><span class="nf">mueLuFactory</span><span class="p">(</span><span class="o">*</span><span class="n">params</span><span class="p">);</span>
+<span class="w">    </span><span class="n">RCP</span><span class="o">&lt;</span><span class="n">Hierarchy</span><span class="o">&gt;</span><span class="w"> </span><span class="n">hierarchy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mueLuFactory</span><span class="p">.</span><span class="n">CreateHierarchy</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>Of course, you have to provide all necessary information for the multigrid setup routine.
+This does not only include the fine level operator, but also the set of near null space vectors.
+Assuming that <strong>numPDEs</strong> stores the number of equations (and near null space vectors),
+the following code allows to produce piecewise constant standard near null space vectors
+(which should be valid for many PDE discretizations).</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="n">RCP</span><span class="o">&lt;</span><span class="n">MultiVector</span><span class="o">&gt;</span><span class="w"> </span><span class="n">nullspace</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MultiVectorFactory</span><span class="o">::</span><span class="n">Build</span><span class="p">(</span><span class="n">A</span><span class="o">-&gt;</span><span class="n">getDomainMap</span><span class="p">(),</span><span class="w"> </span><span class="n">numPDEs</span><span class="p">);</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">numPDEs</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">Teuchos</span><span class="o">::</span><span class="n">ArrayRCP</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span><span class="w"> </span><span class="n">nsValues</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nullspace</span><span class="o">-&gt;</span><span class="n">getDataNonConst</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+<span class="w">      </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">numBlocks</span><span class="w">                </span><span class="o">=</span><span class="w"> </span><span class="n">nsValues</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">numPDEs</span><span class="p">;</span>
+
+<span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">numBlocks</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">j</span><span class="p">)</span>
+<span class="w">        </span><span class="n">nsValues</span><span class="p">[</span><span class="n">j</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">numPDEs</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">STS</span><span class="o">::</span><span class="n">one</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Then, we just feed in the information to the finest level:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="n">hierarchy</span><span class="o">-&gt;</span><span class="n">GetLevel</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">Set</span><span class="p">(</span><span class="s">&quot;Nullspace&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">nullspace</span><span class="p">);</span>
+<span class="w">    </span><span class="n">hierarchy</span><span class="o">-&gt;</span><span class="n">GetLevel</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">Set</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">A</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Finally, we call the <strong>Setup</strong> routine which actually builds the multigrid hierarchy:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="n">mueLuFactory</span><span class="p">.</span><span class="n">SetupHierarchy</span><span class="p">(</span><span class="o">*</span><span class="n">hierarchy</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Once we have the multigrid hierarchy set up,
+we can use it the same way as described in <a class="reference internal" href="user_api.html#user-api-iteration-phase"><span class="std std-ref">Iteration Phase</span></a>.</p>
+<div class="admonition-exercise-1 admonition">
+<p class="admonition-title">Exercise 1</p>
+<blockquote>
+<div><p>Study the source code of <strong>../../../test/tutorial/MLParameterList.cpp</strong> and compile it.</p>
+</div></blockquote>
+<p>Run the executable <strong>MueLu_tutorial_MLParameterList.exe</strong> with the <strong>–help</strong> command line parameter
+to get an overview of all available command line parameters.</p>
+<p>Run the example on a 1D mesh with 256 elements using</p>
+<blockquote>
+<div><blockquote>
+<div><p><strong>./MueLu_tutorial_MLParameterList.exe –xml=xml/ml_ParameterList.xml –nx=256</strong></p>
+</div></blockquote>
+<p>and study the MueLu output.</p>
+</div></blockquote>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You will see a warning by the <strong>MLParameterListInterpreter</strong>,
+that the parameter list could not be validated.
+The reason is the follwing:
+Since this tutorial example runs with the Tpetra backend,
+ML, which is purely Epetra-based, cannot validate the parameter list.</p>
+</div>
+<div class="admonition-exercise-2 admonition">
+<p class="admonition-title">Exercise 2</p>
+<blockquote>
+<div><p>Play around with the parameters from <strong>MueLu_tutorial_MLParameterList.exe</strong>.</p>
+</div></blockquote>
+<p>Change, e.g., the problem type to a 2D Laplace problem (<strong>–matrixType=Laplace2D</strong>) and adapt the <strong>–nx</strong> and <strong>–ny</strong> parameters accordingly.</p>
+</div>
+</section>
+</section>
+<section id="footnotes">
+<h2>Footnotes<a class="headerlink" href="#footnotes" title="Link to this heading"></a></h2>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id4" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id3">2</a>)</span>
+<ol class="upperalpha simple" start="13">
+<li><ol class="upperalpha simple" start="23">
+<li><p>Gee, C. M. Siefert, J. J. Hu, R. S. Tuminaro, and M. G. Sala. ML 5.0 Smoothed Aggregation User’s Guide, Sandia National Laboratories, 2006, SAND2006-2649</p></li>
+</ol>
+</li>
+</ol>
+</aside>
+<aside class="footnote brackets" id="id5" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
+<ol class="upperalpha simple" start="12">
+<li><p>Berger-Vergiat, C. A. Glusa, G. Harper, J. J. Hu, M. Mayr, P. Ohm, A. Prokopenko, C. M. Siefert, R. S. Tuminaro, and T. A. Wiesner. MueLu User’s Guide. Technical Report SAND2023-12265, Sandia National Laboratories, Albuquerque, NM (USA) 87185, 2023.</p></li>
+</ol>
+</aside>
+</aside>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="user_api.html" class="btn btn-neutral float-left" title="Using MueLu in User Applications" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, The MueLu Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

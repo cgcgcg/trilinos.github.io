@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MueLu factories for transfer operators &mdash; MueLu Tutorial 2023 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=86f27845" />
+
+  
+  
+        <script src="../_static/jquery.js?v=8dae8fb0"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=a4664895"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Rebalancing" href="rebalancing.html" />
+    <link rel="prev" title="XML interface for advanced users" href="xml_interface_for_advanced_users.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            MueLu Tutorial
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Beginners Tutorial</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="quick_start.html">Quick start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="level_smoothers.html">Level smoothers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multigrid_for_non_symmetric_problems.html">Multigrid for non-symmetric problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="useful_tools_for_analysis.html">Useful tools for analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cd_example.html">Challenge: CD example</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="xml_interface_for_advanced_users.html">XML interface for advanced users</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">MueLu factories for transfer operators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#multigrid-setup-phase-algorithmic-design">Multigrid setup phase - algorithmic design</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#unsmoothed-transfer-operators">Unsmoothed transfer operators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#smoothed-transfer-operators-for-non-symmetric-systems">Smoothed transfer operators for non-symmetric systems</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#xml-interface">XML Interface</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Unsmoothed transfer operators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#smoothed-aggregation-for-non-symmetric-problems">Smoothed aggregation for non-symmetric problems</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#footnotes">Footnotes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rebalancing.html">Rebalancing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advanced_concepts.html">Advanced concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aggregation.html">Aggregation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="useful_commands_and_debugging.html">Useful commands and debugging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="challenge.html">Challenge: elasticity example</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Expert Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="multigrid_for_multiphysics.html">Multigrid for Multiphysics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user_api.html">Using MueLu in User Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml_parameterlist_interpreter.html">ML ParameterList interpreter</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MueLu Tutorial</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">MueLu factories for transfer operators</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/pages/muelu_factories_for_transfer_operators.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="muelu-factories-for-transfer-operators">
+<h1>MueLu factories for transfer operators<a class="headerlink" href="#muelu-factories-for-transfer-operators" title="Link to this heading"></a></h1>
+<p>For this example,
+we reuse the <strong>Recirc2D</strong> example as introduced in <a class="reference internal" href="multigrid_for_non_symmetric_problems.html#multigrid-for-non-symmetric-problems-test-example"><span class="std std-ref">Test example</span></a>.
+The resulting linear systems are (slightly) non-symmetric
+and classical smoothed aggregation methods may be able to solve the problem but are not optimal in sense of convergence.</p>
+<section id="multigrid-setup-phase-algorithmic-design">
+<h2>Multigrid setup phase - algorithmic design<a class="headerlink" href="#multigrid-setup-phase-algorithmic-design" title="Link to this heading"></a></h2>
+<p>Smoothed aggregation based algebraic multigrid methods originally have not been designed for non-symmetric linear systems.
+Inappropriately smoothed transfer operators may significantly deteriorate the convergence rate or even break convergence completely.</p>
+<section id="unsmoothed-transfer-operators">
+<h3>Unsmoothed transfer operators<a class="headerlink" href="#unsmoothed-transfer-operators" title="Link to this heading"></a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Insert and link missing figures</p>
+</div>
+<p>Before we introduce smoothed aggregation methods for non-symmetric linear systems,
+we first go back one step and demonstrate how to use non-smoothed transfer operators which are eligible for non-symmetric linear systems.
+Figure <a class="reference internal" href="#muelu-factories-for-transfer-operators-figure-simpledesignnonsmoothed"><span class="std std-ref">XML Interface</span></a> gives a simplified example how to build the coarse level matrix <span class="math notranslate nohighlight">\(A_c\)</span>
+using the fine level matrix <span class="math notranslate nohighlight">\(A\)</span> only.
+First, we “somehow” build aggregates using the information of the fine level matrix <span class="math notranslate nohighlight">\(A\)</span>.
+The aggregates are then used to build the tentative non-smoothed prolongation operator.
+The restrictor is just the transpose of the (tentative) prolongator and finally the coarse level matrix <span class="math notranslate nohighlight">\(A_c\)</span> is calculated by the triple product <span class="math notranslate nohighlight">\(A_c=RAP\)</span>.</p>
+<p>In Figure <a class="reference internal" href="#muelu-factories-for-transfer-operators-figure-simpledesignaamg"><span class="std std-ref">XML Interface</span></a>,
+the <strong>SaPFactory</strong> has been added after the <strong>TentativePFactory</strong>.
+Therein the non-smoothed transfer operator from the <strong>TentativePFactory</strong> is smoothed using information of the fine level matrix <span class="math notranslate nohighlight">\(A\)</span>.
+This transfer operator design is used per default when the user does not specify its own transfer operator design.
+The default settings are optimal for symmetric positive definite systems.
+However, they might be problematic for our non-symmetric problem.</p>
+</section>
+<section id="smoothed-transfer-operators-for-non-symmetric-systems">
+<h3>Smoothed transfer operators for non-symmetric systems<a class="headerlink" href="#smoothed-transfer-operators-for-non-symmetric-systems" title="Link to this heading"></a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Insert missing figures</p>
+</div>
+<p>In case of non-symmetric linear systems it is <span class="math notranslate nohighlight">\(A\neq A^T\)</span>.
+Therefore it is a bad idea just to use the transposed of the smoothed prolongation operator for the restrictor.
+Let <span class="math notranslate nohighlight">\(\widehat{P}\)</span> be the non-smoothed tentative prolongation operator.
+Then the smoothed prolongation operator <span class="math notranslate nohighlight">\(P\)</span> is built using</p>
+<p><span class="math notranslate nohighlight">\(P = \bigl(I-\omega A\bigr) \widehat{P}\)</span></p>
+<p>with some reasonable smoothing parameter <span class="math notranslate nohighlight">\(\omega&gt;0\)</span>.
+The standard restrictor is</p>
+<p><span class="math notranslate nohighlight">\(R = P^T = \widehat{P}^T - \omega \widehat{P}^T A^T = \widehat{P}^T\bigl(I-\omega A^T\bigr).\)</span></p>
+<p>That is, the restrictor would be smoothed using the information of <span class="math notranslate nohighlight">\(A^T\)</span>.
+However, for non-symmetric systems we want to use the information of matrix <span class="math notranslate nohighlight">\(A\)</span> for smoothing the restriction operator, too.
+The restriction operator shall we built by the formula</p>
+<p><span class="math notranslate nohighlight">\(R = P^T = \widehat{P}^T - \omega \widehat{P}^T A.\)</span></p>
+<p>This corresponds to apply the same smoothing strategy to the non-smoothed restriction operator <span class="math notranslate nohighlight">\(\widehat{R}=\widehat{P}^T\)</span>,
+which is applied to the (tentative) prolongation operator with using <span class="math notranslate nohighlight">\(A^T\)</span> as input instead of matrix <span class="math notranslate nohighlight">\(A\)</span>.
+Figure <span class="xref std std-ref">muelu_factories_for_transfer_operators/figure_simpledesignpamg</span> shows the changed factory design.
+The dashed line denotes, that the same smoothing strategy is used than for the prolongation operator.
+The concept is known as Petrov-Galerkin smoothed aggregation approach in the literature.
+A more advanced transfer operator smoothing strategy for non-symmetric linear systems that is based on the Petrov-Galerkin approach is described in <a class="footnote-reference brackets" href="#id4" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.
+Another approach based on SchurComplement approximations can be found in <a class="footnote-reference brackets" href="#id5" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>.</p>
+<p><strong>Insert missing figures here</strong></p>
+</section>
+</section>
+<section id="xml-interface">
+<span id="muelu-factories-for-transfer-operators-figure-simpledesignnonsmoothed"></span><span id="muelu-factories-for-transfer-operators-figure-simpledesignaamg"></span><span id="muelu-factories-for-transfer-operators-figure-simpledesignpgamg"></span><span id="muelu-factories-for-transfer-operators-figure-simpledesign"></span><h2>XML Interface<a class="headerlink" href="#xml-interface" title="Link to this heading"></a></h2>
+<section id="id3">
+<h3>Unsmoothed transfer operators<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<p>To construct a multigrid hierarchy with unsmoothed transfer operators one can use the following XML file (stored in ../../../test/tutorial/s3a.xml)</p>
+<div class="highlight-xml :caption: notranslate"><div class="highlight"><pre><span></span>&lt;ParameterList name=&quot;MueLu&quot;&gt;
+
+   &lt;!-- Factory collection --&gt;
+  &lt;ParameterList name=&quot;Factories&quot;&gt;
+
+    &lt;ParameterList name=&quot;UncoupledAggregationFact&quot;&gt;
+      &lt;Parameter name=&quot;factory&quot;              type=&quot;string&quot; value=&quot;UncoupledAggregationFactory&quot;/&gt;
+      &lt;Parameter name=&quot;aggregation: ordering&quot;                    type=&quot;string&quot; value=&quot;natural&quot;/&gt;
+      &lt;Parameter name=&quot;aggregation: max selected neighbors&quot;            type=&quot;int&quot;    value=&quot;0&quot;/&gt;
+      &lt;Parameter name=&quot;aggregation: min agg size&quot;           type=&quot;int&quot;    value=&quot;4&quot;/&gt;
+    &lt;/ParameterList&gt;
+
+    &lt;ParameterList name=&quot;myTentativePFact&quot;&gt;
+      &lt;Parameter name=&quot;factory&quot;                        type=&quot;string&quot; value=&quot;TentativePFactory&quot;/&gt;
+    &lt;/ParameterList&gt;
+    
+  &lt;/ParameterList&gt;
+
+  &lt;!-- Definition of the multigrid preconditioner --&gt;
+  &lt;ParameterList name=&quot;Hierarchy&quot;&gt;
+
+    &lt;Parameter name=&quot;use kokkos refactor&quot;                   type=&quot;bool&quot;     value=&quot;true&quot;/&gt;
+    &lt;Parameter name=&quot;max levels&quot;                            type=&quot;int&quot;      value=&quot;10&quot;/&gt;
+    &lt;Parameter name=&quot;coarse: max size&quot;                      type=&quot;int&quot;      value=&quot;10&quot;/&gt;
+    &lt;Parameter name=&quot;verbosity&quot;                             type=&quot;string&quot;   value=&quot;High&quot;/&gt;
+
+    &lt;ParameterList name=&quot;All&quot;&gt;
+      &lt;Parameter name=&quot;Aggregates&quot;           type=&quot;string&quot;   value=&quot;UncoupledAggregationFact&quot;/&gt;
+      &lt;Parameter name=&quot;Nullspace&quot;                    type=&quot;string&quot;   value=&quot;myTentativePFact&quot;/&gt;
+      &lt;Parameter name=&quot;P&quot;                            type=&quot;string&quot;   value=&quot;myTentativePFact&quot;/&gt;
+      &lt;Parameter name=&quot;CoarseSolver&quot;                     type=&quot;string&quot;   value=&quot;DirectSolver&quot;/&gt;
+    &lt;/ParameterList&gt;
+
+  &lt;/ParameterList&gt;
+&lt;/ParameterList&gt;
+</pre></div>
+</div>
+<p>Beside the <strong>TentiativePFactory</strong> which is responsible to generate the unsmoothed transfer operators we also introduce the <strong>UncoupledAggregationFactory</strong> with this example.
+In the <strong>Factories</strong> section of the XML file, you find both an entry for the aggregation factory and the prolongation operator factory with its parameters.
+In the <strong>Hierarchy</strong> section the defined factories are just put in into the multigrid setup algorithm.
+That is, the factory with the name <strong>UncoupledAggregationFact</strong> is used to generate the <strong>Aggregates</strong>
+and the <strong>myTentativePFact</strong> is responsible for generating both the (unsmoothed) prolongation operator P and the (coarse) near null space vectors <strong>Nullspace</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For some more details about the (hidden) <strong>NullspaceFactory</strong>,
+which is internally used to handle the null space information and the dependencies,
+the reader might refer to <a class="reference internal" href="multigrid_for_multiphysics.html#multigrid-for-multiphysics-blocktransfersetup"><span class="std std-ref">Setup of block transfer operators</span></a>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>One can also use the <strong>Ptent</strong> variable for registering a <strong>TentativePFactory</strong>.
+This makes the <strong>TentativePFactory</strong> somewhat special in its central role for generating an aggregation based multigrid hierarchy.
+MueLu is smart enough to understand that you want to use the near null space vectors generated by the factory registered as <strong>Ptent</strong> for setting up the transfer operators.</p>
+<p>That is, the following code would explicitly use the <strong>TentativePFactory</strong> object that is created as <strong>myTentativePFact</strong>.
+Since no factory is specified for the prolongation operator <strong>P</strong>,
+MueLu would decide to use a smoothed aggregation prolongation operator (represented by the <strong>SaPFactory</strong>),
+which correctly uses the factory for <strong>Ptent</strong> for the unsmoothed transfers with all its dependencies.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;MueLu&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Factories&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myTentativePFact&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;TentativePFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/ParameterList&gt;</span>
+<span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Hierarchy&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Levels&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Ptent&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myTentativePFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/ParameterList&gt;</span>
+<span class="nt">&lt;/ParameterList&gt;</span>
+<span class="nt">&lt;/ParameterList&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition-exercise-1 admonition">
+<p class="admonition-title">Exercise 1</p>
+<p>Create a sublist in the <strong>Factories</strong> part of the XML file for the restriction operator factory.
+Use a <strong>TransPFactory</strong> which builds the transposed of <strong>P</strong> to generate the restriction operator <strong>R</strong>.
+Register your restriction factory in the <strong>Hierarchy</strong> section to generate the variable <strong>R</strong>.</p>
+</div>
+</section>
+<section id="smoothed-aggregation-for-non-symmetric-problems">
+<h3>Smoothed aggregation for non-symmetric problems<a class="headerlink" href="#smoothed-aggregation-for-non-symmetric-problems" title="Link to this heading"></a></h3>
+<p>Next, let’s try smoothed transfer operators for the non-symmetric linear system and compare the results of the transfer operator designs.
+Take a look at the XML file (in <strong>../../../test/tutorial/s3b.xml</strong>).</p>
+<div class="highlight-xml :caption: notranslate"><div class="highlight"><pre><span></span>&lt;ParameterList name=&quot;MueLu&quot;&gt;
+
+  &lt;!-- Factory collection --&gt;
+  &lt;ParameterList name=&quot;Factories&quot;&gt;
+
+    &lt;!-- Note that ParameterLists must be defined prior to being used --&gt;
+
+    &lt;ParameterList name=&quot;UncoupledAggregationFact&quot;&gt;
+      &lt;Parameter name=&quot;factory&quot;                             type=&quot;string&quot; value=&quot;UncoupledAggregationFactory&quot;/&gt;
+      &lt;Parameter name=&quot;aggregation: ordering&quot;               type=&quot;string&quot; value=&quot;natural&quot;/&gt;
+      &lt;Parameter name=&quot;aggregation: max selected neighbors&quot; type=&quot;int&quot;    value=&quot;0&quot;/&gt;
+      &lt;Parameter name=&quot;aggregation: min agg size&quot;           type=&quot;int&quot;    value=&quot;4&quot;/&gt;
+    &lt;/ParameterList&gt;
+
+    &lt;ParameterList name=&quot;myTentativePFact&quot;&gt;
+      &lt;Parameter name=&quot;factory&quot;                             type=&quot;string&quot; value=&quot;TentativePFactory&quot;/&gt;
+    &lt;/ParameterList&gt;
+    &lt;ParameterList name=&quot;myProlongatorFact&quot;&gt;
+      &lt;Parameter name=&quot;factory&quot;                             type=&quot;string&quot; value=&quot;SaPFactory&quot;/&gt;
+      &lt;Parameter name=&quot;P&quot;                                   type=&quot;string&quot; value=&quot;myTentativePFact&quot;/&gt;
+      &lt;Parameter name=&quot;sa: damping factor&quot;                  type=&quot;double&quot; value=&quot;1.0&quot;/&gt;
+    &lt;/ParameterList&gt;
+    &lt;ParameterList name=&quot;myTentRestrictorFact&quot;&gt;
+      &lt;Parameter name=&quot;factory&quot;                             type=&quot;string&quot; value=&quot;TransPFactory&quot;/&gt;
+      &lt;Parameter name=&quot;P&quot;                                   type=&quot;string&quot; value=&quot;myTentativePFact&quot;/&gt;
+    &lt;/ParameterList&gt;
+    &lt;ParameterList name=&quot;mySymRestrictorFact&quot;&gt;
+      &lt;Parameter name=&quot;factory&quot;                             type=&quot;string&quot; value=&quot;TransPFactory&quot;/&gt;
+      &lt;Parameter name=&quot;P&quot;                                   type=&quot;string&quot; value=&quot;myProlongatorFact&quot;/&gt;
+    &lt;/ParameterList&gt;
+    &lt;ParameterList name=&quot;myNonsymRestrictorFact&quot;&gt;
+      &lt;Parameter name=&quot;factory&quot;                             type=&quot;string&quot; value=&quot;GenericRFactory&quot;/&gt;
+      &lt;Parameter name=&quot;P&quot;                                   type=&quot;string&quot; value=&quot;myProlongatorFact&quot;/&gt;
+    &lt;/ParameterList&gt;
+
+    
+    &lt;ParameterList name=&quot;SymGaussSeidel&quot;&gt;
+      &lt;Parameter name=&quot;factory&quot;                             type=&quot;string&quot; value=&quot;TrilinosSmoother&quot;/&gt;
+      &lt;Parameter name=&quot;type&quot;                                type=&quot;string&quot; value=&quot;RELAXATION&quot;/&gt;
+      &lt;ParameterList name=&quot;ParameterList&quot;&gt;
+        &lt;Parameter name=&quot;relaxation: type&quot;                  type=&quot;string&quot; value=&quot;Symmetric Gauss-Seidel&quot;/&gt;
+        &lt;Parameter name=&quot;relaxation: sweeps&quot;                type=&quot;int&quot;    value=&quot;10&quot;/&gt;
+        &lt;Parameter name=&quot;relaxation: damping factor&quot;        type=&quot;double&quot; value=&quot;0.8&quot;/&gt;
+      &lt;/ParameterList&gt;
+    &lt;/ParameterList&gt;
+
+  &lt;/ParameterList&gt;
+
+  &lt;!-- Definition of the multigrid preconditioner --&gt;
+  &lt;ParameterList name=&quot;Hierarchy&quot;&gt;
+
+    &lt;Parameter name=&quot;use kokkos refactor&quot;                   type=&quot;bool&quot;     value=&quot;true&quot;/&gt;
+    &lt;Parameter name=&quot;max levels&quot;                            type=&quot;int&quot;      value=&quot;10&quot;/&gt;
+    &lt;Parameter name=&quot;coarse: max size&quot;                      type=&quot;int&quot;      value=&quot;10&quot;/&gt;
+    &lt;Parameter name=&quot;verbosity&quot;                             type=&quot;string&quot;   value=&quot;High&quot;/&gt;
+
+    &lt;ParameterList name=&quot;All&quot;&gt;
+      &lt;Parameter name=&quot;Smoother&quot;                    type=&quot;string&quot;   value=&quot;SymGaussSeidel&quot;/&gt;
+      &lt;Parameter name=&quot;Aggregates&quot;                  type=&quot;string&quot;   value=&quot;UncoupledAggregationFact&quot;/&gt;
+      &lt;Parameter name=&quot;Nullspace&quot;                   type=&quot;string&quot;   value=&quot;myTentativePFact&quot;/&gt;
+      &lt;Parameter name=&quot;P&quot;                           type=&quot;string&quot;   value=&quot;myProlongatorFact&quot;/&gt;
+      &lt;Parameter name=&quot;R&quot;                           type=&quot;string&quot;   value=&quot;mySymRestrictorFact&quot;/&gt;
+      &lt;Parameter name=&quot;CoarseSolver&quot;                type=&quot;string&quot;   value=&quot;DirectSolver&quot;/&gt;
+    &lt;/ParameterList&gt;
+
+  &lt;/ParameterList&gt;
+&lt;/ParameterList&gt;
+</pre></div>
+</div>
+<p>The interesting part is the <strong>Factories</strong> section where several different factories for the restriction operator are defined</p>
+<div class="admonition-description admonition">
+<p class="admonition-title">Description</p>
+<ul class="simple">
+<li><p><strong>myTentRestrictorFact:</strong> just uses the transposed of the unsmoothed prolongator for restriction.</p></li>
+<li><p><strong>mySymRestrictorFact:</strong> uses the transposed of the smoothed prolongator for restriction.</p></li>
+<li><p><strong>myNonsymRestrictorFact:</strong> uses the special non-symmetric smoothing for the restriction operator (based on the <strong>SaPFactory</strong> smoothing factory).</p></li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The MueLu framework is very flexible and allows for arbitrary combinations of factories.
+However, be aware that the <strong>TentativePFactory</strong> cannot be used as input for the <strong>GenericRFactory</strong>.
+That is no problem since this combination not really makes sense.
+If you are using the <strong>TentativePFactory</strong> as your final prolongation operator you always have to use the <strong>TransPFactory</strong> for generating the restriction operators.</p>
+</div>
+<div class="admonition-exercise-2 admonition">
+<p class="admonition-title">Exercise 2</p>
+<p>Run the <strong>Recirc2D</strong> example with the different restriction operator strategies and compare the results for the iterative solver.
+What do you observe? What is the best choice for the transfer operators in the non-symmetric case?</p>
+</div>
+<div class="admonition-exercise-3 admonition">
+<p class="admonition-title">Exercise 3</p>
+<p>Change the <strong>myProlongatorFact</strong> from type <strong>SaPFactory</strong> to <strong>PgPFactory</strong>,
+which uses automatically calculated local damping factors instead of a global damping factor (with some user parameter <strong>sa: damping factor</strong>).
+Note that the <strong>PgPFactory</strong> might not accept the <strong>sa: damping factor</strong> parameter such that you have to comment it out (using <strong>&lt;!– … –&gt;</strong>).</p>
+</div>
+<div class="admonition-exercise-4 admonition">
+<p class="admonition-title">Exercise 4</p>
+<p>Try to set up a multigrid hierarchy with unsmoothed transfer operators for the transition from the finest level to level 1
+and then use smoothed aggregation for the coarser levels (starting from level 1).</p>
+</div>
+</section>
+</section>
+<section id="footnotes">
+<h2>Footnotes<a class="headerlink" href="#footnotes" title="Link to this heading"></a></h2>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id4" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>Sala, M. and Tuminaro, R. S., A new Petrov-Galerkin Smoothed Aggregation Preconditionerfor nonsymmetric Linear Systems, SIAM J. Sci. Comput., 2008, 31, p. 143–166</p>
+</aside>
+<aside class="footnote brackets" id="id5" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
+<p>Wiesner, T. A., Tuminaro, R. S., Wall, W. A. and Gee, M. W., Multigrid transfers fornonsymmetric systems based on Schur complements and Galerkin projections., Numer.Linear Algebra Appl., 2013, doi: 10.1002/nla.1889</p>
+</aside>
+</aside>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="xml_interface_for_advanced_users.html" class="btn btn-neutral float-left" title="XML interface for advanced users" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="rebalancing.html" class="btn btn-neutral float-right" title="Rebalancing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, The MueLu Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

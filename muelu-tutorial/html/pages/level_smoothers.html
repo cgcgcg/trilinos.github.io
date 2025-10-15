@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Level smoothers &mdash; MueLu Tutorial 2023 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=86f27845" />
+
+  
+  
+        <script src="../_static/jquery.js?v=8dae8fb0"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=a4664895"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Multigrid for non-symmetric problems" href="multigrid_for_non_symmetric_problems.html" />
+    <link rel="prev" title="Quick start" href="quick_start.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            MueLu Tutorial
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Beginners Tutorial</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="quick_start.html">Quick start</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Level smoothers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#background-on-multigrid-methods">Background on multigrid methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#footnotes">Footnotes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="multigrid_for_non_symmetric_problems.html">Multigrid for non-symmetric problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="useful_tools_for_analysis.html">Useful tools for analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cd_example.html">Challenge: CD example</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="xml_interface_for_advanced_users.html">XML interface for advanced users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="muelu_factories_for_transfer_operators.html">MueLu factories for transfer operators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rebalancing.html">Rebalancing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advanced_concepts.html">Advanced concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aggregation.html">Aggregation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="useful_commands_and_debugging.html">Useful commands and debugging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="challenge.html">Challenge: elasticity example</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Expert Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="multigrid_for_multiphysics.html">Multigrid for Multiphysics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user_api.html">Using MueLu in User Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml_parameterlist_interpreter.html">ML ParameterList interpreter</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MueLu Tutorial</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Level smoothers</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/pages/level_smoothers.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="level-smoothers">
+<span id="id1"></span><h1>Level smoothers<a class="headerlink" href="#level-smoothers" title="Link to this heading"></a></h1>
+<p>From the last tutorial, we have learned that the used multigrid algorithm may have a significant influence in the convergence speed.
+When comparing the error plots for the standalone multigrid smoothers with unsmoothed and smoothed aggregation multigrid,
+one finds also a notable difference in the <strong>smoothness</strong> of the error.</p>
+<section id="background-on-multigrid-methods">
+<h2>Background on multigrid methods<a class="headerlink" href="#background-on-multigrid-methods" title="Link to this heading"></a></h2>
+<p>Obviously, there are cases where some highly oscillatory error modes are left and overlaying some low frequency modes.
+In other cases there are only low frequency error modes left.
+Theses are two typical cases one might find in practice.</p>
+<p>Multigrid methods are built upont the observation
+that (cheap) level smoothing method often are able to smooth out high oscillatory error components,
+whereas they cannot reduce low frequency error components very well.
+These low frequency error components are then transferred to a coarse level,
+where they can be seen as high frequency error component for a level smoother on the coarse level.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Display an image of a sine wave  appearing oscillatory on a coarse grid</p>
+</div>
+<p>One should not forget that for an efficient multigrid method both the so-called coarse level correction method and the level smoothers have to work together.
+That is, one has to choose the right multigrid method (e.g., <strong>unsmoothed</strong> or <strong>sa</strong>)
+in combination with an appropriate level smoothing strategy.</p>
+<p>In context of multigrid level smoothers,
+we have to define both the level smoothers and the coarse solver.
+Usually, a direct solver is used as coarse solver that is applied to the coarsest multigrid levels.
+However, it is also possible to apply any other kind of iterative smoothing method
+or even no solver at all (even though this would be non-standard).
+The following XML file shows how to use a Jacobi smoother both for level smoothing and as a coarse solver.</p>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-number">Listing 2 </span><span class="caption-text">../../../test/tutorial/s1_easy_jacobi.xml</span><a class="headerlink" href="#id5" title="Link to this code"></a></div>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;MueLu&quot;</span><span class="nt">&gt;</span>
+
+<span class="w">  </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;verbosity&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;low&quot;</span><span class="nt">/&gt;</span>
+
+<span class="w">  </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;max levels&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;10&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;coarse: max size&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;10&quot;</span><span class="nt">/&gt;</span>
+
+<span class="w">  </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;multigrid algorithm&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;unsmoothed&quot;</span><span class="nt">/&gt;</span>
+
+<span class="w">  </span><span class="cm">&lt;!-- Jacobi --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;smoother: type&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;RELAXATION&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;smoother: params&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;relaxation: type&quot;</span><span class="w">  </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;Jacobi&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;relaxation: sweeps&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;relaxation: damping factor&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;double&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;0.9&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">  </span><span class="cm">&lt;!-- Jacobi --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;coarse: type&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;RELAXATION&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;coarse: params&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;relaxation: type&quot;</span><span class="w">  </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;Jacobi&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;relaxation: sweeps&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;relaxation: damping factor&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;double&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;0.9&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="nt">&lt;/ParameterList&gt;</span>
+</pre></div>
+</div>
+</div>
+<p>The corresponding multigrid hierarchy is</p>
+<p><a class="reference internal" href="#level-smoothers-figure-1vcycles"><span class="std std-numref">Table 1</span></a> and <a class="reference internal" href="#level-smoothers-figure-5vcycles"><span class="std std-numref">Table 2</span></a>
+show the multigrid effect of different number of Jacobi smoothers on all multigrid levels.</p>
+<span id="level-smoothers-figure-1vcycles"></span><table class="docutils align-default" id="id6">
+<caption><span class="caption-number">Table 1 </span><span class="caption-text">2D Laplace equation on 50 x 50 mesh after 1 V-cycle with an AMG multigrid solver and Jacobi smoothers on all multigrid levels (2 processors)</span><a class="headerlink" href="#id6" title="Link to this table"></a></caption>
+<tbody>
+<tr class="row-odd"><td><figure class="align-default" id="id7">
+<img alt="../_images/1level_1jac09.png" src="../_images/1level_1jac09.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">1 level with 1 Jacobi sweep (<span class="math notranslate nohighlight">\(\omega=0.9\)</span>)</span><a class="headerlink" href="#id7" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id8">
+<img alt="../_images/1level_10jac09.png" src="../_images/1level_10jac09.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">1 level with 10 Jacobi sweeps (<span class="math notranslate nohighlight">\(\omega=0.9\)</span>)</span><a class="headerlink" href="#id8" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id9">
+<img alt="../_images/1level_100jac09.png" src="../_images/1level_100jac09.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">1 level with 100 Jacobi sweeps (<span class="math notranslate nohighlight">\(\omega=0.9\)</span>)</span><a class="headerlink" href="#id9" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+<tr class="row-even"><td><figure class="align-default" id="id10">
+<img alt="../_images/2level_1jac09.png" src="../_images/2level_1jac09.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">2 levels with 1 Jacobi sweep (<span class="math notranslate nohighlight">\(\omega=0.9\)</span>)</span><a class="headerlink" href="#id10" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id11">
+<img alt="../_images/2level_10jac09.png" src="../_images/2level_10jac09.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text">2 levels with 10 Jacobi sweeps (<span class="math notranslate nohighlight">\(\omega=0.9\)</span>)</span><a class="headerlink" href="#id11" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id12">
+<img alt="../_images/2level_100jac09.png" src="../_images/2level_100jac09.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">2 levels with 100 Jacobi sweeps (<span class="math notranslate nohighlight">\(\omega=0.9\)</span>)</span><a class="headerlink" href="#id12" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+<tr class="row-odd"><td><figure class="align-default" id="id13">
+<img alt="../_images/3level_1jac09.png" src="../_images/3level_1jac09.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 7 </span><span class="caption-text">3 levels with 1 Jacobi sweep (<span class="math notranslate nohighlight">\(\omega=0.9\)</span>)</span><a class="headerlink" href="#id13" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id14">
+<img alt="../_images/3level_10jac09.png" src="../_images/3level_10jac09.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 8 </span><span class="caption-text">3 levels with 10 Jacobi sweeps (<span class="math notranslate nohighlight">\(\omega=0.9\)</span>)</span><a class="headerlink" href="#id14" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id15">
+<img alt="../_images/3level_100jac09.png" src="../_images/3level_100jac09.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 9 </span><span class="caption-text">3 levels with 100 Jacobi sweeps (<span class="math notranslate nohighlight">\(\omega=0.9\)</span>)</span><a class="headerlink" href="#id15" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+<span id="level-smoothers-figure-5vcycles"></span><table class="docutils align-default" id="id16">
+<caption><span class="caption-number">Table 2 </span><span class="caption-text">2D Laplace equation on 50 x 50 mesh after 5 V-cycle with an AMG multigrid solver and Jacobi smoothers on all multigrid levels. (2 processors)</span><a class="headerlink" href="#id16" title="Link to this table"></a></caption>
+<tbody>
+<tr class="row-odd"><td><figure class="align-default" id="id17">
+<img alt="../_images/5sweeps_1level_1jac09.png" src="../_images/5sweeps_1level_1jac09.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 10 </span><span class="caption-text">1 level with 1 Jacobi sweep (<span class="math notranslate nohighlight">\(\omega=0.9\)</span>)</span><a class="headerlink" href="#id17" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id18">
+<img alt="../_images/5sweeps_1level_10jac09.png" src="../_images/5sweeps_1level_10jac09.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 11 </span><span class="caption-text">1 level with 10 Jacobi sweeps (<span class="math notranslate nohighlight">\(\omega=0.9\)</span>)</span><a class="headerlink" href="#id18" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id19">
+<img alt="../_images/5sweeps_1level_100jac09.png" src="../_images/5sweeps_1level_100jac09.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 12 </span><span class="caption-text">1 level with 100 Jacobi sweeps (<span class="math notranslate nohighlight">\(\omega=0.9\)</span>)</span><a class="headerlink" href="#id19" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+<tr class="row-even"><td><figure class="align-default" id="id20">
+<img alt="../_images/5sweeps_2level_1jac09.png" src="../_images/5sweeps_2level_1jac09.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 13 </span><span class="caption-text">2 levels with 1 Jacobi sweep (<span class="math notranslate nohighlight">\(\omega=0.9\)</span>)</span><a class="headerlink" href="#id20" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id21">
+<img alt="../_images/5sweeps_2level_10jac09.png" src="../_images/5sweeps_2level_10jac09.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 14 </span><span class="caption-text">2 levels with 10 Jacobi sweeps (<span class="math notranslate nohighlight">\(\omega=0.9\)</span>)</span><a class="headerlink" href="#id21" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id22">
+<img alt="../_images/5sweeps_2level_100jac09.png" src="../_images/5sweeps_2level_100jac09.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 15 </span><span class="caption-text">2 levels with 100 Jacobi sweeps (<span class="math notranslate nohighlight">\(\omega=0.9\)</span>)</span><a class="headerlink" href="#id22" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+<tr class="row-odd"><td><figure class="align-default" id="id23">
+<img alt="../_images/5sweeps_3level_1jac09.png" src="../_images/5sweeps_3level_1jac09.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 16 </span><span class="caption-text">3 levels with 1 Jacobi sweep (<span class="math notranslate nohighlight">\(\omega=0.9\)</span>)</span><a class="headerlink" href="#id23" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id24">
+<img alt="../_images/5sweeps_3level_10jac09.png" src="../_images/5sweeps_3level_10jac09.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 17 </span><span class="caption-text">3 levels with 10 Jacobi sweeps (<span class="math notranslate nohighlight">\(\omega=0.9\)</span>)</span><a class="headerlink" href="#id24" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id25">
+<img alt="../_images/5sweeps_3level_100jac09.png" src="../_images/5sweeps_3level_100jac09.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 18 </span><span class="caption-text">3 levels with 100 Jacobi sweeps (<span class="math notranslate nohighlight">\(\omega=0.9\)</span>)</span><a class="headerlink" href="#id25" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+<p>One has even more fine-grained control over pre- and post-smoothing as shown in the following example,
+where we use different damping parameters for pre- and post-smoothing (and a direct solver on the coarse grid):</p>
+<p>This produces the following multigrid hierarchy</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Insert missing output</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note that the relaxation-based methods provided by the Ifpack/Ifpack2 package are embedded in an outer additive Schwarz method.</p>
+</div>
+<p>Of course, there exist other smoother methods such as polynomial smoothers (Chebyshev) and ILU-based methods.
+A detailed overview of the different available smoothers can be found in the MueLu User’s Guide (<a class="footnote-reference brackets" href="#id4" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>).</p>
+<div class="admonition-exercise-1 admonition">
+<p class="admonition-title">Exercise 1</p>
+<p>Play around with the smoother parameters and study their effect on the error plot and the convergence of the preconditioned CG method.
+For all available smoothing options and parameters refer to the MueLu user guide (<a class="footnote-reference brackets" href="#id4" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>).
+Hint: use <strong>unsmoothed</strong> transfer operator basis functions (i.e., <strong>multigrid algorithm = unsmoothed</strong>)
+to highlight the effect of the level smoothers.</p>
+</div>
+<div class="admonition-exercise-2 admonition">
+<p class="admonition-title">Exercise 2</p>
+<blockquote>
+<div><p>Use the following parameters to solve the <span class="math notranslate nohighlight">\(50\times 50\)</span> Laplace 2D problem on 2 processors:</p>
+<div class="literal-block-wrapper docutils container" id="id26">
+<div class="code-block-caption"><span class="caption-number">Listing 3 </span><span class="caption-text">../../../test/tutorial/s1_easy_exercise.xml</span><a class="headerlink" href="#id26" title="Link to this code"></a></div>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;MueLu&quot;</span><span class="nt">&gt;</span>
+
+<span class="w">  </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;verbosity&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;low&quot;</span><span class="nt">/&gt;</span>
+
+<span class="w">  </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;max levels&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;3&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;coarse: max size&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;10&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;multigrid algorithm&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;sa&quot;</span><span class="nt">/&gt;</span>
+
+<span class="w">  </span><span class="cm">&lt;!-- Jacobi --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;smoother: type&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;RELAXATION&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;smoother: params&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;relaxation: type&quot;</span><span class="w">  </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;Jacobi&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;relaxation: sweeps&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;relaxation: damping factor&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;double&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;0.9&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">  </span><span class="cm">&lt;!-- Jacobi --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;coarse: type&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;DIRECT&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span>
+<span class="nt">&lt;/ParameterList&gt;</span>
+</pre></div>
+</div>
+</div>
+</div></blockquote>
+<p>That is, we change to smoothed aggregation AMG (SA-AMG).
+You can find the xml file also in <strong>../../../test/tutorial/s1_easy_exercise.xml</strong>.
+Run the example on two processors and check the number of linear iterations and the solver timings in the screen output.
+Can you find smoother parameters which reduce the number of iterations?
+Can you find smoother parameters which reduce the iteration timings?</p>
+</div>
+</section>
+<section id="footnotes">
+<h2>Footnotes<a class="headerlink" href="#footnotes" title="Link to this heading"></a></h2>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id4" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id2">1</a>,<a role="doc-backlink" href="#id3">2</a>)</span>
+<ol class="upperalpha simple" start="12">
+<li><p>Berger-Vergiat, C. A. Glusa, G. Harper, J. J. Hu, M. Mayr, P. Ohm, A. Prokopenko, C. M. Siefert, R. S. Tuminaro, and T. A. Wiesner. MueLu User’s Guide. Technical Report SAND2023-12265, Sandia National Laboratories, Albuquerque, NM (USA) 87185, 2023.</p></li>
+</ol>
+</aside>
+</aside>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="quick_start.html" class="btn btn-neutral float-left" title="Quick start" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="multigrid_for_non_symmetric_problems.html" class="btn btn-neutral float-right" title="Multigrid for non-symmetric problems" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, The MueLu Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

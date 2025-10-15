@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Using MueLu in User Applications &mdash; MueLu Tutorial 2023 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=86f27845" />
+
+  
+  
+        <script src="../_static/jquery.js?v=8dae8fb0"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=a4664895"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ML ParameterList interpreter" href="ml_parameterlist_interpreter.html" />
+    <link rel="prev" title="Multigrid for Multiphysics" href="multigrid_for_multiphysics.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            MueLu Tutorial
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Beginners Tutorial</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="quick_start.html">Quick start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="level_smoothers.html">Level smoothers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multigrid_for_non_symmetric_problems.html">Multigrid for non-symmetric problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="useful_tools_for_analysis.html">Useful tools for analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cd_example.html">Challenge: CD example</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="xml_interface_for_advanced_users.html">XML interface for advanced users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="muelu_factories_for_transfer_operators.html">MueLu factories for transfer operators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rebalancing.html">Rebalancing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advanced_concepts.html">Advanced concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aggregation.html">Aggregation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="useful_commands_and_debugging.html">Useful commands and debugging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="challenge.html">Challenge: elasticity example</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Expert Tutorials</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="multigrid_for_multiphysics.html">Multigrid for Multiphysics</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Using MueLu in User Applications</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#xml-interface-using-createtpetrapreconditioner">XML Interface using CreateTpetraPreconditioner</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#preparations">Preparations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setup-phase">Setup phase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#iteration-phase">Iteration Phase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#muelu-as-multigrid-solver">MueLu as multigrid solver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#muelu-as-preconditioner-for-belos">MueLu as preconditioner for Belos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#full-example-using-the-xml-interface">Full example using the XML interface</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#c-interface">C++ Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#footnotes">Footnotes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ml_parameterlist_interpreter.html">ML ParameterList interpreter</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MueLu Tutorial</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Using MueLu in User Applications</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/pages/user_api.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="using-muelu-in-user-applications">
+<h1>Using MueLu in User Applications<a class="headerlink" href="#using-muelu-in-user-applications" title="Link to this heading"></a></h1>
+<p>This tutorial demonstrates how to use MueLu from within user applications in <code class="docutils literal notranslate"><span class="pre">C++</span></code>.
+We will use the <code class="docutils literal notranslate"><span class="pre">Tpetra</span></code> linear algebra stack.
+We will read the configuration for MueLu from an XML file and then create a <code class="docutils literal notranslate"><span class="pre">MueLu::Hierarchy</span></code>.
+This will then be used as a preconditioner within Belos as well as a standalone solver.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There is also support for Stratimikos.
+Please refer to the <code class="docutils literal notranslate"><span class="pre">examples</span></code> in the MueLu folder for more details.</p>
+</div>
+<section id="xml-interface-using-createtpetrapreconditioner">
+<h2>XML Interface using CreateTpetraPreconditioner<a class="headerlink" href="#xml-interface-using-createtpetrapreconditioner" title="Link to this heading"></a></h2>
+<p>The most comfortable way to declare the multigrid parameters for MueLu is using the XML interface.
+In fact, MueLu provides two different XML interfaces.
+There is a simplified XML interface for multigrid users and a more advanced XML interface for experts,
+which allows to make use of all features of MueLu as a multigrid framework.
+Both XML file formats are introduced in the previous sections of this hands on tutorial.
+However, for the C++ code it makes no difference which type of XML interface is used.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In the next sections, we give some code snippets.
+THey are borrowed form the <code class="docutils literal notranslate"><span class="pre">TutorialDriver.cpp</span></code> file in the tutorial tests.</p>
+</div>
+<section id="preparations">
+<h3>Preparations<a class="headerlink" href="#preparations" title="Link to this heading"></a></h3>
+<p>First of all, we need to grab a communicator object.
+Therefore, it is easy to use some utilities from the Teuchos package:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w">      </span><span class="n">RCP</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">Teuchos</span><span class="o">::</span><span class="n">Comm</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">comm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Teuchos</span><span class="o">::</span><span class="n">DefaultComm</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">getComm</span><span class="p">();</span>
+<span class="w">      </span><span class="p">[[</span><span class="n">maybe_unused</span><span class="p">]]</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">MyPID</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="n">comm</span><span class="o">-&gt;</span><span class="n">getRank</span><span class="p">();</span>
+<span class="w">      </span><span class="p">[[</span><span class="n">maybe_unused</span><span class="p">]]</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">NumProc</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="n">comm</span><span class="o">-&gt;</span><span class="n">getSize</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>For the multigrid method, we need a linear operator <span class="math notranslate nohighlight">\(A\)</span>.
+We can generate a problem-dependent matrix operator using the Galeri package (see <a class="reference internal" href="quick_start.html#quick-start-example-problem"><span class="std std-ref">Example problem</span></a>), with Tpetra as our underlying linear algebra framework (through Xpetra wrappers). Below is an example for the Laplace2D Problem:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w">      </span><span class="c1">// Create the matrix</span>
+<span class="w">      </span><span class="n">RCP</span><span class="o">&lt;</span><span class="n">Galeri</span><span class="o">::</span><span class="n">Xpetra</span><span class="o">::</span><span class="n">Problem</span><span class="o">&lt;</span><span class="n">Map</span><span class="p">,</span><span class="w"> </span><span class="n">CrsMatrixWrap</span><span class="p">,</span><span class="w"> </span><span class="n">MultiVector</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">galeriProblem</span><span class="w"> </span><span class="o">=</span>
+<span class="w">          </span><span class="n">Galeri</span><span class="o">::</span><span class="n">Xpetra</span><span class="o">::</span><span class="n">BuildProblem</span><span class="o">&lt;</span><span class="n">SC</span><span class="p">,</span><span class="w"> </span><span class="n">LO</span><span class="p">,</span><span class="w"> </span><span class="n">GO</span><span class="p">,</span><span class="w"> </span><span class="n">Map</span><span class="p">,</span><span class="w"> </span><span class="n">CrsMatrixWrap</span><span class="p">,</span><span class="w"> </span><span class="n">MultiVector</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;Laplace2D&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">xpetra_map</span><span class="p">,</span><span class="w"> </span><span class="n">galeriList</span><span class="p">);</span>
+<span class="w">      </span><span class="n">RCP</span><span class="o">&lt;</span><span class="n">Matrix</span><span class="o">&gt;</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">galeriProblem</span><span class="o">-&gt;</span><span class="n">BuildMatrix</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>For aggregation-based algebraic multigrid methods,
+one has to provide a valid set of near null space vectors to produce transfer operators.
+In case of a Laplace problem, we just use a constant vector.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w">      </span><span class="c1">// Build null space vector for a scalar problem, i.e. vector with all ones</span>
+<span class="w">      </span><span class="n">RCP</span><span class="o">&lt;</span><span class="n">MultiVector</span><span class="o">&gt;</span><span class="w"> </span><span class="n">nullspace</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rcp</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">MultiVector</span><span class="p">(</span><span class="n">dofMap</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">));</span>
+<span class="w">      </span><span class="n">nullspace</span><span class="o">-&gt;</span><span class="n">putScalar</span><span class="p">(</span><span class="n">one</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="setup-phase">
+<h3>Setup phase<a class="headerlink" href="#setup-phase" title="Link to this heading"></a></h3>
+<p>With a fine level operator <span class="math notranslate nohighlight">\(A\)</span> available as <code class="docutils literal notranslate"><span class="pre">Tpetra::CrsMatrix</span></code> object
+and a set of near null space vectors (available as <code class="docutils literal notranslate"><span class="pre">Tpetra::MultiVector</span></code>),
+all minimum requirements are fulfilled for generating an algebraic multigrid hierarchy.
+There are two different ways to setup a multigrid hierarchy in MueLu.
+One can either use a parameter list driven setup process which accepts either <code class="docutils literal notranslate"><span class="pre">Teuchos::ParameterList</span></code> objects
+or XML files in two different XML file formats.
+Alternatively, one can use the MueLu <code class="docutils literal notranslate"><span class="pre">C++</span></code> API to define the multigrid setup at compile time.
+In the next sections we show both variants.</p>
+<p>The most comfortable way to declare the multigrid parameters for MueLu is using the XML interface.
+In fact, MueLu provides two different XML interfaces.
+There is a simplified XML interface for multigrid users and a more advanced XML interface for expert which allows to make use of all features of MueLu as a multigrid framework.
+Both XML file formats are introduced in the previous sections of this hands on tutorial.
+However, for the <code class="docutils literal notranslate"><span class="pre">C++</span></code> code it makes no difference which type of XML interface is used.</p>
+<p>We first read the MueLu configuration from the XML file:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w">      </span><span class="c1">// Read MueLu parameter list from xml file</span>
+<span class="w">      </span><span class="n">RCP</span><span class="o">&lt;</span><span class="n">ParameterList</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mueluParams</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Teuchos</span><span class="o">::</span><span class="n">getParametersFromXmlFile</span><span class="p">(</span><span class="n">xmlFileName</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Then, we store the near null space vectors in the <code class="docutils literal notranslate"><span class="pre">&quot;user</span> <span class="pre">data&quot;</span></code> sublist of this parameter list:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w">      </span><span class="c1">// Register nullspace as user data in the MueLu parameter list</span>
+<span class="w">      </span><span class="n">ParameterList</span><span class="o">&amp;</span><span class="w"> </span><span class="n">userDataList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mueluParams</span><span class="o">-&gt;</span><span class="n">sublist</span><span class="p">(</span><span class="s">&quot;user data&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="n">userDataList</span><span class="p">.</span><span class="n">set</span><span class="o">&lt;</span><span class="n">RCP</span><span class="o">&lt;</span><span class="n">MultiVector</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="s">&quot;Nullspace&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">nullspace</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>We then can create a MueLu object ready to be used as a preconditioner:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w">      </span><span class="c1">// Create the MueLu preconditioner based on the Tpetra stack</span>
+<span class="w">      </span><span class="n">RCP</span><span class="o">&lt;</span><span class="n">MueLu</span><span class="o">::</span><span class="n">TpetraOperator</span><span class="o">&lt;</span><span class="n">SC</span><span class="p">,</span><span class="w"> </span><span class="n">LO</span><span class="p">,</span><span class="w"> </span><span class="n">GO</span><span class="p">,</span><span class="w"> </span><span class="n">NO</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">mueLuPreconditioner</span><span class="w"> </span><span class="o">=</span>
+<span class="w">          </span><span class="n">MueLu</span><span class="o">::</span><span class="n">CreateTpetraPreconditioner</span><span class="p">(</span><span class="n">Teuchos</span><span class="o">::</span><span class="n">rcp_dynamic_cast</span><span class="o">&lt;</span><span class="n">Operator</span><span class="o">&gt;</span><span class="p">(</span><span class="n">matrix</span><span class="p">),</span><span class="w"> </span><span class="o">*</span><span class="n">mueluParams</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="iteration-phase">
+<span id="user-api-iteration-phase"></span><h3>Iteration Phase<a class="headerlink" href="#iteration-phase" title="Link to this heading"></a></h3>
+<p>Once the setup phase is completed, the MueLu multigrid hierarchy is ready for being used.</p>
+<p>There are several ways how to use the multigrid method.
+One can apply the multigrid method as standalone solver for linear systems.
+Multigrid methods are also known to be efficient preconditioners within iterative (Krylov) solvers such as CG or GMRES methods.</p>
+<p>In the next subsections it is demonstrated how to use MueLu as standalone solver and as preconditioner for iterative solvers from the Belos and AztecOO package in Trilinos.</p>
+<p>For solving a linear system <span class="math notranslate nohighlight">\(Ax=b\)</span>, we need a right hand side vector <span class="math notranslate nohighlight">\(b\)</span>.
+When using iterative solvers we also need an initial guess for the solution vector.</p>
+<p>In this example we just create <code class="docutils literal notranslate"><span class="pre">Tpetra::MultiVectors</span></code> (with just a single vector each).
+The right-hand side vector <span class="math notranslate nohighlight">\(b\)</span> is initialized with ones and the solution vector <span class="math notranslate nohighlight">\(x\)</span> is filled with random values.</p>
+</section>
+<section id="muelu-as-multigrid-solver">
+<span id="user-api-muelu-as-solver"></span><h3>MueLu as multigrid solver<a class="headerlink" href="#muelu-as-multigrid-solver" title="Link to this heading"></a></h3>
+<p>MueLu can be used as standalone solver.
+First, we create and initialize a solution vector:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w">      </span><span class="c1">// Create solution vector and set it to an initial guess (X0)</span>
+<span class="w">      </span><span class="n">RCP</span><span class="o">&lt;</span><span class="n">MultiVector</span><span class="o">&gt;</span><span class="w"> </span><span class="n">multigridSolVec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rcp</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">MultiVector</span><span class="p">(</span><span class="n">dofMap</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">));</span>
+<span class="w">      </span><span class="n">Tpetra</span><span class="o">::</span><span class="n">deep_copy</span><span class="p">(</span><span class="o">*</span><span class="n">multigridSolVec</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">X0</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>If necessary, extract the <code class="docutils literal notranslate"><span class="pre">MueLu::Hiearchy</span></code> from the Tpetra preconditioner object:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w">        </span><span class="c1">// Extract the underlying MueLu hierarchy</span>
+<span class="w">        </span><span class="n">RCP</span><span class="o">&lt;</span><span class="n">MueLu</span><span class="o">::</span><span class="n">Hierarchy</span><span class="o">&lt;</span><span class="n">SC</span><span class="p">,</span><span class="w"> </span><span class="n">LO</span><span class="p">,</span><span class="w"> </span><span class="n">GO</span><span class="p">,</span><span class="w"> </span><span class="n">NO</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">hierarchy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mueLuPreconditioner</span><span class="o">-&gt;</span><span class="n">GetHierarchy</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>Then, the <code class="docutils literal notranslate"><span class="pre">MueLu::Hierarchy</span></code> object is set to the non-preconditioner mode:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w">        </span><span class="c1">// Configure MueLu to be used as solver</span>
+<span class="w">        </span><span class="n">hierarchy</span><span class="o">-&gt;</span><span class="n">IsPreconditioner</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Finally, we solve the system by calling the <code class="docutils literal notranslate"><span class="pre">Iterate()</span></code> routine
+to perform <code class="docutils literal notranslate"><span class="pre">mgridSweeps</span></code> sweeps with the chosen multigrid cycle.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w">        </span><span class="c1">// Solve</span>
+<span class="w">        </span><span class="n">hierarchy</span><span class="o">-&gt;</span><span class="n">Iterate</span><span class="p">(</span><span class="o">*</span><span class="n">Xpetra</span><span class="o">::</span><span class="n">toXpetra</span><span class="p">(</span><span class="n">B</span><span class="p">),</span><span class="w"> </span><span class="o">*</span><span class="n">Xpetra</span><span class="o">::</span><span class="n">toXpetra</span><span class="p">(</span><span class="n">multigridSolVec</span><span class="p">),</span><span class="w"> </span><span class="n">mgridSweeps</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>If successful, the <code class="docutils literal notranslate"><span class="pre">multigridSolVec</span></code> vector contains the solution.</p>
+</section>
+<section id="muelu-as-preconditioner-for-belos">
+<span id="user-api-muelu-as-preconditioner-for-belos"></span><h3>MueLu as preconditioner for Belos<a class="headerlink" href="#muelu-as-preconditioner-for-belos" title="Link to this heading"></a></h3>
+<p>Belos is the Krylov package in Trilinos and works both for Epetra and Tpetra.
+Here, we demonstrate how to use MueLu as preconditioner for Belos solvers using Tpetra.</p>
+<p>First, we create and initialize a solution vector:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w">      </span><span class="c1">// Create solution vector and set it to an initial guess (X0)</span>
+<span class="w">      </span><span class="n">RCP</span><span class="o">&lt;</span><span class="n">MultiVector</span><span class="o">&gt;</span><span class="w"> </span><span class="n">precSolVec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rcp</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">MultiVector</span><span class="p">(</span><span class="n">dofMap</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">));</span>
+<span class="w">      </span><span class="n">Tpetra</span><span class="o">::</span><span class="n">deep_copy</span><span class="p">(</span><span class="o">*</span><span class="n">precSolVec</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">X0</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Then, we create a <code class="docutils literal notranslate"><span class="pre">Belos::LinearProblem</span></code> and hand in the MueLu preconditioner object:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w">        </span><span class="c1">// Construct a Belos LinearProblem object and hand-in the MueLu preconditioner</span>
+<span class="w">        </span><span class="n">RCP</span><span class="o">&lt;</span><span class="n">Belos</span><span class="o">::</span><span class="n">LinearProblem</span><span class="o">&lt;</span><span class="n">SC</span><span class="p">,</span><span class="w"> </span><span class="n">MultiVector</span><span class="p">,</span><span class="w"> </span><span class="n">Operator</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">belosProblem</span><span class="w"> </span><span class="o">=</span>
+<span class="w">            </span><span class="n">rcp</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Belos</span><span class="o">::</span><span class="n">LinearProblem</span><span class="o">&lt;</span><span class="n">SC</span><span class="p">,</span><span class="w"> </span><span class="n">MultiVector</span><span class="p">,</span><span class="w"> </span><span class="n">Operator</span><span class="o">&gt;</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span><span class="w"> </span><span class="n">precSolVec</span><span class="p">,</span><span class="w"> </span><span class="n">B</span><span class="p">));</span>
+<span class="w">        </span><span class="n">belosProblem</span><span class="o">-&gt;</span><span class="n">setLeftPrec</span><span class="p">(</span><span class="n">mueLuPreconditioner</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">bool</span><span class="w"> </span><span class="n">set</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">belosProblem</span><span class="o">-&gt;</span><span class="n">setProblem</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>Now, we define the linear solver configuration in a <code class="docutils literal notranslate"><span class="pre">Teuchos::ParameterList</span></code>
+and create the Belos solver with this configuration:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w">        </span><span class="c1">// Belos parameter list</span>
+<span class="w">        </span><span class="n">RCP</span><span class="o">&lt;</span><span class="n">ParameterList</span><span class="o">&gt;</span><span class="w"> </span><span class="n">belosList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Teuchos</span><span class="o">::</span><span class="n">parameterList</span><span class="p">();</span>
+<span class="w">        </span><span class="n">belosList</span><span class="o">-&gt;</span><span class="n">set</span><span class="p">(</span><span class="s">&quot;Maximum Iterations&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">500</span><span class="p">);</span><span class="w">     </span><span class="c1">// Maximum number of iterations allowed</span>
+<span class="w">        </span><span class="n">belosList</span><span class="o">-&gt;</span><span class="n">set</span><span class="p">(</span><span class="s">&quot;Convergence Tolerance&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">tol</span><span class="p">);</span><span class="w">  </span><span class="c1">// Relative convergence tolerance requested</span>
+<span class="w">        </span><span class="n">belosList</span><span class="o">-&gt;</span><span class="n">set</span><span class="p">(</span><span class="s">&quot;Verbosity&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Belos</span><span class="o">::</span><span class="n">Errors</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Belos</span><span class="o">::</span><span class="n">Warnings</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Belos</span><span class="o">::</span><span class="n">StatusTestDetails</span><span class="p">);</span>
+<span class="w">        </span><span class="n">belosList</span><span class="o">-&gt;</span><span class="n">set</span><span class="p">(</span><span class="s">&quot;Output Frequency&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">        </span><span class="n">belosList</span><span class="o">-&gt;</span><span class="n">set</span><span class="p">(</span><span class="s">&quot;Output Style&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Belos</span><span class="o">::</span><span class="n">Brief</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Create an iterative solver manager</span>
+<span class="w">        </span><span class="n">Belos</span><span class="o">::</span><span class="n">SolverFactory</span><span class="o">&lt;</span><span class="n">SC</span><span class="p">,</span><span class="w"> </span><span class="n">MultiVector</span><span class="p">,</span><span class="w"> </span><span class="n">Operator</span><span class="o">&gt;</span><span class="w"> </span><span class="n">solverFactory</span><span class="p">;</span>
+<span class="w">        </span><span class="n">RCP</span><span class="o">&lt;</span><span class="n">Belos</span><span class="o">::</span><span class="n">SolverManager</span><span class="o">&lt;</span><span class="n">SC</span><span class="p">,</span><span class="w"> </span><span class="n">MultiVector</span><span class="p">,</span><span class="w"> </span><span class="n">Operator</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">solver</span><span class="p">;</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">dsolveType</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;gmres&quot;</span><span class="p">)</span>
+<span class="w">          </span><span class="n">solver</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">solverFactory</span><span class="p">.</span><span class="n">create</span><span class="p">(</span><span class="s">&quot;Block GMRES&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">belosList</span><span class="p">);</span>
+<span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">dsolveType</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;cg&quot;</span><span class="p">)</span>
+<span class="w">          </span><span class="n">solver</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">solverFactory</span><span class="p">.</span><span class="n">create</span><span class="p">(</span><span class="s">&quot;CG&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">belosList</span><span class="p">);</span>
+<span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="n">fancyout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">ERROR:  Please select a valid solver!&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">          </span><span class="k">return</span><span class="w"> </span><span class="n">EXIT_FAILURE</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// Pass the linear problem to the solver</span>
+<span class="w">        </span><span class="n">solver</span><span class="o">-&gt;</span><span class="n">setProblem</span><span class="p">(</span><span class="n">belosProblem</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Finally, we solve the linear system:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w">        </span><span class="c1">// Perform solve</span>
+<span class="w">        </span><span class="n">Belos</span><span class="o">::</span><span class="n">ReturnType</span><span class="w"> </span><span class="n">retStatus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Belos</span><span class="o">::</span><span class="n">Unconverged</span><span class="p">;</span>
+<span class="w">        </span><span class="n">retStatus</span><span class="w">                   </span><span class="o">=</span><span class="w"> </span><span class="n">solver</span><span class="o">-&gt;</span><span class="n">solve</span><span class="p">();</span>
+</pre></div>
+</div>
+</section>
+<section id="full-example-using-the-xml-interface">
+<h3>Full example using the XML interface<a class="headerlink" href="#full-example-using-the-xml-interface" title="Link to this heading"></a></h3>
+<p>The reader may refer to <code class="docutils literal notranslate"><span class="pre">TutorialDriver.cpp</span></code> for a working example to study the source code.
+This demonstration program has some more features that are not discussed in this tutorial.</p>
+<div class="admonition-exercise-1 admonition">
+<p class="admonition-title">Exercise 1</p>
+<p>Compile the example in <code class="docutils literal notranslate"><span class="pre">TutorialDriver.cpp</span></code> and then run the program in parallel using two processors</p>
+<p><code class="docutils literal notranslate"><span class="pre">mpirun</span> <span class="pre">-np</span> <span class="pre">2</span> <span class="pre">./MueLu_TutorialDriver.exe</span> <span class="pre">--help</span></code></p>
+<p>Study the screen output and try to run the example with an XML file as input for the multigrid setup.</p>
+</div>
+<div class="admonition-exercise-2 admonition">
+<p class="admonition-title">Exercise 2</p>
+<blockquote>
+<div><p>Create large scale examples using the <code class="docutils literal notranslate"><span class="pre">--nx</span></code> and <code class="docutils literal notranslate"><span class="pre">--ny</span></code> parameters for a finer mesh.</p>
+</div></blockquote>
+<p>Choose reasonable numbers for <code class="docutils literal notranslate"><span class="pre">--nx</span></code> and <code class="docutils literal notranslate"><span class="pre">--ny</span></code> for your machine
+and make use of your knowledge about MueLu for generating efficient preconditioners.</p>
+</div>
+</section>
+</section>
+<section id="c-interface">
+<h2>C++ Interface<a class="headerlink" href="#c-interface" title="Link to this heading"></a></h2>
+<p>As an alternative to the XML interfaces, the user can also define the multigrid hierarchy using the <code class="docutils literal notranslate"><span class="pre">C++</span></code> API directly.
+In contrary to the XML interface, which allows to build the layout of the multigrid preconditioner at runtime,
+the preconditioner is fully defined at compile time when using the <code class="docutils literal notranslate"><span class="pre">C++</span></code> interface.</p>
+<p>First, a <code class="docutils literal notranslate"><span class="pre">MueLu::Hierarchy</span></code> object has to be defined, which manages the multigrid hierarchy including all multigrid levels.
+It provides routines for the multigrid setup and the multigrid cycle algorithms (such as V-cycle and W-cycle).</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w">      </span><span class="c1">// create new hierarchy</span>
+<span class="w">      </span><span class="n">RCP</span><span class="o">&lt;</span><span class="n">MueLu</span><span class="o">::</span><span class="n">Hierarchy</span><span class="o">&lt;</span><span class="n">SC</span><span class="p">,</span><span class="w"> </span><span class="n">LO</span><span class="p">,</span><span class="w"> </span><span class="n">GO</span><span class="p">,</span><span class="w"> </span><span class="n">NO</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">H</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>There are some member functions which can be used to describe the basic multigrid hierarchy.
+The <code class="docutils literal notranslate"><span class="pre">SetMaxCoarseSize</span></code> member function is used to set the maximum size of the coarse level problem before the coarsening process can be stopped.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w">      </span><span class="c1">// Instantiate new Hierarchy object</span>
+<span class="w">      </span><span class="n">H</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rcp</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Hierarchy</span><span class="p">());</span>
+<span class="w">      </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">setDefaultVerbLevel</span><span class="p">(</span><span class="n">Teuchos</span><span class="o">::</span><span class="n">VERB_HIGH</span><span class="p">);</span>
+<span class="w">      </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">SetMaxCoarseSize</span><span class="p">((</span><span class="n">GO</span><span class="p">)</span><span class="mi">50</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Next, one defines an empty <code class="docutils literal notranslate"><span class="pre">MueLu::Level</span></code> object for the finest level.
+The <code class="docutils literal notranslate"><span class="pre">MueLu::Level</span></code> objects represent a data container storing the internal variables on each multigrid level.
+The user has to provide and fill the level container for the finest level only.
+The <code class="docutils literal notranslate"><span class="pre">MueLu::Hierarchy</span></code> object then automatically generates the coarse levels using the multigrid parameters.
+The absolute minimum requirements for the finest level that the user has to provide is the fine level operator <span class="math notranslate nohighlight">\(A\)</span> which represents the fine level matrix.
+MueLu is based on Xpetra. So, the matrix <span class="math notranslate nohighlight">\(A\)</span> has to be of type <code class="docutils literal notranslate"><span class="pre">Xpetra::Matrix</span></code>.
+In addition, the user should also provide a valid set of near null space vectors.
+For a Laplace problem we can just use the constant <code class="docutils literal notranslate"><span class="pre">nullspace</span></code> vector that has previously been defined.
+Some routines need additional information.
+For example, the user has to provide the node coordinates for repartitioning.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w">      </span><span class="c1">// create a fine level object</span>
+<span class="w">      </span><span class="n">RCP</span><span class="o">&lt;</span><span class="n">Level</span><span class="o">&gt;</span><span class="w"> </span><span class="n">Finest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">GetLevel</span><span class="p">();</span>
+<span class="w">      </span><span class="n">Finest</span><span class="o">-&gt;</span><span class="n">setDefaultVerbLevel</span><span class="p">(</span><span class="n">Teuchos</span><span class="o">::</span><span class="n">VERB_HIGH</span><span class="p">);</span>
+<span class="w">      </span><span class="n">Finest</span><span class="o">-&gt;</span><span class="n">Set</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">A</span><span class="p">);</span>
+<span class="w">      </span><span class="n">Finest</span><span class="o">-&gt;</span><span class="n">Set</span><span class="p">(</span><span class="s">&quot;Nullspace&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">nullspace</span><span class="p">);</span>
+<span class="w">      </span><span class="n">Finest</span><span class="o">-&gt;</span><span class="n">Set</span><span class="p">(</span><span class="s">&quot;Coordinates&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">coordinates</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<blockquote>
+<div><p>When including the <code class="docutils literal notranslate"><span class="pre">MueLu_UseShortNames.hpp</span></code> header file,</p>
+</div></blockquote>
+<p>the template parameters usually can be dropped for compiling.
+The most important template parameters are <code class="docutils literal notranslate"><span class="pre">SC</span></code> for the scalar type,
+<code class="docutils literal notranslate"><span class="pre">LO</span></code> for the local ordinal type and <code class="docutils literal notranslate"><span class="pre">GO</span></code> for the global ordinal type.
+For a detailed description of the template parameters,
+the reader may refer to the Tpetra documentation.</p>
+</div>
+<p>A <code class="docutils literal notranslate"><span class="pre">MueLu::FactoryManager</span></code> object is used for the internal management of data dependencies and generating algorithms of the multigrid setup.
+Even though not absolutely necessary,
+we show the usage of the <code class="docutils literal notranslate"><span class="pre">MueLu::FactoryManager</span></code> object as it allows for user-specific enhancements of the multigrid code.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w">      </span><span class="n">MueLu</span><span class="o">::</span><span class="n">FactoryManager</span><span class="w"> </span><span class="n">M</span><span class="p">;</span>
+<span class="w">      </span><span class="n">M</span><span class="p">.</span><span class="n">SetKokkosRefactor</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>The user can define its own factories for performing different tasks in the setup process.
+The following code shows how to define a smoothed aggregation transfer operator and a restriction operator.
+The <code class="docutils literal notranslate"><span class="pre">MueLu::RAPFactory</span></code> is used for the (standard) Galerkin product to generate the coarse level matrix <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w">      </span><span class="c1">// declare some factories (potentially overwrite default factories)</span>
+<span class="w">      </span><span class="n">RCP</span><span class="o">&lt;</span><span class="n">SaPFactory</span><span class="o">&gt;</span><span class="w"> </span><span class="n">PFact</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rcp</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">SaPFactory</span><span class="p">());</span>
+<span class="w">      </span><span class="n">PFact</span><span class="o">-&gt;</span><span class="n">SetParameter</span><span class="p">(</span><span class="s">&quot;sa: damping factor&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Teuchos</span><span class="o">::</span><span class="n">ParameterEntry</span><span class="p">(</span><span class="mf">4.</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">3</span><span class="p">));</span>
+
+<span class="w">      </span><span class="n">RCP</span><span class="o">&lt;</span><span class="n">Factory</span><span class="o">&gt;</span><span class="w"> </span><span class="n">RFact</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rcp</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">TransPFactory</span><span class="p">());</span>
+
+<span class="w">      </span><span class="n">RCP</span><span class="o">&lt;</span><span class="n">RAPFactory</span><span class="o">&gt;</span><span class="w"> </span><span class="n">AcFact</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rcp</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">RAPFactory</span><span class="p">());</span>
+<span class="w">      </span><span class="n">AcFact</span><span class="o">-&gt;</span><span class="n">setVerbLevel</span><span class="p">(</span><span class="n">Teuchos</span><span class="o">::</span><span class="n">VERB_HIGH</span><span class="p">);</span>
+
+<span class="w">      </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">SetImplicitTranspose</span><span class="p">(</span><span class="nb">true</span><span class="p">);</span>
+<span class="w">      </span><span class="n">Teuchos</span><span class="o">::</span><span class="n">ParameterList</span><span class="w"> </span><span class="n">Aclist</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">*</span><span class="p">(</span><span class="n">AcFact</span><span class="o">-&gt;</span><span class="n">GetValidParameterList</span><span class="p">());</span>
+<span class="w">      </span><span class="n">Aclist</span><span class="p">.</span><span class="n">set</span><span class="p">(</span><span class="s">&quot;transpose: use implicit&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">);</span>
+<span class="w">      </span><span class="n">AcFact</span><span class="o">-&gt;</span><span class="n">SetParameterList</span><span class="p">(</span><span class="n">Aclist</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>The user-defined factories have to be registered in the <code class="docutils literal notranslate"><span class="pre">FactoryManager</span></code> using the lines</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w">      </span><span class="c1">// configure factory manager (no repartitioning)</span>
+<span class="w">      </span><span class="n">M</span><span class="p">.</span><span class="n">SetFactory</span><span class="p">(</span><span class="s">&quot;P&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">PFact</span><span class="p">);</span>
+<span class="w">      </span><span class="n">M</span><span class="p">.</span><span class="n">SetFactory</span><span class="p">(</span><span class="s">&quot;R&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">RFact</span><span class="p">);</span>
+<span class="w">      </span><span class="n">M</span><span class="p">.</span><span class="n">SetFactory</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">AcFact</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<blockquote>
+<div><p>If you forget to register the new factories, the <code class="docutils literal notranslate"><span class="pre">FactoryManager</span></code> will use some internal default factories for being responsible to create the corresponding variables.</p>
+</div></blockquote>
+<p>Then your user-specified factories are just ignored during the multigrid setup!</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<blockquote>
+<div><p>The <code class="docutils literal notranslate"><span class="pre">FactoryManager</span></code> is also responsible for resolving all dependencies between different factories.</p>
+</div></blockquote>
+<p>That is, after the user-defined factories have been registered,
+all factories that request variable <span class="math notranslate nohighlight">\(P\)</span> are provided with the prolongation operator <span class="math notranslate nohighlight">\(P\)</span> that has been generated by the registered factory <code class="docutils literal notranslate"><span class="pre">PFact</span></code>.
+If there is some data requested for which no factory has been registered by the user,
+the <code class="docutils literal notranslate"><span class="pre">FactoryManager</span></code> manages an internal list for reasonable default choices and default factories.</p>
+</div>
+<p>Next, the user has to declare a level smoother.
+The following code can be used to define a symmetric Gauss-Seidel smoother.
+Other methods can be set up in a similar way.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w">      </span><span class="c1">// define smoother object</span>
+<span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">ifpackType</span><span class="p">;</span>
+<span class="w">      </span><span class="n">Teuchos</span><span class="o">::</span><span class="n">ParameterList</span><span class="w"> </span><span class="n">ifpackList</span><span class="p">;</span>
+<span class="w">      </span><span class="n">ifpackList</span><span class="p">.</span><span class="n">set</span><span class="p">(</span><span class="s">&quot;relaxation: sweeps&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">LO</span><span class="p">)</span><span class="mi">2</span><span class="p">);</span>
+<span class="w">      </span><span class="n">ifpackList</span><span class="p">.</span><span class="n">set</span><span class="p">(</span><span class="s">&quot;relaxation: damping factor&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">SC</span><span class="p">)</span><span class="mf">1.0</span><span class="p">);</span>
+<span class="w">      </span><span class="n">ifpackType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;RELAXATION&quot;</span><span class="p">;</span>
+<span class="w">      </span><span class="n">ifpackList</span><span class="p">.</span><span class="n">set</span><span class="p">(</span><span class="s">&quot;relaxation: type&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Symmetric Gauss-Seidel&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Before the level smoother can be used, a <code class="docutils literal notranslate"><span class="pre">MueLu::SmootherFactory</span></code> has to be defined for the smoother factory.
+The <code class="docutils literal notranslate"><span class="pre">SmootherFactory</span></code> is used in the multigrid setup to generate level smoothers for the corresponding levels using the prototyping design pattern.
+Note, that the <code class="docutils literal notranslate"><span class="pre">SmootherFactory</span></code> has also to be registered in the <code class="docutils literal notranslate"><span class="pre">FactoryManager</span></code> object.
+If the user forgets this, the multigrid setup will use some kind of default smoother, i.e., the user-chosen smoother options are just ignored.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w">      </span><span class="c1">// create smoother factory</span>
+<span class="w">      </span><span class="n">RCP</span><span class="o">&lt;</span><span class="n">SmootherPrototype</span><span class="o">&gt;</span><span class="w"> </span><span class="n">smootherPrototype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rcp</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">TrilinosSmoother</span><span class="p">(</span><span class="n">ifpackType</span><span class="p">,</span><span class="w"> </span><span class="n">ifpackList</span><span class="p">));</span>
+<span class="w">      </span><span class="n">M</span><span class="p">.</span><span class="n">SetFactory</span><span class="p">(</span><span class="s">&quot;Smoother&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">rcp</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">SmootherFactory</span><span class="p">(</span><span class="n">smootherPrototype</span><span class="p">)));</span>
+</pre></div>
+</div>
+<p>Once the <code class="docutils literal notranslate"><span class="pre">FactoryManager</span></code> is set up, it can be used with the <code class="docutils literal notranslate"><span class="pre">Hierarchy::Setup</span></code> routine to initiate the coarsening process and set up the multigrid hierarchy.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w">      </span><span class="c1">// setup multigrid hierarchy</span>
+<span class="w">      </span><span class="kt">int</span><span class="w"> </span><span class="n">startLevel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">      </span><span class="n">H</span><span class="o">-&gt;</span><span class="n">Setup</span><span class="p">(</span><span class="n">M</span><span class="p">,</span><span class="w"> </span><span class="n">startLevel</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="footnotes">
+<h2>Footnotes<a class="headerlink" href="#footnotes" title="Link to this heading"></a></h2>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id1" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></span>
+<ol class="upperalpha simple" start="12">
+<li><p>Berger-Vergiat, C. A. Glusa, G. Harper, J. J. Hu, M. Mayr, P. Ohm, A. Prokopenko, C. M. Siefert, R. S. Tuminaro, and T. A. Wiesner. MueLu User’s Guide. Technical Report SAND2023-12265, Sandia National Laboratories, Albuquerque, NM (USA) 87185, 2023.</p></li>
+</ol>
+</aside>
+</aside>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="multigrid_for_multiphysics.html" class="btn btn-neutral float-left" title="Multigrid for Multiphysics" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ml_parameterlist_interpreter.html" class="btn btn-neutral float-right" title="ML ParameterList interpreter" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, The MueLu Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Useful commands and debugging &mdash; MueLu Tutorial 2023 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=86f27845" />
+
+  
+  
+        <script src="../_static/jquery.js?v=8dae8fb0"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=a4664895"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Challenge: elasticity example" href="challenge.html" />
+    <link rel="prev" title="Aggregation" href="aggregation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            MueLu Tutorial
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Beginners Tutorial</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="quick_start.html">Quick start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="level_smoothers.html">Level smoothers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multigrid_for_non_symmetric_problems.html">Multigrid for non-symmetric problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="useful_tools_for_analysis.html">Useful tools for analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cd_example.html">Challenge: CD example</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="xml_interface_for_advanced_users.html">XML interface for advanced users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="muelu_factories_for_transfer_operators.html">MueLu factories for transfer operators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rebalancing.html">Rebalancing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advanced_concepts.html">Advanced concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aggregation.html">Aggregation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Useful commands and debugging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#export-level-information">Export level information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dependency-trees">Dependency trees</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#graphical-assistant-for-xml-file-generation">Graphical assistant for XML file generation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="challenge.html">Challenge: elasticity example</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Expert Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="multigrid_for_multiphysics.html">Multigrid for Multiphysics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user_api.html">Using MueLu in User Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml_parameterlist_interpreter.html">ML ParameterList interpreter</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MueLu Tutorial</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Useful commands and debugging</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/pages/useful_commands_and_debugging.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="useful-commands-and-debugging">
+<h1>Useful commands and debugging<a class="headerlink" href="#useful-commands-and-debugging" title="Link to this heading"></a></h1>
+<section id="export-level-information">
+<h2>Export level information<a class="headerlink" href="#export-level-information" title="Link to this heading"></a></h2>
+<p>Of course, it is possible to export the multigrid hierarchy in matrix market format similar to <a class="reference internal" href="useful_tools_for_analysis.html#useful-tools-for-analysis-export-data"><span class="std std-ref">Export data</span></a> when using the advanced XML file format instead of the simple XML format.</p>
+<p>To export the multigrid hierarchy one can use, e.g., the following parameters</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;MueLu&quot;</span><span class="nt">&gt;</span>
+
+<span class="w">  </span><span class="cm">&lt;!-- Factory collection --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Factories&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">  </span><span class="cm">&lt;!-- Definition of the multigrid preconditioner --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Hierarchy&quot;</span><span class="nt">&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;max levels&quot;</span><span class="w">                            </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w">      </span><span class="na">value=</span><span class="s">&quot;3&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;coarse: max size&quot;</span><span class="w">                      </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w">      </span><span class="na">value=</span><span class="s">&quot;10&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;verbosity&quot;</span><span class="w">                             </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">   </span><span class="na">value=</span><span class="s">&quot;Low&quot;</span><span class="nt">/&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;All&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;DataToWrite&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Matrices&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;{0,1,2}&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Prolongators&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;{1,2}&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Restrictors&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;{1,2}&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/ParameterList&gt;</span>
+<span class="nt">&lt;/ParameterList&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="dependency-trees">
+<span id="useful-commands-and-debugging-dependencytrees"></span><h2>Dependency trees<a class="headerlink" href="#dependency-trees" title="Link to this heading"></a></h2>
+<p>For debugging it can be extremely helpful to automatically generate the dependency tree of the factories for a given XML file. However, it shall be noticed that even with a graphical dependency tree it might be hard to find the missing links and dependencies without a sufficient understanding of the overall framework.</p>
+<p>To write out the dependencies you just have to put in the <strong>dependencyOutputLevel</strong> parameter. The value gives you the fine level index that you are interested in (e.g., 1 means: print dependencies between level 1 and level 2).</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-number">Listing 9 </span><span class="caption-text">../../../test/tutorial/s6_dep.xml</span><a class="headerlink" href="#id1" title="Link to this code"></a></div>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;MueLu&quot;</span><span class="nt">&gt;</span>
+
+<span class="w">  </span><span class="cm">&lt;!-- Factory collection --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Factories&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">  </span><span class="cm">&lt;!-- Definition of the multigrid preconditioner --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Hierarchy&quot;</span><span class="nt">&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;max levels&quot;</span><span class="w">                            </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w">      </span><span class="na">value=</span><span class="s">&quot;3&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;coarse: max size&quot;</span><span class="w">                      </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w">      </span><span class="na">value=</span><span class="s">&quot;10&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;verbosity&quot;</span><span class="w">                             </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">   </span><span class="na">value=</span><span class="s">&quot;Low&quot;</span><span class="nt">/&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;All&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;dependencyOutputLevel&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span>
+<span class="w">  </span><span class="nt">&lt;/ParameterList&gt;</span>
+<span class="nt">&lt;/ParameterList&gt;</span>
+</pre></div>
+</div>
+</div>
+<p>After running the example you should find a file named <strong>dep_graph.dot</strong> in the current folder which you can transform into a graph using the <strong>dot</strong> utility from the graphviz package.
+Run, e.g. the commands</p>
+<dl class="simple">
+<dt>::</dt><dd><p>sed -i ‘s/label=Graph]/label=&quot;Graph&quot;]/’ dep_graph.dot
+sed -i ‘s/\”/”/g’ dep_graph.dot
+sed -i ‘s/”&lt;/&lt;/’ dep_graph.dot
+sed -i ‘s/&gt;”/&gt;/’ dep_graph.dot
+dot -Tpng dep_graph.dot -o dep_graph.dot.png</p>
+</dd>
+</dl>
+<p>in your terminal to obtain the graph as given in Figure <a class="reference internal" href="#useful-commands-and-debugging-autograph"><span class="std std-ref">Visualization of aggregates using the CoarseningVisualizationFactory.</span></a>.</p>
+<figure class="align-default" id="id2">
+<span id="useful-commands-and-debugging-autograph"></span><img alt="../_images/dep_graph.png" src="../_images/dep_graph.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 21 </span><span class="caption-text">Visualization of aggregates using the CoarseningVisualizationFactory.</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Note that the red arrows correspond to the fine level (level 1) and the blue arrows correspond to data on the coarse level (level 2).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In case that the file <strong>dep_graph.dot</strong> is not generated you have to check the prerequisites. To be able to auto-generate the dependency graphs you have to compile MueLu with Boost enabled. Furthermore you have to set the <strong>MueLu_ENABLE_Boost_for_real:BOOL = ON</strong> defines flag in your configuration script. If these requirements are not fulfilled you should find the error message <em>Dependency graph output requires boost and MueLu_ENABLE_Boost_for_real</em> in the screen output of MueLu.</p>
+</div>
+<p>As one can see from the dependency output there are also some internal factories which have not been visualized in the Figures <a class="reference internal" href="muelu_factories_for_transfer_operators.html#muelu-factories-for-transfer-operators-figure-simpledesign"><span class="std std-ref">XML Interface</span></a>. A good example is the <strong>NullspaceFactory</strong> which seems to build a dependency cycle with the <strong>TentativePFactory</strong>. In fact, the <strong>NullspaceFactory</strong> is a helper factory which allows to use the user-provided near null space vectors as input on the finest level. On the coarser levels it just loops through the generated coarse set of near null space vectors from the <strong>TentativePFactory</strong>. This is a technical detail which sometimes can cause some problems when the corresponding dependency is not defined properly in the XML file.
+Another example for a special factory is the <strong>NoFactory</strong>. This special factory is used for all data which is kept in memory and needed by the level smoothers during the iteration. Usually, the final transfer operators <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(R\)</span> as well as the level matrix <span class="math notranslate nohighlight">\(A\)</span> are transformed to <strong>NoFactory</strong> objects after the setup phase has completed. However, expert users can also use the <strong>NoFactory</strong> mechanism for special data during the setup phase. But this is not recommended.</p>
+<div class="admonition-exercise-1 admonition">
+<p class="admonition-title">Exercise 1</p>
+<p>Compare the factory layout in Figure <span class="xref std std-ref">aggregation/figure_simpledesignaggregates</span> with above dependency graph. Try to read it from bottom to top. Which factories are missing in Figure <span class="xref std std-ref">aggregation/figure_simpledesignaggregates</span>? Which variables are missing in Figure <span class="xref std std-ref">aggregation/figure_simpledesignaggregates</span>?</p>
+</div>
+</section>
+<section id="graphical-assistant-for-xml-file-generation">
+<h2>Graphical assistant for XML file generation<a class="headerlink" href="#graphical-assistant-for-xml-file-generation" title="Link to this heading"></a></h2>
+<p>The <strong>hands-on.py</strong> driver script contains a graphical assistant to generate new XML parameter files in the advanced MueLu file format.</p>
+<p>Just run the <strong>hands-on.py</strong> script and choose a problem type from the list. Then choose option 2 to set the xml file. If you enter a filename that does not exist then the assistant is started to generate that new XML file.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/tut1_15.png"><img alt="../_images/tut1_15.png" src="../_images/tut1_15.png" style="width: 10cm;" /></a>
+</figure>
+<p>Just go through the menu and make your choices for level smoothers, transfer operators and so on. Do not forget to call option 6 to save the XML file under the given name, that you have entered before. Then you can use option 7 to go back to the main menu for the example problem and try your new preconditioner with your parameter choices.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Of course, we could have introduced this feature with the earlier tutorials, but the idea was to familiarize the user with the XML files.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="aggregation.html" class="btn btn-neutral float-left" title="Aggregation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="challenge.html" class="btn btn-neutral float-right" title="Challenge: elasticity example" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, The MueLu Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

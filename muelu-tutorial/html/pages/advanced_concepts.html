@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advanced concepts &mdash; MueLu Tutorial 2023 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=86f27845" />
+
+  
+  
+        <script src="../_static/jquery.js?v=8dae8fb0"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=a4664895"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Aggregation" href="aggregation.html" />
+    <link rel="prev" title="Rebalancing" href="rebalancing.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            MueLu Tutorial
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Beginners Tutorial</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="quick_start.html">Quick start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="level_smoothers.html">Level smoothers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multigrid_for_non_symmetric_problems.html">Multigrid for non-symmetric problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="useful_tools_for_analysis.html">Useful tools for analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cd_example.html">Challenge: CD example</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="xml_interface_for_advanced_users.html">XML interface for advanced users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="muelu_factories_for_transfer_operators.html">MueLu factories for transfer operators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rebalancing.html">Rebalancing</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Advanced concepts</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#semi-coarsening">Semi-coarsening</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#basic-idea">Basic idea</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#factory-layout-without-rebalancing">Factory layout without rebalancing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#factory-layout-with-rebalancing">Factory layout with rebalancing</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#line-smoothing">Line-smoothing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#general-idea">General idea</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#usage">Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#footnotes">Footnotes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="aggregation.html">Aggregation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="useful_commands_and_debugging.html">Useful commands and debugging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="challenge.html">Challenge: elasticity example</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Expert Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="multigrid_for_multiphysics.html">Multigrid for Multiphysics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user_api.html">Using MueLu in User Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml_parameterlist_interpreter.html">ML ParameterList interpreter</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MueLu Tutorial</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Advanced concepts</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/pages/advanced_concepts.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="advanced-concepts">
+<h1>Advanced concepts<a class="headerlink" href="#advanced-concepts" title="Link to this heading"></a></h1>
+<p>As already mentioned in the beginning,
+MueLu is designed as a multigrid framework, and, even though initiated as an aggregation-based algebraic multigrid method,
+it can also be used for other kinds of coarsening methods.
+In this chapter we demonstrate the combination of a semi-coarsening method with an aggregation-based coarsening on the coarser levels.
+Semi-coarsening is combined with a line-smoothing method which then changes to a point-relaxation smoothing once no further semi-coarsening is possible.
+In both cases, the semi-coarsening and the line-smoothing, the key element here is the dynamic switch from one to the another coarsening or smoothing strategy during runtime.</p>
+<section id="semi-coarsening">
+<h2>Semi-coarsening<a class="headerlink" href="#semi-coarsening" title="Link to this heading"></a></h2>
+<section id="basic-idea">
+<h3>Basic idea<a class="headerlink" href="#basic-idea" title="Link to this heading"></a></h3>
+<p>Assuming that you have a 3D problem which is based on an extruded 2D mesh,
+semi-coarsening might be an interesting option.
+That is, on the finer levels we apply a semi-coarsening transfer operator which basically reduces the problem to a pseudo 2D problem
+which then is handled by any other type of (smoothed aggregation based) transfer operator the usual way.</p>
+</section>
+<section id="factory-layout-without-rebalancing">
+<h3>Factory layout without rebalancing<a class="headerlink" href="#factory-layout-without-rebalancing" title="Link to this heading"></a></h3>
+<p>The semi-coarsening is provided by the <strong>SemiCoarsenPFactory</strong> for generating the semi-coarsening transfer operators
+in combination with the <strong>LineDetectionFactory</strong> which performs the line detection,
+i.e. it searches for the vertical node lines along the extrusion axis of the 2D mesh.
+Once all mesh layers are reduced to one by the <strong>SemiCoarsenPFactory</strong>,
+we switch to the aggregation-based standard coarsening process.
+There is a <strong>TogglePFactory</strong> which allows to switch back and forth between two different transfer operator strategies
+(such as semi-coarsening and standard aggregation-based coarsening).
+In principle, any combination of two different transfer operator strategies is allowed.
+However, the current implementation only contains decision criteria to switch between semi-coarsening and aggregation-based types of coarsening.</p>
+<p>Figure <span class="xref std std-ref">advanced_concepts/figure_rebalancedtoggledesign</span> shows a typical factory layout for the combination of semi-coarsening
+with a standard (non-smoothed) aggregation-based coarsening with repartitioning enabled.
+First, one can see the <strong>TogglePFactory</strong> which has knowledge about the two different transfer operator branches
+and makes a decision which transfer operator is used and provided to the restriction operator factory and the <strong>RAPFactory</strong>.
+Depending on the line detection algorithm in <strong>LineDetectionFactory</strong>,
+one might also need some information about the fine level mesh (such as the fine level coordinates).
+The user only has to provide the mesh on the finest level.
+On the coarser levels the <strong>LineDetectionFactory</strong> uses a standard ordering of the degrees of freedom which corresponds to a vertical node ordering.</p>
+<div class="admonition warning" id="advanced-concepts-figure-rebalancedtoggledesign">
+<p class="admonition-title">Warning</p>
+<p>Insert missing figure here</p>
+</div>
+</section>
+<section id="factory-layout-with-rebalancing">
+<h3>Factory layout with rebalancing<a class="headerlink" href="#factory-layout-with-rebalancing" title="Link to this heading"></a></h3>
+<p>Figure <span class="xref std std-ref">advanced_concepts/figure_rebalancedtogglerebalancingdesign</span> gives the extended factory layout when rebalancing is enabled.
+There is a new <strong>ToggleCoordinatesTransferFactory</strong> which is controlled by the <strong>TogglePFactory</strong>
+and appropriately generates the coarse coordinates depending on the used transfer operator.
+In case of semi-coarsening, the <strong>SemiCoarsenPFactory</strong> provides the coarse coordinates,
+which are then piped through the <strong>ToggleCoordinatesTransferFactory</strong>.
+In case of standard aggregation,
+the <strong>CoordinatesTransferFactory</strong> calculates the coarse coordinates using the aggregation information provided by the <strong>AggregationFactory</strong>.
+The coarse coordinate information is finally rebalanced by the <strong>RebalanceTransferFactory</strong> based on the rebalancing information provided by the <strong>RepartitionFactory</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note, that the <strong>LineDetectionFactory</strong> algorithm expects all nodes of a vertical line along the extrusion axis of the underlying 2D mesh to be owned by the same processor.
+Do not allow for rebalancing before semi-coarsening is complete!
+Alternatively, you can implement a new interface class to replace the <strong>ZoltanInterface</strong> which makes sure that the nodes are rebalanced appropriately.
+This could be easily done by rebalancing the <strong>VertLineIds</strong> info
+that is provided by the <strong>LineDetectionFactory</strong> and reconstruct the node based <strong>Partition</strong> data.
+The <strong>Chosen P</strong> variable provided by the <strong>TogglePFactory</strong> would tell the new interface class whether we are in semi-coarsening mode or in standard aggregation mode.</p>
+</div>
+<div class="admonition warning" id="advanced-concepts-figure-rebalancedtogglerebalancingdesign">
+<p class="admonition-title">Warning</p>
+<p>Insert missing figure here</p>
+</div>
+<p>The following listing shows exemplary the content of the xml file to set up a factory hierarchy similar to the one shown in Figure <span class="xref std std-ref">advanced_concepts/figure_rebalancedtogglerebalancingdesign</span>.</p>
+<p>In the <strong>Factories</strong> section,
+first the <strong>SemiCoarsenPFactory</strong> and the line detection algorithm are defined representing the left transfer operator branch.
+Next, the smoothed aggregation coarsening branch is defined in Part II
+together with an instance of the <strong>TransferCoordinatesTransferFactory</strong> for calculating the corresponding coarse coordinates.
+In Part III, the <strong>TogglePFactory</strong> is defined.
+It contains a <strong>TransferFactories</strong> sublist where all different coarsening branches (i.e., the semi-coarsening and aggregation-based coarsening) are defined.
+The corresponding prolongation operators are listed using the variable name <strong>P</strong> with a number between 1 and 9.
+In addition to the prolongation operator factories,
+one has also to declare the factories providing the coarse level null space and the <em>tentative</em> prolongation operator.
+In case of semi-coarsening this is the <strong>SemiCoarsenPFactory</strong> and for the aggregation-based coarsening this is the <strong>TentativePFactory</strong>.
+These factories are declared for generating the <strong>Nullspace</strong> variable with a number between 1 and 9 corresponding to the associated transfer operator branch.
+Similar for the <em>tentative</em> prolongation operators denoted by the variable <strong>Ptent</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>SemiCoarsenPFactory</strong> provides this information for compatibility reasons,
+even though there is no tentative prolongation operator for the geometrically generated <strong>SemiCoarsenPFactory</strong> operator.
+But the <strong>TogglePFactory</strong> is designed to be more general and allows for combining different kinds of smoothed prolongation operators.
+These need information about the non-smoothed transfer operators in the variable <strong>Ptent</strong>.</p>
+</div>
+<p>Similarly, a <strong>ToggleCoordinatesTransferFactory</strong> is declared with an internal list of all factories providing the coarse level coordinates.
+This is the previously defined <strong>CoordinatesTransferFactory</strong> for the standard aggregation-based coarsening branch and the <strong>SemiCoarsenPFactory</strong> for the semi-coarsening branch.</p>
+<p>Part IV contains the standard factories for the rebalancing.</p>
+<p>Finally, it is important to declare all necessary main factories in the <strong>Hierarchy</strong> section of the xml file.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;MueLu&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Factories&quot;</span><span class="nt">&gt;</span>
+
+<span class="w">    </span><span class="cm">&lt;!-- =======================  PART I  ======================= --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myLineDetectionFact&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;LineDetectionFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;linedetection: orientation&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;coordinates&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;mySemiCoarsenPFact1&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;SemiCoarsenPFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;semicoarsen: coarsen rate&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;6&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">    </span><span class="cm">&lt;!-- =======================  PART II  ======================= --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;UncoupledAggregationFact2&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;UncoupledAggregationFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;aggregation: ordering&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;graph&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;aggregation: min agg size&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w">    </span><span class="na">value=</span><span class="s">&quot;9&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;MyCoarseMap2&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;CoarseMapFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Aggregates&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;UncoupledAggregationFact2&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myTentativePFact2&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w">     </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;TentativePFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Aggregates&quot;</span><span class="w">  </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;UncoupledAggregationFact2&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;CoarseMap&quot;</span><span class="w">   </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;MyCoarseMap2&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;mySaPFact2&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w">     </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;SaPFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;P&quot;</span><span class="w">           </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myTentativePFact2&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myTransferCoordinatesFact&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w">     </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;CoordinatesTransferFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;CoarseMap&quot;</span><span class="w">   </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;MyCoarseMap2&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Aggregates&quot;</span><span class="w">  </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;UncoupledAggregationFact2&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">    </span><span class="cm">&lt;!-- =======================  PART III  ======================= --&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myTogglePFact&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w">              </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;TogglePFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;semicoarsen: number of levels&quot;</span><span class="w">       </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;2&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;TransferFactories&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;P1&quot;</span><span class="w">                </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;mySemiCoarsenPFact1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;P2&quot;</span><span class="w">                </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;mySaPFact2&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Ptent1&quot;</span><span class="w">            </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;mySemiCoarsenPFact1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Ptent2&quot;</span><span class="w">            </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myTentativePFact2&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Nullspace1&quot;</span><span class="w">        </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;mySemiCoarsenPFact1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Nullspace2&quot;</span><span class="w">        </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myTentativePFact2&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myRestrictorFact&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w">   </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;TransPFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;P&quot;</span><span class="w">         </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myTogglePFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myToggleTransferCoordinatesFact&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w">   </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;ToggleCoordinatesTransferFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Chosen P&quot;</span><span class="w">  </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myTogglePFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;TransferFactories&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Coordinates1&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;mySemiCoarsenPFact1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Coordinates2&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myTransferCoordinatesFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myRAPFact&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;RAPFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;P&quot;</span><span class="w">       </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myTogglePFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;R&quot;</span><span class="w">       </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myRestrictorFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;TransferFactories&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;For Coordinates&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myToggleTransferCoordinatesFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">    </span><span class="cm">&lt;!-- =======================  PART IV (Repartitioning)  ======================= --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myZoltanInterface&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w">      </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;ZoltanInterface&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;A&quot;</span><span class="w">            </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myRAPFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Coordinates&quot;</span><span class="w">  </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myToggleTransferCoordinatesFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myRepartitionFact&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w">    </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;RepartitionFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;A&quot;</span><span class="w">          </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myRAPFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Partition&quot;</span><span class="w">  </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myZoltanInterface&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;repartition: min rows per proc&quot;</span><span class="w">  </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w">    </span><span class="na">value=</span><span class="s">&quot;800&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;repartition: max imbalance&quot;</span><span class="w">      </span><span class="na">type=</span><span class="s">&quot;double&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;1.1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;repartition: start level&quot;</span><span class="w">        </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w">    </span><span class="na">value=</span><span class="s">&quot;3&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;repartition: remap parts&quot;</span><span class="w">        </span><span class="na">type=</span><span class="s">&quot;bool&quot;</span><span class="w">   </span><span class="na">value=</span><span class="s">&quot;false&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myRebalanceProlongatorFact&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w">      </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;RebalanceTransferFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;type&quot;</span><span class="w">         </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;Interpolation&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;P&quot;</span><span class="w">            </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myTogglePFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Coordinates&quot;</span><span class="w">  </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myToggleTransferCoordinatesFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Nullspace&quot;</span><span class="w">    </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myTogglePFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myRebalanceRestrictionFact&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w">      </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;RebalanceTransferFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;type&quot;</span><span class="w">         </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;Restriction&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;R&quot;</span><span class="w">            </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myRestrictorFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myRebalanceAFact&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w">      </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;RebalanceAcFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;A&quot;</span><span class="w">            </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myRAPFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+<span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="cm">&lt;!-- Definition of the multigrid preconditioner --&gt;</span>
+<span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Hierarchy&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;max levels&quot;</span><span class="w">       </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w">      </span><span class="na">value=</span><span class="s">&quot;6&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;coarse: max size&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w">      </span><span class="na">value=</span><span class="s">&quot;100&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;verbosity&quot;</span><span class="w">        </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">   </span><span class="na">value=</span><span class="s">&quot;High&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;All&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;P&quot;</span><span class="w">              </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">   </span><span class="na">value=</span><span class="s">&quot;myRebalanceProlongatorFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Nullspace&quot;</span><span class="w">      </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">   </span><span class="na">value=</span><span class="s">&quot;myRebalanceProlongatorFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;CoarseNumZLayers&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">   </span><span class="na">value=</span><span class="s">&quot;myLineDetectionFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;LineDetection_Layers&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">   </span><span class="na">value=</span><span class="s">&quot;myLineDetectionFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;LineDetection_VertLineIds&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">   </span><span class="na">value=</span><span class="s">&quot;myLineDetectionFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;A&quot;</span><span class="w">              </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">   </span><span class="na">value=</span><span class="s">&quot;myRebalanceAFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Coordinates&quot;</span><span class="w">    </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">   </span><span class="na">value=</span><span class="s">&quot;myRebalanceProlongatorFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Importer&quot;</span><span class="w">       </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">   </span><span class="na">value=</span><span class="s">&quot;myRepartitionFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="cm">&lt;!--&lt;Parameter name=&quot;R&quot;          type=&quot;string&quot;   value=&quot;myRebalanceRestrictionFact&quot;/&gt;--&gt;</span>
+<span class="nt">&lt;/ParameterList&gt;</span>
+<span class="nt">&lt;/ParameterList&gt;</span>
+<span class="nt">&lt;/ParameterList&gt;</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Include the above XML file into testing.</p>
+</div>
+</section>
+</section>
+<section id="line-smoothing">
+<span id="advanced-concepts-line-smoothing"></span><h2>Line-smoothing<a class="headerlink" href="#line-smoothing" title="Link to this heading"></a></h2>
+<section id="general-idea">
+<h3>General idea<a class="headerlink" href="#general-idea" title="Link to this heading"></a></h3>
+<p>Semi-coarsening should be combined with line-smoothing as the complementary smoothing operation.
+Whereas semi-coarsening coarsens, e.g., along the z-axis trying to produce a 2D representation of a 3D problem,
+the line-smoothing operates orthogonal to the coarsening and smoothes in the x- and y-direction and interprets all vertical z-layers technically as nodes in a pseudo 2D problem.</p>
+</section>
+<section id="usage">
+<h3>Usage<a class="headerlink" href="#usage" title="Link to this heading"></a></h3>
+<p>The following listing shows how to choose a Jacobi line smoother.
+The reader might compare the xml code snippets with Section <a class="reference internal" href="level_smoothers.html#level-smoothers"><span class="std std-ref">Level smoothers</span></a> for a detailed description of the different smoothers and parameters.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;MueLu&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Factories&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;mySmoother1&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w">   </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;TrilinosSmoother&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;type&quot;</span><span class="w">      </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;LINESMOOTHING_BANDEDRELAXATION&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;smoother: pre or post&quot;</span><span class="w">        </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;pre&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;ParameterList&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;relaxation: type&quot;</span><span class="w">           </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;Jacobi&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;relaxation: sweeps&quot;</span><span class="w">         </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w">    </span><span class="na">value=</span><span class="s">&quot;2&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;relaxation: damping factor&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;double&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;0.3&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+<span class="nt">&lt;/ParameterList&gt;</span>
+<span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Hierarchy&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;All&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Smoother&quot;</span><span class="w">    </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">   </span><span class="na">value=</span><span class="s">&quot;mySmoother1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+<span class="nt">&lt;/ParameterList&gt;</span>
+<span class="nt">&lt;/ParameterList&gt;</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Include the above XML file into testing.</p>
+</div>
+<p>The parameters are standard except of <strong>type</strong>.
+The standard choice would be <strong>RELAXATION</strong> for relaxation based smoothers.
+To use line-smoothing instead one has the following options:</p>
+<div class="admonition-description admonition">
+<p class="admonition-title">Description</p>
+<ul class="simple">
+<li><p>[LINESMOOTHINGBANDEDRELAXATION] Use banded containers to store the local block associated with one vertical line.</p></li>
+</ul>
+<p>This is the recommended variant as it saves memory and is usually faster.
+* [LINESMOOTHINGBLOCKEDRELAXATION] Use a dense matrix container to store the local block associated with one vertical line.
+This is the safe fallback variant.
+Use the <strong>LINESMOOTHING_BANDEDRELAXATION</strong> variant instead.</p>
+</div>
+<p>All the other parameters in the parameter sublist correspond to the usual parameters for relaxation based smoothers such as Jacobi, Gauss-Seidel or Symmetric Gauss-Seidel methods.
+Refer to Section <a class="reference internal" href="level_smoothers.html#level-smoothers"><span class="std std-ref">Level smoothers</span></a> or the MueLu user guide <a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> for an overview of all available parameters.</p>
+</section>
+</section>
+<section id="footnotes">
+<h2>Footnotes<a class="headerlink" href="#footnotes" title="Link to this heading"></a></h2>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id2" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<ol class="upperalpha simple" start="12">
+<li><p>Berger-Vergiat, C. A. Glusa, G. Harper, J. J. Hu, M. Mayr, P. Ohm, A. Prokopenko, C. M. Siefert, R. S. Tuminaro, and T. A. Wiesner. MueLu User’s Guide. Technical Report SAND2023-12265, Sandia National Laboratories, Albuquerque, NM (USA) 87185, 2023.</p></li>
+</ol>
+</aside>
+</aside>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="rebalancing.html" class="btn btn-neutral float-left" title="Rebalancing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="aggregation.html" class="btn btn-neutral float-right" title="Aggregation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, The MueLu Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

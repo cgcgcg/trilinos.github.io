@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aggregation &mdash; MueLu Tutorial 2023 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=86f27845" />
+
+  
+  
+        <script src="../_static/jquery.js?v=8dae8fb0"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=a4664895"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Useful commands and debugging" href="useful_commands_and_debugging.html" />
+    <link rel="prev" title="Advanced concepts" href="advanced_concepts.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            MueLu Tutorial
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Beginners Tutorial</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="quick_start.html">Quick start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="level_smoothers.html">Level smoothers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multigrid_for_non_symmetric_problems.html">Multigrid for non-symmetric problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="useful_tools_for_analysis.html">Useful tools for analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cd_example.html">Challenge: CD example</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="xml_interface_for_advanced_users.html">XML interface for advanced users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="muelu_factories_for_transfer_operators.html">MueLu factories for transfer operators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rebalancing.html">Rebalancing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advanced_concepts.html">Advanced concepts</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Aggregation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#building-aggregates">Building aggregates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#visualization-of-aggregates">Visualization of aggregates</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#general-data-transfer">General data transfer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#use-the-aggregationexportfactory">Use the AggregationExportFactory</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#footnotes">Footnotes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="useful_commands_and_debugging.html">Useful commands and debugging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="challenge.html">Challenge: elasticity example</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Expert Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="multigrid_for_multiphysics.html">Multigrid for Multiphysics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user_api.html">Using MueLu in User Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml_parameterlist_interpreter.html">ML ParameterList interpreter</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MueLu Tutorial</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Aggregation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/pages/aggregation.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="aggregation">
+<h1>Aggregation<a class="headerlink" href="#aggregation" title="Link to this heading"></a></h1>
+<p>This tutorial provides some background information about the aggregation process in MueLu.
+A very detailed description of the aggregation algorithms with all internal details can be found in <a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.</p>
+<section id="building-aggregates">
+<h2>Building aggregates<a class="headerlink" href="#building-aggregates" title="Link to this heading"></a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Ref and include missing figures</p>
+</div>
+<p>The aggregates are built using the graph of the fine level matrix <span class="math notranslate nohighlight">\(A\)</span>.
+The graph is generated by the <strong>CoalesceDropFactory</strong>.
+Since we still only restrict ourselves to scalar problems with one degree of freedom per node (<em>DofsPerNode=1</em>),
+the graph of the fine level matrix is trivial to build.
+Figure <span class="xref std std-ref">aggregation/figure_simpledesignaggregates</span> shows the extended transfer operator design with the additional <strong>CoalesceDropFactory</strong>.</p>
+<p id="aggregation-figure-simpledesignaggregates"><strong>Insert figure here</strong></p>
+<p>Especially for anisotropic or non-symmetric problems,
+it may be advantageous to drop small entries from the graph of <span class="math notranslate nohighlight">\(A\)</span> and use a filtered graph for generating aggregates.</p>
+<p>The following listing shows the definition of the <strong>myCoalesceDropFactory</strong> which drops all values of the fine level matrix <span class="math notranslate nohighlight">\(A\)</span>
+with the absolute value smaller than <span class="math notranslate nohighlight">\(0.01\)</span>.
+Of course, the <strong>myCoalesceDropFactory</strong> has to be registered to generate the variable <strong>Graph</strong>,
+which is used by the aggregation factory.
+The <strong>Graph</strong> and the variable <strong>DofsPerNode</strong> generated by the <strong>myCoalesceDropFactory</strong> are needed as input by the <strong>UncoupledAggregationFact</strong>.
+Note that the aggregation routine always works on the node-based information instead of DOF-based information.
+Therefore, we first have to build the graph of <span class="math notranslate nohighlight">\(A\)</span> which then can be processed by the aggregation algorithm.</p>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-number">Listing 8 </span><span class="caption-text">../../../test/tutorial/s4a.xml</span><a class="headerlink" href="#id3" title="Link to this code"></a></div>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;MueLu&quot;</span><span class="nt">&gt;</span>
+
+<span class="w">  </span><span class="cm">&lt;!-- Factory collection --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Factories&quot;</span><span class="nt">&gt;</span>
+
+<span class="w">    </span><span class="cm">&lt;!-- Note that ParameterLists must be defined prior to being used --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myCoalesceDropFact&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w">                             </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;CoalesceDropFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;lightweight wrap&quot;</span><span class="w">                    </span><span class="na">type=</span><span class="s">&quot;bool&quot;</span><span class="w">   </span><span class="na">value=</span><span class="s">&quot;true&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="cm">&lt;!-- for aggregation dropping --&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;aggregation: drop tol&quot;</span><span class="w">               </span><span class="na">type=</span><span class="s">&quot;double&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;0.01&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;UncoupledAggregationFact&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w">                             </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;UncoupledAggregationFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;aggregation: ordering&quot;</span><span class="w">               </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;natural&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;aggregation: max selected neighbors&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w">    </span><span class="na">value=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;aggregation: min agg size&quot;</span><span class="w">           </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w">    </span><span class="na">value=</span><span class="s">&quot;4&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Graph&quot;</span><span class="w">                               </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myCoalesceDropFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;DofsPerNode&quot;</span><span class="w">                         </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myCoalesceDropFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myTentativePFact&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w">                             </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;TentativePFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myProlongatorFact&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w">                             </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;PgPFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;P&quot;</span><span class="w">                                   </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myTentativePFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myRestrictorFact&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w">                             </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;GenericRFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;P&quot;</span><span class="w">                                   </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myProlongatorFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myRAPFact&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w">                             </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;RAPFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;P&quot;</span><span class="w">                                   </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myProlongatorFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;R&quot;</span><span class="w">                                   </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myRestrictorFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">    </span><span class="cm">&lt;!-- =======================  SMOOTHERS  ======================= --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;SymGaussSeidel&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w">                             </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;TrilinosSmoother&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;type&quot;</span><span class="w">                                </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;RELAXATION&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;ParameterList&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;relaxation: type&quot;</span><span class="w">                  </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;Symmetric Gauss-Seidel&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;relaxation: sweeps&quot;</span><span class="w">                </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w">    </span><span class="na">value=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;relaxation: damping factor&quot;</span><span class="w">        </span><span class="na">type=</span><span class="s">&quot;double&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;1.0&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/ParameterList&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">  </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">  </span><span class="cm">&lt;!-- Definition of the multigrid preconditioner --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Hierarchy&quot;</span><span class="nt">&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;max levels&quot;</span><span class="w">       </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w">    </span><span class="na">value=</span><span class="s">&quot;10&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;coarse: max size&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w">    </span><span class="na">value=</span><span class="s">&quot;10&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;verbosity&quot;</span><span class="w">        </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;High&quot;</span><span class="nt">/&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;All&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Smoother&quot;</span><span class="w">       </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;SymGaussSeidel&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Graph&quot;</span><span class="w">          </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myCoalesceDropFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Aggregates&quot;</span><span class="w">     </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;UncoupledAggregationFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Nullspace&quot;</span><span class="w">      </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myTentativePFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;P&quot;</span><span class="w">              </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myProlongatorFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;R&quot;</span><span class="w">              </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myRestrictorFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;A&quot;</span><span class="w">              </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myRAPFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;CoarseSolver&quot;</span><span class="w">   </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;DirectSolver&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/ParameterList&gt;</span>
+<span class="nt">&lt;/ParameterList&gt;</span>
+</pre></div>
+</div>
+</div>
+<p>The listing shows how the <strong>Graph</strong> and the variable <strong>DofsPerNode</strong> generated by the coalescing factory <strong>myCoalesceDropFact</strong> are explicitly used as input for the aggregation routine.
+This is an example for a direct link of variables from output to the corresponding input.
+In addition, the <strong>myCoalesceDropFact</strong> is registered to produce the variable <strong>Graph</strong> in the <em>Hierarchy</em> section of the XML file.
+One should also register <strong>myCoalesceDropFact</strong> to produce the <strong>DofsPerNode</strong> information.
+In our case it is not really necessary,
+since all factories which rely on information from <strong>DofsPerNode</strong> get the information directly in the XML file (see also <strong>myAggExportFact</strong> in above listing).
+So, one has in general two possibilities to declare inter-factory dependencies.
+One can either explicitly describe the input for each factory (as demonstrated for the <strong>Graph</strong> in <strong>UncoupledAggregationFact</strong>)
+or use the default factories (provided either by MueLu or explicitly set by the user in the <em>Hierarchy</em> section).
+MueLu uses the following ordering:
+first, the explicit input dependencies within the factories are used by MueLu.
+If a user does not define input variables (e.g., there is no input for <strong>Aggregates</strong> in <strong>myTentativePFact</strong>),
+MueLu checks whether there is a default factory for the data variable set in the <em>Hierarchy</em> section
+(in above listing it will find <strong>UncoupledAggregationFact</strong> to be responsible to provide the <strong>Aggregates</strong>).
+Otherwise MueLu will use some internal default factory.</p>
+<p>For demonstration purposes,
+we also introduced a <strong>RAPFactory</strong> which makes use of the user-defined transfer factories <strong>myProlongatorFact</strong> as well as <strong>myRestrictorFact</strong>.
+The full XML file can be found in <strong>../../../test/tutorial/s4a.xml</strong> (see <code class="xref std std-numref docutils literal notranslate"><span class="pre">../../../test/tutorial/s4a.xml</span></code>).</p>
+</section>
+<section id="visualization-of-aggregates">
+<h2>Visualization of aggregates<a class="headerlink" href="#visualization-of-aggregates" title="Link to this heading"></a></h2>
+<p>For debugging purposes,
+it can be very useful to visualize the aggregates.
+MueLu provides several ways to graphically visualize the coarsening process and the aggregates.
+In order to visualize aggregates one needs the coordinates of the mesh nodes as geometric information.
+Whereas the user is expected to provide the mesh node coordinates in the <strong>Coordinates</strong> variable on the finest level,
+we have to transfer the mesh information to the coarser levels.</p>
+<section id="general-data-transfer">
+<h3>General data transfer<a class="headerlink" href="#general-data-transfer" title="Link to this heading"></a></h3>
+<p>The <strong>RAPFactory</strong> is responsible to generate the coarse level matrix <span class="math notranslate nohighlight">\(A_c\)</span>,
+which is beside the transfer operators <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(R\)</span> the only information needed for an algebraic multigrid method to further coarsen the problem.
+However, in some situations the user might be able to transfer further user-specific information to coarser levels.
+The <strong>RAPFactory</strong> can be extended by further helper transfer functions.
+These helper factories have to be registered in the <strong>RAPFactory</strong> and then are called during the multigrid setup phase after the Galerkin product has been built.
+A typical example for such a helper factory is the <strong>CoordinatesTransferFactory</strong>,
+which transfers the <strong>Coordinates</strong> variable to the coarser level and builds coarse node coordinates using the aggregation information.
+Further examples for special helper transfer factories are the <strong>AggregationExportFactory</strong> and the <strong>CoarseningVisualizationFactory</strong>,
+hich are all introduced in the following sections.</p>
+</section>
+<section id="use-the-aggregationexportfactory">
+<h3>Use the AggregationExportFactory<a class="headerlink" href="#use-the-aggregationexportfactory" title="Link to this heading"></a></h3>
+<p id="aggregation-figure-simpledesignaggregatesvis"><strong>Insert figure here</strong></p>
+<p>If you have an aggregation-based algebraic multigrid method,
+the <strong>AggregationExportFactory</strong> is the first choice to export the aggregates for visualization purposes.</p>
+<p>The file <strong>../../../test/tutorial/s4av.xml</strong> extends the multigrid hierarchy from file <strong>../../../test/tutorial/s4a.xml</strong> for support of visualization of aggregates.
+The important changes are the following:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myAggExportFact&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w">         </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;AggregationExportFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;aggregation: output filename&quot;</span><span class="w">  </span><span class="na">type=</span><span class="s">&quot;string&quot;</span>
+<span class="w">            </span><span class="na">value=</span><span class="s">&quot;aggs_level%LEVELID_proc%PROCID.out&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;aggregation: output file: agg style&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span>
+<span class="w">            </span><span class="na">value=</span><span class="s">&quot;Convex Hulls&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myCoordTransferFact&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w">         </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;CoordinatesTransferFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myRAPFact&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w">                  </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;RAPFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;P&quot;</span><span class="w">                        </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myProlongatorFact&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;R&quot;</span><span class="w">                        </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myRestrictorFact&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;TransferFactories&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;CoordinateTransfer&quot;</span><span class="w">     </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myCoordTransferFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Visualization&quot;</span><span class="w">          </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myAggExportFact&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/ParameterList&gt;</span>
+<span class="nt">&lt;/ParameterList&gt;</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Include the above xml file into testing.</p>
+</div>
+<p>The <strong>AggregationExportFactory</strong> acts as a small helper factory within the <strong>RAPFactory</strong>,
+which writes out some aggregation information to VTK files on the hard disk (see Figure <span class="xref std std-ref">aggregation/figure_simpledesignaggregatesvis</span>).
+For visualization, the user has to provide the coordinates associated with the mesh nodes in the Coordinates** variable.
+The coordinates are transferred to the coarse level by the <strong>CoordinatesTransferFactory</strong>,
+which is also a helper transfer factory called by the <strong>RAPFactory</strong> as the <strong>AggregationExportFactory</strong>.
+The <strong>CoordinatesTransferFactory</strong> needs the aggregation information to build a coarse coordinate by using the midpoint of each aggregate.
+Note, that the <strong>RAPFactory</strong> accepts a sublist <strong>TransferFactories</strong> to register all the additional helper transfer factories
+which are called after the Galerkin product is calculated.
+The helper transfer factories are called in the ordering in which they are registered in the <strong>RAPFactory</strong>,
+but for this example the ordering is not important.</p>
+<p>To complete the xml file,
+one has to declare the <strong>CoordinatesTransferFactory</strong> to be the default factory for producing <strong>coordinates</strong>
+by making the following statements in the <strong>Hierarchy</strong> sublist of the xml file.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Hierarchy&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;max levels&quot;</span><span class="w">       </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w">    </span><span class="na">value=</span><span class="s">&quot;10&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;coarse: max size&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w">    </span><span class="na">value=</span><span class="s">&quot;10&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;verbosity&quot;</span><span class="w">        </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;High&quot;</span><span class="nt">/&gt;</span>
+
+<span class="w">  </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;All&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Smoother&quot;</span><span class="w">       </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;SymGaussSeidel&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Graph&quot;</span><span class="w">          </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myCoalesceDropFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Aggregates&quot;</span><span class="w">     </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;UncoupledAggregationFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Nullspace&quot;</span><span class="w">      </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myTentativePFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;P&quot;</span><span class="w">              </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myProlongatorFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;R&quot;</span><span class="w">              </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myRestrictorFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;A&quot;</span><span class="w">              </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myRAPFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;CoarseSolver&quot;</span><span class="w">   </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;DirectSolver&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Coordinates&quot;</span><span class="w">    </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myCoordTransferFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/ParameterList&gt;</span>
+<span class="nt">&lt;/ParameterList&gt;</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Include the above xml file into testing.</p>
+</div>
+<p>This way, the <strong>myCoordTransferFact</strong> is declared as the default factory to generate the coarse coordinates in <strong>Coordinates</strong> on the coarser levels.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The fine level coordinates have to be provided by the user in the <strong>Coordinates</strong> variable on the finest level.
+They are automatically used as input for the <strong>CoordinatesTransferFactory</strong> to produce the coarse level coordinates for level 1.
+On the coarser levels then the <strong>CoordinatesTransferFactory</strong> serves as input factory for being responsible to produce the coarse coordinates vector.
+Therefore, it is not a problem to declare <strong>myCoordTransferFact</strong> as generating factory for the <strong>Coordinates</strong> on all multigrid levels,
+as per default input data on level 0 provided by the user has always precedence over factory-generated data.</p>
+</div>
+<p id="aggregation-diffaggregates"><strong>Different aggregation parameters and the corresponding aggregates</strong></p>
+<table class="docutils align-default" id="id4">
+<caption><span class="caption-number">Table 3 </span><span class="caption-text">Aggregates with settings from <strong>../../../test/tutorial/s4a.xml</strong></span><a class="headerlink" href="#id4" title="Link to this table"></a></caption>
+<tbody>
+<tr class="row-odd"><td><figure class="align-default">
+<img alt="../_images/s4al1.png" src="../_images/s4al1.png" />
+</figure>
+</td>
+<td><figure class="align-default">
+<img alt="../_images/s4al2.png" src="../_images/s4al2.png" />
+</figure>
+</td>
+<td><figure class="align-default">
+<img alt="../_images/s4al3.png" src="../_images/s4al3.png" />
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default" id="id5">
+<caption><span class="caption-number">Table 4 </span><span class="caption-text">Aggregates with settings from <strong>../../../test/tutorial/s4b.xml</strong> (default settings)</span><a class="headerlink" href="#id5" title="Link to this table"></a></caption>
+<tbody>
+<tr class="row-odd"><td><figure class="align-default">
+<img alt="../_images/s4bl1.png" src="../_images/s4bl1.png" />
+</figure>
+</td>
+<td><figure class="align-default">
+<img alt="../_images/s4bl2.png" src="../_images/s4bl2.png" />
+</figure>
+</td>
+<td><figure class="align-default">
+<img alt="../_images/s4bl3.png" src="../_images/s4bl3.png" />
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition-exercise-1 admonition">
+<p class="admonition-title">Exercise 1</p>
+<p>Run the <strong>Laplace 2D</strong> example on a <span class="math notranslate nohighlight">\(50\times 50\)</span> mesh using the XML file <strong>../../../test/tutorial/s4av.xml</strong>.
+Open <strong>paraview</strong> and load the <strong>aggs_level*_proc.out-master.pvtu</strong> file.</p>
+</div>
+<div class="admonition-exercise-2 admonition">
+<p class="admonition-title">Exercise 2</p>
+<p>In the <strong>../../../test/tutorial/s4av.xml</strong> file,
+an uncoupled aggregation factory has been explicitly defined using with some user-chosen aggregation parameters.
+Make a copy of <strong>../../../test/tutorial/s4av.xml</strong>
+and use the default (uncoupled) aggregation routine that is provided by MueLu if no user-specified aggregation algorithm with parameters is prescribed.
+Which line in the XML file do you have to remove to obtain this behavior?
+Compare the results (screen output of aggregates, multigrid hierarchy).
+Try to visualize the aggregates.</p>
+</div>
+<p>In general it is a good idea to use the Hierarchy section to register the factories to generate the variables.
+It is very hard to declare all dependencies in the factory sections itself.
+In the worst case you declare, e.g., a <strong>UncoupledAggregationFactory</strong> and use it as input for the <strong>TentativePFactory</strong>,
+but forget to declare it also explicitly as input for the aggregation export factory <strong>AggregationExportFactory</strong>.
+If the <strong>UncoupledAggregationFactory</strong> is not declared as default for Aggregates in the <strong>AggregationExportFactory</strong>,
+the <strong>AggregationExportFactory</strong> will use default aggregates provided by MueLu which are not identical to the aggregates usedfor building the transfer operators!
+Missing or wrong dependencies in the factory list are very hard to debug.
+Therefore one should always start with the <em>Hierarchy</em> section and only locally overwrite the dependencies where necessary.</p>
+</section>
+</section>
+<section id="footnotes">
+<h2>Footnotes<a class="headerlink" href="#footnotes" title="Link to this heading"></a></h2>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id2" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>Wiesner, T. A., Flexible Aggregation-based Algebraic Multigrid Methods for Contact and Flow Problems., PhD thesis, Technische Universität München, 2014</p>
+</aside>
+</aside>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="advanced_concepts.html" class="btn btn-neutral float-left" title="Advanced concepts" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="useful_commands_and_debugging.html" class="btn btn-neutral float-right" title="Useful commands and debugging" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, The MueLu Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

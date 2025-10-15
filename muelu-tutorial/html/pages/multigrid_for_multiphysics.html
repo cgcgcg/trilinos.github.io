@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multigrid for Multiphysics &mdash; MueLu Tutorial 2023 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=86f27845" />
+
+  
+  
+        <script src="../_static/jquery.js?v=8dae8fb0"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=a4664895"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Using MueLu in User Applications" href="user_api.html" />
+    <link rel="prev" title="Challenge: elasticity example" href="challenge.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            MueLu Tutorial
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Beginners Tutorial</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="quick_start.html">Quick start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="level_smoothers.html">Level smoothers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multigrid_for_non_symmetric_problems.html">Multigrid for non-symmetric problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="useful_tools_for_analysis.html">Useful tools for analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cd_example.html">Challenge: CD example</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="xml_interface_for_advanced_users.html">XML interface for advanced users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="muelu_factories_for_transfer_operators.html">MueLu factories for transfer operators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rebalancing.html">Rebalancing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advanced_concepts.html">Advanced concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aggregation.html">Aggregation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="useful_commands_and_debugging.html">Useful commands and debugging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="challenge.html">Challenge: elasticity example</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Expert Tutorials</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Multigrid for Multiphysics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#general-concept">General Concept</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#exemplary-setup-for-a-2-times-2-problem">Exemplary setup for a <span class="math notranslate nohighlight">\(2\times 2\)</span> problem</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#setup-of-block-transfer-operators">Setup of block transfer operators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#factory-list">Factory list</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#factory-manager">Factory manager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#block-prolongation-operator">Block prolongation operator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#block-restriction-operator">Block restriction operator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#coarse-level-operator">Coarse level operator</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#setup-of-block-smoothers">Setup of block smoothers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#xpetra-block-smoothers">Xpetra block smoothers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#teko-block-smoothers">Teko block smoothers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#multigrid-setup">Multigrid setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#exemplary-setup-for-a-2-times-2-problem-with-rebalancing">Exemplary setup for a <span class="math notranslate nohighlight">\(2\times 2\)</span> problem with rebalancing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#transfer-operator-setup">Transfer operator setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#complete-xml-input-deck">Complete XML input deck</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="user_api.html">Using MueLu in User Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml_parameterlist_interpreter.html">ML ParameterList interpreter</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MueLu Tutorial</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Multigrid for Multiphysics</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/pages/multigrid_for_multiphysics.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="multigrid-for-multiphysics">
+<h1>Multigrid for Multiphysics<a class="headerlink" href="#multigrid-for-multiphysics" title="Link to this heading"></a></h1>
+<section id="general-concept">
+<h2>General Concept<a class="headerlink" href="#general-concept" title="Link to this heading"></a></h2>
+<p>Assuming we have a multiphysics application which generates a <span class="math notranslate nohighlight">\(n\times n\)</span> block operator
+(e.g. a Fluid-Structure-Interaction problem,
+or a Navier-Stokes problem with the splitting into velocity and pressure degrees of freedom),
+the idea is to preserve the block structure on the coarse levels
+using block-diagonal segregated transfer operators and block smoothers on all multigrid levels.
+The blocks <span class="math notranslate nohighlight">\(P_{i,i}\)</span> and <span class="math notranslate nohighlight">\(R_{i,i}\)</span> in the block-diagonal transfer operators <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(R\)</span>
+usually are built using the diagonal blocks <span class="math notranslate nohighlight">\(A_{i,i}\)</span>
+or - for applications where <span class="math notranslate nohighlight">\(A_{i,i}\)</span> does not contain sufficient information to build aggregates -
+any other kind of application-specific method.</p>
+<p>For the block smoothers we apply well-established block smoothers
+(e.g. block relaxation methods or Schur complement based methods)
+as well as application-specific adaptions.</p>
+</section>
+<section id="exemplary-setup-for-a-2-times-2-problem">
+<h2>Exemplary setup for a <span class="math notranslate nohighlight">\(2\times 2\)</span> problem<a class="headerlink" href="#exemplary-setup-for-a-2-times-2-problem" title="Link to this heading"></a></h2>
+<section id="setup-of-block-transfer-operators">
+<span id="multigrid-for-multiphysics-blocktransfersetup"></span><h3>Setup of block transfer operators<a class="headerlink" href="#setup-of-block-transfer-operators" title="Link to this heading"></a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Insert missing figure.</p>
+</div>
+<p>Figure ref{fig:transferoperatorsetup} shows a typical layout for the setup of a <span class="math notranslate nohighlight">\(2\times 2\)</span> blocked operator block transfer operators.
+We group factories for building transfer operators for the upper-left and lower-right blocks and build the corresponding blocked transfer operators.
+In general, we can distinguish volume-coupled and interface-coupled problems.
+In the simpler case of volume-coupled problems,
+we usually can use the same aggregates for the second block than we have built for the first block.
+That is, we reuse the same aggregates (built, e.g., by <em>myAggFact1</em>) for the second block.
+For interface-coupled problems we usually need a separate aggregation strategy for the interface DOFs.
+This can be a second standard aggregation factory object or an application-specific aggregation routine.</p>
+<p>In the following we give more details on the corresponding xml files for setting up the transfer operator layout given in Figure ref{fig:transferoperatorsetup}.</p>
+</section>
+<section id="factory-list">
+<h3>Factory list<a class="headerlink" href="#factory-list" title="Link to this heading"></a></h3>
+<p>All the following definitions of factories are contained in the <strong>Factories</strong> sublist of the <strong>MueLu</strong> parameter list,
+which basically is meant as a factory collection for all used factories in the multigrid setup.
+To keep things simple, we only give the factories necessary to define the setup for the most upper-left block
+in the <span class="math notranslate nohighlight">\(n\times n\)</span> block matrix.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- sub block factories --&gt;</span>
+<span class="w"> </span><span class="cm">&lt;!-- BLOCK 1 (for submatrix A_{00}) --&gt;</span>
+<span class="w"> </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;mySubBlockAFactory1&quot;</span><span class="nt">&gt;</span>
+<span class="w">   </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;SubBlockAFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">   </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;block row&quot;</span><span class="w">                 </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w">     </span><span class="na">value=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
+<span class="w">   </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;block col&quot;</span><span class="w">                 </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w">     </span><span class="na">value=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
+<span class="w">   </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Range map: Striding info&quot;</span><span class="w">  </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">  </span><span class="na">value=</span><span class="s">&quot;{ 2 }&quot;</span><span class="nt">/&gt;</span>
+<span class="w">   </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Domain map: Striding info&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">  </span><span class="na">value=</span><span class="s">&quot;{ 2 }&quot;</span><span class="nt">/&gt;</span>
+<span class="w"> </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w"> </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myAggFact1&quot;</span><span class="nt">&gt;</span>
+<span class="w">   </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;UncoupledAggregationFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">   </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;aggregation: min agg size&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;5&quot;</span><span class="nt">/&gt;</span>
+<span class="w">   </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;aggregation: max selected neighbors&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+<span class="w"> </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w"> </span><span class="cm">&lt;!-- tell the tentative prolongator that we have 2 DOFs per node on the coarse levels --&gt;</span>
+<span class="w"> </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myCoarseMap1&quot;</span><span class="nt">&gt;</span>
+<span class="w">   </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;CoarseMapFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">   </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Striding info&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;{ 2 }&quot;</span><span class="nt">/&gt;</span>
+<span class="w">   </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Strided block id&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;-1&quot;</span><span class="nt">/&gt;</span>
+<span class="w"> </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w"> </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myTentativePFact1&quot;</span><span class="nt">&gt;</span>
+<span class="w">   </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;TentativePFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">   </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;A&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;mySubBlockAFactory1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">   </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Aggregates&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myAggFact1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">   </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;CoarseMap&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myCoarseMap1&quot;</span><span class="nt">/&gt;</span>
+<span class="w"> </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w"> </span><span class="cm">&lt;!-- We have to use Nullspace1 here. If &quot;Nullspace1&quot; is not set the</span>
+<span class="cm">      Factory creates the default null space containing of constant</span>
+<span class="cm">      vectors --&gt;</span>
+<span class="w"> </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myNspFact1&quot;</span><span class="nt">&gt;</span>
+<span class="w">   </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;NullspaceFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">   </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Fine level nullspace&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;Nullspace1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">   </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Nullspace1&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myTentativePFact1&quot;</span><span class="nt">/&gt;</span>
+<span class="w"> </span><span class="nt">&lt;/ParameterList&gt;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please note, that the ordering of the factories is important in the sense
+that factories have to be defined before they are used as input for other following factories.
+As an example, the <strong>myCoarseMap1</strong> factory has to be defined before the <strong>myTentativePFact1</strong>
+as it is used as input for the <strong>CoarseMap</strong> variable.
+Switching the ordering of the factories in the xml file would result in an error that <strong>myCoarseMap1</strong> is unknown.
+Technically, one could avoid this restriction by a two pass reading process
+which first reads all factories and then resolves the dependencies.
+On the other side, this restriction helps to keep a straightforward linear design of the setup process.</p>
+</div>
+<p>The meaning of the factories is the following:</p>
+<ul>
+<li><p><strong>SubBlockAFactory</strong>:
+Given a <span class="math notranslate nohighlight">\(n\times n\)</span> block operator <span class="math notranslate nohighlight">\(A\)</span>, the <strong>SubBlockAFactory</strong> extracts the <span class="math notranslate nohighlight">\((i,j)\)</span> block
+where <span class="math notranslate nohighlight">\(i\)</span> is defined by the parameter <strong>block row</strong> and <span class="math notranslate nohighlight">\(j\)</span> by the parameter <strong>block col</strong> where <span class="math notranslate nohighlight">\(0\leq i,j &lt; n\)</span>.
+Above example assumes a Thyra-style numbering of the global ids for a simple 2D Navier-Stokes example.
+That is, the matrix block <span class="math notranslate nohighlight">\(A_{00}\)</span> has two degrees of freedom per node
+(one for the velocity in <span class="math notranslate nohighlight">\(x\)</span>-direction and one in the <span class="math notranslate nohighlight">\(y\)</span>-direction).
+The <strong>Range map: Striding info</strong> contains this information (i.e. 2 dofs per node),
+since this information might get lost (or never was stored) when using Thyra block operators.</p></li>
+<li><p><strong>UncoupledAggregationFactory</strong>:
+The aggregation factory is used to build the aggregates.
+In this case, the aggregates shall be built using the graph of <span class="math notranslate nohighlight">\(A_{00}\)</span> that is returned by the <strong>SubBlockAFactory</strong>.
+In this example, we only give the user parameters for the aggregation.
+Later it is shown how to declare the <strong>FactoryManager</strong>
+which makes sure that this concrete instance of an aggregation factory builds the aggregates for <span class="math notranslate nohighlight">\(A_{00}\)</span> only.</p></li>
+<li><p><strong>CoarseMapFactory</strong>:
+The <strong>CoarseMapFactory</strong> is used in the <strong>TentativePFactory</strong> and
+basically is responsible to provide a proper domain map for the transfer operator block <span class="math notranslate nohighlight">\(P_i\)</span>.
+For <span class="math notranslate nohighlight">\(P_0\)</span>, this is usually a standard map.
+The only information that is important is <strong>Striding info</strong> which means that the coarse domain map has 2 dofs per node again.
+Note: we have 2 dofs per node (for the velocities in <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span>-direction).
+We have 2 null space vectors.
+Therefore, the coarse problem has also 2 dofs per node which means the domain map of <span class="math notranslate nohighlight">\(P_i\)</span> has to be built for 2 dofs per node.</p></li>
+<li><p><strong>TentativePFactory</strong>:
+Here, the <strong>TentativePFactory</strong> builds the <span class="math notranslate nohighlight">\(P_i\)</span> block for the blocked transfer operator <span class="math notranslate nohighlight">\(P:math:\)</span>.
+We explicitly give the names of the factories used to generate <span class="math notranslate nohighlight">\(P_i\)</span>,
+which include the previously defined factories for the <strong>CoarseMap</strong>, <strong>Aggregates</strong> and <strong>A</strong>.
+This information is not really needed in this place as we later define a <strong>FactoryManager</strong> for the <span class="math notranslate nohighlight">\(i\)</span>-th block,
+but often makes it easier to understand the dependencies.
+That is, the short version would just be</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myTentativePFact1&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;TentativePFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/ParameterList&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>NullspaceFactory</strong>:
+For defining multigrid methods for multiphysics problems, the <strong>NullspaceFactory</strong> is very important.
+In general, the <strong>TentativePFactory</strong> uses the provided fine level near null space vectors
+to generate the tentative prolongation operator <span class="math notranslate nohighlight">\(P_i\)</span> together with a coarse representation of the near null space vectors.
+That is, the <strong>TentativePFactory</strong> produces the <strong>Nullspace</strong> information that it needs itself on the next coarser level.
+That is a hidden dependency which usually automatically works without any changes necessary by the user.
+The user is only responsible to provide proper fine level near null space vectors as <strong>Nullspace</strong> variable on the finest level.
+The <strong>NullspaceFactory</strong> is just a helper factory which processes the null space information on the finest level
+and pipes it in into the global setup process.
+For multiphysics problems, the user has to provide <span class="math notranslate nohighlight">\(n\)</span> partial near null space vectors (one for each mathematical or physical field)
+using the variable names <strong>Nullspace1</strong> to <strong>Nullspace9</strong> on the finest level.
+The <strong>Fine level nullspace</strong> parameter in the <strong>NullspaceFactory</strong> then can be set to the corresponding variable name (e.g. texttt{Nullspace1}).
+That is, the <strong>NullspaceFactory</strong> checks the fine level variable container for a variable named <strong>Nullspace1</strong>
+and uses the content as fine level null space for input in the <strong>TentativePFactory</strong>.
+It is important, that besides of the <strong>Fine level nullspace</strong> parameter another parameter with the name of the near null space vector
+(in above case <strong>Nullspace1</strong>)
+is declared with the corresponding <strong>TentativePFactory</strong> name as value.
+This closes the circle for the null space generation for block <span class="math notranslate nohighlight">\(P_i\)</span> on all coarser levels.
+It is important that the <strong>NullspaceFactory</strong> is defined after the corresponding <strong>TentativePFactory</strong> class,
+such that the dependency circle can be closed correctly.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Instead of <strong>TentativePFactory</strong> any other factory which generates a coarse null space can be used as well (e.g. <strong>SemiCoarsenPFactory</strong>).</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Of course, above factory list can be extended for smoothed aggregation. We also skipped the factories for the restriction operators.</p>
+</div>
+</section>
+<section id="factory-manager">
+<h3>Factory manager<a class="headerlink" href="#factory-manager" title="Link to this heading"></a></h3>
+<p>Once the necessary factories for building <span class="math notranslate nohighlight">\(P_i\)</span> are defined in the <strong>FactoryList</strong> section of the xml file,
+we can group them together.
+Right after the factories, we can add a <strong>FactoryManager</strong> block in the <strong>FactoryList</strong> section.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- Multigrid setup for velocity block (A_{00}) --&gt;</span>
+<span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myFirstGroup&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;group&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;FactoryManager&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;A&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;mySubBlockAFactory1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;P&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myTentativePFact1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Aggregates&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myAggFact1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Nullspace&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myNspFact1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;CoarseMap&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myCoarseMap1&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/ParameterList&gt;</span>
+</pre></div>
+</div>
+<p>The name for the group can be chosen freely (e.g. <strong>myFirstGroup</strong>).
+Besides the declaration of the <strong>FactoryManager</strong> group using the</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;group&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;FactoryManager&quot;</span><span class="nt">/&gt;</span>
+</pre></div>
+</div>
+<p>parameter, it contains a list of all factories
+which are used in context of building the coarsening information for the corresponding block.</p>
+<p>The group block defining a <strong>FactoryManager</strong> has a similar role than in the <strong>Hierarchy</strong> section in the xml file later.
+It allows to group together factories into subgroups
+that can be referred to by the common name (e.g. <strong>myFirstGroup</strong>) later.
+These groups help to organize the different factories.
+Note, that we basically need one group for each physical/mathematical field in our <span class="math notranslate nohighlight">\(n\times n\)</span> block operator,
+that is we need <span class="math notranslate nohighlight">\(n\)</span> groups.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The group block for the second row in the block operator could look like the following</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- Multigrid setup for pressure block (A_{11}) --&gt;</span>
+<span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;mySecondGroup&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;group&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;FactoryManager&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;A&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;mySubBlockAFactory2&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;P&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myTentativePFact2&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="cm">&lt;!-- reuse aggs from velocity block! --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Aggregates&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myAggFact1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Nullspace&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myNspFact2&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;CoarseMap&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myCoarseMap2&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/ParameterList&gt;</span>
+</pre></div>
+</div>
+<p>This assumes that all the factories have been defined before similar to the first group blocks.
+Note, that in some cases for certain applications,
+it is possible to reuse information from the first block in the second block.
+In this case, we use the abstract aggregation information
+that has been built using the velocity information for the associated pressure degrees of freedom.
+This is possible, since in our example each node has 2 velocity and 1 pressure degree of freedom.</p>
+</div>
+</section>
+<section id="block-prolongation-operator">
+<h3>Block prolongation operator<a class="headerlink" href="#block-prolongation-operator" title="Link to this heading"></a></h3>
+<p>The diagonal block prolongation operator is built using</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- define block prolongation operator using above blocks --&gt;</span>
+<span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myBlockedPFact&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;BlockedPFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="cm">&lt;!-- factory manager for block 1 --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;block1&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;group&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myFirstGroup&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/ParameterList&gt;</span>
+<span class="w">  </span><span class="cm">&lt;!-- factory manager for block 2 --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;block2&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;group&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;mySecondGroup&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/ParameterList&gt;</span>
+<span class="nt">&lt;/ParameterList&gt;</span>
+</pre></div>
+</div>
+<p>in the <strong>FactoryList</strong> section of the xml file after all groups have been defined.
+It contains basically sublists with the names <strong>block1</strong> to <strong>blockn</strong>.
+Each of these sublists contains a parameter <strong>group</strong> with the group name defined before.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Instead of using groups,
+you could also put all the factory definitions within the corresponding <strong>blockn</strong> parameter list.
+But this would mean that you have to set all inter-factory dependencies in the corresponding block by hand.
+You cannot use the general defaults that are defined in the groups.
+It would also make it impossible to reuse information from factories belonging to a different block
+(e.g., you could not reuse the aggregation information built by the <strong>myAggFact1</strong> for the aggregates in block 2.</p>
+</div>
+</section>
+<section id="block-restriction-operator">
+<h3>Block restriction operator<a class="headerlink" href="#block-restriction-operator" title="Link to this heading"></a></h3>
+<p>The following definitions should be the standard for nearly all multiphysics problems.
+We use the <strong>GenericRFactory</strong> for building the restriction operator out of the blocked prolongation factory.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- define block restriction operator using above blocks --&gt;</span>
+<span class="cm">&lt;!-- The block restriction operator is usually always of type</span>
+<span class="cm">     GenericRFactory since we want to be able to combine, e.g.,</span>
+<span class="cm">     SmoothedAggregation for block A_{00} with e.g. tentative</span>
+<span class="cm">     prolongation for block A_{11} (or any other kind of transfer</span>
+<span class="cm">     strategy for the subblocks --&gt;</span>
+<span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myBlockedRFact&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;GenericRFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;P&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myBlockedPFact&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/ParameterList&gt;</span>
+</pre></div>
+</div>
+<p>It uses the blocks <span class="math notranslate nohighlight">\(P_i\)</span> to generate the corresponding blocks <span class="math notranslate nohighlight">\(R_i\)</span> for the diagonal of the restriction operator.
+If PG-AMG is used for some or all blocks <span class="math notranslate nohighlight">\(P_i\)</span> this is automatically considered when generating <span class="math notranslate nohighlight">\(R_i\)</span>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please note, that you cannot use <strong>TransPFactory</strong> as it has no support for block operators.
+However, this is not a problem, since the <strong>TransPFactory</strong> might be used locally for single blocks wherever possible.</p>
+</div>
+</section>
+<section id="coarse-level-operator">
+<h3>Coarse level operator<a class="headerlink" href="#coarse-level-operator" title="Link to this heading"></a></h3>
+<p>Once, the block diagonal transfer operators <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(R\)</span> are set up,
+the <strong>BlockedRAPFactory</strong> builds the coarse <span class="math notranslate nohighlight">\(n\times n\)</span> operator:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myBlockedRAPFact&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;BlockedRAPFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;P&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myBlockedPFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;R&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myBlockedRFact&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/ParameterList&gt;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="setup-of-block-smoothers">
+<h2>Setup of block smoothers<a class="headerlink" href="#setup-of-block-smoothers" title="Link to this heading"></a></h2>
+<p>Once the transfer operators are set up properly, it is time to define the block smoothing methods</p>
+<section id="xpetra-block-smoothers">
+<h3>Xpetra block smoothers<a class="headerlink" href="#xpetra-block-smoothers" title="Link to this heading"></a></h3>
+<p>The Xpetra package contains a set of general block smoothers,
+including a block Gauss-Seidel method for <span class="math notranslate nohighlight">\(n\times n\)</span> block operators
+and a Schur complement based SIMPLE variant for <span class="math notranslate nohighlight">\(2\times 2\)</span> block operators.
+Here we just explain the setup for the Schur complement smoother as an example.</p>
+<p>The Schur complement based smoother internally needs two solvers/smoothers.
+The first smoother/solver is need for calculating a prediction for the velocities,
+the second solver/smoother then has to (approximately) solve the Schur complement equation.</p>
+<p>We are still in the <strong>FactoryList</strong> section of the xml file and define the corresponding solver/smoother blocks:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- block smoother for block A_{00} --&gt;</span>
+<span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;mySmooFact1&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;TrilinosSmoother&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;type&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;RELAXATION&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;ParameterList&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;relaxation: type&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;Symmetric Gauss-Seidel&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;relaxation: sweeps&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w">    </span><span class="na">value=</span><span class="s">&quot;3&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;relaxation: damping factor&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;double&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;0.8&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/ParameterList&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;A&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;mySubBlockAFactory1&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="cm">&lt;!-- Build Schur Complement factory (for being used in SIMPLE type block smoother)--&gt;</span>
+<span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;mySchurCompFact&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;SchurComplementFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;omega&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;double&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;0.8&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;lumping&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;bool&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;false&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="cm">&lt;!-- block smoother for block A_{11} respective the Schur complement operator --&gt;</span>
+<span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;mySchurSmooFact&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;TrilinosSmoother&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;type&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;RELAXATION&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;ParameterList&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;relaxation: type&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;Symmetric Gauss-Seidel&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;relaxation: sweeps&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w">    </span><span class="na">value=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;relaxation: damping factor&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;double&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;0.7&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/ParameterList&gt;</span>
+<span class="w">  </span><span class="cm">&lt;!-- You don&#39;t have to specify the input matrix A for the smoother --&gt;</span>
+<span class="w">  </span><span class="cm">&lt;!-- It is clear from the subblocks in the BlockedSmoother below --&gt;</span>
+<span class="w">  </span><span class="cm">&lt;!--&lt;Parameter name=&quot;A&quot; type=&quot;string&quot; value=&quot;mySchurCompFact&quot;/&gt;--&gt;</span>
+<span class="nt">&lt;/ParameterList&gt;</span>
+</pre></div>
+</div>
+<p>It is not necessary but helpful to declare variable <strong>A</strong> in <strong>mySmooFact1</strong>
+to be the diagonal block <span class="math notranslate nohighlight">\(A_{00}\)</span> of the blocked operator.
+This way it is obvious that this smoother is supposed to generate the prediction within the Schur complement approach.
+The second smoother (with the name <strong>mySchurSmooFact</strong> is supposed to solve the Schur complement equation,
+that is, the input matrix <span class="math notranslate nohighlight">\(A\)</span> for this smoother should be the Schur complement operator <span class="math notranslate nohighlight">\(A_{11}-A_{10}A_{00}^{-1}A_{01}\)</span>
+or at least a good approximation of the Schur complement operator.
+This operator is provided by the <strong>SchurComplementFactory</strong>.
+Be aware, that the <strong>SchurComplementFactory</strong> uses the full <span class="math notranslate nohighlight">\(2\times 2\)</span> operator <span class="math notranslate nohighlight">\(A\)</span> as input
+to generate the approximation of the Schur complement operator.
+It is not defined as input variable <strong>A</strong> since the full <span class="math notranslate nohighlight">\(2\times 2\)</span> operator is the standard answer for variable <strong>A</strong>.
+It would make sense, though, to declare <strong>mySchurCompFact</strong> as variable <strong>A</strong> for <strong>mySchurSmooFact</strong>.</p>
+<p>The Schur complement smoother then is defined by the block:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- Use SIMPLE: --&gt;</span>
+<span class="cm">&lt;!-- User has to define two blocks with each containing a smoother for</span>
+<span class="cm">     the corresponding sub-block matrix (see above) --&gt;</span>
+<span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myBlockSmoother&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;SimpleSmoother&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Sweeps&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Damping factor&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;double&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;1.0&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;UseSIMPLEC&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;bool&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;false&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="cm">&lt;!-- factory manager for block 1 --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;block1&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="cm">&lt;!-- &lt;Parameter name=&quot;group&quot; type=&quot;string&quot; value=&quot;myFirstGroup&quot;/&gt; --&gt;</span>
+<span class="w">    </span><span class="cm">&lt;!-- It&#39;s enough to just provide the sub block matrix A_{00} needed</span>
+<span class="cm">         as input for the smoother &quot;mySmooFact1&quot; as well as the smoother</span>
+<span class="cm">         itself. Alternatively, one could add below strings to the</span>
+<span class="cm">         factory group &quot;myFirstGroup&quot; and use it here instead of below lines --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;A&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;mySubBlockAFactory1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Smoother&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;mySmooFact1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/ParameterList&gt;</span>
+<span class="w">  </span><span class="cm">&lt;!-- factory manager for block 2 --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;block2&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="cm">&lt;!-- The second equation in the SIMPLE smoother is the Schur complement</span>
+<span class="cm">         equation that has to be solved. Therefore, provide the Schur complement</span>
+<span class="cm">         operator together with the smoother. The smoother object takes the</span>
+<span class="cm">         Schur complement operator as operator &quot;A&quot; for the internal smoothing process. --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;A&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;mySchurCompFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Smoother&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;mySchurSmooFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/ParameterList&gt;</span>
+<span class="nt">&lt;/ParameterList&gt;</span>
+</pre></div>
+</div>
+<p>In this case, we use the <strong>SimpleSmoother</strong> as example.
+Besides the typical smoother parameters (number of sweeps, damping, ldots),
+the interesting part are the sublists <strong>block1</strong> and <strong>block2</strong>,
+which contain the information about the internal smoothers/solvers.
+In above example, we just declare the factories for <strong>A</strong> and <strong>Smoother</strong>.
+The variable <strong>A</strong> always gives the internal linear operator that is used within the solver/smoother.
+By defining <strong>A</strong> in this place, we do not really have to define it extra in the smoother blocks above.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please note, that instead of the explicit variable definitions in the <strong>blockn</strong> sublists,
+one could also have given just the group names.
+However, this only works if the <strong>Smoother</strong> variable is also contained in the corresponding groups.
+In above examples from the previous section we skipped the <strong>Smoother</strong> variable.
+This makes sense especially if the aggregation information is built using a different <span class="math notranslate nohighlight">\(A\)</span> operator
+as the smoother is using.
+In above example we do not build aggregates using the Schur complement operator,
+but want to reuse aggregates from the first block.</p>
+</div>
+<p>As a side note it shall be mentioned,
+that you can also directly make all definitions in the <strong>blockn</strong> parameter lists:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;block1&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="cm">&lt;!-- &lt;Parameter name=&quot;group&quot; type=&quot;string&quot; value=&quot;myFirstGroup&quot;/&gt; --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Smoother&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;TrilinosSmoother&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;type&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;RELAXATION&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;ParameterList&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;relaxation: type&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;Symmetric Gauss-Seidel&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;relaxation: sweeps&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w">    </span><span class="na">value=</span><span class="s">&quot;3&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;relaxation: damping factor&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;double&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;0.8&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/ParameterList&gt;</span>
+<span class="w">  </span><span class="cm">&lt;!-- Note: this is not recommended as it creates a second instance of the sub block AFactory --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;A&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;SubBlockAFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;block row&quot;</span><span class="w">                 </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w">     </span><span class="na">value=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;block col&quot;</span><span class="w">                 </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w">     </span><span class="na">value=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Range map: Striding info&quot;</span><span class="w">  </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">  </span><span class="na">value=</span><span class="s">&quot;{ 2 }&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Domain map: Striding info&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">  </span><span class="na">value=</span><span class="s">&quot;{ 2 }&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/ParameterList&gt;</span>
+<span class="nt">&lt;/ParameterList&gt;</span>
+</pre></div>
+</div>
+<p>However, this is not really recommended since it prevents the reuse of factories in several places.
+E.g., instead of the new <strong>SubBlockAFactory</strong> one should just reuse the <strong>SubBlockAFactory</strong>,
+which has been defined and used before for the block transfers.
+This drastically simplifies and shortens the factory definitions and reduces the number of potential errors.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Be aware, that each new block in the xml file means that a new instance of the corresponding factory is instantiated and built.
+In the worst case some expensive information is calculated twice,
+which might heavily impact the overall performance.</p>
+</div>
+</section>
+<section id="teko-block-smoothers">
+<h3>Teko block smoothers<a class="headerlink" href="#teko-block-smoothers" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In Trilinos, the Teko package provides block preconditioners,
+that can be used as alternative to the existing Xpetra block smoothers.
+The Xpetra linear algebra layer also provides support for Thyra block operators,
+which allows us to use the Teko block smoothers within a MueLu multigrid hierarchy.
+In case of the Teko SIMPLE implementation, one again needs to internal solvers/smoothers
+(one for the prediction of the primary variables and one for the solution of the Schur complement equation).
+Teko uses the Stratimikos interface for defining the corresponding smoothers/solvers.
+So, instead of the <strong>SimpleSmoother</strong> object from the previous subsection,
+one can also use the SIMPLE implementation from Teko.</p>
+</div>
+<p>We define a <strong>TekoSmoother</strong> as block smoother using</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- Use SIMPLE: --&gt;</span>
+<span class="cm">&lt;!-- User has to define two blocks with each containing a smoother for</span>
+<span class="cm">     the corresponding sub-block matrix--&gt;</span>
+<span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myTekoSmoother&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;TekoSmoother&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Inverse Type&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;SIMPLE&quot;</span><span class="nt">/&gt;</span><span class="w"> </span><span class="cm">&lt;!-- contains name of sublist within Teko parameters --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Inverse Factory Library&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;SIMPLE&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Type&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;NS SIMPLE&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Inverse Velocity Type&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;Amesos&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Inverse Pressure Type&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;Amesos&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/ParameterList&gt;</span>
+<span class="nt">&lt;/ParameterList&gt;</span>
+</pre></div>
+</div>
+<p>The <strong>TekoSmoother</strong> accepts the full <span class="math notranslate nohighlight">\(2\times 2\)</span> block operator as input
+(not declared above, since it is the default)
+and contains a sublist with the name <strong>Inverse Factory Library</strong>.
+Within this sublist, all local smoothers/solvers as well as the Teko block smoother
+(or several Teko block smoothers) are defined.
+In the above example, there is only one Teko block smoother (of type <strong>NS SIMPLE</strong>) declared,
+which internally uses direct solvers from the Amesos package for the velocity and pressure (Schur complement) problem.
+The <strong>Inverse Type</strong> parameter of the <strong>TekoSmoother</strong> defines the Teko block smoother from the <strong>Inverse Factory Library</strong>.
+For the available parameters and block smoothers in Teko,
+the reader is referred to the Teko documentation.</p>
+</section>
+</section>
+<section id="multigrid-setup">
+<h2>Multigrid setup<a class="headerlink" href="#multigrid-setup" title="Link to this heading"></a></h2>
+<p>Last but not least, once both the transfers and the block smoothers are defined,
+the multigrid method itself has to be set up.
+Note, that all previous definitions and declarations have been made in the <strong>Factories</strong> section of the xml file.
+The multigrid setup is now done in the <strong>Hierarchy</strong> section of the xml file and looks like:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Hierarchy&quot;</span><span class="nt">&gt;</span>
+
+<span class="w">  </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;max levels&quot;</span><span class="w">          </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w">      </span><span class="na">value=</span><span class="s">&quot;3&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;coarse: max size&quot;</span><span class="w">    </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w">      </span><span class="na">value=</span><span class="s">&quot;10&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;verbosity&quot;</span><span class="w">           </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">   </span><span class="na">value=</span><span class="s">&quot;High&quot;</span><span class="nt">/&gt;</span>
+
+<span class="w">  </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;AllLevel&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;startLevel&quot;</span><span class="w">        </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w">      </span><span class="na">value=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Smoother&quot;</span><span class="w">          </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">   </span><span class="na">value=</span><span class="s">&quot;myTekoSmoother&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;CoarseSolver&quot;</span><span class="w">      </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">   </span><span class="na">value=</span><span class="s">&quot;myTekoSmoother&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;P&quot;</span><span class="w">                 </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">   </span><span class="na">value=</span><span class="s">&quot;myBlockedPFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;R&quot;</span><span class="w">                 </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">   </span><span class="na">value=</span><span class="s">&quot;myBlockedRFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;A&quot;</span><span class="w">                 </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">   </span><span class="na">value=</span><span class="s">&quot;myBlockedRAPFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/ParameterList&gt;</span>
+<span class="nt">&lt;/ParameterList&gt;</span>
+</pre></div>
+</div>
+<p>The interesting part is the <strong>AllLevel</strong> sublist (you can freely choose the name of this list),
+which - in some sense - corresponds to the groups introduced before to setup the block transfers and block smoothers.
+In fact, this sublist defines the master <strong>FactoryManager</strong> for the overall multigrid method.
+Note, that all variables (<strong>A</strong>, <strong>P</strong>, <strong>R</strong>, <strong>…</strong>) are generated by the block versions
+instead of the single block factories.</p>
+</section>
+<section id="exemplary-setup-for-a-2-times-2-problem-with-rebalancing">
+<h2>Exemplary setup for a <span class="math notranslate nohighlight">\(2\times 2\)</span> problem with rebalancing<a class="headerlink" href="#exemplary-setup-for-a-2-times-2-problem-with-rebalancing" title="Link to this heading"></a></h2>
+<section id="transfer-operator-setup">
+<h3>Transfer operator setup<a class="headerlink" href="#transfer-operator-setup" title="Link to this heading"></a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Include missing figure.</p>
+</div>
+<p>Figure ref{fig:transferoperatorsetuprebalancing} shows the basic setup for block transfer operators with rebalancing enabled.
+Please compare it with the complete XML input deck in Section ref{sec:xmlinputdeckrebalancing}.</p>
+<p>As one can see from the upper part of Figure ref{fig:transferoperatorsetuprebalancing},
+first we build blocked transfer operators and a blocked coarse level operator
+using sub-factory manager objects <strong>myFirstGroup</strong> and <strong>mySecondGroup</strong>
+in the factories <strong>myBlockedPFact</strong>, <strong>myBlockedRFact</strong> and <strong>myBlockedRAPFact</strong>.
+Then, we rebalance the coarse level blocked operator <span class="math notranslate nohighlight">\(A\)</span> from <strong>myBlockedRAPFact</strong>.</p>
+<p>The <strong>myRepartitionHeuristicFact</strong> object will decide whether rebalancing is necessary.
+If yes, then it will return the number of required partitions for the coarse level operator.
+This input is processed by the repartition interface and repartition factory objects
+that finally create <strong>Xpetra::Importer</strong> to do the rebalancing.
+The <strong>myRebBlocked{P,R,Ac}Fact</strong> objects use those <strong>Importer</strong> objects to perform the rebalancing.</p>
+<p>Please note, that we build additional helper factory manager objects <strong>myRebFirstGroup</strong> and <strong>myRebSecondGroup</strong>
+which contain all factories relevant for rebalancing the two blocks.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>No changes are necessary when setting up the block smoothers,
+as they use the matrices on the current level as input
+(which may or may not be rebalanced in the previous transfer operator setup process).</p>
+</div>
+</section>
+<section id="complete-xml-input-deck">
+<h3>Complete XML input deck<a class="headerlink" href="#complete-xml-input-deck" title="Link to this heading"></a></h3>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-number">Listing 10 </span><span class="caption-text">../../../test/tutorial/blocked_rebalancing.xml</span><a class="headerlink" href="#id1" title="Link to this code"></a></div>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;MueLu&quot;</span><span class="nt">&gt;</span>
+
+<span class="w">  </span><span class="cm">&lt;!-- Factory collection --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Factories&quot;</span><span class="nt">&gt;</span>
+
+<span class="w">    </span><span class="cm">&lt;!-- Note that ParameterLists must be defined prior to being used --&gt;</span>
+
+<span class="w">    </span><span class="cm">&lt;!-- sub block factories --&gt;</span>
+
+
+<span class="w">    </span><span class="cm">&lt;!-- BLOCK 1 (for submatrix A_{00}) VELOCITY PART --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;mySubBlockAFactory1&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;SubBlockAFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;block row&quot;</span><span class="w">                 </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w">     </span><span class="na">value=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;block col&quot;</span><span class="w">                 </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w">     </span><span class="na">value=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Range map: Striding info&quot;</span><span class="w">  </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">  </span><span class="na">value=</span><span class="s">&quot;{ 4 }&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Domain map: Striding info&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">  </span><span class="na">value=</span><span class="s">&quot;{ 4 }&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">    </span><span class="cm">&lt;!--&lt;ParameterList name=&quot;myAggFact1&quot;&gt;</span>
+<span class="cm">      &lt;Parameter name=&quot;factory&quot; type=&quot;string&quot; value=&quot;UncoupledAggregationFactory&quot;/&gt;</span>
+<span class="cm">      &lt;Parameter name=&quot;aggregation: min agg size&quot; type=&quot;int&quot; value=&quot;5&quot;/&gt;</span>
+<span class="cm">      &lt;Parameter name=&quot;aggregation: max selected neighbors&quot; type=&quot;int&quot; value=&quot;1&quot;/&gt;</span>
+<span class="cm">    &lt;/ParameterList&gt;--&gt;</span>
+
+<span class="w">    </span><span class="cm">&lt;!-- tell the tentative prolongator that we have 2 DOFs per node on the coarse levels --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myCoarseMap1&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;CoarseMapFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Striding info&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;{ 4 }&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Strided block id&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;-1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myAggFact1&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;UncoupledAggregationFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;aggregation: min agg size&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;5&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;aggregation: max selected neighbors&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myTentativePFact1&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;TentativePFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;A&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;mySubBlockAFactory1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Aggregates&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myAggFact1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;CoarseMap&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myCoarseMap1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myRFact1&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;TransPFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;P&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myTentativePFact1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">    </span><span class="cm">&lt;!-- We have to use Nullspace1 here. If &quot;Nullspace1&quot; is not set the</span>
+<span class="cm">         Factory creates the default null space containing of constant</span>
+<span class="cm">         vectors --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myNspFact1&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;NullspaceFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Fine level nullspace&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;Nullspace1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Nullspace1&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myTentativePFact1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">    </span><span class="cm">&lt;!-- BLOCK 2 (for submatrix A_{22})--&gt;</span>
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;mySubBlockAFactory&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;SubBlockAFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;block row&quot;</span><span class="w">                 </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w">     </span><span class="na">value=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;block col&quot;</span><span class="w">                 </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w">     </span><span class="na">value=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Range map: Striding info&quot;</span><span class="w">  </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">  </span><span class="na">value=</span><span class="s">&quot;{ 4 }&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Domain map: Striding info&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">  </span><span class="na">value=</span><span class="s">&quot;{ 4 }&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">    </span><span class="cm">&lt;!-- tell the tentative prolongator that we have 1 DOF per node on the coarse levels --&gt;</span>
+<span class="w">    </span><span class="cm">&lt;!-- We use the factory &quot;CoarseMapFactory&quot; which always creates a standard coarse</span>
+<span class="cm">         level map starting with GIDs at 0. This is ok as we use Thyra like numbering</span>
+<span class="cm">         for the block operators. To obtain unique GIDs one would use the</span>
+<span class="cm">         BlockedCoarseMapFactory (see below) --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myCoarseMap2&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;CoarseMapFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Striding info&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;{ 4 }&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Strided block id&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;-1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myTentativePFact2&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;TentativePFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;A&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;mySubBlockAFactory2&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Aggregates&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myAggFact1&quot;</span><span class="nt">/&gt;</span><span class="w"> </span><span class="cm">&lt;!-- use aggregates from velocity block! --&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;CoarseMap&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myCoarseMap2&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">    </span><span class="cm">&lt;!-- We have to use Nullspace2 here. If &quot;Nullspace2&quot; is not set the</span>
+<span class="cm">         Factory creates the default null space containing of constant</span>
+<span class="cm">         vectors (here only one constant vector) --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myNspFact2&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;NullspaceFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Fine level nullspace&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;Nullspace2&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Nullspace2&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myTentativePFact2&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">    </span><span class="cm">&lt;!-- FACTORY MANAGERS --&gt;</span>
+
+<span class="w">    </span><span class="cm">&lt;!-- Multigrid setup for velocity block (A_{00}) --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myFirstGroup&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;group&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;FactoryManager&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;A&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;mySubBlockAFactory1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;P&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myTentativePFact1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;R&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myRFact1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Aggregates&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myAggFact1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Nullspace&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myNspFact1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;CoarseMap&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myCoarseMap1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">    </span><span class="cm">&lt;!-- Multigrid setup for pressure block (A_{22}) --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;mySecondGroup&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;group&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;FactoryManager&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;A&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;mySubBlockAFactory2&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;P&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myTentativePFact2&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Aggregates&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myAggFact1&quot;</span><span class="nt">/&gt;</span><span class="cm">&lt;!-- reuse aggs --&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Nullspace&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myNspFact2&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;CoarseMap&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myCoarseMap2&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">    </span><span class="cm">&lt;!-- BLOCK TRANSFER operators --&gt;</span>
+
+<span class="w">    </span><span class="cm">&lt;!-- define block prolongation operator using above blocks --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myBlockedPFact&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;BlockedPFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="cm">&lt;!-- factory manager for block 1 --&gt;</span>
+<span class="w">      </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;block1&quot;</span><span class="nt">&gt;</span>
+<span class="w">         </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;group&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myFirstGroup&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/ParameterList&gt;</span>
+<span class="w">      </span><span class="cm">&lt;!-- factory manager for block 2 --&gt;</span>
+<span class="w">      </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;block2&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;group&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;mySecondGroup&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/ParameterList&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">    </span><span class="cm">&lt;!-- define block restriction operator using above blocks --&gt;</span>
+<span class="w">    </span><span class="cm">&lt;!-- The block restriction operator is usually always of type</span>
+<span class="cm">         GenericRFactory since we want to be able to combine, e.g.,</span>
+<span class="cm">         SmoothedAggregation for block A_{00} with e.g. tentative</span>
+<span class="cm">         prolongation for block A_{11} (or any other kind of transfer</span>
+<span class="cm">         strategy for the subblocks --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myBlockedRFact&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;GenericRFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;P&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myBlockedPFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myTransferCoordinatesFact&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;CoordinatesTransferFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="cm">&lt;!-- we need the factories from the first group --&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Aggregates&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myAggFact1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;CoarseMap&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myCoarseMap1&quot;</span><span class="nt">/&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myBlockedRAPFact&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;BlockedRAPFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;P&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myBlockedPFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;R&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myBlockedRFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;TransferFactories&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;For Coordinates&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myTransferCoordinatesFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/ParameterList&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">    </span><span class="cm">&lt;!-- REBALANCING --&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myRepartitionHeuristicFactory&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;RepartitionHeuristicFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;A&quot;</span><span class="w">                               </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">  </span><span class="na">value=</span><span class="s">&quot;myBlockedRAPFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;repartition: start level&quot;</span><span class="w">        </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w">     </span><span class="na">value=</span><span class="s">&quot;2&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;repartition: min rows per proc&quot;</span><span class="w">  </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w">     </span><span class="na">value=</span><span class="s">&quot;256&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;repartition: nonzeroImbalance&quot;</span><span class="w">   </span><span class="na">type=</span><span class="s">&quot;double&quot;</span><span class="w">  </span><span class="na">value=</span><span class="s">&quot;1.2&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myRebSubBlockAFactory1&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;SubBlockAFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;A&quot;</span><span class="w">                         </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">  </span><span class="na">value=</span><span class="s">&quot;myBlockedRAPFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;block row&quot;</span><span class="w">                 </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w">     </span><span class="na">value=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;block col&quot;</span><span class="w">                 </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w">     </span><span class="na">value=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Range map: Striding info&quot;</span><span class="w">  </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">  </span><span class="na">value=</span><span class="s">&quot;{ 4 }&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Domain map: Striding info&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">  </span><span class="na">value=</span><span class="s">&quot;{ 4 }&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myInputCoordsFact&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;FineLevelInputDataFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Variable&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;Coordinates&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Variable type&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;MultiVector&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Fine level factory&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;NoFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="cm">&lt;!--&lt;Parameter name=&quot;Coarse level factory&quot; type=&quot;string&quot; value=&quot;myTransferCoordinatesFact&quot;/&gt;--&gt;</span>
+<span class="w">      </span><span class="cm">&lt;!--&lt;Parameter name=&quot;Coarse level factory&quot; type=&quot;string&quot; value=&quot;NoFactory&quot;/&gt; TO BE DEFINED LATER --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myZoltanInterface1&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w">                             </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;ZoltanInterface&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;A&quot;</span><span class="w">                                   </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myRebSubBlockAFactory1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;number of partitions&quot;</span><span class="w">                </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myRepartitionHeuristicFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Coordinates&quot;</span><span class="w">                         </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myInputCoordsFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myRepartitionFactory1&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;RepartitionFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;A&quot;</span><span class="w">                         </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">  </span><span class="na">value=</span><span class="s">&quot;myRebSubBlockAFactory1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Partition&quot;</span><span class="w">                 </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">  </span><span class="na">value=</span><span class="s">&quot;myZoltanInterface1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;number of partitions&quot;</span><span class="w">      </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">  </span><span class="na">value=</span><span class="s">&quot;myRepartitionHeuristicFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;repartition: print partition distribution&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;bool&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;true&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;repartition: remap parts&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;bool&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;true&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myRebSubBlockAFactory2&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;SubBlockAFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;A&quot;</span><span class="w">                         </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">  </span><span class="na">value=</span><span class="s">&quot;myBlockedRAPFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;block row&quot;</span><span class="w">                 </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w">     </span><span class="na">value=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;block col&quot;</span><span class="w">                 </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w">     </span><span class="na">value=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Range map: Striding info&quot;</span><span class="w">  </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">  </span><span class="na">value=</span><span class="s">&quot;{ 4 }&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Domain map: Striding info&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">  </span><span class="na">value=</span><span class="s">&quot;{ 4 }&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myRepartitionInterface2&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;CloneRepartitionInterface&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;A&quot;</span><span class="w">                         </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">  </span><span class="na">value=</span><span class="s">&quot;myRebSubBlockAFactory2&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;number of partitions&quot;</span><span class="w">      </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">  </span><span class="na">value=</span><span class="s">&quot;myRepartitionHeuristicFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Partition&quot;</span><span class="w">                 </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">  </span><span class="na">value=</span><span class="s">&quot;myZoltanInterface1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myRepartitionFactory2&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;RepartitionFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;A&quot;</span><span class="w">                         </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">  </span><span class="na">value=</span><span class="s">&quot;myRebSubBlockAFactory2&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Partition&quot;</span><span class="w">                 </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">  </span><span class="na">value=</span><span class="s">&quot;myRepartitionInterface2&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;number of partitions&quot;</span><span class="w">      </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">  </span><span class="na">value=</span><span class="s">&quot;myRepartitionHeuristicFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;repartition: print partition distribution&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;bool&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;true&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;repartition: remap parts&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;bool&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;false&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">    </span><span class="cm">&lt;!-- Rebalanced groups for velocity block (A_{00}) --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myRebFirstGroup&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;group&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;FactoryManager&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;A&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;mySubBlockAFactory1&quot;</span><span class="nt">/&gt;</span><span class="w"> </span><span class="cm">&lt;!-- non-rebalanced A11! --&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Importer&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myRepartitionFactory1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Nullspace&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myNspFact1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;number of partitions&quot;</span><span class="w">      </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">  </span><span class="na">value=</span><span class="s">&quot;myRepartitionHeuristicFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Coordinates&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myInputCoordsFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">    </span><span class="cm">&lt;!-- Rebalanced groups for magnetics block (A_{22}) --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myRebSecondGroup&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;group&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;FactoryManager&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;A&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;mySubBlockAFactory2&quot;</span><span class="nt">/&gt;</span><span class="w"> </span><span class="cm">&lt;!-- non-rebalanced ! --&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Importer&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myRepartitionFactory2&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;number of partitions&quot;</span><span class="w">      </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">  </span><span class="na">value=</span><span class="s">&quot;myRepartitionHeuristicFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Nullspace&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myNspFact2&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Coordinates&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myInputCoordsFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myRebBlockedPFact&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;RebalanceBlockInterpolationFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;A&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myBlockedRAPFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;P&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myBlockedPFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;block1&quot;</span><span class="nt">&gt;</span>
+<span class="w">         </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;group&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myRebFirstGroup&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/ParameterList&gt;</span>
+<span class="w">      </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;block2&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;group&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myRebSecondGroup&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/ParameterList&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myInputCoordsFactDeps&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;dependency for&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myInputCoordsFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Coarse level factory&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myTransferCoordinatesFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myRebBlockedRFact&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;RebalanceBlockRestrictionFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;R&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myBlockedRFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;repartition: use subcommunicators&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;bool&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;false&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;block1&quot;</span><span class="nt">&gt;</span>
+<span class="w">         </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;group&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myRebFirstGroup&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/ParameterList&gt;</span>
+<span class="w">      </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;block2&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;group&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myRebSecondGroup&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/ParameterList&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myRebBlockedAcFact&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;RebalanceBlockAcFactory&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;A&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myBlockedRAPFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;repartition: use subcommunicators&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;bool&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;false&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;block1&quot;</span><span class="nt">&gt;</span>
+<span class="w">         </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;group&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myRebFirstGroup&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/ParameterList&gt;</span>
+<span class="w">      </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;block2&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;group&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;myRebSecondGroup&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/ParameterList&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">    </span><span class="cm">&lt;!-- BLOCK SMOOTHERS --&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;mySmooFact1&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;TrilinosSmoother&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;type&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;RELAXATION&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;overlap&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;ParameterList&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;relaxation: type&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;symmetric Gauss-Seidel&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;relaxation: sweeps&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w">    </span><span class="na">value=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;relaxation: damping factor&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;double&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;0.9&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/ParameterList&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+
+<span class="w">    </span><span class="cm">&lt;!-- block smoother for block A_{00} --&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;mySmooFact2&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;TrilinosSmoother&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;type&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;RELAXATION&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;overlap&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;ParameterList&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;relaxation: type&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;symmetric Gauss-Seidel&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;relaxation: sweeps&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w">    </span><span class="na">value=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;relaxation: damping factor&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;double&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;0.9&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/ParameterList&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">    </span><span class="cm">&lt;!-- Use BGS --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myBlockSmoother&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;BlockedGaussSeidelSmoother&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Sweeps&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Damping factor&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;double&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;0.4&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="cm">&lt;!-- factory manager for block 1 --&gt;</span>
+<span class="w">      </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;block1&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;A&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;mySubBlockAFactory1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Smoother&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;mySmooFact1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/ParameterList&gt;</span>
+<span class="w">      </span><span class="cm">&lt;!-- factory manager for block 3 --&gt;</span>
+<span class="w">      </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;block2&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;A&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;mySubBlockAFactory2&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Smoother&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;mySmooFact2&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/ParameterList&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myBlockDirectSolver&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;BlockedDirectSolver&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">  </span><span class="nt">&lt;/ParameterList&gt;</span>
+<span class="w">  </span><span class="cm">&lt;!-- end Factories --&gt;</span>
+
+<span class="w">  </span><span class="cm">&lt;!-- Definition of the multigrid preconditioner --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Hierarchy&quot;</span><span class="nt">&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;max levels&quot;</span><span class="w">          </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w">      </span><span class="na">value=</span><span class="s">&quot;10&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;coarse: max size&quot;</span><span class="w">    </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w">      </span><span class="na">value=</span><span class="s">&quot;2500&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;verbosity&quot;</span><span class="w">           </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">   </span><span class="na">value=</span><span class="s">&quot;High&quot;</span><span class="nt">/&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;AllLevel&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;startLevel&quot;</span><span class="w">        </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w">      </span><span class="na">value=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Smoother&quot;</span><span class="w">          </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">   </span><span class="na">value=</span><span class="s">&quot;myBlockSmoother&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;CoarseSolver&quot;</span><span class="w">      </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">   </span><span class="na">value=</span><span class="s">&quot;myBlockDirectSolver&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;P&quot;</span><span class="w">                 </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">   </span><span class="na">value=</span><span class="s">&quot;myRebBlockedPFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;R&quot;</span><span class="w">                 </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">   </span><span class="na">value=</span><span class="s">&quot;myRebBlockedRFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;A&quot;</span><span class="w">                 </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">   </span><span class="na">value=</span><span class="s">&quot;myRebBlockedAcFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Coordinates&quot;</span><span class="w">       </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">   </span><span class="na">value=</span><span class="s">&quot;myRebBlockedPFact&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">  </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="nt">&lt;/ParameterList&gt;</span>
+<span class="cm">&lt;!-- end &quot;MueLu&quot; --&gt;</span>
+</pre></div>
+</div>
+</div>
+<p>Note, that we are using a coordinate-based rebalancing method from the Zoltan package.
+The <strong>myInputCoordsFact</strong> provides the <strong>Coordinates</strong> variable to the <strong>ZoltanInterface</strong>.
+That is, <strong>myInputCoordsFact</strong> uses user-provided data on the finest level
+and switches to Coordinates provided by the <strong>myTransferCoordinatesFact</strong> on the coarser level.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To deal with potential logical circular dependencies between factories,
+you can use the <strong>dependency for</strong> keyword as demonstrated for the <strong>myTransferCoordinatesFact</strong>
+and <strong>myInputCoordsFact</strong> in this example.
+Note: you can always use the <strong>dependency for</strong> keyword to extend/change factory dependencies in the xml file.</p>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="challenge.html" class="btn btn-neutral float-left" title="Challenge: elasticity example" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="user_api.html" class="btn btn-neutral float-right" title="Using MueLu in User Applications" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, The MueLu Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

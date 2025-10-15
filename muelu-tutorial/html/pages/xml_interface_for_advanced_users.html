@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>XML interface for advanced users &mdash; MueLu Tutorial 2023 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=86f27845" />
+
+  
+  
+        <script src="../_static/jquery.js?v=8dae8fb0"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=a4664895"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="MueLu factories for transfer operators" href="muelu_factories_for_transfer_operators.html" />
+    <link rel="prev" title="Challenge: CD example" href="cd_example.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            MueLu Tutorial
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Beginners Tutorial</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="quick_start.html">Quick start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="level_smoothers.html">Level smoothers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multigrid_for_non_symmetric_problems.html">Multigrid for non-symmetric problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="useful_tools_for_analysis.html">Useful tools for analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cd_example.html">Challenge: CD example</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">XML interface for advanced users</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#one-level-method">One-level method</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#multigrid-method">Multigrid method</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#level-smoothers">Level smoothers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#standard-level-smoothers">Standard level smoothers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#level-smoothers-for-the-epetra-and-tpetra-stack">Level smoothers for the Epetra and Tpetra stack</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#advanced-features">Advanced features</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="muelu_factories_for_transfer_operators.html">MueLu factories for transfer operators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rebalancing.html">Rebalancing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advanced_concepts.html">Advanced concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aggregation.html">Aggregation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="useful_commands_and_debugging.html">Useful commands and debugging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="challenge.html">Challenge: elasticity example</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Expert Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="multigrid_for_multiphysics.html">Multigrid for Multiphysics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user_api.html">Using MueLu in User Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml_parameterlist_interpreter.html">ML ParameterList interpreter</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MueLu Tutorial</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">XML interface for advanced users</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/pages/xml_interface_for_advanced_users.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="xml-interface-for-advanced-users">
+<h1>XML interface for advanced users<a class="headerlink" href="#xml-interface-for-advanced-users" title="Link to this heading"></a></h1>
+<p>This tutorial introduces the more advanced (and more flexible) XML interface that can be used for setting up multigrid hierarchies in MueLu.
+Again we use the 2D Laplace problem on a <span class="math notranslate nohighlight">\(50\times 50\)</span> mesh as introduced in <a class="reference internal" href="quick_start.html#quick-start-example-problem"><span class="std std-ref">Example problem</span></a>.
+That is, in the <strong>hands-on.py</strong> script  you have to choose option 0 for the problem type.</p>
+<section id="one-level-method">
+<h2>One-level method<a class="headerlink" href="#one-level-method" title="Link to this heading"></a></h2>
+<p>Before applying a multigrid method as solver, we start with a simple Jacobi iteration as solver and look at the error.
+By setting the maximum number of multigrid levels to 1 and using a Jacobi smoother as coarse solver we obtain a pseudo multigrid method which corresponds to a simple Jacobi iteration.</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-number">Listing 5 </span><span class="caption-text">../../../test/tutorial/s2_adv_a.xml</span><a class="headerlink" href="#id1" title="Link to this code"></a></div>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;MueLu&quot;</span><span class="nt">&gt;</span>
+
+<span class="w">  </span><span class="cm">&lt;!-- Factory collection --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Factories&quot;</span><span class="nt">&gt;</span>
+
+<span class="w">    </span><span class="cm">&lt;!-- Note that ParameterLists must be defined prior to being used --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myJacobi&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w">                             </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;TrilinosSmoother&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;type&quot;</span><span class="w">                                </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;RELAXATION&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;ParameterList&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;relaxation: type&quot;</span><span class="w">                  </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;Jacobi&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;relaxation: sweeps&quot;</span><span class="w">                </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w">    </span><span class="na">value=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;relaxation: damping factor&quot;</span><span class="w">        </span><span class="na">type=</span><span class="s">&quot;double&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;0.9&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/ParameterList&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">  </span><span class="cm">&lt;!-- Definition of the multigrid preconditioner --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Hierarchy&quot;</span><span class="nt">&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;max levels&quot;</span><span class="w">                            </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w">      </span><span class="na">value=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;coarse: max size&quot;</span><span class="w">                      </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w">      </span><span class="na">value=</span><span class="s">&quot;10&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;verbosity&quot;</span><span class="w">                             </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">   </span><span class="na">value=</span><span class="s">&quot;Low&quot;</span><span class="nt">/&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;All&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Smoother&quot;</span><span class="w">                            </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">  </span><span class="na">value=</span><span class="s">&quot;myJacobi&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;CoarseSolver&quot;</span><span class="w">                        </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">  </span><span class="na">value=</span><span class="s">&quot;myJacobi&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">  </span><span class="nt">&lt;/ParameterList&gt;</span>
+<span class="nt">&lt;/ParameterList&gt;</span>
+</pre></div>
+</div>
+</div>
+<p>The advanced XML format is more hierarchical in the structure.
+Each XML file in the advanced format consists of two major blocks.
+First there is a set of “Factory” blocks which describe the building blocks within your multigrid methods.
+In above example there is only one building block specified for the Jacobi method. Each building block needs a (unique) name.
+In above example the building block has the name <strong>myJacobi</strong>. It is a factory of type <strong>TrilinosSmoother</strong> and describes a damped Jacobi method as declared by the internal parameters.</p>
+<p>Later we will see examples for other building blocks describing transfer operators or the aggregation strategy.
+In the “Factories” list, the user has to declare all building blocks of the multigrid method that are used for the setup.
+The user cannot specify all building blocks involved in the setup process.
+MueLu will take care of that and use default building blocks for all parts of the setup process where the user makes no explicit statement.
+This way the user only has to describe what he explicitly needs.</p>
+<p>It is not sufficient just to declare some building blocks.
+One also has to register them in the setup process.
+This is done in the second part of the XML file.
+The so-called <strong>Hierarchy</strong> block describes the setup process.
+First there are some basic multigrid parameters that are well-known from the easy XML interface (cf. the previous tutorials).
+Then, there is an additional list of parameters <strong>All</strong> which encapsulates the information which factory block is responsible to provide certain data.
+In above example you can see, that the building block <strong>myJacobi</strong> shall be used both for the level smoother and the coarse solver.
+Since it is only a 1 level problem it would be sufficient to define a coarse solver only.
+The name of the parameter list <strong>All</strong> can be chosen by the user.
+It basically describes the user-specified parts of the setup process for all multigrid levels.
+In this case we just overwrite the internal default factories both for the level smoother and the coarse solver by our Jacobi smoother.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Be aware that we can have different parameter list sets for different levels, that is, we can use different factories on certain levels.</p>
+</div>
+<div class="admonition-exercise-1 admonition">
+<p class="admonition-title">Exercise 1</p>
+<p>Run the <strong>hands-on.py</strong> script and choose the XML file <strong>../../../test/tutorial//s2_adv_a.xml</strong> which contains above XML parameters.
+Use only 1 processor and visualize the error for an increasing number of multigrid cycles (e.g. 1, 5, 10, 30, 100). What do you observe?</p>
+</div>
+<div class="admonition-exercise-2 admonition">
+<p class="admonition-title">Exercise 2</p>
+<p>Note that the relaxation based smoothers are based on a Schwarz method (see Ifpack documentation).
+Repeat above steps using 2 processors. What do you observe in the error plots?</p>
+</div>
+</section>
+<section id="multigrid-method">
+<h2>Multigrid method<a class="headerlink" href="#multigrid-method" title="Link to this heading"></a></h2>
+<p>The next step is to introduce a full multigrid algorithm.
+First one should increase the number of multigrid levels.
+Second, we switch to a direct solver on the coarsest level.</p>
+<div class="admonition-exercise-3 admonition">
+<p class="admonition-title">Exercise 3</p>
+<p>Create your own copy of the <strong>../../../test/tutorial/s2_adv_a.xml</strong> parameter file.
+Adapt it to obtain a 3 level multigrid method. Check how this affects the error plots.</p>
+</div>
+<div class="admonition-exercise-4 admonition">
+<p class="admonition-title">Exercise 4</p>
+<p>Change to a direct solver on the coarsest level.
+You can do this by using <strong>&lt;Parameter name=”CoarseSolver” type=”string” value=”DirectSolver”/&gt;</strong> in the <strong>Hierarchy</strong> block of the xml file.
+Check the output of the multigrid hierarchy.</p>
+</div>
+</section>
+<section id="level-smoothers">
+<h2>Level smoothers<a class="headerlink" href="#level-smoothers" title="Link to this heading"></a></h2>
+<p>Next, we give some building blocks for different types of level smoothers that you can use.
+Note that all these xml blocks can be put into the <strong>Factories</strong> block of the advanced MueLu XML file format.
+Then you can use them by adding the corresponding link into the <strong>Hierarchy</strong> block using the name of the parameter block.</p>
+<section id="standard-level-smoothers">
+<h3>Standard level smoothers<a class="headerlink" href="#standard-level-smoothers" title="Link to this heading"></a></h3>
+<p>Here is a list of the standard level smoothers and how to define them in the XML format.
+All these standard smoothers are generated by the <strong>TrilinosSmoother</strong> factory class (set in the <strong>factory</strong> parameter in the xml snippets below).</p>
+<ul>
+<li><p>Chebyshev smoother:</p>
+<blockquote>
+<div><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Chebyshev&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w">                     </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;TrilinosSmoother&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;type&quot;</span><span class="w">                               </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;CHEBYSHEV&quot;</span><span class="nt">/&gt;</span>
+
+<span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;ParameterList&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;chebyshev: degree&quot;</span><span class="w">                 </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w">     </span><span class="na">value=</span><span class="s">&quot;2&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;chebyshev: ratio eigenvalue&quot;</span><span class="w">       </span><span class="na">type=</span><span class="s">&quot;double&quot;</span><span class="w">  </span><span class="na">value=</span><span class="s">&quot;20&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;chebyshev: min eigenvalue&quot;</span><span class="w">         </span><span class="na">type=</span><span class="s">&quot;double&quot;</span><span class="w">  </span><span class="na">value=</span><span class="s">&quot;1.0&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;chebyshev: zero starting solution&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;bool&quot;</span><span class="w">    </span><span class="na">value=</span><span class="s">&quot;true&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/ParameterList&gt;</span>
+<span class="nt">&lt;/ParameterList&gt;</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Jacobi smoother:</p>
+<blockquote>
+<div><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myJacobi&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w">                       </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;TrilinosSmoother&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;type&quot;</span><span class="w">                                </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;RELAXATION&quot;</span><span class="nt">/&gt;</span>
+<span class="w">                </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;ParameterList&quot;</span><span class="nt">&gt;</span>
+<span class="w">                </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;relaxation: type&quot;</span><span class="w">                  </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;Jacobi&quot;</span><span class="nt">/&gt;</span>
+<span class="w">                </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;relaxation: sweeps&quot;</span><span class="w">                </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w">    </span><span class="na">value=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">                </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;relaxation: damping factor&quot;</span><span class="w">        </span><span class="na">type=</span><span class="s">&quot;double&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;0.9&quot;</span><span class="nt">/&gt;</span>
+<span class="w">                </span><span class="nt">&lt;/ParameterList&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/ParameterList&gt;</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Gauss-Seidel smoother variants:</p>
+<blockquote>
+<div><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;SymGaussSeidel&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w">                       </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;TrilinosSmoother&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;type&quot;</span><span class="w">                                </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;RELAXATION&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;ParameterList&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;relaxation: type&quot;</span><span class="w">                  </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;Symmetric Gauss-Seidel&quot;</span><span class="nt">/&gt;</span>
+<span class="w">                </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;relaxation: sweeps&quot;</span><span class="w">                </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w">    </span><span class="na">value=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">                </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;relaxation: damping factor&quot;</span><span class="w">        </span><span class="na">type=</span><span class="s">&quot;double&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;1.0&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/ParameterList&gt;</span>
+<span class="nt">&lt;/ParameterList&gt;</span>
+</pre></div>
+</div>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;ForwardGaussSeidel&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w">                        </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;TrilinosSmoother&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;type&quot;</span><span class="w">                                </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">  </span><span class="na">value=</span><span class="s">&quot;RELAXATION&quot;</span><span class="nt">/&gt;</span>
+
+<span class="w">        </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;ParameterList&quot;</span><span class="nt">&gt;</span>
+<span class="w">                </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;relaxation: type&quot;</span><span class="w">                  </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">  </span><span class="na">value=</span><span class="s">&quot;Gauss-Seidel&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;relaxation: backward mode&quot;</span><span class="w">         </span><span class="na">type=</span><span class="s">&quot;bool&quot;</span><span class="w">    </span><span class="na">value=</span><span class="s">&quot;false&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;relaxation: sweeps&quot;</span><span class="w">                </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w">     </span><span class="na">value=</span><span class="s">&quot;2&quot;</span><span class="nt">/&gt;</span>
+<span class="w">                </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;relaxation: damping factor&quot;</span><span class="w">        </span><span class="na">type=</span><span class="s">&quot;double&quot;</span><span class="w">  </span><span class="na">value=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/ParameterList&gt;</span>
+<span class="nt">&lt;/ParameterList&gt;</span>
+</pre></div>
+</div>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;BackwardGaussSeidel&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w">                        </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;TrilinosSmoother&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;type&quot;</span><span class="w">                                </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">  </span><span class="na">value=</span><span class="s">&quot;RELAXATION&quot;</span><span class="nt">/&gt;</span>
+
+<span class="w">        </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;ParameterList&quot;</span><span class="nt">&gt;</span>
+<span class="w">                </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;relaxation: type&quot;</span><span class="w">                  </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">  </span><span class="na">value=</span><span class="s">&quot;Gauss-Seidel&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;relaxation: backward mode&quot;</span><span class="w">         </span><span class="na">type=</span><span class="s">&quot;bool&quot;</span><span class="w">    </span><span class="na">value=</span><span class="s">&quot;true&quot;</span><span class="nt">/&gt;</span>
+<span class="w">                </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;relaxation: sweeps&quot;</span><span class="w">                </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w">     </span><span class="na">value=</span><span class="s">&quot;2&quot;</span><span class="nt">/&gt;</span>
+<span class="w">                </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;relaxation: damping factor&quot;</span><span class="w">        </span><span class="na">type=</span><span class="s">&quot;double&quot;</span><span class="w">  </span><span class="na">value=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/ParameterList&gt;</span>
+<span class="nt">&lt;/ParameterList&gt;</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>ILU smoothers:</p>
+<blockquote>
+<div><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;IfpackILU&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;TrilinosSmoother&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;type&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;ILU&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;ParameterList&quot;</span><span class="nt">&gt;</span>
+<span class="w">                </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;fact: level-of-fill&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/ParameterList&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/ParameterList&gt;</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p>Above listing shows how to create an ILU(0) level smoother (using Ifpack).
+Please refer to the Ifpack documentation of all parameters on how to choose, e.g. overlapping.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There is an inconsistency between <strong>Ifpack</strong> (for the <strong>Epetra</strong> stack) and <strong>Ifpack2</strong> (for the <strong>Tpetra</strong> stack) with respect to the <strong>type</strong> parameter in above listing.
+Not all types of ILU methods available in <strong>Ifpack</strong> are available in <strong>Ifpack2</strong> and vice versa.
+<strong>Ifpack2</strong> has an implementation of ILUT (<strong>type = ILUT</strong>), but there ILUT parameters may also be slightly different.
+Please check and adapt the parameters if you switch between the <strong>Epetra</strong> and <strong>Tpetra</strong> stack.
+Please refer to the <strong>Ifpack</strong> and <strong>Ifpack2</strong> documentation for the details.</p>
+</div>
+<p>For Ifpack2 ILUT you can use, e.g., the following settings</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Ifpack2ILUT&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;TrilinosSmoother&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;type&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;ILUT&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;ParameterList&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;fact: ilut level-of-fill&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/ParameterList&gt;</span>
+<span class="nt">&lt;/ParameterList&gt;</span>
+</pre></div>
+</div>
+<p>In Ifpack the parameters might be</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;IfpackILUT&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;TrilinosSmoother&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;type&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;ILUT&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;ParameterList&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;fact: ilut level-of-fill&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;double&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;0.0&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/ParameterList&gt;</span>
+<span class="nt">&lt;/ParameterList&gt;</span>
+</pre></div>
+</div>
+<div class="admonition-exercise-5 admonition">
+<p class="admonition-title">Exercise 5</p>
+<p>Pick out one level smoother from above and use them for your problem.
+Note that you may have to adapt the <strong>relaxation: damping factor</strong> for reasonable results.</p>
+</div>
+</section>
+<section id="level-smoothers-for-the-epetra-and-tpetra-stack">
+<h3>Level smoothers for the Epetra and Tpetra stack<a class="headerlink" href="#level-smoothers-for-the-epetra-and-tpetra-stack" title="Link to this heading"></a></h3>
+<p>Generally, the <strong>TrilinosSmoother</strong> factory class tries to provide the same set of standard level smoothers for the <strong>Epetra</strong> and <strong>Tpetra</strong> stack as far as possible.
+It uses <strong>Ifpack</strong> or <strong>Ifpack2</strong> under the hood.
+<strong>MueLu</strong> partially tries to internally translate the parameters from <strong>Ifpack2</strong> to <strong>Ifpack</strong>, but this is not always possible and error-prone.
+The available values for the <strong>type</strong> parameter are <strong>RELAXATION</strong>, <strong>CHEBYSHEV</strong>, <strong>ILUT</strong>, <strong>RILUK</strong> and <strong>ILU</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In order to define a multigrid hierarchy that is working for both the <strong>Epetra</strong> and <strong>Tpetra</strong> stack it is recommended to use <strong>CHEBYSHEV</strong> or <strong>RELAXATION</strong> based smoothers.</p>
+</div>
+<p>The <strong>TrilinosSmoother</strong> factory may provide support more types of smoothers,
+but these have to be considered as experimental and often are only available for the <strong>Tpetra</strong> branch.
+Please check the source code for a list of all available smoothers and options.
+More advanced smoothing strategies will also introduced later in this guide (e.g. <a class="reference internal" href="advanced_concepts.html#advanced-concepts-line-smoothing"><span class="std std-ref">Line-smoothing</span></a>).</p>
+</section>
+</section>
+<section id="advanced-features">
+<h2>Advanced features<a class="headerlink" href="#advanced-features" title="Link to this heading"></a></h2>
+<p>MueLu allows full control over the behavior of the multigrid levels.
+Here, we demonstrate the capabilities of MueLu using the level smoothers.
+Take a look at the following example XML parameter list</p>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-number">Listing 6 </span><span class="caption-text">../../../test/tutorial/s2_adv_b.xml</span><a class="headerlink" href="#id2" title="Link to this code"></a></div>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;MueLu&quot;</span><span class="nt">&gt;</span>
+
+<span class="w">  </span><span class="cm">&lt;!-- Factory collection --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Factories&quot;</span><span class="nt">&gt;</span>
+
+<span class="w">    </span><span class="cm">&lt;!-- Note that ParameterLists must be defined prior to being used --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;BackwardGaussSeidel&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;factory&quot;</span><span class="w">                        </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;TrilinosSmoother&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;type&quot;</span><span class="w">                                </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">  </span><span class="na">value=</span><span class="s">&quot;RELAXATION&quot;</span><span class="nt">/&gt;</span>
+
+<span class="w">      </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;ParameterList&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;relaxation: type&quot;</span><span class="w">                  </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">  </span><span class="na">value=</span><span class="s">&quot;Gauss-Seidel&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;relaxation: backward mode&quot;</span><span class="w">         </span><span class="na">type=</span><span class="s">&quot;bool&quot;</span><span class="w">    </span><span class="na">value=</span><span class="s">&quot;true&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;relaxation: sweeps&quot;</span><span class="w">                </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w">     </span><span class="na">value=</span><span class="s">&quot;50&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;relaxation: damping factor&quot;</span><span class="w">        </span><span class="na">type=</span><span class="s">&quot;double&quot;</span><span class="w">  </span><span class="na">value=</span><span class="s">&quot;0.6&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/ParameterList&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/ParameterList&gt;</span>
+
+<span class="w">  </span><span class="cm">&lt;!-- Definition of the multigrid preconditioner --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Hierarchy&quot;</span><span class="nt">&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;max levels&quot;</span><span class="w">                            </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w">      </span><span class="na">value=</span><span class="s">&quot;4&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;coarse: max size&quot;</span><span class="w">                      </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w">      </span><span class="na">value=</span><span class="s">&quot;10&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;verbosity&quot;</span><span class="w">                             </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">   </span><span class="na">value=</span><span class="s">&quot;Low&quot;</span><span class="nt">/&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Finest&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;PreSmoother&quot;</span><span class="w">           </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;BackwardGaussSeidel&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;PostSmoother&quot;</span><span class="w">          </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;NoSmoother&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;CoarseSolver&quot;</span><span class="w">          </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">  </span><span class="na">value=</span><span class="s">&quot;DirectSolver&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="nt">&lt;ParameterList</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Remaining&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;startLevel&quot;</span><span class="w">            </span><span class="na">type=</span><span class="s">&quot;int&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;PreSmoother&quot;</span><span class="w">           </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;NoSmoother&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;PostSmoother&quot;</span><span class="w">          </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;BackwardGaussSeidel&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;CoarseSolver&quot;</span><span class="w">          </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w">  </span><span class="na">value=</span><span class="s">&quot;DirectSolver&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/ParameterList&gt;</span><span class="w">    </span>
+
+<span class="w">  </span><span class="nt">&lt;/ParameterList&gt;</span>
+<span class="nt">&lt;/ParameterList&gt;</span>
+</pre></div>
+</div>
+</div>
+<p>You can find the parameters in <strong>../../../test/tutorial/s2_adv_b.xml</strong>.
+We have one building block <strong>BackwardGaussSeidel</strong> representing the level smoother that we want to use in our multigrid hierarchy.
+As one can see from the <strong>Hierarchy</strong> block we request a 4 level multigrid method.
+There are two blocks called <strong>Finest</strong> and <strong>Remaining</strong> describing the behavior of the different multigrid levels.
+Note the <strong>startLevel</strong> parameter in the block <strong>Remaining</strong>.
+This parameter is missing in the <strong>Finest</strong> block (where it is assumed to be the default value which is zero).
+That is, in this example we use the backward Gauss-Seidel method as pre-smoother on the finest level (note the keyword <strong>NoFactory</strong> for <strong>PostSmoother</strong>).
+The parameter <strong>startLevel=1</strong> in the <strong>Remaining</strong> block means that for level 1 and all coarser levels (unless there is another block with <strong>startLevel &gt; 1</strong>) the building blocks from <strong>Remaining</strong> shall be used for the multigrid setup.
+That is, on the multigrid levels 1 and 2 the backward Gauss-Seidel method is used for post smoothing only.
+The corresponding multigrid hierarchy has the form</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>printScreenOutput{s2_adv_b.txt_3.fragment_3.fragment}
+-&gt; Also replace in Exercise 6.</p>
+</div>
+<div class="admonition-exercise-6 admonition">
+<p class="admonition-title">Exercise 6</p>
+<p>Create an XML file in advanced format which produces the following multigrid layout
+printScreenOutput{s2_adv_c.txt_3.fragment_3.fragment}.</p>
+<p>Hint: create a copy of the file <strong>../../../test/tutorial/s2_adv_b.xml</strong> and extend it accordingly. A possible solution can be found in <strong>../../../test/tutorial/s2_adv_c.xml</strong>.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="cd_example.html" class="btn btn-neutral float-left" title="Challenge: CD example" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="muelu_factories_for_transfer_operators.html" class="btn btn-neutral float-right" title="MueLu factories for transfer operators" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, The MueLu Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

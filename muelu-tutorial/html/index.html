@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The MueLu Tutorial &mdash; MueLu Tutorial 2023 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=86f27845" />
+
+  
+  
+        <script src="_static/jquery.js?v=8dae8fb0"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=a4664895"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Quick start" href="pages/quick_start.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            MueLu Tutorial
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Beginners Tutorial</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pages/quick_start.html">Quick start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pages/level_smoothers.html">Level smoothers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pages/multigrid_for_non_symmetric_problems.html">Multigrid for non-symmetric problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pages/useful_tools_for_analysis.html">Useful tools for analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pages/cd_example.html">Challenge: CD example</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pages/xml_interface_for_advanced_users.html">XML interface for advanced users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pages/muelu_factories_for_transfer_operators.html">MueLu factories for transfer operators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pages/rebalancing.html">Rebalancing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pages/advanced_concepts.html">Advanced concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pages/aggregation.html">Aggregation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pages/useful_commands_and_debugging.html">Useful commands and debugging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pages/challenge.html">Challenge: elasticity example</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Expert Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pages/multigrid_for_multiphysics.html">Multigrid for Multiphysics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pages/user_api.html">Using MueLu in User Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pages/ml_parameterlist_interpreter.html">ML ParameterList interpreter</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">MueLu Tutorial</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">The MueLu Tutorial</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="the-muelu-tutorial">
+<h1>The MueLu Tutorial<a class="headerlink" href="#the-muelu-tutorial" title="Link to this heading"></a></h1>
+<blockquote class="epigraph">
+<div><p>This is the MueLu Tutorial.
+Additional resources can be found at the <a class="reference external" href="https://trilinos.github.io/muelu.html">MueLu package web page</a>,
+in the <a class="reference external" href="https://github.com/trilinos/Trilinos/tree/master/packages/muelu/doc/UsersGuide">MueLu User’s Guide</a>
+and the <a class="reference external" href="https://trilinos.org/docs/dev/packages/muelu/doc/html/index.html">Doxygen source code documentation</a>.</p>
+</div></blockquote>
+<section id="preface">
+<h2>Preface<a class="headerlink" href="#preface" title="Link to this heading"></a></h2>
+<p>The MueLu tutorial is written as a hands-on tutorial for MueLu,
+the next generation multigrid framework in Trilinos.
+It covers the whole spectrum from absolute beginners’ topics to expert level.
+Since the focus of this tutorial is on practical and technical aspects
+of multigrid methods in general and MueLu in particular,
+the reader should already have a basic understanding of multigrid methods and their general underlying concepts.
+Please refer to multigrid textbooks for the theoretical background.</p>
+</section>
+<section id="content">
+<h2>Content<a class="headerlink" href="#content" title="Link to this heading"></a></h2>
+<p>The tutorial is split into three parts.
+The first part contains four tutorials for beginners who are interested in using multigrid methods.
+No knowledge about <code class="docutils literal notranslate"><span class="pre">C++</span></code> is required if the programs are used that come with the tutorial (in the Trilinos repository).
+If one uses the virtual box image one can even avoid the Trilinos compilation process.
+So, the tutorials in the first part can also be used for teaching purposes.
+One can easily study the smoothing effect of multigrid smoothers and perform some very basic experiments,
+which helps to gain a better understanding of multigrid methods.
+In the quick start tutorial, all steps are documented step by step such that it should be very easy to follow the tutorial.
+Different exercises may encourage the reader for performing some more experiments and tests.
+The following tutorials give an overview of the existing level smoothers and transfer operators,
+that can easily be used with the simple XML format, that MueLu uses for defining the multigrid hierarchies.
+In addition, it is explained how to visualize the aggregates and export the multigrid levels for a more in-depth analysis.</p>
+<p>The second part consists of tutorials for users which are interested in some more background on the underlying techniques that are used in MueLu.
+The user still does not need explicit knowledge of <code class="docutils literal notranslate"><span class="pre">C++</span></code> or any other programming language,
+but some interest in object-oriented design concepts may be helpful to understand the factory concept.
+The focus of the second part is on the introduction of the advanced XML interface for MueLu,
+which describes all internal building blocks of the multigrid setup procedures with its internal dependencies.
+In context of transfer operator smoothing,
+a brief introduction of the theory is given with some in-depth details on the algorithmic design in MueLu.
+More advanced topics are handled as well such as rebalancing or aggregation strategies.
+Additional exercises help the reader to perform some experiments in practice.</p>
+<p>The third part is meant for expert users and for users, who want to use MueLu within their own software.
+Many detailed <code class="docutils literal notranslate"><span class="pre">C++</span></code> examples show how to use MueLu from an user application as preconditioner for a Krylov subspace method or as a standalone multigrid solver.
+We expect the reader to be familiar with Trilinos,
+especially with the linear algebra packages Epetra and Tpetra as well as the linear solver packages AztecOO or Belos.
+For users who are already using ML, the predecessor multigrid package of MueLu in Trilinos,
+we provide a chapter describing the migration process from ML to MueLu.</p>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Beginners Tutorial</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pages/quick_start.html">Quick start</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pages/quick_start.html#example-problem">Example problem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/quick_start.html#user-interface">User interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pages/level_smoothers.html">Level smoothers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pages/level_smoothers.html#background-on-multigrid-methods">Background on multigrid methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/level_smoothers.html#footnotes">Footnotes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pages/multigrid_for_non_symmetric_problems.html">Multigrid for non-symmetric problems</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pages/multigrid_for_non_symmetric_problems.html#test-example">Test example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/multigrid_for_non_symmetric_problems.html#user-interface">User interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/multigrid_for_non_symmetric_problems.html#footnotes">Footnotes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pages/useful_tools_for_analysis.html">Useful tools for analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pages/useful_tools_for_analysis.html#visualization-of-aggregates">Visualization of aggregates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/useful_tools_for_analysis.html#export-data">Export data</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pages/cd_example.html">Challenge: CD example</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pages/cd_example.html#practical-example">Practical example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/cd_example.html#user-interface">User-interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/cd_example.html#general-hints">General hints</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pages/xml_interface_for_advanced_users.html">XML interface for advanced users</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pages/xml_interface_for_advanced_users.html#one-level-method">One-level method</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/xml_interface_for_advanced_users.html#multigrid-method">Multigrid method</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/xml_interface_for_advanced_users.html#level-smoothers">Level smoothers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/xml_interface_for_advanced_users.html#advanced-features">Advanced features</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pages/muelu_factories_for_transfer_operators.html">MueLu factories for transfer operators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pages/muelu_factories_for_transfer_operators.html#multigrid-setup-phase-algorithmic-design">Multigrid setup phase - algorithmic design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/muelu_factories_for_transfer_operators.html#xml-interface">XML Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/muelu_factories_for_transfer_operators.html#footnotes">Footnotes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pages/rebalancing.html">Rebalancing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pages/rebalancing.html#basic-concepts-and-parameters">Basic concepts and parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/rebalancing.html#transfer-operator-design">Transfer operator design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/rebalancing.html#xml-interface">XML interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pages/advanced_concepts.html">Advanced concepts</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pages/advanced_concepts.html#semi-coarsening">Semi-coarsening</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/advanced_concepts.html#line-smoothing">Line-smoothing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/advanced_concepts.html#footnotes">Footnotes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pages/aggregation.html">Aggregation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pages/aggregation.html#building-aggregates">Building aggregates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/aggregation.html#visualization-of-aggregates">Visualization of aggregates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/aggregation.html#footnotes">Footnotes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pages/useful_commands_and_debugging.html">Useful commands and debugging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pages/useful_commands_and_debugging.html#export-level-information">Export level information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/useful_commands_and_debugging.html#dependency-trees">Dependency trees</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/useful_commands_and_debugging.html#graphical-assistant-for-xml-file-generation">Graphical assistant for XML file generation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pages/challenge.html">Challenge: elasticity example</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pages/challenge.html#practical-example">Practical example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/challenge.html#user-interface">User-interface</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Expert Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pages/multigrid_for_multiphysics.html">Multigrid for Multiphysics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pages/multigrid_for_multiphysics.html#general-concept">General Concept</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/multigrid_for_multiphysics.html#exemplary-setup-for-a-2-times-2-problem">Exemplary setup for a <span class="math notranslate nohighlight">\(2\times 2\)</span> problem</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pages/multigrid_for_multiphysics.html#setup-of-block-transfer-operators">Setup of block transfer operators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pages/multigrid_for_multiphysics.html#factory-list">Factory list</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pages/multigrid_for_multiphysics.html#factory-manager">Factory manager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pages/multigrid_for_multiphysics.html#block-prolongation-operator">Block prolongation operator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pages/multigrid_for_multiphysics.html#block-restriction-operator">Block restriction operator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pages/multigrid_for_multiphysics.html#coarse-level-operator">Coarse level operator</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pages/multigrid_for_multiphysics.html#setup-of-block-smoothers">Setup of block smoothers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pages/multigrid_for_multiphysics.html#xpetra-block-smoothers">Xpetra block smoothers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pages/multigrid_for_multiphysics.html#teko-block-smoothers">Teko block smoothers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pages/multigrid_for_multiphysics.html#multigrid-setup">Multigrid setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/multigrid_for_multiphysics.html#exemplary-setup-for-a-2-times-2-problem-with-rebalancing">Exemplary setup for a <span class="math notranslate nohighlight">\(2\times 2\)</span> problem with rebalancing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pages/multigrid_for_multiphysics.html#transfer-operator-setup">Transfer operator setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pages/multigrid_for_multiphysics.html#complete-xml-input-deck">Complete XML input deck</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pages/user_api.html">Using MueLu in User Applications</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pages/user_api.html#xml-interface-using-createtpetrapreconditioner">XML Interface using CreateTpetraPreconditioner</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pages/user_api.html#preparations">Preparations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pages/user_api.html#setup-phase">Setup phase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pages/user_api.html#iteration-phase">Iteration Phase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pages/user_api.html#muelu-as-multigrid-solver">MueLu as multigrid solver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pages/user_api.html#muelu-as-preconditioner-for-belos">MueLu as preconditioner for Belos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pages/user_api.html#full-example-using-the-xml-interface">Full example using the XML interface</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pages/user_api.html#c-interface">C++ Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/user_api.html#footnotes">Footnotes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pages/ml_parameterlist_interpreter.html">ML ParameterList interpreter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pages/ml_parameterlist_interpreter.html#backwards-compatibility">Backwards compatibility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/ml_parameterlist_interpreter.html#c-part">C++ part</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pages/ml_parameterlist_interpreter.html#preparations">Preparations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pages/ml_parameterlist_interpreter.html#c-interface">C++ interface</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pages/ml_parameterlist_interpreter.html#footnotes">Footnotes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="indices-and-tables">
+<h2>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pages/quick_start.html" class="btn btn-neutral float-right" title="Quick start" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, The MueLu Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

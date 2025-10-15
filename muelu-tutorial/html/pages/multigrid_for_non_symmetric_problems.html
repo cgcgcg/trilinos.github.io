@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multigrid for non-symmetric problems &mdash; MueLu Tutorial 2023 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=86f27845" />
+
+  
+  
+        <script src="../_static/jquery.js?v=8dae8fb0"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=a4664895"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Useful tools for analysis" href="useful_tools_for_analysis.html" />
+    <link rel="prev" title="Level smoothers" href="level_smoothers.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            MueLu Tutorial
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Beginners Tutorial</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="quick_start.html">Quick start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="level_smoothers.html">Level smoothers</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Multigrid for non-symmetric problems</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#test-example">Test example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#user-interface">User interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#footnotes">Footnotes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="useful_tools_for_analysis.html">Useful tools for analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cd_example.html">Challenge: CD example</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="xml_interface_for_advanced_users.html">XML interface for advanced users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="muelu_factories_for_transfer_operators.html">MueLu factories for transfer operators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rebalancing.html">Rebalancing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advanced_concepts.html">Advanced concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aggregation.html">Aggregation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="useful_commands_and_debugging.html">Useful commands and debugging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="challenge.html">Challenge: elasticity example</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Expert Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="multigrid_for_multiphysics.html">Multigrid for Multiphysics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user_api.html">Using MueLu in User Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml_parameterlist_interpreter.html">ML ParameterList interpreter</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MueLu Tutorial</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Multigrid for non-symmetric problems</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/pages/multigrid_for_non_symmetric_problems.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="multigrid-for-non-symmetric-problems">
+<h1>Multigrid for non-symmetric problems<a class="headerlink" href="#multigrid-for-non-symmetric-problems" title="Link to this heading"></a></h1>
+<section id="test-example">
+<span id="multigrid-for-non-symmetric-problems-test-example"></span><h2>Test example<a class="headerlink" href="#test-example" title="Link to this heading"></a></h2>
+<p>The <strong>Recirc2D</strong> example uses a matrix corresponding to the finite-difference discretization of the problem</p>
+<div class="math notranslate nohighlight">
+\[-\varepsilon\Delta u + (v_x,v_y)\cdot \nabla u=f\]</div>
+<p>on the unit square, with <span class="math notranslate nohighlight">\(\varepsilon=1e-5\)</span> and homogeneous Dirichlet boundary conditions.
+It is <span class="math notranslate nohighlight">\(v_x=4x(x-1)(1-2y)\)</span> and <span class="math notranslate nohighlight">\(v_y=-4y(y-1)(1-2x)\)</span>.
+The right hand side vector <span class="math notranslate nohighlight">\(f\)</span> is chosen to be the constant vector 1.
+Due to the convective term the resulting linear system is non-symmetric and therefore more challenging for the iterative solver.
+The multigrid algorithm has to be adapted to the non-symmetry to obtain good convergence behavior.</p>
+</section>
+<section id="user-interface">
+<h2>User interface<a class="headerlink" href="#user-interface" title="Link to this heading"></a></h2>
+<p>For this tutorial again we can use the easy-to-use user interface.
+Run the <strong>hands-on.py</strong> script in your terminal and choose option 2 for the <strong>Recirc 2D</strong> example on a <span class="math notranslate nohighlight">\(50\times 50\)</span> mesh.
+Note that the default values from the file <strong>../../../test/tutorial/s2a.xml</strong> do not lead to a convergent multigrid preconditioner.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/tut1_13.png"><img alt="../_images/tut1_13.png" src="../_images/tut1_13.png" style="width: 10cm;" /></a>
+</figure>
+<p>The convergence of the used unsmoothed transfer operators (<strong>multigrid algorithm = unsmoothed</strong>) is not optimal.
+In case of symmetric problems one can reduce the number of iterations using smoothed aggregation algebraic multigrid methods.
+In context of non-symmetric problems, especially when arising from problems with (highly) convective phenomena,
+one should use a Petrov-Galerkin approach for smoothing the prolongation and restriction operators more carefully.</p>
+<p>In MueLu one can choose a Petrov-Galerkin approach for the transfer operators by setting <strong>multigrid algorithm = pg</strong>.
+Furthermore, one has to state that the system is non-symmetric by setting <strong>problem: symmetric = false</strong>.
+In addition, you have to set <strong>transpose: use implicit = false</strong> to make sure that the prolongation and restriction are built separately.
+This is highly important for non-symmetric problems since <span class="math notranslate nohighlight">\(R=P^T\)</span> is not a good choice for non-symmetric problems (see, e.g., <a class="footnote-reference brackets" href="#id4" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> <a class="footnote-reference brackets" href="#id5" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>).</p>
+<p>The role of the <strong>transpose: use implicit</strong> and the <strong>problem: symmetric</strong> parameters are the following:</p>
+<div class="admonition-description admonition">
+<p class="admonition-title">Description</p>
+<ul class="simple">
+<li><p><strong>transpose: use implicit</strong> Use <span class="math notranslate nohighlight">\(R=P^T\)</span> for the restriction operator and do not explicitly build the operator <span class="math notranslate nohighlight">\(R\)</span>.</p></li>
+</ul>
+<p>This can save a lot of memory and might be very performant when building the multigrid Galerkin product.
+However, for non-symmetric problems this is not working and has to be turned off.
+* <strong>problem: symmetric</strong> If <strong>true</strong>, use <span class="math notranslate nohighlight">\(R=P^T\)</span> as restriction operator.
+Depending on the <strong>transpose: use implicit</strong> parameter the restriction operator is explicitly built.
+If <strong>false</strong> a Petrov-Galerkin approach as described in <a class="footnote-reference brackets" href="#id4" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> is used to build the restriction operator separately.
+Note, that for the Galerkin approach it is necessary to build the restriction operator explicitly and store it.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>One can also use unsmoothed transfer operators (<strong>multigrid algorithm = unsmoothed</strong>) for non-symmetric problems.
+These might not give optimal results with respect to the iteration count,
+but they can be used with <strong>transpose: use implicit = true</strong> for non-symmetric problems, too, without disturbing the convergence.
+This way one can save a significant amount of memory compared to the smoothed aggregation method with Petrov-Galerkin for non-symmetric problems.</p>
+</div>
+<div class="admonition-exercise-1 admonition">
+<p class="admonition-title">Exercise 1</p>
+<p>Choose the parameters from the <strong>n1_easy.xml</strong> file.
+If you run the example you might find that the GMRES method did not converge within 50 iterations.
+Use <strong>multigrid algorithm = pg</strong> and compare the results with <strong>multigrid algorithm = unsmoothed</strong>.
+Do not forget to set the other parameters correctly for Petrov-Galerkin methods as described before.
+What is the difference in the number of GMRES iterations?
+What is changing in the multigrid setup?</p>
+</div>
+<div class="admonition-exercise-2 admonition">
+<p class="admonition-title">Exercise 2</p>
+<p>For slightly non-symmetric problems the <strong>sa</strong> method often performs satisfactorily.
+Change the verbosity to high (<strong>verbosity = high</strong>)
+and compare the results of the <strong>multigrid algorithm = pg</strong> option with the <strong>multigrid algorithm = sa</strong> option.
+Check the role of the <strong>transpose: use implicit</strong> parameter.
+What is changed by the <strong>problem: symmetric</strong> parameter?
+Try different values between 0 and 1.5 for the damping parameter within the smoothed aggregation method
+(i.e., try values 0.0, 0.5, 1.0, 1.33 and 1.5 for <strong>sa: damping factor</strong>).
+What do you observe?</p>
+</div>
+</section>
+<section id="footnotes">
+<h2>Footnotes<a class="headerlink" href="#footnotes" title="Link to this heading"></a></h2>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id4" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id3">2</a>)</span>
+<p>Sala, M. and Tuminaro, R. S., A new Petrov-Galerkin Smoothed Aggregation Preconditioner for nonsymmetric Linear Systems, SIAM J. Sci. Comput., 2008, 31, p. 143–166</p>
+</aside>
+<aside class="footnote brackets" id="id5" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
+<p>Wiesner, T. A., Tuminaro, R. S., Wall, W. A. and Gee, M. W., Multigrid transfers fornonsymmetric systems based on Schur complements and Galerkin projections., Numer.Linear Algebra Appl., 2013, doi: 10.1002/nla.1889</p>
+</aside>
+</aside>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="level_smoothers.html" class="btn btn-neutral float-left" title="Level smoothers" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="useful_tools_for_analysis.html" class="btn btn-neutral float-right" title="Useful tools for analysis" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, The MueLu Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
