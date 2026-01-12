@@ -136,7 +136,9 @@ jobs:
         
         pushd ${{ env.TRILINOS_SOURCE }}/packages
         for p in * ; do
+          echo "Attempting $p"
           if [[ -d $p && -d $p/doc/html ]] ; then
+            echo "Processing $p/doc/html"
             cp -r $p/doc/html $GITHUB_WORKSPACE/${{ env.WEBPAGES_DIR }}/docs/$p
           fi
         done   
