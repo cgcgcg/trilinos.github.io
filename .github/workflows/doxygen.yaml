@@ -92,38 +92,12 @@ jobs:
         path: /home/runner/.cache/ccache
         key: ccache-${{ env.DOC_REF }}
 
-    - name: Pull doxygen cache
-      if: always()
-      id: cache-restore
-      uses: actions/cache/restore@1bd1e32a3bdc45362d1e726936510720a7c30a57 # v4.2.0
-      with:
-        path: ${{ env.TRILINOS_SOURCE }}/packages/*/doc/html
-        key: html-${{ env.DOC_REF }}
-        
     - name: Run doxygen
       run: |
         pushd ${{ env.TRILINOS_SOURCE }}/doc
         ./build_docs.pl
         popd
         
-    - name: Invalidate old doxygen cache
-      if: ${{ steps.cache-restore.outputs.cache-hit }}
-      shell: bash
-      env:
-        GH_TOKEN: ${{ github.token }}
-      run: |
-        pushd ${{ env.WEBPAGES_DIR }}
-        gh cache delete html-${{ env.DOC_REF }}
-        popd
-      continue-on-error: true
-
-    - name: Push new doxygen cache
-      if: always()
-      uses: actions/cache/save@1bd1e32a3bdc45362d1e726936510720a7c30a57 # v4.2.0
-      with:
-        path: ${{ env.TRILINOS_SOURCE }}/packages/*/doc/html
-        key: html-${{ env.DOC_REF }}
-
     - name: Copy XML files
       run: |
         ${{ env.TRILINOS_SOURCE }}/packages/belos/doc/copy_xml_to_src_html.py ${{ env.TRILINOS_BUILD }}
