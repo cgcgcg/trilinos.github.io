@@ -130,3 +130,4 @@ jobs:
         branch: doxygen-update
         base: master
         delete-branch: true
+        sign-commits: true
