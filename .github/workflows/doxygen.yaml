@@ -7,8 +7,8 @@ on:
 
 env:
   # Where we are getting the Trilinos source code from
-  TRILINOS_REPO: trilinos/Trilinos
-  TRILINOS_REF: develop
+  TRILINOS_REPO: cgcgcg/Trilinos
+  TRILINOS_REF: doxygen_monolithic
 
   # directories relative to $GITHUB_WORKSPACE
   WEBPAGES_DIR: trilinos.github.io  
@@ -103,7 +103,9 @@ jobs:
     - name: Run doxygen
       run: |
         pushd ${{ env.TRILINOS_SOURCE }}/doc
-        ./build_docs.pl
+        # ./build_docs.pl
+        git clone https://github.com/jothepro/doxygen-awesome-css.git
+        doxygen
         popd
         
     - name: Invalidate old doxygen cache
@@ -133,14 +135,16 @@ jobs:
       run: |
         rm -rf ${{ env.WEBPAGES_DIR }}/docs/
         mkdir ${{ env.WEBPAGES_DIR }}/docs/
-        
-        pushd ${{ env.TRILINOS_SOURCE }}/packages
-        for p in * ; do
-          if [[ -d $p && -d $p/doc/html ]] ; then
-            cp -r $p/doc/html $GITHUB_WORKSPACE/${{ env.WEBPAGES_DIR }}/docs/$p
-          fi
-        done   
-        popd
+
+        cp -r ${{ env.TRILINOS_SOURCE }}/doc/html $GITHUB_WORKSPACE/${{ env.WEBPAGES_DIR }}/docs/monolithic
+
+        # pushd ${{ env.TRILINOS_SOURCE }}/packages
+        # for p in * ; do
+        #   if [[ -d $p && -d $p/doc/html ]] ; then
+        #     cp -r $p/doc/html $GITHUB_WORKSPACE/${{ env.WEBPAGES_DIR }}/docs/$p
+        #   fi
+        # done
+        # popd
 
     - name: Create PR
       uses: peter-evans/create-pull-request@271a8d0340265f705b14b6d32b9829c1cb33d45e # v7.0.8
