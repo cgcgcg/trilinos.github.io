@@ -1,0 +1,5 @@
+var structcusp_1_1precond_1_1aggregation_1_1amg__container_3_01IndexType_00_01ValueType_00_01cusp_1_1host__memory_01_4 =
+[
+    [ "setup_type", "structcusp_1_1precond_1_1aggregation_1_1amg__container_3_01IndexType_00_01ValueType_00_01cusp_1_1host__memory_01_4.html#a0efcfcd9b1b99d0bc4932dc61a5020a2", null ],
+    [ "solve_type", "structcusp_1_1precond_1_1aggregation_1_1amg__container_3_01IndexType_00_01ValueType_00_01cusp_1_1host__memory_01_4.html#ae2ebaecf2868bc3c369d25018856297d", null ]
+];

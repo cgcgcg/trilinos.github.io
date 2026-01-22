@@ -1,0 +1,25 @@
+var classIntrepid2_1_1Impl_1_1OrientationTools =
+[
+    [ "getCoeffMatrix_HCURL", "classIntrepid2_1_1Impl_1_1OrientationTools.html#a94d81ba70fd10c6cc50017d67dc2e72a", null ],
+    [ "getCoeffMatrix_HDIV", "classIntrepid2_1_1Impl_1_1OrientationTools.html#a204db6753028d048104150dc63100f58", null ],
+    [ "getCoeffMatrix_HGRAD", "classIntrepid2_1_1Impl_1_1OrientationTools.html#a0860364746cb26cab679fb9b1ecd7f84", null ],
+    [ "getCoeffMatrix_HVOL", "classIntrepid2_1_1Impl_1_1OrientationTools.html#a79a899ac643484622b75268a0400800e", null ],
+    [ "getJacobianOfOrientationMap", "classIntrepid2_1_1Impl_1_1OrientationTools.html#a40dff596c2c135cee408b82138fab684", null ],
+    [ "getJacobianOfOrientationMap", "classIntrepid2_1_1Impl_1_1OrientationTools.html#a0a09c9d0f542e8c6f8520ebf837abe28", null ],
+    [ "getJacobianOfOrientationMap", "classIntrepid2_1_1Impl_1_1OrientationTools.html#a29b0c2f487abce26a7a3bb889c9a14bd", null ],
+    [ "getJacobianOfOrientationMap", "classIntrepid2_1_1Impl_1_1OrientationTools.html#aef0d68ecaf3588925fda5a8002f5e754", null ],
+    [ "getLineJacobian", "classIntrepid2_1_1Impl_1_1OrientationTools.html#a6bf68acb18ca7a3c12cfa9b5b12aa55b", null ],
+    [ "getModifiedLinePoint", "classIntrepid2_1_1Impl_1_1OrientationTools.html#accf6693b883008c8a2fab838d479787e", null ],
+    [ "getModifiedLinePoint", "classIntrepid2_1_1Impl_1_1OrientationTools.html#a1aa7c89563ddaea35e41d8c19e3ae7cc", null ],
+    [ "getModifiedQuadrilateralPoint", "classIntrepid2_1_1Impl_1_1OrientationTools.html#a27c606956dc2fca87cd3cb7663a37f21", null ],
+    [ "getModifiedQuadrilateralPoint", "classIntrepid2_1_1Impl_1_1OrientationTools.html#ae65aa9db1245db06b7962ad3a2e64276", null ],
+    [ "getModifiedTrianglePoint", "classIntrepid2_1_1Impl_1_1OrientationTools.html#a0dbd3cf3e265b7fd0f41837403253def", null ],
+    [ "getModifiedTrianglePoint", "classIntrepid2_1_1Impl_1_1OrientationTools.html#aa26e1d77bf2876eb464b19705a4701aa", null ],
+    [ "getQuadrilateralJacobian", "classIntrepid2_1_1Impl_1_1OrientationTools.html#a6598c0e1fc521d982810b0feb8ddd16f", null ],
+    [ "getRefSideTangentsAndNormal", "classIntrepid2_1_1Impl_1_1OrientationTools.html#a9eb0028e08ddcd934c3d9446adb93444", null ],
+    [ "getRefSubcellTangents", "classIntrepid2_1_1Impl_1_1OrientationTools.html#a55bc7808909c4e4aec9787a97ff3bde8", null ],
+    [ "getTriangleJacobian", "classIntrepid2_1_1Impl_1_1OrientationTools.html#afb54af67d910de064370323b4d54d454", null ],
+    [ "mapSubcellCoordsToRefCell", "classIntrepid2_1_1Impl_1_1OrientationTools.html#ab2112efa8cea48d2f25a7c6ade64f8ae", null ],
+    [ "mapToModifiedReference", "classIntrepid2_1_1Impl_1_1OrientationTools.html#a6db16f6a156997421f9e556d6b46a995", null ],
+    [ "mapToModifiedReference", "classIntrepid2_1_1Impl_1_1OrientationTools.html#a145a3f21edac05cf525c907068714b96", null ]
+];

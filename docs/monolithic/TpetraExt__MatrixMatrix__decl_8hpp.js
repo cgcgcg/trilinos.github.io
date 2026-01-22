@@ -1,0 +1,28 @@
+var TpetraExt__MatrixMatrix__decl_8hpp =
+[
+    [ "Tpetra::MMdetails::KernelWrappers< Scalar, LocalOrdinal, GlobalOrdinal, Node, LocalOrdinalViewType >", "structTpetra_1_1MMdetails_1_1KernelWrappers.html", "structTpetra_1_1MMdetails_1_1KernelWrappers" ],
+    [ "Tpetra::MMdetails::KernelWrappers2< Scalar, LocalOrdinal, GlobalOrdinal, Node, LocalOrdinalViewType >", "structTpetra_1_1MMdetails_1_1KernelWrappers2.html", "structTpetra_1_1MMdetails_1_1KernelWrappers2" ],
+    [ "Tpetra::MMdetails::KernelWrappers3< Scalar, LocalOrdinal, GlobalOrdinal, Node, LocalOrdinalViewType >", "structTpetra_1_1MMdetails_1_1KernelWrappers3.html", "structTpetra_1_1MMdetails_1_1KernelWrappers3" ],
+    [ "Tpetra::MMdetails::AddKernels< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "structTpetra_1_1MMdetails_1_1AddKernels.html", "structTpetra_1_1MMdetails_1_1AddKernels" ],
+    [ "Add", "TpetraExt__MatrixMatrix__decl_8hpp.html#a13d2dff5d0e7bf51cea194f00a69bb89", null ],
+    [ "Add", "TpetraExt__MatrixMatrix__decl_8hpp.html#a398811f7b47ee8b90ce6ab68eb4d1724", null ],
+    [ "Add", "TpetraExt__MatrixMatrix__decl_8hpp.html#ad2325b2dfa9e7ecafad50b483ac6e91c", null ],
+    [ "add", "TpetraExt__MatrixMatrix__decl_8hpp.html#a490101eb131364f765fe780d76557345", null ],
+    [ "add", "TpetraExt__MatrixMatrix__decl_8hpp.html#abc9b662e17fbec8ea775fb6592ac673a", null ],
+    [ "C_estimate_nnz", "TpetraExt__MatrixMatrix__decl_8hpp.html#a84aa16bfe413a0a0b3dc0defac2e0528", null ],
+    [ "import_and_extract_views", "TpetraExt__MatrixMatrix__decl_8hpp.html#a11020ec835617dd1fae5b5de30d1ef85", null ],
+    [ "import_and_extract_views", "TpetraExt__MatrixMatrix__decl_8hpp.html#a26430d768fc4e57556c6ddbaab0bf2f4", null ],
+    [ "Jacobi", "TpetraExt__MatrixMatrix__decl_8hpp.html#a65e8cd18c4ba7b47d8e15524d4fba710", null ],
+    [ "jacobi_A_B_newmatrix", "TpetraExt__MatrixMatrix__decl_8hpp.html#aceb320a2ec8cccf9ffb777c843086613", null ],
+    [ "jacobi_A_B_reuse", "TpetraExt__MatrixMatrix__decl_8hpp.html#a62af426052a1fcbf3a063d85709ba6f7", null ],
+    [ "merge_matrices", "TpetraExt__MatrixMatrix__decl_8hpp.html#ab13bc20a9454eeffb0e34b380f671449", null ],
+    [ "merge_matrices", "TpetraExt__MatrixMatrix__decl_8hpp.html#a7aa2e700d8c4169f60492f8f6568bd94", null ],
+    [ "mult_A_B", "TpetraExt__MatrixMatrix__decl_8hpp.html#af242b4fddbce437cf3b9f4b62901394a", null ],
+    [ "mult_A_B_newmatrix", "TpetraExt__MatrixMatrix__decl_8hpp.html#a3a618be37ffd5c4c5a43784ad8c09f77", null ],
+    [ "mult_A_B_newmatrix", "TpetraExt__MatrixMatrix__decl_8hpp.html#a2b5ea6622d534832ecfa6fdca653fc08", null ],
+    [ "mult_A_B_reuse", "TpetraExt__MatrixMatrix__decl_8hpp.html#ab70711242076dc3567dd97e9d4de55b9", null ],
+    [ "mult_AT_B_newmatrix", "TpetraExt__MatrixMatrix__decl_8hpp.html#a9a35a43749a3bb84cf8943419537efc0", null ],
+    [ "Multiply", "TpetraExt__MatrixMatrix__decl_8hpp.html#a4c3132fa56ba6d5b071f053486529111", null ],
+    [ "Multiply", "TpetraExt__MatrixMatrix__decl_8hpp.html#a2d7226da4a226d5b326a30b25d6e5804", null ],
+    [ "setMaxNumEntriesPerRow", "TpetraExt__MatrixMatrix__decl_8hpp.html#a6c0cd6f2d088bfd158440fa8da6294e3", null ]
+];

@@ -1,0 +1,4 @@
+var classPHX_1_1KokkosViewFactory_3_01Sacado_1_1ELRCacheFad_1_1DFad_3_01ScalarT_01_4_00_01Layout_00_01Device_01_4 =
+[
+    [ "buildView", "classPHX_1_1KokkosViewFactory_3_01Sacado_1_1ELRCacheFad_1_1DFad_3_01ScalarT_01_4_00_01Layout_00_01Device_01_4.html#a9e4ba4431d7fd341571a619ae2886eb6", null ]
+];

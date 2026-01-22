@@ -1,0 +1,5 @@
+var structTpetra_1_1Details_1_1Blas_1_1Impl_1_1GetStride1DView_3_01ViewType_00_01Kokkos_1_1LayoutLeft_00_01IndexType_01_4 =
+[
+    [ "array_layout", "structTpetra_1_1Details_1_1Blas_1_1Impl_1_1GetStride1DView_3_01ViewType_00_01Kokkos_1_1LayoutLeft_00_01IndexType_01_4.html#a0ca03adb9dc214510b8648251864c2e5", null ],
+    [ "getStride", "structTpetra_1_1Details_1_1Blas_1_1Impl_1_1GetStride1DView_3_01ViewType_00_01Kokkos_1_1LayoutLeft_00_01IndexType_01_4.html#a8627da1b4513236942a4154b9021ed6d", null ]
+];

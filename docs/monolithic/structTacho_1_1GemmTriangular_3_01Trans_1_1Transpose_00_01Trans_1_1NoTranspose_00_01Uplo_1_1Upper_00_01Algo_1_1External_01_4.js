@@ -1,0 +1,5 @@
+var structTacho_1_1GemmTriangular_3_01Trans_1_1Transpose_00_01Trans_1_1NoTranspose_00_01Uplo_1_1Upper_00_01Algo_1_1External_01_4 =
+[
+    [ "invoke", "structTacho_1_1GemmTriangular_3_01Trans_1_1Transpose_00_01Trans_1_1NoTranspose_00_01Uplo_1_1Upper_00_01Algo_1_1External_01_4.html#a78d67ee432e7de28d1b6ce45fc23d94e", null ],
+    [ "invoke", "structTacho_1_1GemmTriangular_3_01Trans_1_1Transpose_00_01Trans_1_1NoTranspose_00_01Uplo_1_1Upper_00_01Algo_1_1External_01_4.html#a6a1210e7c14b2f1c4284db4f95e11260", null ]
+];

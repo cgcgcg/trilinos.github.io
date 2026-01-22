@@ -1,4 +1,0 @@
-var searchData=
-[
-  ['swap_0',['swap',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/xpetra/doc/../../../packages/teuchos/doc/html/class_teuchos_1_1_array.html#a172321c03441ec2d509d85a2ad2d873f',1,'Teuchos::Array']]]
-];

@@ -1,0 +1,6 @@
+var classBelos_1_1OperatorTraits_3_01typename_01Storage_1_1value__type_00_01Tpetra_1_1MultiVector_3_306685415b54edabad279edd67af70dd =
+[
+    [ "Scalar", "classBelos_1_1OperatorTraits_3_01typename_01Storage_1_1value__type_00_01Tpetra_1_1MultiVector_3_306685415b54edabad279edd67af70dd.html#aa3c2fbfc64868b7cb814be1d60b1fba9", null ],
+    [ "Apply", "classBelos_1_1OperatorTraits_3_01typename_01Storage_1_1value__type_00_01Tpetra_1_1MultiVector_3_306685415b54edabad279edd67af70dd.html#aebfa0e001c797ca5abc38f2ed11e95d6", null ],
+    [ "HasApplyTranspose", "classBelos_1_1OperatorTraits_3_01typename_01Storage_1_1value__type_00_01Tpetra_1_1MultiVector_3_306685415b54edabad279edd67af70dd.html#a48e520f1b863a4a3c60528d67084d9c5", null ]
+];

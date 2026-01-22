@@ -1,0 +1,5 @@
+var classAnasazi_1_1GeneralizedDavidsonSolMgr_3_01std_1_1complex_3_01MagnitudeType_01_4_00_01MV_00_01OP_01_4 =
+[
+    [ "ScalarType", "classAnasazi_1_1GeneralizedDavidsonSolMgr_3_01std_1_1complex_3_01MagnitudeType_01_4_00_01MV_00_01OP_01_4.html#af72fbd3b80040e0e98aec07b9e33015b", null ],
+    [ "GeneralizedDavidsonSolMgr", "classAnasazi_1_1GeneralizedDavidsonSolMgr_3_01std_1_1complex_3_01MagnitudeType_01_4_00_01MV_00_01OP_01_4.html#ae9e6ed9da5f9f1ead2bdca75c2fd75e9", null ]
+];

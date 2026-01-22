@@ -1,0 +1,4 @@
+var structAmesos2_1_1Details_1_1GetMatrixType_3_01Tpetra_1_1Operator_3_01S_00_01LO_00_01GO_00_01NT_01_4_01_4 =
+[
+    [ "type", "structAmesos2_1_1Details_1_1GetMatrixType_3_01Tpetra_1_1Operator_3_01S_00_01LO_00_01GO_00_01NT_01_4_01_4.html#a9e6fb73551e6fbb5461b308abc13481f", null ]
+];

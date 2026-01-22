@@ -1,0 +1,28 @@
+var classROL_1_1OptimizationSolver =
+[
+    [ "OptimizationSolver", "classROL_1_1OptimizationSolver.html#a72984e54d58b203e159fcddfcc53e4d8", null ],
+    [ "getAlgorithmState", "classROL_1_1OptimizationSolver.html#a830e8ad4f8fbfee486ab017346b14042", null ],
+    [ "getOutput", "classROL_1_1OptimizationSolver.html#af512cafc93151cb17e5a6dc9a8613d42", null ],
+    [ "getStepName", "classROL_1_1OptimizationSolver.html#a6c8e941b2fa0358d4a0bc4da592df67d", null ],
+    [ "reset", "classROL_1_1OptimizationSolver.html#a9f677a8221ea6b04f0fddd4460b0df7d", null ],
+    [ "resetAlgorithmState", "classROL_1_1OptimizationSolver.html#ab33f23a9a73ce6d758e36a8cdd6fa06a", null ],
+    [ "solve", "classROL_1_1OptimizationSolver.html#ac545fb6eca34cd850574c1ac5f51ad5b", null ],
+    [ "solve", "classROL_1_1OptimizationSolver.html#a77ceae7a10c2ed360d8587838281b668", null ],
+    [ "algo_", "classROL_1_1OptimizationSolver.html#a4a694b4ff31d5dd1c6c5f7a8b9b12016", null ],
+    [ "bnd_", "classROL_1_1OptimizationSolver.html#ad37087556d7182d7d4d5e09c1571ecd4", null ],
+    [ "c_", "classROL_1_1OptimizationSolver.html#a62467898012fc83c2c3e04fe5b879b2f", null ],
+    [ "con_", "classROL_1_1OptimizationSolver.html#ac57b8a158ac07c8f1c31517e6c341043", null ],
+    [ "g_", "classROL_1_1OptimizationSolver.html#a5f75645401e2547e3c4682ebe3395088", null ],
+    [ "l_", "classROL_1_1OptimizationSolver.html#a84088e932db9901c4f3130c0e912b26f", null ],
+    [ "obj_", "classROL_1_1OptimizationSolver.html#ad2a21b4389c488b37f126f86eb7a6609", null ],
+    [ "output_", "classROL_1_1OptimizationSolver.html#a8f2310ef13e8a7875fb7cffb3111d50e", null ],
+    [ "pen_", "classROL_1_1OptimizationSolver.html#a00dd0a713ffb95ec709e35835155e5ee", null ],
+    [ "problemType_", "classROL_1_1OptimizationSolver.html#af8563eb75ab01f6555a8840c0db30ef2", null ],
+    [ "state_", "classROL_1_1OptimizationSolver.html#a5e4060cb5d541f67c36f122acecb6b66", null ],
+    [ "status0_", "classROL_1_1OptimizationSolver.html#a3f199600131c07216b8f2ec05551a989", null ],
+    [ "status_", "classROL_1_1OptimizationSolver.html#ae015b1944969719ec6442309312313a2", null ],
+    [ "step_", "classROL_1_1OptimizationSolver.html#a1bc3ab0b1f88cca7a198877966b6216d", null ],
+    [ "stepname_", "classROL_1_1OptimizationSolver.html#ab9b457122ac38835450f06776f58efc8", null ],
+    [ "stepType_", "classROL_1_1OptimizationSolver.html#a531fffc99dd968fd1502c96109826283", null ],
+    [ "x_", "classROL_1_1OptimizationSolver.html#a624aff3ed69cb6273a661078d0c9ea95", null ]
+];

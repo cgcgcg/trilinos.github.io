@@ -1,0 +1,4 @@
+var structTacho_1_1GemmTriangular_3_01Trans_1_1Transpose_00_01Trans_1_1NoTranspose_00_01Uplo_1_1Upper_00_01Algo_1_1Internal_01_4 =
+[
+    [ "invoke", "structTacho_1_1GemmTriangular_3_01Trans_1_1Transpose_00_01Trans_1_1NoTranspose_00_01Uplo_1_1Upper_00_01Algo_1_1Internal_01_4.html#ae32b302cb176c217d4457dce66d0c23b", null ]
+];

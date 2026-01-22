@@ -1,0 +1,28 @@
+var classROL_1_1TypeP_1_1InexactNewtonAlgorithm =
+[
+    [ "NewtonObj", "classROL_1_1TypeP_1_1InexactNewtonAlgorithm_1_1NewtonObj.html", "classROL_1_1TypeP_1_1InexactNewtonAlgorithm_1_1NewtonObj" ],
+    [ "InexactNewtonAlgorithm", "classROL_1_1TypeP_1_1InexactNewtonAlgorithm.html#a34e5b3f86e58209d1548a2a7f3ebff9a", null ],
+    [ "initialize", "classROL_1_1TypeP_1_1InexactNewtonAlgorithm.html#a745a31da743396a44d179036ae41294d", null ],
+    [ "run", "classROL_1_1TypeP_1_1InexactNewtonAlgorithm.html#a2c3d239e768791535ce7c6691724db50", null ],
+    [ "writeHeader", "classROL_1_1TypeP_1_1InexactNewtonAlgorithm.html#af61c73d16abbf54573fd5cab9c4bddd9", null ],
+    [ "writeName", "classROL_1_1TypeP_1_1InexactNewtonAlgorithm.html#aaaf2169c59530988fd3bceee9c34c3b9", null ],
+    [ "writeOutput", "classROL_1_1TypeP_1_1InexactNewtonAlgorithm.html#ac51ad8c7c38e84e098b94de92dc69a95", null ],
+    [ "algoName_", "classROL_1_1TypeP_1_1InexactNewtonAlgorithm.html#a017e4899a133f495f90c23884da1b7aa", null ],
+    [ "c1_", "classROL_1_1TypeP_1_1InexactNewtonAlgorithm.html#a0120b780e709250a4be713afc869a8ea", null ],
+    [ "initProx_", "classROL_1_1TypeP_1_1InexactNewtonAlgorithm.html#a5ae210a3da96a644a6f25720632b4ef2", null ],
+    [ "list_", "classROL_1_1TypeP_1_1InexactNewtonAlgorithm.html#a25bf7e10b09a5b2d92d355b467938bfe", null ],
+    [ "ls_nfval_", "classROL_1_1TypeP_1_1InexactNewtonAlgorithm.html#ae20c48c14272675b022de97c3df64827", null ],
+    [ "maxit_", "classROL_1_1TypeP_1_1InexactNewtonAlgorithm.html#ac964ce7d1dc060ba3a8b51b0963616e8", null ],
+    [ "nhess_", "classROL_1_1TypeP_1_1InexactNewtonAlgorithm.html#a441f556c9c58750ccbcf85a04d8f4c4e", null ],
+    [ "rhodec_", "classROL_1_1TypeP_1_1InexactNewtonAlgorithm.html#aefdabcedd17e05a1a8fde98a8a7d9a54", null ],
+    [ "sigma1_", "classROL_1_1TypeP_1_1InexactNewtonAlgorithm.html#aa11cff5ac734146d007e7e08df069a16", null ],
+    [ "sigma2_", "classROL_1_1TypeP_1_1InexactNewtonAlgorithm.html#a85d7662c67a24291978aad58057ab036", null ],
+    [ "sp_exp_", "classROL_1_1TypeP_1_1InexactNewtonAlgorithm.html#aad9930dced28083db8d0dbfeb2033e82", null ],
+    [ "sp_tol1_", "classROL_1_1TypeP_1_1InexactNewtonAlgorithm.html#aa38d8c89b6b4a2037d1d3d0690a8bfb1", null ],
+    [ "sp_tol2_", "classROL_1_1TypeP_1_1InexactNewtonAlgorithm.html#a647c75d853d874a01059a296d670fb9a", null ],
+    [ "sp_tol_min_", "classROL_1_1TypeP_1_1InexactNewtonAlgorithm.html#a727336676bd71f3d0eab6edfc020fda8", null ],
+    [ "spgIter_", "classROL_1_1TypeP_1_1InexactNewtonAlgorithm.html#abbb9c5405e3047de865223db91dcdfaf", null ],
+    [ "t0_", "classROL_1_1TypeP_1_1InexactNewtonAlgorithm.html#a2d0c5aa79f618526d7cb4b5a0284af40", null ],
+    [ "verbosity_", "classROL_1_1TypeP_1_1InexactNewtonAlgorithm.html#a9c138944a7d4e2b6467a9f16f0ea4a1b", null ],
+    [ "writeHeader_", "classROL_1_1TypeP_1_1InexactNewtonAlgorithm.html#a1d38b4287c665d7ec1c7b7c232ea9878", null ]
+];

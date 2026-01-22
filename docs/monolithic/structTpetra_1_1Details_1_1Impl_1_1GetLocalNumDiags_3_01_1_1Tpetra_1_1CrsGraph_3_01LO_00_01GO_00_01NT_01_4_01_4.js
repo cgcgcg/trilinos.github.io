@@ -1,0 +1,4 @@
+var structTpetra_1_1Details_1_1Impl_1_1GetLocalNumDiags_3_01_1_1Tpetra_1_1CrsGraph_3_01LO_00_01GO_00_01NT_01_4_01_4 =
+[
+    [ "getLocalNumDiags", "structTpetra_1_1Details_1_1Impl_1_1GetLocalNumDiags_3_01_1_1Tpetra_1_1CrsGraph_3_01LO_00_01GO_00_01NT_01_4_01_4.html#a67082acb55297f5578fa62e1ce188ecf", null ]
+];

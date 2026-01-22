@@ -1,0 +1,4 @@
+var structSacado_1_1Fad_1_1ExprSpec_3_01SFadExprTag_3_01Sacado_1_1MP_1_1Vector_3_01Stokhos_1_1Staticbec721214e60d677d188dfe771f1edb5 =
+[
+    [ "type", "structSacado_1_1Fad_1_1ExprSpec_3_01SFadExprTag_3_01Sacado_1_1MP_1_1Vector_3_01Stokhos_1_1Staticbec721214e60d677d188dfe771f1edb5.html#a7554eeeb5b7daf0784580e66046c5c22", null ]
+];

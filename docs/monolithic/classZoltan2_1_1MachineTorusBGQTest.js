@@ -1,0 +1,25 @@
+var classZoltan2_1_1MachineTorusBGQTest =
+[
+    [ "MachineTorusBGQTest", "classZoltan2_1_1MachineTorusBGQTest.html#a2be9d6a13b17643c4d86db797dc84892", null ],
+    [ "MachineTorusBGQTest", "classZoltan2_1_1MachineTorusBGQTest.html#aa6f02a6e771e784f6a9914cb02fc049a", null ],
+    [ "~MachineTorusBGQTest", "classZoltan2_1_1MachineTorusBGQTest.html#ac441bc08fdbdbf6bfea3f30d0b799336", null ],
+    [ "gatherMachineCoordinates", "classZoltan2_1_1MachineTorusBGQTest.html#ab992b22d732ab22c14be31428d6c4274", null ],
+    [ "getAllMachineCoordinatesView", "classZoltan2_1_1MachineTorusBGQTest.html#ae4513b50157fd9c98d1e13b8eeaa6084", null ],
+    [ "getHopCount", "classZoltan2_1_1MachineTorusBGQTest.html#a757362786d070a629a699521cc3e9102", null ],
+    [ "getMachineCoordinate", "classZoltan2_1_1MachineTorusBGQTest.html#a659bf0a667591a1ff675a0bd14be99f0", null ],
+    [ "getMachineCoordinate", "classZoltan2_1_1MachineTorusBGQTest.html#a5aa17f8d4d983226b202af09fb78dad6", null ],
+    [ "getMachineDim", "classZoltan2_1_1MachineTorusBGQTest.html#aadb7e8b6474a107384bed3e245c6afff", null ],
+    [ "getMachineExtent", "classZoltan2_1_1MachineTorusBGQTest.html#a0355b89b9bacc40559c69d2ebb14e1f1", null ],
+    [ "getMachineExtentWrapArounds", "classZoltan2_1_1MachineTorusBGQTest.html#a8544960185f384f0a0f0a16ae265e9ad", null ],
+    [ "getMachineExtentWrapArounds", "classZoltan2_1_1MachineTorusBGQTest.html#abeac9908f93c7bb6e77cd941c5b18a82", null ],
+    [ "getMyActualMachineCoordinate", "classZoltan2_1_1MachineTorusBGQTest.html#ab78051b1d186154fee176c6764f3b1eb", null ],
+    [ "getMyMachineCoordinate", "classZoltan2_1_1MachineTorusBGQTest.html#adc6168e2064cfa205b9619c1786f4168", null ],
+    [ "hasMachineCoordinates", "classZoltan2_1_1MachineTorusBGQTest.html#a5f9545f6cadca67aba06e41ad6b4a0ca", null ],
+    [ "delete_transformed_coords", "classZoltan2_1_1MachineTorusBGQTest.html#a2a7a50e206ff8d7592f16d8a7b5b5300", null ],
+    [ "machine_extent", "classZoltan2_1_1MachineTorusBGQTest.html#ac89d927bdbc9f3053981dbd60d586f07", null ],
+    [ "networkDim", "classZoltan2_1_1MachineTorusBGQTest.html#a1a6fe49ecb781f9afa6e5249b53596c9", null ],
+    [ "pl", "classZoltan2_1_1MachineTorusBGQTest.html#a8e546f303e376f3cdd88785ac170885c", null ],
+    [ "procCoords", "classZoltan2_1_1MachineTorusBGQTest.html#a4492e622cc538cb2feb848037ce0ff27", null ],
+    [ "transformed_coordinates", "classZoltan2_1_1MachineTorusBGQTest.html#ac99b6f6d0dfdccc308ac5bc8715ad4d8", null ],
+    [ "transformed_network_dim", "classZoltan2_1_1MachineTorusBGQTest.html#afe7ec8bb61d7d2fb937341c1ef841002", null ]
+];

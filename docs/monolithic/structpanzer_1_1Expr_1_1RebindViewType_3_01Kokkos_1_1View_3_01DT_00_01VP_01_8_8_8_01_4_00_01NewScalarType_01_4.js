@@ -1,0 +1,4 @@
+var structpanzer_1_1Expr_1_1RebindViewType_3_01Kokkos_1_1View_3_01DT_00_01VP_01_8_8_8_01_4_00_01NewScalarType_01_4 =
+[
+    [ "type", "structpanzer_1_1Expr_1_1RebindViewType_3_01Kokkos_1_1View_3_01DT_00_01VP_01_8_8_8_01_4_00_01NewScalarType_01_4.html#a3eb004b679d9c48c04db594e5042ff07", null ]
+];

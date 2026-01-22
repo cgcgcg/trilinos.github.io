@@ -1,0 +1,28 @@
+var structAmesos2_1_1Superlu_1_1SLUData =
+[
+    [ "host_int_array", "structAmesos2_1_1Superlu_1_1SLUData.html#aa79520c6694ef97e50e423a6c880d4f9", null ],
+    [ "host_mag_array", "structAmesos2_1_1Superlu_1_1SLUData.html#a78323c6497daba0639a48305c619038a", null ],
+    [ "A", "structAmesos2_1_1Superlu_1_1SLUData.html#a862f1dfbf76c67134056922b438a9105", null ],
+    [ "AC", "structAmesos2_1_1Superlu_1_1SLUData.html#a4476ed5cd789d8316ade2dc8169bdd04", null ],
+    [ "anorm", "structAmesos2_1_1Superlu_1_1SLUData.html#a2f2700bb7d895f4986406d9a4c4b1341", null ],
+    [ "B", "structAmesos2_1_1Superlu_1_1SLUData.html#ab68c377919baaff13e4fa9bd179cb3d1", null ],
+    [ "berr", "structAmesos2_1_1Superlu_1_1SLUData.html#a89a8725f717490a807df1e4b3c3ec3e5", null ],
+    [ "C", "structAmesos2_1_1Superlu_1_1SLUData.html#ab385811e621568948e40075a3f69245b", null ],
+    [ "colequ", "structAmesos2_1_1Superlu_1_1SLUData.html#a3c8bd5ffe5b24b7b47ebf61d4a4e125d", null ],
+    [ "equed", "structAmesos2_1_1Superlu_1_1SLUData.html#af594565ae5f2eb55f725700d64d6de9d", null ],
+    [ "etree", "structAmesos2_1_1Superlu_1_1SLUData.html#ac07e8f42d3b6abf3dc1e04547be9d6fc", null ],
+    [ "ferr", "structAmesos2_1_1Superlu_1_1SLUData.html#a072b54b688a7aa658750f1cd29bf74e7", null ],
+    [ "L", "structAmesos2_1_1Superlu_1_1SLUData.html#a511bc232718a249d61451a9ffd4cbf20", null ],
+    [ "mem_usage", "structAmesos2_1_1Superlu_1_1SLUData.html#abee9353557cbbf17fb146a536ff8a62a", null ],
+    [ "options", "structAmesos2_1_1Superlu_1_1SLUData.html#a31c508294a648eb2d6584a6eba799207", null ],
+    [ "panel_size", "structAmesos2_1_1Superlu_1_1SLUData.html#a8e0809e366e94eb7d36ef6b375ed67db", null ],
+    [ "perm_c", "structAmesos2_1_1Superlu_1_1SLUData.html#a86ea919460e457344c49e2723001525a", null ],
+    [ "perm_r", "structAmesos2_1_1Superlu_1_1SLUData.html#a2df972bd08a30061892822543c4f2be8", null ],
+    [ "R", "structAmesos2_1_1Superlu_1_1SLUData.html#a95d6a810b78cab82176f6222bf734780", null ],
+    [ "rcond", "structAmesos2_1_1Superlu_1_1SLUData.html#aac7a2193f23a93bb0bb07c6144503e94", null ],
+    [ "relax", "structAmesos2_1_1Superlu_1_1SLUData.html#af124d9cc50041612315e42be95ddbb0c", null ],
+    [ "rowequ", "structAmesos2_1_1Superlu_1_1SLUData.html#acd41b2c5bceb4c7eb7e7dc34d5d1b109", null ],
+    [ "stat", "structAmesos2_1_1Superlu_1_1SLUData.html#ab8436f9e95954a4e3cc7d4f3d64bc938", null ],
+    [ "U", "structAmesos2_1_1Superlu_1_1SLUData.html#abda963f08bfb5b01b0ab1dee35de0e0e", null ],
+    [ "X", "structAmesos2_1_1Superlu_1_1SLUData.html#a79032adf22bdf0df44cb7415d539f7d9", null ]
+];

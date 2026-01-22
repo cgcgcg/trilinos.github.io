@@ -1,0 +1,25 @@
+var Tpetra__Details__KokkosTeuchosTimerInjection_8cpp =
+[
+    [ "AddKokkosDeepCopyToTimeMonitor", "Tpetra__Details__KokkosTeuchosTimerInjection_8cpp.html#a2926f7715913cb3e126ac8025055b103", null ],
+    [ "AddKokkosFenceToTimeMonitor", "Tpetra__Details__KokkosTeuchosTimerInjection_8cpp.html#af69f0b081036bf8e4560c0e66df1be0f", null ],
+    [ "AddKokkosFunctionsToTimeMonitor", "Tpetra__Details__KokkosTeuchosTimerInjection_8cpp.html#a050dfc5fddadd0cc57a7143143918cd9", null ],
+    [ "kokkosp_begin_deep_copy", "Tpetra__Details__KokkosTeuchosTimerInjection_8cpp.html#ac09c74b9fb5034726f045d89bb5704b9", null ],
+    [ "kokkosp_begin_fence", "Tpetra__Details__KokkosTeuchosTimerInjection_8cpp.html#a4e96f60540c81a362df40b5edb661c4b", null ],
+    [ "kokkosp_begin_for", "Tpetra__Details__KokkosTeuchosTimerInjection_8cpp.html#ad81dd57248bca9605e7638d5297c5ad1", null ],
+    [ "kokkosp_begin_kernel", "Tpetra__Details__KokkosTeuchosTimerInjection_8cpp.html#a4dbfb93baf0df5bd3ff510ad0a0052e1", null ],
+    [ "kokkosp_begin_reduce", "Tpetra__Details__KokkosTeuchosTimerInjection_8cpp.html#ab911ee315ec9367b3bd5df3c46825050", null ],
+    [ "kokkosp_begin_scan", "Tpetra__Details__KokkosTeuchosTimerInjection_8cpp.html#a9c82072b2fb1254456b4da095fe911a5", null ],
+    [ "kokkosp_end_deep_copy", "Tpetra__Details__KokkosTeuchosTimerInjection_8cpp.html#aa706f528f8306dc4c232f6bb19afd198", null ],
+    [ "kokkosp_end_fence", "Tpetra__Details__KokkosTeuchosTimerInjection_8cpp.html#adc3812b5f48d09b023e9a8c650acfaa7", null ],
+    [ "kokkosp_end_kernel", "Tpetra__Details__KokkosTeuchosTimerInjection_8cpp.html#ae8fd3ce844a95133b465f4b6b16d0880", null ],
+    [ "active_handle", "Tpetra__Details__KokkosTeuchosTimerInjection_8cpp.html#ae02a3bb468cf0ee4c6c2b4e64fc72841", null ],
+    [ "initialized_", "Tpetra__Details__KokkosTeuchosTimerInjection_8cpp.html#aa18524230d0fef9138e3fe34e928921b", null ],
+    [ "initialized_", "Tpetra__Details__KokkosTeuchosTimerInjection_8cpp.html#ae916d29b1b067ddfc5dadcf262d2abed", null ],
+    [ "initialized_", "Tpetra__Details__KokkosTeuchosTimerInjection_8cpp.html#aa62de6cd0505237fd970c22cda417b01", null ],
+    [ "label_", "Tpetra__Details__KokkosTeuchosTimerInjection_8cpp.html#af1be58c28b4e51b329d46aa0fcc6c7ee", null ],
+    [ "label_", "Tpetra__Details__KokkosTeuchosTimerInjection_8cpp.html#a814265325592b35b458a70c53f383078", null ],
+    [ "label_", "Tpetra__Details__KokkosTeuchosTimerInjection_8cpp.html#ad6daba9409a01437f6b6746e669bb9d1", null ],
+    [ "timer_", "Tpetra__Details__KokkosTeuchosTimerInjection_8cpp.html#a6be905aa5324f29479fad67478017529", null ],
+    [ "timer_", "Tpetra__Details__KokkosTeuchosTimerInjection_8cpp.html#a572fb8acaef4bcf0ac2746a35daa60f2", null ],
+    [ "timer_", "Tpetra__Details__KokkosTeuchosTimerInjection_8cpp.html#acecbfa43820a24fc9c48a3b1495d3455", null ]
+];

@@ -1,0 +1,4 @@
+var structSacado_1_1Promote_3_01A_00_01A_00_01typename_01mpl_1_1enable__if__c_3_01_9OverrideDefaultPe93ae0652161f57e440cf878f04c4dcc =
+[
+    [ "type", "structSacado_1_1Promote_3_01A_00_01A_00_01typename_01mpl_1_1enable__if__c_3_01_9OverrideDefaultPe93ae0652161f57e440cf878f04c4dcc.html#a8feeede215e026e16571839820fcae2a", null ]
+];

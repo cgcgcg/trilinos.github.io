@@ -1,0 +1,15 @@
+var classStokhos_1_1GetScalarMeanValsFunc_3_01Kokkos_1_1View_3_01Sacado_1_1MP_1_1Vector_3_01Storage_e57c69c6dbe61b78aafdafd33e300068 =
+[
+    [ "execution_space", "classStokhos_1_1GetScalarMeanValsFunc_3_01Kokkos_1_1View_3_01Sacado_1_1MP_1_1Vector_3_01Storage_e57c69c6dbe61b78aafdafd33e300068.html#a345bb716372dce4cc08fbfc6c2f8fa2e", null ],
+    [ "MeanScalar", "classStokhos_1_1GetScalarMeanValsFunc_3_01Kokkos_1_1View_3_01Sacado_1_1MP_1_1Vector_3_01Storage_e57c69c6dbe61b78aafdafd33e300068.html#ace5bd763f960ddb54fa613d446b55b17", null ],
+    [ "MeanViewType", "classStokhos_1_1GetScalarMeanValsFunc_3_01Kokkos_1_1View_3_01Sacado_1_1MP_1_1Vector_3_01Storage_e57c69c6dbe61b78aafdafd33e300068.html#a5cb831e55065b397885e96f96010afc8", null ],
+    [ "Scalar", "classStokhos_1_1GetScalarMeanValsFunc_3_01Kokkos_1_1View_3_01Sacado_1_1MP_1_1Vector_3_01Storage_e57c69c6dbe61b78aafdafd33e300068.html#a1187612602323c65addfac18da52dc2a", null ],
+    [ "size_type", "classStokhos_1_1GetScalarMeanValsFunc_3_01Kokkos_1_1View_3_01Sacado_1_1MP_1_1Vector_3_01Storage_e57c69c6dbe61b78aafdafd33e300068.html#a37b61ddad3416ea1615bbdbb686b4bd9", null ],
+    [ "ViewType", "classStokhos_1_1GetScalarMeanValsFunc_3_01Kokkos_1_1View_3_01Sacado_1_1MP_1_1Vector_3_01Storage_e57c69c6dbe61b78aafdafd33e300068.html#a95a78ae1b3ed4b0c818dca4978c0710a", null ],
+    [ "GetScalarMeanValsFunc", "classStokhos_1_1GetScalarMeanValsFunc_3_01Kokkos_1_1View_3_01Sacado_1_1MP_1_1Vector_3_01Storage_e57c69c6dbe61b78aafdafd33e300068.html#ad27fee2bda1b5232df8bdd066de01172", null ],
+    [ "getMeanValues", "classStokhos_1_1GetScalarMeanValsFunc_3_01Kokkos_1_1View_3_01Sacado_1_1MP_1_1Vector_3_01Storage_e57c69c6dbe61b78aafdafd33e300068.html#a9bff37ef3c1e8debd61a95effa914d69", null ],
+    [ "operator()", "classStokhos_1_1GetScalarMeanValsFunc_3_01Kokkos_1_1View_3_01Sacado_1_1MP_1_1Vector_3_01Storage_e57c69c6dbe61b78aafdafd33e300068.html#a7a25aa4b7bcdc719a553e2efdd00c49a", null ],
+    [ "mean_vals", "classStokhos_1_1GetScalarMeanValsFunc_3_01Kokkos_1_1View_3_01Sacado_1_1MP_1_1Vector_3_01Storage_e57c69c6dbe61b78aafdafd33e300068.html#a8f502b2914b9eaff2f55272e1fbf8a8f", null ],
+    [ "vals", "classStokhos_1_1GetScalarMeanValsFunc_3_01Kokkos_1_1View_3_01Sacado_1_1MP_1_1Vector_3_01Storage_e57c69c6dbe61b78aafdafd33e300068.html#af871dbe262d495b4becd7c0414efc156", null ],
+    [ "vec_size", "classStokhos_1_1GetScalarMeanValsFunc_3_01Kokkos_1_1View_3_01Sacado_1_1MP_1_1Vector_3_01Storage_e57c69c6dbe61b78aafdafd33e300068.html#a448d7d4104c1a09f7ee73002de1298d1", null ]
+];

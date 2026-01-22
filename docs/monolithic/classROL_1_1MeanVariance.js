@@ -1,0 +1,25 @@
+var classROL_1_1MeanVariance =
+[
+    [ "uint", "classROL_1_1MeanVariance.html#a497b59e4eefd1449777883c9223861a1", null ],
+    [ "MeanVariance", "classROL_1_1MeanVariance.html#a03c85fbb478bbaa54a8c65a295adb52a", null ],
+    [ "MeanVariance", "classROL_1_1MeanVariance.html#aa29a4c18827bc88512dd039ee6ee324c", null ],
+    [ "MeanVariance", "classROL_1_1MeanVariance.html#a063e35058e42e9683a53c6e60f22d12b", null ],
+    [ "checkInputs", "classROL_1_1MeanVariance.html#a575af179a997ccefdd982191d8dfc330", null ],
+    [ "getGradient", "classROL_1_1MeanVariance.html#a0567be64fdf909aa577516281da5f11c", null ],
+    [ "getHessVec", "classROL_1_1MeanVariance.html#a6af7aaf78469891cbc1194dd58831213", null ],
+    [ "getValue", "classROL_1_1MeanVariance.html#a98771df26a0253dc3e22ba4a6a8e4779", null ],
+    [ "initializeMV", "classROL_1_1MeanVariance.html#a889d3e30da17f345a403ee32cf44adde", null ],
+    [ "setHessVecStorage", "classROL_1_1MeanVariance.html#ad46d4060d074c398f2ade143a5511f4d", null ],
+    [ "setStorage", "classROL_1_1MeanVariance.html#ae0c580438266db090c912897fa4ccb24", null ],
+    [ "updateGradient", "classROL_1_1MeanVariance.html#a0229076bafdc0a8b90fd182b1a60efbf", null ],
+    [ "updateHessVec", "classROL_1_1MeanVariance.html#aad9ae94a233b013a5dd41d7f415d3254", null ],
+    [ "updateValue", "classROL_1_1MeanVariance.html#aee6ac7fc13fc6e4b8f1620fdeadd97dc", null ],
+    [ "coeff_", "classROL_1_1MeanVariance.html#afb6c9d2a8c63ff4a54ceba1c2a377145", null ],
+    [ "gradients_", "classROL_1_1MeanVariance.html#a822f6334d9b10984157757d33f3f901c", null ],
+    [ "gradvecs_", "classROL_1_1MeanVariance.html#a162a25baef6249bbac626ad5e117e500", null ],
+    [ "hessvecs_", "classROL_1_1MeanVariance.html#a8c8010c62432654b48405096121dc970", null ],
+    [ "NumMoments_", "classROL_1_1MeanVariance.html#ab8cfc0bbfac95b677252e08ae8bad22a", null ],
+    [ "order_", "classROL_1_1MeanVariance.html#af2587e8ee605c7daeff0f8cece2fedc7", null ],
+    [ "positiveFunction_", "classROL_1_1MeanVariance.html#abea24a15a59f93c15ade43f49beab950", null ],
+    [ "values_", "classROL_1_1MeanVariance.html#a293042178588662779d82b05526aac53", null ]
+];

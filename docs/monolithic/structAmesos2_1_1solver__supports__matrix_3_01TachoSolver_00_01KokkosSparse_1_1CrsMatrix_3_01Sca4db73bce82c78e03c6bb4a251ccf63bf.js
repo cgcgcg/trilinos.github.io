@@ -1,0 +1,4 @@
+var structAmesos2_1_1solver__supports__matrix_3_01TachoSolver_00_01KokkosSparse_1_1CrsMatrix_3_01Sca4db73bce82c78e03c6bb4a251ccf63bf =
+[
+    [ "value", "structAmesos2_1_1solver__supports__matrix_3_01TachoSolver_00_01KokkosSparse_1_1CrsMatrix_3_01Sca4db73bce82c78e03c6bb4a251ccf63bf.html#a7e2aa5775e63f180660c728ce853e938", null ]
+];

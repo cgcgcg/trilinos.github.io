@@ -1,0 +1,25 @@
+var classpanzer_1_1GatherSolution__BlockedEpetra_3_01panzer_1_1Traits_1_1Jacobian_00_01TRAITS_00_01LO_00_01GO_01_4 =
+[
+    [ "EvalT", "classpanzer_1_1GatherSolution__BlockedEpetra_3_01panzer_1_1Traits_1_1Jacobian_00_01TRAITS_00_01LO_00_01GO_01_4.html#a9fc17119e6c6fc1b70aee954240f1962", null ],
+    [ "ScalarT", "classpanzer_1_1GatherSolution__BlockedEpetra_3_01panzer_1_1Traits_1_1Jacobian_00_01TRAITS_00_01LO_00_01GO_01_4.html#abaee9968c5ab068e20345e5577b42574", null ],
+    [ "GatherSolution_BlockedEpetra", "classpanzer_1_1GatherSolution__BlockedEpetra_3_01panzer_1_1Traits_1_1Jacobian_00_01TRAITS_00_01LO_00_01GO_01_4.html#a754516cb65978c6bbfc22d2c8e7915bd", null ],
+    [ "GatherSolution_BlockedEpetra", "classpanzer_1_1GatherSolution__BlockedEpetra_3_01panzer_1_1Traits_1_1Jacobian_00_01TRAITS_00_01LO_00_01GO_01_4.html#aba7b4a69a1850fedd06e308bd688511b", null ],
+    [ "GatherSolution_BlockedEpetra", "classpanzer_1_1GatherSolution__BlockedEpetra_3_01panzer_1_1Traits_1_1Jacobian_00_01TRAITS_00_01LO_00_01GO_01_4.html#a901fe24100fff6cd85e4b51d12054071", null ],
+    [ "clone", "classpanzer_1_1GatherSolution__BlockedEpetra_3_01panzer_1_1Traits_1_1Jacobian_00_01TRAITS_00_01LO_00_01GO_01_4.html#a8d9a27c814fe1b8ead5b75c74c316940", null ],
+    [ "evaluateFields", "classpanzer_1_1GatherSolution__BlockedEpetra_3_01panzer_1_1Traits_1_1Jacobian_00_01TRAITS_00_01LO_00_01GO_01_4.html#a0b2d89414d13fc30703382a48c1d6de2", null ],
+    [ "postRegistrationSetup", "classpanzer_1_1GatherSolution__BlockedEpetra_3_01panzer_1_1Traits_1_1Jacobian_00_01TRAITS_00_01LO_00_01GO_01_4.html#aa300bfb5ba54d28abb365e27e61a6fbd", null ],
+    [ "preEvaluate", "classpanzer_1_1GatherSolution__BlockedEpetra_3_01panzer_1_1Traits_1_1Jacobian_00_01TRAITS_00_01LO_00_01GO_01_4.html#add81194fac179ecc98fea2a3651e2ee8", null ],
+    [ "applySensitivities_", "classpanzer_1_1GatherSolution__BlockedEpetra_3_01panzer_1_1Traits_1_1Jacobian_00_01TRAITS_00_01LO_00_01GO_01_4.html#a0ddd7ac8611ed2910fb4623991529087", null ],
+    [ "disableSensitivities_", "classpanzer_1_1GatherSolution__BlockedEpetra_3_01panzer_1_1Traits_1_1Jacobian_00_01TRAITS_00_01LO_00_01GO_01_4.html#aacc05c95dfe9f4566275e56fc22feba7", null ],
+    [ "gatherFields_", "classpanzer_1_1GatherSolution__BlockedEpetra_3_01panzer_1_1Traits_1_1Jacobian_00_01TRAITS_00_01LO_00_01GO_01_4.html#a16e5f957d61e35d7cb813a79c3a3ba10", null ],
+    [ "gatherSeedIndex_", "classpanzer_1_1GatherSolution__BlockedEpetra_3_01panzer_1_1Traits_1_1Jacobian_00_01TRAITS_00_01LO_00_01GO_01_4.html#aa017385f8d16fb462adce2eda248a0ed", null ],
+    [ "globalDataKey_", "classpanzer_1_1GatherSolution__BlockedEpetra_3_01panzer_1_1Traits_1_1Jacobian_00_01TRAITS_00_01LO_00_01GO_01_4.html#ae8dcd11fe0692a5c034e6226e94013cb", null ],
+    [ "indexerIds_", "classpanzer_1_1GatherSolution__BlockedEpetra_3_01panzer_1_1Traits_1_1Jacobian_00_01TRAITS_00_01LO_00_01GO_01_4.html#a32655e847d214ab273c28ea1d7233308", null ],
+    [ "indexerNames_", "classpanzer_1_1GatherSolution__BlockedEpetra_3_01panzer_1_1Traits_1_1Jacobian_00_01TRAITS_00_01LO_00_01GO_01_4.html#a3a2abc50cf8c33a369ad7de4516760d6", null ],
+    [ "indexers_", "classpanzer_1_1GatherSolution__BlockedEpetra_3_01panzer_1_1Traits_1_1Jacobian_00_01TRAITS_00_01LO_00_01GO_01_4.html#a4da186d1874eadb39a2159512698edd3", null ],
+    [ "sensitivitiesName_", "classpanzer_1_1GatherSolution__BlockedEpetra_3_01panzer_1_1Traits_1_1Jacobian_00_01TRAITS_00_01LO_00_01GO_01_4.html#a0c8c8dba0e6f8e4a3a6cf6ed77230908", null ],
+    [ "subFieldIds_", "classpanzer_1_1GatherSolution__BlockedEpetra_3_01panzer_1_1Traits_1_1Jacobian_00_01TRAITS_00_01LO_00_01GO_01_4.html#a2f66d5b173b44acb225a265b2e991237", null ],
+    [ "useTimeDerivativeSolutionVector_", "classpanzer_1_1GatherSolution__BlockedEpetra_3_01panzer_1_1Traits_1_1Jacobian_00_01TRAITS_00_01LO_00_01GO_01_4.html#a1f528182f3fa12bff44d3c80b0f298bf", null ],
+    [ "x_", "classpanzer_1_1GatherSolution__BlockedEpetra_3_01panzer_1_1Traits_1_1Jacobian_00_01TRAITS_00_01LO_00_01GO_01_4.html#ae729b305a42ace515679cbc07cf92b81", null ],
+    [ "xBvRoGed_", "classpanzer_1_1GatherSolution__BlockedEpetra_3_01panzer_1_1Traits_1_1Jacobian_00_01TRAITS_00_01LO_00_01GO_01_4.html#a9cbcc06f69a8b1c5877361babd0ff5d7", null ]
+];

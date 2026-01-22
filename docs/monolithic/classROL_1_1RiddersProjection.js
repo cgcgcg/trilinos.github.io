@@ -1,0 +1,28 @@
+var classROL_1_1RiddersProjection =
+[
+    [ "RiddersProjection", "classROL_1_1RiddersProjection.html#ac37ed583c69c9024552fd6ce92571ce1", null ],
+    [ "RiddersProjection", "classROL_1_1RiddersProjection.html#aa502e2a2c84b64bcf5a3ff494c7b6c50", null ],
+    [ "initialize", "classROL_1_1RiddersProjection.html#a83d37d2b86189226295549c6f43fa502", null ],
+    [ "project", "classROL_1_1RiddersProjection.html#ad96ff86e8549838110ffc859359d81b1", null ],
+    [ "project_df", "classROL_1_1RiddersProjection.html#ab4cc6f92722055beeb94134a0e0650fc", null ],
+    [ "residual", "classROL_1_1RiddersProjection.html#a6688468f4d240f3eab20e7c072964378", null ],
+    [ "update_primal", "classROL_1_1RiddersProjection.html#a5cfb2f559e36395602e40489007a10f0", null ],
+    [ "atol_", "classROL_1_1RiddersProjection.html#a0a1ab956d12a08200cb69a70f5152728", null ],
+    [ "b_", "classROL_1_1RiddersProjection.html#a00eafde2461a2f7e9fcd592baae86ab4", null ],
+    [ "cdot_", "classROL_1_1RiddersProjection.html#aef1f86a2a4db3ce1ebb36a5c6e21c089", null ],
+    [ "ctol_", "classROL_1_1RiddersProjection.html#ae953c235e86b62b174c5a43af74320e6", null ],
+    [ "DEFAULT_atol_", "classROL_1_1RiddersProjection.html#aee93b9ebb9dabc159bcb6fd7ea7b488f", null ],
+    [ "DEFAULT_ltol_", "classROL_1_1RiddersProjection.html#ae3af54c0cb15eca5b4ef31eacd949eee", null ],
+    [ "DEFAULT_maxit_", "classROL_1_1RiddersProjection.html#a0c4a94573da42d595267595e04916597", null ],
+    [ "DEFAULT_rtol_", "classROL_1_1RiddersProjection.html#a2b2ed00c20e0323a73cb283bb7ba4b2f", null ],
+    [ "DEFAULT_verbosity_", "classROL_1_1RiddersProjection.html#ae613c47b8019654bc0889b3f5ef49518", null ],
+    [ "dim_", "classROL_1_1RiddersProjection.html#a377cc106665ee58cf7d43716a8d77601", null ],
+    [ "dlam1_", "classROL_1_1RiddersProjection.html#a4e361652fe73a8b747ea0f156d03ac1d", null ],
+    [ "ltol_", "classROL_1_1RiddersProjection.html#ab2afd6ef90563b71fe54a8e41640c023", null ],
+    [ "maxit_", "classROL_1_1RiddersProjection.html#aab99d477c12101e372635b9484edbf6e", null ],
+    [ "mul1_", "classROL_1_1RiddersProjection.html#a844db1c31bac8129a5c36127ce769121", null ],
+    [ "Px_", "classROL_1_1RiddersProjection.html#a81c5256068dcfea29745aee119a039a1", null ],
+    [ "rtol_", "classROL_1_1RiddersProjection.html#a315878467e575ecf1ce764adaef88e46", null ],
+    [ "verbosity_", "classROL_1_1RiddersProjection.html#a1eaf5b4fe18a8532b2bb43f75d4d5e54", null ],
+    [ "xnew_", "classROL_1_1RiddersProjection.html#ae739b2a98196c4afa906c17d71c05500", null ]
+];

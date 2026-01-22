@@ -1,0 +1,4 @@
+var structTacho_1_1ApplyPivots_3_01PivotMode_1_1Lapack_00_01Side_1_1Left_00_01Direct_1_1Forward_00_01Algo_1_1OnDevice_01_4 =
+[
+    [ "invoke", "structTacho_1_1ApplyPivots_3_01PivotMode_1_1Lapack_00_01Side_1_1Left_00_01Direct_1_1Forward_00_01Algo_1_1OnDevice_01_4.html#aac4d9e08230147421a771b8ad01d5de3", null ]
+];

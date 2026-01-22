@@ -1,0 +1,27 @@
+var classThyra_1_1DefaultSpmdVectorSpace =
+[
+    [ "DefaultSpmdVectorSpace", "classThyra_1_1DefaultSpmdVectorSpace.html#acab37ede5eec571a2c2861dfd8036ea0", null ],
+    [ "clone", "classThyra_1_1DefaultSpmdVectorSpace.html#a9ae1dfe9cbb93842752d1751da4f1d1b", null ],
+    [ "create", "classThyra_1_1DefaultSpmdVectorSpace.html#a6d6c4bac2e8e8d11caa2420c61ec43ed", null ],
+    [ "createMember", "classThyra_1_1DefaultSpmdVectorSpace.html#acaaebd73342facde1e4122de46875e0b", null ],
+    [ "createMembers", "classThyra_1_1DefaultSpmdVectorSpace.html#a4551c3c3846880a419b2ad6e2d40dd39", null ],
+    [ "createMembersView", "classThyra_1_1DefaultSpmdVectorSpace.html#adefe12a39d18fc548372a55a52e5368f", null ],
+    [ "createMembersView", "classThyra_1_1DefaultSpmdVectorSpace.html#aa49ce0181374ebc68c1885978dc53131", null ],
+    [ "createMemberView", "classThyra_1_1DefaultSpmdVectorSpace.html#a70d5cdc2e9a831cbf9dd395c571df11f", null ],
+    [ "createMemberView", "classThyra_1_1DefaultSpmdVectorSpace.html#ac78c80d1829131082c843518597a781f", null ],
+    [ "getComm", "classThyra_1_1DefaultSpmdVectorSpace.html#a02b33382881151498c02f79383d81109", null ],
+    [ "hasInCoreView", "classThyra_1_1DefaultSpmdVectorSpace.html#a02d002b5434ca871733ed658e6a68d6e", null ],
+    [ "initialize", "classThyra_1_1DefaultSpmdVectorSpace.html#ab2d5271f66cc00ebe5c288a9b91776f8", null ],
+    [ "initialize", "classThyra_1_1DefaultSpmdVectorSpace.html#aadeff5ae3a0a92c19f3ab242fc0bab97", null ],
+    [ "localSubDim", "classThyra_1_1DefaultSpmdVectorSpace.html#a59af43544156f50c1a87754dd7d6fb5d", null ],
+    [ "uninitialize", "classThyra_1_1DefaultSpmdVectorSpace.html#aed8c1b519a86dd8b78868888d5ba780e", null ],
+    [ "defaultSpmdVectorSpace", "classThyra_1_1DefaultSpmdVectorSpace.html#a19c9ee5e1023ead38f98c9e5904f667d", null ],
+    [ "defaultSpmdVectorSpace", "classThyra_1_1DefaultSpmdVectorSpace.html#a20a68190d01803b5a3e4f98f23471a80", null ],
+    [ "defaultSpmdVectorSpace", "classThyra_1_1DefaultSpmdVectorSpace.html#a3c4de164b645d916afd65b3363c8172a", null ],
+    [ "locallyReplicatedDefaultSpmdVectorSpace", "classThyra_1_1DefaultSpmdVectorSpace.html#a4b5115eff84879188cd8af654cad9eb4", null ],
+    [ "comm_", "classThyra_1_1DefaultSpmdVectorSpace.html#acae552b83f2c665a378680bdd3f50dea", null ],
+    [ "localSubDim_", "classThyra_1_1DefaultSpmdVectorSpace.html#a233d84aad2b339ee72832e4bd417d885", null ],
+    [ "numProc_", "classThyra_1_1DefaultSpmdVectorSpace.html#a72506cbc1e5e0e611ca6900b4a309014", null ],
+    [ "procRank_", "classThyra_1_1DefaultSpmdVectorSpace.html#a631557de9085df5a900132b8b6301cee", null ],
+    [ "weakSelfPtr_", "classThyra_1_1DefaultSpmdVectorSpace.html#a6feaeb83c61511197ffec7716d15dfaf", null ]
+];

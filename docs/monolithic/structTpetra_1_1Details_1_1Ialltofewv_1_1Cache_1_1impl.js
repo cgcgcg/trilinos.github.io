@@ -1,0 +1,25 @@
+var structTpetra_1_1Details_1_1Ialltofewv_1_1Cache_1_1impl =
+[
+    [ "impl", "structTpetra_1_1Details_1_1Ialltofewv_1_1Cache_1_1impl.html#ad0d7f31523a205a596e8b664ac28dc25", null ],
+    [ "get_aggBuf", "structTpetra_1_1Details_1_1Ialltofewv_1_1Cache_1_1impl.html#a0c71e25b3788eca2420f8399e100ac35", null ],
+    [ "get_args", "structTpetra_1_1Details_1_1Ialltofewv_1_1Cache_1_1impl.html#acc7656fc0379ebe5476c1a968562947f", null ],
+    [ "get_rootBuf", "structTpetra_1_1Details_1_1Ialltofewv_1_1Cache_1_1impl.html#af0029e90c6541a7e7ea65d8f0405544f", null ],
+    [ "aggBufDev", "structTpetra_1_1Details_1_1Ialltofewv_1_1Cache_1_1impl.html#a46a9fe48e6a479c6b1a64b1a30b48fc1", null ],
+    [ "aggBufDevSize_", "structTpetra_1_1Details_1_1Ialltofewv_1_1Cache_1_1impl.html#adc3e1a5e21293f7c0096a5c9a2a06894", null ],
+    [ "aggBufGets_", "structTpetra_1_1Details_1_1Ialltofewv_1_1Cache_1_1impl.html#a2d77e4cf146670d5cec93743a84ba886", null ],
+    [ "aggBufHits_", "structTpetra_1_1Details_1_1Ialltofewv_1_1Cache_1_1impl.html#acedaaca7351f9622b4caebf97e7e4923", null ],
+    [ "aggBufHost", "structTpetra_1_1Details_1_1Ialltofewv_1_1Cache_1_1impl.html#ae7f4dfbddfed6dbb5590778874e8a32b", null ],
+    [ "aggBufHostSize_", "structTpetra_1_1Details_1_1Ialltofewv_1_1Cache_1_1impl.html#a426409eed5e71561979b88f96824d254", null ],
+    [ "argsDev", "structTpetra_1_1Details_1_1Ialltofewv_1_1Cache_1_1impl.html#a96de0b8bb86b3edb0790fc2278620f38", null ],
+    [ "argsDevSize_", "structTpetra_1_1Details_1_1Ialltofewv_1_1Cache_1_1impl.html#ad4edd6fd6ef9eb8c74169597902db8d2", null ],
+    [ "argsGets_", "structTpetra_1_1Details_1_1Ialltofewv_1_1Cache_1_1impl.html#abafa8199ab1d8ed2ebb1eadd24c56c0a", null ],
+    [ "argsHits_", "structTpetra_1_1Details_1_1Ialltofewv_1_1Cache_1_1impl.html#af4a054fc7488dabe32574db571067c3c", null ],
+    [ "argsHost", "structTpetra_1_1Details_1_1Ialltofewv_1_1Cache_1_1impl.html#a9709deacc2ac462fcf5cb580ba13cc0f", null ],
+    [ "argsHostSize_", "structTpetra_1_1Details_1_1Ialltofewv_1_1Cache_1_1impl.html#a4ce2c573f1b8802cb79eb68b26c7913e", null ],
+    [ "rootBufDev", "structTpetra_1_1Details_1_1Ialltofewv_1_1Cache_1_1impl.html#a2866694b87988a9d436122d35ff8ecd8", null ],
+    [ "rootBufDevSize_", "structTpetra_1_1Details_1_1Ialltofewv_1_1Cache_1_1impl.html#afe0003f65998d3e6eb464b3c495ff0da", null ],
+    [ "rootBufGets_", "structTpetra_1_1Details_1_1Ialltofewv_1_1Cache_1_1impl.html#a68bf6587ba7e5fc219df25eccbb73c43", null ],
+    [ "rootBufHits_", "structTpetra_1_1Details_1_1Ialltofewv_1_1Cache_1_1impl.html#a9912530d510def05313d0904c4829bb8", null ],
+    [ "rootBufHost", "structTpetra_1_1Details_1_1Ialltofewv_1_1Cache_1_1impl.html#a5fc0e9df80532fe8d38eb80502bae151", null ],
+    [ "rootBufHostSize_", "structTpetra_1_1Details_1_1Ialltofewv_1_1Cache_1_1impl.html#afbdf252e70bb02aa69312d162595bd2a", null ]
+];

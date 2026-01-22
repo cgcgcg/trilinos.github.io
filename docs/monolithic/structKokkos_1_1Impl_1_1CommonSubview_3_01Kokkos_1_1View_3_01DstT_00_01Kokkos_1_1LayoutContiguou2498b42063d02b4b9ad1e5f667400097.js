@@ -1,0 +1,10 @@
+var structKokkos_1_1Impl_1_1CommonSubview_3_01Kokkos_1_1View_3_01DstT_00_01Kokkos_1_1LayoutContiguou2498b42063d02b4b9ad1e5f667400097 =
+[
+    [ "dst_subview_type", "structKokkos_1_1Impl_1_1CommonSubview_3_01Kokkos_1_1View_3_01DstT_00_01Kokkos_1_1LayoutContiguou2498b42063d02b4b9ad1e5f667400097.html#a4f0b8144900c49663018318919291ec6", null ],
+    [ "DstType", "structKokkos_1_1Impl_1_1CommonSubview_3_01Kokkos_1_1View_3_01DstT_00_01Kokkos_1_1LayoutContiguou2498b42063d02b4b9ad1e5f667400097.html#aba6bf075f0c98908e93526600010a856", null ],
+    [ "src_subview_type", "structKokkos_1_1Impl_1_1CommonSubview_3_01Kokkos_1_1View_3_01DstT_00_01Kokkos_1_1LayoutContiguou2498b42063d02b4b9ad1e5f667400097.html#a7a7be7d7d07e1ae95eedc5338f8e4fdd", null ],
+    [ "SrcType", "structKokkos_1_1Impl_1_1CommonSubview_3_01Kokkos_1_1View_3_01DstT_00_01Kokkos_1_1LayoutContiguou2498b42063d02b4b9ad1e5f667400097.html#a0e6635a64e59260e0f7e36099d142d7e", null ],
+    [ "CommonSubview", "structKokkos_1_1Impl_1_1CommonSubview_3_01Kokkos_1_1View_3_01DstT_00_01Kokkos_1_1LayoutContiguou2498b42063d02b4b9ad1e5f667400097.html#a6f572f6019fb3efae0f239684015995d", null ],
+    [ "dst_sub", "structKokkos_1_1Impl_1_1CommonSubview_3_01Kokkos_1_1View_3_01DstT_00_01Kokkos_1_1LayoutContiguou2498b42063d02b4b9ad1e5f667400097.html#a04775a0c3a8a04a014f5349b7f36caa0", null ],
+    [ "src_sub", "structKokkos_1_1Impl_1_1CommonSubview_3_01Kokkos_1_1View_3_01DstT_00_01Kokkos_1_1LayoutContiguou2498b42063d02b4b9ad1e5f667400097.html#ac7c9742fa7e90a17c4c82f63fdd8f97a", null ]
+];

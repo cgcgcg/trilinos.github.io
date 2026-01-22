@@ -1,4 +1,0 @@
-var searchData=
-[
-  ['keyobjectpair_0',['KeyObjectPair',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/xpetra/doc/../../../packages/teuchos/doc/html/class_teuchos_1_1_string_indexed_ordered_value_object_container_base_1_1_key_object_pair.html',1,'Teuchos::StringIndexedOrderedValueObjectContainerBase']]]
-];

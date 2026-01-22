@@ -1,0 +1,4 @@
+var structSacado_1_1IsSimdType_3_01Fad_1_1Exp_1_1Atan2Op_3_01T1_00_01T2_00_01c1_00_01c2_00_01E_01_4_01_4 =
+[
+    [ "value", "structSacado_1_1IsSimdType_3_01Fad_1_1Exp_1_1Atan2Op_3_01T1_00_01T2_00_01c1_00_01c2_00_01E_01_4_01_4.html#a3b5d3237e462930f2a6aba40ce6b0d60", null ]
+];

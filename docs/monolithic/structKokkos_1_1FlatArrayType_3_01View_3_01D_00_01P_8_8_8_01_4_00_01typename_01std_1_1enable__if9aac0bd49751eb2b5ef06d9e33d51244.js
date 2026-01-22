@@ -1,0 +1,6 @@
+var structKokkos_1_1FlatArrayType_3_01View_3_01D_00_01P_8_8_8_01_4_00_01typename_01std_1_1enable__if9aac0bd49751eb2b5ef06d9e33d51244 =
+[
+    [ "flat_value_type", "structKokkos_1_1FlatArrayType_3_01View_3_01D_00_01P_8_8_8_01_4_00_01typename_01std_1_1enable__if9aac0bd49751eb2b5ef06d9e33d51244.html#a7f2a984b6df9ee2ac9628ce7e6994be5", null ],
+    [ "type", "structKokkos_1_1FlatArrayType_3_01View_3_01D_00_01P_8_8_8_01_4_00_01typename_01std_1_1enable__if9aac0bd49751eb2b5ef06d9e33d51244.html#a6153aa84916e9c14d8621fbb71bd80c2", null ],
+    [ "view_type", "structKokkos_1_1FlatArrayType_3_01View_3_01D_00_01P_8_8_8_01_4_00_01typename_01std_1_1enable__if9aac0bd49751eb2b5ef06d9e33d51244.html#ab553e0a5f79006bb7fb32cd76ddec1ef", null ]
+];

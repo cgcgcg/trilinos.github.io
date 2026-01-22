@@ -1,0 +1,25 @@
+var classROL_1_1TypeE_1_1FletcherAlgorithm =
+[
+    [ "FletcherAlgorithm", "classROL_1_1TypeE_1_1FletcherAlgorithm.html#a2c0012ab890573a19aadfc3864dd1d73", null ],
+    [ "initialize", "classROL_1_1TypeE_1_1FletcherAlgorithm.html#ad3a742f4cf832c04821992422b1b57b8", null ],
+    [ "run", "classROL_1_1TypeE_1_1FletcherAlgorithm.html#ab727011716f1f13f7a855fc79e43cdf0", null ],
+    [ "writeHeader", "classROL_1_1TypeE_1_1FletcherAlgorithm.html#a9af8a1aac2ef5533b14d770a3bfae8df", null ],
+    [ "writeName", "classROL_1_1TypeE_1_1FletcherAlgorithm.html#a88b649980122dd2566ff4d6b7a662bbc", null ],
+    [ "writeOutput", "classROL_1_1TypeE_1_1FletcherAlgorithm.html#acd1554a08905476d92a8fa9a5a695097", null ],
+    [ "delta_", "classROL_1_1TypeE_1_1FletcherAlgorithm.html#aed3d666383e3bf1d44a55d9bf405277f", null ],
+    [ "deltaUpdate_", "classROL_1_1TypeE_1_1FletcherAlgorithm.html#a416d95bde46e4c228de93b4b83b5f676", null ],
+    [ "gpnorm_", "classROL_1_1TypeE_1_1FletcherAlgorithm.html#a4a272cdf36ebdf7827020d22c6231847", null ],
+    [ "list_", "classROL_1_1TypeE_1_1FletcherAlgorithm.html#ad771473b93a1a6ece9ecab0b8850ca7b", null ],
+    [ "maxSigma_", "classROL_1_1TypeE_1_1FletcherAlgorithm.html#a000addf6fe69989f5aac3db563daa642", null ],
+    [ "merit_", "classROL_1_1TypeE_1_1FletcherAlgorithm.html#abd88e9d769b92baa4c76fc162ac98603", null ],
+    [ "minDelta_", "classROL_1_1TypeE_1_1FletcherAlgorithm.html#ac940a3e02c9f257e31951c52c6d4bebe", null ],
+    [ "minSigma_", "classROL_1_1TypeE_1_1FletcherAlgorithm.html#a0dd79899f399d6f5854b50355c191fac", null ],
+    [ "modifySigma_", "classROL_1_1TypeE_1_1FletcherAlgorithm.html#a3369df6a82dcfb6b53096a273f5d59c6", null ],
+    [ "printHeader_", "classROL_1_1TypeE_1_1FletcherAlgorithm.html#a9debe4d21045ccdf2b8dc99cacc391bb", null ],
+    [ "secant_", "classROL_1_1TypeE_1_1FletcherAlgorithm.html#a69347498b9ed74ae9fe9a8df9f093702", null ],
+    [ "sigma_", "classROL_1_1TypeE_1_1FletcherAlgorithm.html#afe5eba13ba5e4211ccd437aea665d49e", null ],
+    [ "sigmaUpdate_", "classROL_1_1TypeE_1_1FletcherAlgorithm.html#ac8941ec035f7e889100b0ee08eb1e2a6", null ],
+    [ "subproblemIter_", "classROL_1_1TypeE_1_1FletcherAlgorithm.html#abbc540b1110d88fcf3f22013809f6adc", null ],
+    [ "subStep_", "classROL_1_1TypeE_1_1FletcherAlgorithm.html#a978f9fd6bd560010ead06f7f3038cb9a", null ],
+    [ "verbosity_", "classROL_1_1TypeE_1_1FletcherAlgorithm.html#a499ea35d3b4d4e2fcf15f0c906fa45ef", null ]
+];

@@ -1,0 +1,7 @@
+var structAmesos2_1_1create__solver__with__supported__type_3_01ConcreteSolver_00_01Tpetra_1_1CrsMatr2e33ae09bd059438a4db044eb355fc07 =
+[
+    [ "Matrix", "structAmesos2_1_1create__solver__with__supported__type_3_01ConcreteSolver_00_01Tpetra_1_1CrsMatr2e33ae09bd059438a4db044eb355fc07.html#a6d7209e31ca532b7144d4a616a668f29", null ],
+    [ "SC", "structAmesos2_1_1create__solver__with__supported__type_3_01ConcreteSolver_00_01Tpetra_1_1CrsMatr2e33ae09bd059438a4db044eb355fc07.html#a679736e2add629e04525f3b7fd976211", null ],
+    [ "Vector", "structAmesos2_1_1create__solver__with__supported__type_3_01ConcreteSolver_00_01Tpetra_1_1CrsMatr2e33ae09bd059438a4db044eb355fc07.html#a963ffedd88b0b71f9d5da5c4f51989c3", null ],
+    [ "apply", "structAmesos2_1_1create__solver__with__supported__type_3_01ConcreteSolver_00_01Tpetra_1_1CrsMatr2e33ae09bd059438a4db044eb355fc07.html#a203cfc4aa016f0aafde4fb08a127e6d5", null ]
+];

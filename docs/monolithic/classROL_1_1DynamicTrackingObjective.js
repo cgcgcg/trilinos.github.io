@@ -1,0 +1,25 @@
+var classROL_1_1DynamicTrackingObjective =
+[
+    [ "size_type", "classROL_1_1DynamicTrackingObjective.html#a883c032f7886a37e2b71f3299bb61613", null ],
+    [ "TS", "classROL_1_1DynamicTrackingObjective.html#a2b5c6ce98b200e5a284854627e353feb", null ],
+    [ "V", "classROL_1_1DynamicTrackingObjective.html#a5f5a525cad6f5a6188cf81c5a81d30c7", null ],
+    [ "DynamicTrackingObjective", "classROL_1_1DynamicTrackingObjective.html#a37315aaa135bfaf041e12a1621f5dd6a", null ],
+    [ "~DynamicTrackingObjective", "classROL_1_1DynamicTrackingObjective.html#abe490e1afa167307835fd4ac18e78f8d", null ],
+    [ "gradient_un", "classROL_1_1DynamicTrackingObjective.html#a4f5f33e5284ad9791ae4a0192cbeb50e", null ],
+    [ "gradient_uo", "classROL_1_1DynamicTrackingObjective.html#a05f29e803658e83539ea846e6c5223a4", null ],
+    [ "gradient_z", "classROL_1_1DynamicTrackingObjective.html#a72ebb5b663b4855ab32be6f8aa731423", null ],
+    [ "hessVec_un_un", "classROL_1_1DynamicTrackingObjective.html#a43fa0871f810496049596b5e353258b0", null ],
+    [ "hessVec_un_uo", "classROL_1_1DynamicTrackingObjective.html#a85df3e0a97bfda3083980976a2076901", null ],
+    [ "hessVec_un_z", "classROL_1_1DynamicTrackingObjective.html#a9407ed1a612923f059f2d81a20f94eb0", null ],
+    [ "hessVec_uo_un", "classROL_1_1DynamicTrackingObjective.html#a8f0091d27c1f00bdb234c74e727437e6", null ],
+    [ "hessVec_uo_uo", "classROL_1_1DynamicTrackingObjective.html#a0bd0bc1e126fcb74576de0daf40a3239", null ],
+    [ "hessVec_uo_z", "classROL_1_1DynamicTrackingObjective.html#a816e1b20cbbb73537aa25bf2e36a92f4", null ],
+    [ "hessVec_z_un", "classROL_1_1DynamicTrackingObjective.html#a9b9677edc8266ce83c0e241702646006", null ],
+    [ "hessVec_z_uo", "classROL_1_1DynamicTrackingObjective.html#a9ca994ce459ae6e16828fe5a2a72b876", null ],
+    [ "hessVec_z_z", "classROL_1_1DynamicTrackingObjective.html#ae4add3c56a6207be78bdb029e03f02e5", null ],
+    [ "value", "classROL_1_1DynamicTrackingObjective.html#a40888a172e1d8d09ff3669a126623607", null ],
+    [ "alpha_", "classROL_1_1DynamicTrackingObjective.html#a79e4f27713ada20a6b1ff7615f3ff465", null ],
+    [ "Nt_", "classROL_1_1DynamicTrackingObjective.html#a92c909e271d37a5f6b9021bd2af0c69c", null ],
+    [ "target_", "classROL_1_1DynamicTrackingObjective.html#afcf3abe1827da4eb6768a27f875133c5", null ],
+    [ "workspace_", "classROL_1_1DynamicTrackingObjective.html#a193e604c7752df8f8624857f117289e8", null ]
+];

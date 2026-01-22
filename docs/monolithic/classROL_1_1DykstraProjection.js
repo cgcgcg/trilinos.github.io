@@ -1,0 +1,27 @@
+var classROL_1_1DykstraProjection =
+[
+    [ "DykstraProjection", "classROL_1_1DykstraProjection.html#a96c380db43b0d8c77565741c24501993", null ],
+    [ "DykstraProjection", "classROL_1_1DykstraProjection.html#abcb9c0944bc857f474bbc4cfb69fc76f", null ],
+    [ "project", "classROL_1_1DykstraProjection.html#a7451ecff2da5a9768bbc654b4817d39e", null ],
+    [ "project_bnd", "classROL_1_1DykstraProjection.html#acc5eaaedc77425879b37617389c338fd", null ],
+    [ "project_con", "classROL_1_1DykstraProjection.html#a84af5f3b4b36cbb376ef6fcbdfe6f450", null ],
+    [ "project_Dykstra", "classROL_1_1DykstraProjection.html#a825af5e2d834db653ef31d918688d626", null ],
+    [ "residual_1d", "classROL_1_1DykstraProjection.html#a4dd63ae485d120d5d95e0b25db21357f", null ],
+    [ "residual_nd", "classROL_1_1DykstraProjection.html#a533b4d6c008e44ae0f86cb68c8363c25", null ],
+    [ "atol_", "classROL_1_1DykstraProjection.html#a7af8ad09fdd12255052c49081bbbd6ea", null ],
+    [ "b_", "classROL_1_1DykstraProjection.html#a62bec71509055e733e63817b9ff39e65", null ],
+    [ "cdot_", "classROL_1_1DykstraProjection.html#a566f9db9be0954eda8792c4b35d09fde", null ],
+    [ "DEFAULT_atol_", "classROL_1_1DykstraProjection.html#ac5802428ce9db36aece944e38ea92a63", null ],
+    [ "DEFAULT_maxit_", "classROL_1_1DykstraProjection.html#a6d5f4e1576b0153b8b42f1fa422fc687", null ],
+    [ "DEFAULT_rtol_", "classROL_1_1DykstraProjection.html#a1ee01ed03b0ad97166dce2ffb30cdda6", null ],
+    [ "DEFAULT_verbosity_", "classROL_1_1DykstraProjection.html#af156fa974206101efb5200494f8bdedc", null ],
+    [ "dim_", "classROL_1_1DykstraProjection.html#a6bb7a90f1a1c699228eaaae1f34b2896", null ],
+    [ "maxit_", "classROL_1_1DykstraProjection.html#a276deb9b8c023c24367243f2ccc5d582", null ],
+    [ "p_", "classROL_1_1DykstraProjection.html#a6d4efe45f8da1be750e20ecbca08aec6", null ],
+    [ "q_", "classROL_1_1DykstraProjection.html#af3e2a5297613bcdd32c4409b49c5d414", null ],
+    [ "rtol_", "classROL_1_1DykstraProjection.html#a59342c3152bd59d1db594fe7da934c23", null ],
+    [ "tmp_", "classROL_1_1DykstraProjection.html#a833eda1cc7ee5cb7aab08115d48be9b9", null ],
+    [ "verbosity_", "classROL_1_1DykstraProjection.html#a7bda42e2aa6ee94808b63cacd226d64f", null ],
+    [ "y_", "classROL_1_1DykstraProjection.html#a06f5b1cf4c132d9dabd0a4411a42b295", null ],
+    [ "z_", "classROL_1_1DykstraProjection.html#a3c1b6c0083dbbdc7f836d310b0cb3899", null ]
+];

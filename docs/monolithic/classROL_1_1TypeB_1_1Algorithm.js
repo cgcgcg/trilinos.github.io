@@ -1,0 +1,26 @@
+var classROL_1_1TypeB_1_1Algorithm =
+[
+    [ "~Algorithm", "classROL_1_1TypeB_1_1Algorithm.html#a309acc119b987b09cd850b9adc8f4237", null ],
+    [ "Algorithm", "classROL_1_1TypeB_1_1Algorithm.html#a695e1500527539de6c044470d6571fbe", null ],
+    [ "getState", "classROL_1_1TypeB_1_1Algorithm.html#ad7ca17c2d39fcd13f2fead60b31d3640", null ],
+    [ "initialize", "classROL_1_1TypeB_1_1Algorithm.html#a35baec489853f8f7b9185b0b342fa423", null ],
+    [ "optimalityCriterion", "classROL_1_1TypeB_1_1Algorithm.html#a62be80588edae73183fd8ceffa973acd", null ],
+    [ "reset", "classROL_1_1TypeB_1_1Algorithm.html#a31ec7724a785a69b845ac23fe113b1c7", null ],
+    [ "run", "classROL_1_1TypeB_1_1Algorithm.html#a1589d8c55395e0169bf2bbea25b05386", null ],
+    [ "run", "classROL_1_1TypeB_1_1Algorithm.html#a0b40e1b8e36477d8e382fb947918609b", null ],
+    [ "run", "classROL_1_1TypeB_1_1Algorithm.html#a97a11da59d94f39e3d99919f75523bf8", null ],
+    [ "run", "classROL_1_1TypeB_1_1Algorithm.html#a2a81d91672b9c2cf019f0c3141d9910b", null ],
+    [ "run", "classROL_1_1TypeB_1_1Algorithm.html#ae7088ce3fc4a45bc3247f365c2afa6ad", null ],
+    [ "run", "classROL_1_1TypeB_1_1Algorithm.html#a1f20e606c34f2def467e8e5082dff91d", null ],
+    [ "run", "classROL_1_1TypeB_1_1Algorithm.html#a92a9b7424a1fe728a37ba2179961020e", null ],
+    [ "run", "classROL_1_1TypeB_1_1Algorithm.html#a9bb2ea84c54dfc8e2deaaaff5bbb0607", null ],
+    [ "run", "classROL_1_1TypeB_1_1Algorithm.html#a702900a6d1e33b3fed52b21545cb576a", null ],
+    [ "setStatusTest", "classROL_1_1TypeB_1_1Algorithm.html#af0da5e2ca22d4ab97bc544030952b5f0", null ],
+    [ "writeExitStatus", "classROL_1_1TypeB_1_1Algorithm.html#a6f71c7bd6b40702e4512a3b620d8fc82", null ],
+    [ "writeHeader", "classROL_1_1TypeB_1_1Algorithm.html#a546a7cac903c8822262194b2f7a28ef3", null ],
+    [ "writeName", "classROL_1_1TypeB_1_1Algorithm.html#a7ea73bfe0b12e7e909f347587cefeb2e", null ],
+    [ "writeOutput", "classROL_1_1TypeB_1_1Algorithm.html#acb71fd412a9ba1c7d397fe13b579b1ef", null ],
+    [ "proj_", "classROL_1_1TypeB_1_1Algorithm.html#a35901c164730bda1b80f3c15068e5ff4", null ],
+    [ "state_", "classROL_1_1TypeB_1_1Algorithm.html#a817fb2e862f74161515156187130e4c0", null ],
+    [ "status_", "classROL_1_1TypeB_1_1Algorithm.html#a8d4cf8af17057384a35bb2550c747303", null ]
+];

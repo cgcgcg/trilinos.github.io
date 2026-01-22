@@ -1,0 +1,17 @@
+var structTpetra_1_1KokkosRefactor_1_1Details_1_1PermuteArrayMultiColumnVariableStride_3_01DstView_0bbb0fc6b964e25f7b23e329677f22460 =
+[
+    [ "execution_space", "structTpetra_1_1KokkosRefactor_1_1Details_1_1PermuteArrayMultiColumnVariableStride_3_01DstView_0bbb0fc6b964e25f7b23e329677f22460.html#acc52faf14f76b3e5913c88f95c0699aa", null ],
+    [ "size_type", "structTpetra_1_1KokkosRefactor_1_1Details_1_1PermuteArrayMultiColumnVariableStride_3_01DstView_0bbb0fc6b964e25f7b23e329677f22460.html#a6a10a0687e994706fe807d1029f63aed", null ],
+    [ "PermuteArrayMultiColumnVariableStride", "structTpetra_1_1KokkosRefactor_1_1Details_1_1PermuteArrayMultiColumnVariableStride_3_01DstView_0bbb0fc6b964e25f7b23e329677f22460.html#ae320c3b07fe42c1720f843d5385739be", null ],
+    [ "operator()", "structTpetra_1_1KokkosRefactor_1_1Details_1_1PermuteArrayMultiColumnVariableStride_3_01DstView_0bbb0fc6b964e25f7b23e329677f22460.html#aee9c4d4affe8f4ea6b35634065bb22d1", null ],
+    [ "operator()", "structTpetra_1_1KokkosRefactor_1_1Details_1_1PermuteArrayMultiColumnVariableStride_3_01DstView_0bbb0fc6b964e25f7b23e329677f22460.html#aae6219594cf72edaf4ce350aa28b7ebd", null ],
+    [ "permute", "structTpetra_1_1KokkosRefactor_1_1Details_1_1PermuteArrayMultiColumnVariableStride_3_01DstView_0bbb0fc6b964e25f7b23e329677f22460.html#a9bfec61ad754f71684a3fe612fb1fb8e", null ],
+    [ "dst", "structTpetra_1_1KokkosRefactor_1_1Details_1_1PermuteArrayMultiColumnVariableStride_3_01DstView_0bbb0fc6b964e25f7b23e329677f22460.html#aeeb7e656155b6ac186c77bec12f25f62", null ],
+    [ "dst_col", "structTpetra_1_1KokkosRefactor_1_1Details_1_1PermuteArrayMultiColumnVariableStride_3_01DstView_0bbb0fc6b964e25f7b23e329677f22460.html#a28f0a8e11609475974ffa2f593d9991b", null ],
+    [ "dst_idx", "structTpetra_1_1KokkosRefactor_1_1Details_1_1PermuteArrayMultiColumnVariableStride_3_01DstView_0bbb0fc6b964e25f7b23e329677f22460.html#ae4eb59b15ed3d58403382802e8185cff", null ],
+    [ "numCols", "structTpetra_1_1KokkosRefactor_1_1Details_1_1PermuteArrayMultiColumnVariableStride_3_01DstView_0bbb0fc6b964e25f7b23e329677f22460.html#af1332c98d23558173427191c6a5c9a18", null ],
+    [ "op", "structTpetra_1_1KokkosRefactor_1_1Details_1_1PermuteArrayMultiColumnVariableStride_3_01DstView_0bbb0fc6b964e25f7b23e329677f22460.html#a840d4ce0f10382814544efcc55c6625e", null ],
+    [ "src", "structTpetra_1_1KokkosRefactor_1_1Details_1_1PermuteArrayMultiColumnVariableStride_3_01DstView_0bbb0fc6b964e25f7b23e329677f22460.html#aff06b250a35b6ce6e75daed9beefdc71", null ],
+    [ "src_col", "structTpetra_1_1KokkosRefactor_1_1Details_1_1PermuteArrayMultiColumnVariableStride_3_01DstView_0bbb0fc6b964e25f7b23e329677f22460.html#ab9e25d55a02b4e86c96fcef8ace91d47", null ],
+    [ "src_idx", "structTpetra_1_1KokkosRefactor_1_1Details_1_1PermuteArrayMultiColumnVariableStride_3_01DstView_0bbb0fc6b964e25f7b23e329677f22460.html#a3624a178f138b2de0068f513dc6b9b1e", null ]
+];

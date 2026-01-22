@@ -1,0 +1,5 @@
+var structSacado_1_1LocalScalarType_3_01Fad_1_1Exp_1_1GeneralFad_3_01Fad_1_1Exp_1_1StaticFixedStorag05b17ac3057c92145cd8cc5e454ff984 =
+[
+    [ "type", "structSacado_1_1LocalScalarType_3_01Fad_1_1Exp_1_1GeneralFad_3_01Fad_1_1Exp_1_1StaticFixedStorag05b17ac3057c92145cd8cc5e454ff984.html#aadaee40b2cfef38a1e77b70e865620ad", null ],
+    [ "Ns", "structSacado_1_1LocalScalarType_3_01Fad_1_1Exp_1_1GeneralFad_3_01Fad_1_1Exp_1_1StaticFixedStorag05b17ac3057c92145cd8cc5e454ff984.html#a01fab02e1e3994e6fc1bb9e4d66f362f", null ]
+];

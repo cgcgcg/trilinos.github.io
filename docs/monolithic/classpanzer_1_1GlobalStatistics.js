@@ -1,0 +1,28 @@
+var classpanzer_1_1GlobalStatistics =
+[
+    [ "ScalarT", "classpanzer_1_1GlobalStatistics.html#ae8b941e6a5bc3983eca2dd69b3e9fd07", null ],
+    [ "GlobalStatistics", "classpanzer_1_1GlobalStatistics.html#a3b6a0af397af9bfd5d1e6745deed8e17", null ],
+    [ "evaluateFields", "classpanzer_1_1GlobalStatistics.html#ae4a681d786d1e89c0545f25267072aee", null ],
+    [ "getRequiredFieldTag", "classpanzer_1_1GlobalStatistics.html#ada55e700f17e912e06571c3ecdd3f98e", null ],
+    [ "postEvaluate", "classpanzer_1_1GlobalStatistics.html#a79080dd8c49437e1f1f30b53f2225999", null ],
+    [ "postprocess", "classpanzer_1_1GlobalStatistics.html#a56c9265a5653fee80b397f3132c3ad7e", null ],
+    [ "postprocess", "classpanzer_1_1GlobalStatistics.html#a63083ac8e634773f16838512b4b9963a", null ],
+    [ "postRegistrationSetup", "classpanzer_1_1GlobalStatistics.html#aa6969c6841e3b321e4917edcd52408d4", null ],
+    [ "preEvaluate", "classpanzer_1_1GlobalStatistics.html#ae2405920dce692075db28deb363d48bc", null ],
+    [ "averages", "classpanzer_1_1GlobalStatistics.html#ad81f48dff5d0f94976c1f7810e1a60d9", null ],
+    [ "comm", "classpanzer_1_1GlobalStatistics.html#aa09feb691b3386459b8889faddcf7bca", null ],
+    [ "field_values", "classpanzer_1_1GlobalStatistics.html#a6df4c46df115df53d558525125bcb474", null ],
+    [ "global_averages", "classpanzer_1_1GlobalStatistics.html#ab9936bc69e936bd73ab6a625e23eb192", null ],
+    [ "global_data", "classpanzer_1_1GlobalStatistics.html#aa789ee150b07bebf17a43dda33473b89", null ],
+    [ "global_maxs", "classpanzer_1_1GlobalStatistics.html#ad005ff1eb5dccad03eae14d91c7c704a", null ],
+    [ "global_mins", "classpanzer_1_1GlobalStatistics.html#aa4bd667a5813ab8da3de1551bbdb31eb", null ],
+    [ "global_total_volume", "classpanzer_1_1GlobalStatistics.html#ab983155cccc9393c22ffc20d7dde63fa", null ],
+    [ "ir_index", "classpanzer_1_1GlobalStatistics.html#ab9ef076a69ace016ba550e6d7ec303d0", null ],
+    [ "ir_order", "classpanzer_1_1GlobalStatistics.html#a4d91f256a68e281c2736e8f5a7bfef58", null ],
+    [ "maxs", "classpanzer_1_1GlobalStatistics.html#a20746ad0310b504f9230a3a957d5ac40", null ],
+    [ "mins", "classpanzer_1_1GlobalStatistics.html#a22b730a6fcb96878e81d68eea75ad39b", null ],
+    [ "ones", "classpanzer_1_1GlobalStatistics.html#a8430821c5fd674e5a88381e257f3fb8d", null ],
+    [ "tmp", "classpanzer_1_1GlobalStatistics.html#a8d2186d20031916004adb20ee0a71b0a", null ],
+    [ "total_volume", "classpanzer_1_1GlobalStatistics.html#ac5220391b2ad1bbdbcf24da8c51654fa", null ],
+    [ "volumes", "classpanzer_1_1GlobalStatistics.html#ac119a5b2e56ea458e5e29ed0dd3cb9a2", null ]
+];

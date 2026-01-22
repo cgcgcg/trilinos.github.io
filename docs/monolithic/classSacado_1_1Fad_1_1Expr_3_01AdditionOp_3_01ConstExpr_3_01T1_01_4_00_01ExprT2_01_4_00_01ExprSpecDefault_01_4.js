@@ -1,0 +1,25 @@
+var classSacado_1_1Fad_1_1Expr_3_01AdditionOp_3_01ConstExpr_3_01T1_01_4_00_01ExprT2_01_4_00_01ExprSpecDefault_01_4 =
+[
+    [ "base_expr_type", "classSacado_1_1Fad_1_1Expr_3_01AdditionOp_3_01ConstExpr_3_01T1_01_4_00_01ExprT2_01_4_00_01ExprSpecDefault_01_4.html#ae0f13d76ebac90ef247fccdcd8341d8b", null ],
+    [ "base_expr_type_1", "classSacado_1_1Fad_1_1Expr_3_01AdditionOp_3_01ConstExpr_3_01T1_01_4_00_01ExprT2_01_4_00_01ExprSpecDefault_01_4.html#a3d116c75f01f3980cff63e9a586d2898", null ],
+    [ "base_expr_type_2", "classSacado_1_1Fad_1_1Expr_3_01AdditionOp_3_01ConstExpr_3_01T1_01_4_00_01ExprT2_01_4_00_01ExprSpecDefault_01_4.html#ae86d13277150687427de7d7f9e4c03c9", null ],
+    [ "ConstT", "classSacado_1_1Fad_1_1Expr_3_01AdditionOp_3_01ConstExpr_3_01T1_01_4_00_01ExprT2_01_4_00_01ExprSpecDefault_01_4.html#a326a0822beaa3b839bfb3abbf2368657", null ],
+    [ "ExprT1", "classSacado_1_1Fad_1_1Expr_3_01AdditionOp_3_01ConstExpr_3_01T1_01_4_00_01ExprT2_01_4_00_01ExprSpecDefault_01_4.html#a6e3a6fba311f4502c9b0083481f949a0", null ],
+    [ "scalar_type", "classSacado_1_1Fad_1_1Expr_3_01AdditionOp_3_01ConstExpr_3_01T1_01_4_00_01ExprT2_01_4_00_01ExprSpecDefault_01_4.html#ae1c2d1e3add1a65191567fc4e420eb46", null ],
+    [ "scalar_type_1", "classSacado_1_1Fad_1_1Expr_3_01AdditionOp_3_01ConstExpr_3_01T1_01_4_00_01ExprT2_01_4_00_01ExprSpecDefault_01_4.html#a4c34622c81baf2f4b5fd7d863e05d1ec", null ],
+    [ "scalar_type_2", "classSacado_1_1Fad_1_1Expr_3_01AdditionOp_3_01ConstExpr_3_01T1_01_4_00_01ExprT2_01_4_00_01ExprSpecDefault_01_4.html#a134014abcea39334e2bb39a326fa2b60", null ],
+    [ "value_type", "classSacado_1_1Fad_1_1Expr_3_01AdditionOp_3_01ConstExpr_3_01T1_01_4_00_01ExprT2_01_4_00_01ExprSpecDefault_01_4.html#ab1aa6752283ffe31d3d3e1056aed4aa1", null ],
+    [ "value_type_1", "classSacado_1_1Fad_1_1Expr_3_01AdditionOp_3_01ConstExpr_3_01T1_01_4_00_01ExprT2_01_4_00_01ExprSpecDefault_01_4.html#aa1dddf4b01a49cfdf504296bc3398755", null ],
+    [ "value_type_2", "classSacado_1_1Fad_1_1Expr_3_01AdditionOp_3_01ConstExpr_3_01T1_01_4_00_01ExprT2_01_4_00_01ExprSpecDefault_01_4.html#a2d495ef1f692105e0440cea19db51c73", null ],
+    [ "Expr", "classSacado_1_1Fad_1_1Expr_3_01AdditionOp_3_01ConstExpr_3_01T1_01_4_00_01ExprT2_01_4_00_01ExprSpecDefault_01_4.html#a5cf5b98f19b2073c9cb7233fcccbd202", null ],
+    [ "cache", "classSacado_1_1Fad_1_1Expr_3_01AdditionOp_3_01ConstExpr_3_01T1_01_4_00_01ExprT2_01_4_00_01ExprSpecDefault_01_4.html#a3b4c12bf6d1659ac3dc26771f15363bf", null ],
+    [ "dx", "classSacado_1_1Fad_1_1Expr_3_01AdditionOp_3_01ConstExpr_3_01T1_01_4_00_01ExprT2_01_4_00_01ExprSpecDefault_01_4.html#ac6f6bb7b860e735e148dc855179bd058", null ],
+    [ "fastAccessDx", "classSacado_1_1Fad_1_1Expr_3_01AdditionOp_3_01ConstExpr_3_01T1_01_4_00_01ExprT2_01_4_00_01ExprSpecDefault_01_4.html#ab1c5e27b94014441307ad87da275c6b7", null ],
+    [ "hasFastAccess", "classSacado_1_1Fad_1_1Expr_3_01AdditionOp_3_01ConstExpr_3_01T1_01_4_00_01ExprT2_01_4_00_01ExprSpecDefault_01_4.html#a7e399c436a52555e8cfd12d83d22d7de", null ],
+    [ "isPassive", "classSacado_1_1Fad_1_1Expr_3_01AdditionOp_3_01ConstExpr_3_01T1_01_4_00_01ExprT2_01_4_00_01ExprSpecDefault_01_4.html#a0402bde26c9d3149b954798883700607", null ],
+    [ "size", "classSacado_1_1Fad_1_1Expr_3_01AdditionOp_3_01ConstExpr_3_01T1_01_4_00_01ExprT2_01_4_00_01ExprSpecDefault_01_4.html#aa2de0168c5c4d6930f1d783c21d50357", null ],
+    [ "updateValue", "classSacado_1_1Fad_1_1Expr_3_01AdditionOp_3_01ConstExpr_3_01T1_01_4_00_01ExprT2_01_4_00_01ExprSpecDefault_01_4.html#aae628287d15b14b490841dbc4f0fae0d", null ],
+    [ "val", "classSacado_1_1Fad_1_1Expr_3_01AdditionOp_3_01ConstExpr_3_01T1_01_4_00_01ExprT2_01_4_00_01ExprSpecDefault_01_4.html#abc7d705868c8b782bd956a5e45970dc2", null ],
+    [ "c", "classSacado_1_1Fad_1_1Expr_3_01AdditionOp_3_01ConstExpr_3_01T1_01_4_00_01ExprT2_01_4_00_01ExprSpecDefault_01_4.html#ad4afe03ffa51ef632816541cc1a7e0eb", null ],
+    [ "expr2", "classSacado_1_1Fad_1_1Expr_3_01AdditionOp_3_01ConstExpr_3_01T1_01_4_00_01ExprT2_01_4_00_01ExprSpecDefault_01_4.html#a842cedaaf5410f6611b61dffe9da7a03", null ]
+];

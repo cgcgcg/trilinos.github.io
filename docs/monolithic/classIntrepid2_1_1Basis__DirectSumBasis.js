@@ -1,0 +1,25 @@
+var classIntrepid2_1_1Basis__DirectSumBasis =
+[
+    [ "BasisBase", "classIntrepid2_1_1Basis__DirectSumBasis.html#aa87dffb6e0a1acdce9cce10cfbe8114c", null ],
+    [ "BasisPtr", "classIntrepid2_1_1Basis__DirectSumBasis.html#a9d613eddf6288ede13c91180e6b7db40", null ],
+    [ "DeviceType", "classIntrepid2_1_1Basis__DirectSumBasis.html#add39623c55c18b8fd6c2f3f7d19a05fd", null ],
+    [ "ExecutionSpace", "classIntrepid2_1_1Basis__DirectSumBasis.html#a641c5629c087147d3979d14ed1908190", null ],
+    [ "OrdinalTypeArray1DHost", "classIntrepid2_1_1Basis__DirectSumBasis.html#a93fff7258b4856ac53f5fbaa826f17d9", null ],
+    [ "OrdinalTypeArray2DHost", "classIntrepid2_1_1Basis__DirectSumBasis.html#ad37c2a8e4d6b30182aa10d19bb723560", null ],
+    [ "OutputValueType", "classIntrepid2_1_1Basis__DirectSumBasis.html#ab0548a6d70ce77fcf2ec24f2aa01bf13", null ],
+    [ "OutputViewType", "classIntrepid2_1_1Basis__DirectSumBasis.html#ac8fe1835429919ba618df41a2e4c7f88", null ],
+    [ "PointValueType", "classIntrepid2_1_1Basis__DirectSumBasis.html#ae5734a77f228bbe4b7a88d0d5dd780bc", null ],
+    [ "PointViewType", "classIntrepid2_1_1Basis__DirectSumBasis.html#a360d3ce7702937797a381678be65d154", null ],
+    [ "ScalarViewType", "classIntrepid2_1_1Basis__DirectSumBasis.html#a4926b7931694b6d342e7be506840eabd", null ],
+    [ "Basis_DirectSumBasis", "classIntrepid2_1_1Basis__DirectSumBasis.html#a5ed35181cc7c934ff06c231e8ba0ec39", null ],
+    [ "allocateBasisValues", "classIntrepid2_1_1Basis__DirectSumBasis.html#a2a6337e6f88e30c0300fe7ec45813c1f", null ],
+    [ "getDofCoeffs", "classIntrepid2_1_1Basis__DirectSumBasis.html#ad993b7e3cc9eb15e49ee8eeb85195a8f", null ],
+    [ "getDofCoords", "classIntrepid2_1_1Basis__DirectSumBasis.html#a7e64e8382c432fa883798f64704f434d", null ],
+    [ "getName", "classIntrepid2_1_1Basis__DirectSumBasis.html#a0ed49dc841f790332e14ce8be3b6866c", null ],
+    [ "getNumTensorialExtrusions", "classIntrepid2_1_1Basis__DirectSumBasis.html#a43c70a35e46f7b977b501ba5765ea69f", null ],
+    [ "getValues", "classIntrepid2_1_1Basis__DirectSumBasis.html#a9cf5e817abc29f53305263bfd0e66d6d", null ],
+    [ "getValues", "classIntrepid2_1_1Basis__DirectSumBasis.html#a633fa9d413e6238849a49c39502962ef", null ],
+    [ "basis1_", "classIntrepid2_1_1Basis__DirectSumBasis.html#a6e2c44d53b28acff253ba0cac4133003", null ],
+    [ "basis2_", "classIntrepid2_1_1Basis__DirectSumBasis.html#a7da38b3e0a83df0586e2b5b174a6138d", null ],
+    [ "name_", "classIntrepid2_1_1Basis__DirectSumBasis.html#af7926b1604e16ae675c6e8e519bbd11c", null ]
+];

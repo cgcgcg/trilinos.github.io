@@ -1,0 +1,28 @@
+var Ifpack2__BlockHelper_8hpp =
+[
+    [ "Ifpack2::BlockHelperDetails::TpetraLittleBlock< Kokkos::LayoutLeft >", "structIfpack2_1_1BlockHelperDetails_1_1TpetraLittleBlock_3_01Kokkos_1_1LayoutLeft_01_4.html", "structIfpack2_1_1BlockHelperDetails_1_1TpetraLittleBlock_3_01Kokkos_1_1LayoutLeft_01_4" ],
+    [ "Ifpack2::BlockHelperDetails::TpetraLittleBlock< Kokkos::LayoutRight >", "structIfpack2_1_1BlockHelperDetails_1_1TpetraLittleBlock_3_01Kokkos_1_1LayoutRight_01_4.html", "structIfpack2_1_1BlockHelperDetails_1_1TpetraLittleBlock_3_01Kokkos_1_1LayoutRight_01_4" ],
+    [ "Ifpack2::BlockHelperDetails::BlockTridiagScalarType< T >", "structIfpack2_1_1BlockHelperDetails_1_1BlockTridiagScalarType.html", "structIfpack2_1_1BlockHelperDetails_1_1BlockTridiagScalarType" ],
+    [ "Ifpack2::BlockHelperDetails::is_cuda< T >", "structIfpack2_1_1BlockHelperDetails_1_1is__cuda.html", null ],
+    [ "Ifpack2::BlockHelperDetails::is_hip< T >", "structIfpack2_1_1BlockHelperDetails_1_1is__hip.html", null ],
+    [ "Ifpack2::BlockHelperDetails::is_sycl< T >", "structIfpack2_1_1BlockHelperDetails_1_1is__sycl.html", null ],
+    [ "Ifpack2::BlockHelperDetails::is_device< T >", "structIfpack2_1_1BlockHelperDetails_1_1is__device.html", null ],
+    [ "Ifpack2::BlockHelperDetails::ExecutionSpaceFactory< T >", "structIfpack2_1_1BlockHelperDetails_1_1ExecutionSpaceFactory.html", "structIfpack2_1_1BlockHelperDetails_1_1ExecutionSpaceFactory" ],
+    [ "Ifpack2::BlockHelperDetails::ArrayValueType< T, N >", "structIfpack2_1_1BlockHelperDetails_1_1ArrayValueType.html", "structIfpack2_1_1BlockHelperDetails_1_1ArrayValueType" ],
+    [ "Ifpack2::BlockHelperDetails::SumReducer< T, N, ExecSpace >", "structIfpack2_1_1BlockHelperDetails_1_1SumReducer.html", "structIfpack2_1_1BlockHelperDetails_1_1SumReducer" ],
+    [ "Ifpack2::BlockHelperDetails::ImplType< MatrixType >", "structIfpack2_1_1BlockHelperDetails_1_1ImplType.html", "structIfpack2_1_1BlockHelperDetails_1_1ImplType" ],
+    [ "Ifpack2::BlockHelperDetails::NormManager< MatrixType >", "structIfpack2_1_1BlockHelperDetails_1_1NormManager.html", "structIfpack2_1_1BlockHelperDetails_1_1NormManager" ],
+    [ "IFPACK2_BLOCKHELPER_PROFILER_REGION_BEGIN", "Ifpack2__BlockHelper_8hpp.html#acb592f62886e0bbea09368edf033fd0c", null ],
+    [ "IFPACK2_BLOCKHELPER_PROFILER_REGION_END", "Ifpack2__BlockHelper_8hpp.html#a08abf7c5c5966a246cd8552dea079c53", null ],
+    [ "Atomic", "Ifpack2__BlockHelper_8hpp.html#a7928ed67b00960a5c1009f1a7643c33f", null ],
+    [ "AtomicUnmanaged", "Ifpack2__BlockHelper_8hpp.html#ad1c1247a1f6ee67566966880dbd5d198", null ],
+    [ "Const", "Ifpack2__BlockHelper_8hpp.html#a016c772cbb30efd3638561dcb7957de5", null ],
+    [ "ConstUnmanaged", "Ifpack2__BlockHelper_8hpp.html#af9320d1dc99a94fd446d33133b46e864", null ],
+    [ "do_not_initialize_tag", "Ifpack2__BlockHelper_8hpp.html#ac55238b3872e07255b1b7b07b342b200", null ],
+    [ "MemoryTraits", "Ifpack2__BlockHelper_8hpp.html#a15632545cb074759a1e0740b9ac5f815", null ],
+    [ "Scratch", "Ifpack2__BlockHelper_8hpp.html#af5e2567bb04943e48cd047f106a99ce6", null ],
+    [ "Unmanaged", "Ifpack2__BlockHelper_8hpp.html#a9f72dba7105f0945d1d396a20cf5fe11", null ],
+    [ "get_msg_prefix", "Ifpack2__BlockHelper_8hpp.html#acf4d3e08c0baa4f88244e3f799f36812", null ],
+    [ "operator+=", "Ifpack2__BlockHelper_8hpp.html#ac2d96c44424bb4ca59476e24b9b66eea", null ],
+    [ "reduceVector", "Ifpack2__BlockHelper_8hpp.html#a9baccee37ff4be49057428727f1e9e80", null ]
+];

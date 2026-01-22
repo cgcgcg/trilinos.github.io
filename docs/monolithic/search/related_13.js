@@ -1,0 +1,7 @@
+var searchData=
+[
+  ['vectorworkspace_3c_20real_20_3e_0',['vectorworkspace&lt; real &gt;',['../structROL_1_1details_1_1VectorWorkspace_1_1VectorKey.html#a34b895a967662c9d4ddba69d687dc2b7',1,'ROL::details::VectorWorkspace::VectorKey::VectorWorkspace&lt; Real &gt;'],['../structROL_1_1details_1_1VectorWorkspace_1_1VectorStack.html#a34b895a967662c9d4ddba69d687dc2b7',1,'ROL::details::VectorWorkspace::VectorStack::VectorWorkspace&lt; Real &gt;']]],
+  ['view_1',['View',['../classKokkos_1_1View_3_01DataType_00_01Arg1Type_00_01Arg2Type_00_01Arg3Type_00_01Impl_1_1ViewMPVectorInterlaced_01_4.html#a48c921f5327271c4d3168205338943db',1,'Kokkos::View&lt; DataType, Arg1Type, Arg2Type, Arg3Type, Impl::ViewMPVectorInterlaced &gt;']]],
+  ['viewmapping_2',['ViewMapping',['../classKokkos_1_1Impl_1_1ViewMapping_3_01Traits_00_01typename_01std_1_1enable__if_3_07std_1_1is__s7902ff5d67b8636ce8651852da88f8df.html#aeabbd162a7499cfaa77ba11da09ab1ee',1,'Kokkos::Impl::ViewMapping&lt; Traits, typename std::enable_if&lt;(std::is_same&lt; typename Traits::specialize, Kokkos::Experimental::Impl::ViewPCEContiguous &gt;::value &amp;&amp;(std::is_same&lt; typename Traits::array_layout, Kokkos::LayoutLeft &gt;::value||std::is_same&lt; typename Traits::array_layout, Kokkos::LayoutRight &gt;::value||std::is_same&lt; typename Traits::array_layout, Kokkos::LayoutStride &gt;::value)), typename Traits::specialize &gt;::type &gt;']]],
+  ['viewstorage_3',['ViewStorage',['../classSacado_1_1Fad_1_1Exp_1_1ViewStorage.html#a3700a10e20b1ad6bc6942de7a64474f8',1,'Sacado::Fad::Exp::ViewStorage']]]
+];

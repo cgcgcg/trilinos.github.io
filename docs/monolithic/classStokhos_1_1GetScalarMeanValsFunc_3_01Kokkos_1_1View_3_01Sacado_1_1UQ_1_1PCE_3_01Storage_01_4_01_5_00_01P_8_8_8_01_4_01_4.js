@@ -1,0 +1,14 @@
+var classStokhos_1_1GetScalarMeanValsFunc_3_01Kokkos_1_1View_3_01Sacado_1_1UQ_1_1PCE_3_01Storage_01_4_01_5_00_01P_8_8_8_01_4_01_4 =
+[
+    [ "execution_space", "classStokhos_1_1GetScalarMeanValsFunc_3_01Kokkos_1_1View_3_01Sacado_1_1UQ_1_1PCE_3_01Storage_01_4_01_5_00_01P_8_8_8_01_4_01_4.html#a58d73d00eb90700da13c87a7e07e3e81", null ],
+    [ "MeanScalar", "classStokhos_1_1GetScalarMeanValsFunc_3_01Kokkos_1_1View_3_01Sacado_1_1UQ_1_1PCE_3_01Storage_01_4_01_5_00_01P_8_8_8_01_4_01_4.html#a9aaa8ac76cd5007327bd225c74f9d2ac", null ],
+    [ "MeanViewType", "classStokhos_1_1GetScalarMeanValsFunc_3_01Kokkos_1_1View_3_01Sacado_1_1UQ_1_1PCE_3_01Storage_01_4_01_5_00_01P_8_8_8_01_4_01_4.html#a11458b8c53f00c7da05005feb35d94ee", null ],
+    [ "Scalar", "classStokhos_1_1GetScalarMeanValsFunc_3_01Kokkos_1_1View_3_01Sacado_1_1UQ_1_1PCE_3_01Storage_01_4_01_5_00_01P_8_8_8_01_4_01_4.html#acb666db9c88b3eb70b57911693e84dd4", null ],
+    [ "size_type", "classStokhos_1_1GetScalarMeanValsFunc_3_01Kokkos_1_1View_3_01Sacado_1_1UQ_1_1PCE_3_01Storage_01_4_01_5_00_01P_8_8_8_01_4_01_4.html#a5b7b517b3245816fb483487a23674a61", null ],
+    [ "ViewType", "classStokhos_1_1GetScalarMeanValsFunc_3_01Kokkos_1_1View_3_01Sacado_1_1UQ_1_1PCE_3_01Storage_01_4_01_5_00_01P_8_8_8_01_4_01_4.html#a2f93b4e0b5fa7df37d2eee826d056427", null ],
+    [ "GetScalarMeanValsFunc", "classStokhos_1_1GetScalarMeanValsFunc_3_01Kokkos_1_1View_3_01Sacado_1_1UQ_1_1PCE_3_01Storage_01_4_01_5_00_01P_8_8_8_01_4_01_4.html#a36b685c7876b7966bc9460b8add72bce", null ],
+    [ "getMeanValues", "classStokhos_1_1GetScalarMeanValsFunc_3_01Kokkos_1_1View_3_01Sacado_1_1UQ_1_1PCE_3_01Storage_01_4_01_5_00_01P_8_8_8_01_4_01_4.html#add5ecb12fd8914cffa54798bfe111700", null ],
+    [ "operator()", "classStokhos_1_1GetScalarMeanValsFunc_3_01Kokkos_1_1View_3_01Sacado_1_1UQ_1_1PCE_3_01Storage_01_4_01_5_00_01P_8_8_8_01_4_01_4.html#a7d91730d7c42c5dac21869c851df73b4", null ],
+    [ "mean_vals", "classStokhos_1_1GetScalarMeanValsFunc_3_01Kokkos_1_1View_3_01Sacado_1_1UQ_1_1PCE_3_01Storage_01_4_01_5_00_01P_8_8_8_01_4_01_4.html#a239a2609149adc8ca57d9f293f89aba1", null ],
+    [ "vals", "classStokhos_1_1GetScalarMeanValsFunc_3_01Kokkos_1_1View_3_01Sacado_1_1UQ_1_1PCE_3_01Storage_01_4_01_5_00_01P_8_8_8_01_4_01_4.html#a4f689118c945d69294edc9098bba22d7", null ]
+];

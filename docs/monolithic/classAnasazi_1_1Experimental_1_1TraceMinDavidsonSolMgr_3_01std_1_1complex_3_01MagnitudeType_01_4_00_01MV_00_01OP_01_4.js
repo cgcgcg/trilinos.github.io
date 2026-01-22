@@ -1,0 +1,5 @@
+var classAnasazi_1_1Experimental_1_1TraceMinDavidsonSolMgr_3_01std_1_1complex_3_01MagnitudeType_01_4_00_01MV_00_01OP_01_4 =
+[
+    [ "ScalarType", "classAnasazi_1_1Experimental_1_1TraceMinDavidsonSolMgr_3_01std_1_1complex_3_01MagnitudeType_01_4_00_01MV_00_01OP_01_4.html#a6eda19581c37d711d5c76952e2d8d717", null ],
+    [ "TraceMinDavidsonSolMgr", "classAnasazi_1_1Experimental_1_1TraceMinDavidsonSolMgr_3_01std_1_1complex_3_01MagnitudeType_01_4_00_01MV_00_01OP_01_4.html#a97f86e08c0474a6e7c6102e447bc400f", null ]
+];

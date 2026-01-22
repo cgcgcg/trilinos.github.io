@@ -1,0 +1,6 @@
+var AnasaziTpetraAdapter_8hpp =
+[
+    [ "Anasazi::MultiVecTraits< Scalar, Tpetra::MultiVector< Scalar, LO, GO, Node > >", "classAnasazi_1_1MultiVecTraits_3_01Scalar_00_01Tpetra_1_1MultiVector_3_01Scalar_00_01LO_00_01GO_00_01Node_01_4_01_4.html", "classAnasazi_1_1MultiVecTraits_3_01Scalar_00_01Tpetra_1_1MultiVector_3_01Scalar_00_01LO_00_01GO_00_01Node_01_4_01_4" ],
+    [ "Anasazi::OperatorTraits< Scalar, Tpetra::MultiVector< Scalar, LO, GO, Node >, Tpetra::Operator< Scalar, LO, GO, Node > >", "classAnasazi_1_1OperatorTraits_3_01Scalar_00_01Tpetra_1_1MultiVector_3_01Scalar_00_01LO_00_01GO_f1e0b4e2eb3225e8f02ce48cd8a0d2da.html", "classAnasazi_1_1OperatorTraits_3_01Scalar_00_01Tpetra_1_1MultiVector_3_01Scalar_00_01LO_00_01GO_f1e0b4e2eb3225e8f02ce48cd8a0d2da" ],
+    [ "Anasazi::OutputStreamTraits< Tpetra::Operator< ST, LO, GO, NT > >", "structAnasazi_1_1OutputStreamTraits_3_01Tpetra_1_1Operator_3_01ST_00_01LO_00_01GO_00_01NT_01_4_01_4.html", "structAnasazi_1_1OutputStreamTraits_3_01Tpetra_1_1Operator_3_01ST_00_01LO_00_01GO_00_01NT_01_4_01_4" ]
+];

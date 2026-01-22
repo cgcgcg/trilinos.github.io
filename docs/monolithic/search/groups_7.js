@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['faq_20about_20thyra_20software_0',['Frequently Asked Questions (FAQ) about Thyra Software',['../group__thyra__faq__grp.html',1,'']]],
+  ['fei_20patterns_1',['Support functions for building FEI patterns',['../group__FEISupport.html',1,'']]],
+  ['floating_20point_20trapping_20support_20code_2',['Floating Point Trapping Support Code',['../group__Teuchos__FloatingPointTrap__grp.html',1,'']]],
+  ['for_20accessing_20local_20data_20in_20spmd_20vectors_20and_20multi_20vectors_3',['Official utilities for accessing local data in SPMD vectors and multi-vectors.',['../group__Thyra__Op__Vec__adapters__spmd__local__data__access__grp.html',1,'']]],
+  ['for_20allocating_20temporary_20workspace_4',['Set of utilities for allocating temporary workspace.',['../group__Teuchos__Workspace__grp.html',1,'']]],
+  ['for_20ann_5',['nanoflann C++ library for ANN',['../group__nanoflann__grp.html',1,'']]],
+  ['for_20building_20fei_20patterns_6',['Support functions for building FEI patterns',['../group__FEISupport.html',1,'']]],
+  ['for_20character_20inputs_20in_20teuchos_3a_3ablas_20methods_7',['Enumerations for character inputs in Teuchos::BLAS methods',['../group__BLASEnum__grp.html',1,'']]],
+  ['for_20developing_20thyra_20operator_20vector_20subclass_20implementations_8',['Miscellaneous Support Code for Developing Thyra Operator/Vector Subclass Implementations',['../group__Thyra__Op__Vec__general__adapter__support__code__grp.html',1,'']]],
+  ['for_20going_20between_20teuchos_3a_3arcp_20and_20boost_3a_3ashared_5fptr_9',['Conversion utilities for going between Teuchos::RCP and boost::shared_ptr.',['../group__Teuchos__RCPBoostSharedPtrConversions__grp.html',1,'']]],
+  ['for_20going_20between_20teuchos_3a_3arcp_20and_20std_3a_3ashared_5fptr_10',['Conversion utilities for going between Teuchos::RCP and std::shared_ptr.',['../group__Teuchos__RCPStdSharedPtrConversions__grp.html',1,'']]],
+  ['for_20indexing_20into_20a_20gid_20array_20ordered_20according_20to_20this_20pattern_11',['Functions for indexing into a GID array ordered according to this pattern',['../group__LOCALOFFSET.html',1,'']]],
+  ['for_20spmd_20distributed_20memory_20platforms_12',['Thyra Operator/Vector Subclasses for SPMD Distributed-Memory Platforms',['../group__Thyra__Op__Vec__spmd__adapters__grp.html',1,'']]],
+  ['for_20spmd_20thyra_20implementations_13',['Thyra Operator/Vector Base Support Subclasses for SPMD Thyra Implementations',['../group__Thyra__Op__Vec__adapters__Spmd__support__grp.html',1,'']]],
+  ['for_20testing_20assertions_20at_20compile_20time_14',['Template classes for testing assertions at compile time.',['../group__CompileTimeAssert__grp.html',1,'']]],
+  ['for_20throwing_20exceptions_20and_20setting_20breakpoints_15',['Utility code for throwing exceptions and setting breakpoints.',['../group__TestForException__grp.html',1,'']]],
+  ['for_20umfpack_20types_16',['Conversion definitions for UMFPACK types.',['../group__umfpack__conversion.html',1,'']]],
+  ['framework_17',['framework',['../group__amesos2__solver__framework.html',1,'Amesos2 Solver Framework'],['../group__anasazi__solver__framework.html',1,'Anasazi Eigensolver Framework']]],
+  ['frequently_20asked_20questions_20faq_20about_20thyra_20software_18',['Frequently Asked Questions (FAQ) about Thyra Software',['../group__thyra__faq__grp.html',1,'']]],
+  ['functional_20interface_19',['Functional Interface',['../group__func__group.html',1,'']]],
+  ['functions_20',['functions',['../group__dynamic__group.html',1,'Dynamic functions'],['../group__loadsave__grp.html',1,'Load/save auxiliary functions']]],
+  ['functions_20for_20building_20fei_20patterns_21',['Support functions for building FEI patterns',['../group__FEISupport.html',1,'']]],
+  ['functions_20for_20indexing_20into_20a_20gid_20array_20ordered_20according_20to_20this_20pattern_22',['Functions for indexing into a GID array ordered according to this pattern',['../group__LOCALOFFSET.html',1,'']]],
+  ['fundamental_20interfaces_23',['fundamental interfaces',['../group__Thyra__Op__Solve__fundamental__interfaces__code__grp.html',1,'Thyra operator solve fundamental interfaces'],['../group__Thyra__Op__Vec__fundamental__interfaces__code__grp.html',1,'Thyra operator/vector fundamental interfaces']]]
+];

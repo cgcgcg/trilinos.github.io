@@ -1,0 +1,27 @@
+var structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnFaces__HGRAD =
+[
+    [ "ComputeBasisCoeffsOnFaces_HGRAD", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnFaces__HGRAD.html#a582432cdc499229eba185ee566f56fb4", null ],
+    [ "operator()", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnFaces__HGRAD.html#af4a7455d1ed94d1ad280842d29f0b5af", null ],
+    [ "basisCoeffs_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnFaces__HGRAD.html#af9923d6e065a39b46ca2cee17672159a", null ],
+    [ "basisGradAtBasisGradEPoints_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnFaces__HGRAD.html#ac15176e20168bde8ffff9ada03fa9fd0", null ],
+    [ "basisGradAtTargetGradEPoints_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnFaces__HGRAD.html#a8b4c73d94957735b186c9ef8ebe48414", null ],
+    [ "basisGradEWeights_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnFaces__HGRAD.html#a53f8f4dc544001710f16d2c5101c5446", null ],
+    [ "computedDofs_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnFaces__HGRAD.html#a0d2aae77f2feb5a8620fe94fd38534a4", null ],
+    [ "dim_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnFaces__HGRAD.html#a7c712caa3d4b4bd414f3813df1cb72a0", null ],
+    [ "faceBasisGradAtGradEPoints_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnFaces__HGRAD.html#a640ace19078a3e27023f82dbcb924180", null ],
+    [ "faceCardinality_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnFaces__HGRAD.html#ab420c969a72566228788f4a9b3f50965", null ],
+    [ "faceDim_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnFaces__HGRAD.html#a08370408b859663bb574c765a80100c7", null ],
+    [ "iface_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnFaces__HGRAD.html#ae5166298056ab92f7ec7e33ce3a1f0d3", null ],
+    [ "negPartialProjGrad_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnFaces__HGRAD.html#a6239b8913d456c9b9f70bcf32bec6330", null ],
+    [ "numFaces_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnFaces__HGRAD.html#a5ff370d37031aa8abd67e3e04da90414", null ],
+    [ "numVertexEdgeDofs_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnFaces__HGRAD.html#a10f0bc0f4a340d525ef7c97e14fd0baa", null ],
+    [ "offsetBasisGrad_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnFaces__HGRAD.html#a8a23ec5ebdff194cce20f8875463cc98", null ],
+    [ "offsetTargetGrad_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnFaces__HGRAD.html#a4e8aa026b4a09f55fbff9249525096d4", null ],
+    [ "refFaceNormal_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnFaces__HGRAD.html#a09b13af1fa306d0c4593c3394826c959", null ],
+    [ "tagToOrdinal_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnFaces__HGRAD.html#a2ea99638157718f1bba981b30367d59c", null ],
+    [ "targetGradAtTargetGradEPoints_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnFaces__HGRAD.html#a2de12df938d18eab40eda2b423b0f817", null ],
+    [ "targetGradEWeights_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnFaces__HGRAD.html#a28c85c53ed652c5b8d30fc364b8101cd", null ],
+    [ "targetGradTanAtTargetGradEPoints_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnFaces__HGRAD.html#affc77e26b0a9def2ee8268fc7342787e", null ],
+    [ "wBasisGradAtGradEPoints_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnFaces__HGRAD.html#a1b4622486585c45c81bd087d612d10c8", null ],
+    [ "wBasisGradBasisAtTargetGradEPoints_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnFaces__HGRAD.html#ab3f66c707ff2e154422fd07971e34d9b", null ]
+];

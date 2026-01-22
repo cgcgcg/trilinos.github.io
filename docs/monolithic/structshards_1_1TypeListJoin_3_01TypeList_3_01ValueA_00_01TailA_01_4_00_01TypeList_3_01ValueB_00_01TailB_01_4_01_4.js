@@ -1,0 +1,5 @@
+var structshards_1_1TypeListJoin_3_01TypeList_3_01ValueA_00_01TailA_01_4_00_01TypeList_3_01ValueB_00_01TailB_01_4_01_4 =
+[
+    [ "Tail", "structshards_1_1TypeListJoin_3_01TypeList_3_01ValueA_00_01TailA_01_4_00_01TypeList_3_01ValueB_00_01TailB_01_4_01_4.html#aed22d2df7119eaed3fe4dfc921ebbca5", null ],
+    [ "type", "structshards_1_1TypeListJoin_3_01TypeList_3_01ValueA_00_01TailA_01_4_00_01TypeList_3_01ValueB_00_01TailB_01_4_01_4.html#a5ff2a67dc76995e41db4cdeaea5341a8", null ]
+];

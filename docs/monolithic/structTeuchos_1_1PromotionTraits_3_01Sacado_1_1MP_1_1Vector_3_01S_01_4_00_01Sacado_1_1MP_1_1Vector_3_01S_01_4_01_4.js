@@ -1,0 +1,4 @@
+var structTeuchos_1_1PromotionTraits_3_01Sacado_1_1MP_1_1Vector_3_01S_01_4_00_01Sacado_1_1MP_1_1Vector_3_01S_01_4_01_4 =
+[
+    [ "promote", "structTeuchos_1_1PromotionTraits_3_01Sacado_1_1MP_1_1Vector_3_01S_01_4_00_01Sacado_1_1MP_1_1Vector_3_01S_01_4_01_4.html#aae7f09ca561439852db70592d0e23965", null ]
+];

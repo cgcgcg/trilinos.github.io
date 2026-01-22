@@ -1,0 +1,4 @@
+var structKokkosBatched_1_1TeamVectorSolveUTVCompadre_3_01MemberType_00_01Algo_1_1UTV_1_1Unblocked_01_4 =
+[
+    [ "invoke", "structKokkosBatched_1_1TeamVectorSolveUTVCompadre_3_01MemberType_00_01Algo_1_1UTV_1_1Unblocked_01_4.html#ab16142084d12144177a9488f22153bc1", null ]
+];

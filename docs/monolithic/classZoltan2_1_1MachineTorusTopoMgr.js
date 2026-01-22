@@ -1,0 +1,26 @@
+var classZoltan2_1_1MachineTorusTopoMgr =
+[
+    [ "MachineTorusTopoMgr", "classZoltan2_1_1MachineTorusTopoMgr.html#a6a610b7ce435929ac0de8df3e92aa4ba", null ],
+    [ "MachineTorusTopoMgr", "classZoltan2_1_1MachineTorusTopoMgr.html#acb8db4939440ce1190af604adec4550b", null ],
+    [ "~MachineTorusTopoMgr", "classZoltan2_1_1MachineTorusTopoMgr.html#abd7bd04ca4279bd1ab459108bd49e910", null ],
+    [ "gatherMachineCoordinates", "classZoltan2_1_1MachineTorusTopoMgr.html#aa15f7e0590424a58cc27f9385268fa59", null ],
+    [ "getAllMachineCoordinatesView", "classZoltan2_1_1MachineTorusTopoMgr.html#a30342041302c9133e528ad7d4098b5cc", null ],
+    [ "getHopCount", "classZoltan2_1_1MachineTorusTopoMgr.html#add6e3b78d2b39770347001dea3777db5", null ],
+    [ "getMachineCoordinate", "classZoltan2_1_1MachineTorusTopoMgr.html#a2bddad602dc52dfb22ac88ad1dc245f8", null ],
+    [ "getMachineCoordinate", "classZoltan2_1_1MachineTorusTopoMgr.html#afc99867e44acb09b6e569721c533a385", null ],
+    [ "getMachineDim", "classZoltan2_1_1MachineTorusTopoMgr.html#a6804aa47c215b69ac2dc179bcb79e268", null ],
+    [ "getMachineExtent", "classZoltan2_1_1MachineTorusTopoMgr.html#ad12b9ee5e2772c5c44a0b1abc1c72075", null ],
+    [ "getMachineExtentWrapArounds", "classZoltan2_1_1MachineTorusTopoMgr.html#a8e59761325c89c6f21f8f439af80ef72", null ],
+    [ "getMachineExtentWrapArounds", "classZoltan2_1_1MachineTorusTopoMgr.html#ac2e9912f7aa7f9badf9166f2423b94f3", null ],
+    [ "getMyActualMachineCoordinate", "classZoltan2_1_1MachineTorusTopoMgr.html#a290a548a3bc9a9470ead7620f197d199", null ],
+    [ "getMyMachineCoordinate", "classZoltan2_1_1MachineTorusTopoMgr.html#a16aa7ff0d5b219a597f402470911d304", null ],
+    [ "getRealMachineDim", "classZoltan2_1_1MachineTorusTopoMgr.html#a568fddad6f8d7d4994c7768c7694fdd7", null ],
+    [ "hasMachineCoordinates", "classZoltan2_1_1MachineTorusTopoMgr.html#a7610373ba63bab9b548fe4fc08f2917e", null ],
+    [ "delete_transformed_coords", "classZoltan2_1_1MachineTorusTopoMgr.html#aca39470ff5583c089f1c631fd0200013", null ],
+    [ "machine_extent", "classZoltan2_1_1MachineTorusTopoMgr.html#ae01eaf08268eea019e739420de9a9e04", null ],
+    [ "networkDim", "classZoltan2_1_1MachineTorusTopoMgr.html#a9d33367e4d0bed9fde08216e597d8784", null ],
+    [ "pl", "classZoltan2_1_1MachineTorusTopoMgr.html#ac478b9218fb4406d446ca095083ee781", null ],
+    [ "procCoords", "classZoltan2_1_1MachineTorusTopoMgr.html#ada5d858b9433c8f72287be5001db933c", null ],
+    [ "transformed_coordinates", "classZoltan2_1_1MachineTorusTopoMgr.html#a84bf233a5699f730a66adea49d0bed71", null ],
+    [ "transformed_network_dim", "classZoltan2_1_1MachineTorusTopoMgr.html#af93f350f747e97e97dd73d0d7617f215", null ]
+];

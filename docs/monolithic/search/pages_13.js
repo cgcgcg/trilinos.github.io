@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['package_0',['package',['../anasazi.html',1,'Anasazi: A Block Eigensolvers Package'],['../belos.html',1,'Belos: An Iterative Linear Solvers Package'],['../tempus.html',1,'Tempus: Time Integration and Sensitivity Analysis Package']]],
+  ['packages_1',['packages',['../analysis.html',1,'Analysis packages'],['../core.html',1,'Core packages'],['../discretization.html',1,'Discretization packages'],['../interfaces.html',1,'Interface packages'],['../linear_solvers.html',1,'Linear solver packages'],['../nonlinear_solvers.html',1,'Nonlinear and Eigensolvers, Optimization packages']]],
+  ['panzer_2',['Panzer',['../panzer.html',1,'discretization']]],
+  ['parallel_20fill_3',['Tpetra Lesson 07: Thread-Parallel Fill',['../Tpetra_Lesson07.html',1,'tpetra']]],
+  ['parmetis_4',['Graph partitioning with ParMETIS',['../parmetisPartPage.html',1,'partitionPage']]],
+  ['particle_20discretization_20and_20remap_20toolkit_5',['COMpatible PArticle Discretization and REmap Toolkit',['../compadre.html',1,'discretization']]],
+  ['partitioning_6',['Block partitioning',['../blockPage.html',1,'partitionPage']]],
+  ['partitioning_20and_20load_20balancing_7',['Partitioning and Load-Balancing',['../partitionPage.html',1,'zoltan2']]],
+  ['partitioning_20mj_8',['Multi-Jagged Coordinate Partitioning (MJ)',['../mjPage.html',1,'partitionPage']]],
+  ['partitioning_20with_20parmetis_9',['Graph partitioning with ParMETIS',['../parmetisPartPage.html',1,'partitionPage']]],
+  ['partitioning_20with_20ptscotch_10',['Graph partitioning with PTScotch',['../scotchPartPage.html',1,'partitionPage']]],
+  ['partitioning_20with_20sphynx_11',['Graph partitioning with Sphynx',['../sphynxPage.html',1,'partitionPage']]],
+  ['party_20libraries_12',['Third-party libraries',['../tpls.html',1,'index']]],
+  ['permutations_13',['Ordering and Permutations',['../orderingPage.html',1,'zoltan2']]],
+  ['phalanx_14',['Phalanx',['../phalanx.html',1,'discretization']]],
+  ['physics_20based_20preconditioners_15',['Teko: For block and physics-based preconditioners',['../teko.html',1,'linear_solvers']]],
+  ['polylib_20library_16',['The Polylib library',['../pagePolylib.html',1,'intrepid2']]],
+  ['power_20method_17',['Tpetra Lesson 03: Power method',['../Tpetra_Lesson03.html',1,'tpetra']]],
+  ['preconditioners_18',['Teko: For block and physics-based preconditioners',['../teko.html',1,'linear_solvers']]],
+  ['problems_19',['Galeri: Collection of simple test problems',['../galeri.html',1,'discretization']]],
+  ['ptscotch_20',['Graph partitioning with PTScotch',['../scotchPartPage.html',1,'partitionPage']]],
+  ['python_20interface_21',['The Python interface',['../gl_Python.html',1,'galeri']]]
+];

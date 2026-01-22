@@ -1,0 +1,4 @@
+var structTpetra_1_1Impl_1_1AXPY_3_01CoefficientType_00_01ViewType1_00_01ViewType2_00_01IndexType_00_01true_00_01rank_01_4 =
+[
+    [ "run", "structTpetra_1_1Impl_1_1AXPY_3_01CoefficientType_00_01ViewType1_00_01ViewType2_00_01IndexType_00_01true_00_01rank_01_4.html#ab9536d8e628f25a513de6fb70ca57ea8", null ]
+];

@@ -1,0 +1,4 @@
+var classTeuchos_1_1DummyObjectGetter_3_01TwoDRowDependency_3_01DependeeType_00_01DependentType_01_4_01_4 =
+[
+    [ "getDummyObject", "classTeuchos_1_1DummyObjectGetter_3_01TwoDRowDependency_3_01DependeeType_00_01DependentType_01_4_01_4.html#ad549649c680538abcc91be338cbacddb", null ]
+];

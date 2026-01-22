@@ -1,0 +1,12 @@
+var structAmesos2_1_1MatrixTraits_3_01Tpetra_1_1RowMatrix_3_01Scalar_00_01LocalOrdinal_00_01GlobalOrdinal_00_01Node_01_4_01_4 =
+[
+    [ "global_host_idx_type", "structAmesos2_1_1MatrixTraits_3_01Tpetra_1_1RowMatrix_3_01Scalar_00_01LocalOrdinal_00_01GlobalOrdinal_00_01Node_01_4_01_4.html#ad8a46426c295ee9128fc90f63104093b", null ],
+    [ "global_host_val_type", "structAmesos2_1_1MatrixTraits_3_01Tpetra_1_1RowMatrix_3_01Scalar_00_01LocalOrdinal_00_01GlobalOrdinal_00_01Node_01_4_01_4.html#abf78d95545e6bba57a70d524d59dee6b", null ],
+    [ "global_ordinal_t", "structAmesos2_1_1MatrixTraits_3_01Tpetra_1_1RowMatrix_3_01Scalar_00_01LocalOrdinal_00_01GlobalOrdinal_00_01Node_01_4_01_4.html#a2746b246e9be4056d228e4ccb1636026", null ],
+    [ "impl_scalar_type", "structAmesos2_1_1MatrixTraits_3_01Tpetra_1_1RowMatrix_3_01Scalar_00_01LocalOrdinal_00_01GlobalOrdinal_00_01Node_01_4_01_4.html#ad8631195a6fc3434d073cf173f5924bf", null ],
+    [ "local_ordinal_t", "structAmesos2_1_1MatrixTraits_3_01Tpetra_1_1RowMatrix_3_01Scalar_00_01LocalOrdinal_00_01GlobalOrdinal_00_01Node_01_4_01_4.html#ae5ad04ee78ffcb523dfa09f46c4a7191", null ],
+    [ "major_access", "structAmesos2_1_1MatrixTraits_3_01Tpetra_1_1RowMatrix_3_01Scalar_00_01LocalOrdinal_00_01GlobalOrdinal_00_01Node_01_4_01_4.html#ab3fbe0b4682b489fd066ba90ae2031e4", null ],
+    [ "matrix_type", "structAmesos2_1_1MatrixTraits_3_01Tpetra_1_1RowMatrix_3_01Scalar_00_01LocalOrdinal_00_01GlobalOrdinal_00_01Node_01_4_01_4.html#af24b94801684167c1d6d7f1c169943c8", null ],
+    [ "node_t", "structAmesos2_1_1MatrixTraits_3_01Tpetra_1_1RowMatrix_3_01Scalar_00_01LocalOrdinal_00_01GlobalOrdinal_00_01Node_01_4_01_4.html#a4deea6ad8461c63d38c7fda788479247", null ],
+    [ "scalar_t", "structAmesos2_1_1MatrixTraits_3_01Tpetra_1_1RowMatrix_3_01Scalar_00_01LocalOrdinal_00_01GlobalOrdinal_00_01Node_01_4_01_4.html#a1c3e8c94c8792bb6b8381038d8656c50", null ]
+];

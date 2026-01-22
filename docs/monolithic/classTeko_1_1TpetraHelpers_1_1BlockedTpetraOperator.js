@@ -1,0 +1,26 @@
+var classTeko_1_1TpetraHelpers_1_1BlockedTpetraOperator =
+[
+    [ "BlockedTpetraOperator", "classTeko_1_1TpetraHelpers_1_1BlockedTpetraOperator.html#a87eb069ae0e572ef5af32301a68da390", null ],
+    [ "~BlockedTpetraOperator", "classTeko_1_1TpetraHelpers_1_1BlockedTpetraOperator.html#a0d7a4cdacde569d547212b6e23748922", null ],
+    [ "ApplyInverse", "classTeko_1_1TpetraHelpers_1_1BlockedTpetraOperator.html#ab76f903b969cbe48828dacd808f13ff2", null ],
+    [ "BuildBlockedOperator", "classTeko_1_1TpetraHelpers_1_1BlockedTpetraOperator.html#a6e890baebe43f78579754567e1faddb8", null ],
+    [ "Comm", "classTeko_1_1TpetraHelpers_1_1BlockedTpetraOperator.html#a3817aa6145d4f65eaaddb4728ccd0927", null ],
+    [ "GetBlock", "classTeko_1_1TpetraHelpers_1_1BlockedTpetraOperator.html#a4ff5476b1d6685280374fa6ac83c8b86", null ],
+    [ "GetContent", "classTeko_1_1TpetraHelpers_1_1BlockedTpetraOperator.html#a6f9b0377e1338d5e732bdb9215017d14", null ],
+    [ "GetContent", "classTeko_1_1TpetraHelpers_1_1BlockedTpetraOperator.html#a0aed51a7157f0fac26ecfc0e67ac1ad0", null ],
+    [ "HasNormInf", "classTeko_1_1TpetraHelpers_1_1BlockedTpetraOperator.html#af6b9afe40605e89ddb54b1c6f5d29a2b", null ],
+    [ "NormInf", "classTeko_1_1TpetraHelpers_1_1BlockedTpetraOperator.html#a7f6274a922f5ab1639cddf3f3a9c8006", null ],
+    [ "RebuildOps", "classTeko_1_1TpetraHelpers_1_1BlockedTpetraOperator.html#a455f47fec2717e7c61908f644ff622e6", null ],
+    [ "RemoveReording", "classTeko_1_1TpetraHelpers_1_1BlockedTpetraOperator.html#aecfe3d64c1b0f07a2f4a556a7a45a728", null ],
+    [ "Reorder", "classTeko_1_1TpetraHelpers_1_1BlockedTpetraOperator.html#a7a88e461d12f85df0fda7d8db742dae0", null ],
+    [ "SetContent", "classTeko_1_1TpetraHelpers_1_1BlockedTpetraOperator.html#a35f8127f3b907b6f0f5b931284c766b5", null ],
+    [ "SetUseTranspose", "classTeko_1_1TpetraHelpers_1_1BlockedTpetraOperator.html#abab78768a217240a5efe25f9f8e581f7", null ],
+    [ "testAgainstFullOperator", "classTeko_1_1TpetraHelpers_1_1BlockedTpetraOperator.html#a8cc48162609f2f645f981a555a41d01e", null ],
+    [ "UseTranspose", "classTeko_1_1TpetraHelpers_1_1BlockedTpetraOperator.html#ab75acfc6129e700fba5e8e1be49ef8b7", null ],
+    [ "WriteBlocks", "classTeko_1_1TpetraHelpers_1_1BlockedTpetraOperator.html#a7b614c1cdcaa6b37b56cd93820287cb7", null ],
+    [ "blockedMapping_", "classTeko_1_1TpetraHelpers_1_1BlockedTpetraOperator.html#abfb7d6c36d3ebc6951ec1557653d8619", null ],
+    [ "blockedOperator_", "classTeko_1_1TpetraHelpers_1_1BlockedTpetraOperator.html#a49557d7716a9d0b77fcec7fcca237aa1", null ],
+    [ "fullContent_", "classTeko_1_1TpetraHelpers_1_1BlockedTpetraOperator.html#a25bcc00de6bc354129174e63489f1054", null ],
+    [ "label_", "classTeko_1_1TpetraHelpers_1_1BlockedTpetraOperator.html#a6e8a7e591fe3c41512a9e4e587593e32", null ],
+    [ "reorderManager_", "classTeko_1_1TpetraHelpers_1_1BlockedTpetraOperator.html#aebf52bd984525e32697e44a4d62f5e5b", null ]
+];

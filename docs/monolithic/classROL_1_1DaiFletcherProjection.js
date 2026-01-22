@@ -1,0 +1,28 @@
+var classROL_1_1DaiFletcherProjection =
+[
+    [ "DaiFletcherProjection", "classROL_1_1DaiFletcherProjection.html#a49b8d426d759054529e1b6af8791422c", null ],
+    [ "DaiFletcherProjection", "classROL_1_1DaiFletcherProjection.html#a93d14989bb29ba575ef7108f028c0a76", null ],
+    [ "initialize", "classROL_1_1DaiFletcherProjection.html#a8ca9ad94f86287ad0a32d508e1af485b", null ],
+    [ "project", "classROL_1_1DaiFletcherProjection.html#a24c0af05bb38831574884e0247695e5f", null ],
+    [ "project_df", "classROL_1_1DaiFletcherProjection.html#a035f574263c8efa1ac854fe42b3158d7", null ],
+    [ "residual", "classROL_1_1DaiFletcherProjection.html#a88cf27761783fc847753cf0b69f2d90d", null ],
+    [ "update_primal", "classROL_1_1DaiFletcherProjection.html#ab50af8e41cb12cfa5cba840180fbd72e", null ],
+    [ "atol_", "classROL_1_1DaiFletcherProjection.html#a3024f69acdadfa9480c867eb484b3940", null ],
+    [ "b_", "classROL_1_1DaiFletcherProjection.html#acf9bcd0a2b80d03cc000c8d8ce5384c9", null ],
+    [ "cdot_", "classROL_1_1DaiFletcherProjection.html#a57e5076c70bb79b9d7943cd106da1d32", null ],
+    [ "ctol_", "classROL_1_1DaiFletcherProjection.html#abd7f095f126fe23dad84d1e6311a10fe", null ],
+    [ "DEFAULT_atol_", "classROL_1_1DaiFletcherProjection.html#a5119e9288e8a870d0293769d928b5d6c", null ],
+    [ "DEFAULT_ltol_", "classROL_1_1DaiFletcherProjection.html#a6536dd9e6c17a9007100bfa5f54c3781", null ],
+    [ "DEFAULT_maxit_", "classROL_1_1DaiFletcherProjection.html#a475d717bfea229895a545941fd781023", null ],
+    [ "DEFAULT_rtol_", "classROL_1_1DaiFletcherProjection.html#a3b7e543b51e8177d96d400a90a27dd8e", null ],
+    [ "DEFAULT_verbosity_", "classROL_1_1DaiFletcherProjection.html#a2c279e414233f1de9c14bb29320cf7db", null ],
+    [ "dim_", "classROL_1_1DaiFletcherProjection.html#a88dcb9c3cf81221f492087f87dfa875c", null ],
+    [ "dlam1_", "classROL_1_1DaiFletcherProjection.html#a23fc4a13af361b92d35aa896a1f7f94d", null ],
+    [ "ltol_", "classROL_1_1DaiFletcherProjection.html#a15adb9250de1107dbea6112003289621", null ],
+    [ "maxit_", "classROL_1_1DaiFletcherProjection.html#a282e6404cdb0ff91eab85d473f888d59", null ],
+    [ "mul1_", "classROL_1_1DaiFletcherProjection.html#a2a8b7c4d88c78888f6dec6d0841b0dd3", null ],
+    [ "Px_", "classROL_1_1DaiFletcherProjection.html#af69776b3f0cb9df5e11ed9849722b849", null ],
+    [ "rtol_", "classROL_1_1DaiFletcherProjection.html#a9c37d22f2a5b2af2d6cd0177d5a89ed1", null ],
+    [ "verbosity_", "classROL_1_1DaiFletcherProjection.html#a5a9ad414ffc6ff4197142042ed48f600", null ],
+    [ "xnew_", "classROL_1_1DaiFletcherProjection.html#af7a2cbef977157b04145e8cbaca8452d", null ]
+];

@@ -1,0 +1,27 @@
+var structklu__numeric =
+[
+    [ "Iwork", "structklu__numeric.html#aa12354e6b8e412978b5c6780bc4ddd4b", null ],
+    [ "Lip", "structklu__numeric.html#a275443856e51b74829b04fe51538aa54", null ],
+    [ "Llen", "structklu__numeric.html#a3416c7f96a2aec0c42e3d5d1d5f16c20", null ],
+    [ "lnz", "structklu__numeric.html#a7c30ef924eda116ccf5402e4a368db0d", null ],
+    [ "LUbx", "structklu__numeric.html#a71302a67b24eae8ec89e1dc09b05affd", null ],
+    [ "LUsize", "structklu__numeric.html#a24671b81cbc5a0656f428f2218f2e5c0", null ],
+    [ "max_lnz_block", "structklu__numeric.html#ace449f737cd94a0ab3beb0d6c7c2dc98", null ],
+    [ "max_unz_block", "structklu__numeric.html#a09031acc6724834e10121b07f5b1d007", null ],
+    [ "n", "structklu__numeric.html#aace82e59f85362df264530b2391f0611", null ],
+    [ "nblocks", "structklu__numeric.html#a890f6ab4e52ad3fc880b434b82e81d7b", null ],
+    [ "nzoff", "structklu__numeric.html#a2b17dfe6d1db4d304f70a8daea157b13", null ],
+    [ "Offi", "structklu__numeric.html#adabed1075f80ccf52ff44638c408b7c2", null ],
+    [ "Offp", "structklu__numeric.html#a84ec2838b8fb1eebc5602df28a5b1bf5", null ],
+    [ "Offx", "structklu__numeric.html#a612d41ed78c65cce114737491575ba88", null ],
+    [ "Pinv", "structklu__numeric.html#a3256d4028d9fc498aa93fe78bb424181", null ],
+    [ "Pnum", "structklu__numeric.html#a5e4c8b2ad408816212363228b0586690", null ],
+    [ "Rs", "structklu__numeric.html#ad6de59b8877c426913600b813fb54509", null ],
+    [ "Udiag", "structklu__numeric.html#aa9464c0e0c7785b4ab3dbfb1f0368bdf", null ],
+    [ "Uip", "structklu__numeric.html#a87d0b5e65749057b048adc26315c6863", null ],
+    [ "Ulen", "structklu__numeric.html#a98a985109f968537be6fc65b51f3d0c1", null ],
+    [ "unz", "structklu__numeric.html#abde27b86db6cb5c64b42ceeb7a07877b", null ],
+    [ "Work", "structklu__numeric.html#a3182b460cacf0419380ee1fe4d7824ca", null ],
+    [ "worksize", "structklu__numeric.html#a1c71df0e5ed0c555679a935af4184810", null ],
+    [ "Xwork", "structklu__numeric.html#afd8494a2a98e957952f71b44689f0e31", null ]
+];

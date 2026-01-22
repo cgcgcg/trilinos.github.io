@@ -1,0 +1,28 @@
+var classStokhos_1_1LanczosProjPCEBasis =
+[
+    [ "lanczos_type", "classStokhos_1_1LanczosProjPCEBasis.html#a66f6389563eb12e13acc4d85904cede8", null ],
+    [ "matrix_type", "classStokhos_1_1LanczosProjPCEBasis.html#a13bdebf3b67aa3451689e79906a8028a", null ],
+    [ "operator_type", "classStokhos_1_1LanczosProjPCEBasis.html#ac06b05c1e2459097533dd17623e738de", null ],
+    [ "vector_type", "classStokhos_1_1LanczosProjPCEBasis.html#a433e065d437eb9b8c4cbb3344d13be10", null ],
+    [ "vectorspace_type", "classStokhos_1_1LanczosProjPCEBasis.html#a3eeda8bc1d44724af58d939fbfbf394d", null ],
+    [ "LanczosProjPCEBasis", "classStokhos_1_1LanczosProjPCEBasis.html#aa420521108034e1c8108299fca4ab6cb", null ],
+    [ "~LanczosProjPCEBasis", "classStokhos_1_1LanczosProjPCEBasis.html#ad81880ddfbcf4012a3da9550e113b690", null ],
+    [ "LanczosProjPCEBasis", "classStokhos_1_1LanczosProjPCEBasis.html#a92731731f4476310eaf1d797b02c2810", null ],
+    [ "LanczosProjPCEBasis", "classStokhos_1_1LanczosProjPCEBasis.html#ae633694e4b008560cf2f33e9b33dd428", null ],
+    [ "cloneWithOrder", "classStokhos_1_1LanczosProjPCEBasis.html#a3f92bed294ddfab8c81aba9e52744c09", null ],
+    [ "computeRecurrenceCoefficients", "classStokhos_1_1LanczosProjPCEBasis.html#ae7c7a25018607747e69c4caf72537f4e", null ],
+    [ "getNewCoeffs", "classStokhos_1_1LanczosProjPCEBasis.html#af6093918b454479c3cf6dff1a4897674", null ],
+    [ "getQuadPoints", "classStokhos_1_1LanczosProjPCEBasis.html#aacd91954095617094834cec355d1e06a", null ],
+    [ "operator=", "classStokhos_1_1LanczosProjPCEBasis.html#a78a9f97f612670f141896942ba357632", null ],
+    [ "setup", "classStokhos_1_1LanczosProjPCEBasis.html#a273ec89c2e1b459ce666b79c1d8b9b15", null ],
+    [ "transformCoeffsFromLanczos", "classStokhos_1_1LanczosProjPCEBasis.html#a8b41aaece9bc56bbf2e02bf0c8d6b444", null ],
+    [ "Cijk_matrix", "classStokhos_1_1LanczosProjPCEBasis.html#a6c717a26af467bc3d6dfe0848694e864", null ],
+    [ "lanczos_vecs", "classStokhos_1_1LanczosProjPCEBasis.html#aa5eb54aacb4428452755a49c37a8dd46", null ],
+    [ "limit_integration_order", "classStokhos_1_1LanczosProjPCEBasis.html#af044602ff17ea04ad59037ec2210dd4d", null ],
+    [ "new_pce", "classStokhos_1_1LanczosProjPCEBasis.html#ac4b1bb966c2f91f55566fa7e4a336753", null ],
+    [ "pce", "classStokhos_1_1LanczosProjPCEBasis.html#a9b7b217927e167b065069009fba99407", null ],
+    [ "pce_norms", "classStokhos_1_1LanczosProjPCEBasis.html#aaa2832ad4060c502d11db411f7264632", null ],
+    [ "pce_sz", "classStokhos_1_1LanczosProjPCEBasis.html#add5febcb090339daf2525230b3b57ba7", null ],
+    [ "u0", "classStokhos_1_1LanczosProjPCEBasis.html#af2d64c58bcbc3bbfdc5a570812b928e7", null ],
+    [ "weights", "classStokhos_1_1LanczosProjPCEBasis.html#a5f35c88a7785372f2ac8ff65c3a5a240", null ]
+];

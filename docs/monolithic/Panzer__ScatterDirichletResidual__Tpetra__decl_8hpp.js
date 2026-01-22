@@ -1,0 +1,6 @@
+var Panzer__ScatterDirichletResidual__Tpetra__decl_8hpp =
+[
+    [ "panzer::ScatterDirichletResidual_Tpetra< panzer::Traits::Residual, TRAITS, LO, GO, NodeT >", "classpanzer_1_1ScatterDirichletResidual__Tpetra_3_01panzer_1_1Traits_1_1Residual_00_01TRAITS_00_01LO_00_01GO_00_01NodeT_01_4.html", "classpanzer_1_1ScatterDirichletResidual__Tpetra_3_01panzer_1_1Traits_1_1Residual_00_01TRAITS_00_01LO_00_01GO_00_01NodeT_01_4" ],
+    [ "panzer::ScatterDirichletResidual_Tpetra< panzer::Traits::Tangent, TRAITS, LO, GO, NodeT >", "classpanzer_1_1ScatterDirichletResidual__Tpetra_3_01panzer_1_1Traits_1_1Tangent_00_01TRAITS_00_01LO_00_01GO_00_01NodeT_01_4.html", "classpanzer_1_1ScatterDirichletResidual__Tpetra_3_01panzer_1_1Traits_1_1Tangent_00_01TRAITS_00_01LO_00_01GO_00_01NodeT_01_4" ],
+    [ "panzer::ScatterDirichletResidual_Tpetra< panzer::Traits::Jacobian, TRAITS, LO, GO, NodeT >", "classpanzer_1_1ScatterDirichletResidual__Tpetra_3_01panzer_1_1Traits_1_1Jacobian_00_01TRAITS_00_01LO_00_01GO_00_01NodeT_01_4.html", "classpanzer_1_1ScatterDirichletResidual__Tpetra_3_01panzer_1_1Traits_1_1Jacobian_00_01TRAITS_00_01LO_00_01GO_00_01NodeT_01_4" ]
+];

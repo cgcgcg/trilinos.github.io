@@ -1,0 +1,25 @@
+var classSacado_1_1Fad_1_1Expr_3_01SubtractionOp_3_01ExprT1_00_01ConstExpr_3_01T2_01_4_01_4_00_01ExprSpecDefault_01_4 =
+[
+    [ "base_expr_type", "classSacado_1_1Fad_1_1Expr_3_01SubtractionOp_3_01ExprT1_00_01ConstExpr_3_01T2_01_4_01_4_00_01ExprSpecDefault_01_4.html#a7c7137e27b22fae5c56b7dd8f9ed4ee9", null ],
+    [ "base_expr_type_1", "classSacado_1_1Fad_1_1Expr_3_01SubtractionOp_3_01ExprT1_00_01ConstExpr_3_01T2_01_4_01_4_00_01ExprSpecDefault_01_4.html#aaa107081463720dd919024a339cde445", null ],
+    [ "base_expr_type_2", "classSacado_1_1Fad_1_1Expr_3_01SubtractionOp_3_01ExprT1_00_01ConstExpr_3_01T2_01_4_01_4_00_01ExprSpecDefault_01_4.html#a03f245445dcaaf9ed5fb183a7cfa70d7", null ],
+    [ "ConstT", "classSacado_1_1Fad_1_1Expr_3_01SubtractionOp_3_01ExprT1_00_01ConstExpr_3_01T2_01_4_01_4_00_01ExprSpecDefault_01_4.html#ab48d557fc97d92b533d81ebc892bd67c", null ],
+    [ "ExprT2", "classSacado_1_1Fad_1_1Expr_3_01SubtractionOp_3_01ExprT1_00_01ConstExpr_3_01T2_01_4_01_4_00_01ExprSpecDefault_01_4.html#a3161362a4d2db97d5f9b723cdf21ee80", null ],
+    [ "scalar_type", "classSacado_1_1Fad_1_1Expr_3_01SubtractionOp_3_01ExprT1_00_01ConstExpr_3_01T2_01_4_01_4_00_01ExprSpecDefault_01_4.html#af09eca5bbaa260426edb1e17081c7fd8", null ],
+    [ "scalar_type_1", "classSacado_1_1Fad_1_1Expr_3_01SubtractionOp_3_01ExprT1_00_01ConstExpr_3_01T2_01_4_01_4_00_01ExprSpecDefault_01_4.html#a686085e04b1b5e5b267bb653b453f2dc", null ],
+    [ "scalar_type_2", "classSacado_1_1Fad_1_1Expr_3_01SubtractionOp_3_01ExprT1_00_01ConstExpr_3_01T2_01_4_01_4_00_01ExprSpecDefault_01_4.html#a4ce1d0792d58e236083cec4d62ddc68c", null ],
+    [ "value_type", "classSacado_1_1Fad_1_1Expr_3_01SubtractionOp_3_01ExprT1_00_01ConstExpr_3_01T2_01_4_01_4_00_01ExprSpecDefault_01_4.html#ac0bdf9dc798dff3e8f82138f8cf57061", null ],
+    [ "value_type_1", "classSacado_1_1Fad_1_1Expr_3_01SubtractionOp_3_01ExprT1_00_01ConstExpr_3_01T2_01_4_01_4_00_01ExprSpecDefault_01_4.html#a6eb87ecaf1ece2b4fb8a1c07b511ff1d", null ],
+    [ "value_type_2", "classSacado_1_1Fad_1_1Expr_3_01SubtractionOp_3_01ExprT1_00_01ConstExpr_3_01T2_01_4_01_4_00_01ExprSpecDefault_01_4.html#aa08a880ba890ea14874d655a3f1713d7", null ],
+    [ "Expr", "classSacado_1_1Fad_1_1Expr_3_01SubtractionOp_3_01ExprT1_00_01ConstExpr_3_01T2_01_4_01_4_00_01ExprSpecDefault_01_4.html#ab9a25062b826bb59180d3bfb2ca5ce3c", null ],
+    [ "cache", "classSacado_1_1Fad_1_1Expr_3_01SubtractionOp_3_01ExprT1_00_01ConstExpr_3_01T2_01_4_01_4_00_01ExprSpecDefault_01_4.html#a8c8aea0d4af6581667a2b4fd1adb297f", null ],
+    [ "dx", "classSacado_1_1Fad_1_1Expr_3_01SubtractionOp_3_01ExprT1_00_01ConstExpr_3_01T2_01_4_01_4_00_01ExprSpecDefault_01_4.html#a415ae2016eac6ea829e0d9ef79df6336", null ],
+    [ "fastAccessDx", "classSacado_1_1Fad_1_1Expr_3_01SubtractionOp_3_01ExprT1_00_01ConstExpr_3_01T2_01_4_01_4_00_01ExprSpecDefault_01_4.html#aed724043e90da8ac6be5c860ee15ddec", null ],
+    [ "hasFastAccess", "classSacado_1_1Fad_1_1Expr_3_01SubtractionOp_3_01ExprT1_00_01ConstExpr_3_01T2_01_4_01_4_00_01ExprSpecDefault_01_4.html#adbc08f2aa37d9c0d8c6af77e559b3797", null ],
+    [ "isPassive", "classSacado_1_1Fad_1_1Expr_3_01SubtractionOp_3_01ExprT1_00_01ConstExpr_3_01T2_01_4_01_4_00_01ExprSpecDefault_01_4.html#a48b719d8706538d88071297ff4922c5a", null ],
+    [ "size", "classSacado_1_1Fad_1_1Expr_3_01SubtractionOp_3_01ExprT1_00_01ConstExpr_3_01T2_01_4_01_4_00_01ExprSpecDefault_01_4.html#ab6ea08afc05058941fe601d88a7d3c7f", null ],
+    [ "updateValue", "classSacado_1_1Fad_1_1Expr_3_01SubtractionOp_3_01ExprT1_00_01ConstExpr_3_01T2_01_4_01_4_00_01ExprSpecDefault_01_4.html#a839ddf025e39333b26803c00c91bafec", null ],
+    [ "val", "classSacado_1_1Fad_1_1Expr_3_01SubtractionOp_3_01ExprT1_00_01ConstExpr_3_01T2_01_4_01_4_00_01ExprSpecDefault_01_4.html#ae474fb94cc3e6b812ddf5bc503dfe697", null ],
+    [ "c", "classSacado_1_1Fad_1_1Expr_3_01SubtractionOp_3_01ExprT1_00_01ConstExpr_3_01T2_01_4_01_4_00_01ExprSpecDefault_01_4.html#a437e7fbbd7d300833b94866a3314d36c", null ],
+    [ "expr1", "classSacado_1_1Fad_1_1Expr_3_01SubtractionOp_3_01ExprT1_00_01ConstExpr_3_01T2_01_4_01_4_00_01ExprSpecDefault_01_4.html#adf50211f0c85511807aca03c7e607952", null ]
+];

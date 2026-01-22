@@ -1,0 +1,4 @@
+var classAnasazi_1_1OperatorTraits_3_01Scalar_00_01Tpetra_1_1MultiVector_3_01Scalar_00_01LO_00_01GO_f1e0b4e2eb3225e8f02ce48cd8a0d2da =
+[
+    [ "Apply", "classAnasazi_1_1OperatorTraits_3_01Scalar_00_01Tpetra_1_1MultiVector_3_01Scalar_00_01LO_00_01GO_f1e0b4e2eb3225e8f02ce48cd8a0d2da.html#adafdba82860f45e0e7aa33f516254ede", null ]
+];

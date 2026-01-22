@@ -1,0 +1,4 @@
+var structStokhos_1_1DeviceForNode2_3_01Tpetra_1_1KokkosCompat_1_1KokkosDeviceWrapperNode_3_01ExecSpace_00_01MemSpace_01_4_01_4 =
+[
+    [ "type", "structStokhos_1_1DeviceForNode2_3_01Tpetra_1_1KokkosCompat_1_1KokkosDeviceWrapperNode_3_01ExecSpace_00_01MemSpace_01_4_01_4.html#ab5fbaa63460bed431645ae8e8465f364", null ]
+];

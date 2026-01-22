@@ -1,0 +1,28 @@
+var structZoltan2_1_1ReduceWeightsFunctor =
+[
+    [ "member_type", "structZoltan2_1_1ReduceWeightsFunctor.html#ac82f1cedbf88ecfb722ca337ab45ef78", null ],
+    [ "scalar_view_t", "structZoltan2_1_1ReduceWeightsFunctor.html#ac79a4a2b594d5ed85654e813e1cebd96", null ],
+    [ "value_type", "structZoltan2_1_1ReduceWeightsFunctor.html#a60d6f176ba2e0091e6a43ccbfa688b22", null ],
+    [ "ReduceWeightsFunctor", "structZoltan2_1_1ReduceWeightsFunctor.html#a67993f0a5c9dfb417861501cfbdbb047", null ],
+    [ "init", "structZoltan2_1_1ReduceWeightsFunctor.html#a3887330418d10c05df5ad148633ada5c", null ],
+    [ "join", "structZoltan2_1_1ReduceWeightsFunctor.html#a8598ce34ff4c37175013c10fb7a0d3b6", null ],
+    [ "operator()", "structZoltan2_1_1ReduceWeightsFunctor.html#abeaebbbfed8e19b978d56d7dfd134312", null ],
+    [ "team_shmem_size", "structZoltan2_1_1ReduceWeightsFunctor.html#aa68b5183f1081b66588568b789f50b6d", null ],
+    [ "concurrent_current_part", "structZoltan2_1_1ReduceWeightsFunctor.html#a5417b892683a4cb92e350011a97650fc", null ],
+    [ "coordinates", "structZoltan2_1_1ReduceWeightsFunctor.html#a9186fba6c0540f303b42c90c367747c7", null ],
+    [ "current_concurrent_num_parts", "structZoltan2_1_1ReduceWeightsFunctor.html#a8a7d2371c40b362e38f3777637e79f40", null ],
+    [ "current_work_part", "structZoltan2_1_1ReduceWeightsFunctor.html#a5a6bf56b6282c604f2887291ea223f8c", null ],
+    [ "cut_coordinates", "structZoltan2_1_1ReduceWeightsFunctor.html#a00307eb9602200b9f647eec838f059b3", null ],
+    [ "loop_count", "structZoltan2_1_1ReduceWeightsFunctor.html#a5fafd88471adab56fdebe46b155f0795", null ],
+    [ "max_scalar", "structZoltan2_1_1ReduceWeightsFunctor.html#a187e1f36d7ea7264996bbf69fe36fc99", null ],
+    [ "num_cuts", "structZoltan2_1_1ReduceWeightsFunctor.html#a7d6473686828aae28154020572716091", null ],
+    [ "part_xadj", "structZoltan2_1_1ReduceWeightsFunctor.html#aadc3103b97552a0bc1facddcf4377197", null ],
+    [ "parts", "structZoltan2_1_1ReduceWeightsFunctor.html#aa5ec3c9e36f954952a1000e969a4cdee", null ],
+    [ "permutations", "structZoltan2_1_1ReduceWeightsFunctor.html#ab9803e0953a30b7a3eabdb7481252a0c", null ],
+    [ "sEpsilon", "structZoltan2_1_1ReduceWeightsFunctor.html#afd6eb187e372f36c1c6e24002d399f27", null ],
+    [ "uniform_weights0", "structZoltan2_1_1ReduceWeightsFunctor.html#ac318895d2ac7b2340d79d517cde2ff19", null ],
+    [ "value_count", "structZoltan2_1_1ReduceWeightsFunctor.html#a29c45a3112d06816da5986c39088e2f3", null ],
+    [ "value_count_rightleft", "structZoltan2_1_1ReduceWeightsFunctor.html#aebdc7cb7bc327f9f2350e45c8fef14d6", null ],
+    [ "value_count_weights", "structZoltan2_1_1ReduceWeightsFunctor.html#aa85d3ba4c2c9d0bab0af4db13db1d2d8", null ],
+    [ "weights", "structZoltan2_1_1ReduceWeightsFunctor.html#a5c16f4a93034c31477a18ecf889601c8", null ]
+];

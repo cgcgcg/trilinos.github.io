@@ -1,0 +1,26 @@
+var structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnEdges__HGRAD =
+[
+    [ "ComputeBasisCoeffsOnEdges_HGRAD", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnEdges__HGRAD.html#a1c149c220d144ede3bc1b6a190425a6e", null ],
+    [ "operator()", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnEdges__HGRAD.html#a51bf8b8d846abbd5d7da89b4e0f311b5", null ],
+    [ "basisCoeffs_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnEdges__HGRAD.html#a5ebc11ba39204990532097b97145a80f", null ],
+    [ "basisGradAtBasisGradEPoints_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnEdges__HGRAD.html#a69c793b0045daa1e1d28bfba1cc0ea26", null ],
+    [ "basisGradAtTargetGradEPoints_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnEdges__HGRAD.html#a342b814bca2753695a3e4437b810618b", null ],
+    [ "basisGradEWeights_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnEdges__HGRAD.html#a3f7d2f639cfac183a8c8e473cf7a1942", null ],
+    [ "basisTanAtEPoints_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnEdges__HGRAD.html#a334b6bb46af65ed9b32371d910e94ca3", null ],
+    [ "computedDofs_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnEdges__HGRAD.html#a805bcfd1f23190cd0a5fb79d5e99cc70", null ],
+    [ "dim_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnEdges__HGRAD.html#ad68e7ade2d3998a663ee716cac5f6a03", null ],
+    [ "edgeCardinality_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnEdges__HGRAD.html#a264303455267ad49dfd0c9969c3f6623", null ],
+    [ "edgeDim_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnEdges__HGRAD.html#ac6fb59fc9970b5fdf8785158afb6db15", null ],
+    [ "iedge_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnEdges__HGRAD.html#afd7232a35c8fe0b816469a96a3c794dd", null ],
+    [ "negPartialProjGrad_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnEdges__HGRAD.html#a59157958ae45770fe860c023129e7fd6", null ],
+    [ "numVertexDofs_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnEdges__HGRAD.html#afcb8748d74da188570ac4d5b63410f2a", null ],
+    [ "offsetBasis_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnEdges__HGRAD.html#a6f23ab2f44d02724a1ab4427c8d5fc50", null ],
+    [ "offsetTarget_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnEdges__HGRAD.html#a58eaf3c810c13d6316537b0a5b1f640e", null ],
+    [ "refEdgeTan_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnEdges__HGRAD.html#a575ed47110c3bc6e4e8c7c3839b516b0", null ],
+    [ "tagToOrdinal_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnEdges__HGRAD.html#ab791667d33772f9ee34456e75f45b844", null ],
+    [ "targetGradAtTargetGradEPoints_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnEdges__HGRAD.html#acd3c782bbc6dc10ad4dd7e235916c6c9", null ],
+    [ "targetGradEWeights_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnEdges__HGRAD.html#ac2bf0fa94f6511f6c985c6950dee856f", null ],
+    [ "targetGradTanAtTargetGradEPoints_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnEdges__HGRAD.html#aefebf4751d1984da131330bf650b52c2", null ],
+    [ "wBasisAtBasisGradEPoints_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnEdges__HGRAD.html#a28574b0f9a8851484a16452ca687ccda", null ],
+    [ "wBasisAtTargetGradEPoints_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnEdges__HGRAD.html#aec85f691463433d1d11570ff2829aaef", null ]
+];

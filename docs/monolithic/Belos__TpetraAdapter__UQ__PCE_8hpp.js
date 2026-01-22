@@ -1,0 +1,5 @@
+var Belos__TpetraAdapter__UQ__PCE_8hpp =
+[
+    [ "Belos::MultiVecTraits< typename Storage::value_type, Tpetra::MultiVector< Sacado::UQ::PCE< Storage >, LO, GO, Node > >", "classBelos_1_1MultiVecTraits_3_01typename_01Storage_1_1value__type_00_01Tpetra_1_1MultiVector_3_9aa6034d7b98afbf8fc451989db9447a.html", "classBelos_1_1MultiVecTraits_3_01typename_01Storage_1_1value__type_00_01Tpetra_1_1MultiVector_3_9aa6034d7b98afbf8fc451989db9447a" ],
+    [ "Belos::OperatorTraits< typename Storage::value_type, Tpetra::MultiVector< Sacado::UQ::PCE< Storage >, LO, GO, Node >, Tpetra::Operator< Sacado::UQ::PCE< Storage >, LO, GO, Node > >", "classBelos_1_1OperatorTraits_3_01typename_01Storage_1_1value__type_00_01Tpetra_1_1MultiVector_3_306685415b54edabad279edd67af70dd.html", "classBelos_1_1OperatorTraits_3_01typename_01Storage_1_1value__type_00_01Tpetra_1_1MultiVector_3_306685415b54edabad279edd67af70dd" ]
+];

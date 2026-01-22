@@ -1,0 +1,6 @@
+var classTpetra_1_1Details_1_1Impl_1_1CreateMirrorViewFromUnmanagedHostArray_3_01ValueType_00_01Outpc8ec942a4ef5804b59b5189c00c297f1 =
+[
+    [ "input_view_type", "classTpetra_1_1Details_1_1Impl_1_1CreateMirrorViewFromUnmanagedHostArray_3_01ValueType_00_01Outpc8ec942a4ef5804b59b5189c00c297f1.html#acb737f66b684fac9affa35e693fb26b7", null ],
+    [ "output_view_type", "classTpetra_1_1Details_1_1Impl_1_1CreateMirrorViewFromUnmanagedHostArray_3_01ValueType_00_01Outpc8ec942a4ef5804b59b5189c00c297f1.html#afdd55a53cfa6d6eae985e4143d1f7124", null ],
+    [ "doIt", "classTpetra_1_1Details_1_1Impl_1_1CreateMirrorViewFromUnmanagedHostArray_3_01ValueType_00_01Outpc8ec942a4ef5804b59b5189c00c297f1.html#a8c2649e740e172c5fa1d5d6a1ff24954", null ]
+];

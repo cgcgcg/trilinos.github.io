@@ -1,0 +1,66 @@
+var group__Thyra__Op__Vec__adapters__Spmd__support__grp =
+[
+    [ "Thyra::SerialVectorSpaceConverterBase< ScalarFrom, ScalarTo >", "classThyra_1_1SerialVectorSpaceConverterBase.html", [
+      [ "convert", "classThyra_1_1SerialVectorSpaceConverterBase.html#ae872a68d46d843ab3d6f5cf9b3c238d6", null ]
+    ] ],
+    [ "Thyra::SpmdMultiVectorDefaultBase< Scalar >", "classThyra_1_1SpmdMultiVectorDefaultBase.html", [
+      [ "SpmdMultiVectorDefaultBase", "classThyra_1_1SpmdMultiVectorDefaultBase.html#a3b24a839581c57f90505354f99b36d6d", null ],
+      [ "acquireDetachedMultiVectorViewImpl", "classThyra_1_1SpmdMultiVectorDefaultBase.html#a9f0397ef2572f7425bdf6403f6c7bc44", null ],
+      [ "acquireNonconstDetachedMultiVectorViewImpl", "classThyra_1_1SpmdMultiVectorDefaultBase.html#ab8425331bd55c07b124f317546b52077", null ],
+      [ "commitNonconstDetachedMultiVectorViewImpl", "classThyra_1_1SpmdMultiVectorDefaultBase.html#affff7909bc831eae9a32ce21afc6a7f5", null ],
+      [ "euclideanApply", "classThyra_1_1SpmdMultiVectorDefaultBase.html#ab240cdf31f25e4b21f0ce642bbe194a4", null ],
+      [ "getLocalSubMultiVectorImpl", "classThyra_1_1SpmdMultiVectorDefaultBase.html#af138ba54a24b5bdb008fdc010045cfe2", null ],
+      [ "getNonconstLocalSubMultiVectorImpl", "classThyra_1_1SpmdMultiVectorDefaultBase.html#aaea6b873ce2ca30a5ed3e5c8cd62ad09", null ],
+      [ "mvMultiReductApplyOpImpl", "classThyra_1_1SpmdMultiVectorDefaultBase.html#add739d0764fdd5b450760a987533c73a", null ],
+      [ "rangeScalarProdVecSpc", "classThyra_1_1SpmdMultiVectorDefaultBase.html#a0085b8932252337ce1645a2c8de121c0", null ],
+      [ "releaseDetachedMultiVectorViewImpl", "classThyra_1_1SpmdMultiVectorDefaultBase.html#a9054861544afcce61ffca5fbf2cf02c0", null ],
+      [ "updateSpmdSpace", "classThyra_1_1SpmdMultiVectorDefaultBase.html#ab91f48e0bf078c78aac91e297ab6e973", null ],
+      [ "validateColRange", "classThyra_1_1SpmdMultiVectorDefaultBase.html#a8088a69fe4480f7d2850e307b437ddde", null ],
+      [ "validateRowRange", "classThyra_1_1SpmdMultiVectorDefaultBase.html#a3e335d08059b6b307f49ee686de6819d", null ],
+      [ "blas_", "classThyra_1_1SpmdMultiVectorDefaultBase.html#a3a04b516734db1bf540b33defc9286b9", null ],
+      [ "globalDim_", "classThyra_1_1SpmdMultiVectorDefaultBase.html#aea64ddd35cf6947047574f35f9344183", null ],
+      [ "in_applyOp_", "classThyra_1_1SpmdMultiVectorDefaultBase.html#a093002ec594fe2f13fea1d86356af026", null ],
+      [ "localOffset_", "classThyra_1_1SpmdMultiVectorDefaultBase.html#aa5103c35db46f2c4d85aa33efc2578d1", null ],
+      [ "localSubDim_", "classThyra_1_1SpmdMultiVectorDefaultBase.html#ab812183ff30b74a70c7338575d602900", null ],
+      [ "numCols_", "classThyra_1_1SpmdMultiVectorDefaultBase.html#a9677f0ddea70c6a72932ea22478f6e5e", null ]
+    ] ],
+    [ "Thyra::SpmdVectorDefaultBase< Scalar >", "classThyra_1_1SpmdVectorDefaultBase.html", [
+      [ "SpmdVectorDefaultBase", "classThyra_1_1SpmdVectorDefaultBase.html#a4471a265638bd483a9c41c228d265714", null ],
+      [ "acquireDetachedVectorViewImpl", "classThyra_1_1SpmdVectorDefaultBase.html#a44be0d924e28e8143e25a2ce746f8d1b", null ],
+      [ "acquireNonconstDetachedVectorViewImpl", "classThyra_1_1SpmdVectorDefaultBase.html#a33fd49f0ac7b433355c2e8522594e33b", null ],
+      [ "applyOpImpl", "classThyra_1_1SpmdVectorDefaultBase.html#a2d05f58aa8b6c944346f723aef02c86f", null ],
+      [ "applyOpImplWithComm", "classThyra_1_1SpmdVectorDefaultBase.html#ae87dad9655b9e713f6074a42cfa434d9", null ],
+      [ "commitNonconstDetachedVectorViewImpl", "classThyra_1_1SpmdVectorDefaultBase.html#a97ac49980c1cc81688c0a1259e0fdb37", null ],
+      [ "description", "classThyra_1_1SpmdVectorDefaultBase.html#a45d383e51b4bb2891296e032189e1f92", null ],
+      [ "getLocalMultiVectorDataImpl", "classThyra_1_1SpmdVectorDefaultBase.html#a26386a5e287430b3c6be13743338d6ff", null ],
+      [ "getLocalSubMultiVectorImpl", "classThyra_1_1SpmdVectorDefaultBase.html#ac1ebc7614a6caa13a9cb2daa0a66d4eb", null ],
+      [ "getLocalSubVectorImpl", "classThyra_1_1SpmdVectorDefaultBase.html#afb1d2de2066287f750aab8420bca5fbf", null ],
+      [ "getNonconstLocalMultiVectorDataImpl", "classThyra_1_1SpmdVectorDefaultBase.html#ad924590a5e16d7d245aff505abbe5573", null ],
+      [ "getNonconstLocalSubMultiVectorImpl", "classThyra_1_1SpmdVectorDefaultBase.html#a021472232fbf79f0ece68cbd68719d66", null ],
+      [ "getNonconstLocalSubVectorImpl", "classThyra_1_1SpmdVectorDefaultBase.html#aef7dfd3cb05117ea92fce4e75541913c", null ],
+      [ "releaseDetachedVectorViewImpl", "classThyra_1_1SpmdVectorDefaultBase.html#a3a27dcc75af5e6d4efb55103dd1f6a00", null ],
+      [ "space", "classThyra_1_1SpmdVectorDefaultBase.html#af732739cb958f9d16b705c548e228059", null ],
+      [ "updateSpmdSpace", "classThyra_1_1SpmdVectorDefaultBase.html#aa3f292d56b71f5b2e75cf91bdc4d7fd7", null ],
+      [ "validateRange", "classThyra_1_1SpmdVectorDefaultBase.html#a280fa3e266e7afad4e8d619618afcc50", null ],
+      [ "globalDim_", "classThyra_1_1SpmdVectorDefaultBase.html#ab58cfeae462cdcd21b7d5b3045fc4f1b", null ],
+      [ "localOffset_", "classThyra_1_1SpmdVectorDefaultBase.html#a7b5ccee25f31eeeac66cdfffab7e3d57", null ],
+      [ "localSubDim_", "classThyra_1_1SpmdVectorDefaultBase.html#a3548750d8367b6fae9a61902c752c427", null ]
+    ] ],
+    [ "Thyra::SpmdVectorSpaceDefaultBase< Scalar >", "classThyra_1_1SpmdVectorSpaceDefaultBase.html", [
+      [ "SpmdVectorSpaceDefaultBase", "classThyra_1_1SpmdVectorSpaceDefaultBase.html#a8c16e9f84b7b3fc73fac0976767df2fb", null ],
+      [ "description", "classThyra_1_1SpmdVectorSpaceDefaultBase.html#a3878cf149b4e12c79b1cc3545676147e", null ],
+      [ "dim", "classThyra_1_1SpmdVectorSpaceDefaultBase.html#abd6c7b070e61d5963af7a430705ac9a9", null ],
+      [ "isCompatible", "classThyra_1_1SpmdVectorSpaceDefaultBase.html#af4b1f9b508ced74e9e7a571e757df0cc", null ],
+      [ "isLocallyReplicated", "classThyra_1_1SpmdVectorSpaceDefaultBase.html#a53e0d926e027e7642ae6f1222e8bcc3d", null ],
+      [ "localOffset", "classThyra_1_1SpmdVectorSpaceDefaultBase.html#a51113a1e99f32b94559d7e7a345a08d4", null ],
+      [ "mapCode", "classThyra_1_1SpmdVectorSpaceDefaultBase.html#a6dc23c464369f6b3dddb4436d244e22c", null ],
+      [ "smallVecSpcFcty", "classThyra_1_1SpmdVectorSpaceDefaultBase.html#a3b408155a27b21ec12be3945aa725c94", null ],
+      [ "updateState", "classThyra_1_1SpmdVectorSpaceDefaultBase.html#a06e2ff2288a78f6101a955b29d4e611c", null ],
+      [ "defaultGlobalDim_", "classThyra_1_1SpmdVectorSpaceDefaultBase.html#a8bd2117f4f17c4f513b352527d2f18f6", null ],
+      [ "defaultLocalOffset_", "classThyra_1_1SpmdVectorSpaceDefaultBase.html#a49f590b2782eb29e023bf5871c9342f2", null ],
+      [ "isLocallyReplicated_", "classThyra_1_1SpmdVectorSpaceDefaultBase.html#a81421ccf0cff5027e996f5d8dcc2efb9", null ],
+      [ "localSubDim_", "classThyra_1_1SpmdVectorSpaceDefaultBase.html#a076b89bf189abb6be7d351e2e32d4f16", null ],
+      [ "mapCode_", "classThyra_1_1SpmdVectorSpaceDefaultBase.html#adf127c1135006ffb7c6e1d905787eb66", null ],
+      [ "smallVecSpcFcty_", "classThyra_1_1SpmdVectorSpaceDefaultBase.html#af295ba1d16e015e0baee7334c4f560b7", null ]
+    ] ]
+];

@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['dahlquisttestmodel_2ecpp_0',['DahlquistTestModel.cpp',['../DahlquistTestModel_8cpp.html',1,'']]],
+  ['dahlquisttestmodel_5fdecl_2ehpp_1',['DahlquistTestModel_decl.hpp',['../DahlquistTestModel__decl_8hpp.html',1,'']]],
+  ['dahlquisttestmodel_5fimpl_2ehpp_2',['DahlquistTestModel_impl.hpp',['../DahlquistTestModel__impl_8hpp.html',1,'']]],
+  ['ddirectorytest_2ecpp_3',['ddirectoryTest.cpp',['../ddirectoryTest_8cpp.html',1,'']]],
+  ['debugmanager_2ecpp_4',['DebugManager.cpp',['../DebugManager_8cpp.html',1,'']]],
+  ['design_2fphalanx_5fkokkosviewofviews_2ehpp_5',['Phalanx_KokkosViewOfViews.hpp',['../design_2Phalanx__KokkosViewOfViews_8hpp.html',1,'']]],
+  ['detail_2fdevice_2fmvmultiply_2eh_6',['MVmultiply.h',['../detail_2device_2MVmultiply_8h.html',1,'']]],
+  ['detail_2fdispatch_2fmvmultiply_2eh_7',['MVmultiply.h',['../detail_2dispatch_2MVmultiply_8h.html',1,'']]],
+  ['developer_2edox_8',['developer.dox',['../developer_8dox.html',1,'']]],
+  ['diagonalquadraticresponseonlymodelevaluator_5funittests_2ecpp_9',['DiagonalQuadraticResponseOnlyModelEvaluator_UnitTests.cpp',['../DiagonalQuadraticResponseOnlyModelEvaluator__UnitTests_8cpp.html',1,'']]],
+  ['directorytest_5ffinduniquegids_2ecpp_10',['directoryTest_findUniqueGids.cpp',['../directoryTest__findUniqueGids_8cpp.html',1,'']]],
+  ['directorytest_5fimpl_2ehpp_11',['directoryTest_Impl.hpp',['../directoryTest__Impl_8hpp.html',1,'']]],
+  ['directorytest_5fkokkos_2ecpp_12',['directoryTest_Kokkos.cpp',['../directoryTest__Kokkos_8cpp.html',1,'']]],
+  ['directorytest_5fkokkossimple_2ecpp_13',['directoryTest_KokkosSimple.cpp',['../directoryTest__KokkosSimple_8cpp.html',1,'']]],
+  ['dirs_2edoc_14',['dirs.doc',['../dirs_8doc.html',1,'']]],
+  ['discretization_2emd_15',['discretization.md',['../discretization_8md.html',1,'']]],
+  ['dual_2dspaces_2frosenbrock_2d1_2fexample_5f01_2ecpp_16',['example_01.cpp',['../dual-spaces_2rosenbrock-1_2example__01_8cpp.html',1,'']]],
+  ['dual_2dspaces_2frosenbrock_2d1_2fexample_5f02_2ecpp_17',['example_02.cpp',['../dual-spaces_2rosenbrock-1_2example__02_8cpp.html',1,'']]],
+  ['dual_2dspaces_2fsimple_2deq_2dconstr_2d1_2fexample_5f01_2ecpp_18',['example_01.cpp',['../dual-spaces_2simple-eq-constr-1_2example__01_8cpp.html',1,'']]],
+  ['dummymodelevaluator_5fstepsize_5funittests_2ecpp_19',['DummyModelEvaluator_StepSize_UnitTests.cpp',['../DummyModelEvaluator__StepSize__UnitTests_8cpp.html',1,'']]]
+];

@@ -1,0 +1,4 @@
+var structstd_1_1is__same_3_01Kokkos_1_1LayoutContiguous_3_01Layout_00_01Stride_01_4_00_01Layout_01_4 =
+[
+    [ "value", "structstd_1_1is__same_3_01Kokkos_1_1LayoutContiguous_3_01Layout_00_01Stride_01_4_00_01Layout_01_4.html#a5542218b82f547aeb97e0b98f65e8095", null ]
+];

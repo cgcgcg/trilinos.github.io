@@ -1,0 +1,4 @@
+var structSacado_1_1Promote_3_01Rad2_01_1_1ADvar_3_01T_01_4_00_01Rad2_01_1_1ADvari_3_01T_01_4_01_6_01_4 =
+[
+    [ "type", "structSacado_1_1Promote_3_01Rad2_01_1_1ADvar_3_01T_01_4_00_01Rad2_01_1_1ADvari_3_01T_01_4_01_6_01_4.html#a0cdf6fd2c7d37f2590ee0c3a33b6129f", null ]
+];

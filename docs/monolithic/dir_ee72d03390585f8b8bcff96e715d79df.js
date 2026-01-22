@@ -1,0 +1,28 @@
+var dir_ee72d03390585f8b8bcff96e715d79df =
+[
+    [ "boundconstraint", "dir_056a0532ed16ba47943e40c6df17771d.html", "dir_056a0532ed16ba47943e40c6df17771d" ],
+    [ "constraint", "dir_88047fe715dba3cf4e7f52e0899e9b7c.html", "dir_88047fe715dba3cf4e7f52e0899e9b7c" ],
+    [ "dynamic", "dir_0ae756d6cc7fa8b97f5213fb52cbf230.html", "dir_0ae756d6cc7fa8b97f5213fb52cbf230" ],
+    [ "nlls", "dir_c09f3518932d2066f345c62f3d17bc91.html", "dir_c09f3518932d2066f345c62f3d17bc91" ],
+    [ "objective", "dir_fdf928ffe2034241d72f878580a47762.html", "dir_fdf928ffe2034241d72f878580a47762" ],
+    [ "operator", "dir_14a2d232e8779034b1cf7a55c56c5208.html", "dir_14a2d232e8779034b1cf7a55c56c5208" ],
+    [ "polyproj", "dir_5a9af6081f99da11c01e2cd96b7ddcf5.html", "dir_5a9af6081f99da11c01e2cd96b7ddcf5" ],
+    [ "prox", "dir_f110b1f0aa45b3c9ee47a2ec654d2a78.html", "dir_f110b1f0aa45b3c9ee47a2ec654d2a78" ],
+    [ "simopt", "dir_39af3ae0fa0b24e4be0fc13362314263.html", "dir_39af3ae0fa0b24e4be0fc13362314263" ],
+    [ "sketching", "dir_caa0d8f8190f4158f5cd1156d5ecdeb8.html", "dir_caa0d8f8190f4158f5cd1156d5ecdeb8" ],
+    [ "std", "dir_a6a2f5cdcc74298db138c3c19012cbb6.html", "dir_a6a2f5cdcc74298db138c3c19012cbb6" ],
+    [ "ROL_ConstraintAssembler.hpp", "ROL__ConstraintAssembler_8hpp.html", "ROL__ConstraintAssembler_8hpp" ],
+    [ "ROL_ConstraintAssembler_Def.hpp", "ROL__ConstraintAssembler__Def_8hpp.html", null ],
+    [ "ROL_ConstraintManager.hpp", "ROL__ConstraintManager_8hpp.html", null ],
+    [ "ROL_NewConstraintManager.hpp", "ROL__NewConstraintManager_8hpp.html", "ROL__NewConstraintManager_8hpp" ],
+    [ "ROL_NewConstraintManager_Def.hpp", "ROL__NewConstraintManager__Def_8hpp.html", null ],
+    [ "ROL_ObjectiveMMA.hpp", "ROL__ObjectiveMMA_8hpp.html", null ],
+    [ "ROL_ReduceLinearConstraint.hpp", "ROL__ReduceLinearConstraint_8hpp.html", null ],
+    [ "ROL_ReduceLinearConstraint_Def.hpp", "ROL__ReduceLinearConstraint__Def_8hpp.html", null ],
+    [ "ROL_ScalarController.hpp", "ROL__ScalarController_8hpp.html", "ROL__ScalarController_8hpp" ],
+    [ "ROL_ScalarController_Def.hpp", "ROL__ScalarController__Def_8hpp.html", null ],
+    [ "ROL_UpdateType.hpp", "ROL__UpdateType_8hpp.html", "ROL__UpdateType_8hpp" ],
+    [ "ROL_VectorController.hpp", "ROL__VectorController_8hpp.html", "ROL__VectorController_8hpp" ],
+    [ "ROL_VectorController_Def.hpp", "ROL__VectorController__Def_8hpp.html", null ],
+    [ "ROL_VectorNorms.hpp", "ROL__VectorNorms_8hpp.html", "ROL__VectorNorms_8hpp" ]
+];

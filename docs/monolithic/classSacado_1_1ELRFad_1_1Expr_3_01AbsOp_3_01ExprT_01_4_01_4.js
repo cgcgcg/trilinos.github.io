@@ -1,0 +1,26 @@
+var classSacado_1_1ELRFad_1_1Expr_3_01AbsOp_3_01ExprT_01_4_01_4 =
+[
+    [ "base_expr_type", "classSacado_1_1ELRFad_1_1Expr_3_01AbsOp_3_01ExprT_01_4_01_4.html#aaf73808e0c7b9f47c7aeb2055b57747e", null ],
+    [ "scalar_type", "classSacado_1_1ELRFad_1_1Expr_3_01AbsOp_3_01ExprT_01_4_01_4.html#a27f2a80be7653af28574dbffebcac1cc", null ],
+    [ "value_type", "classSacado_1_1ELRFad_1_1Expr_3_01AbsOp_3_01ExprT_01_4_01_4.html#afcbfab182a1f2b2869633866556b9223", null ],
+    [ "Expr", "classSacado_1_1ELRFad_1_1Expr_3_01AbsOp_3_01ExprT_01_4_01_4.html#a1cd14df0421bcfd4da62d5ebe46856bb", null ],
+    [ "cache", "classSacado_1_1ELRFad_1_1Expr_3_01AbsOp_3_01ExprT_01_4_01_4.html#ad30c1c383452492142875fcc30c1ce57", null ],
+    [ "computeActivePartials", "classSacado_1_1ELRFad_1_1Expr_3_01AbsOp_3_01ExprT_01_4_01_4.html#ab79c8e0505f0c02b1b41e8a92525636b", null ],
+    [ "computePartials", "classSacado_1_1ELRFad_1_1Expr_3_01AbsOp_3_01ExprT_01_4_01_4.html#a329dc392e1a23bd1f9574b88631d7920", null ],
+    [ "dx", "classSacado_1_1ELRFad_1_1Expr_3_01AbsOp_3_01ExprT_01_4_01_4.html#aba76c78946b549a9a4440a7b5c6a2cf3", null ],
+    [ "fastAccessDx", "classSacado_1_1ELRFad_1_1Expr_3_01AbsOp_3_01ExprT_01_4_01_4.html#a659850f21da5aa05cd46b1803b222f48", null ],
+    [ "getDx", "classSacado_1_1ELRFad_1_1Expr_3_01AbsOp_3_01ExprT_01_4_01_4.html#a7e8e2f17e051d3656328cf62ae7f1e53", null ],
+    [ "getTangent", "classSacado_1_1ELRFad_1_1Expr_3_01AbsOp_3_01ExprT_01_4_01_4.html#afd5871be366b153233fe0d1da3205a30", null ],
+    [ "getTangents", "classSacado_1_1ELRFad_1_1Expr_3_01AbsOp_3_01ExprT_01_4_01_4.html#afb9f4d7035521627dd1b6789b4a11b47", null ],
+    [ "hasFastAccess", "classSacado_1_1ELRFad_1_1Expr_3_01AbsOp_3_01ExprT_01_4_01_4.html#ae8921c92e67be261f2bc0d894badff26", null ],
+    [ "isActive", "classSacado_1_1ELRFad_1_1Expr_3_01AbsOp_3_01ExprT_01_4_01_4.html#a271251155a4b24a42be47ecf4fa7e67c", null ],
+    [ "isActive2", "classSacado_1_1ELRFad_1_1Expr_3_01AbsOp_3_01ExprT_01_4_01_4.html#acded018b401d3679bcf7cf76b9cdd22a", null ],
+    [ "isLinear", "classSacado_1_1ELRFad_1_1Expr_3_01AbsOp_3_01ExprT_01_4_01_4.html#a3c1091209ecf68c180c16d9a436187ab", null ],
+    [ "numActiveArgs", "classSacado_1_1ELRFad_1_1Expr_3_01AbsOp_3_01ExprT_01_4_01_4.html#ae576aeb665d605341efd0fc693cfb1ac", null ],
+    [ "size", "classSacado_1_1ELRFad_1_1Expr_3_01AbsOp_3_01ExprT_01_4_01_4.html#aaa73631fe9667df0960055fed62a011e", null ],
+    [ "updateValue", "classSacado_1_1ELRFad_1_1Expr_3_01AbsOp_3_01ExprT_01_4_01_4.html#a6153e9d4388961b1820932e85b3c6eb5", null ],
+    [ "val", "classSacado_1_1ELRFad_1_1Expr_3_01AbsOp_3_01ExprT_01_4_01_4.html#a18e619fdb03aa6fd5556f991e39c1c22", null ],
+    [ "expr", "classSacado_1_1ELRFad_1_1Expr_3_01AbsOp_3_01ExprT_01_4_01_4.html#a2145e0f47b7813ee0507980600bd6c83", null ],
+    [ "is_linear", "classSacado_1_1ELRFad_1_1Expr_3_01AbsOp_3_01ExprT_01_4_01_4.html#abccffd8f34673f25e6b34a7b9bf6e01e", null ],
+    [ "num_args", "classSacado_1_1ELRFad_1_1Expr_3_01AbsOp_3_01ExprT_01_4_01_4.html#ae735ddee2433e109c3eaf1ba55e8d76e", null ]
+];

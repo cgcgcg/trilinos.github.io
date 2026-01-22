@@ -1,0 +1,27 @@
+var classTeko_1_1DiagnosticLinearOp =
+[
+    [ "DiagnosticLinearOp", "classTeko_1_1DiagnosticLinearOp.html#ac49ebdc3538f669401c040456735200a", null ],
+    [ "DiagnosticLinearOp", "classTeko_1_1DiagnosticLinearOp.html#a8999e7c0e78ba0ea00efb5a0b769d5ac", null ],
+    [ "DiagnosticLinearOp", "classTeko_1_1DiagnosticLinearOp.html#a4fb6600f52ba9ade0329987c066c9d03", null ],
+    [ "~DiagnosticLinearOp", "classTeko_1_1DiagnosticLinearOp.html#a3371ca4d5c50e5a0857a65414d046485", null ],
+    [ "DiagnosticLinearOp", "classTeko_1_1DiagnosticLinearOp.html#a61cbb170a157fde58d7d56302c76cbd5", null ],
+    [ "DiagnosticLinearOp", "classTeko_1_1DiagnosticLinearOp.html#acf6f6e5045da1eb4df2f6624a5e32b2d", null ],
+    [ "describe", "classTeko_1_1DiagnosticLinearOp.html#ab1b7a01c5e3126d3fbd3c2c4cc7fb478", null ],
+    [ "domain", "classTeko_1_1DiagnosticLinearOp.html#a76fe663925a629e97c9a3cee004a4b87", null ],
+    [ "getLinearOp", "classTeko_1_1DiagnosticLinearOp.html#adfb0ecd835723db7491649e4bef78552", null ],
+    [ "getModifiableOp", "classTeko_1_1DiagnosticLinearOp.html#a48eaca71139ca025c988cae967e6348d", null ],
+    [ "getResidualNorm", "classTeko_1_1DiagnosticLinearOp.html#ab9fb86304b7f253097b56cb6d8f8ff15", null ],
+    [ "implicitApply", "classTeko_1_1DiagnosticLinearOp.html#a72b5f1dd5d8e4271b293938c2085ab69", null ],
+    [ "numApplications", "classTeko_1_1DiagnosticLinearOp.html#a165f6f843305fc991e4a4899f1f5a290", null ],
+    [ "range", "classTeko_1_1DiagnosticLinearOp.html#a047f31cc0a2c71d2ab358d13c998d671", null ],
+    [ "setForwardOp", "classTeko_1_1DiagnosticLinearOp.html#ac0d0ac7cf57d94fc141e2b6cf3b59679", null ],
+    [ "setLinearOp", "classTeko_1_1DiagnosticLinearOp.html#ab3e989f52c9bb387b44fd168ca50ddda", null ],
+    [ "totalTime", "classTeko_1_1DiagnosticLinearOp.html#ab395ac9f6e62b2cee1a36a3c4d6cccf2", null ],
+    [ "diagString_", "classTeko_1_1DiagnosticLinearOp.html#a320bbc7cafe046fed9b498ceb4e7b9b1", null ],
+    [ "fwdOp_", "classTeko_1_1DiagnosticLinearOp.html#a294df817217886beed4bba25d1d70f7a", null ],
+    [ "outputStream_", "classTeko_1_1DiagnosticLinearOp.html#a6a651d69eab7078f6975a82120313d1f", null ],
+    [ "residualNorm_", "classTeko_1_1DiagnosticLinearOp.html#a7a8baf74d9967acc5a86c25332e5b66b", null ],
+    [ "timer_", "classTeko_1_1DiagnosticLinearOp.html#a152e712471c42093a887618b2809560c", null ],
+    [ "wrapOpA_", "classTeko_1_1DiagnosticLinearOp.html#af33ed3b9e5c1c94ae58947768c15d78e", null ],
+    [ "wrapOpA_lo_", "classTeko_1_1DiagnosticLinearOp.html#ad9aac1ad7e403098dadfb314ba710903", null ]
+];

@@ -1,0 +1,26 @@
+var classROL_1_1TypeU_1_1BundleAlgorithm =
+[
+    [ "BundleAlgorithm", "classROL_1_1TypeU_1_1BundleAlgorithm.html#a3f6745643b607087f1f27fd84855b1f2", null ],
+    [ "initialize", "classROL_1_1TypeU_1_1BundleAlgorithm.html#a8b98c48c9b3f598050d2e6afd1ae7418", null ],
+    [ "run", "classROL_1_1TypeU_1_1BundleAlgorithm.html#ade6c33ff80b273e9677854bfaaee56f3", null ],
+    [ "writeHeader", "classROL_1_1TypeU_1_1BundleAlgorithm.html#a62ab8d990d1cfb2a906bf4f5eb766c01", null ],
+    [ "writeName", "classROL_1_1TypeU_1_1BundleAlgorithm.html#ab1b181781caf4941613614aa8fc357b9", null ],
+    [ "writeOutput", "classROL_1_1TypeU_1_1BundleAlgorithm.html#a4fcd3605204e07e2b94b9062021533a2", null ],
+    [ "bundle_", "classROL_1_1TypeU_1_1BundleAlgorithm.html#a95a786a1e1526464388b339a34902fd7", null ],
+    [ "first_print_", "classROL_1_1TypeU_1_1BundleAlgorithm.html#adfb89e43c6dbd7ec312cdad6762205aa", null ],
+    [ "isConvex_", "classROL_1_1TypeU_1_1BundleAlgorithm.html#a98668ac3cc429ecdab7027d4cf6f8424", null ],
+    [ "lineSearch_", "classROL_1_1TypeU_1_1BundleAlgorithm.html#a40048d628bae210b9a7696563cb2fb79", null ],
+    [ "ls_maxit_", "classROL_1_1TypeU_1_1BundleAlgorithm.html#aa3696a2765ba821e67c9b35736561768", null ],
+    [ "m1_", "classROL_1_1TypeU_1_1BundleAlgorithm.html#ac72d2db0509b706914e58f72f07bd9ca", null ],
+    [ "m2_", "classROL_1_1TypeU_1_1BundleAlgorithm.html#ab98543f0cc3e7e5d8b3906caaf9a62fe", null ],
+    [ "m3_", "classROL_1_1TypeU_1_1BundleAlgorithm.html#a6753f81ecd447bbd44721b65766f4b17", null ],
+    [ "nu_", "classROL_1_1TypeU_1_1BundleAlgorithm.html#a77749a0316f9e4e3a03f0fa2a578c0dc", null ],
+    [ "printHeader_", "classROL_1_1TypeU_1_1BundleAlgorithm.html#a5f4fdef67c38c820a68ca4b98f13f0f1", null ],
+    [ "QPiter_", "classROL_1_1TypeU_1_1BundleAlgorithm.html#a4c5079f7c90c4abeaadbfd4098f1cace", null ],
+    [ "QPmaxit_", "classROL_1_1TypeU_1_1BundleAlgorithm.html#a43eaa2b3ecf39594555ab70fdbdcf92e", null ],
+    [ "QPtol_", "classROL_1_1TypeU_1_1BundleAlgorithm.html#a37e982b2a504f49266f3800a2e63e4bd", null ],
+    [ "step_flag_", "classROL_1_1TypeU_1_1BundleAlgorithm.html#aa5c2f85e1b006ba12d2144964c65d9ea", null ],
+    [ "T_", "classROL_1_1TypeU_1_1BundleAlgorithm.html#a3038a373c16dfc6ecaeac23d0205eefd", null ],
+    [ "tol_", "classROL_1_1TypeU_1_1BundleAlgorithm.html#a8698c8e4acb37bd1363a79c39e64c7f8", null ],
+    [ "verbosity_", "classROL_1_1TypeU_1_1BundleAlgorithm.html#ac8b9a9345d23f079ab7c0fa83ab1ff7b", null ]
+];

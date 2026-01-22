@@ -1,0 +1,4 @@
+var classAnasazi_1_1OperatorTraits_3_01ScalarType_00_01Experimental_1_1SaddleContainer_3_01ScalarTypa6ec1db77e91f0943002c81d0b47e497 =
+[
+    [ "Apply", "classAnasazi_1_1OperatorTraits_3_01ScalarType_00_01Experimental_1_1SaddleContainer_3_01ScalarTypa6ec1db77e91f0943002c81d0b47e497.html#a143a00fd3b876ffc8217c74ee529e2a7", null ]
+];

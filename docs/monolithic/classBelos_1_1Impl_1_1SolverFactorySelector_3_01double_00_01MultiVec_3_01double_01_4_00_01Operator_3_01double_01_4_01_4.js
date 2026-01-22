@@ -1,0 +1,4 @@
+var classBelos_1_1Impl_1_1SolverFactorySelector_3_01double_00_01MultiVec_3_01double_01_4_00_01Operator_3_01double_01_4_01_4 =
+[
+    [ "type", "classBelos_1_1Impl_1_1SolverFactorySelector_3_01double_00_01MultiVec_3_01double_01_4_00_01Operator_3_01double_01_4_01_4.html#af129a7086ed688ffa76884180d9959d2", null ]
+];

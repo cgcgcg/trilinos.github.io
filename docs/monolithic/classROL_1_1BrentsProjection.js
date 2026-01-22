@@ -1,0 +1,28 @@
+var classROL_1_1BrentsProjection =
+[
+    [ "BrentsProjection", "classROL_1_1BrentsProjection.html#ae1aeda3e1f7f67d716d0b716e0c09cc3", null ],
+    [ "BrentsProjection", "classROL_1_1BrentsProjection.html#ad1fcb94735ead7f21db199b1d2d2a3a2", null ],
+    [ "initialize", "classROL_1_1BrentsProjection.html#a481d0162994d54c73260a7c5d7dd3544", null ],
+    [ "project", "classROL_1_1BrentsProjection.html#a0c8ce732aa84fdc69492273f932e0ffd", null ],
+    [ "project_df", "classROL_1_1BrentsProjection.html#a0384b3eb5e89f4c0d4a98dcc12983f4f", null ],
+    [ "residual", "classROL_1_1BrentsProjection.html#ab095fba65499bcc2b1c50debb82d00f4", null ],
+    [ "update_primal", "classROL_1_1BrentsProjection.html#a97eb47309ebcbfeba86278182823ed3e", null ],
+    [ "atol_", "classROL_1_1BrentsProjection.html#a4cc41239793edb2d03bb88212a10d568", null ],
+    [ "b_", "classROL_1_1BrentsProjection.html#a032d29b1b00a9b797fbf9d22b4510a26", null ],
+    [ "cdot_", "classROL_1_1BrentsProjection.html#a6a5e8e292c7ae89aa81c4573753c6e9d", null ],
+    [ "ctol_", "classROL_1_1BrentsProjection.html#a027aeef3138a173ff41d888523c91510", null ],
+    [ "DEFAULT_atol_", "classROL_1_1BrentsProjection.html#a188a1e0e845528ee1374eef8b4b3f0f7", null ],
+    [ "DEFAULT_ltol_", "classROL_1_1BrentsProjection.html#aeeb73eaff4919faff6a2c9895b132499", null ],
+    [ "DEFAULT_maxit_", "classROL_1_1BrentsProjection.html#aa4bdfc93e662cbd992993395c6f21a82", null ],
+    [ "DEFAULT_rtol_", "classROL_1_1BrentsProjection.html#a3352421d947d26544e67d216eeb9dce7", null ],
+    [ "DEFAULT_verbosity_", "classROL_1_1BrentsProjection.html#a00dfb5899201f45070548b5be95cf70b", null ],
+    [ "dim_", "classROL_1_1BrentsProjection.html#afd7779437988cadbe5ac04e531a7b8a9", null ],
+    [ "dlam1_", "classROL_1_1BrentsProjection.html#af28998cb3cf14b7c8682ef4218245796", null ],
+    [ "ltol_", "classROL_1_1BrentsProjection.html#a89b5a6e7874f4eadec846566981fa47c", null ],
+    [ "maxit_", "classROL_1_1BrentsProjection.html#a2080d82b9755c24722f5c8ab953082a4", null ],
+    [ "mul1_", "classROL_1_1BrentsProjection.html#ae9f0223a0128b04bccfb604c45f633cd", null ],
+    [ "Px_", "classROL_1_1BrentsProjection.html#a04e2bb80e9e1655ca6aa2f891b50f97c", null ],
+    [ "rtol_", "classROL_1_1BrentsProjection.html#acdb8969df0df998535c9e91f834b1815", null ],
+    [ "verbosity_", "classROL_1_1BrentsProjection.html#a22be78c23e87afd8387e7709f310a43b", null ],
+    [ "xnew_", "classROL_1_1BrentsProjection.html#ae4d1e5b4af3645c8523998c4bfbdf972", null ]
+];

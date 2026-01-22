@@ -1,0 +1,28 @@
+var classROL_1_1TrustRegionModel__U =
+[
+    [ "~TrustRegionModel_U", "classROL_1_1TrustRegionModel__U.html#ae1616e227b4e31a2547b0d0da086dd9d", null ],
+    [ "TrustRegionModel_U", "classROL_1_1TrustRegionModel__U.html#a46048d7d331f6f72b45588c493175a7d", null ],
+    [ "applyHessian", "classROL_1_1TrustRegionModel__U.html#ac18b7e2e8cbb69fcfa4e84e4763703f3", null ],
+    [ "applyInvHessian", "classROL_1_1TrustRegionModel__U.html#aca680dbe22fe8c14cdafdc78d0bc6d3b", null ],
+    [ "applyPrecond", "classROL_1_1TrustRegionModel__U.html#a102c8e67d723daf9f3a2c624756add90", null ],
+    [ "getGradient", "classROL_1_1TrustRegionModel__U.html#ab03599a5f1b0a47f802cebad33dc77d5", null ],
+    [ "getIterate", "classROL_1_1TrustRegionModel__U.html#a4b17876fd85429dca83a798a4f7e73b3", null ],
+    [ "getObjective", "classROL_1_1TrustRegionModel__U.html#ac540bb594fb6cd4df2d7e05ab453c384", null ],
+    [ "gradient", "classROL_1_1TrustRegionModel__U.html#a57e31d34a1b59a10cd15a90464a4e471", null ],
+    [ "hessVec", "classROL_1_1TrustRegionModel__U.html#a3836053bb272f25860ee573ae5af682b", null ],
+    [ "initialize", "classROL_1_1TrustRegionModel__U.html#aa45a1f51cd21ea5079303e7508bfcf7f", null ],
+    [ "invHessVec", "classROL_1_1TrustRegionModel__U.html#a3f7ec940fd1b916e068c6b3c5f8708df", null ],
+    [ "precond", "classROL_1_1TrustRegionModel__U.html#a5c601a4200547d841e87d11d3ffad79a", null ],
+    [ "setData", "classROL_1_1TrustRegionModel__U.html#a39405ac6fd6f4c99e7902602d28eb730", null ],
+    [ "update", "classROL_1_1TrustRegionModel__U.html#a366832bdde11168a1d6b91c4e984c567", null ],
+    [ "validate", "classROL_1_1TrustRegionModel__U.html#aa191e70ec3ca6dfefcdf441e9f94c060", null ],
+    [ "value", "classROL_1_1TrustRegionModel__U.html#a2aa18ebcb8871c9d87756afaaa2007bb", null ],
+    [ "dual_", "classROL_1_1TrustRegionModel__U.html#a34e82c848db45bd1f2b0146c1d9e694c", null ],
+    [ "g_", "classROL_1_1TrustRegionModel__U.html#a61424732103cdc3076fd464bbb514d2e", null ],
+    [ "obj_", "classROL_1_1TrustRegionModel__U.html#a996a53ac7765e9f067a90d198b7efc28", null ],
+    [ "secant_", "classROL_1_1TrustRegionModel__U.html#a74b09551f244c877c1288fb9db1ff3c3", null ],
+    [ "tol_", "classROL_1_1TrustRegionModel__U.html#ac21e2ef523c40988cfb664c6e4d7aa70", null ],
+    [ "useSecantHessVec_", "classROL_1_1TrustRegionModel__U.html#a8b31fc44aa9e42fbba953ca504c233c3", null ],
+    [ "useSecantPrecond_", "classROL_1_1TrustRegionModel__U.html#a60fc1d4de211b0abe063101aa14dccb6", null ],
+    [ "x_", "classROL_1_1TrustRegionModel__U.html#aa2e4635762b6beb16ee420c7d93ea0bb", null ]
+];

@@ -1,0 +1,25 @@
+var classROL_1_1PH__bPOEObjective =
+[
+    [ "PH_bPOEObjective", "classROL_1_1PH__bPOEObjective.html#a461a3e9a9ee0a354b7d2446c9c99933a", null ],
+    [ "bPOEobjective", "classROL_1_1PH__bPOEObjective.html#a9a881d69e6e2babf485669fbfe905989", null ],
+    [ "getConstStat", "classROL_1_1PH__bPOEObjective.html#aa3234aa53782c5f1b38d5e8e87e2c881", null ],
+    [ "getConstVector", "classROL_1_1PH__bPOEObjective.html#a0b66ead93ab0d01cb639d123462a4f6d", null ],
+    [ "getGradient", "classROL_1_1PH__bPOEObjective.html#a3baceaf90f4f04e77be7a1cc8c89ee47", null ],
+    [ "getStat", "classROL_1_1PH__bPOEObjective.html#af7c58fc81d3d51320acd3b973e1b27de", null ],
+    [ "getValue", "classROL_1_1PH__bPOEObjective.html#a7fe8c0942f5348b5e55ae3aaaa18c74d", null ],
+    [ "getVector", "classROL_1_1PH__bPOEObjective.html#a8196e2a3628165e348756208d4f69b48", null ],
+    [ "gradient", "classROL_1_1PH__bPOEObjective.html#a911ca92d34705eaa51558a39594e4005", null ],
+    [ "hessVec", "classROL_1_1PH__bPOEObjective.html#a893c10eede81e2c9f90cb78cee849458", null ],
+    [ "pplus", "classROL_1_1PH__bPOEObjective.html#a52dfbb581f65725d76462468c6b62715", null ],
+    [ "setParameter", "classROL_1_1PH__bPOEObjective.html#ad3562cf3d0b03bbba116b5b74994af5f", null ],
+    [ "update", "classROL_1_1PH__bPOEObjective.html#aaf647dcde3059399fd2fd5737dbc4b15", null ],
+    [ "value", "classROL_1_1PH__bPOEObjective.html#aaeb57fc455e2739258ed4dc2069a9f1d", null ],
+    [ "g_", "classROL_1_1PH__bPOEObjective.html#a6df0cb42d0e9e856547288865e6466d4", null ],
+    [ "isGradientComputed_", "classROL_1_1PH__bPOEObjective.html#a477546813bbd6d4e2a73f332136b48eb", null ],
+    [ "isGradientInitialized_", "classROL_1_1PH__bPOEObjective.html#ab5698c443d63bcf6078c139cbe08cf02", null ],
+    [ "isValueComputed_", "classROL_1_1PH__bPOEObjective.html#a648333fe3cadb882e5515e928fac43e3", null ],
+    [ "obj_", "classROL_1_1PH__bPOEObjective.html#a15383a8864c6c71b534c9a3f5d2fe8fa", null ],
+    [ "order_", "classROL_1_1PH__bPOEObjective.html#a9317a53c06a84b58685c5ec30b0c794c", null ],
+    [ "threshold_", "classROL_1_1PH__bPOEObjective.html#a2ad0e42b4ae06995299af842ec1c269f", null ],
+    [ "val_", "classROL_1_1PH__bPOEObjective.html#a48fc79cdebc5603cc0757fa47d97e41b", null ]
+];

@@ -1,0 +1,4 @@
+var structSacado_1_1IsADType_3_01CacheFad_1_1ViewFad_3_01ValueT_00_01Size_00_01Stride_00_01Base_01_4_01_4 =
+[
+    [ "value", "structSacado_1_1IsADType_3_01CacheFad_1_1ViewFad_3_01ValueT_00_01Size_00_01Stride_00_01Base_01_4_01_4.html#a961715293699e6b01b82a1c9c949e61c", null ]
+];

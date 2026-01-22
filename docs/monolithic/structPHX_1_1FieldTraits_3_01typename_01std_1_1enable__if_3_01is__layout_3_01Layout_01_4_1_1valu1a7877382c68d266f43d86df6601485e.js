@@ -1,0 +1,5 @@
+var structPHX_1_1FieldTraits_3_01typename_01std_1_1enable__if_3_01is__layout_3_01Layout_01_4_1_1valu1a7877382c68d266f43d86df6601485e =
+[
+    [ "device", "structPHX_1_1FieldTraits_3_01typename_01std_1_1enable__if_3_01is__layout_3_01Layout_01_4_1_1valu1a7877382c68d266f43d86df6601485e.html#a663b2f2f3b87a6e627752249286fe43c", null ],
+    [ "layout", "structPHX_1_1FieldTraits_3_01typename_01std_1_1enable__if_3_01is__layout_3_01Layout_01_4_1_1valu1a7877382c68d266f43d86df6601485e.html#a6cec175c630b5a01720744fbbb5e6833", null ]
+];

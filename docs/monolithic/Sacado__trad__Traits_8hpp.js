@@ -1,0 +1,23 @@
+var Sacado__trad__Traits_8hpp =
+[
+    [ "Sacado::OverrideDefaultPromote< Rad ::ADvari< T > & >", "structSacado_1_1OverrideDefaultPromote_3_01Rad_01_1_1ADvari_3_01T_01_4_01_6_01_4.html", "structSacado_1_1OverrideDefaultPromote_3_01Rad_01_1_1ADvari_3_01T_01_4_01_6_01_4" ],
+    [ "Sacado::Promote< Rad ::ADvar< T >, Rad ::ADvari< T > & >", "structSacado_1_1Promote_3_01Rad_01_1_1ADvar_3_01T_01_4_00_01Rad_01_1_1ADvari_3_01T_01_4_01_6_01_4.html", "structSacado_1_1Promote_3_01Rad_01_1_1ADvar_3_01T_01_4_00_01Rad_01_1_1ADvari_3_01T_01_4_01_6_01_4" ],
+    [ "Sacado::Promote< Rad ::ADvari< T > &, Rad ::ADvar< T > >", "structSacado_1_1Promote_3_01Rad_01_1_1ADvari_3_01T_01_4_01_6_00_01Rad_01_1_1ADvar_3_01T_01_4_01_4.html", "structSacado_1_1Promote_3_01Rad_01_1_1ADvari_3_01T_01_4_01_6_00_01Rad_01_1_1ADvar_3_01T_01_4_01_4" ],
+    [ "Sacado::Promote< Rad ::ADvari< T > &, typename Rad ::ADvari< T >::value_type >", "structSacado_1_1Promote_3_01Rad_01_1_1ADvari_3_01T_01_4_01_6_00_01typename_01Rad_01_1_1ADvari_3_01T_01_4_1_1value__type_01_4.html", "structSacado_1_1Promote_3_01Rad_01_1_1ADvari_3_01T_01_4_01_6_00_01typename_01Rad_01_1_1ADvari_3_01T_01_4_1_1value__type_01_4" ],
+    [ "Sacado::Promote< typename Rad ::ADvari< T >::value_type, Rad ::ADvari< T > & >", "structSacado_1_1Promote_3_01typename_01Rad_01_1_1ADvari_3_01T_01_4_1_1value__type_00_01Rad_01_1_1ADvari_3_01T_01_4_01_6_01_4.html", "structSacado_1_1Promote_3_01typename_01Rad_01_1_1ADvari_3_01T_01_4_1_1value__type_00_01Rad_01_1_1ADvari_3_01T_01_4_01_6_01_4" ],
+    [ "Sacado::Promote< Rad ::ADvari< T > &, typename dummy< typename Rad ::ADvari< T >::value_type, typename Rad ::ADvari< T >::scalar_type >::type >", "structSacado_1_1Promote_3_01Rad_01_1_1ADvari_3_01T_01_4_01_6_00_01typename_01dummy_3_01typename_7e57534335894550f4db9e3195fcb5e2.html", "structSacado_1_1Promote_3_01Rad_01_1_1ADvari_3_01T_01_4_01_6_00_01typename_01dummy_3_01typename_7e57534335894550f4db9e3195fcb5e2" ],
+    [ "Sacado::Promote< typename dummy< typename Rad ::ADvari< T >::value_type, typename Rad ::ADvari< T >::scalar_type >::type, Rad ::ADvari< T > & >", "structSacado_1_1Promote_3_01typename_01dummy_3_01typename_01Rad_01_1_1ADvari_3_01T_01_4_1_1valueb11cd1b99736b20cbe24d4c4dc65f8c3.html", "structSacado_1_1Promote_3_01typename_01dummy_3_01typename_01Rad_01_1_1ADvari_3_01T_01_4_1_1valueb11cd1b99736b20cbe24d4c4dc65f8c3" ],
+    [ "Sacado::ScalarType< Rad::ADvar< T > >", "structSacado_1_1ScalarType_3_01Rad_1_1ADvar_3_01T_01_4_01_4.html", "structSacado_1_1ScalarType_3_01Rad_1_1ADvar_3_01T_01_4_01_4" ],
+    [ "Sacado::ScalarType< Rad::ADvari< T > >", "structSacado_1_1ScalarType_3_01Rad_1_1ADvari_3_01T_01_4_01_4.html", "structSacado_1_1ScalarType_3_01Rad_1_1ADvari_3_01T_01_4_01_4" ],
+    [ "Sacado::ValueType< Rad::ADvar< T > >", "structSacado_1_1ValueType_3_01Rad_1_1ADvar_3_01T_01_4_01_4.html", "structSacado_1_1ValueType_3_01Rad_1_1ADvar_3_01T_01_4_01_4" ],
+    [ "Sacado::ValueType< Rad::ADvari< T > >", "structSacado_1_1ValueType_3_01Rad_1_1ADvari_3_01T_01_4_01_4.html", "structSacado_1_1ValueType_3_01Rad_1_1ADvari_3_01T_01_4_01_4" ],
+    [ "Sacado::IsADType< Rad::ADvar< T > >", "structSacado_1_1IsADType_3_01Rad_1_1ADvar_3_01T_01_4_01_4.html", "structSacado_1_1IsADType_3_01Rad_1_1ADvar_3_01T_01_4_01_4" ],
+    [ "Sacado::IsADType< Rad::ADvari< T > >", "structSacado_1_1IsADType_3_01Rad_1_1ADvari_3_01T_01_4_01_4.html", "structSacado_1_1IsADType_3_01Rad_1_1ADvari_3_01T_01_4_01_4" ],
+    [ "Sacado::IsScalarType< Rad::ADvar< T > >", "structSacado_1_1IsScalarType_3_01Rad_1_1ADvar_3_01T_01_4_01_4.html", "structSacado_1_1IsScalarType_3_01Rad_1_1ADvar_3_01T_01_4_01_4" ],
+    [ "Sacado::IsScalarType< Rad::ADvari< T > >", "structSacado_1_1IsScalarType_3_01Rad_1_1ADvari_3_01T_01_4_01_4.html", "structSacado_1_1IsScalarType_3_01Rad_1_1ADvari_3_01T_01_4_01_4" ],
+    [ "Sacado::Value< Rad::ADvar< T > >", "structSacado_1_1Value_3_01Rad_1_1ADvar_3_01T_01_4_01_4.html", "structSacado_1_1Value_3_01Rad_1_1ADvar_3_01T_01_4_01_4" ],
+    [ "Sacado::MarkConstant< Rad::ADvar< T > >", "structSacado_1_1MarkConstant_3_01Rad_1_1ADvar_3_01T_01_4_01_4.html", "structSacado_1_1MarkConstant_3_01Rad_1_1ADvar_3_01T_01_4_01_4" ],
+    [ "Sacado::MarkConstant< Rad::ADvari< T > >", "structSacado_1_1MarkConstant_3_01Rad_1_1ADvari_3_01T_01_4_01_4.html", "structSacado_1_1MarkConstant_3_01Rad_1_1ADvari_3_01T_01_4_01_4" ],
+    [ "Sacado::ScalarValue< Rad::ADvar< T > >", "structSacado_1_1ScalarValue_3_01Rad_1_1ADvar_3_01T_01_4_01_4.html", "structSacado_1_1ScalarValue_3_01Rad_1_1ADvar_3_01T_01_4_01_4" ],
+    [ "Sacado::StringName< Rad::ADvar< T > >", "structSacado_1_1StringName_3_01Rad_1_1ADvar_3_01T_01_4_01_4.html", "structSacado_1_1StringName_3_01Rad_1_1ADvar_3_01T_01_4_01_4" ]
+];

@@ -1,0 +1,26 @@
+var namespaceTpetra_1_1MMdetails =
+[
+    [ "AddKernels", "structTpetra_1_1MMdetails_1_1AddKernels.html", "structTpetra_1_1MMdetails_1_1AddKernels" ],
+    [ "ConvertLocalToGlobalFunctor", "structTpetra_1_1MMdetails_1_1ConvertLocalToGlobalFunctor.html", "structTpetra_1_1MMdetails_1_1ConvertLocalToGlobalFunctor" ],
+    [ "KernelWrappers", "structTpetra_1_1MMdetails_1_1KernelWrappers.html", "structTpetra_1_1MMdetails_1_1KernelWrappers" ],
+    [ "KernelWrappers2", "structTpetra_1_1MMdetails_1_1KernelWrappers2.html", "structTpetra_1_1MMdetails_1_1KernelWrappers2" ],
+    [ "KernelWrappers3", "structTpetra_1_1MMdetails_1_1KernelWrappers3.html", "structTpetra_1_1MMdetails_1_1KernelWrappers3" ],
+    [ "KernelWrappers3MMM", "structTpetra_1_1MMdetails_1_1KernelWrappers3MMM.html", "structTpetra_1_1MMdetails_1_1KernelWrappers3MMM" ],
+    [ "C_estimate_nnz", "namespaceTpetra_1_1MMdetails.html#a84aa16bfe413a0a0b3dc0defac2e0528", null ],
+    [ "import_and_extract_views", "namespaceTpetra_1_1MMdetails.html#a11020ec835617dd1fae5b5de30d1ef85", null ],
+    [ "import_and_extract_views", "namespaceTpetra_1_1MMdetails.html#a26430d768fc4e57556c6ddbaab0bf2f4", null ],
+    [ "jacobi_A_B_newmatrix", "namespaceTpetra_1_1MMdetails.html#aceb320a2ec8cccf9ffb777c843086613", null ],
+    [ "jacobi_A_B_reuse", "namespaceTpetra_1_1MMdetails.html#a62af426052a1fcbf3a063d85709ba6f7", null ],
+    [ "merge_matrices", "namespaceTpetra_1_1MMdetails.html#ab13bc20a9454eeffb0e34b380f671449", null ],
+    [ "merge_matrices", "namespaceTpetra_1_1MMdetails.html#a7aa2e700d8c4169f60492f8f6568bd94", null ],
+    [ "mult_A_B", "namespaceTpetra_1_1MMdetails.html#af242b4fddbce437cf3b9f4b62901394a", null ],
+    [ "mult_A_B_newmatrix", "namespaceTpetra_1_1MMdetails.html#a3a618be37ffd5c4c5a43784ad8c09f77", null ],
+    [ "mult_A_B_newmatrix", "namespaceTpetra_1_1MMdetails.html#a2b5ea6622d534832ecfa6fdca653fc08", null ],
+    [ "mult_A_B_reuse", "namespaceTpetra_1_1MMdetails.html#ab70711242076dc3567dd97e9d4de55b9", null ],
+    [ "mult_AT_B_newmatrix", "namespaceTpetra_1_1MMdetails.html#a9a35a43749a3bb84cf8943419537efc0", null ],
+    [ "mult_PT_A_P_newmatrix", "namespaceTpetra_1_1MMdetails.html#a0088d19ecc8a532ec788d5de812285d5", null ],
+    [ "mult_PT_A_P_reuse", "namespaceTpetra_1_1MMdetails.html#aca711cd99a50273a1a5e321f7f6b7f8b", null ],
+    [ "mult_R_A_P_newmatrix", "namespaceTpetra_1_1MMdetails.html#a99b7cef6f148cdb20e1ffefefd52da1f", null ],
+    [ "mult_R_A_P_reuse", "namespaceTpetra_1_1MMdetails.html#ade77632824d8f4b1d02716a5704c214e", null ],
+    [ "setMaxNumEntriesPerRow", "namespaceTpetra_1_1MMdetails.html#a6c0cd6f2d088bfd158440fa8da6294e3", null ]
+];

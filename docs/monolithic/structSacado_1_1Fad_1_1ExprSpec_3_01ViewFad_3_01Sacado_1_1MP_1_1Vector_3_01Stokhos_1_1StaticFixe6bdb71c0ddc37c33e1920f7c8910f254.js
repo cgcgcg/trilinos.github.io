@@ -1,0 +1,4 @@
+var structSacado_1_1Fad_1_1ExprSpec_3_01ViewFad_3_01Sacado_1_1MP_1_1Vector_3_01Stokhos_1_1StaticFixe6bdb71c0ddc37c33e1920f7c8910f254 =
+[
+    [ "type", "structSacado_1_1Fad_1_1ExprSpec_3_01ViewFad_3_01Sacado_1_1MP_1_1Vector_3_01Stokhos_1_1StaticFixe6bdb71c0ddc37c33e1920f7c8910f254.html#a4bbcfda5951f8739984b1bdd00819e1a", null ]
+];

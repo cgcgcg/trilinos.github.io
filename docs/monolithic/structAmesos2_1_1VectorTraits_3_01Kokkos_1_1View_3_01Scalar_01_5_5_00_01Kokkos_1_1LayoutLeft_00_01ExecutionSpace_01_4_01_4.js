@@ -1,0 +1,9 @@
+var structAmesos2_1_1VectorTraits_3_01Kokkos_1_1View_3_01Scalar_01_5_5_00_01Kokkos_1_1LayoutLeft_00_01ExecutionSpace_01_4_01_4 =
+[
+    [ "global_ordinal_t", "structAmesos2_1_1VectorTraits_3_01Kokkos_1_1View_3_01Scalar_01_5_5_00_01Kokkos_1_1LayoutLeft_00_01ExecutionSpace_01_4_01_4.html#ae633626589f1de7b68de88f25e46a4fd", null ],
+    [ "local_ordinal_t", "structAmesos2_1_1VectorTraits_3_01Kokkos_1_1View_3_01Scalar_01_5_5_00_01Kokkos_1_1LayoutLeft_00_01ExecutionSpace_01_4_01_4.html#a084e0a024b4bdf30821eac13ae034c36", null ],
+    [ "multivector_type", "structAmesos2_1_1VectorTraits_3_01Kokkos_1_1View_3_01Scalar_01_5_5_00_01Kokkos_1_1LayoutLeft_00_01ExecutionSpace_01_4_01_4.html#a4b11534b9ee684bdc485ffe946373cd6", null ],
+    [ "node_t", "structAmesos2_1_1VectorTraits_3_01Kokkos_1_1View_3_01Scalar_01_5_5_00_01Kokkos_1_1LayoutLeft_00_01ExecutionSpace_01_4_01_4.html#aa0507a593b06ed0733167303bffa71c0", null ],
+    [ "ptr_scalar_type", "structAmesos2_1_1VectorTraits_3_01Kokkos_1_1View_3_01Scalar_01_5_5_00_01Kokkos_1_1LayoutLeft_00_01ExecutionSpace_01_4_01_4.html#a38e688c3834c039b5115f604eda568bc", null ],
+    [ "scalar_t", "structAmesos2_1_1VectorTraits_3_01Kokkos_1_1View_3_01Scalar_01_5_5_00_01Kokkos_1_1LayoutLeft_00_01ExecutionSpace_01_4_01_4.html#a8e964a181341cfcf9eb192a13730def6", null ]
+];

@@ -1,0 +1,25 @@
+var classpanzer_1_1GatherSolution__Tpetra_3_01panzer_1_1Traits_1_1Tangent_00_01TRAITS_00_01LO_00_01GO_00_01NodeT_01_4 =
+[
+    [ "EvalT", "classpanzer_1_1GatherSolution__Tpetra_3_01panzer_1_1Traits_1_1Tangent_00_01TRAITS_00_01LO_00_01GO_00_01NodeT_01_4.html#a98e42e5c154a81c942d5ff49d940f4c4", null ],
+    [ "RealT", "classpanzer_1_1GatherSolution__Tpetra_3_01panzer_1_1Traits_1_1Tangent_00_01TRAITS_00_01LO_00_01GO_00_01NodeT_01_4.html#a761c1e74f3dae0557d7ca8c58e6071bb", null ],
+    [ "ScalarT", "classpanzer_1_1GatherSolution__Tpetra_3_01panzer_1_1Traits_1_1Tangent_00_01TRAITS_00_01LO_00_01GO_00_01NodeT_01_4.html#afda86925708d74713956c5d9b7aea247", null ],
+    [ "GatherSolution_Tpetra", "classpanzer_1_1GatherSolution__Tpetra_3_01panzer_1_1Traits_1_1Tangent_00_01TRAITS_00_01LO_00_01GO_00_01NodeT_01_4.html#af432a49d958ece0757ae088f6bffb418", null ],
+    [ "GatherSolution_Tpetra", "classpanzer_1_1GatherSolution__Tpetra_3_01panzer_1_1Traits_1_1Tangent_00_01TRAITS_00_01LO_00_01GO_00_01NodeT_01_4.html#ad09feafe5a9be06252abb737b0d7869c", null ],
+    [ "GatherSolution_Tpetra", "classpanzer_1_1GatherSolution__Tpetra_3_01panzer_1_1Traits_1_1Tangent_00_01TRAITS_00_01LO_00_01GO_00_01NodeT_01_4.html#ab75b63995151a84d403fc14b3177069c", null ],
+    [ "clone", "classpanzer_1_1GatherSolution__Tpetra_3_01panzer_1_1Traits_1_1Tangent_00_01TRAITS_00_01LO_00_01GO_00_01NodeT_01_4.html#a4288c189796f6d6cb50c151d45b76984", null ],
+    [ "evaluateFields", "classpanzer_1_1GatherSolution__Tpetra_3_01panzer_1_1Traits_1_1Tangent_00_01TRAITS_00_01LO_00_01GO_00_01NodeT_01_4.html#a5d747030392b05a5b28261523e3763b9", null ],
+    [ "postRegistrationSetup", "classpanzer_1_1GatherSolution__Tpetra_3_01panzer_1_1Traits_1_1Tangent_00_01TRAITS_00_01LO_00_01GO_00_01NodeT_01_4.html#af95721b2799fff689250e70415898234", null ],
+    [ "preEvaluate", "classpanzer_1_1GatherSolution__Tpetra_3_01panzer_1_1Traits_1_1Tangent_00_01TRAITS_00_01LO_00_01GO_00_01NodeT_01_4.html#a7312e7b8a95f56367af7423aa18fbe95", null ],
+    [ "fieldIds_", "classpanzer_1_1GatherSolution__Tpetra_3_01panzer_1_1Traits_1_1Tangent_00_01TRAITS_00_01LO_00_01GO_00_01NodeT_01_4.html#a61840286943e69ad7609a4ccb4a80839", null ],
+    [ "gatherFields_", "classpanzer_1_1GatherSolution__Tpetra_3_01panzer_1_1Traits_1_1Tangent_00_01TRAITS_00_01LO_00_01GO_00_01NodeT_01_4.html#a7aeae1789ec009a0af61b550a4985822", null ],
+    [ "gatherFieldsVoV_", "classpanzer_1_1GatherSolution__Tpetra_3_01panzer_1_1Traits_1_1Tangent_00_01TRAITS_00_01LO_00_01GO_00_01NodeT_01_4.html#a3d0a7eb5d3e27ce5e5e8f3273b30a9f3", null ],
+    [ "globalDataKey_", "classpanzer_1_1GatherSolution__Tpetra_3_01panzer_1_1Traits_1_1Tangent_00_01TRAITS_00_01LO_00_01GO_00_01NodeT_01_4.html#ac51271f3ecb4cc211c03b1545d9af7e8", null ],
+    [ "globalIndexer_", "classpanzer_1_1GatherSolution__Tpetra_3_01panzer_1_1Traits_1_1Tangent_00_01TRAITS_00_01LO_00_01GO_00_01NodeT_01_4.html#ade25f11252700b6f1090577bc910aaeb", null ],
+    [ "has_tangent_fields_", "classpanzer_1_1GatherSolution__Tpetra_3_01panzer_1_1Traits_1_1Tangent_00_01TRAITS_00_01LO_00_01GO_00_01NodeT_01_4.html#a1c2c6e4ce0f7852f490965fd607ed244", null ],
+    [ "indexerNames_", "classpanzer_1_1GatherSolution__Tpetra_3_01panzer_1_1Traits_1_1Tangent_00_01TRAITS_00_01LO_00_01GO_00_01NodeT_01_4.html#a2c8e90977259bbf326be5fec062bd0a6", null ],
+    [ "tangentFields_", "classpanzer_1_1GatherSolution__Tpetra_3_01panzer_1_1Traits_1_1Tangent_00_01TRAITS_00_01LO_00_01GO_00_01NodeT_01_4.html#ad93b7f2c8dc35a9a032cf8395ea717e1", null ],
+    [ "tangentFieldsVoV_", "classpanzer_1_1GatherSolution__Tpetra_3_01panzer_1_1Traits_1_1Tangent_00_01TRAITS_00_01LO_00_01GO_00_01NodeT_01_4.html#a0f583393cfbd3684dea263629be7285d", null ],
+    [ "tangentInnerVectorSizes_", "classpanzer_1_1GatherSolution__Tpetra_3_01panzer_1_1Traits_1_1Tangent_00_01TRAITS_00_01LO_00_01GO_00_01NodeT_01_4.html#abd9ecdac4b97e16d633b11cb88f958ce", null ],
+    [ "tpetraContainer_", "classpanzer_1_1GatherSolution__Tpetra_3_01panzer_1_1Traits_1_1Tangent_00_01TRAITS_00_01LO_00_01GO_00_01NodeT_01_4.html#a7291a3573ab08de91a1f0167c213e6f1", null ],
+    [ "useTimeDerivativeSolutionVector_", "classpanzer_1_1GatherSolution__Tpetra_3_01panzer_1_1Traits_1_1Tangent_00_01TRAITS_00_01LO_00_01GO_00_01NodeT_01_4.html#a8f096bf5841e66c76d7e75ee8eaf7790", null ]
+];

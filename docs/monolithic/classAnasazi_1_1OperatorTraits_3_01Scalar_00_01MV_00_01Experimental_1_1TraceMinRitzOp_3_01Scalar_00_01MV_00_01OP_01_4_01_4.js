@@ -1,0 +1,5 @@
+var classAnasazi_1_1OperatorTraits_3_01Scalar_00_01MV_00_01Experimental_1_1TraceMinRitzOp_3_01Scalar_00_01MV_00_01OP_01_4_01_4 =
+[
+    [ "Apply", "classAnasazi_1_1OperatorTraits_3_01Scalar_00_01MV_00_01Experimental_1_1TraceMinRitzOp_3_01Scalar_00_01MV_00_01OP_01_4_01_4.html#a6de186941e245a5ad2e32225f83b8ad5", null ],
+    [ "HasApplyTranspose", "classAnasazi_1_1OperatorTraits_3_01Scalar_00_01MV_00_01Experimental_1_1TraceMinRitzOp_3_01Scalar_00_01MV_00_01OP_01_4_01_4.html#a6ab1b8628d27107264e0aa3be21d16f6", null ]
+];

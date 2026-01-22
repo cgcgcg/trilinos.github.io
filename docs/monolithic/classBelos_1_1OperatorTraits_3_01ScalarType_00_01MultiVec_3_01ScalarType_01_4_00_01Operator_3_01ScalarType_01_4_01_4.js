@@ -1,0 +1,5 @@
+var classBelos_1_1OperatorTraits_3_01ScalarType_00_01MultiVec_3_01ScalarType_01_4_00_01Operator_3_01ScalarType_01_4_01_4 =
+[
+    [ "Apply", "classBelos_1_1OperatorTraits_3_01ScalarType_00_01MultiVec_3_01ScalarType_01_4_00_01Operator_3_01ScalarType_01_4_01_4.html#adcc6c2c196409e725f5687b9864acb6e", null ],
+    [ "HasApplyTranspose", "classBelos_1_1OperatorTraits_3_01ScalarType_00_01MultiVec_3_01ScalarType_01_4_00_01Operator_3_01ScalarType_01_4_01_4.html#a213e05307f07da7ab01661018d8155c8", null ]
+];

@@ -1,0 +1,26 @@
+var classROL_1_1LineSearchStep =
+[
+    [ "LineSearchStep", "classROL_1_1LineSearchStep.html#ae3ba86271a21d62867c2cab6aaa702f5", null ],
+    [ "compute", "classROL_1_1LineSearchStep.html#a75733ca1e04f51e509f6da14f496bed6", null ],
+    [ "GradDotStep", "classROL_1_1LineSearchStep.html#a30c33d1f4c923debda734ffb86278627", null ],
+    [ "initialize", "classROL_1_1LineSearchStep.html#a21abcfe88cf248347321ecc575353cb1", null ],
+    [ "print", "classROL_1_1LineSearchStep.html#a96bfa87cdfcb223bd5a8d3705364dc7f", null ],
+    [ "printHeader", "classROL_1_1LineSearchStep.html#a7333249c1b676b9d8bd0990ebae7cdb6", null ],
+    [ "printName", "classROL_1_1LineSearchStep.html#a356ba5e09796847d286e2808252a5d07", null ],
+    [ "update", "classROL_1_1LineSearchStep.html#a0890eac05d00f5dc1a5e5f90c992571d", null ],
+    [ "acceptLastAlpha_", "classROL_1_1LineSearchStep.html#a04464b1b00b11eae2ef558bb2477370c", null ],
+    [ "computeObj_", "classROL_1_1LineSearchStep.html#a715828fabfabb1d6839d5a00f3656362", null ],
+    [ "d_", "classROL_1_1LineSearchStep.html#a82ef52c5a723f12ead2214b5617a8169", null ],
+    [ "desc_", "classROL_1_1LineSearchStep.html#a14d49b3999f659d6182b503c65a627d1", null ],
+    [ "econd_", "classROL_1_1LineSearchStep.html#a0076586ca638c8b69f84e2cba38bf1eb", null ],
+    [ "els_", "classROL_1_1LineSearchStep.html#ad5bd646894239fb79157d80116b8337f", null ],
+    [ "fval_", "classROL_1_1LineSearchStep.html#ac9b2b68a2842d86d520847168d7c459a", null ],
+    [ "krylov_", "classROL_1_1LineSearchStep.html#aebbfaf64424d9eee392eafb038edede9", null ],
+    [ "lineSearch_", "classROL_1_1LineSearchStep.html#af4ee62cd16f0fa52a77fbb03539b4ba8", null ],
+    [ "lineSearchName_", "classROL_1_1LineSearchStep.html#a6943f091452834918e8ff3e0137f5588", null ],
+    [ "nlcg_", "classROL_1_1LineSearchStep.html#abfe578c03761e3b0ee952a1579eef686", null ],
+    [ "parlist_", "classROL_1_1LineSearchStep.html#a7c4ac3e404c63e769dd7f45041fd3b3e", null ],
+    [ "secant_", "classROL_1_1LineSearchStep.html#a0f0c98de90921164d8da120de0265d3e", null ],
+    [ "usePreviousAlpha_", "classROL_1_1LineSearchStep.html#a631385a4e5465bd38bc58611b52ee16b", null ],
+    [ "verbosity_", "classROL_1_1LineSearchStep.html#a54bc3b4de49baadcfdb6a44897de0e4d", null ]
+];

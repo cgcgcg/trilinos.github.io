@@ -1,0 +1,6 @@
+var structIfpack2_1_1BlockTriDiContainerDetails_1_1ExtractAndFactorizeTridiagsDefaultModeAndAlgo_3_01Kokkos_1_1HostSpace_01_4 =
+[
+    [ "algo_type", "structIfpack2_1_1BlockTriDiContainerDetails_1_1ExtractAndFactorizeTridiagsDefaultModeAndAlgo_3_01Kokkos_1_1HostSpace_01_4.html#aa6950c4e63d1e3fb9749c490511f11e2", null ],
+    [ "mode_type", "structIfpack2_1_1BlockTriDiContainerDetails_1_1ExtractAndFactorizeTridiagsDefaultModeAndAlgo_3_01Kokkos_1_1HostSpace_01_4.html#ade7d7dd448fc599536635bbefc168502", null ],
+    [ "recommended_team_size", "structIfpack2_1_1BlockTriDiContainerDetails_1_1ExtractAndFactorizeTridiagsDefaultModeAndAlgo_3_01Kokkos_1_1HostSpace_01_4.html#aa3826a886516fd4d70c527014c71b8dc", null ]
+];

@@ -1,0 +1,25 @@
+var classpanzer_1_1EpetraVector__Write__GlobalEvaluationData =
+[
+    [ "EpetraVector_Write_GlobalEvaluationData", "classpanzer_1_1EpetraVector__Write__GlobalEvaluationData.html#a52698c7290a25f06b68d532e8e58cc5f", null ],
+    [ "EpetraVector_Write_GlobalEvaluationData", "classpanzer_1_1EpetraVector__Write__GlobalEvaluationData.html#ac595bcd2fe05448b9cd5d2142e2acab8", null ],
+    [ "EpetraVector_Write_GlobalEvaluationData", "classpanzer_1_1EpetraVector__Write__GlobalEvaluationData.html#ac36e1d0935828c8a2c48eb984f937144", null ],
+    [ "getGhostedVector", "classpanzer_1_1EpetraVector__Write__GlobalEvaluationData.html#a16e9486203c9d8eb6b3f16eb4041c2e3", null ],
+    [ "getGhostedVector_Epetra", "classpanzer_1_1EpetraVector__Write__GlobalEvaluationData.html#a4ce2143a5c0d2d84344381efc5ff3c71", null ],
+    [ "getOwnedVector", "classpanzer_1_1EpetraVector__Write__GlobalEvaluationData.html#ae6cf214e7c2ffcd793001ea6d096e559", null ],
+    [ "ghostToGlobal", "classpanzer_1_1EpetraVector__Write__GlobalEvaluationData.html#a4891623c0575f6dbb5c6d93a919b08e9", null ],
+    [ "initialize", "classpanzer_1_1EpetraVector__Write__GlobalEvaluationData.html#a2d250f6b197da8dde7ade56b968e7b8b", null ],
+    [ "initializeData", "classpanzer_1_1EpetraVector__Write__GlobalEvaluationData.html#a815b26d4fc721e40db3568a4e89eaae2", null ],
+    [ "isInitialized", "classpanzer_1_1EpetraVector__Write__GlobalEvaluationData.html#aabc68fb4d07567961b1a18c103662dad", null ],
+    [ "print", "classpanzer_1_1EpetraVector__Write__GlobalEvaluationData.html#aa74ade2ee622c5dc2743fb833b2c0d0d", null ],
+    [ "requiresDirichletAdjustment", "classpanzer_1_1EpetraVector__Write__GlobalEvaluationData.html#a563332465c0f9a5e43a7d8274e236740", null ],
+    [ "setOwnedVector", "classpanzer_1_1EpetraVector__Write__GlobalEvaluationData.html#a4c6162983853ac90b4ccaef9df804010", null ],
+    [ "setOwnedVector_Epetra", "classpanzer_1_1EpetraVector__Write__GlobalEvaluationData.html#af24bc891b6455169b7aa281424785237", null ],
+    [ "exporter_", "classpanzer_1_1EpetraVector__Write__GlobalEvaluationData.html#a3bb8ac9b71ee1a764bae6c8e4ca0a70e", null ],
+    [ "ghostedMap_", "classpanzer_1_1EpetraVector__Write__GlobalEvaluationData.html#a240024ceca54b49993a2bec8e272835f", null ],
+    [ "ghostedSpace_", "classpanzer_1_1EpetraVector__Write__GlobalEvaluationData.html#aad91653bfbababa310c4e7d8f13f29e2", null ],
+    [ "ghostedVector_", "classpanzer_1_1EpetraVector__Write__GlobalEvaluationData.html#a9a5d8550137ddd2e9d98f134fffbcd61", null ],
+    [ "isInitialized_", "classpanzer_1_1EpetraVector__Write__GlobalEvaluationData.html#a5b9fe8e238c461328320c2d60ba2b19b", null ],
+    [ "ownedMap_", "classpanzer_1_1EpetraVector__Write__GlobalEvaluationData.html#a80ca67c63fdc7ce4e5208eb556c10a27", null ],
+    [ "ownedSpace_", "classpanzer_1_1EpetraVector__Write__GlobalEvaluationData.html#a12717d111ccfdefaa41fc87deb993780", null ],
+    [ "ownedVector_", "classpanzer_1_1EpetraVector__Write__GlobalEvaluationData.html#ab2bddde5e41855fbea074c08c83733d6", null ]
+];

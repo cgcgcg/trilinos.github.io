@@ -1,0 +1,4 @@
+var structTpetra_1_1Impl_1_1GETRS_3_01LittleBlockType_00_01LittleIntVectorType_00_01LittleScalarVectorType_00_011_01_4 =
+[
+    [ "run", "structTpetra_1_1Impl_1_1GETRS_3_01LittleBlockType_00_01LittleIntVectorType_00_01LittleScalarVectorType_00_011_01_4.html#acae21245f0adc09a6093fdabc0e3d2e4", null ]
+];

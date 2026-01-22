@@ -1,0 +1,9 @@
+var structAmesos2_1_1VectorTraits_3_01Tpetra_1_1MultiVector_3_01Scalar_00_01LocalOrdinal_00_01GlobalOrdinal_00_01Node_01_4_01_4 =
+[
+    [ "global_ordinal_t", "structAmesos2_1_1VectorTraits_3_01Tpetra_1_1MultiVector_3_01Scalar_00_01LocalOrdinal_00_01GlobalOrdinal_00_01Node_01_4_01_4.html#a4d4e8290e7cd58b0256e9578cd22a255", null ],
+    [ "local_ordinal_t", "structAmesos2_1_1VectorTraits_3_01Tpetra_1_1MultiVector_3_01Scalar_00_01LocalOrdinal_00_01GlobalOrdinal_00_01Node_01_4_01_4.html#ac40ad4e0fb84ba7d349788c92033a43a", null ],
+    [ "multivector_type", "structAmesos2_1_1VectorTraits_3_01Tpetra_1_1MultiVector_3_01Scalar_00_01LocalOrdinal_00_01GlobalOrdinal_00_01Node_01_4_01_4.html#a38ad0dc5b44949e16cdeef2776a36aea", null ],
+    [ "node_t", "structAmesos2_1_1VectorTraits_3_01Tpetra_1_1MultiVector_3_01Scalar_00_01LocalOrdinal_00_01GlobalOrdinal_00_01Node_01_4_01_4.html#ac23cb46d6ed5cb7eac1bce6d1a24363f", null ],
+    [ "ptr_scalar_type", "structAmesos2_1_1VectorTraits_3_01Tpetra_1_1MultiVector_3_01Scalar_00_01LocalOrdinal_00_01GlobalOrdinal_00_01Node_01_4_01_4.html#a5fef22d7018e020ba00b1302ac5d477c", null ],
+    [ "scalar_t", "structAmesos2_1_1VectorTraits_3_01Tpetra_1_1MultiVector_3_01Scalar_00_01LocalOrdinal_00_01GlobalOrdinal_00_01Node_01_4_01_4.html#a879b5abc0e5ef57e058918055e90518f", null ]
+];

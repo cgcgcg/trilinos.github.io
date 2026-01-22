@@ -1,0 +1,27 @@
+var classROL_1_1TypeB_1_1InteriorPointAlgorithm =
+[
+    [ "InteriorPointAlgorithm", "classROL_1_1TypeB_1_1InteriorPointAlgorithm.html#a952ef34efa4ffde0041c6702215148f3", null ],
+    [ "initialize", "classROL_1_1TypeB_1_1InteriorPointAlgorithm.html#a7aa1a364e3835cce4e930d8da33d5870", null ],
+    [ "run", "classROL_1_1TypeB_1_1InteriorPointAlgorithm.html#a3a8013356276a4af28792930a937f02d", null ],
+    [ "updateState", "classROL_1_1TypeB_1_1InteriorPointAlgorithm.html#a4d468d621e1f0d873750145620c2bdf0", null ],
+    [ "writeHeader", "classROL_1_1TypeB_1_1InteriorPointAlgorithm.html#acf3cb8af2d07cee236aa86f614a10075", null ],
+    [ "writeName", "classROL_1_1TypeB_1_1InteriorPointAlgorithm.html#a18677278eed6eca0f53991f99c55b0e6", null ],
+    [ "writeOutput", "classROL_1_1TypeB_1_1InteriorPointAlgorithm.html#a3d222769c33d4c6f8959eb80674d04dc", null ],
+    [ "gtol_", "classROL_1_1TypeB_1_1InteriorPointAlgorithm.html#ad0a5d6929516d17acf81e5f270eb1522", null ],
+    [ "gtolrate_", "classROL_1_1TypeB_1_1InteriorPointAlgorithm.html#afb9d69d0ed6c0c996ad482524fa8aa5e", null ],
+    [ "hasPolyProj_", "classROL_1_1TypeB_1_1InteriorPointAlgorithm.html#ad44d29af67fdca0b7c2a0a87201c469d", null ],
+    [ "kappaD_", "classROL_1_1TypeB_1_1InteriorPointAlgorithm.html#a1799ee13f578e6c5b1bc95453075472d", null ],
+    [ "list_", "classROL_1_1TypeB_1_1InteriorPointAlgorithm.html#ad377ace171688cadb83a6aac1bf4e49a", null ],
+    [ "mingtol_", "classROL_1_1TypeB_1_1InteriorPointAlgorithm.html#a98bb0f152a3ee76078e07bb948281cee", null ],
+    [ "mumax_", "classROL_1_1TypeB_1_1InteriorPointAlgorithm.html#aea963e90a8c16448ed83cf25cb548913", null ],
+    [ "mumin_", "classROL_1_1TypeB_1_1InteriorPointAlgorithm.html#ac94a810b046d76a8539c523dbfb89bed", null ],
+    [ "print_", "classROL_1_1TypeB_1_1InteriorPointAlgorithm.html#aede2423d5e1d99d18e5fdc016b02cb1d", null ],
+    [ "rho_", "classROL_1_1TypeB_1_1InteriorPointAlgorithm.html#a08f832360f4d377000cdd52755880d8f", null ],
+    [ "secant_", "classROL_1_1TypeB_1_1InteriorPointAlgorithm.html#a26de43b14e7a91ab570093291bb4f031", null ],
+    [ "stepname_", "classROL_1_1TypeB_1_1InteriorPointAlgorithm.html#a227605333dd283f6e7af89a6642c2815", null ],
+    [ "stol_", "classROL_1_1TypeB_1_1InteriorPointAlgorithm.html#a1d05c53f48e0f9db4b34f498f92bccbc", null ],
+    [ "subproblemIter_", "classROL_1_1TypeB_1_1InteriorPointAlgorithm.html#a9cd2abdf5742034be1fbfc122458faf4", null ],
+    [ "useLinearDamping_", "classROL_1_1TypeB_1_1InteriorPointAlgorithm.html#a2b1965f3af82d52a327c0c25f7f74ce2", null ],
+    [ "verbosity_", "classROL_1_1TypeB_1_1InteriorPointAlgorithm.html#a49704b271aee25bd9f07d8bf6d2a2d93", null ],
+    [ "writeHeader_", "classROL_1_1TypeB_1_1InteriorPointAlgorithm.html#ac1d4b788db1da2507894c5d2e6415a45", null ]
+];

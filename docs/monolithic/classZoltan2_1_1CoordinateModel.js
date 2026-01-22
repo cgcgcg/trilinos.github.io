@@ -1,0 +1,26 @@
+var classZoltan2_1_1CoordinateModel =
+[
+    [ "CoordinateModel", "classZoltan2_1_1CoordinateModel.html#a2250dd4bf03fcfb6e9af8080e5b575fa", null ],
+    [ "CoordinateModel", "classZoltan2_1_1CoordinateModel.html#a72f3872508dc4ad13db552e8e443ccd4", null ],
+    [ "CoordinateModel", "classZoltan2_1_1CoordinateModel.html#a680bd8b84318ec20a400fb5c8eeacb4b", null ],
+    [ "CoordinateModel", "classZoltan2_1_1CoordinateModel.html#a5a05cf7477c14e86899cfc0bc6eff2df", null ],
+    [ "CoordinateModel", "classZoltan2_1_1CoordinateModel.html#a35e750b6bdb9ee2fa7dbeb0a3b610cb3", null ],
+    [ "getCoordinateDim", "classZoltan2_1_1CoordinateModel.html#a64ca5fe733d80a81f3aa69081beef572", null ],
+    [ "getCoordinates", "classZoltan2_1_1CoordinateModel.html#a876e156236ba1b62853de806b70fcaaf", null ],
+    [ "getCoordinatesKokkos", "classZoltan2_1_1CoordinateModel.html#a5e5cec0f4e00a3e55c3c7e7e067be446", null ],
+    [ "getGlobalNumCoordinates", "classZoltan2_1_1CoordinateModel.html#a0473629ea1965420422d2c394ca15f08", null ],
+    [ "getGlobalNumObjects", "classZoltan2_1_1CoordinateModel.html#a1df84880f3fca185d613630fef17561e", null ],
+    [ "getLocalNumCoordinates", "classZoltan2_1_1CoordinateModel.html#a952291275f4a552ee297acb6f2db0f4a", null ],
+    [ "getLocalNumObjects", "classZoltan2_1_1CoordinateModel.html#a2bccedb0e8933fe146357dfdef5a4db9", null ],
+    [ "getNumWeightsPerCoordinate", "classZoltan2_1_1CoordinateModel.html#abf860ba69092eaf4c8558f253cfe55e3", null ],
+    [ "sharedConstructor", "classZoltan2_1_1CoordinateModel.html#a8ad34722d111c296d07d614c9a8d7573", null ],
+    [ "comm_", "classZoltan2_1_1CoordinateModel.html#ac765fbb26a5bddce9c630c3843012682", null ],
+    [ "coordinateDim_", "classZoltan2_1_1CoordinateModel.html#ac683560fb99091f6b0ac7d6121aaa07b", null ],
+    [ "env_", "classZoltan2_1_1CoordinateModel.html#acdbdb52b9354c89a4d52eb2d5434e5ff", null ],
+    [ "gids_", "classZoltan2_1_1CoordinateModel.html#a4bd0369c529ad5ef95e1f0e53e986f6c", null ],
+    [ "ia_", "classZoltan2_1_1CoordinateModel.html#a19f09409132a66b24600692bc30f462d", null ],
+    [ "numGlobalCoordinates_", "classZoltan2_1_1CoordinateModel.html#a6918336e935693dc1fd345665930079a", null ],
+    [ "userNumWeights_", "classZoltan2_1_1CoordinateModel.html#a910579dc6c18be8f48a20f33b5c69c67", null ],
+    [ "weights_", "classZoltan2_1_1CoordinateModel.html#ac9a8ac967835438586ab511b7d23c2cb", null ],
+    [ "xyz_", "classZoltan2_1_1CoordinateModel.html#a4b699fb4f367c5d7116907aa5d0dafb8", null ]
+];

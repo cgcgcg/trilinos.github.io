@@ -1,0 +1,28 @@
+var classZoltan2_1_1MachineTorusRCAForTesting =
+[
+    [ "MachineTorusRCAForTesting", "classZoltan2_1_1MachineTorusRCAForTesting.html#a5a6a746ac8a008ef564637cf2efb12fe", null ],
+    [ "MachineTorusRCAForTesting", "classZoltan2_1_1MachineTorusRCAForTesting.html#a270f8d17931ca9498d429a3449ac652c", null ],
+    [ "~MachineTorusRCAForTesting", "classZoltan2_1_1MachineTorusRCAForTesting.html#a4a867c97b018a97bf8a2bdc4e1f52872", null ],
+    [ "gatherMachineCoordinates", "classZoltan2_1_1MachineTorusRCAForTesting.html#ae2d345e144f979d68acaad12e679cea0", null ],
+    [ "getAllMachineCoordinatesView", "classZoltan2_1_1MachineTorusRCAForTesting.html#aa67aade601022b26ea811f44df94400d", null ],
+    [ "getHopCount", "classZoltan2_1_1MachineTorusRCAForTesting.html#a2deeb69c57394aed794e45b27dcc29a3", null ],
+    [ "getMachineCoordinate", "classZoltan2_1_1MachineTorusRCAForTesting.html#a2d2096217966b7ab2c2d8f803e561edf", null ],
+    [ "getMachineCoordinate", "classZoltan2_1_1MachineTorusRCAForTesting.html#a00fd0705ef7d9f9dbb05f28ecb92a30f", null ],
+    [ "getMachineDim", "classZoltan2_1_1MachineTorusRCAForTesting.html#a0df3a11d02ce2e6766d9c84a226df835", null ],
+    [ "getMachineExtent", "classZoltan2_1_1MachineTorusRCAForTesting.html#ab23e9c7db630cff775b2ecb2c94bb522", null ],
+    [ "getMachineExtentWrapArounds", "classZoltan2_1_1MachineTorusRCAForTesting.html#a0e9038ff38ee55626c9e26cbd937c2a9", null ],
+    [ "getMyActualMachineCoordinate", "classZoltan2_1_1MachineTorusRCAForTesting.html#a571423e8433089acf2fc1e22c140713f", null ],
+    [ "getMyMachineCoordinate", "classZoltan2_1_1MachineTorusRCAForTesting.html#aa72d6fb52739ff283330382ebf6e7814", null ],
+    [ "getRealMachineDim", "classZoltan2_1_1MachineTorusRCAForTesting.html#a093a288c57143b2541dce6e434a8841a", null ],
+    [ "getRealMachineExtent", "classZoltan2_1_1MachineTorusRCAForTesting.html#af52841f3e9594418ceeb1f9e06ebe0d4", null ],
+    [ "hasMachineCoordinates", "classZoltan2_1_1MachineTorusRCAForTesting.html#a08cacf2b81cd184ea60733b3dc270427", null ],
+    [ "printAllocation", "classZoltan2_1_1MachineTorusRCAForTesting.html#abaff9676a4fff86dc721f33e291df775", null ],
+    [ "actual_machine_extent", "classZoltan2_1_1MachineTorusRCAForTesting.html#ad5983b177ef8d80f38367143c2ccd11e", null ],
+    [ "actual_networkDim", "classZoltan2_1_1MachineTorusRCAForTesting.html#ae0ed91d10f6f680fe43b1e310425117f", null ],
+    [ "actual_procCoords", "classZoltan2_1_1MachineTorusRCAForTesting.html#a153b3a3c58025251525b1e3945040fbd", null ],
+    [ "is_transformed", "classZoltan2_1_1MachineTorusRCAForTesting.html#a0ffb2e296094c0500e746b465060980f", null ],
+    [ "machine_extent", "classZoltan2_1_1MachineTorusRCAForTesting.html#a7dc103a634abc1f6ac5b55a0892b4dc0", null ],
+    [ "networkDim", "classZoltan2_1_1MachineTorusRCAForTesting.html#a2d5b6506bbacf89b4231f0087d37fd46", null ],
+    [ "pl", "classZoltan2_1_1MachineTorusRCAForTesting.html#afe4a8a9dff87758778b2344a0a2ee4b8", null ],
+    [ "procCoords", "classZoltan2_1_1MachineTorusRCAForTesting.html#a570b717fe1c340b6a743ec3730f20794", null ]
+];

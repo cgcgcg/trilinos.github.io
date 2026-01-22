@@ -1,0 +1,4 @@
+var classTeuchos_1_1StringIndexedOrderedValueObjectContainerBase_1_1InvalidOrdinalIndexError =
+[
+    [ "InvalidOrdinalIndexError", "classTeuchos_1_1StringIndexedOrderedValueObjectContainerBase_1_1InvalidOrdinalIndexError.html#affc55948dfefe22b7fce8e1d0ec0a790", null ]
+];

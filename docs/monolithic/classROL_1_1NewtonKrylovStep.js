@@ -1,0 +1,25 @@
+var classROL_1_1NewtonKrylovStep =
+[
+    [ "HessianNK", "classROL_1_1NewtonKrylovStep_1_1HessianNK.html", "classROL_1_1NewtonKrylovStep_1_1HessianNK" ],
+    [ "PrecondNK", "classROL_1_1NewtonKrylovStep_1_1PrecondNK.html", "classROL_1_1NewtonKrylovStep_1_1PrecondNK" ],
+    [ "NewtonKrylovStep", "classROL_1_1NewtonKrylovStep.html#a976af37c49a850274d4fd8098424fe61", null ],
+    [ "NewtonKrylovStep", "classROL_1_1NewtonKrylovStep.html#ac81a8abed67893dc675afc0db14821bb", null ],
+    [ "compute", "classROL_1_1NewtonKrylovStep.html#a55b60a5deba2cebf7c1059729ea57d02", null ],
+    [ "initialize", "classROL_1_1NewtonKrylovStep.html#a7da96c56491f80b52692ab62583387d4", null ],
+    [ "print", "classROL_1_1NewtonKrylovStep.html#a25c96cfa5f7248e130b3566080bf7818", null ],
+    [ "printHeader", "classROL_1_1NewtonKrylovStep.html#aba7bee3f1da225b45f0ff20bd2db5f5a", null ],
+    [ "printName", "classROL_1_1NewtonKrylovStep.html#a953f74bfa686d13b4c210be3b3baf984", null ],
+    [ "update", "classROL_1_1NewtonKrylovStep.html#ab8e56c6ec53fb59bd8af7dcfacc1e7d0", null ],
+    [ "computeObj_", "classROL_1_1NewtonKrylovStep.html#a27f1633d9659c32ee57cc1159fe79974", null ],
+    [ "ekv_", "classROL_1_1NewtonKrylovStep.html#afae5dec0b4de61f5a67cec8b9666aa38", null ],
+    [ "esec_", "classROL_1_1NewtonKrylovStep.html#accd2f2011d1a14ca45b0a313fa989b2d", null ],
+    [ "flagKrylov_", "classROL_1_1NewtonKrylovStep.html#a504d937ef0915280dbf66f70292a6a45", null ],
+    [ "gp_", "classROL_1_1NewtonKrylovStep.html#a0512679327193bb2f966d11160bbfd75", null ],
+    [ "iterKrylov_", "classROL_1_1NewtonKrylovStep.html#a7fd128f563fdd575dc24b68b450d79c5", null ],
+    [ "krylov_", "classROL_1_1NewtonKrylovStep.html#ad78ad8d9cd0d7093f6ec1e1d86664b43", null ],
+    [ "krylovName_", "classROL_1_1NewtonKrylovStep.html#a444a05765655d7b1328a5c12f6716b1d", null ],
+    [ "secant_", "classROL_1_1NewtonKrylovStep.html#a489bfb9881668fd3c26499ec3adf0680", null ],
+    [ "secantName_", "classROL_1_1NewtonKrylovStep.html#ae39cc17611b7bda53e59e0aed60753f5", null ],
+    [ "useSecantPrecond_", "classROL_1_1NewtonKrylovStep.html#a6c6739b9305099639eca12d2d79bef09", null ],
+    [ "verbosity_", "classROL_1_1NewtonKrylovStep.html#a522b24d0826f90ff1924517fb76b58d3", null ]
+];

@@ -1,0 +1,5 @@
+var structIfpack2_1_1Details_1_1LocalReciprocalThreshold_3_01Kokkos_1_1View_3_01Sacado_1_1MP_1_1Vect1f051a06a0c6cf37b45c4a8e61134361 =
+[
+    [ "XV", "structIfpack2_1_1Details_1_1LocalReciprocalThreshold_3_01Kokkos_1_1View_3_01Sacado_1_1MP_1_1Vect1f051a06a0c6cf37b45c4a8e61134361.html#ad4dc1ec13b88d067fa6433888178be1d", null ],
+    [ "compute", "structIfpack2_1_1Details_1_1LocalReciprocalThreshold_3_01Kokkos_1_1View_3_01Sacado_1_1MP_1_1Vect1f051a06a0c6cf37b45c4a8e61134361.html#a6d15cac33582517b8188ea075742bbc7", null ]
+];

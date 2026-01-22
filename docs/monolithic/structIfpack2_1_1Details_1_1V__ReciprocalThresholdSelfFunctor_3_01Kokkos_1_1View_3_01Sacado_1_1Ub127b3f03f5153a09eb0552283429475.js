@@ -1,0 +1,16 @@
+var structIfpack2_1_1Details_1_1V__ReciprocalThresholdSelfFunctor_3_01Kokkos_1_1View_3_01Sacado_1_1Ub127b3f03f5153a09eb0552283429475 =
+[
+    [ "array_type", "structIfpack2_1_1Details_1_1V__ReciprocalThresholdSelfFunctor_3_01Kokkos_1_1View_3_01Sacado_1_1Ub127b3f03f5153a09eb0552283429475.html#a63cf3d6678a61ed1c987e12368cc6449", null ],
+    [ "execution_space", "structIfpack2_1_1Details_1_1V__ReciprocalThresholdSelfFunctor_3_01Kokkos_1_1View_3_01Sacado_1_1Ub127b3f03f5153a09eb0552283429475.html#abdcffaa29468ee605529b15296126659", null ],
+    [ "KAT", "structIfpack2_1_1Details_1_1V__ReciprocalThresholdSelfFunctor_3_01Kokkos_1_1View_3_01Sacado_1_1Ub127b3f03f5153a09eb0552283429475.html#aba90d879d22704cb061edb354c52145d", null ],
+    [ "mag_type", "structIfpack2_1_1Details_1_1V__ReciprocalThresholdSelfFunctor_3_01Kokkos_1_1View_3_01Sacado_1_1Ub127b3f03f5153a09eb0552283429475.html#a5c7e1a2f5026c9c073d7d7cfd3a78bca", null ],
+    [ "size_type", "structIfpack2_1_1Details_1_1V__ReciprocalThresholdSelfFunctor_3_01Kokkos_1_1View_3_01Sacado_1_1Ub127b3f03f5153a09eb0552283429475.html#a8ccae946c7d609a6a8103167d0aa1baf", null ],
+    [ "value_type", "structIfpack2_1_1Details_1_1V__ReciprocalThresholdSelfFunctor_3_01Kokkos_1_1View_3_01Sacado_1_1Ub127b3f03f5153a09eb0552283429475.html#a20de27412f621ad28b3c0946e2f2f0ba", null ],
+    [ "XVector", "structIfpack2_1_1Details_1_1V__ReciprocalThresholdSelfFunctor_3_01Kokkos_1_1View_3_01Sacado_1_1Ub127b3f03f5153a09eb0552283429475.html#a749b5f5777d9bc692ddeea7e77d28ee3", null ],
+    [ "V_ReciprocalThresholdSelfFunctor", "structIfpack2_1_1Details_1_1V__ReciprocalThresholdSelfFunctor_3_01Kokkos_1_1View_3_01Sacado_1_1Ub127b3f03f5153a09eb0552283429475.html#ae25d0f82e9c55138df3da5b6fbdfc755", null ],
+    [ "operator()", "structIfpack2_1_1Details_1_1V__ReciprocalThresholdSelfFunctor_3_01Kokkos_1_1View_3_01Sacado_1_1Ub127b3f03f5153a09eb0552283429475.html#a60fc8c55bf9acecc656dc4b25a0f0869", null ],
+    [ "m_min_val", "structIfpack2_1_1Details_1_1V__ReciprocalThresholdSelfFunctor_3_01Kokkos_1_1View_3_01Sacado_1_1Ub127b3f03f5153a09eb0552283429475.html#a50d2965f414c9531af26e1cb67eeac2f", null ],
+    [ "m_min_val_mag", "structIfpack2_1_1Details_1_1V__ReciprocalThresholdSelfFunctor_3_01Kokkos_1_1View_3_01Sacado_1_1Ub127b3f03f5153a09eb0552283429475.html#ae891939defde81e639b537cedf3302ba", null ],
+    [ "m_n_pce", "structIfpack2_1_1Details_1_1V__ReciprocalThresholdSelfFunctor_3_01Kokkos_1_1View_3_01Sacado_1_1Ub127b3f03f5153a09eb0552283429475.html#a3da5193ecbc9717913a2041c23d3abf5", null ],
+    [ "m_x", "structIfpack2_1_1Details_1_1V__ReciprocalThresholdSelfFunctor_3_01Kokkos_1_1View_3_01Sacado_1_1Ub127b3f03f5153a09eb0552283429475.html#a54464e4f93f8ca492c4528a23f565ca9", null ]
+];

@@ -1,0 +1,56 @@
+var group__nanoflann__grp =
+[
+    [ "Result set classes", "group__result__sets__grp.html", "group__result__sets__grp" ],
+    [ "Load/save auxiliary functions", "group__loadsave__grp.html", "group__loadsave__grp" ],
+    [ "Metric (distance) classes", "group__metric__grp.html", "group__metric__grp" ],
+    [ "Parameter structs", "group__param__grp.html", "group__param__grp" ],
+    [ "Memory allocation", "group__memalloc__grp.html", "group__memalloc__grp" ],
+    [ "Auxiliary metaprogramming stuff", "group__nanoflann__metaprog__grp.html", "group__nanoflann__metaprog__grp" ],
+    [ "KD-tree classes and adaptors", "group__kdtrees__grp.html", "group__kdtrees__grp" ],
+    [ "nanoflann::KDTreeBaseClass< Derived, Distance, DatasetAdaptor, DIM, IndexType >", "classnanoflann_1_1KDTreeBaseClass.html", [
+      [ "Interval", "structnanoflann_1_1KDTreeBaseClass_1_1Interval.html", [
+        [ "high", "structnanoflann_1_1KDTreeBaseClass_1_1Interval.html#ad39f54310e89737fc22369979df14ba9", null ],
+        [ "low", "structnanoflann_1_1KDTreeBaseClass_1_1Interval.html#a75c5eb8ad6655399a320ab2347ba68e5", null ]
+      ] ],
+      [ "Node", "structnanoflann_1_1KDTreeBaseClass_1_1Node.html", [
+        [ "child1", "structnanoflann_1_1KDTreeBaseClass_1_1Node.html#a38804bb80edf051c061d72f48ba8ab9f", null ],
+        [ "child2", "structnanoflann_1_1KDTreeBaseClass_1_1Node.html#a96b98cd69094af26595961f83c0a2db1", null ],
+        [ "divfeat", "structnanoflann_1_1KDTreeBaseClass_1_1Node.html#a4655b29d6c5300406ec5b1a43a3d4f06", null ],
+        [ "divhigh", "structnanoflann_1_1KDTreeBaseClass_1_1Node.html#a050d1d18ec3392e0dcd995f10f352f85", null ],
+        [ "divlow", "structnanoflann_1_1KDTreeBaseClass_1_1Node.html#a36d85fcaa2e26e2b8882c9645fb774e0", null ],
+        [ "left", "structnanoflann_1_1KDTreeBaseClass_1_1Node.html#af701dcedd2b1ffbd39030ff42c761cd2", null ],
+        [ "lr", "structnanoflann_1_1KDTreeBaseClass_1_1Node.html#a0aa2abb2037b94fcae62293193100832", null ],
+        [ "node_type", "structnanoflann_1_1KDTreeBaseClass_1_1Node.html#a4c92513fb17897356bf70664bd383515", null ],
+        [ "right", "structnanoflann_1_1KDTreeBaseClass_1_1Node.html#a3922feb9fd0f91f276f206540c0d549f", null ],
+        [ "sub", "structnanoflann_1_1KDTreeBaseClass_1_1Node.html#aec6ccf5f09dba0884273ec0d376eea74", null ]
+      ] ],
+      [ "BoundingBox", "classnanoflann_1_1KDTreeBaseClass.html#a5dcfdae3920a8b2488f2adb8bbad7376", null ],
+      [ "distance_vector_t", "classnanoflann_1_1KDTreeBaseClass.html#a5d10770110fed1ba6248cf9576ac17c2", null ],
+      [ "DistanceType", "classnanoflann_1_1KDTreeBaseClass.html#af68b972de35426f043f303ce0f1c439d", null ],
+      [ "ElementType", "classnanoflann_1_1KDTreeBaseClass.html#a2a2c768a06d03abd3c3bf4a457430b45", null ],
+      [ "NodePtr", "classnanoflann_1_1KDTreeBaseClass.html#a2dd15a21d803ab1fd21f9a9b5c527902", null ],
+      [ "computeInitialDistances", "classnanoflann_1_1KDTreeBaseClass.html#a04f4a4f4d36571a943ef0098ff89cdf7", null ],
+      [ "computeMinMax", "classnanoflann_1_1KDTreeBaseClass.html#aef319ed0a5d2779e2206a8ba1183ec02", null ],
+      [ "dataset_get", "classnanoflann_1_1KDTreeBaseClass.html#a1fae1cfb521bda6e0971712d68ca35f6", null ],
+      [ "divideTree", "classnanoflann_1_1KDTreeBaseClass.html#af28ff705467d61f1a77b91ce7878a361", null ],
+      [ "freeIndex", "classnanoflann_1_1KDTreeBaseClass.html#a8a76f366cbbeb7feb8c0d2ecc91c4dcd", null ],
+      [ "load_tree", "classnanoflann_1_1KDTreeBaseClass.html#abdfddccec4470a5db1bd075947ed09ec", null ],
+      [ "loadIndex_", "classnanoflann_1_1KDTreeBaseClass.html#a105f752dfed5d19eb1240d15836d1664", null ],
+      [ "middleSplit_", "classnanoflann_1_1KDTreeBaseClass.html#ae3a6b6a01fd5e32be83c1b37b3e5f1d8", null ],
+      [ "planeSplit", "classnanoflann_1_1KDTreeBaseClass.html#ad9e6e2d2b3269a9e078b4e861a9e5681", null ],
+      [ "save_tree", "classnanoflann_1_1KDTreeBaseClass.html#abeb891191852d9cdd9fbed032d78d5b9", null ],
+      [ "saveIndex_", "classnanoflann_1_1KDTreeBaseClass.html#af804cdf2475d8b4d63610c060cb43402", null ],
+      [ "size", "classnanoflann_1_1KDTreeBaseClass.html#afe312259c5a677185b020b09bc9b1133", null ],
+      [ "usedMemory", "classnanoflann_1_1KDTreeBaseClass.html#a3109375fb5ac4cbeb01ee90ff3e0a082", null ],
+      [ "veclen", "classnanoflann_1_1KDTreeBaseClass.html#ae50bddff91373294bc04e5e830c93b49", null ],
+      [ "dim", "classnanoflann_1_1KDTreeBaseClass.html#ac012462fd44105a7067a866f17d3a3c4", null ],
+      [ "m_leaf_max_size", "classnanoflann_1_1KDTreeBaseClass.html#a8bddcc11eb673a55aeddc6db7d98e0f8", null ],
+      [ "m_size", "classnanoflann_1_1KDTreeBaseClass.html#a7bf4c8bb983de8bd1ab57d2d766e0b94", null ],
+      [ "m_size_at_index_build", "classnanoflann_1_1KDTreeBaseClass.html#ad68a95d420ed5698e4c34e2aeabf348e", null ],
+      [ "pool", "classnanoflann_1_1KDTreeBaseClass.html#a96ee9a23c13560de86beffd8bd0f840c", null ],
+      [ "root_bbox", "classnanoflann_1_1KDTreeBaseClass.html#a3da5a7eb2c023164cf74851371fce25f", null ],
+      [ "root_node", "classnanoflann_1_1KDTreeBaseClass.html#a48eb801f23eee904d6425885a8c53e25", null ],
+      [ "vind", "classnanoflann_1_1KDTreeBaseClass.html#ae30c15d493556b42895e40f365cbc40c", null ]
+    ] ],
+    [ "NANOFLANN_VERSION", "group__nanoflann__grp.html#ga7b8efca796d8e1861a432a5f6b8404a1", null ]
+];

@@ -1,0 +1,8 @@
+var structStokhos_1_1Multiply_3_01BlockCrsMatrix_3_01CrsProductTensor_3_01TensorScalar_00_01Kokkos_1fc6db369537c3d999c4ec32ee3b2199b =
+[
+    [ "block_size", "structStokhos_1_1Multiply_3_01BlockCrsMatrix_3_01CrsProductTensor_3_01TensorScalar_00_01Kokkos_1fc6db369537c3d999c4ec32ee3b2199b.html#a56bc196b5e8f9f3ed3441927492d7652", null ],
+    [ "num_blocks", "structStokhos_1_1Multiply_3_01BlockCrsMatrix_3_01CrsProductTensor_3_01TensorScalar_00_01Kokkos_1fc6db369537c3d999c4ec32ee3b2199b.html#a066962a7076406d2002d28d2c3942bd7", null ],
+    [ "num_warp", "structStokhos_1_1Multiply_3_01BlockCrsMatrix_3_01CrsProductTensor_3_01TensorScalar_00_01Kokkos_1fc6db369537c3d999c4ec32ee3b2199b.html#aeb1833b526a0a6df8ad54dc4f98d0342", null ],
+    [ "reads", "structStokhos_1_1Multiply_3_01BlockCrsMatrix_3_01CrsProductTensor_3_01TensorScalar_00_01Kokkos_1fc6db369537c3d999c4ec32ee3b2199b.html#a9756416b29737127088e08a66c301387", null ],
+    [ "shmem", "structStokhos_1_1Multiply_3_01BlockCrsMatrix_3_01CrsProductTensor_3_01TensorScalar_00_01Kokkos_1fc6db369537c3d999c4ec32ee3b2199b.html#abab43d7347342d4eba213bbbe85b25d4", null ]
+];

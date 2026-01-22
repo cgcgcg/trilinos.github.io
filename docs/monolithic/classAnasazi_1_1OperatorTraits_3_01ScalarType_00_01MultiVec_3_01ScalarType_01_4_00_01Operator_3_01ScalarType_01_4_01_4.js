@@ -1,0 +1,4 @@
+var classAnasazi_1_1OperatorTraits_3_01ScalarType_00_01MultiVec_3_01ScalarType_01_4_00_01Operator_3_01ScalarType_01_4_01_4 =
+[
+    [ "Apply", "classAnasazi_1_1OperatorTraits_3_01ScalarType_00_01MultiVec_3_01ScalarType_01_4_00_01Operator_3_01ScalarType_01_4_01_4.html#a734629003d15986c364c7d1e4791d1e9", null ]
+];

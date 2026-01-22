@@ -1,0 +1,7 @@
+var structshards_1_1array__traits_1_1Helper_3_01Scalar_00_01NaturalOrder_00_01Tag1_00_01Tag2_00_01Ta4fc0ba8d79663bde7cf1143087b7d60b =
+[
+    [ "fortran", "structshards_1_1array__traits_1_1Helper_3_01Scalar_00_01NaturalOrder_00_01Tag1_00_01Tag2_00_01Ta4fc0ba8d79663bde7cf1143087b7d60b.html#a8791bf826ac6c96389459fa626b02c4e", null ],
+    [ "natural", "structshards_1_1array__traits_1_1Helper_3_01Scalar_00_01NaturalOrder_00_01Tag1_00_01Tag2_00_01Ta4fc0ba8d79663bde7cf1143087b7d60b.html#a50902f6a35db682ec0b1153583657e24", null ],
+    [ "reverse", "structshards_1_1array__traits_1_1Helper_3_01Scalar_00_01NaturalOrder_00_01Tag1_00_01Tag2_00_01Ta4fc0ba8d79663bde7cf1143087b7d60b.html#a9258cd798c99cddd6288115e724cf729", null ],
+    [ "type", "structshards_1_1array__traits_1_1Helper_3_01Scalar_00_01NaturalOrder_00_01Tag1_00_01Tag2_00_01Ta4fc0ba8d79663bde7cf1143087b7d60b.html#aed19f27b6a500e459091ef426111d304", null ]
+];

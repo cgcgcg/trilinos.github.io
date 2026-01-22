@@ -1,0 +1,25 @@
+var TrilinosCouplings__IntrepidPoissonExampleHelpers_8cpp =
+[
+    [ "TrilinosCouplings::IntrepidPoissonExample::Matrix3", "classTrilinosCouplings_1_1IntrepidPoissonExample_1_1Matrix3.html", "classTrilinosCouplings_1_1IntrepidPoissonExample_1_1Matrix3" ],
+    [ "DiagonalMatrix", "TrilinosCouplings__IntrepidPoissonExampleHelpers_8cpp.html#a2545bf686d37441b13979ea6db2f7595", null ],
+    [ "getDiffusionMatrix", "TrilinosCouplings__IntrepidPoissonExampleHelpers_8cpp.html#aca1fdf0510f6ebc65a84f09cdde919f9", null ],
+    [ "getDiffusionMatrix2D", "TrilinosCouplings__IntrepidPoissonExampleHelpers_8cpp.html#ae0910ed3c012ba733757078dcd2bb7d7", null ],
+    [ "getMaterialTensorOffDiagonalValue", "TrilinosCouplings__IntrepidPoissonExampleHelpers_8cpp.html#a210392065ba41051559fee64b56833a8", null ],
+    [ "makeMeshInput", "TrilinosCouplings__IntrepidPoissonExampleHelpers_8cpp.html#a968a155edde2bc556953142def4e4d11", null ],
+    [ "parseCommandLineArguments", "TrilinosCouplings__IntrepidPoissonExampleHelpers_8cpp.html#a6bb63cf9eb7151b26e40d5d910358117", null ],
+    [ "setCommandLineArgumentDefaults", "TrilinosCouplings__IntrepidPoissonExampleHelpers_8cpp.html#ab76b8f52789652120516ca30a851251d", null ],
+    [ "setDiffusionRotationAndStrength", "TrilinosCouplings__IntrepidPoissonExampleHelpers_8cpp.html#a1d45956cb7b061e56978bd9540234532", null ],
+    [ "setMaterialTensorOffDiagonalValue", "TrilinosCouplings__IntrepidPoissonExampleHelpers_8cpp.html#a0b0ecdba8bafee632bb1b4c3ef6d2770", null ],
+    [ "setUpCommandLineArguments", "TrilinosCouplings__IntrepidPoissonExampleHelpers_8cpp.html#af1bca24fc8cbee1a2c2a2dbca4006a36", null ],
+    [ "Transpose", "TrilinosCouplings__IntrepidPoissonExampleHelpers_8cpp.html#a2f6eb921cf95938f9fa70aada076e25d", null ],
+    [ "useDiffusionMatrix", "TrilinosCouplings__IntrepidPoissonExampleHelpers_8cpp.html#a97b9c8afdea9ff3cd81a2e731b747bc5", null ],
+    [ "X_Rotation", "TrilinosCouplings__IntrepidPoissonExampleHelpers_8cpp.html#afa90a7dd607c4dd897221fe50c2e1f16", null ],
+    [ "Y_Rotation", "TrilinosCouplings__IntrepidPoissonExampleHelpers_8cpp.html#acc2f4fe8578535f97ba1b25ba314a586", null ],
+    [ "Z_Rotation", "TrilinosCouplings__IntrepidPoissonExampleHelpers_8cpp.html#abe8bd2490f46c528159e35fdab5f1452", null ],
+    [ "diff_total_", "TrilinosCouplings__IntrepidPoissonExampleHelpers_8cpp.html#a3b3d62096530a3b8fecd1442f17fdf41", null ],
+    [ "materialTensorOffDiagonalValue_", "TrilinosCouplings__IntrepidPoissonExampleHelpers_8cpp.html#afdf6ecc2421337643ee6d34bd1729849", null ],
+    [ "matrix2D_", "TrilinosCouplings__IntrepidPoissonExampleHelpers_8cpp.html#a9297896988c7b8d773fc5f52cbcd3a9c", null ],
+    [ "rotation_", "TrilinosCouplings__IntrepidPoissonExampleHelpers_8cpp.html#a35878a6868ddd32ef32e3f66002a2bee", null ],
+    [ "strength_", "TrilinosCouplings__IntrepidPoissonExampleHelpers_8cpp.html#add9bcd196162577cb60b9ffc968fc178", null ],
+    [ "use_diffusion_", "TrilinosCouplings__IntrepidPoissonExampleHelpers_8cpp.html#a211f72575911b50684b811577d581dbb", null ]
+];

@@ -1,0 +1,4 @@
+var structKokkos_1_1CijkType_3_01ViewType_00_01typename_01std_1_1enable__if_3_01is__view__uq__pce_3_7e932bc5c9b9334e64a7c752aeb940a0 =
+[
+    [ "type", "structKokkos_1_1CijkType_3_01ViewType_00_01typename_01std_1_1enable__if_3_01is__view__uq__pce_3_7e932bc5c9b9334e64a7c752aeb940a0.html#a3f7eb941d75ee580bb0e4871ddad8506", null ]
+];

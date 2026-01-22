@@ -1,0 +1,13 @@
+var classStokhos_1_1Multiply_3_01BlockCrsMatrix_3_01BlockSpec_00_01MatrixValue_00_01Device_01_4_00_0c02578ecc655e030dde9b3bf8a52cca8 =
+[
+    [ "block_vector_type", "classStokhos_1_1Multiply_3_01BlockCrsMatrix_3_01BlockSpec_00_01MatrixValue_00_01Device_01_4_00_0c02578ecc655e030dde9b3bf8a52cca8.html#ab090af823031a9dfe71e3d3b4a64468f", null ],
+    [ "execution_space", "classStokhos_1_1Multiply_3_01BlockCrsMatrix_3_01BlockSpec_00_01MatrixValue_00_01Device_01_4_00_0c02578ecc655e030dde9b3bf8a52cca8.html#a4653b744bdccbde9d83d099e06a10b15", null ],
+    [ "matrix_type", "classStokhos_1_1Multiply_3_01BlockCrsMatrix_3_01BlockSpec_00_01MatrixValue_00_01Device_01_4_00_0c02578ecc655e030dde9b3bf8a52cca8.html#a61260ae442ea8781f89ae0934c0721ce", null ],
+    [ "size_type", "classStokhos_1_1Multiply_3_01BlockCrsMatrix_3_01BlockSpec_00_01MatrixValue_00_01Device_01_4_00_0c02578ecc655e030dde9b3bf8a52cca8.html#a05afedfabc219f29b687302fbd1cafe7", null ],
+    [ "Multiply", "classStokhos_1_1Multiply_3_01BlockCrsMatrix_3_01BlockSpec_00_01MatrixValue_00_01Device_01_4_00_0c02578ecc655e030dde9b3bf8a52cca8.html#a9a4f3e072003e2ac0306140bc6145f54", null ],
+    [ "apply", "classStokhos_1_1Multiply_3_01BlockCrsMatrix_3_01BlockSpec_00_01MatrixValue_00_01Device_01_4_00_0c02578ecc655e030dde9b3bf8a52cca8.html#a7bb669f4103469ea0633b40bfb2a46ff", null ],
+    [ "operator()", "classStokhos_1_1Multiply_3_01BlockCrsMatrix_3_01BlockSpec_00_01MatrixValue_00_01Device_01_4_00_0c02578ecc655e030dde9b3bf8a52cca8.html#aa3c79e69ef510421e605e6f2ca871a92", null ],
+    [ "m_A", "classStokhos_1_1Multiply_3_01BlockCrsMatrix_3_01BlockSpec_00_01MatrixValue_00_01Device_01_4_00_0c02578ecc655e030dde9b3bf8a52cca8.html#a74c4715ea0569ac383606947c0b90ac4", null ],
+    [ "m_x", "classStokhos_1_1Multiply_3_01BlockCrsMatrix_3_01BlockSpec_00_01MatrixValue_00_01Device_01_4_00_0c02578ecc655e030dde9b3bf8a52cca8.html#a0d789f579782848351f0f6d256cd70df", null ],
+    [ "m_y", "classStokhos_1_1Multiply_3_01BlockCrsMatrix_3_01BlockSpec_00_01MatrixValue_00_01Device_01_4_00_0c02578ecc655e030dde9b3bf8a52cca8.html#a04494748271f853d6cb89ab257c03ce8", null ]
+];

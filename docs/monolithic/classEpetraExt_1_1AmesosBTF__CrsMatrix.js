@@ -1,0 +1,26 @@
+var classEpetraExt_1_1AmesosBTF__CrsMatrix =
+[
+    [ "~AmesosBTF_CrsMatrix", "classEpetraExt_1_1AmesosBTF__CrsMatrix.html#a6e9d30ebd74f12b2f605ae46045742c8", null ],
+    [ "AmesosBTF_CrsMatrix", "classEpetraExt_1_1AmesosBTF__CrsMatrix.html#a5a0b90d2062b055fd6941103ffc6fba9", null ],
+    [ "BlockPtr", "classEpetraExt_1_1AmesosBTF__CrsMatrix.html#ab14189df11b24e6d141b28f3d1d26715", null ],
+    [ "ColPerm", "classEpetraExt_1_1AmesosBTF__CrsMatrix.html#afbb08a8602334ae6f8fed1c6bb67afbb", null ],
+    [ "fwd", "classEpetraExt_1_1AmesosBTF__CrsMatrix.html#a79ce71acf61a3b453ad74f7658932ad2", null ],
+    [ "Importer", "classEpetraExt_1_1AmesosBTF__CrsMatrix.html#aac672028be3ac45c4b5953c5a736ded1", null ],
+    [ "NumBlocks", "classEpetraExt_1_1AmesosBTF__CrsMatrix.html#afb9dcd5225881bfe3e8e3d72bb116416", null ],
+    [ "operator()", "classEpetraExt_1_1AmesosBTF__CrsMatrix.html#a3746fefe55d8a3e0b66acfb0988a8bf8", null ],
+    [ "RowPerm", "classEpetraExt_1_1AmesosBTF__CrsMatrix.html#a0381bf490896d1af9779df01c43be2c8", null ],
+    [ "rvs", "classEpetraExt_1_1AmesosBTF__CrsMatrix.html#a7daf76258d4a948de3885be2c855dc73", null ],
+    [ "blockPtr_", "classEpetraExt_1_1AmesosBTF__CrsMatrix.html#a82e2ea495ae1f1bddf40a7f4ae128016", null ],
+    [ "colPerm_", "classEpetraExt_1_1AmesosBTF__CrsMatrix.html#a0aaf0374c63ee678f9fe76e08a6b4ceb", null ],
+    [ "debug_", "classEpetraExt_1_1AmesosBTF__CrsMatrix.html#ac8dc574aa9fe35c689246632b43a4fd0", null ],
+    [ "Importer_", "classEpetraExt_1_1AmesosBTF__CrsMatrix.html#a2d4e209079079d9b2b97a0b50ea261df", null ],
+    [ "NewColMap_", "classEpetraExt_1_1AmesosBTF__CrsMatrix.html#aa142a38535bc39f025807a2edbd33fbe", null ],
+    [ "NewGraph_", "classEpetraExt_1_1AmesosBTF__CrsMatrix.html#a4354c430eb3ab28151c67cdc65db002a", null ],
+    [ "NewMatrix_", "classEpetraExt_1_1AmesosBTF__CrsMatrix.html#a31a97dffb5cfceb10857b1d2e589b045", null ],
+    [ "NewRowMap_", "classEpetraExt_1_1AmesosBTF__CrsMatrix.html#abd2bc9f200cae24ecbfec5286492eb2c", null ],
+    [ "numBlocks_", "classEpetraExt_1_1AmesosBTF__CrsMatrix.html#a719b184a5bac9d588d3720f5237539e9", null ],
+    [ "rowPerm_", "classEpetraExt_1_1AmesosBTF__CrsMatrix.html#a047981d0647caa1674005b3f2927fb6a", null ],
+    [ "threshold_", "classEpetraExt_1_1AmesosBTF__CrsMatrix.html#a5e70e854fb95a177fc9133bc890e6678", null ],
+    [ "upperTri_", "classEpetraExt_1_1AmesosBTF__CrsMatrix.html#a6523ca19456ed8b71faccf63077ed7de", null ],
+    [ "verbose_", "classEpetraExt_1_1AmesosBTF__CrsMatrix.html#ab5bf0c83338bccb27459b6af2f4149ca", null ]
+];

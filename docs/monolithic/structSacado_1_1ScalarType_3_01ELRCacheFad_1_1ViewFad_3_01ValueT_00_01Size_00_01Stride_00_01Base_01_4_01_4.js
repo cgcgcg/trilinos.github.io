@@ -1,0 +1,4 @@
+var structSacado_1_1ScalarType_3_01ELRCacheFad_1_1ViewFad_3_01ValueT_00_01Size_00_01Stride_00_01Base_01_4_01_4 =
+[
+    [ "type", "structSacado_1_1ScalarType_3_01ELRCacheFad_1_1ViewFad_3_01ValueT_00_01Size_00_01Stride_00_01Base_01_4_01_4.html#a10c28a2c53b2f116e1858f82f16abd62", null ]
+];

@@ -1,0 +1,27 @@
+var namespaceTpetra_1_1Import__Util =
+[
+    [ "Impl", "namespaceTpetra_1_1Import__Util_1_1Impl.html", "namespaceTpetra_1_1Import__Util_1_1Impl" ],
+    [ "checkAztecOOMLOrdering", "namespaceTpetra_1_1Import__Util.html#ac41dc13e387a3835e4566376265b3cd9", null ],
+    [ "checkBlockConsistency", "namespaceTpetra_1_1Import__Util.html#aeb047241bb6761cf218e8f603e96ad29", null ],
+    [ "checkImportValidity", "namespaceTpetra_1_1Import__Util.html#a645596f05c9e7753f8bde6d30bacb7ac", null ],
+    [ "getPidGidPairs", "namespaceTpetra_1_1Import__Util.html#aef45f5c03d50d6d971f50f461744e788", null ],
+    [ "getPids", "namespaceTpetra_1_1Import__Util.html#a5fa4bbea411fc1ca5bcf9f09d98cd4d7", null ],
+    [ "getPids", "namespaceTpetra_1_1Import__Util.html#a6f7d1bd6d2220a405bdb89d56a6c5d7d", null ],
+    [ "getRemotePIDs", "namespaceTpetra_1_1Import__Util.html#aaed69546af17530c419326d5e978a9fc", null ],
+    [ "getTwoTransferOwnershipVector", "namespaceTpetra_1_1Import__Util.html#ab881b8caf122456bdea662605e026c72", null ],
+    [ "lowCommunicationMakeColMapAndReindex", "namespaceTpetra_1_1Import__Util.html#a468276174442cc0a6fd2d6d77301c016", null ],
+    [ "lowCommunicationMakeColMapAndReindex", "namespaceTpetra_1_1Import__Util.html#abaf78f16087afe152b4fc7cf24f24b0e", null ],
+    [ "lowCommunicationMakeColMapAndReindex", "namespaceTpetra_1_1Import__Util.html#a9f71b8c5d79922aa44d7a0d6b3064a5a", null ],
+    [ "lowCommunicationMakeColMapAndReindexSerial", "namespaceTpetra_1_1Import__Util.html#a448736f9ca2fc827a33907b1b44b8d95", null ],
+    [ "reverseNeighborDiscovery", "namespaceTpetra_1_1Import__Util.html#a011e0024d45bda33d522683f0dc9668f", null ],
+    [ "sort_PID_then_GID", "namespaceTpetra_1_1Import__Util.html#a52aa3391413b7c5bcca94c20df42daff", null ],
+    [ "sort_PID_then_pair_GID_LID", "namespaceTpetra_1_1Import__Util.html#a7a7520f2d838db6a14e3b7e27450bf82", null ],
+    [ "sortAndMergeCrsEntries", "namespaceTpetra_1_1Import__Util.html#a061a5c181fad7abe69e0c7de1310ba68", null ],
+    [ "sortAndMergeCrsEntries", "namespaceTpetra_1_1Import__Util.html#a9c9e2b9bda2966a4d8b864923d71031d", null ],
+    [ "sortAndMergeCrsEntries", "namespaceTpetra_1_1Import__Util.html#abb69413e3cd403ec431d579e68fec29f", null ],
+    [ "sortAndMergeCrsEntries", "namespaceTpetra_1_1Import__Util.html#ac75fa2a5acff88296d3a045d02a4494a", null ],
+    [ "sortCrsEntries", "namespaceTpetra_1_1Import__Util.html#a6c6dd114a3b258cf870abf521b233b7b", null ],
+    [ "sortCrsEntries", "namespaceTpetra_1_1Import__Util.html#a04040d2bb8d6e5e3c54a50798489a944", null ],
+    [ "sortCrsEntries", "namespaceTpetra_1_1Import__Util.html#ac457e7e828576695c2cf129806d0f979", null ],
+    [ "sortCrsEntries", "namespaceTpetra_1_1Import__Util.html#afa6ddc7a853dc700b00ae11be6598ce6", null ]
+];

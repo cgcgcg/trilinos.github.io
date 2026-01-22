@@ -1,0 +1,7 @@
+var structKokkos_1_1Impl_1_1RebindStokhosStorageDevice_3_01Sacado_1_1MP_1_1Vector_3_01OldStorageType_01_4_00_01Device_01_4 =
+[
+    [ "NewStorageApply", "structKokkos_1_1Impl_1_1RebindStokhosStorageDevice_3_01Sacado_1_1MP_1_1Vector_3_01OldStorageType_01_4_00_01Device_01_4.html#a55cb66ab30207e5f6df2ab31f21212b9", null ],
+    [ "NewStorageType", "structKokkos_1_1Impl_1_1RebindStokhosStorageDevice_3_01Sacado_1_1MP_1_1Vector_3_01OldStorageType_01_4_00_01Device_01_4.html#af3e137d1302ad8696c492ccda61e2bba", null ],
+    [ "NewVectorApply", "structKokkos_1_1Impl_1_1RebindStokhosStorageDevice_3_01Sacado_1_1MP_1_1Vector_3_01OldStorageType_01_4_00_01Device_01_4.html#a75117e8f42340317fdf8b126b4ae5090", null ],
+    [ "type", "structKokkos_1_1Impl_1_1RebindStokhosStorageDevice_3_01Sacado_1_1MP_1_1Vector_3_01OldStorageType_01_4_00_01Device_01_4.html#afa45767769bba06d654658282efbddb4", null ]
+];

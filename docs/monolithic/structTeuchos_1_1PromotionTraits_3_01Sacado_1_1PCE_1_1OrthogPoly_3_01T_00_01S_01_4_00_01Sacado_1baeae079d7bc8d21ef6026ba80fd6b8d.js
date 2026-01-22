@@ -1,0 +1,4 @@
+var structTeuchos_1_1PromotionTraits_3_01Sacado_1_1PCE_1_1OrthogPoly_3_01T_00_01S_01_4_00_01Sacado_1baeae079d7bc8d21ef6026ba80fd6b8d =
+[
+    [ "promote", "structTeuchos_1_1PromotionTraits_3_01Sacado_1_1PCE_1_1OrthogPoly_3_01T_00_01S_01_4_00_01Sacado_1baeae079d7bc8d21ef6026ba80fd6b8d.html#a49a730f55a54e296d405ee6ba8224c9e", null ]
+];

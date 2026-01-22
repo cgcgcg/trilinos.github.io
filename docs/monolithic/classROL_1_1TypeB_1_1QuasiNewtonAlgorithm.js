@@ -1,0 +1,27 @@
+var classROL_1_1TypeB_1_1QuasiNewtonAlgorithm =
+[
+    [ "QuasiNewtonAlgorithm", "classROL_1_1TypeB_1_1QuasiNewtonAlgorithm.html#a9149f1e7f070f42f1e8ae0167cf974f4", null ],
+    [ "initialize", "classROL_1_1TypeB_1_1QuasiNewtonAlgorithm.html#ada13dbe3ba07c863320b0d4e3964750f", null ],
+    [ "run", "classROL_1_1TypeB_1_1QuasiNewtonAlgorithm.html#a7b7027edd6e0ad9aa0c2c8bbec57753c", null ],
+    [ "writeHeader", "classROL_1_1TypeB_1_1QuasiNewtonAlgorithm.html#a5158f4f09404949d3ab3643eeda96f38", null ],
+    [ "writeName", "classROL_1_1TypeB_1_1QuasiNewtonAlgorithm.html#a5d3718eef31ec87bef0138335c1287bd", null ],
+    [ "writeOutput", "classROL_1_1TypeB_1_1QuasiNewtonAlgorithm.html#a437ca9b631d717267a6eb5e53c13356b", null ],
+    [ "algoName_", "classROL_1_1TypeB_1_1QuasiNewtonAlgorithm.html#a2bf395033db6321147c0326d57ef3f38", null ],
+    [ "c1_", "classROL_1_1TypeB_1_1QuasiNewtonAlgorithm.html#a0edbfad125e5c7b2e1a0f3fbadae037b", null ],
+    [ "esec_", "classROL_1_1TypeB_1_1QuasiNewtonAlgorithm.html#affa5b13386a2e6606be0563bf359936b", null ],
+    [ "hasLEC_", "classROL_1_1TypeB_1_1QuasiNewtonAlgorithm.html#a6a5efa3a6db983a94713870fdc02ffc8", null ],
+    [ "list_", "classROL_1_1TypeB_1_1QuasiNewtonAlgorithm.html#a08b2a33310d40e6890985b89dbc773bc", null ],
+    [ "ls_nfval_", "classROL_1_1TypeB_1_1QuasiNewtonAlgorithm.html#af9b50c5ab58e29eaf714c93c8cc2fdde", null ],
+    [ "maxit_", "classROL_1_1TypeB_1_1QuasiNewtonAlgorithm.html#a190ca8daf15d9aa7aebf5c4aac2f9bd9", null ],
+    [ "rhodec_", "classROL_1_1TypeB_1_1QuasiNewtonAlgorithm.html#a731048a9f4a1dbf0428abd7cfc3704e9", null ],
+    [ "secant_", "classROL_1_1TypeB_1_1QuasiNewtonAlgorithm.html#a225adc893f3ee7ce7e53d8d292e6299d", null ],
+    [ "secantName_", "classROL_1_1TypeB_1_1QuasiNewtonAlgorithm.html#af99a3ab07b5c7cc10fb98834e54cff63", null ],
+    [ "sigma1_", "classROL_1_1TypeB_1_1QuasiNewtonAlgorithm.html#a21bd859efac695422c034258b0d1f252", null ],
+    [ "sigma2_", "classROL_1_1TypeB_1_1QuasiNewtonAlgorithm.html#a090b23e841fe781e9d9397ab93b444e8", null ],
+    [ "sp_tol1_", "classROL_1_1TypeB_1_1QuasiNewtonAlgorithm.html#a0c2d8dcf595724d9d9c08c64d4307df5", null ],
+    [ "sp_tol2_", "classROL_1_1TypeB_1_1QuasiNewtonAlgorithm.html#a1a7b84f6c9a7a7d71559973bef992656", null ],
+    [ "sp_tol_min_", "classROL_1_1TypeB_1_1QuasiNewtonAlgorithm.html#ae44ec62e642139bf5a77987d5940bac8", null ],
+    [ "spgIter_", "classROL_1_1TypeB_1_1QuasiNewtonAlgorithm.html#ac1eb8cffc33880a86de5cff6619f027f", null ],
+    [ "verbosity_", "classROL_1_1TypeB_1_1QuasiNewtonAlgorithm.html#a688085c973825ca26dfba165d2bb92f6", null ],
+    [ "writeHeader_", "classROL_1_1TypeB_1_1QuasiNewtonAlgorithm.html#aa8d5520718fc9886888eacac1f055a71", null ]
+];

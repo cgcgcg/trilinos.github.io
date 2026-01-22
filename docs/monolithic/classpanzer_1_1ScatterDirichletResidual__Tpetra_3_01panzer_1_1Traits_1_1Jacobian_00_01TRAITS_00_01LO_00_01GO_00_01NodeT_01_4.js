@@ -1,0 +1,26 @@
+var classpanzer_1_1ScatterDirichletResidual__Tpetra_3_01panzer_1_1Traits_1_1Jacobian_00_01TRAITS_00_01LO_00_01GO_00_01NodeT_01_4 =
+[
+    [ "LOC", "classpanzer_1_1ScatterDirichletResidual__Tpetra_3_01panzer_1_1Traits_1_1Jacobian_00_01TRAITS_00_01LO_00_01GO_00_01NodeT_01_4.html#a75b2e2e2dff62399f4516ed889bc502a", null ],
+    [ "ScalarT", "classpanzer_1_1ScatterDirichletResidual__Tpetra_3_01panzer_1_1Traits_1_1Jacobian_00_01TRAITS_00_01LO_00_01GO_00_01NodeT_01_4.html#ad24161b8193d08d136555ad3ab1fb465", null ],
+    [ "ScatterDirichletResidual_Tpetra", "classpanzer_1_1ScatterDirichletResidual__Tpetra_3_01panzer_1_1Traits_1_1Jacobian_00_01TRAITS_00_01LO_00_01GO_00_01NodeT_01_4.html#a1f33e81bd804bca26e23b024ebf0d854", null ],
+    [ "ScatterDirichletResidual_Tpetra", "classpanzer_1_1ScatterDirichletResidual__Tpetra_3_01panzer_1_1Traits_1_1Jacobian_00_01TRAITS_00_01LO_00_01GO_00_01NodeT_01_4.html#ab008b3ccdc863013bc265733fb7f33a3", null ],
+    [ "ScatterDirichletResidual_Tpetra", "classpanzer_1_1ScatterDirichletResidual__Tpetra_3_01panzer_1_1Traits_1_1Jacobian_00_01TRAITS_00_01LO_00_01GO_00_01NodeT_01_4.html#ab4d3977d1f2cef86828ecebb2ce1d424", null ],
+    [ "clone", "classpanzer_1_1ScatterDirichletResidual__Tpetra_3_01panzer_1_1Traits_1_1Jacobian_00_01TRAITS_00_01LO_00_01GO_00_01NodeT_01_4.html#a635556215a22c72979fec93e735e89d7", null ],
+    [ "evaluateFields", "classpanzer_1_1ScatterDirichletResidual__Tpetra_3_01panzer_1_1Traits_1_1Jacobian_00_01TRAITS_00_01LO_00_01GO_00_01NodeT_01_4.html#ac3572660a0c914b0b01f71de6762bcb6", null ],
+    [ "postRegistrationSetup", "classpanzer_1_1ScatterDirichletResidual__Tpetra_3_01panzer_1_1Traits_1_1Jacobian_00_01TRAITS_00_01LO_00_01GO_00_01NodeT_01_4.html#a6a80146ca5d047ae8f10d486a6f0118d", null ],
+    [ "preEvaluate", "classpanzer_1_1ScatterDirichletResidual__Tpetra_3_01panzer_1_1Traits_1_1Jacobian_00_01TRAITS_00_01LO_00_01GO_00_01NodeT_01_4.html#ab37dbe1852447d1c37c2224f64cda79c", null ],
+    [ "applyBC_", "classpanzer_1_1ScatterDirichletResidual__Tpetra_3_01panzer_1_1Traits_1_1Jacobian_00_01TRAITS_00_01LO_00_01GO_00_01NodeT_01_4.html#aa60f68394a161ca35bb1d5c9cd5783e3", null ],
+    [ "checkApplyBC_", "classpanzer_1_1ScatterDirichletResidual__Tpetra_3_01panzer_1_1Traits_1_1Jacobian_00_01TRAITS_00_01LO_00_01GO_00_01NodeT_01_4.html#a68ef5e512a54cf94495915064d0a8b71", null ],
+    [ "dirichletCounter_", "classpanzer_1_1ScatterDirichletResidual__Tpetra_3_01panzer_1_1Traits_1_1Jacobian_00_01TRAITS_00_01LO_00_01GO_00_01NodeT_01_4.html#abe4fa31d60aae37003aea7da5a78cb0d", null ],
+    [ "fieldIds_", "classpanzer_1_1ScatterDirichletResidual__Tpetra_3_01panzer_1_1Traits_1_1Jacobian_00_01TRAITS_00_01LO_00_01GO_00_01NodeT_01_4.html#a6d7599f0ce84471f3b00bfea0c98ad30", null ],
+    [ "fieldMap_", "classpanzer_1_1ScatterDirichletResidual__Tpetra_3_01panzer_1_1Traits_1_1Jacobian_00_01TRAITS_00_01LO_00_01GO_00_01NodeT_01_4.html#ab0362fb9891cbe4bd3a109cf4c86c6b7", null ],
+    [ "globalDataKey_", "classpanzer_1_1ScatterDirichletResidual__Tpetra_3_01panzer_1_1Traits_1_1Jacobian_00_01TRAITS_00_01LO_00_01GO_00_01NodeT_01_4.html#a238eb971250edd7a5a0f552ce49b5d81", null ],
+    [ "globalIndexer_", "classpanzer_1_1ScatterDirichletResidual__Tpetra_3_01panzer_1_1Traits_1_1Jacobian_00_01TRAITS_00_01LO_00_01GO_00_01NodeT_01_4.html#a1a775888334e707f790726f1cb3d0075", null ],
+    [ "local_side_id_", "classpanzer_1_1ScatterDirichletResidual__Tpetra_3_01panzer_1_1Traits_1_1Jacobian_00_01TRAITS_00_01LO_00_01GO_00_01NodeT_01_4.html#ad59e1377db5b982315f0e160fff00859", null ],
+    [ "num_eq", "classpanzer_1_1ScatterDirichletResidual__Tpetra_3_01panzer_1_1Traits_1_1Jacobian_00_01TRAITS_00_01LO_00_01GO_00_01NodeT_01_4.html#ab5a8f9fa3d01d36007b666095695055a", null ],
+    [ "num_nodes", "classpanzer_1_1ScatterDirichletResidual__Tpetra_3_01panzer_1_1Traits_1_1Jacobian_00_01TRAITS_00_01LO_00_01GO_00_01NodeT_01_4.html#a520c56377c63aa3ff9f0961700366920", null ],
+    [ "scatterFields_", "classpanzer_1_1ScatterDirichletResidual__Tpetra_3_01panzer_1_1Traits_1_1Jacobian_00_01TRAITS_00_01LO_00_01GO_00_01NodeT_01_4.html#af3adc1420639c673a012c9adbc29cb61", null ],
+    [ "scatterHolder_", "classpanzer_1_1ScatterDirichletResidual__Tpetra_3_01panzer_1_1Traits_1_1Jacobian_00_01TRAITS_00_01LO_00_01GO_00_01NodeT_01_4.html#a1cf26239a402794b374af79267a127e0", null ],
+    [ "side_subcell_dim_", "classpanzer_1_1ScatterDirichletResidual__Tpetra_3_01panzer_1_1Traits_1_1Jacobian_00_01TRAITS_00_01LO_00_01GO_00_01NodeT_01_4.html#a65782a1878ace537279092ca1fc75bf1", null ],
+    [ "tpetraContainer_", "classpanzer_1_1ScatterDirichletResidual__Tpetra_3_01panzer_1_1Traits_1_1Jacobian_00_01TRAITS_00_01LO_00_01GO_00_01NodeT_01_4.html#a7aea686d4ed9175c135b75c0f07c8d10", null ]
+];

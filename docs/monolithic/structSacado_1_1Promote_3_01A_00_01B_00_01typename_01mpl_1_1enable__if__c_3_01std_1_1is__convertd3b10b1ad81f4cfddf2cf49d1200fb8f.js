@@ -1,0 +1,6 @@
+var structSacado_1_1Promote_3_01A_00_01B_00_01typename_01mpl_1_1enable__if__c_3_01std_1_1is__convertd3b10b1ad81f4cfddf2cf49d1200fb8f =
+[
+    [ "A_base_fad_type", "structSacado_1_1Promote_3_01A_00_01B_00_01typename_01mpl_1_1enable__if__c_3_01std_1_1is__convertd3b10b1ad81f4cfddf2cf49d1200fb8f.html#aec44bbe11348db1cfe3007c61a4812e4", null ],
+    [ "B_base_fad_type", "structSacado_1_1Promote_3_01A_00_01B_00_01typename_01mpl_1_1enable__if__c_3_01std_1_1is__convertd3b10b1ad81f4cfddf2cf49d1200fb8f.html#a85504e2397f8dffc5f7f1fa1caad712b", null ],
+    [ "type", "structSacado_1_1Promote_3_01A_00_01B_00_01typename_01mpl_1_1enable__if__c_3_01std_1_1is__convertd3b10b1ad81f4cfddf2cf49d1200fb8f.html#a35dd1fadf0fda2699be4ab9d2149b72a", null ]
+];

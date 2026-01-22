@@ -1,0 +1,26 @@
+var classZoltan2_1_1ImbalanceMetrics =
+[
+    [ "ImbalanceMetrics", "classZoltan2_1_1ImbalanceMetrics.html#a823c1910fb204534e7868a885e8ff672", null ],
+    [ "ImbalanceMetrics", "classZoltan2_1_1ImbalanceMetrics.html#aeeb43f7f9763dc4423cd48c2d6360423", null ],
+    [ "getAvgImbalance", "classZoltan2_1_1ImbalanceMetrics.html#a59eba95d25a08bd8edcf62443bc2e716", null ],
+    [ "getGlobalMax", "classZoltan2_1_1ImbalanceMetrics.html#a8d153f89830c6026795c9ead22120e25", null ],
+    [ "getGlobalMin", "classZoltan2_1_1ImbalanceMetrics.html#ae873855972245d22927e0238e6bc5570", null ],
+    [ "getGlobalSum", "classZoltan2_1_1ImbalanceMetrics.html#a5044cb7c108e9b1b2f07d404a73add4d", null ],
+    [ "getLocalSum", "classZoltan2_1_1ImbalanceMetrics.html#abef2aff924624e5fcbd8f326abf9312f", null ],
+    [ "getMaxImbalance", "classZoltan2_1_1ImbalanceMetrics.html#a19d16338161d7ae012a0a70208ee684e", null ],
+    [ "getMetrics", "classZoltan2_1_1ImbalanceMetrics.html#a278b37666440b7f6a586f00deef31130", null ],
+    [ "getMetricType", "classZoltan2_1_1ImbalanceMetrics.html#a339fa62e491893c9f608ab1e5e9c90ec", null ],
+    [ "getNorm", "classZoltan2_1_1ImbalanceMetrics.html#a31f64198abe935ee437d663597d10b02", null ],
+    [ "printHeader", "classZoltan2_1_1ImbalanceMetrics.html#ac25c92494451cec1008dd31b5d0c14b4", null ],
+    [ "printLine", "classZoltan2_1_1ImbalanceMetrics.html#adc9919c2c818a342888e0158455ea49a", null ],
+    [ "setAvgImbalance", "classZoltan2_1_1ImbalanceMetrics.html#abcf21dff3b7f654b907836afd3729a4e", null ],
+    [ "setGlobalMax", "classZoltan2_1_1ImbalanceMetrics.html#a561e485340e199c785ffc9ca747f9b9d", null ],
+    [ "setGlobalMin", "classZoltan2_1_1ImbalanceMetrics.html#a7622a6bb97bbe53e54980b2017a02dfd", null ],
+    [ "setGlobalSum", "classZoltan2_1_1ImbalanceMetrics.html#a5fee828b26c2a6702f993f61ed28bc50", null ],
+    [ "setLocalSum", "classZoltan2_1_1ImbalanceMetrics.html#a7c773c2869ee6f40125dce26bf4c14c0", null ],
+    [ "setMaxImbalance", "classZoltan2_1_1ImbalanceMetrics.html#a9615e1eb4b5c7e0217ac7cfc542ed275", null ],
+    [ "setNorm", "classZoltan2_1_1ImbalanceMetrics.html#a62e891cd65cd1139e44aadb5fcec22bd", null ],
+    [ "mcnorm_", "classZoltan2_1_1ImbalanceMetrics.html#a8bb889249f8db458bcf5a22e5bc6a76e", null ],
+    [ "static_metricNames_", "classZoltan2_1_1ImbalanceMetrics.html#ae62898ce08837615936e8136e76f570c", null ],
+    [ "static_metricTypeName_", "classZoltan2_1_1ImbalanceMetrics.html#ab3f96f4231fab8850005a05212601038", null ]
+];

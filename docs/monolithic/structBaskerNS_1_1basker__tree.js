@@ -1,0 +1,27 @@
+var structBaskerNS_1_1basker__tree =
+[
+    [ "basker_tree", "structBaskerNS_1_1basker__tree.html#a65de0d51942466e7a30386641b04b9b4", null ],
+    [ "~basker_tree", "structBaskerNS_1_1basker__tree.html#a088ac3c49895542b07b8199127363e50", null ],
+    [ "basic_convert", "structBaskerNS_1_1basker__tree.html#a0e1a84e199b5c84835d590c663aa02cb", null ],
+    [ "Finalize", "structBaskerNS_1_1basker__tree.html#a083f1a3deb8ef9a4651d6eabf95ace33", null ],
+    [ "info", "structBaskerNS_1_1basker__tree.html#a85a1c8a4826a0be6ac91bfa5f7127410", null ],
+    [ "print", "structBaskerNS_1_1basker__tree.html#ad8b57c98f3c625040459736bf5a0d0a7", null ],
+    [ "child", "structBaskerNS_1_1basker__tree.html#aeab36d08a8b3f34277fa71f84acfb48e", null ],
+    [ "col_tabs", "structBaskerNS_1_1basker__tree.html#a4638796d24d0f0237aa106402368a255", null ],
+    [ "ipermtab", "structBaskerNS_1_1basker__tree.html#ab8fab6d4bede2e5130db163204a22115", null ],
+    [ "leaf_nnz", "structBaskerNS_1_1basker__tree.html#abcff2d32981d7b6cde8b23b94989c51a", null ],
+    [ "lvlset", "structBaskerNS_1_1basker__tree.html#af514fdab59a7917dde998ef4b624be27", null ],
+    [ "lvltreetabs", "structBaskerNS_1_1basker__tree.html#aad1937973c1ce7dfa455033edf055a06", null ],
+    [ "nblks", "structBaskerNS_1_1basker__tree.html#a7560ac0314fc2b374859f95ad238735d", null ],
+    [ "nlvls", "structBaskerNS_1_1basker__tree.html#a6235e4783f7cc0449319f70736dce930", null ],
+    [ "nparts", "structBaskerNS_1_1basker__tree.html#a1230a0551fd42fae3756feda192a061f", null ],
+    [ "nroots", "structBaskerNS_1_1basker__tree.html#a182dfefdf635b4857c39036dd12b37d5", null ],
+    [ "permtab", "structBaskerNS_1_1basker__tree.html#af67333413cd496441eae135ee0a367e1", null ],
+    [ "pivot", "structBaskerNS_1_1basker__tree.html#af7389bc2d8808bdf20c6a748e0ac8c6a", null ],
+    [ "roots", "structBaskerNS_1_1basker__tree.html#a80c0ae6e14332b56257cd2d29f55eaab", null ],
+    [ "row_tabs", "structBaskerNS_1_1basker__tree.html#a8eddcfdef2f54a0851548c6daa1b8460", null ],
+    [ "rowptr", "structBaskerNS_1_1basker__tree.html#a6fc8d7bb391bf3970dc4b714f49d7d37", null ],
+    [ "sibling", "structBaskerNS_1_1basker__tree.html#ae1c670fcb0456ceb187ceb0a8785f7c9", null ],
+    [ "treeptr", "structBaskerNS_1_1basker__tree.html#aad7dbeda2772d0433ea9394f627463e2", null ],
+    [ "treetab", "structBaskerNS_1_1basker__tree.html#a688e639707d2f1556fabcd29b0990707", null ]
+];

@@ -1,0 +1,28 @@
+var Tpetra__Details__unpackCrsMatrixAndCombine__def_8hpp =
+[
+    [ "Tpetra::Details::UnpackAndCombineCrsMatrixImpl::UnpackCrsMatrixAndCombineFunctor< LocalMatrix, LocalMap, BufferDeviceType >", "structTpetra_1_1Details_1_1UnpackAndCombineCrsMatrixImpl_1_1UnpackCrsMatrixAndCombineFunctor.html", "structTpetra_1_1Details_1_1UnpackAndCombineCrsMatrixImpl_1_1UnpackCrsMatrixAndCombineFunctor" ],
+    [ "Tpetra::Details::UnpackAndCombineCrsMatrixImpl::MaxNumEntTag", "structTpetra_1_1Details_1_1UnpackAndCombineCrsMatrixImpl_1_1MaxNumEntTag.html", null ],
+    [ "Tpetra::Details::UnpackAndCombineCrsMatrixImpl::TotNumEntTag", "structTpetra_1_1Details_1_1UnpackAndCombineCrsMatrixImpl_1_1TotNumEntTag.html", null ],
+    [ "Tpetra::Details::UnpackAndCombineCrsMatrixImpl::NumEntriesFunctor< LO, DT, BDT >", "classTpetra_1_1Details_1_1UnpackAndCombineCrsMatrixImpl_1_1NumEntriesFunctor.html", "classTpetra_1_1Details_1_1UnpackAndCombineCrsMatrixImpl_1_1NumEntriesFunctor" ],
+    [ "TPETRA_DETAILS_UNPACKCRSMATRIXANDCOMBINE_INSTANT", "Tpetra__Details__unpackCrsMatrixAndCombine__def_8hpp.html#a331289f9d88544fce45054e22a3326fb", null ],
+    [ "TPETRA_DETAILS_UNPACKCRSMATRIXANDCOMBINE_INSTANT_KOKKOS_DEPRECATED_CODE_4_OFF", "Tpetra__Details__unpackCrsMatrixAndCombine__def_8hpp.html#ab9d1f826ca953e9e2249001f4d475915", null ],
+    [ "TPETRA_DETAILS_UNPACKCRSMATRIXANDCOMBINE_INSTANT_KOKKOS_DEPRECATED_CODE_4_ON", "Tpetra__Details__unpackCrsMatrixAndCombine__def_8hpp.html#a544f54a073ce0c0de966b8d687b8b366", null ],
+    [ "compute_batch_info", "Tpetra__Details__unpackCrsMatrixAndCombine__def_8hpp.html#aec8c6badbf360d6096a19022041ac7cc", null ],
+    [ "compute_maximum_num_entries", "Tpetra__Details__unpackCrsMatrixAndCombine__def_8hpp.html#a9090312bcbd55e5660895b361480948d", null ],
+    [ "compute_total_num_entries", "Tpetra__Details__unpackCrsMatrixAndCombine__def_8hpp.html#a6419d36a55718a0fc75d7ee5cfc30b47", null ],
+    [ "copyDataFromPermuteIDs", "Tpetra__Details__unpackCrsMatrixAndCombine__def_8hpp.html#a10c640927e967fc519cffe6ff7c5c41c", null ],
+    [ "copyDataFromSameIDs", "Tpetra__Details__unpackCrsMatrixAndCombine__def_8hpp.html#afaae0c57460ef6e7223ab06cfce5c748", null ],
+    [ "makeCrsRowPtrFromLengths", "Tpetra__Details__unpackCrsMatrixAndCombine__def_8hpp.html#a17962f1cf736eb35076e512f0bf6cca9", null ],
+    [ "setupRowPointersForRemotes", "Tpetra__Details__unpackCrsMatrixAndCombine__def_8hpp.html#a533cc845cd3668552e23a4af71a38070", null ],
+    [ "unpackAndCombineIntoCrsArrays", "Tpetra__Details__unpackCrsMatrixAndCombine__def_8hpp.html#afbe965bf837a589ab1a914fc61b1a710", null ],
+    [ "unpackAndCombineIntoCrsArrays", "Tpetra__Details__unpackCrsMatrixAndCombine__def_8hpp.html#a6ab95f48bbc3945b80f953251bf3ce0c", null ],
+    [ "unpackAndCombineIntoCrsArrays", "Tpetra__Details__unpackCrsMatrixAndCombine__def_8hpp.html#a2e2c11457b343730c66ff3a6fc913fe6", null ],
+    [ "unpackAndCombineIntoCrsArrays2", "Tpetra__Details__unpackCrsMatrixAndCombine__def_8hpp.html#a0f92a1232d920dc2c04692de091c75c6", null ],
+    [ "unpackAndCombineIntoCrsMatrix", "Tpetra__Details__unpackCrsMatrixAndCombine__def_8hpp.html#a6aaf2aef288538e445628f3afb7ae0dc", null ],
+    [ "unpackAndCombineWithOwningPIDsCount", "Tpetra__Details__unpackCrsMatrixAndCombine__def_8hpp.html#a907404adb154dcbf1de0ae63999ae5ca", null ],
+    [ "unpackAndCombineWithOwningPIDsCount", "Tpetra__Details__unpackCrsMatrixAndCombine__def_8hpp.html#afd10068d550e76b074d425fb30510601", null ],
+    [ "unpackCrsMatrixAndCombine", "Tpetra__Details__unpackCrsMatrixAndCombine__def_8hpp.html#a77b9156e3e6d288f02a3f93f7ae3796e", null ],
+    [ "unpackCrsMatrixAndCombineNew", "Tpetra__Details__unpackCrsMatrixAndCombine__def_8hpp.html#a816ec76061b65637a5bda06a88c18878", null ],
+    [ "unpackRow", "Tpetra__Details__unpackCrsMatrixAndCombine__def_8hpp.html#ab2d1eb3e5b50caf6c50a1580a1b9d055", null ],
+    [ "unpackRowCount", "Tpetra__Details__unpackCrsMatrixAndCombine__def_8hpp.html#a38e3488b0423f45d61cd460839e78b21", null ]
+];

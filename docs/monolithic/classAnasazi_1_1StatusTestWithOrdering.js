@@ -1,0 +1,26 @@
+var classAnasazi_1_1StatusTestWithOrdering =
+[
+    [ "MagnitudeType", "classAnasazi_1_1StatusTestWithOrdering.html#a0ab7dbfcef7459022ece445922f5af7d", null ],
+    [ "MT", "classAnasazi_1_1StatusTestWithOrdering.html#a0e12372c96f149791ccdcef3f45321f8", null ],
+    [ "StatusTestWithOrdering", "classAnasazi_1_1StatusTestWithOrdering.html#ae2f560932156985ea6b12bc0f068f518", null ],
+    [ "~StatusTestWithOrdering", "classAnasazi_1_1StatusTestWithOrdering.html#a68d86c1c7265f79e5569cd4c7df910ba", null ],
+    [ "checkStatus", "classAnasazi_1_1StatusTestWithOrdering.html#a63cad0fe2c28a73ee7ab73eee6b25a1b", null ],
+    [ "clearStatus", "classAnasazi_1_1StatusTestWithOrdering.html#a1ca76b0736a1fae67d9b7cbb05be7c15", null ],
+    [ "getAuxVals", "classAnasazi_1_1StatusTestWithOrdering.html#a42d1e720c4d9e0d8484b222017c748c4", null ],
+    [ "getQuorum", "classAnasazi_1_1StatusTestWithOrdering.html#a2fe8782b41b47fc126b9a0ab9256997b", null ],
+    [ "getStatus", "classAnasazi_1_1StatusTestWithOrdering.html#a6d75e8718add1c7ddb93362c1f8533e5", null ],
+    [ "howMany", "classAnasazi_1_1StatusTestWithOrdering.html#a5bec12d86a18cd01283c24f4cc7473c0", null ],
+    [ "print", "classAnasazi_1_1StatusTestWithOrdering.html#a1041a45ce6453cefe2853ea898240de2", null ],
+    [ "reset", "classAnasazi_1_1StatusTestWithOrdering.html#ae44130031e4e72a5d04e1bcbacdabdc2", null ],
+    [ "setAuxVals", "classAnasazi_1_1StatusTestWithOrdering.html#a5e4acf00c9bf08eaef4fbded1e893c2b", null ],
+    [ "setAuxVals", "classAnasazi_1_1StatusTestWithOrdering.html#a7d96c84cd8510c8a71f25f53db9eb5fe", null ],
+    [ "setQuorum", "classAnasazi_1_1StatusTestWithOrdering.html#a86b595ceb5312c2a1b2f1db9c411a4fb", null ],
+    [ "whichVecs", "classAnasazi_1_1StatusTestWithOrdering.html#ab9060e7b2545443c392f3db4ef1786ad", null ],
+    [ "ind_", "classAnasazi_1_1StatusTestWithOrdering.html#acb41a8a4de524af0166edddb990af0f5", null ],
+    [ "ivals_", "classAnasazi_1_1StatusTestWithOrdering.html#a5f516562a6835563e8620107ebae041f", null ],
+    [ "quorum_", "classAnasazi_1_1StatusTestWithOrdering.html#a7983a6869d5fdea8ff1a22dfc015f7a6", null ],
+    [ "rvals_", "classAnasazi_1_1StatusTestWithOrdering.html#a350ab629999ffb59da9f205978092ed3", null ],
+    [ "sorter_", "classAnasazi_1_1StatusTestWithOrdering.html#ac5c6bbda4b97d955d6627efb57a8c782", null ],
+    [ "state_", "classAnasazi_1_1StatusTestWithOrdering.html#af0853148c87e15b5111c9ff298965a5e", null ],
+    [ "test_", "classAnasazi_1_1StatusTestWithOrdering.html#a13b85052cb9ed22d31a87cf622039ed6", null ]
+];

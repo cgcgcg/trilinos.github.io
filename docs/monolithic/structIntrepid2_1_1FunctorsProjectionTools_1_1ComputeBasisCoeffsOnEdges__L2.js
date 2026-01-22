@@ -1,0 +1,26 @@
+var structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnEdges__L2 =
+[
+    [ "ComputeBasisCoeffsOnEdges_L2", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnEdges__L2.html#a3d2624f675cdb1382d1e465b327e3ac8", null ],
+    [ "operator()", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnEdges__L2.html#ad6f570bf9ffd06b389d6260cf5c4dfc8", null ],
+    [ "basisAtBasisEPoints_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnEdges__L2.html#aa1b464761f14dde0501f02757dcc7150", null ],
+    [ "basisAtTargetEPoints_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnEdges__L2.html#aa37ca25166768906fd5615bcbc2f6d99", null ],
+    [ "basisCoeffs_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnEdges__L2.html#a416f11234394cddd2aceacee815c9301", null ],
+    [ "basisDofDofAtBasisEPoints_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnEdges__L2.html#a8aba9126758c61a6c66845ad14009f59", null ],
+    [ "basisEWeights_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnEdges__L2.html#ae103e2131da64352f4a90f43426dcbe0", null ],
+    [ "computedDofs_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnEdges__L2.html#aa866f48e6136719ba2c422db7f3ad4fa", null ],
+    [ "edgeCardinality_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnEdges__L2.html#a9e9ae8e77f98bf276ac9f3a29645a916", null ],
+    [ "edgeDim_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnEdges__L2.html#ade2b5d9fb17ae14d9efeb6b4912531fd", null ],
+    [ "fieldDim_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnEdges__L2.html#a71cad8d7fe71aaae0bc71f23756fe080", null ],
+    [ "iedge_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnEdges__L2.html#aedd79ae49a135170054f629aae76d796", null ],
+    [ "negPartialProj_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnEdges__L2.html#a231c4ec592a6c16a620367db7701f5c7", null ],
+    [ "numVertexDofs_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnEdges__L2.html#a227b225c37051e4d564b7d5f5d4d89ce", null ],
+    [ "offsetBasis_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnEdges__L2.html#a641a79f57a005ab4b572d1359e2483c2", null ],
+    [ "offsetTarget_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnEdges__L2.html#a8c0c3f93437b1932d3fce8f1c6b9138d", null ],
+    [ "refEdgesVec_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnEdges__L2.html#a447a106bc90d5ad7f4b19c8d0c7f6013", null ],
+    [ "tagToOrdinal_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnEdges__L2.html#a72e9dbb8523bf2db73871a5b99bbc4f3", null ],
+    [ "targetAtTargetEPoints_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnEdges__L2.html#af1f4452321df718d3f4e109cc36fdf39", null ],
+    [ "targetEWeights_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnEdges__L2.html#afe9b133942f30589b17b5c9ffc36f7f4", null ],
+    [ "targetTanAtTargetEPoints_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnEdges__L2.html#ac0df9550784807fa619fd27121ce5ee2", null ],
+    [ "wBasisDofAtBasisEPoints_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnEdges__L2.html#a023d8905ba7f793adfae2c2b5bb749f3", null ],
+    [ "wBasisDofAtTargetEPoints_", "structIntrepid2_1_1FunctorsProjectionTools_1_1ComputeBasisCoeffsOnEdges__L2.html#a4a9b39b92ea9dbc32dd5956a9fb18d0b", null ]
+];

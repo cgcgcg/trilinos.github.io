@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['c_20applications_0',['Sacado:  Automatic Differentation Tools for C++ Applications',['../sacado.html',1,'analysis']]],
+  ['cell_20tools_1',['Cell tools',['../cell_tools_page.html',1,'intrepid2']]],
+  ['changelog_2',['ChangeLog',['../gl_ChangeLog.html',1,'galeri']]],
+  ['class_3',['Intrepid2 basis class',['../basis_page.html',1,'intrepid2']]],
+  ['classes_4',['How to deal with AbstractGrid Classes',['../gl_fe_grid.html',1,'galeri']]],
+  ['code_20for_20abstract_20numerical_20algorithms_20anas_5',['Thyra : Interfaces and Support code for Abstract Numerical Algorithms (ANAs)',['../thyra.html',1,'interfaces']]],
+  ['collection_20of_20simple_20test_20problems_6',['Galeri: Collection of simple test problems',['../galeri.html',1,'discretization']]],
+  ['coloring_7',['Coloring',['../coloringPage.html',1,'zoltan2']]],
+  ['combinatorial_20scientific_20computing_8',['Zoltan2: Load Balancing and Combinatorial Scientific Computing.',['../zoltan2.html',1,'core']]],
+  ['compatible_20particle_20discretization_20and_20remap_20toolkit_9',['COMpatible PArticle Discretization and REmap Toolkit',['../compadre.html',1,'discretization']]],
+  ['computing_10',['Zoltan2: Load Balancing and Combinatorial Scientific Computing.',['../zoltan2.html',1,'core']]],
+  ['concrete_20implementations_20of_20vector_20reduction_20transformation_20operators_11',['RTOp: Interfaces, Support Software, and Concrete Implementations of Vector Reduction/Transformation Operators',['../rtop.html',1,'interfaces']]],
+  ['coordinate_20bisection_20rcb_12',['Recursive Coordinate Bisection (RCB)',['../rcbPage.html',1,'partitionPage']]],
+  ['coordinate_20partitioning_20mj_13',['Multi-Jagged Coordinate Partitioning (MJ)',['../mjPage.html',1,'partitionPage']]],
+  ['copyright_20and_20license_14',['Copyright and License',['../gl_Copyright.html',1,'galeri']]],
+  ['core_20libraries_15',['Kokkos: Core Libraries',['../kokkos.html',1,'core']]],
+  ['core_20packages_16',['Core packages',['../core.html',1,'index']]],
+  ['createcrsmatrix_17',['Example of Usage of CreateCrsMatrix()',['../gl_matrices_ex.html',1,'galeri']]],
+  ['createmap_18',['Example of Usage of CreateMap()',['../gl_maps_ex.html',1,'galeri']]],
+  ['creating_20an_20epetra_5fcrsmatrix_19',['Creating an Epetra_CrsMatrix',['../gl_GalleryCrsMatrix.html',1,'galeri']]],
+  ['creating_20an_20epetra_5fmap_20',['Creating an Epetra_Map',['../gl_GalleryMaps.html',1,'galeri']]],
+  ['custom_20operator_21',['Tpetra Lesson 06: Custom Operator',['../Tpetra_Lesson06.html',1,'tpetra']]],
+  ['cuthill_20mckee_20ordering_22',['Reverse Cuthill-McKee ordering',['../rcmPage.html',1,'orderingPage']]]
+];

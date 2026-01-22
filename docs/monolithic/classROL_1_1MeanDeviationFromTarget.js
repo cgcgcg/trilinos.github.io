@@ -1,0 +1,27 @@
+var classROL_1_1MeanDeviationFromTarget =
+[
+    [ "uint", "classROL_1_1MeanDeviationFromTarget.html#ac8bb6df8319c712c22e1319e700c3274", null ],
+    [ "MeanDeviationFromTarget", "classROL_1_1MeanDeviationFromTarget.html#a124e15124e9fc899e4164b99c64a4268", null ],
+    [ "MeanDeviationFromTarget", "classROL_1_1MeanDeviationFromTarget.html#a64f3fe0c4f9f4a0a88bd3eaa3e40f34a", null ],
+    [ "MeanDeviationFromTarget", "classROL_1_1MeanDeviationFromTarget.html#a1e48f540ba77055f9ae268062d1ac500", null ],
+    [ "checkInputs", "classROL_1_1MeanDeviationFromTarget.html#a1ef227490332cebfd79ac3bcc4bbb33f", null ],
+    [ "getGradient", "classROL_1_1MeanDeviationFromTarget.html#ada84b8b61a7f8555efdb83bf1c8122ec", null ],
+    [ "getHessVec", "classROL_1_1MeanDeviationFromTarget.html#abcb429e2fd262cef4baceed19f09b0e1", null ],
+    [ "getValue", "classROL_1_1MeanDeviationFromTarget.html#a286d46478f0d180d61baeaf7e38f6049", null ],
+    [ "initialize", "classROL_1_1MeanDeviationFromTarget.html#a84572312eb842b5918d8db305f3ebcd9", null ],
+    [ "initializeMDT", "classROL_1_1MeanDeviationFromTarget.html#ae007e6933f3f2babd57ccd404b137185", null ],
+    [ "updateGradient", "classROL_1_1MeanDeviationFromTarget.html#a0321b2ef8d4e290763849bc6274600fc", null ],
+    [ "updateHessVec", "classROL_1_1MeanDeviationFromTarget.html#aea731d3029eb31048fdb455b1cc07b26", null ],
+    [ "updateValue", "classROL_1_1MeanDeviationFromTarget.html#a803a026288c352abcd873215dfc90e3e", null ],
+    [ "coeff_", "classROL_1_1MeanDeviationFromTarget.html#ace86f5af86277ae5b7f68362889aa4ca", null ],
+    [ "firstResetMDT_", "classROL_1_1MeanDeviationFromTarget.html#aadece26b3deb0bda49ddfb33190ef08c", null ],
+    [ "NumMoments_", "classROL_1_1MeanDeviationFromTarget.html#a942a1579aa60b0f80bfe08d9ce28344e", null ],
+    [ "order_", "classROL_1_1MeanDeviationFromTarget.html#a5ac40cec289efef7d39a1d7eb5f1d2f6", null ],
+    [ "pg0_", "classROL_1_1MeanDeviationFromTarget.html#a46a1480eaffc13759018307421b2cbcd", null ],
+    [ "pg_", "classROL_1_1MeanDeviationFromTarget.html#a3f5228cce94cf532acf20916ac9b54a1", null ],
+    [ "pgv_", "classROL_1_1MeanDeviationFromTarget.html#acdb5813c8badad4a5eaae75d8468dca5", null ],
+    [ "phv_", "classROL_1_1MeanDeviationFromTarget.html#a58946bcb45c666632c1fef02826e8110", null ],
+    [ "positiveFunction_", "classROL_1_1MeanDeviationFromTarget.html#a5b6c927105e82efeb8b623944b679d73", null ],
+    [ "pval_", "classROL_1_1MeanDeviationFromTarget.html#a53637d3eb939f50d6b4b763541c559a5", null ],
+    [ "target_", "classROL_1_1MeanDeviationFromTarget.html#a396be5dbe9a9faf37221577cae67aa8b", null ]
+];

@@ -1,0 +1,8 @@
+var structIfpack2_1_1BlockTriDiContainer_3_01MatrixType_00_01BlockTriDiContainerDetails_1_1ImplSimdTag_01_4_1_1ApplyParameters =
+[
+    [ "checkToleranceEvery", "structIfpack2_1_1BlockTriDiContainer_3_01MatrixType_00_01BlockTriDiContainerDetails_1_1ImplSimdTag_01_4_1_1ApplyParameters.html#a6eea2cc152c73aa3f0cac15ff7b6ed40", null ],
+    [ "dampingFactor", "structIfpack2_1_1BlockTriDiContainer_3_01MatrixType_00_01BlockTriDiContainerDetails_1_1ImplSimdTag_01_4_1_1ApplyParameters.html#a328e1953f3f851c50fb882147bf73bfc", null ],
+    [ "maxNumSweeps", "structIfpack2_1_1BlockTriDiContainer_3_01MatrixType_00_01BlockTriDiContainerDetails_1_1ImplSimdTag_01_4_1_1ApplyParameters.html#abcbedf8576d1637565e6cf1e7fbb527e", null ],
+    [ "tolerance", "structIfpack2_1_1BlockTriDiContainer_3_01MatrixType_00_01BlockTriDiContainerDetails_1_1ImplSimdTag_01_4_1_1ApplyParameters.html#a9e0ff8f1b5df37e97270c3b4baba1842", null ],
+    [ "zeroStartingSolution", "structIfpack2_1_1BlockTriDiContainer_3_01MatrixType_00_01BlockTriDiContainerDetails_1_1ImplSimdTag_01_4_1_1ApplyParameters.html#a1975a5665d874110539d4985870d743d", null ]
+];

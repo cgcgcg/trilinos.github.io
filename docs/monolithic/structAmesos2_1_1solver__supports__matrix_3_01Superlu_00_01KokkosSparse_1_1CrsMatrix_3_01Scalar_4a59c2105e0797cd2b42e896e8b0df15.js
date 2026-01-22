@@ -1,0 +1,4 @@
+var structAmesos2_1_1solver__supports__matrix_3_01Superlu_00_01KokkosSparse_1_1CrsMatrix_3_01Scalar_4a59c2105e0797cd2b42e896e8b0df15 =
+[
+    [ "value", "structAmesos2_1_1solver__supports__matrix_3_01Superlu_00_01KokkosSparse_1_1CrsMatrix_3_01Scalar_4a59c2105e0797cd2b42e896e8b0df15.html#aa9852937b9b27471267152310dee7635", null ]
+];

@@ -1,0 +1,27 @@
+var classZoltan2_1_1ZoltanCrsColorer =
+[
+    [ "ZoltanData", "structZoltan2_1_1ZoltanCrsColorer_1_1ZoltanData.html", "structZoltan2_1_1ZoltanCrsColorer_1_1ZoltanData" ],
+    [ "device_t", "classZoltan2_1_1ZoltanCrsColorer.html#a2a9abd15f2feec72617050423a909b6e", null ],
+    [ "execution_space", "classZoltan2_1_1ZoltanCrsColorer.html#a7c59d913a14a85d7e600061dd272373b", null ],
+    [ "gno_t", "classZoltan2_1_1ZoltanCrsColorer.html#a7887b71954e0fca73ab068e9a32d1a84", null ],
+    [ "graph_t", "classZoltan2_1_1ZoltanCrsColorer.html#a81cc939e91fbcdbd1c42b9123832ea63", null ],
+    [ "list_of_colors_host_t", "classZoltan2_1_1ZoltanCrsColorer.html#a33b47c1baaa7aedeb7c4efa1a3d45785", null ],
+    [ "list_of_colors_t", "classZoltan2_1_1ZoltanCrsColorer.html#a44b522e1616f2dd841c8d564b0570174", null ],
+    [ "lno_t", "classZoltan2_1_1ZoltanCrsColorer.html#aec331d33828c26bb59ecd383a42daeab", null ],
+    [ "matrix_t", "classZoltan2_1_1ZoltanCrsColorer.html#ae798b37988716661d9e6405135f78354", null ],
+    [ "node_t", "classZoltan2_1_1ZoltanCrsColorer.html#a7fe6b85f2a9758b307a38363574629f8", null ],
+    [ "scalar_t", "classZoltan2_1_1ZoltanCrsColorer.html#a0babc628c803a0f1937451fcd5e22ab5", null ],
+    [ "ZoltanCrsColorer", "classZoltan2_1_1ZoltanCrsColorer.html#a15b7004c3b19427ee67e6a30a497a993", null ],
+    [ "~ZoltanCrsColorer", "classZoltan2_1_1ZoltanCrsColorer.html#ab06529cf32645e6c05e7f748e20e5eec", null ],
+    [ "computeColoring", "classZoltan2_1_1ZoltanCrsColorer.html#a3a7322d726a0620e2c38f65cd83c4279", null ],
+    [ "get_edge_list", "classZoltan2_1_1ZoltanCrsColorer.html#a60d5549380f4d160313c621535ff5f76", null ],
+    [ "get_number_of_edges", "classZoltan2_1_1ZoltanCrsColorer.html#a1504571f44f6ea3ab4ed6c4d666eaa76", null ],
+    [ "get_number_of_vertices", "classZoltan2_1_1ZoltanCrsColorer.html#ad29261bbe5c7d4c35d18c5f380251cd9", null ],
+    [ "get_vertex_list", "classZoltan2_1_1ZoltanCrsColorer.html#a452e917d1da10a398a6d0913c59825be", null ],
+    [ "sym_get_edge_list", "classZoltan2_1_1ZoltanCrsColorer.html#a77cb78db79ed911af87180cb90ab10fd", null ],
+    [ "sym_get_number_of_edges", "classZoltan2_1_1ZoltanCrsColorer.html#a09abcb517525c5e74c95a31523d631c5", null ],
+    [ "sym_get_number_of_vertices", "classZoltan2_1_1ZoltanCrsColorer.html#a7b21f582e3ef370f1978e01b5b93777b", null ],
+    [ "sym_get_vertex_list", "classZoltan2_1_1ZoltanCrsColorer.html#af76f59601654d7da674ab9648f8fa2f1", null ],
+    [ "graph", "classZoltan2_1_1ZoltanCrsColorer.html#a9555d095dd77c382010b145340c3491c", null ],
+    [ "matrix", "classZoltan2_1_1ZoltanCrsColorer.html#a63b11f739993aff9e03e159094504022", null ]
+];

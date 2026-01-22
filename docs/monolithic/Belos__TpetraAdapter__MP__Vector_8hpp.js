@@ -1,0 +1,5 @@
+var Belos__TpetraAdapter__MP__Vector_8hpp =
+[
+    [ "Belos::MultiVecTraits< typename Storage::value_type, Tpetra::MultiVector< Sacado::MP::Vector< Storage >, LO, GO, Node > >", "classBelos_1_1MultiVecTraits_3_01typename_01Storage_1_1value__type_00_01Tpetra_1_1MultiVector_3_9b52ebc4f5cc9679b20e5135f475ba5b.html", "classBelos_1_1MultiVecTraits_3_01typename_01Storage_1_1value__type_00_01Tpetra_1_1MultiVector_3_9b52ebc4f5cc9679b20e5135f475ba5b" ],
+    [ "Belos::OperatorTraits< typename Storage::value_type, Tpetra::MultiVector< Sacado::MP::Vector< Storage >, LO, GO, Node >, Tpetra::Operator< Sacado::MP::Vector< Storage >, LO, GO, Node > >", "classBelos_1_1OperatorTraits_3_01typename_01Storage_1_1value__type_00_01Tpetra_1_1MultiVector_3_32834bebc5fff983b9afa8d792e46aed.html", "classBelos_1_1OperatorTraits_3_01typename_01Storage_1_1value__type_00_01Tpetra_1_1MultiVector_3_32834bebc5fff983b9afa8d792e46aed" ]
+];

@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['sacado_3a_20automatic_20differentation_20tools_20for_20c_20applications_0',['Sacado:  Automatic Differentation Tools for C++ Applications',['../sacado.html',1,'analysis']]],
+  ['scalable_20sparse_20hybrid_20lu_1',['ShyLU:  Scalable/Sparse Hybrid LU',['../shylu.html',1,'linear_solvers']]],
+  ['scientific_20computing_2',['Zoltan2: Load Balancing and Combinatorial Scientific Computing.',['../zoltan2.html',1,'core']]],
+  ['seacas_3',['SEACAS',['../seacas.html',1,'discretization']]],
+  ['sensitivity_20analysis_20package_4',['Tempus: Time Integration and Sensitivity Analysis Package',['../tempus.html',1,'discretization']]],
+  ['shylu_3a_20scalable_20sparse_20hybrid_20lu_5',['ShyLU:  Scalable/Sparse Hybrid LU',['../shylu.html',1,'linear_solvers']]],
+  ['simple_20test_20problems_6',['Galeri: Collection of simple test problems',['../galeri.html',1,'discretization']]],
+  ['software_20and_20concrete_20implementations_20of_20vector_20reduction_20transformation_20operators_7',['RTOp: Interfaces, Support Software, and Concrete Implementations of Vector Reduction/Transformation Operators',['../rtop.html',1,'interfaces']]],
+  ['solve_20dense_20matrices_8',['Adelus: Object-Oriented Interface to a Direct Matrix Solve (Dense matrices)',['../adelus.html',1,'linear_solvers']]],
+  ['solver_20interfaces_9',['Amesos2 - Direct Sparse Solver Interfaces',['../amesos2.html',1,'linear_solvers']]],
+  ['solver_20packages_10',['Linear solver packages',['../linear_solvers.html',1,'index']]],
+  ['solvers_11',['Stratimikos: Thyra-based strategies for linear solvers',['../stratimikos.html',1,'linear_solvers']]],
+  ['solvers_20package_12',['Belos: An Iterative Linear Solvers Package',['../belos.html',1,'linear_solvers']]],
+  ['space_20tools_13',['Function space tools',['../function_space_tools_page.html',1,'intrepid2']]],
+  ['sparse_20hybrid_20lu_14',['ShyLU:  Scalable/Sparse Hybrid LU',['../shylu.html',1,'linear_solvers']]],
+  ['sparse_20matrix_20fill_15',['Tpetra Lesson 04: Sparse matrix fill',['../Tpetra_Lesson04.html',1,'tpetra']]],
+  ['sparse_20solver_20interfaces_16',['Amesos2 - Direct Sparse Solver Interfaces',['../amesos2.html',1,'linear_solvers']]],
+  ['sphynx_17',['Graph partitioning with Sphynx',['../sphynxPage.html',1,'partitionPage']]],
+  ['stk_18',['STK',['../stk.html',1,'discretization']]],
+  ['stochastic_20galerkin_20uncertainty_20quantification_20methods_19',['Stokhos:  Stochastic Galerkin Uncertainty Quantification Methods',['../stokhos.html',1,'analysis']]],
+  ['stokhos_3a_20stochastic_20galerkin_20uncertainty_20quantification_20methods_20',['Stokhos:  Stochastic Galerkin Uncertainty Quantification Methods',['../stokhos.html',1,'analysis']]],
+  ['strategies_20for_20linear_20solvers_21',['Stratimikos: Thyra-based strategies for linear solvers',['../stratimikos.html',1,'linear_solvers']]],
+  ['stratimikos_3a_20thyra_20based_20strategies_20for_20linear_20solvers_22',['Stratimikos: Thyra-based strategies for linear solvers',['../stratimikos.html',1,'linear_solvers']]],
+  ['support_20code_20for_20abstract_20numerical_20algorithms_20anas_23',['Thyra : Interfaces and Support code for Abstract Numerical Algorithms (ANAs)',['../thyra.html',1,'interfaces']]],
+  ['support_20software_20and_20concrete_20implementations_20of_20vector_20reduction_20transformation_20operators_24',['RTOp: Interfaces, Support Software, and Concrete Implementations of Vector Reduction/Transformation Operators',['../rtop.html',1,'interfaces']]]
+];

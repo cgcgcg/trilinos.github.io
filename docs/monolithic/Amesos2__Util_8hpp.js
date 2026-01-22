@@ -1,0 +1,25 @@
+var Amesos2__Util_8hpp =
+[
+    [ "Amesos2::Util::getStdCplxType< T0, T1 >", "structAmesos2_1_1Util_1_1getStdCplxType.html", "structAmesos2_1_1Util_1_1getStdCplxType" ],
+    [ "Amesos2::Util::getStdCplxType< T0, T1 * >", "structAmesos2_1_1Util_1_1getStdCplxType_3_01T0_00_01T1_01_5_01_4.html", "structAmesos2_1_1Util_1_1getStdCplxType_3_01T0_00_01T1_01_5_01_4" ],
+    [ "Amesos2::Util::same_gs_helper_kokkos_view< M, KV_S, KV_GO, KV_GS, Op >", "structAmesos2_1_1Util_1_1same__gs__helper__kokkos__view.html", "structAmesos2_1_1Util_1_1same__gs__helper__kokkos__view" ],
+    [ "Amesos2::Util::diff_gs_helper_kokkos_view< M, KV_S, KV_GO, KV_GS, Op >", "structAmesos2_1_1Util_1_1diff__gs__helper__kokkos__view.html", "structAmesos2_1_1Util_1_1diff__gs__helper__kokkos__view" ],
+    [ "Amesos2::Util::same_go_helper_kokkos_view< M, KV_S, KV_GO, KV_GS, Op >", "structAmesos2_1_1Util_1_1same__go__helper__kokkos__view.html", "structAmesos2_1_1Util_1_1same__go__helper__kokkos__view" ],
+    [ "Amesos2::Util::diff_go_helper_kokkos_view< M, KV_S, KV_GO, KV_GS, Op >", "structAmesos2_1_1Util_1_1diff__go__helper__kokkos__view.html", "structAmesos2_1_1Util_1_1diff__go__helper__kokkos__view" ],
+    [ "Amesos2::Util::same_scalar_helper_kokkos_view< M, KV_S, KV_GO, KV_GS, Op >", "structAmesos2_1_1Util_1_1same__scalar__helper__kokkos__view.html", "structAmesos2_1_1Util_1_1same__scalar__helper__kokkos__view" ],
+    [ "Amesos2::Util::diff_scalar_helper_kokkos_view< M, KV_S, KV_GO, KV_GS, Op >", "structAmesos2_1_1Util_1_1diff__scalar__helper__kokkos__view.html", "structAmesos2_1_1Util_1_1diff__scalar__helper__kokkos__view" ],
+    [ "Amesos2::Util::get_cxs_helper_kokkos_view< Matrix, KV_S, KV_GO, KV_GS, Op >", "structAmesos2_1_1Util_1_1get__cxs__helper__kokkos__view.html", "structAmesos2_1_1Util_1_1get__cxs__helper__kokkos__view" ],
+    [ "Amesos2::Util::get_ccs_helper_kokkos_view< Matrix, KV_S, KV_GO, KV_GS >", "structAmesos2_1_1Util_1_1get__ccs__helper__kokkos__view.html", null ],
+    [ "Amesos2::Util::get_crs_helper_kokkos_view< Matrix, KV_S, KV_GO, KV_GS >", "structAmesos2_1_1Util_1_1get__crs__helper__kokkos__view.html", null ],
+    [ "apply_reorder_permutation", "Amesos2__Util_8hpp.html#a5cafa3028263be721e5ab70640e83e2b", null ],
+    [ "getDistributionMap", "Amesos2__Util_8hpp.html#abad0e254e8d35d05207f5ea294d8faa9", null ],
+    [ "getGatherMap", "Amesos2__Util_8hpp.html#ae613e0b77f12dbc2f12e1b36e40a51c4", null ],
+    [ "printLine", "Amesos2__Util_8hpp.html#a050780af1f00d876654b3c2d797012cd", null ],
+    [ "readCrsMatrixFromFile", "Amesos2__Util_8hpp.html#a1a89e0bc87a2931923c0dfb47aed8643", null ],
+    [ "readEntryFromFile", "Amesos2__Util_8hpp.html#a9ee0c4bd877ee7dbf49c14575240ccf8", null ],
+    [ "reorder", "Amesos2__Util_8hpp.html#a1446312149ee40c7c86a397006a7b840", null ],
+    [ "reorder_values", "Amesos2__Util_8hpp.html#a4f9b1464773b652e5884943a56081956", null ],
+    [ "scale", "Amesos2__Util_8hpp.html#a720e97129a862bb8ea5c3401994e5c6c", null ],
+    [ "scale", "Amesos2__Util_8hpp.html#a9d619e1832bc0f04a725f59b95550fb9", null ],
+    [ "transpose", "Amesos2__Util_8hpp.html#a7f077bda2bac2507c096da53a2031db0", null ]
+];

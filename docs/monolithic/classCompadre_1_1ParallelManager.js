@@ -1,0 +1,28 @@
+var classCompadre_1_1ParallelManager =
+[
+    [ "ParallelManager", "classCompadre_1_1ParallelManager.html#a12d04ed38e0f1bf9eed7e729ef78b916", null ],
+    [ "CallFunctorWithTeamThreads", "classCompadre_1_1ParallelManager.html#a79b27de38b7c04a1533ff926c8cc3546", null ],
+    [ "CallFunctorWithTeamThreads", "classCompadre_1_1ParallelManager.html#a7a3689fcbe9161cf6302e853d8e96bc5", null ],
+    [ "CallFunctorWithTeamThreadsAndVectors", "classCompadre_1_1ParallelManager.html#ad33dcbe1828502e39802e4ae5394826d", null ],
+    [ "CallFunctorWithTeamThreadsAndVectors", "classCompadre_1_1ParallelManager.html#a20da131b75594da12ac1963f080573b3", null ],
+    [ "clearScratchSizes", "classCompadre_1_1ParallelManager.html#a64251066a02c3b73739c21edc5ef5bac", null ],
+    [ "getTeamScratchLevel", "classCompadre_1_1ParallelManager.html#aeec8414cf20a387bef1d2d65e2deafd2", null ],
+    [ "getTeamScratchSize", "classCompadre_1_1ParallelManager.html#a578e6ddc6b059226bb39be43a9cf4d4c", null ],
+    [ "getThreadScratchLevel", "classCompadre_1_1ParallelManager.html#a1762a6302bb422d0dfab5ef9f453e13d", null ],
+    [ "getThreadScratchSize", "classCompadre_1_1ParallelManager.html#ae06d5393060f506d6fcf57f1ca17f774", null ],
+    [ "setTeamScratchLevel", "classCompadre_1_1ParallelManager.html#a0fb426e27f0dd95187ce673a87359daa", null ],
+    [ "setTeamScratchSize", "classCompadre_1_1ParallelManager.html#ad000850334892790cbfddde52e6caa37", null ],
+    [ "setThreadScratchLevel", "classCompadre_1_1ParallelManager.html#a3bbc004dcb1e3d257bb84867a52ff854", null ],
+    [ "setThreadScratchSize", "classCompadre_1_1ParallelManager.html#a28d32a53d14ebd543534976d6f22f830", null ],
+    [ "TeamPolicyThreadsAndVectors", "classCompadre_1_1ParallelManager.html#aed56eb5d9ca5d91e09fe353f898c0f4d", null ],
+    [ "_default_threads", "classCompadre_1_1ParallelManager.html#aeced6b94c56611eed6fdc5d84050b4f1", null ],
+    [ "_default_vector_lanes", "classCompadre_1_1ParallelManager.html#ae8f86ff725a1f1fb9f130b8142e5bd66", null ],
+    [ "_scratch_team_level_a", "classCompadre_1_1ParallelManager.html#a099701f4cc83a49f206348cca02ba3ec", null ],
+    [ "_scratch_team_level_b", "classCompadre_1_1ParallelManager.html#a5c7d0f8f2e56bb42fa1201dc2d7ee3bd", null ],
+    [ "_scratch_thread_level_a", "classCompadre_1_1ParallelManager.html#a319c9d5a14bda0591887fb5afb84c776", null ],
+    [ "_scratch_thread_level_b", "classCompadre_1_1ParallelManager.html#ab6b0cafe5ffd5295644db099d23c0ab4", null ],
+    [ "_team_scratch_size_a", "classCompadre_1_1ParallelManager.html#a9101ea13d0f04df55e6424dd4b0bf3dc", null ],
+    [ "_team_scratch_size_b", "classCompadre_1_1ParallelManager.html#adea2e1084f7a98121a84e09e5a540599", null ],
+    [ "_thread_scratch_size_a", "classCompadre_1_1ParallelManager.html#aff8f71993a81c30f0bf7ec3daa10954d", null ],
+    [ "_thread_scratch_size_b", "classCompadre_1_1ParallelManager.html#ae0633eb13bd6d8cf0dabf02750b04085", null ]
+];

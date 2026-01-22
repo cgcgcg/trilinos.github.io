@@ -1,0 +1,28 @@
+var structIfpack2_1_1BlockHelperDetails_1_1PartInterface =
+[
+    [ "local_ordinal_type", "structIfpack2_1_1BlockHelperDetails_1_1PartInterface.html#a3ab6a57fb637f8404c62d49bbad27d89", null ],
+    [ "local_ordinal_type_1d_view", "structIfpack2_1_1BlockHelperDetails_1_1PartInterface.html#a7a8033fd4f7a9dce855c6df190aa11b2", null ],
+    [ "local_ordinal_type_2d_view", "structIfpack2_1_1BlockHelperDetails_1_1PartInterface.html#aa3e2b579a226964f0f0d78630cca1ce0", null ],
+    [ "PartInterface", "structIfpack2_1_1BlockHelperDetails_1_1PartInterface.html#aa495a8376708301c35640862d4495de9", null ],
+    [ "PartInterface", "structIfpack2_1_1BlockHelperDetails_1_1PartInterface.html#a72799e7ce6e47bbb2f52f2b26515b3b2", null ],
+    [ "lclrow", "structIfpack2_1_1BlockHelperDetails_1_1PartInterface.html#ad3141d31876206067768a5284ad7342f", null ],
+    [ "max_partsz", "structIfpack2_1_1BlockHelperDetails_1_1PartInterface.html#afb4230c318479efdf22a3d5fe1c20a37", null ],
+    [ "max_subpartsz", "structIfpack2_1_1BlockHelperDetails_1_1PartInterface.html#ad3e862d0b0b14ee12286327abc363fc9", null ],
+    [ "n_subparts_per_part", "structIfpack2_1_1BlockHelperDetails_1_1PartInterface.html#af17afcccbd1689f23e4bbb5eeed33a40", null ],
+    [ "nparts", "structIfpack2_1_1BlockHelperDetails_1_1PartInterface.html#a7202868ee1fac0e0956de95c876b0160", null ],
+    [ "packindices_schur", "structIfpack2_1_1BlockHelperDetails_1_1PartInterface.html#ab9ccd110560428f03087dd32be91a424", null ],
+    [ "packindices_sub", "structIfpack2_1_1BlockHelperDetails_1_1PartInterface.html#a98eda607248d0312fdd1257e76fefba5", null ],
+    [ "packptr", "structIfpack2_1_1BlockHelperDetails_1_1PartInterface.html#a9a7fb709a4351563270222705cda8ae9", null ],
+    [ "packptr_sub", "structIfpack2_1_1BlockHelperDetails_1_1PartInterface.html#a4ec11332285b3535b12e58aa86091265", null ],
+    [ "part2packrowidx0", "structIfpack2_1_1BlockHelperDetails_1_1PartInterface.html#a3a3501bafe4c724299865eca1de43320", null ],
+    [ "part2packrowidx0_back", "structIfpack2_1_1BlockHelperDetails_1_1PartInterface.html#af76c963b880b0e62457169864a96a087", null ],
+    [ "part2packrowidx0_sub", "structIfpack2_1_1BlockHelperDetails_1_1PartInterface.html#a915acc8e1693eff24a13a8081498c026", null ],
+    [ "part2rowidx0", "structIfpack2_1_1BlockHelperDetails_1_1PartInterface.html#a460be4ebcdf12625b877a7c68f95f7bb", null ],
+    [ "part2rowidx0_sub", "structIfpack2_1_1BlockHelperDetails_1_1PartInterface.html#a77f43e2324aa4dec684da68c2f63b337", null ],
+    [ "partptr", "structIfpack2_1_1BlockHelperDetails_1_1PartInterface.html#a1d8ecffa9a3f889aab6745edfed6435d", null ],
+    [ "partptr_schur", "structIfpack2_1_1BlockHelperDetails_1_1PartInterface.html#a714a8538e29f5749a87570d9ecadfa0a", null ],
+    [ "partptr_sub", "structIfpack2_1_1BlockHelperDetails_1_1PartInterface.html#a4f442cd2a6555dcafeeab5356132b1c2", null ],
+    [ "row_contiguous", "structIfpack2_1_1BlockHelperDetails_1_1PartInterface.html#ad455086df1d793897986fbc21299baac", null ],
+    [ "rowidx2part", "structIfpack2_1_1BlockHelperDetails_1_1PartInterface.html#a39418a799aeb683e28dc11d0bf6d9722", null ],
+    [ "rowidx2part_sub", "structIfpack2_1_1BlockHelperDetails_1_1PartInterface.html#aaaaa4f675f4bdf79e27231a16ef05ff5", null ]
+];

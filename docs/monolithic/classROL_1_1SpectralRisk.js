@@ -1,0 +1,28 @@
+var classROL_1_1SpectralRisk =
+[
+    [ "SpectralRisk", "classROL_1_1SpectralRisk.html#a098d61139cdfc57a2853ba1326c62d75", null ],
+    [ "SpectralRisk", "classROL_1_1SpectralRisk.html#a137f6163273e2a917218ed9f8e7f8056", null ],
+    [ "SpectralRisk", "classROL_1_1SpectralRisk.html#ad00d8031b668e0a1bdc191a563b3a061", null ],
+    [ "SpectralRisk", "classROL_1_1SpectralRisk.html#aee1e3321cfe6e56c072697f0fe9e528c", null ],
+    [ "buildMixedQuantile", "classROL_1_1SpectralRisk.html#a895665f0fcb87674c371258914bc8636", null ],
+    [ "buildQuadFromDist", "classROL_1_1SpectralRisk.html#a513c17608adadd69e4f0d4665803a140", null ],
+    [ "checkInputs", "classROL_1_1SpectralRisk.html#a4ed82eca60b42139e544d6f60acae5be", null ],
+    [ "computeStatistic", "classROL_1_1SpectralRisk.html#a6ebb6217d00b6332684e894db59f166a", null ],
+    [ "getGradient", "classROL_1_1SpectralRisk.html#aaed9aba8c4dd768289e3ee0588a5395d", null ],
+    [ "getHessVec", "classROL_1_1SpectralRisk.html#ad200dcbd6f47c8c8d3e8f5065c475fc7", null ],
+    [ "getValue", "classROL_1_1SpectralRisk.html#add3e5d14e2dda891352587ae3a96e7c6", null ],
+    [ "initialize", "classROL_1_1SpectralRisk.html#a89f7f6bf5b15a161879052852536d137", null ],
+    [ "printQuad", "classROL_1_1SpectralRisk.html#a3ab40a177d41d58da4dcbccd07306f0c", null ],
+    [ "resetStorage", "classROL_1_1SpectralRisk.html#a4efdfd2501d725d4e1a4b7f7aafd9213", null ],
+    [ "resetStorage", "classROL_1_1SpectralRisk.html#ada9f873ab838b203c588b96d65516a8a", null ],
+    [ "setHessVecStorage", "classROL_1_1SpectralRisk.html#af7852c2d88cd2e7168629592add8497f", null ],
+    [ "setSample", "classROL_1_1SpectralRisk.html#aaa3cef9c4fded578d3b39c3583132cef", null ],
+    [ "setStorage", "classROL_1_1SpectralRisk.html#a8fc6ebd8483c9a43b75e257d605b0d3e", null ],
+    [ "updateGradient", "classROL_1_1SpectralRisk.html#ab8ae3dddb6ba9b36bffe506da46dabf3", null ],
+    [ "updateHessVec", "classROL_1_1SpectralRisk.html#aa4921a287ed1b1ee8db72318a0bdeb6c", null ],
+    [ "updateValue", "classROL_1_1SpectralRisk.html#aa42104e678a07b6d67a4cffe14f1bf75", null ],
+    [ "mqq_", "classROL_1_1SpectralRisk.html#abdc0fa3fd19c9ed59458a278fb4035c8", null ],
+    [ "plusFunction_", "classROL_1_1SpectralRisk.html#a8332187e7960437a93d3208af76b069d", null ],
+    [ "pts_", "classROL_1_1SpectralRisk.html#ad3c2c478756664573c828d9290991fb6", null ],
+    [ "wts_", "classROL_1_1SpectralRisk.html#a4df0a5ec0e58462ea404eb7bc0ba9c1a", null ]
+];

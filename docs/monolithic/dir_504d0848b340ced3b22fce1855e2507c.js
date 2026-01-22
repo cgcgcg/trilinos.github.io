@@ -1,0 +1,25 @@
+var dir_504d0848b340ced3b22fce1855e2507c =
+[
+    [ "Adelus.hpp", "Adelus_8hpp.html", "Adelus_8hpp" ],
+    [ "Adelus_ConfigDefs.hpp", "Adelus__ConfigDefs_8hpp.html", "Adelus__ConfigDefs_8hpp" ],
+    [ "Adelus_defines.h", "Adelus__defines_8h.html", "Adelus__defines_8h" ],
+    [ "Adelus_distribute.cpp", "Adelus__distribute_8cpp.html", "Adelus__distribute_8cpp" ],
+    [ "Adelus_distribute.hpp", "Adelus__distribute_8hpp.html", "Adelus__distribute_8hpp" ],
+    [ "Adelus_factor.hpp", "Adelus__factor_8hpp.html", "Adelus__factor_8hpp" ],
+    [ "Adelus_forward.hpp", "Adelus__forward_8hpp.html", "Adelus__forward_8hpp" ],
+    [ "Adelus_global_comm.hpp", "Adelus__global__comm_8hpp.html", "Adelus__global__comm_8hpp" ],
+    [ "Adelus_macros.h", "Adelus__macros_8h.html", "Adelus__macros_8h" ],
+    [ "Adelus_mytime.hpp", "Adelus__mytime_8hpp.html", "Adelus__mytime_8hpp" ],
+    [ "Adelus_perm1.hpp", "Adelus__perm1_8hpp.html", "Adelus__perm1_8hpp" ],
+    [ "Adelus_perm_mat.hpp", "Adelus__perm__mat_8hpp.html", "Adelus__perm__mat_8hpp" ],
+    [ "Adelus_perm_rhs.hpp", "Adelus__perm__rhs_8hpp.html", "Adelus__perm__rhs_8hpp" ],
+    [ "Adelus_solve.hpp", "Adelus__solve_8hpp.html", "Adelus__solve_8hpp" ],
+    [ "Adelus_vars.hpp", "Adelus__vars_8hpp.html", "Adelus__vars_8hpp" ],
+    [ "Adelus_x_factor.hpp", "Adelus__x__factor_8hpp.html", "Adelus__x__factor_8hpp" ],
+    [ "Adelus_x_solve.hpp", "Adelus__x__solve_8hpp.html", "Adelus__x__solve_8hpp" ],
+    [ "Adelus_xlu_solve.hpp", "Adelus__xlu__solve_8hpp.html", "Adelus__xlu__solve_8hpp" ],
+    [ "AdelusVersion.cpp", "AdelusVersion_8cpp.html", "AdelusVersion_8cpp" ],
+    [ "AdelusVersion.hpp", "AdelusVersion_8hpp.html", "AdelusVersion_8hpp" ],
+    [ "BlasWrapper_copy.hpp", "BlasWrapper__copy_8hpp.html", "BlasWrapper__copy_8hpp" ],
+    [ "BlasWrapper_copy_spec.hpp", "BlasWrapper__copy__spec_8hpp.html", "BlasWrapper__copy__spec_8hpp" ]
+];

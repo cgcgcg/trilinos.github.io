@@ -1,0 +1,5 @@
+var classBelos_1_1Details_1_1SolverManagerRequiresRealLapack_3_01ScalarType_00_01MV_00_01OP_00_01true_01_4 =
+[
+    [ "SolverManagerRequiresRealLapack", "classBelos_1_1Details_1_1SolverManagerRequiresRealLapack_3_01ScalarType_00_01MV_00_01OP_00_01true_01_4.html#a7209cc20f7f5b1f5e5cdfd61be6c52f8", null ],
+    [ "~SolverManagerRequiresRealLapack", "classBelos_1_1Details_1_1SolverManagerRequiresRealLapack_3_01ScalarType_00_01MV_00_01OP_00_01true_01_4.html#a6e601595eebb4c5f991044f65af7182a", null ]
+];

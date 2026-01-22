@@ -1,0 +1,38 @@
+var ROL__RiskMeasureFactory_8hpp =
+[
+    [ "ERiskMeasure", "ROL__RiskMeasureFactory_8hpp.html#ad1e302d302e10518ae1e8763fd33f91a", [
+      [ "RISKMEASURE_CVAR", "ROL__RiskMeasureFactory_8hpp.html#ad1e302d302e10518ae1e8763fd33f91aa7e3fa8eeb45773dda1bb56e5692dd201", null ],
+      [ "RISKMEASURE_MOREAUYOSIDACVAR", "ROL__RiskMeasureFactory_8hpp.html#ad1e302d302e10518ae1e8763fd33f91aa22fbb24274257a4f1062ba09b9c119b4", null ],
+      [ "RISKMEASURE_GENMOREAUYOSIDACVAR", "ROL__RiskMeasureFactory_8hpp.html#ad1e302d302e10518ae1e8763fd33f91aa9dd4cabf4b325c756f0a7ff2b950b109", null ],
+      [ "RISKMEASURE_MIXEDCVAR", "ROL__RiskMeasureFactory_8hpp.html#ad1e302d302e10518ae1e8763fd33f91aadd3b1ed10218e5a0c62f564357fa9c72", null ],
+      [ "RISKMEASURE_SPECTRALRISK", "ROL__RiskMeasureFactory_8hpp.html#ad1e302d302e10518ae1e8763fd33f91aa626f02803b9b08a44f9c0164c7a2bfe0", null ],
+      [ "RISKMEASURE_SECONDORDERCVAR", "ROL__RiskMeasureFactory_8hpp.html#ad1e302d302e10518ae1e8763fd33f91aa008a3b7850809c3c40b8d114c1573232", null ],
+      [ "RISKMEASURE_CHEBYSHEVSPECTRAL", "ROL__RiskMeasureFactory_8hpp.html#ad1e302d302e10518ae1e8763fd33f91aab3c1361b542841bc22613b4999153c12", null ],
+      [ "RISKMEASURE_QUANTILERADIUS", "ROL__RiskMeasureFactory_8hpp.html#ad1e302d302e10518ae1e8763fd33f91aa7987f3f57bf62d2013946a5f8cbe2098", null ],
+      [ "RISKMEASURE_HMCR", "ROL__RiskMeasureFactory_8hpp.html#ad1e302d302e10518ae1e8763fd33f91aa90267503ba3a4858856d7ff89e720626", null ],
+      [ "RISKMEASURE_ENTROPICRISK", "ROL__RiskMeasureFactory_8hpp.html#ad1e302d302e10518ae1e8763fd33f91aa26a65f622040d78e6296f955beb12158", null ],
+      [ "RISKMEASURE_COHERENTENTROPICRISK", "ROL__RiskMeasureFactory_8hpp.html#ad1e302d302e10518ae1e8763fd33f91aafe387f22934f6e4744363060f8970a0d", null ],
+      [ "RISKMEASURE_MEANSEMIDEVIATION", "ROL__RiskMeasureFactory_8hpp.html#ad1e302d302e10518ae1e8763fd33f91aa7458b414fe8c337d7e1f7c354b9923b2", null ],
+      [ "RISKMEASURE_MEANSEMIDEVIATIONFROMTARGET", "ROL__RiskMeasureFactory_8hpp.html#ad1e302d302e10518ae1e8763fd33f91aada2cd57a579d6da3c86335ef8153009f", null ],
+      [ "RISKMEASURE_MEANDEVIATIONFROMTARGET", "ROL__RiskMeasureFactory_8hpp.html#ad1e302d302e10518ae1e8763fd33f91aa5076fd2cda916c365f2afa8a6233c8bb", null ],
+      [ "RISKMEASURE_MEANDEVIATION", "ROL__RiskMeasureFactory_8hpp.html#ad1e302d302e10518ae1e8763fd33f91aa5738a023ea5d6eda79be0fa285f7b55e", null ],
+      [ "RISKMEASURE_MEANVARIANCEFROMTARGET", "ROL__RiskMeasureFactory_8hpp.html#ad1e302d302e10518ae1e8763fd33f91aa8c0c33947dc09d6e5264d6de4047c60e", null ],
+      [ "RISKMEASURE_MEANVARIANCE", "ROL__RiskMeasureFactory_8hpp.html#ad1e302d302e10518ae1e8763fd33f91aa60b9ce7ae3f3f7b7236326015d5c5aec", null ],
+      [ "RISKMEASURE_TRUNCATEDMEAN", "ROL__RiskMeasureFactory_8hpp.html#ad1e302d302e10518ae1e8763fd33f91aa01ba8eb02f79e299750bc4814577bb00", null ],
+      [ "RISKMEASURE_LOGQUANTILE", "ROL__RiskMeasureFactory_8hpp.html#ad1e302d302e10518ae1e8763fd33f91aaaad19837c70a9ba8b27a5296bb0fe221", null ],
+      [ "RISKMEASURE_SMOOTHEDWORSTCASE", "ROL__RiskMeasureFactory_8hpp.html#ad1e302d302e10518ae1e8763fd33f91aaed9f9f7c90752ba2011b2a9c242bab16", null ],
+      [ "RISKMEASURE_LOGEXPONENTIAL", "ROL__RiskMeasureFactory_8hpp.html#ad1e302d302e10518ae1e8763fd33f91aa76d04f552dd3a5d59747105e62a992e1", null ],
+      [ "RISKMEASURE_SAFETYMARGIN", "ROL__RiskMeasureFactory_8hpp.html#ad1e302d302e10518ae1e8763fd33f91aaeeea1cb5da1e7fc92680a293233d688d", null ],
+      [ "RISKMEASURE_CHI2DIVERGENCE", "ROL__RiskMeasureFactory_8hpp.html#ad1e302d302e10518ae1e8763fd33f91aa0065d6f7a3fa014debaca7753df2f07e", null ],
+      [ "RISKMEASURE_KLDIVERGENCE", "ROL__RiskMeasureFactory_8hpp.html#ad1e302d302e10518ae1e8763fd33f91aaae7c5fa2b662e91336d961abfdcee9b6", null ],
+      [ "RISKMEASURE_LAST", "ROL__RiskMeasureFactory_8hpp.html#ad1e302d302e10518ae1e8763fd33f91aa323b19e156cf72aedd6b67bf05b90ad8", null ]
+    ] ],
+    [ "ERiskMeasureToString", "ROL__RiskMeasureFactory_8hpp.html#a30b57d576dcdb890c513a3100ad88999", null ],
+    [ "isValidRiskMeasure", "ROL__RiskMeasureFactory_8hpp.html#a027c8c697689b1b718a2415541838426", null ],
+    [ "operator++", "ROL__RiskMeasureFactory_8hpp.html#add4de5ae503066a5328e564198b59e0f", null ],
+    [ "operator++", "ROL__RiskMeasureFactory_8hpp.html#ac3316aeca62d6a936283df16228c5e9a", null ],
+    [ "operator--", "ROL__RiskMeasureFactory_8hpp.html#a509367eadecf79d7d537e59bc8f8045d", null ],
+    [ "operator--", "ROL__RiskMeasureFactory_8hpp.html#a8aeb50b29e327587667e98c11e44d6eb", null ],
+    [ "RiskMeasureFactory", "ROL__RiskMeasureFactory_8hpp.html#a3554850dc29f21f87323e483f70fc153", null ],
+    [ "StringToERiskMeasure", "ROL__RiskMeasureFactory_8hpp.html#a6d5a43267b71889ba733527ffda5963a", null ]
+];
