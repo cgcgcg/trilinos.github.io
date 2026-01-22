@@ -1,0 +1,16 @@
+name: linkinator
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+      - linkinator
+  pull_request:
+
+jobs:
+  linkinator:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: JustinBeckwith/linkinator-action@v1
