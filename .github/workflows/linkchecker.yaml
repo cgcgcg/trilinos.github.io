@@ -1,0 +1,13 @@
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "master", "linkchecker" ]
+
+# --ignore-url=".*/docs/.*"
+
+jobs:
+  linkchecker:
+    runs-on: ubuntu-latest
+    container: ghcr.io/linkchecker/linkchecker:latest
+    steps:
+      - run: linkchecker --check-extern --no-warnings https://trilinos.github.io
