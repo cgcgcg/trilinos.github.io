@@ -28,6 +28,6 @@ If you use Belos in your applications, please cite Belos using the following pub
 
 Other Publications:
 
-*   “[Amesos2 and Belos: Direct and iterative solvers for large sparse linear systems.](http://dx.doi.org/10.3233/SPR-2012-0352)” Eric Bavier, Mark Hoemmen, Sivasankaran Rajamanickam, and Heidi Thornquist. Scientific Programming, 2012.
-*   [A Communication-Avoiding, Hybrid-Parallel, Rank-Revealing Orthogonalization Method](http://dx.doi.org/10.1109/IPDPS.2011.93) Mark Hoemmen. IEEE International Parallel and Distributed Processing Symposium, May 2011.
+*   “[Amesos2 and Belos: Direct and iterative solvers for large sparse linear systems.](https://onlinelibrary.wiley.com/doi/10.3233/SPR-2012-0352)” Eric Bavier, Mark Hoemmen, Sivasankaran Rajamanickam, and Heidi Thornquist. Scientific Programming, 2012.
+*   [A Communication-Avoiding, Hybrid-Parallel, Rank-Revealing Orthogonalization Method](https://ieeexplore.ieee.org/document/6012905) Mark Hoemmen. IEEE International Parallel and Distributed Processing Symposium, May 2011.
 *   [Cooperative Application/OS DRAM fault recovery](http://dx.doi.org/10.1007/978-3-642-29740-3_28) Patrick G. Bridges, Michael A. Heroux, Mark Hoemmen, Kurt Ferreira, Philip Soltero, and Ronald B. Brightwell. Workshop on Resiliency in High-Performance Computing (Resilience 2011) in conjunction with the 17th International European Conference on Parallel and Distributed Computing (Euro-Par 2011), Bordeaux, France, 29 August -- 02 September 2011.

@@ -14,29 +14,29 @@ The [Thyra](thyra.html) package contains a set of interfaces and supporting code
 
  The following document describes the basic ideas behind Thyra and provides an overview of the operator/vector interfaces:
 
- *   Bartlett, Roscoe. _Thyra Linear Operators and Vectors: Overview of Interfaces and Support Software for the Development and Interoperability of Abstract Numerical Algorithms._ SAND2007-5984, Sandia National Laboratories, 2007 [[PDF](http://web.ornl.gov/~8vt/ThyraOverview2007.pdf)]
+ *   Bartlett, Roscoe. _Thyra Linear Operators and Vectors: Overview of Interfaces and Support Software for the Development and Interoperability of Abstract Numerical Algorithms._ SAND2007-5984, Sandia National Laboratories, 2007 [[PDF](https://bartlettroscoe.github.io/publications/ThyraOverview2007.pdf)]
 
  The primary [Thyra](thyra.html) ANA interfaces are broadly layered as followed:
 
  *   **Operator/vector interfaces**
-     *   [Thyra::VectorBase](https://trilinos.org/docs/dev/packages/thyra/doc/html/classThyra_1_1VectorBase.html)
-     *   [Thyra::VectorSpaceBase](https://trilinos.org/docs/dev/packages/thyra/doc/html/classThyra_1_1VectorSpaceBase.html)
-     *   [Thyra::LinearOpBase](https://trilinos.org/docs/dev/packages/thyra/doc/html/classThyra_1_1LinearOpBase.html)
-     *   [Thyra::MultiVectorBase](https://trilinos.org/docs/dev/packages/thyra/doc/html/classThyra_1_1MultiVectorBase.html)
+     *   [Thyra::VectorBase](docs/thyra/class_thyra_1_1_vector_base.html)
+     *   [Thyra::VectorSpaceBase](docs/thyra/class_thyra_1_1_vector_space_base.html)
+     *   [Thyra::LinearOpBase](docs/thyra/class_thyra_1_1_linear_op_base.html)
+     *   [Thyra::MultiVectorBase](docs/thyra/class_thyra_1_1_multi_vector_base.html)
  *   **Operator solve interfaces**
-     *   [Thyra::PreconditionerBase](https://trilinos.org/docs/dev/packages/thyra/doc/html/classThyra_1_1PreconditionerBase.html)
-     *   [Thyra::PreconditionerFactoryBase](https://trilinos.org/docs/dev/packages/thyra/doc/html/classThyra_1_1PreconditionerFactoryBase.html)
-     *   [Thyra::LinearOpWithSolveBase](https://trilinos.org/docs/dev/packages/thyra/doc/html/classThyra_1_1LinearOpWithSolveBase.html)
-     *   [Thyra::LinearOpWithSolveFactoryBase](https://trilinos.org/docs/dev/packages/thyra/doc/html/classThyra_1_1LinearOpWithSolveFactoryBase.html)
+     *   [Thyra::PreconditionerBase](docs/thyra/class_thyra_1_1_preconditioner_base.html)
+     *   [Thyra::PreconditionerFactoryBase](docs/thyra/class_thyra_1_1_preconditioner_factory_base.html)
+     *   [Thyra::LinearOpWithSolveBase](docs/thyra/class_thyra_1_1_linear_op_with_solve_base.html)
+     *   [Thyra::LinearOpWithSolveFactoryBase](docs/thyra/class_thyra_1_1_linear_op_with_solve_factory_base.html)
  *   **Nonlinear Interfaces**
-     *   [Thyra::ModelEvaluator](https://trilinos.org/docs/dev/packages/thyra/doc/html/classThyra_1_1ModelEvaluator.html)
-     *   [Thyra::NonlinearSolverBase](https://trilinos.org/docs/dev/packages/thyra/doc/html/classThyra_1_1NonlinearSolverBase.html)
+     *   [Thyra::ModelEvaluator](docs/thyra/class_thyra_1_1_model_evaluator.html)
+     *   [Thyra::NonlinearSolverBase](docs/thyra/class_thyra_1_1_nonlinear_solver_base.html)
 
  A few important points about Thyra interfaces are:
 
  *   All interfaces are expressed as abstract C++ base classes (i.e. object-oriented)
  *   All interfaces are templated on a Scalar data type (i.e. generic)
- *   All memory management is performed using [Teuchos](http://trilinos.org/docs/dev/packages/teuchos/doc/html/namespaceTeuchos.html) memory management classes involving no raw C++ pointers (see below)
+ *   All memory management is performed using [Teuchos](docs/teuchos/namespace_teuchos.html) memory management classes involving no raw C++ pointers (see below)
 
  For each of these sets of interfaces, the Thyra package also a set of general adapter and general support software. See the Thyra package documentation for more details.
 
@@ -44,11 +44,9 @@ The [Thyra](thyra.html) package contains a set of interfaces and supporting code
 
  *   **[Thyra](thyra.html)**
      *   Adapters
-         *   [Thyra/{Epetra, Tpetra} Adapters](https://trilinos.org/docs/dev/packages/thyra/adapters/epetra/doc/html/index.html):
-             *   Utility classes and functions for mapping between Thyra wrapper objects, and Epetra or Tpetra linear algebra objects
-         *   [Thyra/EpetraExt Adatpers](https://trilinos.org/docs/dev/packages/thyra/adapters/epetraext/doc/html/index.html):
-             *   [Thyra::EpetraModelEvaluator](https://trilinos.org/docs/dev/packages/thyra/doc/html/classThyra_1_1EpetraModelEvaluator.html): Implements [Thyra::ModelEvaluator](https://trilinos.org/docs/dev/packages/thyra/doc/html/classThyra_1_1ModelEvaluator.html) in terms of an [EpetraExt::ModelEvaluator](http://trilinos.org/docs/dev/packages/epetraext/doc/html/classEpetraExt_1_1ModelEvaluator.html) object
+         *   [Thyra Adapters](docs/thyra/group___tpetra___thyra___op___vec__adapters__grp.html):
+             *   Utility classes and functions for mapping between Thyra wrapper objects, and Tpetra linear algebra objects
 
 Thyra Coding and Documentation Guidelines
 
-*   Bartlett, Roscoe. _Thyra Coding and Documentation Guidelines (TCDG)._ Sandia National Laboratories [[PDF](http://www.ornl.gov/~8vt/ThyraCodingGuideLines.pdf)]
+*   Bartlett, Roscoe. _Thyra Coding and Documentation Guidelines (TCDG)._ Sandia National Laboratories [[PDF](https://bartlettroscoe.github.io/publications/ThyraCodingGuideLines.pdf)]

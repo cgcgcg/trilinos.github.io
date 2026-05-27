@@ -4,7 +4,7 @@ permalink: pamgen.html
 folder: packages
 show_sidebar: true
 contact: <a href="mailto:rppawlo@sandia.gov">Roger Pawlowski</a> (<a href="https://github.com/rppawlo">@rppawlo</a>), <a href="https://github.com/orgs/trilinos/teams/pamgen">@pamgen</a>
-package: optipack
+package: pamgen
 ---
 
 Welcome to the PAMGEN Home

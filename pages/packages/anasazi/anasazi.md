@@ -36,7 +36,7 @@ Anasazi supports the following solver/matrix combinations:
 
 <span style="text-decoration: underline;">**Anasazi Publications**</span>
 
-*   [Anasazi software for the numerical solution of large-scale eigenvalue problems](http://dx.doi.org/10.1145/1527286.1527287) -- Describes the design and development of the Anasazi package.
+*   [Anasazi software for the numerical solution of large-scale eigenvalue problems](https://dl.acm.org/doi/10.1145/1527286.1527287) -- Describes the design and development of the Anasazi package.
 *   [Overview of Anasazi and its newest eigensolver, TraceMin](pdfs/Klinvex-TUG-2014-Anasazi.pdf) -- Presentation from the Trilinos Users Group meeting, October 29th, 2014.
 *   [Installing the Anasazi Eigensolver Package with Application to Some Graph Eigenvalue Problems](pdfs/anasazi-ug-public.pdf "Installing the Anasazi Eigensolver Package with Application to Some Graph Eigenvalue Problems") -- Introductory installation and usage guide.
 

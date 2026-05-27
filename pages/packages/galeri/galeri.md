@@ -51,13 +51,13 @@ divided across <tt>mx * my</tt> processors (so that <tt>Comm.NumProc() = mx * my
 
 
 And that’s it! (The code snippet above only misses the header files; see the examples in the distribution for a compilable code.) A list of supported matrices is reported
-[here](http://trilinos.org/docs/dev/packages/galeri/doc/html/gl_GalleryCrsMatrix.html). The supported Epetra_Map’s are instead
-[here](http://trilinos.org/docs/dev/packages/galeri/doc/html/gl_GalleryMaps.html).
+[here](docs/galeri/gl__gallery_crs_matrix.html). The supported Epetra_Map’s are instead
+[here](docs/galeri/gl__gallery_maps.html).
 
 Galeri also contains a nice and simple finite element code, to be used for scalar and vector elliptic-type equations using Galerkin and SUPG discretization techniques, on both 2D and 3D unstructured grids,
 composed by triangles, quads, tetrahedra and hexahedra.
 
-Galeri’s technical documentation is maintained using Doxygen; click [here](http://trilinos.org/docs/dev/packages/galeri/doc/html/index.html) to access the latest Doxygen documentation.
+Galeri’s technical documentation is maintained using Doxygen; click [here](docs/galeri/index.html) to access the latest Doxygen documentation.
 
 <span style="text-decoration: underline;">**Overview**</span>  
 Understanding, validating, using and developing algorithms and software tools for distributed linear algebra solvers, like Krylov accelerators and preconditioners, requires input data. This data should have
@@ -74,8 +74,7 @@ Laplace problem is probably the most widely studied application, and a broad ran
 to validate a particular class, or to get a sense of the performances of a new method.
 
 Galeri’s Matrix generation capabilities can help to make examples shorter and easier to read, since they can produce challenging linear systems in a few code lines. Therefore, the attention of the example’s
-reader is not distracted by complicated instructions aiming to build this or that linear system. Since most linear algebra packages of Trilinos use Galeri, users will quickly become familiar with it. Galeri
-is used in the examples of the [Amesos](amesos.html), [IFPACK](ifpack.html), and [ML](ml.html) packages.
+reader is not distracted by complicated instructions aiming to build this or that linear system. Since most linear algebra packages of Trilinos use Galeri, users will quickly become familiar with it. 
 
 Finally, Galeri is very convenient for software testing. A large variety of problems can be produced, to understand or validate the performances of a given class. Galeri is used in the testing of
-[Amesos](amesos.html), [IFPACK](ifpack.html), [ML](ml.html), [MueLu](muelu.html), [Ifpack2](ifpack2.html), and [Zoltan2](zoltan2.html).
+[MueLu](muelu.html), [Ifpack2](ifpack2.html), and [Zoltan2](zoltan2.html).

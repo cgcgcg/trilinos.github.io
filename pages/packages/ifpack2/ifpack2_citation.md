@@ -3,7 +3,7 @@ title: Ifpack2 Citation
 permalink: ifpack2_citation.html
 folder: packages
 show_sidebar: true
-contact: <a href="mailto:jhu@sandia.gov">Jonathan Hu</a> (<a href="https://github.com/jhux2">@jhux2</a>), <a href="mailto:csiefer@sandia.gov">Chris Siefert</a> (<a href="https://github.com/csiefert2">@csiefert2</a>), <a href="https://github.com/orgs/trilinos/teams/ifpack2">@ifpack2</a>
+contact: <a href="mailto:jhu@sandia.gov">Jonathan Hu</a> (<a href="https://github.com/jhux2">@jhux2</a>), <a href="mailto:csiefer@sandia.gov">Chris Siefert</a> (<a href="https://github.com/csiefer2">@csiefer2</a>), <a href="https://github.com/orgs/trilinos/teams/ifpack2">@ifpack2</a>
 package: ifpack2
 ---
 

@@ -3,7 +3,7 @@ title: Zoltan
 permalink: zoltan.html
 folder: packages
 show_sidebar: true
-contact: <a href="mailto:egboman@sandia.gov">Erik Boman</a> (<a href="https://github.com/egboman">@egboman</a>), <a href="https://github.com/orgs/trilinos/teams@zoltan">@zoltan</a>
+contact: <a href="mailto:egboman@sandia.gov">Erik Boman</a> (<a href="https://github.com/egboman">@egboman</a>), <a href="https://github.com/orgs/trilinos/teams/zoltan">@zoltan</a>
 package: zoltan
 ---
 

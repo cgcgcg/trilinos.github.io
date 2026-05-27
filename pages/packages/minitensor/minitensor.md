@@ -3,7 +3,7 @@ title: MiniTensor
 permalink: minitensor.html
 folder: packages
 show_sidebar: true
-contact: <a href="mailto:amota@sandia.gov">David Noble</a> (<a href="https://github.com/lxmota">@lxmota</a>), <a href="https://github.com/orgs/trilinos/teams/minitensor">@minitensor</a>
+contact: <a href="mailto:amota@sandia.gov">Alejandro Mota</a> (<a href="https://github.com/lxmota">@lxmota</a>), <a href="https://github.com/orgs/trilinos/teams/minitensor">@minitensor</a>
 package: minitensor
 doxygen: true
 ---

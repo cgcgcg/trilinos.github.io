@@ -3,7 +3,7 @@ title: Tpetra
 permalink: tpetra.html
 folder: packages
 show_sidebar: true
-contact: <a href="mailto:csiefer@sandia.gov">Chris Siefert</a> (<a href="https://github.com/csiefert2">@csiefert2</a>), <a href="https://github.com/orgs/trilinos/teams/tpetra">@tpetra</a>
+contact: <a href="mailto:csiefer@sandia.gov">Chris Siefert</a> (<a href="https://github.com/csiefer2">@csiefer2</a>), <a href="https://github.com/orgs/trilinos/teams/tpetra">@tpetra</a>
 package: tpetra
 doxygen: true
 ---
