@@ -289,6 +289,9 @@ var hierarchy =
       [ "MueLu::Factory", "class_mue_lu_1_1_factory.html", null ]
     ] ],
     [ "MueLu::FakeSmootherPrototype< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_fake_smoother_prototype.html", null ],
+    [ "std::false_type", null, [
+      [ "MueLu::Details::has_build_p_blocked_thyra_eti< Scalar, LO, GO, Node >", "struct_mue_lu_1_1_details_1_1has__build__p__blocked__thyra__eti.html", null ]
+    ] ],
     [ "MueLu::AggregationStructuredAlgorithm< LocalOrdinal, GlobalOrdinal, Node >::fillAggregatesFunctor", "struct_mue_lu_1_1_aggregation_structured_algorithm_1_1fill_aggregates_functor.html", null ],
     [ "FineLevelInputData", "class_fine_level_input_data.html", null ],
     [ "MueLuTests::FineLevelInputDataFactoryTester< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_tests_1_1_fine_level_input_data_factory_tester.html", null ],
@@ -321,7 +324,6 @@ var hierarchy =
     ] ],
     [ "MueLu::LocalAggregationAlgorithm< LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_local_aggregation_algorithm.html", null ],
     [ "LocalPermutationStrategy", "class_local_permutation_strategy.html", null ],
-    [ "MueLu::LocalSPAIFunctor< local_matrix_type >", "class_mue_lu_1_1_local_s_p_a_i_functor.html", null ],
     [ "MueLu::LWGraphBase< LocalOrdinal, GlobalOrdinal, Node, OnHost >", "class_mue_lu_1_1_l_w_graph_base.html", [
       [ "MueLu::LWGraph< LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_l_w_graph.html", null ]
     ] ],
