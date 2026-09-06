@@ -1567,384 +1567,397 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01574" name="l01574"></a><span class="lineno"> 1574</span> </div>
 <div class="line"><a id="l01575" name="l01575"></a><span class="lineno"> 1575</span><span class="keyword">template</span>&lt;&gt;</div>
 <div class="line"><a id="l01576" name="l01576"></a><span class="lineno"> 1576</span><span class="keywordtype">void</span></div>
-<div class="line"><a id="l01577" name="l01577"></a><span class="lineno"> 1577</span>scatterv&lt;int, double&gt; (<span class="keyword">const</span> <span class="keywordtype">double</span> sendBuf[],</div>
-<div class="line"><a id="l01578" name="l01578"></a><span class="lineno"> 1578</span>                       <span class="keyword">const</span> <span class="keywordtype">int</span> sendCount[],</div>
-<div class="line"><a id="l01579" name="l01579"></a><span class="lineno"> 1579</span>                       <span class="keyword">const</span> <span class="keywordtype">int</span> displs[],</div>
-<div class="line"><a id="l01580" name="l01580"></a><span class="lineno"> 1580</span>                       <span class="keywordtype">double</span> recvBuf[],</div>
-<div class="line"><a id="l01581" name="l01581"></a><span class="lineno"> 1581</span>                       <span class="keyword">const</span> <span class="keywordtype">int</span> recvCount,</div>
-<div class="line"><a id="l01582" name="l01582"></a><span class="lineno"> 1582</span>                       <span class="keyword">const</span> <span class="keywordtype">int</span> root,</div>
-<div class="line"><a id="l01583" name="l01583"></a><span class="lineno"> 1583</span>                       <span class="keyword">const</span> Comm&lt;int&gt;&amp; comm)</div>
+<div class="line"><a id="l01577" name="l01577"></a><span class="lineno"> 1577</span>scatterv&lt;int, int&gt; (<span class="keyword">const</span> <span class="keywordtype">int</span> sendBuf[],</div>
+<div class="line"><a id="l01578" name="l01578"></a><span class="lineno"> 1578</span>                    <span class="keyword">const</span> <span class="keywordtype">int</span> sendCount[],</div>
+<div class="line"><a id="l01579" name="l01579"></a><span class="lineno"> 1579</span>                    <span class="keyword">const</span> <span class="keywordtype">int</span> displs[],</div>
+<div class="line"><a id="l01580" name="l01580"></a><span class="lineno"> 1580</span>                    <span class="keywordtype">int</span> recvBuf[],</div>
+<div class="line"><a id="l01581" name="l01581"></a><span class="lineno"> 1581</span>                    <span class="keyword">const</span> <span class="keywordtype">int</span> recvCount,</div>
+<div class="line"><a id="l01582" name="l01582"></a><span class="lineno"> 1582</span>                    <span class="keyword">const</span> <span class="keywordtype">int</span> root,</div>
+<div class="line"><a id="l01583" name="l01583"></a><span class="lineno"> 1583</span>                    <span class="keyword">const</span> Comm&lt;int&gt;&amp; comm)</div>
 <div class="line"><a id="l01584" name="l01584"></a><span class="lineno"> 1584</span>{</div>
-<div class="line"><a id="l01585" name="l01585"></a><span class="lineno"> 1585</span>  scattervImpl&lt;double&gt; (sendBuf, sendCount, displs, recvBuf, recvCount, root, comm);</div>
+<div class="line"><a id="l01585" name="l01585"></a><span class="lineno"> 1585</span>  scattervImpl&lt;int&gt; (sendBuf, sendCount, displs, recvBuf, recvCount, root, comm);</div>
 <div class="line"><a id="l01586" name="l01586"></a><span class="lineno"> 1586</span>}</div>
 <div class="line"><a id="l01587" name="l01587"></a><span class="lineno"> 1587</span> </div>
 <div class="line"><a id="l01588" name="l01588"></a><span class="lineno"> 1588</span><span class="keyword">template</span>&lt;&gt;</div>
 <div class="line"><a id="l01589" name="l01589"></a><span class="lineno"> 1589</span><span class="keywordtype">void</span></div>
-<div class="line"><a id="l01590" name="l01590"></a><span class="lineno"> 1590</span>scatterv&lt;int, float&gt; (<span class="keyword">const</span> <span class="keywordtype">float</span> sendBuf[],</div>
-<div class="line"><a id="l01591" name="l01591"></a><span class="lineno"> 1591</span>                      <span class="keyword">const</span> <span class="keywordtype">int</span> sendCounts[],</div>
-<div class="line"><a id="l01592" name="l01592"></a><span class="lineno"> 1592</span>                      <span class="keyword">const</span> <span class="keywordtype">int</span> displs[],</div>
-<div class="line"><a id="l01593" name="l01593"></a><span class="lineno"> 1593</span>                      <span class="keywordtype">float</span> recvBuf[],</div>
-<div class="line"><a id="l01594" name="l01594"></a><span class="lineno"> 1594</span>                      <span class="keyword">const</span> <span class="keywordtype">int</span> recvCount,</div>
-<div class="line"><a id="l01595" name="l01595"></a><span class="lineno"> 1595</span>                      <span class="keyword">const</span> <span class="keywordtype">int</span> root,</div>
-<div class="line"><a id="l01596" name="l01596"></a><span class="lineno"> 1596</span>                      <span class="keyword">const</span> Comm&lt;int&gt;&amp; comm)</div>
+<div class="line"><a id="l01590" name="l01590"></a><span class="lineno"> 1590</span>scatterv&lt;int, double&gt; (<span class="keyword">const</span> <span class="keywordtype">double</span> sendBuf[],</div>
+<div class="line"><a id="l01591" name="l01591"></a><span class="lineno"> 1591</span>                       <span class="keyword">const</span> <span class="keywordtype">int</span> sendCount[],</div>
+<div class="line"><a id="l01592" name="l01592"></a><span class="lineno"> 1592</span>                       <span class="keyword">const</span> <span class="keywordtype">int</span> displs[],</div>
+<div class="line"><a id="l01593" name="l01593"></a><span class="lineno"> 1593</span>                       <span class="keywordtype">double</span> recvBuf[],</div>
+<div class="line"><a id="l01594" name="l01594"></a><span class="lineno"> 1594</span>                       <span class="keyword">const</span> <span class="keywordtype">int</span> recvCount,</div>
+<div class="line"><a id="l01595" name="l01595"></a><span class="lineno"> 1595</span>                       <span class="keyword">const</span> <span class="keywordtype">int</span> root,</div>
+<div class="line"><a id="l01596" name="l01596"></a><span class="lineno"> 1596</span>                       <span class="keyword">const</span> Comm&lt;int&gt;&amp; comm)</div>
 <div class="line"><a id="l01597" name="l01597"></a><span class="lineno"> 1597</span>{</div>
-<div class="line"><a id="l01598" name="l01598"></a><span class="lineno"> 1598</span>  scattervImpl&lt;float&gt; (sendBuf, sendCounts, displs, recvBuf, recvCount, root, comm);</div>
+<div class="line"><a id="l01598" name="l01598"></a><span class="lineno"> 1598</span>  scattervImpl&lt;double&gt; (sendBuf, sendCount, displs, recvBuf, recvCount, root, comm);</div>
 <div class="line"><a id="l01599" name="l01599"></a><span class="lineno"> 1599</span>}</div>
 <div class="line"><a id="l01600" name="l01600"></a><span class="lineno"> 1600</span> </div>
 <div class="line"><a id="l01601" name="l01601"></a><span class="lineno"> 1601</span><span class="keyword">template</span>&lt;&gt;</div>
 <div class="line"><a id="l01602" name="l01602"></a><span class="lineno"> 1602</span><span class="keywordtype">void</span></div>
-<div class="line"><a id="l01603" name="l01603"></a><span class="lineno"> 1603</span>reduce&lt;int, int&gt; (<span class="keyword">const</span> <span class="keywordtype">int</span> sendBuf[],</div>
-<div class="line"><a id="l01604" name="l01604"></a><span class="lineno"> 1604</span>                  <span class="keywordtype">int</span> recvBuf[],</div>
-<div class="line"><a id="l01605" name="l01605"></a><span class="lineno"> 1605</span>                  <span class="keyword">const</span> <span class="keywordtype">int</span> count,</div>
-<div class="line"><a id="l01606" name="l01606"></a><span class="lineno"> 1606</span>                  <span class="keyword">const</span> EReductionType reductType,</div>
-<div class="line"><a id="l01607" name="l01607"></a><span class="lineno"> 1607</span>                  <span class="keyword">const</span> <span class="keywordtype">int</span> root,</div>
-<div class="line"><a id="l01608" name="l01608"></a><span class="lineno"> 1608</span>                  <span class="keyword">const</span> Comm&lt;int&gt;&amp; comm)</div>
-<div class="line"><a id="l01609" name="l01609"></a><span class="lineno"> 1609</span>{</div>
-<div class="line"><a id="l01610" name="l01610"></a><span class="lineno"> 1610</span>  TEUCHOS_COMM_TIME_MONITOR</div>
-<div class="line"><a id="l01611" name="l01611"></a><span class="lineno"> 1611</span>    (<span class="stringliteral">&quot;Teuchos::reduce&lt;int, int&gt; (&quot;</span> &lt;&lt; count &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; toString (reductType)</div>
-<div class="line"><a id="l01612" name="l01612"></a><span class="lineno"> 1612</span>     &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>);</div>
-<div class="line"><a id="l01613" name="l01613"></a><span class="lineno"> 1613</span>  reduceImpl&lt;int&gt; (sendBuf, recvBuf, count, reductType, root, comm);</div>
-<div class="line"><a id="l01614" name="l01614"></a><span class="lineno"> 1614</span>}</div>
-<div class="line"><a id="l01615" name="l01615"></a><span class="lineno"> 1615</span><span class="keyword">template</span>&lt;&gt;</div>
-<div class="line"><a id="l01616" name="l01616"></a><span class="lineno"> 1616</span><span class="keywordtype">void</span></div>
-<div class="line"><a id="l01617" name="l01617"></a><span class="lineno"> 1617</span>reduce&lt;int, long&gt; (<span class="keyword">const</span> <span class="keywordtype">long</span> sendBuf[],</div>
-<div class="line"><a id="l01618" name="l01618"></a><span class="lineno"> 1618</span>                   <span class="keywordtype">long</span> recvBuf[],</div>
-<div class="line"><a id="l01619" name="l01619"></a><span class="lineno"> 1619</span>                   <span class="keyword">const</span> <span class="keywordtype">int</span> count,</div>
-<div class="line"><a id="l01620" name="l01620"></a><span class="lineno"> 1620</span>                   <span class="keyword">const</span> EReductionType reductType,</div>
-<div class="line"><a id="l01621" name="l01621"></a><span class="lineno"> 1621</span>                   <span class="keyword">const</span> <span class="keywordtype">int</span> root,</div>
-<div class="line"><a id="l01622" name="l01622"></a><span class="lineno"> 1622</span>                   <span class="keyword">const</span> Comm&lt;int&gt;&amp; comm)</div>
-<div class="line"><a id="l01623" name="l01623"></a><span class="lineno"> 1623</span>{</div>
-<div class="line"><a id="l01624" name="l01624"></a><span class="lineno"> 1624</span>  TEUCHOS_COMM_TIME_MONITOR</div>
-<div class="line"><a id="l01625" name="l01625"></a><span class="lineno"> 1625</span>    (<span class="stringliteral">&quot;Teuchos::reduce&lt;int, int&gt; (&quot;</span> &lt;&lt; count &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; toString (reductType)</div>
-<div class="line"><a id="l01626" name="l01626"></a><span class="lineno"> 1626</span>     &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>);</div>
-<div class="line"><a id="l01627" name="l01627"></a><span class="lineno"> 1627</span>  reduceImpl&lt;long&gt; (sendBuf, recvBuf, count, reductType, root, comm);</div>
-<div class="line"><a id="l01628" name="l01628"></a><span class="lineno"> 1628</span>}</div>
-<div class="line"><a id="l01629" name="l01629"></a><span class="lineno"> 1629</span> </div>
-<div class="line"><a id="l01630" name="l01630"></a><span class="lineno"> 1630</span><span class="keyword">template</span>&lt;&gt;</div>
-<div class="line"><a id="l01631" name="l01631"></a><span class="lineno"> 1631</span><span class="keywordtype">void</span></div>
-<div class="line"><a id="l01632" name="l01632"></a><span class="lineno"> 1632</span>reduce&lt;int, unsigned long&gt; (<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> sendBuf[],</div>
-<div class="line"><a id="l01633" name="l01633"></a><span class="lineno"> 1633</span>                            <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> recvBuf[],</div>
-<div class="line"><a id="l01634" name="l01634"></a><span class="lineno"> 1634</span>                            <span class="keyword">const</span> <span class="keywordtype">int</span> count,</div>
-<div class="line"><a id="l01635" name="l01635"></a><span class="lineno"> 1635</span>                            <span class="keyword">const</span> EReductionType reductType,</div>
-<div class="line"><a id="l01636" name="l01636"></a><span class="lineno"> 1636</span>                            <span class="keyword">const</span> <span class="keywordtype">int</span> root,</div>
-<div class="line"><a id="l01637" name="l01637"></a><span class="lineno"> 1637</span>                            <span class="keyword">const</span> Comm&lt;int&gt;&amp; comm)</div>
-<div class="line"><a id="l01638" name="l01638"></a><span class="lineno"> 1638</span>{</div>
-<div class="line"><a id="l01639" name="l01639"></a><span class="lineno"> 1639</span>  TEUCHOS_COMM_TIME_MONITOR</div>
-<div class="line"><a id="l01640" name="l01640"></a><span class="lineno"> 1640</span>    (<span class="stringliteral">&quot;Teuchos::reduce&lt;int, int&gt; (&quot;</span> &lt;&lt; count &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; toString (reductType)</div>
-<div class="line"><a id="l01641" name="l01641"></a><span class="lineno"> 1641</span>     &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>);</div>
-<div class="line"><a id="l01642" name="l01642"></a><span class="lineno"> 1642</span>  reduceImpl&lt;unsigned long&gt; (sendBuf, recvBuf, count, reductType, root, comm);</div>
-<div class="line"><a id="l01643" name="l01643"></a><span class="lineno"> 1643</span>}</div>
-<div class="line"><a id="l01644" name="l01644"></a><span class="lineno"> 1644</span> </div>
-<div class="line"><a id="l01645" name="l01645"></a><span class="lineno"> 1645</span><span class="keyword">template</span>&lt;&gt;</div>
-<div class="line"><a id="l01646" name="l01646"></a><span class="lineno"> 1646</span><span class="keywordtype">void</span></div>
-<div class="line"><a id="l01647" name="l01647"></a><span class="lineno"> 1647</span>reduce&lt;int, unsigned long long &gt; (<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> sendBuf[],</div>
-<div class="line"><a id="l01648" name="l01648"></a><span class="lineno"> 1648</span>                                  <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> recvBuf[],</div>
-<div class="line"><a id="l01649" name="l01649"></a><span class="lineno"> 1649</span>                                  <span class="keyword">const</span> <span class="keywordtype">int</span> count,</div>
-<div class="line"><a id="l01650" name="l01650"></a><span class="lineno"> 1650</span>                                  <span class="keyword">const</span> EReductionType reductType,</div>
-<div class="line"><a id="l01651" name="l01651"></a><span class="lineno"> 1651</span>                                  <span class="keyword">const</span> <span class="keywordtype">int</span> root,</div>
-<div class="line"><a id="l01652" name="l01652"></a><span class="lineno"> 1652</span>                                  <span class="keyword">const</span> Comm&lt;int&gt;&amp; comm)</div>
-<div class="line"><a id="l01653" name="l01653"></a><span class="lineno"> 1653</span>{</div>
-<div class="line"><a id="l01654" name="l01654"></a><span class="lineno"> 1654</span>  TEUCHOS_COMM_TIME_MONITOR</div>
-<div class="line"><a id="l01655" name="l01655"></a><span class="lineno"> 1655</span>    (<span class="stringliteral">&quot;Teuchos::reduce&lt;int, int&gt; (&quot;</span> &lt;&lt; count &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; toString (reductType)</div>
-<div class="line"><a id="l01656" name="l01656"></a><span class="lineno"> 1656</span>     &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>);</div>
-<div class="line"><a id="l01657" name="l01657"></a><span class="lineno"> 1657</span>  reduceImpl&lt;unsigned long long&gt; (sendBuf, recvBuf, count, reductType, root, comm);</div>
-<div class="line"><a id="l01658" name="l01658"></a><span class="lineno"> 1658</span>}</div>
-<div class="line"><a id="l01659" name="l01659"></a><span class="lineno"> 1659</span> </div>
-<div class="line"><a id="l01660" name="l01660"></a><span class="lineno"> 1660</span><span class="keyword">template</span>&lt;&gt;</div>
-<div class="line"><a id="l01661" name="l01661"></a><span class="lineno"> 1661</span><span class="keywordtype">void</span></div>
-<div class="line"><a id="l01662" name="l01662"></a><span class="lineno"> 1662</span>reduce&lt;int, double&gt; (<span class="keyword">const</span> <span class="keywordtype">double</span> sendBuf[],</div>
-<div class="line"><a id="l01663" name="l01663"></a><span class="lineno"> 1663</span>                     <span class="keywordtype">double</span> recvBuf[],</div>
-<div class="line"><a id="l01664" name="l01664"></a><span class="lineno"> 1664</span>                     <span class="keyword">const</span> <span class="keywordtype">int</span> count,</div>
-<div class="line"><a id="l01665" name="l01665"></a><span class="lineno"> 1665</span>                     <span class="keyword">const</span> EReductionType reductType,</div>
-<div class="line"><a id="l01666" name="l01666"></a><span class="lineno"> 1666</span>                     <span class="keyword">const</span> <span class="keywordtype">int</span> root,</div>
-<div class="line"><a id="l01667" name="l01667"></a><span class="lineno"> 1667</span>                     <span class="keyword">const</span> Comm&lt;int&gt;&amp; comm)</div>
-<div class="line"><a id="l01668" name="l01668"></a><span class="lineno"> 1668</span>{</div>
-<div class="line"><a id="l01669" name="l01669"></a><span class="lineno"> 1669</span>  TEUCHOS_COMM_TIME_MONITOR</div>
-<div class="line"><a id="l01670" name="l01670"></a><span class="lineno"> 1670</span>    (<span class="stringliteral">&quot;Teuchos::reduce&lt;int, int&gt; (&quot;</span> &lt;&lt; count &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; toString (reductType)</div>
-<div class="line"><a id="l01671" name="l01671"></a><span class="lineno"> 1671</span>     &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>);</div>
-<div class="line"><a id="l01672" name="l01672"></a><span class="lineno"> 1672</span>  reduceImpl&lt;double&gt; (sendBuf, recvBuf, count, reductType, root, comm);</div>
-<div class="line"><a id="l01673" name="l01673"></a><span class="lineno"> 1673</span>}</div>
-<div class="line"><a id="l01674" name="l01674"></a><span class="lineno"> 1674</span><span class="keyword">template</span>&lt;&gt;</div>
-<div class="line"><a id="l01675" name="l01675"></a><span class="lineno"> 1675</span><span class="keywordtype">void</span></div>
-<div class="line"><a id="l01676" name="l01676"></a><span class="lineno"> 1676</span>reduceAll&lt;int, int&gt; (<span class="keyword">const</span> Comm&lt;int&gt;&amp; comm,</div>
-<div class="line"><a id="l01677" name="l01677"></a><span class="lineno"> 1677</span>                     <span class="keyword">const</span> EReductionType reductType,</div>
-<div class="line"><a id="l01678" name="l01678"></a><span class="lineno"> 1678</span>                     <span class="keyword">const</span> <span class="keywordtype">int</span> count,</div>
-<div class="line"><a id="l01679" name="l01679"></a><span class="lineno"> 1679</span>                     <span class="keyword">const</span> <span class="keywordtype">int</span> sendBuffer[],</div>
-<div class="line"><a id="l01680" name="l01680"></a><span class="lineno"> 1680</span>                     <span class="keywordtype">int</span> globalReducts[])</div>
+<div class="line"><a id="l01603" name="l01603"></a><span class="lineno"> 1603</span>scatterv&lt;int, float&gt; (<span class="keyword">const</span> <span class="keywordtype">float</span> sendBuf[],</div>
+<div class="line"><a id="l01604" name="l01604"></a><span class="lineno"> 1604</span>                      <span class="keyword">const</span> <span class="keywordtype">int</span> sendCounts[],</div>
+<div class="line"><a id="l01605" name="l01605"></a><span class="lineno"> 1605</span>                      <span class="keyword">const</span> <span class="keywordtype">int</span> displs[],</div>
+<div class="line"><a id="l01606" name="l01606"></a><span class="lineno"> 1606</span>                      <span class="keywordtype">float</span> recvBuf[],</div>
+<div class="line"><a id="l01607" name="l01607"></a><span class="lineno"> 1607</span>                      <span class="keyword">const</span> <span class="keywordtype">int</span> recvCount,</div>
+<div class="line"><a id="l01608" name="l01608"></a><span class="lineno"> 1608</span>                      <span class="keyword">const</span> <span class="keywordtype">int</span> root,</div>
+<div class="line"><a id="l01609" name="l01609"></a><span class="lineno"> 1609</span>                      <span class="keyword">const</span> Comm&lt;int&gt;&amp; comm)</div>
+<div class="line"><a id="l01610" name="l01610"></a><span class="lineno"> 1610</span>{</div>
+<div class="line"><a id="l01611" name="l01611"></a><span class="lineno"> 1611</span>  scattervImpl&lt;float&gt; (sendBuf, sendCounts, displs, recvBuf, recvCount, root, comm);</div>
+<div class="line"><a id="l01612" name="l01612"></a><span class="lineno"> 1612</span>}</div>
+<div class="line"><a id="l01613" name="l01613"></a><span class="lineno"> 1613</span> </div>
+<div class="line"><a id="l01614" name="l01614"></a><span class="lineno"> 1614</span><span class="keyword">template</span>&lt;&gt;</div>
+<div class="line"><a id="l01615" name="l01615"></a><span class="lineno"> 1615</span><span class="keywordtype">void</span></div>
+<div class="line"><a id="l01616" name="l01616"></a><span class="lineno"> 1616</span>reduce&lt;int, int&gt; (<span class="keyword">const</span> <span class="keywordtype">int</span> sendBuf[],</div>
+<div class="line"><a id="l01617" name="l01617"></a><span class="lineno"> 1617</span>                  <span class="keywordtype">int</span> recvBuf[],</div>
+<div class="line"><a id="l01618" name="l01618"></a><span class="lineno"> 1618</span>                  <span class="keyword">const</span> <span class="keywordtype">int</span> count,</div>
+<div class="line"><a id="l01619" name="l01619"></a><span class="lineno"> 1619</span>                  <span class="keyword">const</span> EReductionType reductType,</div>
+<div class="line"><a id="l01620" name="l01620"></a><span class="lineno"> 1620</span>                  <span class="keyword">const</span> <span class="keywordtype">int</span> root,</div>
+<div class="line"><a id="l01621" name="l01621"></a><span class="lineno"> 1621</span>                  <span class="keyword">const</span> Comm&lt;int&gt;&amp; comm)</div>
+<div class="line"><a id="l01622" name="l01622"></a><span class="lineno"> 1622</span>{</div>
+<div class="line"><a id="l01623" name="l01623"></a><span class="lineno"> 1623</span>  TEUCHOS_COMM_TIME_MONITOR</div>
+<div class="line"><a id="l01624" name="l01624"></a><span class="lineno"> 1624</span>    (<span class="stringliteral">&quot;Teuchos::reduce&lt;int, int&gt; (&quot;</span> &lt;&lt; count &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; toString (reductType)</div>
+<div class="line"><a id="l01625" name="l01625"></a><span class="lineno"> 1625</span>     &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>);</div>
+<div class="line"><a id="l01626" name="l01626"></a><span class="lineno"> 1626</span>  reduceImpl&lt;int&gt; (sendBuf, recvBuf, count, reductType, root, comm);</div>
+<div class="line"><a id="l01627" name="l01627"></a><span class="lineno"> 1627</span>}</div>
+<div class="line"><a id="l01628" name="l01628"></a><span class="lineno"> 1628</span><span class="keyword">template</span>&lt;&gt;</div>
+<div class="line"><a id="l01629" name="l01629"></a><span class="lineno"> 1629</span><span class="keywordtype">void</span></div>
+<div class="line"><a id="l01630" name="l01630"></a><span class="lineno"> 1630</span>reduce&lt;int, long&gt; (<span class="keyword">const</span> <span class="keywordtype">long</span> sendBuf[],</div>
+<div class="line"><a id="l01631" name="l01631"></a><span class="lineno"> 1631</span>                   <span class="keywordtype">long</span> recvBuf[],</div>
+<div class="line"><a id="l01632" name="l01632"></a><span class="lineno"> 1632</span>                   <span class="keyword">const</span> <span class="keywordtype">int</span> count,</div>
+<div class="line"><a id="l01633" name="l01633"></a><span class="lineno"> 1633</span>                   <span class="keyword">const</span> EReductionType reductType,</div>
+<div class="line"><a id="l01634" name="l01634"></a><span class="lineno"> 1634</span>                   <span class="keyword">const</span> <span class="keywordtype">int</span> root,</div>
+<div class="line"><a id="l01635" name="l01635"></a><span class="lineno"> 1635</span>                   <span class="keyword">const</span> Comm&lt;int&gt;&amp; comm)</div>
+<div class="line"><a id="l01636" name="l01636"></a><span class="lineno"> 1636</span>{</div>
+<div class="line"><a id="l01637" name="l01637"></a><span class="lineno"> 1637</span>  TEUCHOS_COMM_TIME_MONITOR</div>
+<div class="line"><a id="l01638" name="l01638"></a><span class="lineno"> 1638</span>    (<span class="stringliteral">&quot;Teuchos::reduce&lt;int, int&gt; (&quot;</span> &lt;&lt; count &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; toString (reductType)</div>
+<div class="line"><a id="l01639" name="l01639"></a><span class="lineno"> 1639</span>     &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>);</div>
+<div class="line"><a id="l01640" name="l01640"></a><span class="lineno"> 1640</span>  reduceImpl&lt;long&gt; (sendBuf, recvBuf, count, reductType, root, comm);</div>
+<div class="line"><a id="l01641" name="l01641"></a><span class="lineno"> 1641</span>}</div>
+<div class="line"><a id="l01642" name="l01642"></a><span class="lineno"> 1642</span> </div>
+<div class="line"><a id="l01643" name="l01643"></a><span class="lineno"> 1643</span><span class="keyword">template</span>&lt;&gt;</div>
+<div class="line"><a id="l01644" name="l01644"></a><span class="lineno"> 1644</span><span class="keywordtype">void</span></div>
+<div class="line"><a id="l01645" name="l01645"></a><span class="lineno"> 1645</span>reduce&lt;int, unsigned long&gt; (<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> sendBuf[],</div>
+<div class="line"><a id="l01646" name="l01646"></a><span class="lineno"> 1646</span>                            <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> recvBuf[],</div>
+<div class="line"><a id="l01647" name="l01647"></a><span class="lineno"> 1647</span>                            <span class="keyword">const</span> <span class="keywordtype">int</span> count,</div>
+<div class="line"><a id="l01648" name="l01648"></a><span class="lineno"> 1648</span>                            <span class="keyword">const</span> EReductionType reductType,</div>
+<div class="line"><a id="l01649" name="l01649"></a><span class="lineno"> 1649</span>                            <span class="keyword">const</span> <span class="keywordtype">int</span> root,</div>
+<div class="line"><a id="l01650" name="l01650"></a><span class="lineno"> 1650</span>                            <span class="keyword">const</span> Comm&lt;int&gt;&amp; comm)</div>
+<div class="line"><a id="l01651" name="l01651"></a><span class="lineno"> 1651</span>{</div>
+<div class="line"><a id="l01652" name="l01652"></a><span class="lineno"> 1652</span>  TEUCHOS_COMM_TIME_MONITOR</div>
+<div class="line"><a id="l01653" name="l01653"></a><span class="lineno"> 1653</span>    (<span class="stringliteral">&quot;Teuchos::reduce&lt;int, int&gt; (&quot;</span> &lt;&lt; count &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; toString (reductType)</div>
+<div class="line"><a id="l01654" name="l01654"></a><span class="lineno"> 1654</span>     &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>);</div>
+<div class="line"><a id="l01655" name="l01655"></a><span class="lineno"> 1655</span>  reduceImpl&lt;unsigned long&gt; (sendBuf, recvBuf, count, reductType, root, comm);</div>
+<div class="line"><a id="l01656" name="l01656"></a><span class="lineno"> 1656</span>}</div>
+<div class="line"><a id="l01657" name="l01657"></a><span class="lineno"> 1657</span> </div>
+<div class="line"><a id="l01658" name="l01658"></a><span class="lineno"> 1658</span><span class="keyword">template</span>&lt;&gt;</div>
+<div class="line"><a id="l01659" name="l01659"></a><span class="lineno"> 1659</span><span class="keywordtype">void</span></div>
+<div class="line"><a id="l01660" name="l01660"></a><span class="lineno"> 1660</span>reduce&lt;int, unsigned long long &gt; (<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> sendBuf[],</div>
+<div class="line"><a id="l01661" name="l01661"></a><span class="lineno"> 1661</span>                                  <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> recvBuf[],</div>
+<div class="line"><a id="l01662" name="l01662"></a><span class="lineno"> 1662</span>                                  <span class="keyword">const</span> <span class="keywordtype">int</span> count,</div>
+<div class="line"><a id="l01663" name="l01663"></a><span class="lineno"> 1663</span>                                  <span class="keyword">const</span> EReductionType reductType,</div>
+<div class="line"><a id="l01664" name="l01664"></a><span class="lineno"> 1664</span>                                  <span class="keyword">const</span> <span class="keywordtype">int</span> root,</div>
+<div class="line"><a id="l01665" name="l01665"></a><span class="lineno"> 1665</span>                                  <span class="keyword">const</span> Comm&lt;int&gt;&amp; comm)</div>
+<div class="line"><a id="l01666" name="l01666"></a><span class="lineno"> 1666</span>{</div>
+<div class="line"><a id="l01667" name="l01667"></a><span class="lineno"> 1667</span>  TEUCHOS_COMM_TIME_MONITOR</div>
+<div class="line"><a id="l01668" name="l01668"></a><span class="lineno"> 1668</span>    (<span class="stringliteral">&quot;Teuchos::reduce&lt;int, int&gt; (&quot;</span> &lt;&lt; count &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; toString (reductType)</div>
+<div class="line"><a id="l01669" name="l01669"></a><span class="lineno"> 1669</span>     &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>);</div>
+<div class="line"><a id="l01670" name="l01670"></a><span class="lineno"> 1670</span>  reduceImpl&lt;unsigned long long&gt; (sendBuf, recvBuf, count, reductType, root, comm);</div>
+<div class="line"><a id="l01671" name="l01671"></a><span class="lineno"> 1671</span>}</div>
+<div class="line"><a id="l01672" name="l01672"></a><span class="lineno"> 1672</span> </div>
+<div class="line"><a id="l01673" name="l01673"></a><span class="lineno"> 1673</span><span class="keyword">template</span>&lt;&gt;</div>
+<div class="line"><a id="l01674" name="l01674"></a><span class="lineno"> 1674</span><span class="keywordtype">void</span></div>
+<div class="line"><a id="l01675" name="l01675"></a><span class="lineno"> 1675</span>reduce&lt;int, double&gt; (<span class="keyword">const</span> <span class="keywordtype">double</span> sendBuf[],</div>
+<div class="line"><a id="l01676" name="l01676"></a><span class="lineno"> 1676</span>                     <span class="keywordtype">double</span> recvBuf[],</div>
+<div class="line"><a id="l01677" name="l01677"></a><span class="lineno"> 1677</span>                     <span class="keyword">const</span> <span class="keywordtype">int</span> count,</div>
+<div class="line"><a id="l01678" name="l01678"></a><span class="lineno"> 1678</span>                     <span class="keyword">const</span> EReductionType reductType,</div>
+<div class="line"><a id="l01679" name="l01679"></a><span class="lineno"> 1679</span>                     <span class="keyword">const</span> <span class="keywordtype">int</span> root,</div>
+<div class="line"><a id="l01680" name="l01680"></a><span class="lineno"> 1680</span>                     <span class="keyword">const</span> Comm&lt;int&gt;&amp; comm)</div>
 <div class="line"><a id="l01681" name="l01681"></a><span class="lineno"> 1681</span>{</div>
-<div class="line"><a id="l01682" name="l01682"></a><span class="lineno"> 1682</span>  TEUCHOS_COMM_TIME_MONITOR(</div>
-<div class="line"><a id="l01683" name="l01683"></a><span class="lineno"> 1683</span>    <span class="stringliteral">&quot;Teuchos::reduceAll&lt;int, int&gt; (&quot;</span> &lt;&lt; count &lt;&lt; <span class="stringliteral">&quot;, &quot;</span></div>
-<div class="line"><a id="l01684" name="l01684"></a><span class="lineno"> 1684</span>    &lt;&lt; toString (reductType) &lt;&lt; <span class="stringliteral">&quot;)&quot;</span></div>
-<div class="line"><a id="l01685" name="l01685"></a><span class="lineno"> 1685</span>    );</div>
-<div class="line"><a id="l01686" name="l01686"></a><span class="lineno"> 1686</span>  reduceAllImpl&lt;int&gt; (comm, reductType, count, sendBuffer, globalReducts);</div>
-<div class="line"><a id="l01687" name="l01687"></a><span class="lineno"> 1687</span>}</div>
-<div class="line"><a id="l01688" name="l01688"></a><span class="lineno"> 1688</span> </div>
-<div class="line"><a id="l01689" name="l01689"></a><span class="lineno"> 1689</span><span class="keyword">template</span>&lt;&gt;</div>
-<div class="line"><a id="l01690" name="l01690"></a><span class="lineno"> 1690</span>RCP&lt;Teuchos::CommRequest&lt;int&gt; &gt;</div>
-<div class="line"><a id="l01691" name="l01691"></a><span class="lineno"> 1691</span>ireceive&lt;int, int&gt; (<span class="keyword">const</span> Comm&lt;int&gt;&amp; comm,</div>
-<div class="line"><a id="l01692" name="l01692"></a><span class="lineno"> 1692</span>                    <span class="keyword">const</span> ArrayRCP&lt;int&gt;&amp; recvBuffer,</div>
-<div class="line"><a id="l01693" name="l01693"></a><span class="lineno"> 1693</span>                    <span class="keyword">const</span> <span class="keywordtype">int</span> sourceRank)</div>
+<div class="line"><a id="l01682" name="l01682"></a><span class="lineno"> 1682</span>  TEUCHOS_COMM_TIME_MONITOR</div>
+<div class="line"><a id="l01683" name="l01683"></a><span class="lineno"> 1683</span>    (<span class="stringliteral">&quot;Teuchos::reduce&lt;int, int&gt; (&quot;</span> &lt;&lt; count &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; toString (reductType)</div>
+<div class="line"><a id="l01684" name="l01684"></a><span class="lineno"> 1684</span>     &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>);</div>
+<div class="line"><a id="l01685" name="l01685"></a><span class="lineno"> 1685</span>  reduceImpl&lt;double&gt; (sendBuf, recvBuf, count, reductType, root, comm);</div>
+<div class="line"><a id="l01686" name="l01686"></a><span class="lineno"> 1686</span>}</div>
+<div class="line"><a id="l01687" name="l01687"></a><span class="lineno"> 1687</span><span class="keyword">template</span>&lt;&gt;</div>
+<div class="line"><a id="l01688" name="l01688"></a><span class="lineno"> 1688</span><span class="keywordtype">void</span></div>
+<div class="line"><a id="l01689" name="l01689"></a><span class="lineno"> 1689</span>reduceAll&lt;int, int&gt; (<span class="keyword">const</span> Comm&lt;int&gt;&amp; comm,</div>
+<div class="line"><a id="l01690" name="l01690"></a><span class="lineno"> 1690</span>                     <span class="keyword">const</span> EReductionType reductType,</div>
+<div class="line"><a id="l01691" name="l01691"></a><span class="lineno"> 1691</span>                     <span class="keyword">const</span> <span class="keywordtype">int</span> count,</div>
+<div class="line"><a id="l01692" name="l01692"></a><span class="lineno"> 1692</span>                     <span class="keyword">const</span> <span class="keywordtype">int</span> sendBuffer[],</div>
+<div class="line"><a id="l01693" name="l01693"></a><span class="lineno"> 1693</span>                     <span class="keywordtype">int</span> globalReducts[])</div>
 <div class="line"><a id="l01694" name="l01694"></a><span class="lineno"> 1694</span>{</div>
-<div class="line"><a id="l01695" name="l01695"></a><span class="lineno"> 1695</span>  TEUCHOS_COMM_TIME_MONITOR(<span class="stringliteral">&quot;ireceive&lt;int, int&gt;&quot;</span>);</div>
-<div class="line"><a id="l01696" name="l01696"></a><span class="lineno"> 1696</span>  <span class="keywordflow">return</span> ireceiveImpl&lt;int&gt; (comm, recvBuffer, sourceRank);</div>
-<div class="line"><a id="l01697" name="l01697"></a><span class="lineno"> 1697</span>}</div>
-<div class="line"><a id="l01698" name="l01698"></a><span class="lineno"> 1698</span> </div>
-<div class="line"><a id="l01699" name="l01699"></a><span class="lineno"> 1699</span><span class="keyword">template</span>&lt;&gt;</div>
-<div class="line"><a id="l01700" name="l01700"></a><span class="lineno"> 1700</span>RCP&lt;Teuchos::CommRequest&lt;int&gt; &gt;</div>
-<div class="line"><a id="l01701" name="l01701"></a><span class="lineno"> 1701</span>ireceive&lt;int, int&gt; (<span class="keyword">const</span> ArrayRCP&lt;int&gt;&amp; recvBuffer,</div>
-<div class="line"><a id="l01702" name="l01702"></a><span class="lineno"> 1702</span>                    <span class="keyword">const</span> <span class="keywordtype">int</span> sourceRank,</div>
-<div class="line"><a id="l01703" name="l01703"></a><span class="lineno"> 1703</span>                    <span class="keyword">const</span> <span class="keywordtype">int</span> tag,</div>
-<div class="line"><a id="l01704" name="l01704"></a><span class="lineno"> 1704</span>                    <span class="keyword">const</span> Comm&lt;int&gt;&amp; comm)</div>
-<div class="line"><a id="l01705" name="l01705"></a><span class="lineno"> 1705</span>{</div>
-<div class="line"><a id="l01706" name="l01706"></a><span class="lineno"> 1706</span>  TEUCHOS_COMM_TIME_MONITOR(<span class="stringliteral">&quot;ireceive&lt;int, int&gt;&quot;</span>);</div>
-<div class="line"><a id="l01707" name="l01707"></a><span class="lineno"> 1707</span>  <span class="keywordflow">return</span> ireceiveImpl&lt;int&gt; (recvBuffer, sourceRank, tag, comm);</div>
-<div class="line"><a id="l01708" name="l01708"></a><span class="lineno"> 1708</span>}</div>
-<div class="line"><a id="l01709" name="l01709"></a><span class="lineno"> 1709</span> </div>
-<div class="line"><a id="l01710" name="l01710"></a><span class="lineno"> 1710</span><span class="keyword">template</span>&lt;&gt;</div>
-<div class="line"><a id="l01711" name="l01711"></a><span class="lineno"> 1711</span><span class="keywordtype">void</span></div>
-<div class="line"><a id="l01712" name="l01712"></a><span class="lineno"> 1712</span>send&lt;int, int&gt; (<span class="keyword">const</span> Comm&lt;int&gt;&amp; comm,</div>
-<div class="line"><a id="l01713" name="l01713"></a><span class="lineno"> 1713</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> count,</div>
-<div class="line"><a id="l01714" name="l01714"></a><span class="lineno"> 1714</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> sendBuffer[],</div>
-<div class="line"><a id="l01715" name="l01715"></a><span class="lineno"> 1715</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> destRank)</div>
-<div class="line"><a id="l01716" name="l01716"></a><span class="lineno"> 1716</span>{</div>
-<div class="line"><a id="l01717" name="l01717"></a><span class="lineno"> 1717</span>  <span class="keywordflow">return</span> sendImpl&lt;int&gt; (comm, count, sendBuffer, destRank);</div>
-<div class="line"><a id="l01718" name="l01718"></a><span class="lineno"> 1718</span>}</div>
-<div class="line"><a id="l01719" name="l01719"></a><span class="lineno"> 1719</span> </div>
-<div class="line"><a id="l01720" name="l01720"></a><span class="lineno"> 1720</span><span class="keyword">template</span>&lt;&gt;</div>
-<div class="line"><a id="l01721" name="l01721"></a><span class="lineno"> 1721</span><span class="keywordtype">void</span></div>
-<div class="line"><a id="l01722" name="l01722"></a><span class="lineno"> 1722</span>send&lt;int, int&gt; (<span class="keyword">const</span> <span class="keywordtype">int</span> sendBuffer[],</div>
-<div class="line"><a id="l01723" name="l01723"></a><span class="lineno"> 1723</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> count,</div>
-<div class="line"><a id="l01724" name="l01724"></a><span class="lineno"> 1724</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> destRank,</div>
-<div class="line"><a id="l01725" name="l01725"></a><span class="lineno"> 1725</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> tag,</div>
-<div class="line"><a id="l01726" name="l01726"></a><span class="lineno"> 1726</span>                <span class="keyword">const</span> Comm&lt;int&gt;&amp; comm)</div>
-<div class="line"><a id="l01727" name="l01727"></a><span class="lineno"> 1727</span>{</div>
-<div class="line"><a id="l01728" name="l01728"></a><span class="lineno"> 1728</span>  <span class="keywordflow">return</span> sendImpl&lt;int&gt; (sendBuffer, count, destRank, tag, comm);</div>
-<div class="line"><a id="l01729" name="l01729"></a><span class="lineno"> 1729</span>}</div>
-<div class="line"><a id="l01730" name="l01730"></a><span class="lineno"> 1730</span> </div>
-<div class="line"><a id="l01731" name="l01731"></a><span class="lineno"> 1731</span><span class="keyword">template</span>&lt;&gt;</div>
-<div class="line"><a id="l01732" name="l01732"></a><span class="lineno"> 1732</span>RCP&lt;Teuchos::CommRequest&lt;int&gt; &gt;</div>
-<div class="line"><a id="l01733" name="l01733"></a><span class="lineno"> 1733</span>isend (<span class="keyword">const</span> ArrayRCP&lt;const int&gt;&amp; sendBuffer,</div>
-<div class="line"><a id="l01734" name="l01734"></a><span class="lineno"> 1734</span>       <span class="keyword">const</span> <span class="keywordtype">int</span> destRank,</div>
-<div class="line"><a id="l01735" name="l01735"></a><span class="lineno"> 1735</span>       <span class="keyword">const</span> <span class="keywordtype">int</span> tag,</div>
-<div class="line"><a id="l01736" name="l01736"></a><span class="lineno"> 1736</span>       <span class="keyword">const</span> Comm&lt;int&gt;&amp; comm)</div>
-<div class="line"><a id="l01737" name="l01737"></a><span class="lineno"> 1737</span>{</div>
-<div class="line"><a id="l01738" name="l01738"></a><span class="lineno"> 1738</span>  <span class="keywordflow">return</span> isendImpl&lt;int&gt; (sendBuffer, destRank, tag, comm);</div>
-<div class="line"><a id="l01739" name="l01739"></a><span class="lineno"> 1739</span>}</div>
-<div class="line"><a id="l01740" name="l01740"></a><span class="lineno"> 1740</span> </div>
-<div class="line"><a id="l01741" name="l01741"></a><span class="lineno"> 1741</span><span class="comment">// Specialization for Ordinal=int and Packet=unsigned int.</span></div>
-<div class="line"><a id="l01742" name="l01742"></a><span class="lineno"> 1742</span><span class="keyword">template</span>&lt;&gt;</div>
-<div class="line"><a id="l01743" name="l01743"></a><span class="lineno"> 1743</span><span class="keywordtype">void</span></div>
-<div class="line"><a id="l01744" name="l01744"></a><span class="lineno"> 1744</span>gather&lt;int, unsigned int&gt; (<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> sendBuf[],</div>
-<div class="line"><a id="l01745" name="l01745"></a><span class="lineno"> 1745</span>                            <span class="keyword">const</span> <span class="keywordtype">int</span> sendCount,</div>
-<div class="line"><a id="l01746" name="l01746"></a><span class="lineno"> 1746</span>                            <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> recvBuf[],</div>
-<div class="line"><a id="l01747" name="l01747"></a><span class="lineno"> 1747</span>                            <span class="keyword">const</span> <span class="keywordtype">int</span> recvCount,</div>
-<div class="line"><a id="l01748" name="l01748"></a><span class="lineno"> 1748</span>                            <span class="keyword">const</span> <span class="keywordtype">int</span> root,</div>
-<div class="line"><a id="l01749" name="l01749"></a><span class="lineno"> 1749</span>                            <span class="keyword">const</span> Comm&lt;int&gt;&amp; comm)</div>
+<div class="line"><a id="l01695" name="l01695"></a><span class="lineno"> 1695</span>  TEUCHOS_COMM_TIME_MONITOR(</div>
+<div class="line"><a id="l01696" name="l01696"></a><span class="lineno"> 1696</span>    <span class="stringliteral">&quot;Teuchos::reduceAll&lt;int, int&gt; (&quot;</span> &lt;&lt; count &lt;&lt; <span class="stringliteral">&quot;, &quot;</span></div>
+<div class="line"><a id="l01697" name="l01697"></a><span class="lineno"> 1697</span>    &lt;&lt; toString (reductType) &lt;&lt; <span class="stringliteral">&quot;)&quot;</span></div>
+<div class="line"><a id="l01698" name="l01698"></a><span class="lineno"> 1698</span>    );</div>
+<div class="line"><a id="l01699" name="l01699"></a><span class="lineno"> 1699</span>  reduceAllImpl&lt;int&gt; (comm, reductType, count, sendBuffer, globalReducts);</div>
+<div class="line"><a id="l01700" name="l01700"></a><span class="lineno"> 1700</span>}</div>
+<div class="line"><a id="l01701" name="l01701"></a><span class="lineno"> 1701</span> </div>
+<div class="line"><a id="l01702" name="l01702"></a><span class="lineno"> 1702</span><span class="keyword">template</span>&lt;&gt;</div>
+<div class="line"><a id="l01703" name="l01703"></a><span class="lineno"> 1703</span>RCP&lt;Teuchos::CommRequest&lt;int&gt; &gt;</div>
+<div class="line"><a id="l01704" name="l01704"></a><span class="lineno"> 1704</span>ireceive&lt;int, int&gt; (<span class="keyword">const</span> Comm&lt;int&gt;&amp; comm,</div>
+<div class="line"><a id="l01705" name="l01705"></a><span class="lineno"> 1705</span>                    <span class="keyword">const</span> ArrayRCP&lt;int&gt;&amp; recvBuffer,</div>
+<div class="line"><a id="l01706" name="l01706"></a><span class="lineno"> 1706</span>                    <span class="keyword">const</span> <span class="keywordtype">int</span> sourceRank)</div>
+<div class="line"><a id="l01707" name="l01707"></a><span class="lineno"> 1707</span>{</div>
+<div class="line"><a id="l01708" name="l01708"></a><span class="lineno"> 1708</span>  TEUCHOS_COMM_TIME_MONITOR(<span class="stringliteral">&quot;ireceive&lt;int, int&gt;&quot;</span>);</div>
+<div class="line"><a id="l01709" name="l01709"></a><span class="lineno"> 1709</span>  <span class="keywordflow">return</span> ireceiveImpl&lt;int&gt; (comm, recvBuffer, sourceRank);</div>
+<div class="line"><a id="l01710" name="l01710"></a><span class="lineno"> 1710</span>}</div>
+<div class="line"><a id="l01711" name="l01711"></a><span class="lineno"> 1711</span> </div>
+<div class="line"><a id="l01712" name="l01712"></a><span class="lineno"> 1712</span><span class="keyword">template</span>&lt;&gt;</div>
+<div class="line"><a id="l01713" name="l01713"></a><span class="lineno"> 1713</span>RCP&lt;Teuchos::CommRequest&lt;int&gt; &gt;</div>
+<div class="line"><a id="l01714" name="l01714"></a><span class="lineno"> 1714</span>ireceive&lt;int, int&gt; (<span class="keyword">const</span> ArrayRCP&lt;int&gt;&amp; recvBuffer,</div>
+<div class="line"><a id="l01715" name="l01715"></a><span class="lineno"> 1715</span>                    <span class="keyword">const</span> <span class="keywordtype">int</span> sourceRank,</div>
+<div class="line"><a id="l01716" name="l01716"></a><span class="lineno"> 1716</span>                    <span class="keyword">const</span> <span class="keywordtype">int</span> tag,</div>
+<div class="line"><a id="l01717" name="l01717"></a><span class="lineno"> 1717</span>                    <span class="keyword">const</span> Comm&lt;int&gt;&amp; comm)</div>
+<div class="line"><a id="l01718" name="l01718"></a><span class="lineno"> 1718</span>{</div>
+<div class="line"><a id="l01719" name="l01719"></a><span class="lineno"> 1719</span>  TEUCHOS_COMM_TIME_MONITOR(<span class="stringliteral">&quot;ireceive&lt;int, int&gt;&quot;</span>);</div>
+<div class="line"><a id="l01720" name="l01720"></a><span class="lineno"> 1720</span>  <span class="keywordflow">return</span> ireceiveImpl&lt;int&gt; (recvBuffer, sourceRank, tag, comm);</div>
+<div class="line"><a id="l01721" name="l01721"></a><span class="lineno"> 1721</span>}</div>
+<div class="line"><a id="l01722" name="l01722"></a><span class="lineno"> 1722</span> </div>
+<div class="line"><a id="l01723" name="l01723"></a><span class="lineno"> 1723</span><span class="keyword">template</span>&lt;&gt;</div>
+<div class="line"><a id="l01724" name="l01724"></a><span class="lineno"> 1724</span><span class="keywordtype">void</span></div>
+<div class="line"><a id="l01725" name="l01725"></a><span class="lineno"> 1725</span>send&lt;int, int&gt; (<span class="keyword">const</span> Comm&lt;int&gt;&amp; comm,</div>
+<div class="line"><a id="l01726" name="l01726"></a><span class="lineno"> 1726</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> count,</div>
+<div class="line"><a id="l01727" name="l01727"></a><span class="lineno"> 1727</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> sendBuffer[],</div>
+<div class="line"><a id="l01728" name="l01728"></a><span class="lineno"> 1728</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> destRank)</div>
+<div class="line"><a id="l01729" name="l01729"></a><span class="lineno"> 1729</span>{</div>
+<div class="line"><a id="l01730" name="l01730"></a><span class="lineno"> 1730</span>  <span class="keywordflow">return</span> sendImpl&lt;int&gt; (comm, count, sendBuffer, destRank);</div>
+<div class="line"><a id="l01731" name="l01731"></a><span class="lineno"> 1731</span>}</div>
+<div class="line"><a id="l01732" name="l01732"></a><span class="lineno"> 1732</span> </div>
+<div class="line"><a id="l01733" name="l01733"></a><span class="lineno"> 1733</span><span class="keyword">template</span>&lt;&gt;</div>
+<div class="line"><a id="l01734" name="l01734"></a><span class="lineno"> 1734</span><span class="keywordtype">void</span></div>
+<div class="line"><a id="l01735" name="l01735"></a><span class="lineno"> 1735</span>send&lt;int, int&gt; (<span class="keyword">const</span> <span class="keywordtype">int</span> sendBuffer[],</div>
+<div class="line"><a id="l01736" name="l01736"></a><span class="lineno"> 1736</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> count,</div>
+<div class="line"><a id="l01737" name="l01737"></a><span class="lineno"> 1737</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> destRank,</div>
+<div class="line"><a id="l01738" name="l01738"></a><span class="lineno"> 1738</span>                <span class="keyword">const</span> <span class="keywordtype">int</span> tag,</div>
+<div class="line"><a id="l01739" name="l01739"></a><span class="lineno"> 1739</span>                <span class="keyword">const</span> Comm&lt;int&gt;&amp; comm)</div>
+<div class="line"><a id="l01740" name="l01740"></a><span class="lineno"> 1740</span>{</div>
+<div class="line"><a id="l01741" name="l01741"></a><span class="lineno"> 1741</span>  <span class="keywordflow">return</span> sendImpl&lt;int&gt; (sendBuffer, count, destRank, tag, comm);</div>
+<div class="line"><a id="l01742" name="l01742"></a><span class="lineno"> 1742</span>}</div>
+<div class="line"><a id="l01743" name="l01743"></a><span class="lineno"> 1743</span> </div>
+<div class="line"><a id="l01744" name="l01744"></a><span class="lineno"> 1744</span><span class="keyword">template</span>&lt;&gt;</div>
+<div class="line"><a id="l01745" name="l01745"></a><span class="lineno"> 1745</span>RCP&lt;Teuchos::CommRequest&lt;int&gt; &gt;</div>
+<div class="line"><a id="l01746" name="l01746"></a><span class="lineno"> 1746</span>isend (<span class="keyword">const</span> ArrayRCP&lt;const int&gt;&amp; sendBuffer,</div>
+<div class="line"><a id="l01747" name="l01747"></a><span class="lineno"> 1747</span>       <span class="keyword">const</span> <span class="keywordtype">int</span> destRank,</div>
+<div class="line"><a id="l01748" name="l01748"></a><span class="lineno"> 1748</span>       <span class="keyword">const</span> <span class="keywordtype">int</span> tag,</div>
+<div class="line"><a id="l01749" name="l01749"></a><span class="lineno"> 1749</span>       <span class="keyword">const</span> Comm&lt;int&gt;&amp; comm)</div>
 <div class="line"><a id="l01750" name="l01750"></a><span class="lineno"> 1750</span>{</div>
-<div class="line"><a id="l01751" name="l01751"></a><span class="lineno"> 1751</span>  gatherImpl&lt;unsigned int&gt; (sendBuf, sendCount, recvBuf, recvCount, root, comm);</div>
+<div class="line"><a id="l01751" name="l01751"></a><span class="lineno"> 1751</span>  <span class="keywordflow">return</span> isendImpl&lt;int&gt; (sendBuffer, destRank, tag, comm);</div>
 <div class="line"><a id="l01752" name="l01752"></a><span class="lineno"> 1752</span>}</div>
 <div class="line"><a id="l01753" name="l01753"></a><span class="lineno"> 1753</span> </div>
-<div class="line"><a id="l01754" name="l01754"></a><span class="lineno"> 1754</span><span class="keyword">template</span>&lt;&gt;</div>
-<div class="line"><a id="l01755" name="l01755"></a><span class="lineno"> 1755</span><span class="keywordtype">void</span></div>
-<div class="line"><a id="l01756" name="l01756"></a><span class="lineno"> 1756</span>gatherv&lt;int, unsigned int&gt; (<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> sendBuf[],</div>
-<div class="line"><a id="l01757" name="l01757"></a><span class="lineno"> 1757</span>                             <span class="keyword">const</span> <span class="keywordtype">int</span> sendCount,</div>
-<div class="line"><a id="l01758" name="l01758"></a><span class="lineno"> 1758</span>                             <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> recvBuf[],</div>
-<div class="line"><a id="l01759" name="l01759"></a><span class="lineno"> 1759</span>                             <span class="keyword">const</span> <span class="keywordtype">int</span> recvCounts[],</div>
-<div class="line"><a id="l01760" name="l01760"></a><span class="lineno"> 1760</span>                             <span class="keyword">const</span> <span class="keywordtype">int</span> displs[],</div>
-<div class="line"><a id="l01761" name="l01761"></a><span class="lineno"> 1761</span>                             <span class="keyword">const</span> <span class="keywordtype">int</span> root,</div>
-<div class="line"><a id="l01762" name="l01762"></a><span class="lineno"> 1762</span>                             <span class="keyword">const</span> Comm&lt;int&gt;&amp; comm)</div>
+<div class="line"><a id="l01754" name="l01754"></a><span class="lineno"> 1754</span><span class="comment">// Specialization for Ordinal=int and Packet=unsigned int.</span></div>
+<div class="line"><a id="l01755" name="l01755"></a><span class="lineno"> 1755</span><span class="keyword">template</span>&lt;&gt;</div>
+<div class="line"><a id="l01756" name="l01756"></a><span class="lineno"> 1756</span><span class="keywordtype">void</span></div>
+<div class="line"><a id="l01757" name="l01757"></a><span class="lineno"> 1757</span>gather&lt;int, unsigned int&gt; (<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> sendBuf[],</div>
+<div class="line"><a id="l01758" name="l01758"></a><span class="lineno"> 1758</span>                            <span class="keyword">const</span> <span class="keywordtype">int</span> sendCount,</div>
+<div class="line"><a id="l01759" name="l01759"></a><span class="lineno"> 1759</span>                            <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> recvBuf[],</div>
+<div class="line"><a id="l01760" name="l01760"></a><span class="lineno"> 1760</span>                            <span class="keyword">const</span> <span class="keywordtype">int</span> recvCount,</div>
+<div class="line"><a id="l01761" name="l01761"></a><span class="lineno"> 1761</span>                            <span class="keyword">const</span> <span class="keywordtype">int</span> root,</div>
+<div class="line"><a id="l01762" name="l01762"></a><span class="lineno"> 1762</span>                            <span class="keyword">const</span> Comm&lt;int&gt;&amp; comm)</div>
 <div class="line"><a id="l01763" name="l01763"></a><span class="lineno"> 1763</span>{</div>
-<div class="line"><a id="l01764" name="l01764"></a><span class="lineno"> 1764</span>  gathervImpl&lt;unsigned int&gt; (sendBuf, sendCount, recvBuf, recvCounts, displs, root, comm);</div>
+<div class="line"><a id="l01764" name="l01764"></a><span class="lineno"> 1764</span>  gatherImpl&lt;unsigned int&gt; (sendBuf, sendCount, recvBuf, recvCount, root, comm);</div>
 <div class="line"><a id="l01765" name="l01765"></a><span class="lineno"> 1765</span>}</div>
 <div class="line"><a id="l01766" name="l01766"></a><span class="lineno"> 1766</span> </div>
 <div class="line"><a id="l01767" name="l01767"></a><span class="lineno"> 1767</span><span class="keyword">template</span>&lt;&gt;</div>
 <div class="line"><a id="l01768" name="l01768"></a><span class="lineno"> 1768</span><span class="keywordtype">void</span></div>
-<div class="line"><a id="l01769" name="l01769"></a><span class="lineno"> 1769</span>reduceAll&lt;int, unsigned int&gt; (<span class="keyword">const</span> Comm&lt;int&gt;&amp; comm,</div>
-<div class="line"><a id="l01770" name="l01770"></a><span class="lineno"> 1770</span>                              <span class="keyword">const</span> EReductionType reductType,</div>
-<div class="line"><a id="l01771" name="l01771"></a><span class="lineno"> 1771</span>                              <span class="keyword">const</span> <span class="keywordtype">int</span> count,</div>
-<div class="line"><a id="l01772" name="l01772"></a><span class="lineno"> 1772</span>                              <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> sendBuffer[],</div>
-<div class="line"><a id="l01773" name="l01773"></a><span class="lineno"> 1773</span>                              <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> globalReducts[])</div>
-<div class="line"><a id="l01774" name="l01774"></a><span class="lineno"> 1774</span>{</div>
-<div class="line"><a id="l01775" name="l01775"></a><span class="lineno"> 1775</span>  TEUCHOS_COMM_TIME_MONITOR(</div>
-<div class="line"><a id="l01776" name="l01776"></a><span class="lineno"> 1776</span>    <span class="stringliteral">&quot;Teuchos::reduceAll&lt;int, unsigned int&gt; (&quot;</span> &lt;&lt; count &lt;&lt; <span class="stringliteral">&quot;, &quot;</span></div>
-<div class="line"><a id="l01777" name="l01777"></a><span class="lineno"> 1777</span>    &lt;&lt; toString (reductType) &lt;&lt; <span class="stringliteral">&quot;)&quot;</span></div>
-<div class="line"><a id="l01778" name="l01778"></a><span class="lineno"> 1778</span>    );</div>
-<div class="line"><a id="l01779" name="l01779"></a><span class="lineno"> 1779</span>  reduceAllImpl&lt;unsigned int&gt; (comm, reductType, count, sendBuffer, globalReducts);</div>
-<div class="line"><a id="l01780" name="l01780"></a><span class="lineno"> 1780</span>}</div>
-<div class="line"><a id="l01781" name="l01781"></a><span class="lineno"> 1781</span> </div>
-<div class="line"><a id="l01782" name="l01782"></a><span class="lineno"> 1782</span><span class="keyword">template</span>&lt;&gt;</div>
-<div class="line"><a id="l01783" name="l01783"></a><span class="lineno"> 1783</span>RCP&lt;Teuchos::CommRequest&lt;int&gt; &gt;</div>
-<div class="line"><a id="l01784" name="l01784"></a><span class="lineno"> 1784</span>ireceive&lt;int, unsigned int&gt; (<span class="keyword">const</span> Comm&lt;int&gt;&amp; comm,</div>
-<div class="line"><a id="l01785" name="l01785"></a><span class="lineno"> 1785</span>                             <span class="keyword">const</span> ArrayRCP&lt;unsigned int&gt;&amp; recvBuffer,</div>
-<div class="line"><a id="l01786" name="l01786"></a><span class="lineno"> 1786</span>                             <span class="keyword">const</span> <span class="keywordtype">int</span> sourceRank)</div>
+<div class="line"><a id="l01769" name="l01769"></a><span class="lineno"> 1769</span>gatherv&lt;int, unsigned int&gt; (<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> sendBuf[],</div>
+<div class="line"><a id="l01770" name="l01770"></a><span class="lineno"> 1770</span>                             <span class="keyword">const</span> <span class="keywordtype">int</span> sendCount,</div>
+<div class="line"><a id="l01771" name="l01771"></a><span class="lineno"> 1771</span>                             <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> recvBuf[],</div>
+<div class="line"><a id="l01772" name="l01772"></a><span class="lineno"> 1772</span>                             <span class="keyword">const</span> <span class="keywordtype">int</span> recvCounts[],</div>
+<div class="line"><a id="l01773" name="l01773"></a><span class="lineno"> 1773</span>                             <span class="keyword">const</span> <span class="keywordtype">int</span> displs[],</div>
+<div class="line"><a id="l01774" name="l01774"></a><span class="lineno"> 1774</span>                             <span class="keyword">const</span> <span class="keywordtype">int</span> root,</div>
+<div class="line"><a id="l01775" name="l01775"></a><span class="lineno"> 1775</span>                             <span class="keyword">const</span> Comm&lt;int&gt;&amp; comm)</div>
+<div class="line"><a id="l01776" name="l01776"></a><span class="lineno"> 1776</span>{</div>
+<div class="line"><a id="l01777" name="l01777"></a><span class="lineno"> 1777</span>  gathervImpl&lt;unsigned int&gt; (sendBuf, sendCount, recvBuf, recvCounts, displs, root, comm);</div>
+<div class="line"><a id="l01778" name="l01778"></a><span class="lineno"> 1778</span>}</div>
+<div class="line"><a id="l01779" name="l01779"></a><span class="lineno"> 1779</span> </div>
+<div class="line"><a id="l01780" name="l01780"></a><span class="lineno"> 1780</span><span class="keyword">template</span>&lt;&gt;</div>
+<div class="line"><a id="l01781" name="l01781"></a><span class="lineno"> 1781</span><span class="keywordtype">void</span></div>
+<div class="line"><a id="l01782" name="l01782"></a><span class="lineno"> 1782</span>reduceAll&lt;int, unsigned int&gt; (<span class="keyword">const</span> Comm&lt;int&gt;&amp; comm,</div>
+<div class="line"><a id="l01783" name="l01783"></a><span class="lineno"> 1783</span>                              <span class="keyword">const</span> EReductionType reductType,</div>
+<div class="line"><a id="l01784" name="l01784"></a><span class="lineno"> 1784</span>                              <span class="keyword">const</span> <span class="keywordtype">int</span> count,</div>
+<div class="line"><a id="l01785" name="l01785"></a><span class="lineno"> 1785</span>                              <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> sendBuffer[],</div>
+<div class="line"><a id="l01786" name="l01786"></a><span class="lineno"> 1786</span>                              <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> globalReducts[])</div>
 <div class="line"><a id="l01787" name="l01787"></a><span class="lineno"> 1787</span>{</div>
-<div class="line"><a id="l01788" name="l01788"></a><span class="lineno"> 1788</span>  TEUCHOS_COMM_TIME_MONITOR(<span class="stringliteral">&quot;ireceive&lt;int, unsigned int&gt;&quot;</span>);</div>
-<div class="line"><a id="l01789" name="l01789"></a><span class="lineno"> 1789</span>  <span class="keywordflow">return</span> ireceiveImpl&lt;unsigned int&gt; (comm, recvBuffer, sourceRank);</div>
-<div class="line"><a id="l01790" name="l01790"></a><span class="lineno"> 1790</span>}</div>
-<div class="line"><a id="l01791" name="l01791"></a><span class="lineno"> 1791</span> </div>
-<div class="line"><a id="l01792" name="l01792"></a><span class="lineno"> 1792</span><span class="keyword">template</span>&lt;&gt;</div>
-<div class="line"><a id="l01793" name="l01793"></a><span class="lineno"> 1793</span>RCP&lt;Teuchos::CommRequest&lt;int&gt; &gt;</div>
-<div class="line"><a id="l01794" name="l01794"></a><span class="lineno"> 1794</span>ireceive&lt;int, unsigned int&gt; (<span class="keyword">const</span> ArrayRCP&lt;unsigned int&gt;&amp; recvBuffer,</div>
-<div class="line"><a id="l01795" name="l01795"></a><span class="lineno"> 1795</span>                             <span class="keyword">const</span> <span class="keywordtype">int</span> sourceRank,</div>
-<div class="line"><a id="l01796" name="l01796"></a><span class="lineno"> 1796</span>                             <span class="keyword">const</span> <span class="keywordtype">int</span> tag,</div>
-<div class="line"><a id="l01797" name="l01797"></a><span class="lineno"> 1797</span>                             <span class="keyword">const</span> Comm&lt;int&gt;&amp; comm)</div>
-<div class="line"><a id="l01798" name="l01798"></a><span class="lineno"> 1798</span>{</div>
-<div class="line"><a id="l01799" name="l01799"></a><span class="lineno"> 1799</span>  TEUCHOS_COMM_TIME_MONITOR(<span class="stringliteral">&quot;ireceive&lt;int, unsigned int&gt;&quot;</span>);</div>
-<div class="line"><a id="l01800" name="l01800"></a><span class="lineno"> 1800</span>  <span class="keywordflow">return</span> ireceiveImpl&lt;unsigned int&gt; (recvBuffer, sourceRank, tag, comm);</div>
-<div class="line"><a id="l01801" name="l01801"></a><span class="lineno"> 1801</span>}</div>
-<div class="line"><a id="l01802" name="l01802"></a><span class="lineno"> 1802</span> </div>
-<div class="line"><a id="l01803" name="l01803"></a><span class="lineno"> 1803</span><span class="keyword">template</span>&lt;&gt;</div>
-<div class="line"><a id="l01804" name="l01804"></a><span class="lineno"> 1804</span><span class="keywordtype">void</span></div>
-<div class="line"><a id="l01805" name="l01805"></a><span class="lineno"> 1805</span>send&lt;int, unsigned int&gt; (<span class="keyword">const</span> Comm&lt;int&gt;&amp; comm,</div>
-<div class="line"><a id="l01806" name="l01806"></a><span class="lineno"> 1806</span>                         <span class="keyword">const</span> <span class="keywordtype">int</span> count,</div>
-<div class="line"><a id="l01807" name="l01807"></a><span class="lineno"> 1807</span>                         <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> sendBuffer[],</div>
-<div class="line"><a id="l01808" name="l01808"></a><span class="lineno"> 1808</span>                         <span class="keyword">const</span> <span class="keywordtype">int</span> destRank)</div>
-<div class="line"><a id="l01809" name="l01809"></a><span class="lineno"> 1809</span>{</div>
-<div class="line"><a id="l01810" name="l01810"></a><span class="lineno"> 1810</span>  <span class="keywordflow">return</span> sendImpl&lt;unsigned int&gt; (comm, count, sendBuffer, destRank);</div>
-<div class="line"><a id="l01811" name="l01811"></a><span class="lineno"> 1811</span>}</div>
-<div class="line"><a id="l01812" name="l01812"></a><span class="lineno"> 1812</span> </div>
-<div class="line"><a id="l01813" name="l01813"></a><span class="lineno"> 1813</span><span class="keyword">template</span>&lt;&gt;</div>
-<div class="line"><a id="l01814" name="l01814"></a><span class="lineno"> 1814</span><span class="keywordtype">void</span></div>
-<div class="line"><a id="l01815" name="l01815"></a><span class="lineno"> 1815</span>send&lt;int, unsigned int&gt; (<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> sendBuffer[],</div>
-<div class="line"><a id="l01816" name="l01816"></a><span class="lineno"> 1816</span>                         <span class="keyword">const</span> <span class="keywordtype">int</span> count,</div>
-<div class="line"><a id="l01817" name="l01817"></a><span class="lineno"> 1817</span>                         <span class="keyword">const</span> <span class="keywordtype">int</span> destRank,</div>
-<div class="line"><a id="l01818" name="l01818"></a><span class="lineno"> 1818</span>                         <span class="keyword">const</span> <span class="keywordtype">int</span> tag,</div>
-<div class="line"><a id="l01819" name="l01819"></a><span class="lineno"> 1819</span>                         <span class="keyword">const</span> Comm&lt;int&gt;&amp; comm)</div>
-<div class="line"><a id="l01820" name="l01820"></a><span class="lineno"> 1820</span>{</div>
-<div class="line"><a id="l01821" name="l01821"></a><span class="lineno"> 1821</span>  <span class="keywordflow">return</span> sendImpl&lt;unsigned int&gt; (sendBuffer, count, destRank, tag, comm);</div>
-<div class="line"><a id="l01822" name="l01822"></a><span class="lineno"> 1822</span>}</div>
-<div class="line"><a id="l01823" name="l01823"></a><span class="lineno"> 1823</span> </div>
-<div class="line"><a id="l01824" name="l01824"></a><span class="lineno"> 1824</span><span class="keyword">template</span>&lt;&gt;</div>
-<div class="line"><a id="l01825" name="l01825"></a><span class="lineno"> 1825</span>RCP&lt;Teuchos::CommRequest&lt;int&gt; &gt;</div>
-<div class="line"><a id="l01826" name="l01826"></a><span class="lineno"> 1826</span>isend (<span class="keyword">const</span> ArrayRCP&lt;const unsigned int&gt;&amp; sendBuffer,</div>
-<div class="line"><a id="l01827" name="l01827"></a><span class="lineno"> 1827</span>       <span class="keyword">const</span> <span class="keywordtype">int</span> destRank,</div>
-<div class="line"><a id="l01828" name="l01828"></a><span class="lineno"> 1828</span>       <span class="keyword">const</span> <span class="keywordtype">int</span> tag,</div>
-<div class="line"><a id="l01829" name="l01829"></a><span class="lineno"> 1829</span>       <span class="keyword">const</span> Comm&lt;int&gt;&amp; comm)</div>
-<div class="line"><a id="l01830" name="l01830"></a><span class="lineno"> 1830</span>{</div>
-<div class="line"><a id="l01831" name="l01831"></a><span class="lineno"> 1831</span>  <span class="keywordflow">return</span> isendImpl&lt;unsigned int&gt; (sendBuffer, destRank, tag, comm);</div>
-<div class="line"><a id="l01832" name="l01832"></a><span class="lineno"> 1832</span>}</div>
-<div class="line"><a id="l01833" name="l01833"></a><span class="lineno"> 1833</span> </div>
-<div class="line"><a id="l01834" name="l01834"></a><span class="lineno"> 1834</span> </div>
-<div class="line"><a id="l01835" name="l01835"></a><span class="lineno"> 1835</span><span class="comment">// Specialization for Ordinal=int and Packet=short.</span></div>
-<div class="line"><a id="l01836" name="l01836"></a><span class="lineno"> 1836</span><span class="keyword">template</span>&lt;&gt;</div>
-<div class="line"><a id="l01837" name="l01837"></a><span class="lineno"> 1837</span><span class="keywordtype">void</span></div>
-<div class="line"><a id="l01838" name="l01838"></a><span class="lineno"> 1838</span>gather&lt;int, short&gt; (<span class="keyword">const</span> <span class="keywordtype">short</span> sendBuf[],</div>
-<div class="line"><a id="l01839" name="l01839"></a><span class="lineno"> 1839</span>                    <span class="keyword">const</span> <span class="keywordtype">int</span> sendCount,</div>
-<div class="line"><a id="l01840" name="l01840"></a><span class="lineno"> 1840</span>                    <span class="keywordtype">short</span> recvBuf[],</div>
-<div class="line"><a id="l01841" name="l01841"></a><span class="lineno"> 1841</span>                    <span class="keyword">const</span> <span class="keywordtype">int</span> recvCount,</div>
-<div class="line"><a id="l01842" name="l01842"></a><span class="lineno"> 1842</span>                    <span class="keyword">const</span> <span class="keywordtype">int</span> root,</div>
-<div class="line"><a id="l01843" name="l01843"></a><span class="lineno"> 1843</span>                    <span class="keyword">const</span> Comm&lt;int&gt;&amp; comm)</div>
-<div class="line"><a id="l01844" name="l01844"></a><span class="lineno"> 1844</span>{</div>
-<div class="line"><a id="l01845" name="l01845"></a><span class="lineno"> 1845</span>  gatherImpl&lt;short&gt; (sendBuf, sendCount, recvBuf, recvCount, root, comm);</div>
-<div class="line"><a id="l01846" name="l01846"></a><span class="lineno"> 1846</span>}</div>
+<div class="line"><a id="l01788" name="l01788"></a><span class="lineno"> 1788</span>  TEUCHOS_COMM_TIME_MONITOR(</div>
+<div class="line"><a id="l01789" name="l01789"></a><span class="lineno"> 1789</span>    <span class="stringliteral">&quot;Teuchos::reduceAll&lt;int, unsigned int&gt; (&quot;</span> &lt;&lt; count &lt;&lt; <span class="stringliteral">&quot;, &quot;</span></div>
+<div class="line"><a id="l01790" name="l01790"></a><span class="lineno"> 1790</span>    &lt;&lt; toString (reductType) &lt;&lt; <span class="stringliteral">&quot;)&quot;</span></div>
+<div class="line"><a id="l01791" name="l01791"></a><span class="lineno"> 1791</span>    );</div>
+<div class="line"><a id="l01792" name="l01792"></a><span class="lineno"> 1792</span>  reduceAllImpl&lt;unsigned int&gt; (comm, reductType, count, sendBuffer, globalReducts);</div>
+<div class="line"><a id="l01793" name="l01793"></a><span class="lineno"> 1793</span>}</div>
+<div class="line"><a id="l01794" name="l01794"></a><span class="lineno"> 1794</span> </div>
+<div class="line"><a id="l01795" name="l01795"></a><span class="lineno"> 1795</span><span class="keyword">template</span>&lt;&gt;</div>
+<div class="line"><a id="l01796" name="l01796"></a><span class="lineno"> 1796</span>RCP&lt;Teuchos::CommRequest&lt;int&gt; &gt;</div>
+<div class="line"><a id="l01797" name="l01797"></a><span class="lineno"> 1797</span>ireceive&lt;int, unsigned int&gt; (<span class="keyword">const</span> Comm&lt;int&gt;&amp; comm,</div>
+<div class="line"><a id="l01798" name="l01798"></a><span class="lineno"> 1798</span>                             <span class="keyword">const</span> ArrayRCP&lt;unsigned int&gt;&amp; recvBuffer,</div>
+<div class="line"><a id="l01799" name="l01799"></a><span class="lineno"> 1799</span>                             <span class="keyword">const</span> <span class="keywordtype">int</span> sourceRank)</div>
+<div class="line"><a id="l01800" name="l01800"></a><span class="lineno"> 1800</span>{</div>
+<div class="line"><a id="l01801" name="l01801"></a><span class="lineno"> 1801</span>  TEUCHOS_COMM_TIME_MONITOR(<span class="stringliteral">&quot;ireceive&lt;int, unsigned int&gt;&quot;</span>);</div>
+<div class="line"><a id="l01802" name="l01802"></a><span class="lineno"> 1802</span>  <span class="keywordflow">return</span> ireceiveImpl&lt;unsigned int&gt; (comm, recvBuffer, sourceRank);</div>
+<div class="line"><a id="l01803" name="l01803"></a><span class="lineno"> 1803</span>}</div>
+<div class="line"><a id="l01804" name="l01804"></a><span class="lineno"> 1804</span> </div>
+<div class="line"><a id="l01805" name="l01805"></a><span class="lineno"> 1805</span><span class="keyword">template</span>&lt;&gt;</div>
+<div class="line"><a id="l01806" name="l01806"></a><span class="lineno"> 1806</span>RCP&lt;Teuchos::CommRequest&lt;int&gt; &gt;</div>
+<div class="line"><a id="l01807" name="l01807"></a><span class="lineno"> 1807</span>ireceive&lt;int, unsigned int&gt; (<span class="keyword">const</span> ArrayRCP&lt;unsigned int&gt;&amp; recvBuffer,</div>
+<div class="line"><a id="l01808" name="l01808"></a><span class="lineno"> 1808</span>                             <span class="keyword">const</span> <span class="keywordtype">int</span> sourceRank,</div>
+<div class="line"><a id="l01809" name="l01809"></a><span class="lineno"> 1809</span>                             <span class="keyword">const</span> <span class="keywordtype">int</span> tag,</div>
+<div class="line"><a id="l01810" name="l01810"></a><span class="lineno"> 1810</span>                             <span class="keyword">const</span> Comm&lt;int&gt;&amp; comm)</div>
+<div class="line"><a id="l01811" name="l01811"></a><span class="lineno"> 1811</span>{</div>
+<div class="line"><a id="l01812" name="l01812"></a><span class="lineno"> 1812</span>  TEUCHOS_COMM_TIME_MONITOR(<span class="stringliteral">&quot;ireceive&lt;int, unsigned int&gt;&quot;</span>);</div>
+<div class="line"><a id="l01813" name="l01813"></a><span class="lineno"> 1813</span>  <span class="keywordflow">return</span> ireceiveImpl&lt;unsigned int&gt; (recvBuffer, sourceRank, tag, comm);</div>
+<div class="line"><a id="l01814" name="l01814"></a><span class="lineno"> 1814</span>}</div>
+<div class="line"><a id="l01815" name="l01815"></a><span class="lineno"> 1815</span> </div>
+<div class="line"><a id="l01816" name="l01816"></a><span class="lineno"> 1816</span><span class="keyword">template</span>&lt;&gt;</div>
+<div class="line"><a id="l01817" name="l01817"></a><span class="lineno"> 1817</span><span class="keywordtype">void</span></div>
+<div class="line"><a id="l01818" name="l01818"></a><span class="lineno"> 1818</span>send&lt;int, unsigned int&gt; (<span class="keyword">const</span> Comm&lt;int&gt;&amp; comm,</div>
+<div class="line"><a id="l01819" name="l01819"></a><span class="lineno"> 1819</span>                         <span class="keyword">const</span> <span class="keywordtype">int</span> count,</div>
+<div class="line"><a id="l01820" name="l01820"></a><span class="lineno"> 1820</span>                         <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> sendBuffer[],</div>
+<div class="line"><a id="l01821" name="l01821"></a><span class="lineno"> 1821</span>                         <span class="keyword">const</span> <span class="keywordtype">int</span> destRank)</div>
+<div class="line"><a id="l01822" name="l01822"></a><span class="lineno"> 1822</span>{</div>
+<div class="line"><a id="l01823" name="l01823"></a><span class="lineno"> 1823</span>  <span class="keywordflow">return</span> sendImpl&lt;unsigned int&gt; (comm, count, sendBuffer, destRank);</div>
+<div class="line"><a id="l01824" name="l01824"></a><span class="lineno"> 1824</span>}</div>
+<div class="line"><a id="l01825" name="l01825"></a><span class="lineno"> 1825</span> </div>
+<div class="line"><a id="l01826" name="l01826"></a><span class="lineno"> 1826</span><span class="keyword">template</span>&lt;&gt;</div>
+<div class="line"><a id="l01827" name="l01827"></a><span class="lineno"> 1827</span><span class="keywordtype">void</span></div>
+<div class="line"><a id="l01828" name="l01828"></a><span class="lineno"> 1828</span>send&lt;int, unsigned int&gt; (<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> sendBuffer[],</div>
+<div class="line"><a id="l01829" name="l01829"></a><span class="lineno"> 1829</span>                         <span class="keyword">const</span> <span class="keywordtype">int</span> count,</div>
+<div class="line"><a id="l01830" name="l01830"></a><span class="lineno"> 1830</span>                         <span class="keyword">const</span> <span class="keywordtype">int</span> destRank,</div>
+<div class="line"><a id="l01831" name="l01831"></a><span class="lineno"> 1831</span>                         <span class="keyword">const</span> <span class="keywordtype">int</span> tag,</div>
+<div class="line"><a id="l01832" name="l01832"></a><span class="lineno"> 1832</span>                         <span class="keyword">const</span> Comm&lt;int&gt;&amp; comm)</div>
+<div class="line"><a id="l01833" name="l01833"></a><span class="lineno"> 1833</span>{</div>
+<div class="line"><a id="l01834" name="l01834"></a><span class="lineno"> 1834</span>  <span class="keywordflow">return</span> sendImpl&lt;unsigned int&gt; (sendBuffer, count, destRank, tag, comm);</div>
+<div class="line"><a id="l01835" name="l01835"></a><span class="lineno"> 1835</span>}</div>
+<div class="line"><a id="l01836" name="l01836"></a><span class="lineno"> 1836</span> </div>
+<div class="line"><a id="l01837" name="l01837"></a><span class="lineno"> 1837</span><span class="keyword">template</span>&lt;&gt;</div>
+<div class="line"><a id="l01838" name="l01838"></a><span class="lineno"> 1838</span>RCP&lt;Teuchos::CommRequest&lt;int&gt; &gt;</div>
+<div class="line"><a id="l01839" name="l01839"></a><span class="lineno"> 1839</span>isend (<span class="keyword">const</span> ArrayRCP&lt;const unsigned int&gt;&amp; sendBuffer,</div>
+<div class="line"><a id="l01840" name="l01840"></a><span class="lineno"> 1840</span>       <span class="keyword">const</span> <span class="keywordtype">int</span> destRank,</div>
+<div class="line"><a id="l01841" name="l01841"></a><span class="lineno"> 1841</span>       <span class="keyword">const</span> <span class="keywordtype">int</span> tag,</div>
+<div class="line"><a id="l01842" name="l01842"></a><span class="lineno"> 1842</span>       <span class="keyword">const</span> Comm&lt;int&gt;&amp; comm)</div>
+<div class="line"><a id="l01843" name="l01843"></a><span class="lineno"> 1843</span>{</div>
+<div class="line"><a id="l01844" name="l01844"></a><span class="lineno"> 1844</span>  <span class="keywordflow">return</span> isendImpl&lt;unsigned int&gt; (sendBuffer, destRank, tag, comm);</div>
+<div class="line"><a id="l01845" name="l01845"></a><span class="lineno"> 1845</span>}</div>
+<div class="line"><a id="l01846" name="l01846"></a><span class="lineno"> 1846</span> </div>
 <div class="line"><a id="l01847" name="l01847"></a><span class="lineno"> 1847</span> </div>
-<div class="line"><a id="l01848" name="l01848"></a><span class="lineno"> 1848</span><span class="keyword">template</span>&lt;&gt;</div>
-<div class="line"><a id="l01849" name="l01849"></a><span class="lineno"> 1849</span><span class="keywordtype">void</span></div>
-<div class="line"><a id="l01850" name="l01850"></a><span class="lineno"> 1850</span>gatherv&lt;int, short&gt; (<span class="keyword">const</span> <span class="keywordtype">short</span> sendBuf[],</div>
-<div class="line"><a id="l01851" name="l01851"></a><span class="lineno"> 1851</span>                     <span class="keyword">const</span> <span class="keywordtype">int</span> sendCount,</div>
-<div class="line"><a id="l01852" name="l01852"></a><span class="lineno"> 1852</span>                     <span class="keywordtype">short</span> recvBuf[],</div>
-<div class="line"><a id="l01853" name="l01853"></a><span class="lineno"> 1853</span>                     <span class="keyword">const</span> <span class="keywordtype">int</span> recvCounts[],</div>
-<div class="line"><a id="l01854" name="l01854"></a><span class="lineno"> 1854</span>                     <span class="keyword">const</span> <span class="keywordtype">int</span> displs[],</div>
-<div class="line"><a id="l01855" name="l01855"></a><span class="lineno"> 1855</span>                     <span class="keyword">const</span> <span class="keywordtype">int</span> root,</div>
-<div class="line"><a id="l01856" name="l01856"></a><span class="lineno"> 1856</span>                     <span class="keyword">const</span> Comm&lt;int&gt;&amp; comm)</div>
+<div class="line"><a id="l01848" name="l01848"></a><span class="lineno"> 1848</span><span class="comment">// Specialization for Ordinal=int and Packet=short.</span></div>
+<div class="line"><a id="l01849" name="l01849"></a><span class="lineno"> 1849</span><span class="keyword">template</span>&lt;&gt;</div>
+<div class="line"><a id="l01850" name="l01850"></a><span class="lineno"> 1850</span><span class="keywordtype">void</span></div>
+<div class="line"><a id="l01851" name="l01851"></a><span class="lineno"> 1851</span>gather&lt;int, short&gt; (<span class="keyword">const</span> <span class="keywordtype">short</span> sendBuf[],</div>
+<div class="line"><a id="l01852" name="l01852"></a><span class="lineno"> 1852</span>                    <span class="keyword">const</span> <span class="keywordtype">int</span> sendCount,</div>
+<div class="line"><a id="l01853" name="l01853"></a><span class="lineno"> 1853</span>                    <span class="keywordtype">short</span> recvBuf[],</div>
+<div class="line"><a id="l01854" name="l01854"></a><span class="lineno"> 1854</span>                    <span class="keyword">const</span> <span class="keywordtype">int</span> recvCount,</div>
+<div class="line"><a id="l01855" name="l01855"></a><span class="lineno"> 1855</span>                    <span class="keyword">const</span> <span class="keywordtype">int</span> root,</div>
+<div class="line"><a id="l01856" name="l01856"></a><span class="lineno"> 1856</span>                    <span class="keyword">const</span> Comm&lt;int&gt;&amp; comm)</div>
 <div class="line"><a id="l01857" name="l01857"></a><span class="lineno"> 1857</span>{</div>
-<div class="line"><a id="l01858" name="l01858"></a><span class="lineno"> 1858</span>  gathervImpl&lt;short&gt; (sendBuf, sendCount, recvBuf, recvCounts, displs, root, comm);</div>
+<div class="line"><a id="l01858" name="l01858"></a><span class="lineno"> 1858</span>  gatherImpl&lt;short&gt; (sendBuf, sendCount, recvBuf, recvCount, root, comm);</div>
 <div class="line"><a id="l01859" name="l01859"></a><span class="lineno"> 1859</span>}</div>
 <div class="line"><a id="l01860" name="l01860"></a><span class="lineno"> 1860</span> </div>
 <div class="line"><a id="l01861" name="l01861"></a><span class="lineno"> 1861</span><span class="keyword">template</span>&lt;&gt;</div>
 <div class="line"><a id="l01862" name="l01862"></a><span class="lineno"> 1862</span><span class="keywordtype">void</span></div>
-<div class="line"><a id="l01863" name="l01863"></a><span class="lineno"> 1863</span>reduceAll&lt;int, short&gt; (<span class="keyword">const</span> Comm&lt;int&gt;&amp; comm,</div>
-<div class="line"><a id="l01864" name="l01864"></a><span class="lineno"> 1864</span>                       <span class="keyword">const</span> EReductionType reductType,</div>
-<div class="line"><a id="l01865" name="l01865"></a><span class="lineno"> 1865</span>                       <span class="keyword">const</span> <span class="keywordtype">int</span> count,</div>
-<div class="line"><a id="l01866" name="l01866"></a><span class="lineno"> 1866</span>                       <span class="keyword">const</span> <span class="keywordtype">short</span> sendBuffer[],</div>
-<div class="line"><a id="l01867" name="l01867"></a><span class="lineno"> 1867</span>                       <span class="keywordtype">short</span> globalReducts[])</div>
-<div class="line"><a id="l01868" name="l01868"></a><span class="lineno"> 1868</span>{</div>
-<div class="line"><a id="l01869" name="l01869"></a><span class="lineno"> 1869</span>  TEUCHOS_COMM_TIME_MONITOR(</div>
-<div class="line"><a id="l01870" name="l01870"></a><span class="lineno"> 1870</span>    <span class="stringliteral">&quot;Teuchos::reduceAll&lt;int, short&gt; (&quot;</span> &lt;&lt; count &lt;&lt; <span class="stringliteral">&quot;, &quot;</span></div>
-<div class="line"><a id="l01871" name="l01871"></a><span class="lineno"> 1871</span>    &lt;&lt; toString (reductType) &lt;&lt; <span class="stringliteral">&quot;)&quot;</span></div>
-<div class="line"><a id="l01872" name="l01872"></a><span class="lineno"> 1872</span>    );</div>
-<div class="line"><a id="l01873" name="l01873"></a><span class="lineno"> 1873</span>  reduceAllImpl&lt;short&gt; (comm, reductType, count, sendBuffer, globalReducts);</div>
-<div class="line"><a id="l01874" name="l01874"></a><span class="lineno"> 1874</span>}</div>
-<div class="line"><a id="l01875" name="l01875"></a><span class="lineno"> 1875</span> </div>
-<div class="line"><a id="l01876" name="l01876"></a><span class="lineno"> 1876</span><span class="keyword">template</span>&lt;&gt;</div>
-<div class="line"><a id="l01877" name="l01877"></a><span class="lineno"> 1877</span>RCP&lt;Teuchos::CommRequest&lt;int&gt; &gt;</div>
-<div class="line"><a id="l01878" name="l01878"></a><span class="lineno"> 1878</span>ireceive&lt;int, short&gt; (<span class="keyword">const</span> Comm&lt;int&gt;&amp; comm,</div>
-<div class="line"><a id="l01879" name="l01879"></a><span class="lineno"> 1879</span>                      <span class="keyword">const</span> ArrayRCP&lt;short&gt;&amp; recvBuffer,</div>
-<div class="line"><a id="l01880" name="l01880"></a><span class="lineno"> 1880</span>                      <span class="keyword">const</span> <span class="keywordtype">int</span> sourceRank)</div>
+<div class="line"><a id="l01863" name="l01863"></a><span class="lineno"> 1863</span>gatherv&lt;int, short&gt; (<span class="keyword">const</span> <span class="keywordtype">short</span> sendBuf[],</div>
+<div class="line"><a id="l01864" name="l01864"></a><span class="lineno"> 1864</span>                     <span class="keyword">const</span> <span class="keywordtype">int</span> sendCount,</div>
+<div class="line"><a id="l01865" name="l01865"></a><span class="lineno"> 1865</span>                     <span class="keywordtype">short</span> recvBuf[],</div>
+<div class="line"><a id="l01866" name="l01866"></a><span class="lineno"> 1866</span>                     <span class="keyword">const</span> <span class="keywordtype">int</span> recvCounts[],</div>
+<div class="line"><a id="l01867" name="l01867"></a><span class="lineno"> 1867</span>                     <span class="keyword">const</span> <span class="keywordtype">int</span> displs[],</div>
+<div class="line"><a id="l01868" name="l01868"></a><span class="lineno"> 1868</span>                     <span class="keyword">const</span> <span class="keywordtype">int</span> root,</div>
+<div class="line"><a id="l01869" name="l01869"></a><span class="lineno"> 1869</span>                     <span class="keyword">const</span> Comm&lt;int&gt;&amp; comm)</div>
+<div class="line"><a id="l01870" name="l01870"></a><span class="lineno"> 1870</span>{</div>
+<div class="line"><a id="l01871" name="l01871"></a><span class="lineno"> 1871</span>  gathervImpl&lt;short&gt; (sendBuf, sendCount, recvBuf, recvCounts, displs, root, comm);</div>
+<div class="line"><a id="l01872" name="l01872"></a><span class="lineno"> 1872</span>}</div>
+<div class="line"><a id="l01873" name="l01873"></a><span class="lineno"> 1873</span> </div>
+<div class="line"><a id="l01874" name="l01874"></a><span class="lineno"> 1874</span><span class="keyword">template</span>&lt;&gt;</div>
+<div class="line"><a id="l01875" name="l01875"></a><span class="lineno"> 1875</span><span class="keywordtype">void</span></div>
+<div class="line"><a id="l01876" name="l01876"></a><span class="lineno"> 1876</span>reduceAll&lt;int, short&gt; (<span class="keyword">const</span> Comm&lt;int&gt;&amp; comm,</div>
+<div class="line"><a id="l01877" name="l01877"></a><span class="lineno"> 1877</span>                       <span class="keyword">const</span> EReductionType reductType,</div>
+<div class="line"><a id="l01878" name="l01878"></a><span class="lineno"> 1878</span>                       <span class="keyword">const</span> <span class="keywordtype">int</span> count,</div>
+<div class="line"><a id="l01879" name="l01879"></a><span class="lineno"> 1879</span>                       <span class="keyword">const</span> <span class="keywordtype">short</span> sendBuffer[],</div>
+<div class="line"><a id="l01880" name="l01880"></a><span class="lineno"> 1880</span>                       <span class="keywordtype">short</span> globalReducts[])</div>
 <div class="line"><a id="l01881" name="l01881"></a><span class="lineno"> 1881</span>{</div>
-<div class="line"><a id="l01882" name="l01882"></a><span class="lineno"> 1882</span>  TEUCHOS_COMM_TIME_MONITOR(<span class="stringliteral">&quot;ireceive&lt;int, short&gt;&quot;</span>);</div>
-<div class="line"><a id="l01883" name="l01883"></a><span class="lineno"> 1883</span>  <span class="keywordflow">return</span> ireceiveImpl&lt;short&gt; (comm, recvBuffer, sourceRank);</div>
-<div class="line"><a id="l01884" name="l01884"></a><span class="lineno"> 1884</span>}</div>
-<div class="line"><a id="l01885" name="l01885"></a><span class="lineno"> 1885</span> </div>
-<div class="line"><a id="l01886" name="l01886"></a><span class="lineno"> 1886</span><span class="keyword">template</span>&lt;&gt;</div>
-<div class="line"><a id="l01887" name="l01887"></a><span class="lineno"> 1887</span>RCP&lt;Teuchos::CommRequest&lt;int&gt; &gt;</div>
-<div class="line"><a id="l01888" name="l01888"></a><span class="lineno"> 1888</span>ireceive&lt;int, short&gt; (<span class="keyword">const</span> ArrayRCP&lt;short&gt;&amp; recvBuffer,</div>
-<div class="line"><a id="l01889" name="l01889"></a><span class="lineno"> 1889</span>                      <span class="keyword">const</span> <span class="keywordtype">int</span> sourceRank,</div>
-<div class="line"><a id="l01890" name="l01890"></a><span class="lineno"> 1890</span>                      <span class="keyword">const</span> <span class="keywordtype">int</span> tag,</div>
-<div class="line"><a id="l01891" name="l01891"></a><span class="lineno"> 1891</span>                      <span class="keyword">const</span> Comm&lt;int&gt;&amp; comm)</div>
-<div class="line"><a id="l01892" name="l01892"></a><span class="lineno"> 1892</span>{</div>
-<div class="line"><a id="l01893" name="l01893"></a><span class="lineno"> 1893</span>  TEUCHOS_COMM_TIME_MONITOR(<span class="stringliteral">&quot;ireceive&lt;int, short&gt;&quot;</span>);</div>
-<div class="line"><a id="l01894" name="l01894"></a><span class="lineno"> 1894</span>  <span class="keywordflow">return</span> ireceiveImpl&lt;short&gt; (recvBuffer, sourceRank, tag, comm);</div>
-<div class="line"><a id="l01895" name="l01895"></a><span class="lineno"> 1895</span>}</div>
-<div class="line"><a id="l01896" name="l01896"></a><span class="lineno"> 1896</span> </div>
-<div class="line"><a id="l01897" name="l01897"></a><span class="lineno"> 1897</span><span class="keyword">template</span>&lt;&gt;</div>
-<div class="line"><a id="l01898" name="l01898"></a><span class="lineno"> 1898</span><span class="keywordtype">void</span></div>
-<div class="line"><a id="l01899" name="l01899"></a><span class="lineno"> 1899</span>send&lt;int, short&gt; (<span class="keyword">const</span> Comm&lt;int&gt;&amp; comm,</div>
-<div class="line"><a id="l01900" name="l01900"></a><span class="lineno"> 1900</span>                  <span class="keyword">const</span> <span class="keywordtype">int</span> count,</div>
-<div class="line"><a id="l01901" name="l01901"></a><span class="lineno"> 1901</span>                  <span class="keyword">const</span> <span class="keywordtype">short</span> sendBuffer[],</div>
-<div class="line"><a id="l01902" name="l01902"></a><span class="lineno"> 1902</span>                  <span class="keyword">const</span> <span class="keywordtype">int</span> destRank)</div>
-<div class="line"><a id="l01903" name="l01903"></a><span class="lineno"> 1903</span>{</div>
-<div class="line"><a id="l01904" name="l01904"></a><span class="lineno"> 1904</span>  <span class="keywordflow">return</span> sendImpl&lt;short&gt; (comm, count, sendBuffer, destRank);</div>
-<div class="line"><a id="l01905" name="l01905"></a><span class="lineno"> 1905</span>}</div>
-<div class="line"><a id="l01906" name="l01906"></a><span class="lineno"> 1906</span> </div>
-<div class="line"><a id="l01907" name="l01907"></a><span class="lineno"> 1907</span><span class="keyword">template</span>&lt;&gt;</div>
-<div class="line"><a id="l01908" name="l01908"></a><span class="lineno"> 1908</span><span class="keywordtype">void</span></div>
-<div class="line"><a id="l01909" name="l01909"></a><span class="lineno"> 1909</span>send&lt;int, short&gt; (<span class="keyword">const</span> <span class="keywordtype">short</span> sendBuffer[],</div>
-<div class="line"><a id="l01910" name="l01910"></a><span class="lineno"> 1910</span>                  <span class="keyword">const</span> <span class="keywordtype">int</span> count,</div>
-<div class="line"><a id="l01911" name="l01911"></a><span class="lineno"> 1911</span>                  <span class="keyword">const</span> <span class="keywordtype">int</span> destRank,</div>
-<div class="line"><a id="l01912" name="l01912"></a><span class="lineno"> 1912</span>                  <span class="keyword">const</span> <span class="keywordtype">int</span> tag,</div>
-<div class="line"><a id="l01913" name="l01913"></a><span class="lineno"> 1913</span>                  <span class="keyword">const</span> Comm&lt;int&gt;&amp; comm)</div>
-<div class="line"><a id="l01914" name="l01914"></a><span class="lineno"> 1914</span>{</div>
-<div class="line"><a id="l01915" name="l01915"></a><span class="lineno"> 1915</span>  <span class="keywordflow">return</span> sendImpl&lt;short&gt; (sendBuffer, count, destRank, tag, comm);</div>
-<div class="line"><a id="l01916" name="l01916"></a><span class="lineno"> 1916</span>}</div>
-<div class="line"><a id="l01917" name="l01917"></a><span class="lineno"> 1917</span> </div>
-<div class="line"><a id="l01918" name="l01918"></a><span class="lineno"> 1918</span><span class="keyword">template</span>&lt;&gt;</div>
-<div class="line"><a id="l01919" name="l01919"></a><span class="lineno"> 1919</span>RCP&lt;Teuchos::CommRequest&lt;int&gt; &gt;</div>
-<div class="line"><a id="l01920" name="l01920"></a><span class="lineno"> 1920</span>isend (<span class="keyword">const</span> ArrayRCP&lt;const short&gt;&amp; sendBuffer,</div>
-<div class="line"><a id="l01921" name="l01921"></a><span class="lineno"> 1921</span>       <span class="keyword">const</span> <span class="keywordtype">int</span> destRank,</div>
-<div class="line"><a id="l01922" name="l01922"></a><span class="lineno"> 1922</span>       <span class="keyword">const</span> <span class="keywordtype">int</span> tag,</div>
-<div class="line"><a id="l01923" name="l01923"></a><span class="lineno"> 1923</span>       <span class="keyword">const</span> Comm&lt;int&gt;&amp; comm)</div>
-<div class="line"><a id="l01924" name="l01924"></a><span class="lineno"> 1924</span>{</div>
-<div class="line"><a id="l01925" name="l01925"></a><span class="lineno"> 1925</span>  <span class="keywordflow">return</span> isendImpl&lt;short&gt; (sendBuffer, destRank, tag, comm);</div>
-<div class="line"><a id="l01926" name="l01926"></a><span class="lineno"> 1926</span>}</div>
-<div class="line"><a id="l01927" name="l01927"></a><span class="lineno"> 1927</span> </div>
-<div class="line"><a id="l01928" name="l01928"></a><span class="lineno"> 1928</span><span class="comment">// mfh 18 Oct 2012: The specialization for Packet=char seems to be</span></div>
-<div class="line"><a id="l01929" name="l01929"></a><span class="lineno"> 1929</span><span class="comment">// causing problems such as the following:</span></div>
-<div class="line"><a id="l01930" name="l01930"></a><span class="lineno"> 1930</span><span class="comment">//</span></div>
-<div class="line"><a id="l01931" name="l01931"></a><span class="lineno"> 1931</span><span class="comment">// http://testing.sandia.gov/cdash/testDetails.php?test=9909246&amp;build=747699</span></div>
-<div class="line"><a id="l01932" name="l01932"></a><span class="lineno"> 1932</span><span class="comment">//</span></div>
-<div class="line"><a id="l01933" name="l01933"></a><span class="lineno"> 1933</span><span class="comment">// I am disabling it for now.  This should revert back to the old</span></div>
-<div class="line"><a id="l01934" name="l01934"></a><span class="lineno"> 1934</span><span class="comment">// behavior for Packet=char.  That should fix the Tpetra errors, since</span></div>
-<div class="line"><a id="l01935" name="l01935"></a><span class="lineno"> 1935</span><span class="comment">// many Tpetra objects inherit from DistObject&lt;char, ...&gt;.</span></div>
-<div class="line"><a id="l01936" name="l01936"></a><span class="lineno"> 1936</span><span class="preprocessor">#if 0</span></div>
-<div class="line"><a id="l01937" name="l01937"></a><span class="lineno"> 1937</span><span class="comment">// Specialization for Ordinal=int and Packet=char.</span></div>
-<div class="line"><a id="l01938" name="l01938"></a><span class="lineno"> 1938</span><span class="keyword">template</span>&lt;&gt;</div>
-<div class="line"><a id="l01939" name="l01939"></a><span class="lineno"> 1939</span><span class="keywordtype">void</span></div>
-<div class="line"><a id="l01940" name="l01940"></a><span class="lineno"> 1940</span>reduceAll&lt;int, char&gt; (<span class="keyword">const</span> Comm&lt;int&gt;&amp; comm,</div>
-<div class="line"><a id="l01941" name="l01941"></a><span class="lineno"> 1941</span>                      <span class="keyword">const</span> EReductionType reductType,</div>
-<div class="line"><a id="l01942" name="l01942"></a><span class="lineno"> 1942</span>                      <span class="keyword">const</span> <span class="keywordtype">int</span> count,</div>
-<div class="line"><a id="l01943" name="l01943"></a><span class="lineno"> 1943</span>                      <span class="keyword">const</span> <span class="keywordtype">char</span> sendBuffer[],</div>
-<div class="line"><a id="l01944" name="l01944"></a><span class="lineno"> 1944</span>                      <span class="keywordtype">char</span> globalReducts[])</div>
-<div class="line"><a id="l01945" name="l01945"></a><span class="lineno"> 1945</span>{</div>
-<div class="line"><a id="l01946" name="l01946"></a><span class="lineno"> 1946</span>  TEUCHOS_COMM_TIME_MONITOR(</div>
-<div class="line"><a id="l01947" name="l01947"></a><span class="lineno"> 1947</span>    <span class="stringliteral">&quot;Teuchos::reduceAll&lt;int, char&gt; (&quot;</span> &lt;&lt; count &lt;&lt; <span class="stringliteral">&quot;, &quot;</span></div>
-<div class="line"><a id="l01948" name="l01948"></a><span class="lineno"> 1948</span>    &lt;&lt; toString (reductType) &lt;&lt; <span class="stringliteral">&quot;)&quot;</span></div>
-<div class="line"><a id="l01949" name="l01949"></a><span class="lineno"> 1949</span>    );</div>
-<div class="line"><a id="l01950" name="l01950"></a><span class="lineno"> 1950</span>  reduceAllImpl&lt;char&gt; (comm, reductType, count, sendBuffer, globalReducts);</div>
-<div class="line"><a id="l01951" name="l01951"></a><span class="lineno"> 1951</span>}</div>
-<div class="line"><a id="l01952" name="l01952"></a><span class="lineno"> 1952</span><span class="preprocessor">#endif </span><span class="comment">// 0</span></div>
-<div class="line"><a id="l01953" name="l01953"></a><span class="lineno"> 1953</span> </div>
-<div class="line"><a id="l01954" name="l01954"></a><span class="lineno"> 1954</span>} <span class="comment">// namespace Teuchos</span></div>
+<div class="line"><a id="l01882" name="l01882"></a><span class="lineno"> 1882</span>  TEUCHOS_COMM_TIME_MONITOR(</div>
+<div class="line"><a id="l01883" name="l01883"></a><span class="lineno"> 1883</span>    <span class="stringliteral">&quot;Teuchos::reduceAll&lt;int, short&gt; (&quot;</span> &lt;&lt; count &lt;&lt; <span class="stringliteral">&quot;, &quot;</span></div>
+<div class="line"><a id="l01884" name="l01884"></a><span class="lineno"> 1884</span>    &lt;&lt; toString (reductType) &lt;&lt; <span class="stringliteral">&quot;)&quot;</span></div>
+<div class="line"><a id="l01885" name="l01885"></a><span class="lineno"> 1885</span>    );</div>
+<div class="line"><a id="l01886" name="l01886"></a><span class="lineno"> 1886</span>  reduceAllImpl&lt;short&gt; (comm, reductType, count, sendBuffer, globalReducts);</div>
+<div class="line"><a id="l01887" name="l01887"></a><span class="lineno"> 1887</span>}</div>
+<div class="line"><a id="l01888" name="l01888"></a><span class="lineno"> 1888</span> </div>
+<div class="line"><a id="l01889" name="l01889"></a><span class="lineno"> 1889</span><span class="keyword">template</span>&lt;&gt;</div>
+<div class="line"><a id="l01890" name="l01890"></a><span class="lineno"> 1890</span>RCP&lt;Teuchos::CommRequest&lt;int&gt; &gt;</div>
+<div class="line"><a id="l01891" name="l01891"></a><span class="lineno"> 1891</span>ireceive&lt;int, short&gt; (<span class="keyword">const</span> Comm&lt;int&gt;&amp; comm,</div>
+<div class="line"><a id="l01892" name="l01892"></a><span class="lineno"> 1892</span>                      <span class="keyword">const</span> ArrayRCP&lt;short&gt;&amp; recvBuffer,</div>
+<div class="line"><a id="l01893" name="l01893"></a><span class="lineno"> 1893</span>                      <span class="keyword">const</span> <span class="keywordtype">int</span> sourceRank)</div>
+<div class="line"><a id="l01894" name="l01894"></a><span class="lineno"> 1894</span>{</div>
+<div class="line"><a id="l01895" name="l01895"></a><span class="lineno"> 1895</span>  TEUCHOS_COMM_TIME_MONITOR(<span class="stringliteral">&quot;ireceive&lt;int, short&gt;&quot;</span>);</div>
+<div class="line"><a id="l01896" name="l01896"></a><span class="lineno"> 1896</span>  <span class="keywordflow">return</span> ireceiveImpl&lt;short&gt; (comm, recvBuffer, sourceRank);</div>
+<div class="line"><a id="l01897" name="l01897"></a><span class="lineno"> 1897</span>}</div>
+<div class="line"><a id="l01898" name="l01898"></a><span class="lineno"> 1898</span> </div>
+<div class="line"><a id="l01899" name="l01899"></a><span class="lineno"> 1899</span><span class="keyword">template</span>&lt;&gt;</div>
+<div class="line"><a id="l01900" name="l01900"></a><span class="lineno"> 1900</span>RCP&lt;Teuchos::CommRequest&lt;int&gt; &gt;</div>
+<div class="line"><a id="l01901" name="l01901"></a><span class="lineno"> 1901</span>ireceive&lt;int, short&gt; (<span class="keyword">const</span> ArrayRCP&lt;short&gt;&amp; recvBuffer,</div>
+<div class="line"><a id="l01902" name="l01902"></a><span class="lineno"> 1902</span>                      <span class="keyword">const</span> <span class="keywordtype">int</span> sourceRank,</div>
+<div class="line"><a id="l01903" name="l01903"></a><span class="lineno"> 1903</span>                      <span class="keyword">const</span> <span class="keywordtype">int</span> tag,</div>
+<div class="line"><a id="l01904" name="l01904"></a><span class="lineno"> 1904</span>                      <span class="keyword">const</span> Comm&lt;int&gt;&amp; comm)</div>
+<div class="line"><a id="l01905" name="l01905"></a><span class="lineno"> 1905</span>{</div>
+<div class="line"><a id="l01906" name="l01906"></a><span class="lineno"> 1906</span>  TEUCHOS_COMM_TIME_MONITOR(<span class="stringliteral">&quot;ireceive&lt;int, short&gt;&quot;</span>);</div>
+<div class="line"><a id="l01907" name="l01907"></a><span class="lineno"> 1907</span>  <span class="keywordflow">return</span> ireceiveImpl&lt;short&gt; (recvBuffer, sourceRank, tag, comm);</div>
+<div class="line"><a id="l01908" name="l01908"></a><span class="lineno"> 1908</span>}</div>
+<div class="line"><a id="l01909" name="l01909"></a><span class="lineno"> 1909</span> </div>
+<div class="line"><a id="l01910" name="l01910"></a><span class="lineno"> 1910</span><span class="keyword">template</span>&lt;&gt;</div>
+<div class="line"><a id="l01911" name="l01911"></a><span class="lineno"> 1911</span><span class="keywordtype">void</span></div>
+<div class="line"><a id="l01912" name="l01912"></a><span class="lineno"> 1912</span>send&lt;int, short&gt; (<span class="keyword">const</span> Comm&lt;int&gt;&amp; comm,</div>
+<div class="line"><a id="l01913" name="l01913"></a><span class="lineno"> 1913</span>                  <span class="keyword">const</span> <span class="keywordtype">int</span> count,</div>
+<div class="line"><a id="l01914" name="l01914"></a><span class="lineno"> 1914</span>                  <span class="keyword">const</span> <span class="keywordtype">short</span> sendBuffer[],</div>
+<div class="line"><a id="l01915" name="l01915"></a><span class="lineno"> 1915</span>                  <span class="keyword">const</span> <span class="keywordtype">int</span> destRank)</div>
+<div class="line"><a id="l01916" name="l01916"></a><span class="lineno"> 1916</span>{</div>
+<div class="line"><a id="l01917" name="l01917"></a><span class="lineno"> 1917</span>  <span class="keywordflow">return</span> sendImpl&lt;short&gt; (comm, count, sendBuffer, destRank);</div>
+<div class="line"><a id="l01918" name="l01918"></a><span class="lineno"> 1918</span>}</div>
+<div class="line"><a id="l01919" name="l01919"></a><span class="lineno"> 1919</span> </div>
+<div class="line"><a id="l01920" name="l01920"></a><span class="lineno"> 1920</span><span class="keyword">template</span>&lt;&gt;</div>
+<div class="line"><a id="l01921" name="l01921"></a><span class="lineno"> 1921</span><span class="keywordtype">void</span></div>
+<div class="line"><a id="l01922" name="l01922"></a><span class="lineno"> 1922</span>send&lt;int, short&gt; (<span class="keyword">const</span> <span class="keywordtype">short</span> sendBuffer[],</div>
+<div class="line"><a id="l01923" name="l01923"></a><span class="lineno"> 1923</span>                  <span class="keyword">const</span> <span class="keywordtype">int</span> count,</div>
+<div class="line"><a id="l01924" name="l01924"></a><span class="lineno"> 1924</span>                  <span class="keyword">const</span> <span class="keywordtype">int</span> destRank,</div>
+<div class="line"><a id="l01925" name="l01925"></a><span class="lineno"> 1925</span>                  <span class="keyword">const</span> <span class="keywordtype">int</span> tag,</div>
+<div class="line"><a id="l01926" name="l01926"></a><span class="lineno"> 1926</span>                  <span class="keyword">const</span> Comm&lt;int&gt;&amp; comm)</div>
+<div class="line"><a id="l01927" name="l01927"></a><span class="lineno"> 1927</span>{</div>
+<div class="line"><a id="l01928" name="l01928"></a><span class="lineno"> 1928</span>  <span class="keywordflow">return</span> sendImpl&lt;short&gt; (sendBuffer, count, destRank, tag, comm);</div>
+<div class="line"><a id="l01929" name="l01929"></a><span class="lineno"> 1929</span>}</div>
+<div class="line"><a id="l01930" name="l01930"></a><span class="lineno"> 1930</span> </div>
+<div class="line"><a id="l01931" name="l01931"></a><span class="lineno"> 1931</span><span class="keyword">template</span>&lt;&gt;</div>
+<div class="line"><a id="l01932" name="l01932"></a><span class="lineno"> 1932</span>RCP&lt;Teuchos::CommRequest&lt;int&gt; &gt;</div>
+<div class="line"><a id="l01933" name="l01933"></a><span class="lineno"> 1933</span>isend (<span class="keyword">const</span> ArrayRCP&lt;const short&gt;&amp; sendBuffer,</div>
+<div class="line"><a id="l01934" name="l01934"></a><span class="lineno"> 1934</span>       <span class="keyword">const</span> <span class="keywordtype">int</span> destRank,</div>
+<div class="line"><a id="l01935" name="l01935"></a><span class="lineno"> 1935</span>       <span class="keyword">const</span> <span class="keywordtype">int</span> tag,</div>
+<div class="line"><a id="l01936" name="l01936"></a><span class="lineno"> 1936</span>       <span class="keyword">const</span> Comm&lt;int&gt;&amp; comm)</div>
+<div class="line"><a id="l01937" name="l01937"></a><span class="lineno"> 1937</span>{</div>
+<div class="line"><a id="l01938" name="l01938"></a><span class="lineno"> 1938</span>  <span class="keywordflow">return</span> isendImpl&lt;short&gt; (sendBuffer, destRank, tag, comm);</div>
+<div class="line"><a id="l01939" name="l01939"></a><span class="lineno"> 1939</span>}</div>
+<div class="line"><a id="l01940" name="l01940"></a><span class="lineno"> 1940</span> </div>
+<div class="line"><a id="l01941" name="l01941"></a><span class="lineno"> 1941</span><span class="comment">// mfh 18 Oct 2012: The specialization for Packet=char seems to be</span></div>
+<div class="line"><a id="l01942" name="l01942"></a><span class="lineno"> 1942</span><span class="comment">// causing problems such as the following:</span></div>
+<div class="line"><a id="l01943" name="l01943"></a><span class="lineno"> 1943</span><span class="comment">//</span></div>
+<div class="line"><a id="l01944" name="l01944"></a><span class="lineno"> 1944</span><span class="comment">// http://testing.sandia.gov/cdash/testDetails.php?test=9909246&amp;build=747699</span></div>
+<div class="line"><a id="l01945" name="l01945"></a><span class="lineno"> 1945</span><span class="comment">//</span></div>
+<div class="line"><a id="l01946" name="l01946"></a><span class="lineno"> 1946</span><span class="comment">// I am disabling it for now.  This should revert back to the old</span></div>
+<div class="line"><a id="l01947" name="l01947"></a><span class="lineno"> 1947</span><span class="comment">// behavior for Packet=char.  That should fix the Tpetra errors, since</span></div>
+<div class="line"><a id="l01948" name="l01948"></a><span class="lineno"> 1948</span><span class="comment">// many Tpetra objects inherit from DistObject&lt;char, ...&gt;.</span></div>
+<div class="line"><a id="l01949" name="l01949"></a><span class="lineno"> 1949</span><span class="preprocessor">#if 0</span></div>
+<div class="line"><a id="l01950" name="l01950"></a><span class="lineno"> 1950</span><span class="comment">// Specialization for Ordinal=int and Packet=char.</span></div>
+<div class="line"><a id="l01951" name="l01951"></a><span class="lineno"> 1951</span><span class="keyword">template</span>&lt;&gt;</div>
+<div class="line"><a id="l01952" name="l01952"></a><span class="lineno"> 1952</span><span class="keywordtype">void</span></div>
+<div class="line"><a id="l01953" name="l01953"></a><span class="lineno"> 1953</span>reduceAll&lt;int, char&gt; (<span class="keyword">const</span> Comm&lt;int&gt;&amp; comm,</div>
+<div class="line"><a id="l01954" name="l01954"></a><span class="lineno"> 1954</span>                      <span class="keyword">const</span> EReductionType reductType,</div>
+<div class="line"><a id="l01955" name="l01955"></a><span class="lineno"> 1955</span>                      <span class="keyword">const</span> <span class="keywordtype">int</span> count,</div>
+<div class="line"><a id="l01956" name="l01956"></a><span class="lineno"> 1956</span>                      <span class="keyword">const</span> <span class="keywordtype">char</span> sendBuffer[],</div>
+<div class="line"><a id="l01957" name="l01957"></a><span class="lineno"> 1957</span>                      <span class="keywordtype">char</span> globalReducts[])</div>
+<div class="line"><a id="l01958" name="l01958"></a><span class="lineno"> 1958</span>{</div>
+<div class="line"><a id="l01959" name="l01959"></a><span class="lineno"> 1959</span>  TEUCHOS_COMM_TIME_MONITOR(</div>
+<div class="line"><a id="l01960" name="l01960"></a><span class="lineno"> 1960</span>    <span class="stringliteral">&quot;Teuchos::reduceAll&lt;int, char&gt; (&quot;</span> &lt;&lt; count &lt;&lt; <span class="stringliteral">&quot;, &quot;</span></div>
+<div class="line"><a id="l01961" name="l01961"></a><span class="lineno"> 1961</span>    &lt;&lt; toString (reductType) &lt;&lt; <span class="stringliteral">&quot;)&quot;</span></div>
+<div class="line"><a id="l01962" name="l01962"></a><span class="lineno"> 1962</span>    );</div>
+<div class="line"><a id="l01963" name="l01963"></a><span class="lineno"> 1963</span>  reduceAllImpl&lt;char&gt; (comm, reductType, count, sendBuffer, globalReducts);</div>
+<div class="line"><a id="l01964" name="l01964"></a><span class="lineno"> 1964</span>}</div>
+<div class="line"><a id="l01965" name="l01965"></a><span class="lineno"> 1965</span><span class="preprocessor">#endif </span><span class="comment">// 0</span></div>
+<div class="line"><a id="l01966" name="l01966"></a><span class="lineno"> 1966</span> </div>
+<div class="line"><a id="l01967" name="l01967"></a><span class="lineno"> 1967</span>} <span class="comment">// namespace Teuchos</span></div>
 <div class="ttc" id="a_teuchos___details___mpi_type_traits_8hpp_html"><div class="ttname"><a href="_teuchos___details___mpi_type_traits_8hpp.html">Teuchos_Details_MpiTypeTraits.hpp</a></div><div class="ttdoc">Declaration of Teuchos::Details::MpiTypeTraits (only if building with MPI)</div></div>
 <div class="ttc" id="aclass_teuchos_1_1_type_name_traits_html_acd376f70f0fd37929269c42db3a0b641"><div class="ttname"><a href="class_teuchos_1_1_type_name_traits.html#acd376f70f0fd37929269c42db3a0b641">Teuchos::TypeNameTraits::name</a></div><div class="ttdeci">static std::string name()</div><div class="ttdef"><b>Definition</b> <a href="_teuchos___type_name_traits_8hpp_source.html#l00056">Teuchos_TypeNameTraits.hpp:56</a></div></div>
 <div class="ttc" id="agroup___test_for_exception__grp_html_gaadb9556c5c1ba7da1c141e7529a8ebdf"><div class="ttname"><a href="group___test_for_exception__grp.html#gaadb9556c5c1ba7da1c141e7529a8ebdf">TEUCHOS_TEST_FOR_EXCEPTION</a></div><div class="ttdeci">#define TEUCHOS_TEST_FOR_EXCEPTION(throw_exception_test, Exception, msg)</div><div class="ttdoc">Macro for throwing an exception with breakpointing to ease debugging.</div><div class="ttdef"><b>Definition</b> <a href="_teuchos___test_for_exception_8hpp_source.html#l00146">Teuchos_TestForException.hpp:146</a></div></div>

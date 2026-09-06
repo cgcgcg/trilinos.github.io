@@ -153,6 +153,7 @@ var namespace_mue_lu =
     [ "Level", "class_mue_lu_1_1_level.html", "class_mue_lu_1_1_level" ],
     [ "LineDetectionFactory", "class_mue_lu_1_1_line_detection_factory.html", "class_mue_lu_1_1_line_detection_factory" ],
     [ "LocalAggregationAlgorithm", "class_mue_lu_1_1_local_aggregation_algorithm.html", null ],
+    [ "LocalFSAIFunctor", "class_mue_lu_1_1_local_f_s_a_i_functor.html", "class_mue_lu_1_1_local_f_s_a_i_functor" ],
     [ "LocalLexicographicIndexManager", "class_mue_lu_1_1_local_lexicographic_index_manager.html", "class_mue_lu_1_1_local_lexicographic_index_manager" ],
     [ "LocalOrdinalTransferFactory", "class_mue_lu_1_1_local_ordinal_transfer_factory.html", "class_mue_lu_1_1_local_ordinal_transfer_factory" ],
     [ "LocalPermutationStrategy", "class_mue_lu_1_1_local_permutation_strategy.html", "class_mue_lu_1_1_local_permutation_strategy" ],

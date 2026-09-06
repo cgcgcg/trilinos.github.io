@@ -200,8 +200,8 @@ Private Attributes</h2></td></tr>
 <tr class="separator:ab88c16674063a983228a5a1deb1a3239"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a581e98f7f43fa01b380419acc2ed8283" id="r_a581e98f7f43fa01b380419acc2ed8283"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; const <a class="el" href="classpanzer_1_1_tpetra_linear_obj_container.html">TpetraLinearObjContainer</a>&lt; double, LO, GO, NodeT &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_gather_solution___tpetra_3_01panzer_1_1_traits_1_1_jacobian_00_01_t_r_a_i_t_s_00752273e0d9541927fa4db4154977cf41.html#a581e98f7f43fa01b380419acc2ed8283">tpetraContainer_</a></td></tr>
 <tr class="separator:a581e98f7f43fa01b380419acc2ed8283"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefd3017f2b0b636f20832313d8962643" id="r_aefd3017f2b0b636f20832313d8962643"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; typename <a class="el" href="classpanzer_1_1_tpetra_linear_obj_container.html">TpetraLinearObjContainer</a>&lt; double, LO, GO, NodeT &gt;::VectorType &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_gather_solution___tpetra_3_01panzer_1_1_traits_1_1_jacobian_00_01_t_r_a_i_t_s_00752273e0d9541927fa4db4154977cf41.html#aefd3017f2b0b636f20832313d8962643">x_vector</a></td></tr>
-<tr class="separator:aefd3017f2b0b636f20832313d8962643"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9e44e2f7a3b802c9da4b7013879c012" id="r_ac9e44e2f7a3b802c9da4b7013879c012"><td class="memItemLeft" align="right" valign="top">Teuchos::RCP&lt; typename <a class="el" href="classpanzer_1_1_tpetra_linear_obj_container.html">TpetraLinearObjContainer</a>&lt; double, LO, GO, NodeT &gt;::MultiVectorType &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_gather_solution___tpetra_3_01panzer_1_1_traits_1_1_jacobian_00_01_t_r_a_i_t_s_00752273e0d9541927fa4db4154977cf41.html#ac9e44e2f7a3b802c9da4b7013879c012">x_vector</a></td></tr>
+<tr class="separator:ac9e44e2f7a3b802c9da4b7013879c012"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99f9116c09f7fd5d5c82f2773811401d" id="r_a99f9116c09f7fd5d5c82f2773811401d"><td class="memItemLeft" align="right" valign="top">PHX::View&lt; int ** &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_gather_solution___tpetra_3_01panzer_1_1_traits_1_1_jacobian_00_01_t_r_a_i_t_s_00752273e0d9541927fa4db4154977cf41.html#a99f9116c09f7fd5d5c82f2773811401d">scratch_lids_</a></td></tr>
 <tr class="separator:a99f9116c09f7fd5d5c82f2773811401d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5aca5b6a2158bcb0e2278613eae2cf8" id="r_ab5aca5b6a2158bcb0e2278613eae2cf8"><td class="memItemLeft" align="right" valign="top">std::vector&lt; PHX::View&lt; int * &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpanzer_1_1_gather_solution___tpetra_3_01panzer_1_1_traits_1_1_jacobian_00_01_t_r_a_i_t_s_00752273e0d9541927fa4db4154977cf41.html#ab5aca5b6a2158bcb0e2278613eae2cf8">scratch_offsets_</a></td></tr>
@@ -844,8 +844,8 @@ template&lt;typename TRAITS , typename LO , typename GO , typename NodeT &gt; </
 
 </div>
 </div>
-<a id="aefd3017f2b0b636f20832313d8962643" name="aefd3017f2b0b636f20832313d8962643"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aefd3017f2b0b636f20832313d8962643">&#9670;&#160;</a></span>x_vector</h2>
+<a id="ac9e44e2f7a3b802c9da4b7013879c012" name="ac9e44e2f7a3b802c9da4b7013879c012"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9e44e2f7a3b802c9da4b7013879c012">&#9670;&#160;</a></span>x_vector</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -856,7 +856,7 @@ template&lt;typename TRAITS , typename LO , typename GO , typename NodeT &gt; </
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Teuchos::RCP&lt;typename <a class="el" href="classpanzer_1_1_tpetra_linear_obj_container.html">TpetraLinearObjContainer</a>&lt;double,LO,GO,NodeT&gt;::VectorType&gt; <a class="el" href="classpanzer_1_1_gather_solution___tpetra.html">panzer::GatherSolution_Tpetra</a>&lt; <a class="el" href="structpanzer_1_1_traits_1_1_jacobian.html">panzer::Traits::Jacobian</a>, TRAITS, LO, GO, NodeT &gt;::x_vector</td>
+          <td class="memname">Teuchos::RCP&lt;typename <a class="el" href="classpanzer_1_1_tpetra_linear_obj_container.html">TpetraLinearObjContainer</a>&lt;double,LO,GO,NodeT&gt;::MultiVectorType&gt; <a class="el" href="classpanzer_1_1_gather_solution___tpetra.html">panzer::GatherSolution_Tpetra</a>&lt; <a class="el" href="structpanzer_1_1_traits_1_1_jacobian.html">panzer::Traits::Jacobian</a>, TRAITS, LO, GO, NodeT &gt;::x_vector</td>
         </tr>
       </table>
   </td>

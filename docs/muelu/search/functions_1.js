@@ -83,13 +83,13 @@ var searchData=
   ['buildrapfactory_80',['BuildRAPFactory',['../class_mue_lu_1_1_factory_factory.html#aae0aabf491e1f6142de62d35d6b4db3d',1,'MueLu::FactoryFactory']]],
   ['buildrbm_81',['BuildRBM',['../class_mue_lu_1_1_coupled_r_b_m_factory.html#a2f490cd5a68b2c11f0458b46c6913b08',1,'MueLu::CoupledRBMFactory']]],
   ['buildreuse_82',['BuildReuse',['../class_mue_lu_1_1_filtered_a_factory.html#ab7876c2758e87aeb057126f505fbc89f',1,'MueLu::FilteredAFactory']]],
-  ['buildscalar_83',['BuildScalar',['../class_mue_lu_1_1_coalesce_drop_factory__kokkos.html#abbe3a74336c3765b1969abea06a82863',1,'MueLu::CoalesceDropFactory_kokkos']]],
+  ['buildscalar_83',['BuildScalar',['../class_mue_lu_1_1_coalesce_drop_factory__kokkos.html#a0d3cc96334d111543b0a08cf283ddd70',1,'MueLu::CoalesceDropFactory_kokkos']]],
   ['buildsemicoarsenp_84',['BuildSemiCoarsenP',['../class_mue_lu_1_1_semi_coarsen_p_factory__kokkos.html#a1b4940355fb3e37849d2e2f76e3425d3',1,'MueLu::SemiCoarsenPFactory_kokkos']]],
   ['buildsmoother_85',['buildsmoother',['../class_mue_lu_1_1_smoother_factory.html#ad2f52f71675b35095c4557c36e8f9b55',1,'MueLu::SmootherFactory::BuildSmoother()'],['../class_mue_lu_1_1_smoother_factory_base.html#a1fc5864115c0eb2b09c70f2a052f3a18',1,'MueLu::SmootherFactoryBase::BuildSmoother()']]],
   ['buildtekosmoother_86',['BuildTekoSmoother',['../class_mue_lu_1_1_factory_factory.html#a83e449805963dbcea8dd095fcd92b8c6',1,'MueLu::FactoryFactory']]],
   ['buildtogglecoordinatestransferfactory_87',['BuildToggleCoordinatesTransferFactory',['../class_mue_lu_1_1_factory_factory.html#aaca7abc3d514798e5031b89d6a25ed96',1,'MueLu::FactoryFactory']]],
   ['buildtogglepfactory_88',['BuildTogglePFactory',['../class_mue_lu_1_1_factory_factory.html#a9d1e17427c8082a25826c171f8e5440d',1,'MueLu::FactoryFactory']]],
   ['buildtrilinossmoother_89',['BuildTrilinosSmoother',['../class_mue_lu_1_1_factory_factory.html#ae4ea5d2c7f33e4da6bdf37d5da81f73d',1,'MueLu::FactoryFactory']]],
-  ['buildvector_90',['BuildVector',['../class_mue_lu_1_1_coalesce_drop_factory__kokkos.html#aa9fce9ccc5621624eb6724461de70a2d',1,'MueLu::CoalesceDropFactory_kokkos']]],
+  ['buildvector_90',['BuildVector',['../class_mue_lu_1_1_coalesce_drop_factory__kokkos.html#aec4e0ca11fb7d11e5426c1e228601220',1,'MueLu::CoalesceDropFactory_kokkos']]],
   ['buildvectornodalprolongator_91',['buildVectorNodalProlongator',['../class_mue_lu_1_1_ref_maxwell.html#a43bb77fb61ad037131395a430dd90f79',1,'MueLu::RefMaxwell']]]
 ];

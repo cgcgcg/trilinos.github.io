@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['v_0',['v',['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack2/doc/html/class_ifpack2_1_1_details_1_1_chebyshev.html#a04be92be96469d28d8b8febbc22d3abc',1,'Ifpack2::Details::Chebyshev::V'],['../struct_mue_lu_1_1_triplet.html#ad8b4684c7233782939b10de04deaa8a8',1,'MueLu::Triplet::v']]],
+  ['v_0',['v',['../struct_mue_lu_1_1_triplet.html#ad8b4684c7233782939b10de04deaa8a8',1,'MueLu::Triplet::v'],['/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/muelu/doc/../../../packages/ifpack2/doc/html/class_ifpack2_1_1_details_1_1_chebyshev.html#a04be92be96469d28d8b8febbc22d3abc',1,'Ifpack2::Details::Chebyshev::V']]],
   ['v1_1',['v1',['../class_mue_lu_1_1my_triangle.html#ae354eeb0a7b130c100e2ba4d9069e794',1,'MueLu::myTriangle']]],
   ['v2_2',['v2',['../class_mue_lu_1_1my_triangle.html#a467a19b7f4de655fb26db5f12a68cd48',1,'MueLu::myTriangle']]],
   ['v3_3',['v3',['../class_mue_lu_1_1my_triangle.html#a1eda0fb1797d6a23abf3824e71c8d762',1,'MueLu::myTriangle']]],
@@ -62,7 +62,7 @@ var searchData=
   ['vectordroppingbase_59',['VectorDroppingBase',['../class_mue_lu_1_1_vector_dropping_base.html',1,'MueLu']]],
   ['vectordroppingclassical_60',['VectorDroppingClassical',['../class_mue_lu_1_1_vector_dropping_classical.html',1,'MueLu']]],
   ['vectordroppingdistancelaplacian_61',['VectorDroppingDistanceLaplacian',['../class_mue_lu_1_1_vector_dropping_distance_laplacian.html',1,'MueLu']]],
-  ['vectorfillfunctor_62',['vectorfillfunctor',['../class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html',1,'MueLu::MatrixConstruction::VectorFillFunctor&lt; local_matrix_type, lumping, reuse &gt;'],['../class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#ac039167e121322a0ca6dc2dcfa06d628',1,'MueLu::MatrixConstruction::VectorFillFunctor::VectorFillFunctor()']]],
+  ['vectorfillfunctor_62',['vectorfillfunctor',['../class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html',1,'MueLu::MatrixConstruction::VectorFillFunctor&lt; local_matrix_type, lumping, reuse, constructFilteredA &gt;'],['../class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html#a8d1b3e0cab50d2a4a0cc4853f7d4ecac',1,'MueLu::MatrixConstruction::VectorFillFunctor::VectorFillFunctor()']]],
   ['vectorfillnoreusefunctor_63',['VectorFillNoReuseFunctor',['../class_vector_fill_no_reuse_functor.html',1,'']]],
   ['vectorsymmetricdropboundaryfunctor_64',['vectorsymmetricdropboundaryfunctor',['../class_mue_lu_1_1_misc_1_1_vector_symmetric_drop_boundary_functor.html#ab22ca6a7b8e6837bfb62db49b3a97438',1,'MueLu::Misc::VectorSymmetricDropBoundaryFunctor::VectorSymmetricDropBoundaryFunctor()'],['../class_mue_lu_1_1_misc_1_1_vector_symmetric_drop_boundary_functor.html',1,'MueLu::Misc::VectorSymmetricDropBoundaryFunctor&lt; Scalar, LocalOrdinal, GlobalOrdinal, Node &gt;']]],
   ['vectortimer1_5f_65',['vectorTimer1_',['../class_mue_lu_1_1_a_m_g_x_operator_3_01double_00_01int_00_01int_00_01_node_01_4.html#a39e0d90469bd348bec62dd93bbe1c7ee',1,'MueLu::AMGXOperator&lt; double, int, int, Node &gt;']]],
