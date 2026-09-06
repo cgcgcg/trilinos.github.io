@@ -1,7 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$class_sacado_1_1_fad_1_1_dynamic_storage.html" title=" " alt="" coords="5,13,220,53"/>
-<area shape="rect" id="Node000001" href="$class_sacado_1_1_fad_1_1_general_fad.html" title=" " alt="" coords="268,5,465,60"/>
-<area shape="poly" id="edge39_Node000000_Node000001" title=" " alt="" coords="234,30,268,30,268,35,234,35"/>
-<area shape="rect" id="Node000002" href="$class_sacado_1_1_fad_1_1_simple_fad.html" title="Forward&#45;mode AD class using dynamic memory allocation but no expression templates." alt="" coords="513,13,688,53"/>
-<area shape="poly" id="edge40_Node000001_Node000002" title=" " alt="" coords="479,30,513,30,513,35,479,35"/>
+<area shape="rect" id="Node000000" href="$class_sacado_1_1_fad_1_1_expr.html" title=" " alt="" coords="5,5,248,45"/>
+<area shape="rect" id="Node000001" href="$class_sacado_1_1_fad_1_1_f_abs_op_3_01_t_00_01_expr_spec_default_01_4.html" title=" " alt="" coords="296,5,472,45"/>
+<area shape="poly" id="edge59_Node000000_Node000001" title=" " alt="" coords="262,23,296,23,296,28,262,28"/>
 </map>

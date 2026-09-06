@@ -1,5 +1,6 @@
 var NAVTREEINDEX6 =
 {
+"_mue_lu___product_operator__fwd_8hpp.html#a4cc7b4da116b2b9c67af631e0e1c214f":[11,0,2,9,0,121,0],
 "_mue_lu___product_operator__fwd_8hpp_source.html":[11,0,2,9,0,121],
 "_mue_lu___projector_smoother__decl_8hpp.html":[11,0,2,7,16],
 "_mue_lu___projector_smoother__decl_8hpp.html#ab91ca9a52fcd70fad4a102993b95f3c3":[11,0,2,7,16,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX6 =
 "_mue_lu___schur_complement_factory__decl_8hpp.html":[11,0,2,3,40],
 "_mue_lu___schur_complement_factory__decl_8hpp.html#accf4da070dd5bb56976b71ab5da3ec89":[11,0,2,3,40,1],
 "_mue_lu___schur_complement_factory__decl_8hpp_source.html":[11,0,2,3,40],
-"_mue_lu___schur_complement_factory__def_8hpp.html":[11,0,2,3,41],
-"_mue_lu___schur_complement_factory__def_8hpp_source.html":[11,0,2,3,41]
+"_mue_lu___schur_complement_factory__def_8hpp.html":[11,0,2,3,41]
 };

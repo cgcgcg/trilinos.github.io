@@ -237,7 +237,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    Teuchos::RCP&lt;LOC&gt; tpetraContainer </div>
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>          = Teuchos::rcp_dynamic_cast&lt;LOC&gt;(d.gedc-&gt;getDataObject(<span class="stringliteral">&quot;Dirichlet Counter&quot;</span>),<span class="keyword">true</span>);</div>
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    dirichletCounter_ = tpetraContainer-&gt;get_f();</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    dirichletCounter_ = tpetraContainer-&gt;get_f_mv();</div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    TEUCHOS_ASSERT(!Teuchos::is_null(dirichletCounter_));</div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>  }</div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>}</div>
@@ -336,9 +336,9 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span> </div>
 <div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>  globalIndexer_-&gt;getElementLIDs(this-&gt;wda(workset).cell_local_ids_k,scratch_lids_);</div>
 <div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span> </div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>  Teuchos::RCP&lt;typename LOC::VectorType&gt; r = (!scatterIC_) ? </div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>    tpetraContainer_-&gt;get_f() :</div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>    tpetraContainer_-&gt;get_x(); </div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>  Teuchos::RCP&lt;typename LOC::MultiVectorType&gt; r = (!scatterIC_) ? </div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>    tpetraContainer_-&gt;get_f_mv() :</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>    tpetraContainer_-&gt;get_x_mv(); </div>
 <div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span> </div>
 <div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>  <span class="keywordflow">if</span> (scatterIC_) {</div>
 <div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>    ScatterDirichletResidualIC_Residual_Functor&lt;ScalarT,LO,GO,NodeT&gt; functor;</div>
@@ -502,7 +502,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span>    Teuchos::RCP&lt;LOC&gt; tpetraContainer </div>
 <div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span>          = Teuchos::rcp_dynamic_cast&lt;LOC&gt;(d.gedc-&gt;getDataObject(<span class="stringliteral">&quot;Dirichlet Counter&quot;</span>),<span class="keyword">true</span>);</div>
 <div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span> </div>
-<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span>    dirichletCounter_ = tpetraContainer-&gt;get_f();</div>
+<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span>    dirichletCounter_ = tpetraContainer-&gt;get_f_mv();</div>
 <div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>    TEUCHOS_ASSERT(!Teuchos::is_null(dirichletCounter_));</div>
 <div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>  }</div>
 <div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span> </div>
@@ -516,8 +516,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span>  dfdpFieldsVoV_.initialize(<span class="stringliteral">&quot;ScatterResidual_Tpetra&lt;Tangent&gt;::dfdpFieldsVoV_&quot;</span>,activeParameters.size());</div>
 <div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span> </div>
 <div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span>  <span class="keywordflow">for</span>(std::size_t i=0;i&lt;activeParameters.size();i++) {</div>
-<div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span>    RCP&lt;typename LOC::VectorType&gt; vec =</div>
-<div class="line"><a id="l00424" name="l00424"></a><span class="lineno">  424</span>      rcp_dynamic_cast&lt;LOC&gt;(d.gedc-&gt;getDataObject(activeParameters[i]),<span class="keyword">true</span>)-&gt;get_f();</div>
+<div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span>    RCP&lt;typename LOC::MultiVectorType&gt; vec =</div>
+<div class="line"><a id="l00424" name="l00424"></a><span class="lineno">  424</span>      rcp_dynamic_cast&lt;LOC&gt;(d.gedc-&gt;getDataObject(activeParameters[i]),<span class="keyword">true</span>)-&gt;get_f_mv();</div>
 <div class="line"><a id="l00425" name="l00425"></a><span class="lineno">  425</span>    <span class="keyword">auto</span> dfdp_view = vec-&gt;getLocalViewDevice(Tpetra::Access::ReadWrite);</div>
 <div class="line"><a id="l00426" name="l00426"></a><span class="lineno">  426</span> </div>
 <div class="line"><a id="l00427" name="l00427"></a><span class="lineno">  427</span>    dfdpFieldsVoV_.addView(dfdp_view,i);</div>
@@ -635,9 +635,9 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00537" name="l00537"></a><span class="lineno">  537</span>     </div>
 <div class="line"><a id="l00538" name="l00538"></a><span class="lineno">  538</span>  globalIndexer_-&gt;getElementLIDs(this-&gt;wda(workset).cell_local_ids_k,scratch_lids_);</div>
 <div class="line"><a id="l00539" name="l00539"></a><span class="lineno">  539</span> </div>
-<div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span>   Teuchos::RCP&lt;typename LOC::VectorType&gt; r = (!scatterIC_) ?</div>
-<div class="line"><a id="l00541" name="l00541"></a><span class="lineno">  541</span>     tpetraContainer_-&gt;get_f() :</div>
-<div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span>     tpetraContainer_-&gt;get_x();</div>
+<div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span>   Teuchos::RCP&lt;typename LOC::MultiVectorType&gt; r = (!scatterIC_) ?</div>
+<div class="line"><a id="l00541" name="l00541"></a><span class="lineno">  541</span>     tpetraContainer_-&gt;get_f_mv() :</div>
+<div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span>     tpetraContainer_-&gt;get_x_mv();</div>
 <div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span> </div>
 <div class="line"><a id="l00544" name="l00544"></a><span class="lineno">  544</span>  <span class="keywordflow">if</span> (scatterIC_) {</div>
 <div class="line"><a id="l00545" name="l00545"></a><span class="lineno">  545</span>    ScatterDirichletResidualIC_Tangent_Functor&lt;ScalarT,LO,GO,NodeT&gt; functor;</div>
@@ -650,7 +650,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span>    <span class="keywordflow">for</span>(std::size_t fieldIndex = 0; fieldIndex &lt; scatterFields_.size(); fieldIndex++) {</div>
 <div class="line"><a id="l00553" name="l00553"></a><span class="lineno">  553</span>      functor.offsets = scratch_offsets_[fieldIndex];</div>
 <div class="line"><a id="l00554" name="l00554"></a><span class="lineno">  554</span>      functor.field = scatterFields_[fieldIndex];</div>
-<div class="line"><a id="l00555" name="l00555"></a><span class="lineno">  555</span>      functor.num_params = Kokkos::dimension_scalar(scatterFields_[fieldIndex].get_view())-1;</div>
+<div class="line"><a id="l00555" name="l00555"></a><span class="lineno">  555</span>      functor.num_params = Sacado::dimension_scalar(scatterFields_[fieldIndex].get_view())-1;</div>
 <div class="line"><a id="l00556" name="l00556"></a><span class="lineno">  556</span> </div>
 <div class="line"><a id="l00557" name="l00557"></a><span class="lineno">  557</span>      Kokkos::parallel_for(workset.num_cells,functor);</div>
 <div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span>    }</div>
@@ -668,7 +668,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00570" name="l00570"></a><span class="lineno">  570</span>      <span class="keywordflow">if</span> (checkApplyBC_) functor.applyBC = applyBC_[fieldIndex];</div>
 <div class="line"><a id="l00571" name="l00571"></a><span class="lineno">  571</span>      functor.checkApplyBC = checkApplyBC_;</div>
 <div class="line"><a id="l00572" name="l00572"></a><span class="lineno">  572</span>      functor.basisIds = scratch_basisIds_[fieldIndex];</div>
-<div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span>      functor.num_params = Kokkos::dimension_scalar(scatterFields_[fieldIndex].get_view())-1;</div>
+<div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span>      functor.num_params = Sacado::dimension_scalar(scatterFields_[fieldIndex].get_view())-1;</div>
 <div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span> </div>
 <div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span>      Kokkos::parallel_for(workset.num_cells,functor);</div>
 <div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span>    }</div>
@@ -776,7 +776,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00672" name="l00672"></a><span class="lineno">  672</span>    Teuchos::RCP&lt;LOC&gt; tpetraContainer </div>
 <div class="line"><a id="l00673" name="l00673"></a><span class="lineno">  673</span>          = Teuchos::rcp_dynamic_cast&lt;LOC&gt;(d.gedc-&gt;getDataObject(<span class="stringliteral">&quot;Dirichlet Counter&quot;</span>),<span class="keyword">true</span>);</div>
 <div class="line"><a id="l00674" name="l00674"></a><span class="lineno">  674</span> </div>
-<div class="line"><a id="l00675" name="l00675"></a><span class="lineno">  675</span>    dirichletCounter_ = tpetraContainer-&gt;get_f();</div>
+<div class="line"><a id="l00675" name="l00675"></a><span class="lineno">  675</span>    dirichletCounter_ = tpetraContainer-&gt;get_f_mv();</div>
 <div class="line"><a id="l00676" name="l00676"></a><span class="lineno">  676</span>    TEUCHOS_ASSERT(!Teuchos::is_null(dirichletCounter_));</div>
 <div class="line"><a id="l00677" name="l00677"></a><span class="lineno">  677</span>  }</div>
 <div class="line"><a id="l00678" name="l00678"></a><span class="lineno">  678</span>}</div>
@@ -794,7 +794,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00688" name="l00688"></a><span class="lineno">  688</span>   std::string blockId = this-&gt;wda(workset).block_id;</div>
 <div class="line"><a id="l00689" name="l00689"></a><span class="lineno">  689</span>   <span class="keyword">const</span> std::vector&lt;std::size_t&gt; &amp; localCellIds = this-&gt;wda(workset).cell_local_ids;</div>
 <div class="line"><a id="l00690" name="l00690"></a><span class="lineno">  690</span> </div>
-<div class="line"><a id="l00691" name="l00691"></a><span class="lineno">  691</span>   Teuchos::RCP&lt;typename LOC::VectorType&gt; r = tpetraContainer_-&gt;get_f(); </div>
+<div class="line"><a id="l00691" name="l00691"></a><span class="lineno">  691</span>   Teuchos::RCP&lt;typename LOC::MultiVectorType&gt; r = tpetraContainer_-&gt;get_f_mv(); </div>
 <div class="line"><a id="l00692" name="l00692"></a><span class="lineno">  692</span>   Teuchos::RCP&lt;typename LOC::CrsMatrixType&gt; Jac = tpetraContainer_-&gt;get_A();</div>
 <div class="line"><a id="l00693" name="l00693"></a><span class="lineno">  693</span> </div>
 <div class="line"><a id="l00694" name="l00694"></a><span class="lineno">  694</span>   Teuchos::ArrayRCP&lt;double&gt; r_array = r-&gt;get1dViewNonConst();</div>

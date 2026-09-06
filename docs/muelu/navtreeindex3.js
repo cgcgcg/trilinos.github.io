@@ -82,6 +82,7 @@ var NAVTREEINDEX3 =
 "_mue_lu___inverse_approximation_factory__decl_8hpp.html#a304aa9a5ca5c12c27314a47e200f4c00":[11,0,2,3,20,1],
 "_mue_lu___inverse_approximation_factory__decl_8hpp_source.html":[11,0,2,3,20],
 "_mue_lu___inverse_approximation_factory__def_8hpp.html":[11,0,2,3,21],
+"_mue_lu___inverse_approximation_factory__def_8hpp.html#a0fc232bd6f40b2ee02df67bd3c912662":[11,0,2,3,21,1],
 "_mue_lu___inverse_approximation_factory__def_8hpp_source.html":[11,0,2,3,21],
 "_mue_lu___inverse_approximation_factory__fwd_8hpp.html":[11,0,2,9,0,78],
 "_mue_lu___inverse_approximation_factory__fwd_8hpp.html#a304aa9a5ca5c12c27314a47e200f4c00":[11,0,2,9,0,78,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX3 =
 "_mue_lu___matlab_utils_8cpp.html#a597c70ada81048a2cfe5f6db62ec8765":[11,0,1,0,3,7],
 "_mue_lu___matlab_utils_8cpp.html#a5a8539ae59725271d5f9e1f873637463":[11,0,1,0,3,20],
 "_mue_lu___matlab_utils_8cpp.html#a5b737c4978e82da017a8470b37657db1":[11,0,1,0,3,19],
-"_mue_lu___matlab_utils_8cpp.html#a5fa9069fb64986ee28cfba460e96b38e":[11,0,1,0,3,40],
-"_mue_lu___matlab_utils_8cpp.html#a7de7a50f215b0f5bd6ad6906ce95ee0c":[11,0,1,0,3,1]
+"_mue_lu___matlab_utils_8cpp.html#a5fa9069fb64986ee28cfba460e96b38e":[11,0,1,0,3,40]
 };
