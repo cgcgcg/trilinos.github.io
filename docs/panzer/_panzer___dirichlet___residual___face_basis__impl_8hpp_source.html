@@ -100,7 +100,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;Intrepid2_CellTools.hpp&quot;</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;Kokkos_ViewFactory.hpp&quot;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;Sacado_Fad_Kokkos_ViewFactory.hpp&quot;</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacepanzer.html">panzer</a> {</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
@@ -166,7 +166,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>{</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  orientations = sd.<a class="code hl_variable" href="structpanzer_1_1_traits_1_1_s_d.html#a6cde08f1857df34be0f9dd7aeda9fcc1">orientations_</a>;</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  this-&gt;utils.setFieldData(pointValues.jac,fm);</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  faceNormal = Kokkos::createDynRankView(residual.get_static_view(),<span class="stringliteral">&quot;faceNormal&quot;</span>,dof.extent(0),dof.extent(1),dof.extent(2));</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  faceNormal = Sacado::createDynRankView(residual.get_static_view(),<span class="stringliteral">&quot;faceNormal&quot;</span>,dof.extent(0),dof.extent(1),dof.extent(2));</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>}</div>
 </div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
@@ -194,11 +194,11 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>  <span class="keywordflow">if</span>(workset.<a class="code hl_variable" href="classpanzer_1_1_workset_details.html#a697e6b93372f86f0f782d1ffe8eccc01">num_cells</a>&lt;=0)</div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>  <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    Intrepid2::CellTools&lt;PHX::exec_space&gt;::getPhysicalFaceNormals(faceNormal,</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    Intrepid2::CellTools&lt;PHX::Device&gt;::getPhysicalFaceNormals(faceNormal,</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>                                                                  pointValues.jac.get_view(),</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>                                                                  subcellOrd,</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>                                                                  parentCell);</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    PHX::Device().fence();</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    PHX::ExecutionSpace().fence();</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <span class="keyword">const</span> <span class="keyword">auto</span> subcellBaseTopo = shards::CellTopology(parentCell.getBaseCellTopologyData(subcellDim, subcellOrd));</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    TEUCHOS_ASSERT(subcellBaseTopo.getBaseKey() == shards::Triangle&lt;&gt;::key ||</div>
