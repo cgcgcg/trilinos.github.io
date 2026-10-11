@@ -74,6 +74,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#typedef-members">Typedefs</a>  </div>
   <div class="headertitle"><div class="title">Panzer_NodeType.hpp File Reference</div></div>
@@ -81,16 +82,19 @@ $(function() {
 <div class="contents">
 <div class="textblock"><code>#include &quot;Phalanx_KokkosDeviceTypes.hpp&quot;</code><br />
 <code>#include &lt;Tpetra_KokkosCompat_ClassicNodeAPI_Wrapper.hpp&gt;</code><br />
+<code>#include &lt;type_traits&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for Panzer_NodeType.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="_panzer___node_type_8hpp__incl.gif" border="0" usemap="#a_panzer___node_type_8hpp" alt=""/></div>
 <map name="a_panzer___node_type_8hpp" id="a_panzer___node_type_8hpp">
-<area shape="rect" title=" " alt="" coords="167,5,331,31"/>
+<area shape="rect" title=" " alt="" coords="294,5,458,31"/>
 <area shape="rect" title=" " alt="" coords="5,86,243,111"/>
-<area shape="poly" title=" " alt="" coords="232,33,156,81,153,76,229,29"/>
+<area shape="poly" title=" " alt="" coords="340,33,175,84,173,79,339,28"/>
 <area shape="rect" title=" " alt="" coords="267,79,485,119"/>
-<area shape="poly" title=" " alt="" coords="269,29,335,69,332,73,267,33"/>
+<area shape="poly" title=" " alt="" coords="379,31,379,65,373,65,373,31"/>
+<area shape="rect" title=" " alt="" coords="510,86,602,111"/>
+<area shape="poly" title=" " alt="" coords="403,28,518,78,516,83,401,33"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -98,145 +102,156 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="_panzer___node_type_8hpp__dep__incl.gif" border="0" usemap="#a_panzer___node_type_8hppdep" alt=""/></div>
 <map name="a_panzer___node_type_8hppdep" id="a_panzer___node_type_8hppdep">
-<area shape="rect" title=" " alt="" coords="3414,5,3578,31"/>
-<area shape="rect" href="_panzer___blocked_d_o_f_manager_8hpp.html" title=" " alt="" coords="2394,196,2628,221"/>
-<area shape="poly" title=" " alt="" coords="3400,23,3120,29,2769,39,2462,56,2361,68,2331,74,2317,81,2308,93,2306,105,2309,118,2317,132,2337,154,2363,171,2391,184,2420,193,2418,198,2389,189,2360,176,2334,158,2313,135,2304,120,2301,105,2303,91,2313,77,2329,69,2360,62,2461,51,2768,34,3120,23,3400,18"/>
-<area shape="rect" href="_panzer___blocked_tpetra_linear_obj_factory_8cpp.html" title=" " alt="" coords="27,372,232,412"/>
-<area shape="poly" title=" " alt="" coords="3401,23,2773,27,1844,38,950,56,621,67,427,81,361,87,301,87,197,87,151,93,107,109,65,138,22,183,10,207,9,232,16,258,30,284,68,333,108,370,104,374,65,336,25,287,11,260,4,233,5,205,18,180,61,134,105,104,150,88,197,81,301,82,361,81,427,76,621,62,950,50,1844,33,2773,22,3400,17"/>
-<area shape="rect" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp.html" title=" " alt="" coords="2312,372,2518,412"/>
-<area shape="poly" title=" " alt="" coords="3592,17,3948,19,4415,27,4639,35,4830,45,4967,59,5010,67,5031,77,5041,91,5042,105,5032,135,5013,157,4977,190,4915,238,4855,255,4765,271,4507,300,4174,325,3798,345,3048,376,2518,391,2518,386,3048,370,3798,340,4174,319,4507,295,4764,266,4854,250,4912,234,4973,186,5009,153,5027,132,5037,104,5036,92,5028,81,5008,72,4966,64,4830,50,4639,40,4415,33,3948,24,3592,22"/>
-<area shape="rect" href="_panzer___blocked_tpetra_linear_obj_container_8hpp.html" title=" " alt="" coords="439,86,644,126"/>
-<area shape="poly" title=" " alt="" coords="3401,22,2873,24,2089,32,1282,50,945,64,690,81,636,89,635,83,689,76,944,58,1282,44,2088,27,2873,19,3401,17"/>
-<area shape="rect" href="_panzer___d_o_f_manager_8hpp.html" title=" " alt="" coords="3019,93,3203,119"/>
-<area shape="poly" title=" " alt="" coords="3427,36,3217,81,3156,96,3155,91,3216,76,3426,31"/>
-<area shape="rect" href="_panzer___filtered___global_indexer_8cpp.html" title=" " alt="" coords="2326,93,2570,119"/>
-<area shape="poly" title=" " alt="" coords="3401,25,3043,41,2817,58,2590,81,2502,96,2501,91,2589,76,2817,52,3043,36,3400,19"/>
-<area shape="rect" href="_panzer___gather_solution___tpetra__decl_8hpp.html" title=" " alt="" coords="3774,189,3944,229"/>
-<area shape="poly" title=" " alt="" coords="3485,44,3476,65,3470,89,3470,112,3480,132,3500,147,3531,157,3612,168,3698,172,3763,179,3794,186,3792,191,3762,184,3697,178,3612,173,3530,162,3498,151,3475,135,3465,113,3465,88,3471,63,3480,42"/>
-<area shape="rect" href="_panzer___gather_tangent___tpetra__decl_8hpp.html" title=" " alt="" coords="3968,189,4134,229"/>
-<area shape="poly" title=" " alt="" coords="3497,44,3501,90,3509,113,3523,131,3558,151,3607,163,3666,170,3730,172,3858,173,3913,174,3957,179,3989,186,3987,191,3956,184,3913,179,3858,178,3730,177,3665,175,3606,168,3556,156,3520,135,3504,115,3496,91,3491,45"/>
-<area shape="rect" href="_panzer___global_indexer___epetra_utilities_8hpp.html" title=" " alt="" coords="2832,86,2995,126"/>
-<area shape="poly" title=" " alt="" coords="3400,29,3217,48,3112,63,3007,81,2977,88,2975,83,3006,76,3111,58,3217,43,3400,24"/>
-<area shape="rect" href="_panzer___global_indexer___utilities_8hpp.html" title=" " alt="" coords="2646,86,2808,126"/>
-<area shape="poly" title=" " alt="" coords="3400,25,3138,41,2979,58,2821,81,2788,89,2787,83,2820,76,2978,52,3137,36,3400,20"/>
-<area shape="rect" href="_panzer___local_partitioning_utilities_8cpp.html" title=" " alt="" coords="3228,86,3408,126"/>
-<area shape="poly" title=" " alt="" coords="3461,39,3358,88,3356,83,3459,34"/>
-<area shape="rect" href="_panzer___mass_matrix_model_evaluator_8hpp.html" title=" " alt="" coords="702,93,979,119"/>
-<area shape="poly" title=" " alt="" coords="3400,23,2926,27,2235,37,1530,55,1234,67,1011,81,902,96,902,91,1011,76,1234,62,1529,50,2235,32,2926,22,3400,17"/>
-<area shape="rect" href="_panzer___model_evaluator_8hpp.html" title=" " alt="" coords="1022,93,1224,119"/>
-<area shape="poly" title=" " alt="" coords="3401,25,1224,104,1224,98,3400,20"/>
-<area shape="rect" href="_panzer___s_t_k___model_evaluator_factory_8hpp.html" title=" " alt="" coords="1029,189,1236,229"/>
-<area shape="poly" title=" " alt="" coords="3401,25,2964,43,2753,60,2678,70,2635,81,2619,93,2611,108,2601,123,2584,136,2548,146,2494,155,2339,167,2142,173,1923,176,1505,178,1349,179,1255,184,1211,191,1210,186,1255,179,1348,174,1505,172,1923,171,2142,168,2339,162,2493,150,2547,141,2582,131,2597,119,2606,105,2615,90,2632,76,2677,65,2752,54,2963,38,3400,19"/>
-<area shape="rect" href="_panzer___orientations_interface_8cpp.html" title=" " alt="" coords="3824,93,4062,119"/>
-<area shape="poly" title=" " alt="" coords="3572,31,3813,76,3887,91,3886,96,3812,81,3571,36"/>
-<area shape="rect" href="_panzer___s_t_k___local_mesh_utilities_8cpp.html" title=" " alt="" coords="4086,93,4336,119"/>
-<area shape="poly" title=" " alt="" coords="3592,24,3813,44,4074,76,4157,91,4156,96,4073,81,3812,50,3592,29"/>
-<area shape="rect" href="_panzer___s_t_k___periodic_b_c___matcher_8cpp.html" title=" " alt="" coords="4361,86,4536,126"/>
-<area shape="poly" title=" " alt="" coords="3592,18,3739,22,3928,31,4138,49,4349,76,4384,83,4383,89,4348,81,4137,54,3927,37,3738,27,3592,23"/>
-<area shape="rect" href="_panzer___s_t_k___periodic_b_c___search_8cpp.html" title=" " alt="" coords="4560,86,4734,126"/>
-<area shape="poly" title=" " alt="" coords="3592,16,3770,17,4009,25,4278,43,4415,58,4549,76,4584,83,4583,89,4548,81,4414,63,4277,48,4008,30,3770,22,3592,21"/>
-<area shape="rect" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp.html" title=" " alt="" coords="4424,189,4654,229"/>
-<area shape="poly" title=" " alt="" coords="3592,17,3937,20,4389,28,4605,36,4789,46,4921,59,4962,67,4983,77,4993,91,4996,106,4993,120,4983,136,4865,159,4654,193,4653,187,4864,154,4980,131,4988,118,4991,106,4988,93,4980,81,4961,72,4921,64,4789,51,4605,41,4389,33,3937,25,3592,22"/>
-<area shape="rect" href="_panzer___scatter_residual___tpetra__decl_8hpp.html" title=" " alt="" coords="4726,189,4901,229"/>
-<area shape="poly" title=" " alt="" coords="3592,17,3943,19,4402,28,4622,35,4810,45,4944,59,4986,67,5007,77,5017,91,5020,105,5016,120,5008,135,4986,158,4960,176,4931,189,4902,199,4900,194,4929,184,4958,172,4983,154,5003,132,5011,118,5014,105,5012,93,5004,81,4984,72,4944,64,4809,51,4622,40,4402,33,3943,25,3592,22"/>
-<area shape="rect" href="_panzer___tpetra_linear_obj_container_8hpp.html" title=" " alt="" coords="3534,93,3800,119"/>
-<area shape="poly" title=" " alt="" coords="3532,34,3645,91,3642,95,3530,39"/>
-<area shape="rect" href="_panzer___tpetra_linear_obj_factory__decl_8hpp.html" title=" " alt="" coords="5000,189,5222,229"/>
-<area shape="poly" title=" " alt="" coords="3592,17,3969,18,4468,25,4708,33,4913,43,5060,58,5105,66,5129,77,5138,89,5143,104,5143,134,5135,164,5124,189,5119,187,5130,163,5137,134,5137,105,5133,92,5125,81,5104,71,5059,63,4912,49,4708,38,4468,31,3969,23,3592,22"/>
-<area shape="rect" href="_panzer___tpetra_linear_obj_factory_8cpp.html" title=" " alt="" coords="5184,291,5432,317"/>
-<area shape="poly" title=" " alt="" coords="3592,18,4474,36,4948,53,5120,64,5222,76,5300,89,5364,100,5393,110,5420,125,5445,148,5470,180,5478,195,5481,209,5478,223,5470,238,5452,258,5430,274,5381,294,5379,289,5428,269,5449,254,5466,234,5473,221,5476,209,5473,196,5466,183,5441,151,5417,129,5391,115,5363,105,5299,94,5221,81,5119,69,4947,58,4474,41,3592,23"/>
-<area shape="rect" href="_panzer___tpetra_vector___read_only___global_evaluation_data_8cpp.html" title=" " alt="" coords="5246,181,5456,236"/>
-<area shape="poly" title=" " alt="" coords="3592,17,3955,21,4441,30,4892,47,5056,60,5114,68,5153,76,5203,97,5250,124,5323,179,5320,183,5247,128,5201,102,5151,81,5113,73,5056,65,4892,53,4441,35,3955,26,3592,22"/>
-<area shape="rect" href="_panzer___tpetra_vector___read_only___global_evaluation_data_8hpp.html" title=" " alt="" coords="4759,79,4970,133"/>
-<area shape="poly" title=" " alt="" coords="3592,16,3800,17,4087,24,4415,42,4583,57,4747,76,4759,78,4758,83,4746,81,4583,62,4415,48,4087,29,3800,22,3592,21"/>
-<area shape="rect" href="_panzer___blocked_d_o_f_manager_8cpp.html" title=" " alt="" coords="1487,291,1722,317"/>
-<area shape="poly" title=" " alt="" coords="2446,227,2375,239,2195,258,2055,265,1914,271,1734,287,1677,294,1676,289,1733,281,1914,266,2054,260,2195,252,2374,233,2445,221"/>
-<area shape="rect" href="_panzer___blocked_d_o_f_manager_factory_8cpp.html" title=" " alt="" coords="1746,284,1954,324"/>
-<area shape="poly" title=" " alt="" coords="2443,227,2375,239,2260,254,2171,264,1966,287,1954,288,1953,283,1965,281,2170,258,2260,249,2374,233,2442,221"/>
-<area shape="rect" href="_panzer___blocked_epetra_linear_obj_factory_8hpp.html" title=" " alt="" coords="1978,284,2183,324"/>
-<area shape="poly" title=" " alt="" coords="2445,227,2168,287,2166,281,2444,222"/>
-<area shape="rect" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp.html" title=" " alt="" coords="194,284,399,324"/>
-<area shape="poly" title=" " alt="" coords="2449,227,2375,239,2077,264,1824,274,1601,273,1393,267,1185,260,962,258,709,265,411,287,400,288,399,283,411,281,709,260,962,253,1185,255,1393,262,1601,268,1824,269,2077,259,2375,233,2448,221"/>
-<area shape="poly" title=" " alt="" coords="2508,235,2495,278,2475,325,2456,351,2437,374,2433,370,2452,348,2470,323,2490,277,2503,234"/>
-<area shape="rect" href="_panzer___gather_solution___blocked_tpetra__impl_8hpp.html" title=" " alt="" coords="1148,284,1335,324"/>
-<area shape="poly" title=" " alt="" coords="2447,227,2375,239,2123,263,1926,271,1728,275,1475,287,1335,297,1335,292,1475,281,1728,269,1926,265,2122,258,2375,233,2446,222"/>
-<area shape="rect" href="_panzer___gather_tangent___blocked_tpetra__impl_8hpp.html" title=" " alt="" coords="423,284,610,324"/>
-<area shape="poly" title=" " alt="" coords="2449,227,2375,239,2109,262,1883,271,1684,270,1498,265,1313,259,1114,258,888,265,622,287,610,288,609,283,621,281,888,260,1114,252,1313,254,1498,259,1684,265,1883,265,2109,256,2375,233,2448,222"/>
-<area shape="rect" href="_panzer___response_evaluator_factory___functional__impl_8hpp.html" title=" " alt="" coords="2789,284,2996,324"/>
-<area shape="poly" title=" " alt="" coords="2571,222,2816,281,2815,287,2570,227"/>
-<area shape="rect" href="_panzer___s_t_k___setup_l_o_w_s_factory_8hpp.html" title=" " alt="" coords="2208,291,2460,317"/>
-<area shape="poly" title=" " alt="" coords="2478,230,2357,294,2354,289,2476,225"/>
-<area shape="rect" href="_panzer___scatter_dirichlet_residual___blocked_epetra__impl_8hpp.html" title=" " alt="" coords="2535,284,2764,324"/>
-<area shape="poly" title=" " alt="" coords="2541,227,2623,282,2620,286,2538,231"/>
-<area shape="rect" href="_panzer___scatter_dirichlet_residual___blocked_tpetra__impl_8hpp.html" title=" " alt="" coords="634,284,863,324"/>
-<area shape="poly" title=" " alt="" coords="2449,227,2375,239,2155,259,1969,270,1804,274,1651,273,1333,270,1146,275,926,287,863,292,863,287,925,281,1146,269,1333,265,1651,267,1804,268,1968,265,2155,254,2375,233,2448,221"/>
-<area shape="rect" href="_panzer___scatter_residual___blocked_tpetra__impl_8hpp.html" title=" " alt="" coords="938,284,1124,324"/>
-<area shape="poly" title=" " alt="" coords="2447,227,2375,239,2187,256,2027,264,1887,266,1756,264,1624,262,1484,263,1324,270,1136,287,1125,288,1124,283,1136,281,1324,265,1484,258,1625,257,1756,259,1887,260,2027,259,2187,251,2375,233,2447,222"/>
-<area shape="poly" title=" " alt="" coords="249,333,167,374,165,370,246,328"/>
-<area shape="poly" title=" " alt="" coords="413,321,594,335,828,346,1380,365,2311,386,2311,392,1380,371,828,352,594,340,412,327"/>
-<area shape="poly" title=" " alt="" coords="2356,325,2399,370,2395,373,2352,329"/>
-<area shape="poly" title=" " alt="" coords="425,110,315,115,200,127,147,136,101,149,64,164,40,183,28,203,29,221,41,236,62,250,123,272,194,287,193,292,122,277,60,255,38,240,24,222,23,202,36,180,61,160,99,144,146,131,199,122,315,110,425,105"/>
-<area shape="poly" title=" " alt="" coords="583,132,645,179,659,195,669,210,678,222,695,234,756,260,810,274,860,280,908,280,1009,275,1068,275,1137,281,1148,283,1148,288,1136,287,1068,280,1009,280,908,286,859,286,809,280,754,265,692,238,675,226,664,213,655,199,641,183,580,136"/>
-<area shape="poly" title=" " alt="" coords="540,140,521,284,516,283,535,139"/>
-<area shape="poly" title=" " alt="" coords="551,139,569,187,583,212,601,234,638,262,681,281,678,286,636,267,597,238,579,215,564,190,546,141"/>
-<area shape="poly" title=" " alt="" coords="567,135,616,196,651,234,691,246,764,260,938,287,937,292,763,265,689,251,648,238,612,199,563,139"/>
-<area shape="rect" href="_panzer___scatter_dirichlet_residual___blocked_tpetra_8hpp.html" title=" " alt="" coords="50,189,279,229"/>
-<area shape="poly" title=" " alt="" coords="459,132,236,191,234,186,457,127"/>
-<area shape="rect" href="_panzer___scatter_residual___blocked_tpetra_8hpp.html" title=" " alt="" coords="304,189,478,229"/>
-<area shape="poly" title=" " alt="" coords="503,136,421,191,418,186,500,131"/>
-<area shape="poly" title=" " alt="" coords="204,235,271,282,268,286,201,239"/>
-<area shape="poly" title=" " alt="" coords="364,240,317,286,313,282,360,237"/>
-<area shape="poly" title=" " alt="" coords="3056,125,3007,136,2589,199,2588,193,3006,131,3055,120"/>
-<area shape="poly" title=" " alt="" coords="3167,119,3217,131,3273,139,3336,143,3455,152,3502,160,3533,176,3541,187,3542,202,3536,218,3522,238,3503,252,3470,266,3374,291,3245,314,3094,335,2777,367,2519,387,2518,381,2777,361,3094,329,3244,309,3373,286,3469,261,3500,248,3518,234,3531,216,3536,201,3536,189,3529,180,3500,165,3455,157,3335,149,3273,144,3216,136,3166,125"/>
-<area shape="rect" href="_panzer___d_o_f_manager_8cpp.html" title=" " alt="" coords="3325,196,3508,221"/>
-<area shape="poly" title=" " alt="" coords="3160,120,3382,193,3381,199,3158,126"/>
-<area shape="rect" href="_panzer___d_o_f_manager_factory_8cpp.html" title=" " alt="" coords="3071,196,3300,221"/>
-<area shape="poly" title=" " alt="" coords="3130,128,3179,194,3175,198,3125,131"/>
-<area shape="rect" href="_panzer___gather_solution___tpetra__impl_8hpp.html" title=" " alt="" coords="4158,189,4328,229"/>
-<area shape="poly" title=" " alt="" coords="3163,120,3217,131,3357,147,3477,155,3583,155,3682,153,3781,151,3887,152,4006,160,4147,179,4182,186,4181,191,4146,184,4006,166,3886,158,3781,156,3682,158,3583,161,3477,160,3357,153,3216,136,3162,125"/>
-<area shape="rect" href="_panzer___gather_tangent___tpetra__impl_8hpp.html" title=" " alt="" coords="3584,189,3750,229"/>
-<area shape="poly" title=" " alt="" coords="3166,119,3217,131,3314,146,3390,155,3467,163,3565,179,3598,186,3597,191,3564,184,3466,168,3390,160,3313,152,3216,136,3165,125"/>
-<area shape="poly" title=" " alt="" coords="2651,132,2627,136,2533,142,2377,144,1958,145,1740,147,1543,154,1389,165,1335,173,1300,184,1284,195,1276,210,1266,225,1249,238,1214,252,1172,263,1073,277,958,283,836,285,596,282,493,282,411,287,400,288,399,283,411,281,493,277,596,276,836,279,958,278,1072,272,1171,257,1212,247,1247,234,1263,222,1271,207,1280,192,1298,179,1334,168,1388,160,1542,148,1739,142,1958,140,2377,139,2533,136,2627,131,2650,126"/>
-<area shape="poly" title=" " alt="" coords="2808,127,2982,179,3012,215,3030,251,3033,270,3031,288,3024,307,3010,326,2986,339,2941,350,2812,368,2659,381,2519,389,2518,384,2658,376,2812,363,2940,345,2984,334,3006,322,3019,305,3026,287,3028,270,3025,253,3007,218,2979,184,2806,132"/>
-<area shape="poly" title=" " alt="" coords="2806,127,2905,158,2959,179,2967,194,2969,208,2960,237,2943,264,2921,286,2917,282,2939,261,2955,235,2964,207,2962,196,2956,183,2903,163,2804,133"/>
-<area shape="poly" title=" " alt="" coords="2713,140,2693,182,2658,285,2653,283,2688,180,2708,138"/>
-<area shape="poly" title=" " alt="" coords="2802,127,2821,131,2958,150,3066,156,3175,161,3313,179,3377,193,3376,199,3312,184,3174,166,3066,161,2957,155,2820,136,2801,132"/>
-<area shape="poly" title=" " alt="" coords="2806,127,2821,131,3129,193,3128,199,2820,136,2805,132"/>
-<area shape="rect" href="_panzer___gather_orientation__impl_8hpp.html" title=" " alt="" coords="1311,189,1500,229"/>
-<area shape="poly" title=" " alt="" coords="2651,132,2627,136,2459,156,2315,165,2188,165,2070,161,1951,158,1825,157,1681,165,1513,184,1474,191,1473,186,1512,179,1681,160,1824,152,1951,152,2070,156,2188,160,2315,159,2458,151,2626,131,2650,126"/>
-<area shape="rect" href="_panzer___gather_solution___blocked_epetra__impl_8hpp.html" title=" " alt="" coords="1524,189,1711,229"/>
-<area shape="poly" title=" " alt="" coords="2650,132,2627,136,2490,153,2374,161,2271,163,2175,161,2079,159,1976,160,1860,167,1723,184,1686,191,1685,186,1722,179,1859,162,1976,155,2079,154,2175,156,2271,157,2374,156,2490,148,2626,131,2649,127"/>
-<area shape="rect" href="_panzer___gather_tangent___blocked_epetra__impl_8hpp.html" title=" " alt="" coords="1735,189,1922,229"/>
-<area shape="poly" title=" " alt="" coords="2649,132,2627,136,2522,150,2433,158,2280,161,2128,163,2039,170,1934,184,1897,191,1896,186,1933,179,2038,165,2128,158,2280,155,2433,152,2522,145,2626,131,2648,126"/>
-<area shape="rect" href="_panzer___global_indexer___utilities_8cpp.html" title=" " alt="" coords="1946,189,2108,229"/>
-<area shape="poly" title=" " alt="" coords="2648,132,2627,136,2485,154,2374,159,2262,165,2197,172,2121,184,2089,191,2088,186,2120,179,2196,166,2262,159,2373,154,2485,149,2626,131,2647,127"/>
-<area shape="rect" href="_panzer___response_scatter_evaluator___functional_8hpp.html" title=" " alt="" coords="2703,189,2946,229"/>
-<area shape="poly" title=" " alt="" coords="2757,134,2808,187,2804,190,2753,138"/>
-<area shape="rect" href="_panzer___scatter_residual___blocked_epetra__impl_8hpp.html" title=" " alt="" coords="2132,189,2319,229"/>
-<area shape="poly" title=" " alt="" coords="2645,132,2627,136,2483,161,2338,184,2304,191,2303,186,2337,179,2482,155,2626,131,2644,127"/>
-<area shape="poly" title=" " alt="" coords="2848,238,2881,282,2876,286,2844,241"/>
-<area shape="rect" href="_panzer___explicit_model_evaluator_8hpp.html" title=" " alt="" coords="705,196,954,221"/>
-<area shape="poly" title=" " alt="" coords="840,133,833,196,828,196,835,132"/>
-<area shape="poly" title=" " alt="" coords="844,232,876,280,900,303,927,322,959,332,1008,342,1150,357,1335,369,1546,377,1978,386,2311,388,2311,393,1978,391,1545,383,1334,374,1149,363,1007,347,957,337,924,326,896,308,872,283,839,235"/>
-<area shape="poly" title=" " alt="" coords="1083,127,1047,150,1032,165,1020,183,1010,210,1012,222,1019,234,1044,251,1080,262,1124,269,1173,272,1272,275,1347,281,1384,292,1412,302,1439,312,1475,321,1590,340,1708,356,1940,376,2149,386,2311,388,2311,394,2149,391,1940,381,1707,361,1589,346,1474,327,1438,317,1410,307,1382,297,1346,287,1272,280,1173,277,1124,274,1079,267,1041,256,1016,238,1007,224,1005,210,1015,180,1028,162,1044,146,1080,123"/>
-<area shape="poly" title=" " alt="" coords="1077,126,864,199,862,193,1076,121"/>
-<area shape="poly" title=" " alt="" coords="1128,132,1133,188,1128,189,1123,133"/>
-<area shape="poly" title=" " alt="" coords="3558,123,3420,136,3224,140,2897,145,2572,157,2452,168,2410,175,2383,184,2367,196,2359,210,2349,225,2332,238,2295,246,2225,253,2005,263,1374,275,742,281,411,287,400,288,399,283,411,281,742,276,1374,270,2005,258,2225,248,2294,241,2330,234,2345,222,2354,207,2363,192,2380,179,2409,170,2451,163,2572,152,2897,140,3224,135,3420,131,3558,118"/>
-<area shape="poly" title=" " alt="" coords="3741,118,3813,131,3980,152,4054,162,4147,179,4179,186,4177,191,4146,184,4053,167,3980,158,3812,136,3740,124"/>
-<area shape="poly" title=" " alt="" coords="3670,132,3670,189,3664,189,3664,132"/>
-<area shape="poly" title=" " alt="" coords="3702,123,3824,186,3821,191,3700,128"/>
-<area shape="poly" title=" " alt="" coords="3726,119,3957,179,3984,186,3982,191,3956,184,3725,125"/>
-<area shape="poly" title=" " alt="" coords="3738,119,3813,131,3961,148,4076,157,4192,165,4340,179,4424,189,4424,194,4340,184,4191,170,4076,162,3960,153,3812,136,3737,124"/>
-<area shape="poly" title=" " alt="" coords="3735,119,3813,131,3942,144,4052,151,4239,155,4426,159,4536,166,4666,179,4726,188,4726,193,4665,184,4536,171,4426,164,4239,160,4051,156,3941,149,3812,136,3734,124"/>
-<area shape="poly" title=" " alt="" coords="3734,119,3813,131,3980,146,4121,155,4362,159,4604,161,4746,167,4914,179,5000,188,4999,194,4913,184,4746,172,4604,166,4362,164,4121,160,3979,152,3812,136,3733,124"/>
-<area shape="poly" title=" " alt="" coords="5164,232,5285,289,5283,294,5162,237"/>
-<area shape="poly" title=" " alt="" coords="4746,136,4578,162,4413,184,4328,197,4327,192,4412,179,4577,157,4745,131"/>
-<area shape="poly" title=" " alt="" coords="4984,128,5235,179,5246,181,5245,186,5234,184,4983,133"/>
+<area shape="rect" title=" " alt="" coords="3938,5,4102,31"/>
+<area shape="rect" href="_panzer___blocked_d_o_f_manager_8hpp.html" title=" " alt="" coords="2161,196,2396,221"/>
+<area shape="poly" title=" " alt="" coords="3924,22,3575,24,3109,32,2879,39,2678,49,2522,63,2467,72,2432,81,2385,106,2344,139,2312,172,2289,198,2285,194,2308,168,2341,135,2382,102,2430,76,2466,67,2521,58,2677,44,2879,34,3109,26,3575,18,3924,17"/>
+<area shape="rect" href="_panzer___blocked_tpetra_linear_obj_factory_8cpp.html" title=" " alt="" coords="5,372,211,412"/>
+<area shape="poly" title=" " alt="" coords="3924,22,3106,28,1868,39,724,57,346,68,234,74,185,81,148,99,123,119,103,145,85,182,72,220,68,251,71,283,80,323,88,348,99,370,94,373,83,350,75,325,66,284,63,251,67,219,80,180,99,143,119,116,146,95,183,76,234,69,346,63,723,51,1868,34,3106,22,3924,17"/>
+<area shape="rect" href="_panzer___s_t_k___model_evaluator_factory__impl_8hpp.html" title=" " alt="" coords="3225,372,3431,412"/>
+<area shape="poly" title=" " alt="" coords="3924,22,3524,25,2904,33,2163,51,1779,64,1401,81,1272,82,1108,77,922,70,727,66,536,71,446,78,361,89,283,104,214,125,156,151,110,183,93,205,89,227,91,253,91,284,85,306,85,314,90,322,127,332,217,341,525,356,961,367,1472,376,2511,385,3224,388,3224,393,2511,390,1472,381,961,373,525,361,216,346,126,337,86,326,80,316,80,306,85,284,85,253,84,227,88,203,106,179,153,146,213,120,282,99,360,84,445,73,536,66,727,61,922,64,1108,71,1272,77,1401,76,1778,59,2163,46,2904,28,3524,20,3924,17"/>
+<area shape="rect" href="_panzer___scatter_dirichlet_residual___blocked_tpetra__impl_8hpp.html" title=" " alt="" coords="1961,284,2191,324"/>
+<area shape="poly" title=" " alt="" coords="3925,23,3559,28,3067,38,2609,56,2442,67,2345,81,2285,98,2239,117,2198,143,2151,183,2129,208,2111,235,2086,285,2081,282,2106,233,2125,205,2147,179,2195,138,2237,112,2283,93,2343,76,2442,62,2608,50,3067,33,3559,22,3925,18"/>
+<area shape="rect" href="_panzer___scatter_residual___blocked_tpetra__impl_8hpp.html" title=" " alt="" coords="1751,284,1937,324"/>
+<area shape="poly" title=" " alt="" coords="3924,23,3435,29,2757,41,2149,58,1952,69,1895,75,1871,81,1853,102,1841,128,1834,156,1831,185,1834,240,1842,283,1836,284,1829,241,1826,185,1829,155,1836,126,1849,100,1868,76,1894,70,1952,64,2149,53,2757,35,3435,24,3924,18"/>
+<area shape="rect" href="_panzer___blocked_tpetra_linear_obj_container_8hpp.html" title=" " alt="" coords="1881,86,2087,126"/>
+<area shape="poly" title=" " alt="" coords="3924,23,3548,27,3023,37,2493,54,2273,66,2106,81,2062,89,2061,83,2105,76,2272,61,2493,49,3023,31,3548,22,3924,17"/>
+<area shape="rect" href="_panzer___d_o_f_manager_8hpp.html" title=" " alt="" coords="2443,93,2627,119"/>
+<area shape="poly" title=" " alt="" coords="3924,26,3473,48,2879,81,2627,100,2627,94,2878,76,3473,42,3924,21"/>
+<area shape="rect" href="_panzer___face_to_element_8hpp.html" title=" " alt="" coords="4573,93,4771,119"/>
+<area shape="poly" title=" " alt="" coords="4116,24,4321,43,4560,76,4629,91,4628,96,4560,81,4320,49,4116,29"/>
+<area shape="rect" href="_panzer___local_partitioning_utilities_8cpp.html" title=" " alt="" coords="4955,189,5135,229"/>
+<area shape="poly" title=" " alt="" coords="4116,16,4279,18,4472,27,4655,45,4728,59,4784,76,4803,89,4814,103,4825,117,4841,131,4906,163,4972,186,4970,191,4904,168,4839,136,4821,121,4810,106,4799,93,4782,81,4727,64,4654,50,4472,32,4279,24,4116,22"/>
+<area shape="rect" href="_panzer___s_t_k___local_mesh_utilities_8cpp.html" title=" " alt="" coords="5160,196,5411,221"/>
+<area shape="poly" title=" " alt="" coords="4116,16,4288,17,4495,24,4598,32,4692,43,4771,57,4831,76,4849,89,4860,104,4870,118,4887,131,4923,148,4955,158,5013,167,5073,170,5148,179,5226,193,5225,199,5148,184,5072,175,5012,172,4954,163,4921,153,4884,136,4866,122,4855,107,4845,93,4828,81,4770,62,4691,48,4597,37,4495,30,4288,22,4116,21"/>
+<area shape="rect" href="_panzer___filtered___global_indexer_8cpp.html" title=" " alt="" coords="4897,93,5141,119"/>
+<area shape="poly" title=" " alt="" coords="4116,20,4453,37,4665,53,4878,76,4965,91,4964,96,4877,81,4664,59,4453,42,4116,25"/>
+<area shape="rect" href="_panzer___gather_solution___tpetra__decl_8hpp.html" title=" " alt="" coords="3294,189,3463,229"/>
+<area shape="poly" title=" " alt="" coords="3924,26,3630,45,3498,61,3452,71,3427,81,3406,104,3393,134,3385,163,3382,189,3377,188,3380,162,3388,132,3402,102,3424,76,3451,65,3497,56,3630,40,3924,21"/>
+<area shape="rect" href="_panzer___gather_tangent___tpetra__decl_8hpp.html" title=" " alt="" coords="3487,189,3654,229"/>
+<area shape="poly" title=" " alt="" coords="3982,38,3616,191,3614,186,3979,33"/>
+<area shape="rect" href="_panzer___global_indexer___epetra_utilities_8hpp.html" title=" " alt="" coords="5165,86,5328,126"/>
+<area shape="poly" title=" " alt="" coords="4116,19,4648,38,4941,54,5062,64,5154,76,5187,83,5186,89,5153,81,5061,70,4940,60,4648,43,4116,24"/>
+<area shape="rect" href="_panzer___global_indexer___utilities_8hpp.html" title=" " alt="" coords="893,189,1056,229"/>
+<area shape="poly" title=" " alt="" coords="3924,23,2893,40,2277,57,2020,68,1826,81,1607,106,1391,137,1057,194,1056,189,1391,131,1606,100,1825,76,2020,63,2277,52,2893,35,3924,18"/>
+<area shape="rect" href="_panzer___l2_projection_8hpp.html" title=" " alt="" coords="5353,93,5533,119"/>
+<area shape="poly" title=" " alt="" coords="4116,18,4738,36,5086,53,5231,64,5340,76,5406,91,5405,96,5340,81,5230,69,5086,58,4738,41,4116,24"/>
+<area shape="rect" href="_panzer___mass_matrix_model_evaluator_8hpp.html" title=" " alt="" coords="5557,93,5835,119"/>
+<area shape="poly" title=" " alt="" coords="4116,16,4365,17,4719,24,5129,43,5339,57,5546,76,5641,91,5640,96,5545,81,5339,62,5129,48,4719,30,4365,22,4116,21"/>
+<area shape="rect" href="_panzer___model_evaluator_8hpp.html" title=" " alt="" coords="4347,93,4549,119"/>
+<area shape="poly" title=" " alt="" coords="4095,31,4329,76,4397,91,4396,96,4327,81,4094,36"/>
+<area shape="rect" href="_panzer___s_t_k___model_evaluator_factory_8hpp.html" title=" " alt="" coords="4429,189,4635,229"/>
+<area shape="poly" title=" " alt="" coords="4116,26,4197,44,4239,58,4279,76,4297,90,4309,104,4319,117,4336,131,4399,163,4463,186,4461,191,4397,168,4333,136,4316,121,4304,107,4293,94,4276,81,4237,63,4196,49,4115,32"/>
+<area shape="rect" href="_panzer___orientations_interface_8cpp.html" title=" " alt="" coords="5859,93,6096,119"/>
+<area shape="poly" title=" " alt="" coords="4116,18,4476,23,4976,34,5479,51,5688,62,5847,76,5930,91,5929,96,5846,81,5688,68,5479,56,4976,39,4476,28,4116,23"/>
+<area shape="rect" href="_panzer___s_t_k___periodic_b_c___matcher_8cpp.html" title=" " alt="" coords="6121,86,6295,126"/>
+<area shape="poly" title=" " alt="" coords="4116,17,4523,18,5099,25,5399,33,5682,43,5925,57,6108,76,6145,83,6144,89,6108,81,5924,63,5681,48,5399,38,5099,31,4523,23,4116,22"/>
+<area shape="rect" href="_panzer___s_t_k___periodic_b_c___search_8cpp.html" title=" " alt="" coords="6319,86,6494,126"/>
+<area shape="poly" title=" " alt="" coords="4116,16,4557,16,5191,22,5524,30,5836,40,6105,56,6308,76,6345,83,6344,89,6308,81,6105,61,5836,46,5523,35,5191,28,4557,22,4116,22"/>
+<area shape="rect" href="_panzer___scatter_dirichlet_residual___tpetra__decl_8hpp.html" title=" " alt="" coords="3679,189,3908,229"/>
+<area shape="poly" title=" " alt="" coords="3997,42,3818,191,3814,186,3994,38"/>
+<area shape="rect" href="_panzer___scatter_residual___tpetra__decl_8hpp.html" title=" " alt="" coords="3933,189,4107,229"/>
+<area shape="poly" title=" " alt="" coords="4023,45,4023,189,4017,189,4017,45"/>
+<area shape="rect" href="_panzer___tpetra_linear_obj_container_8hpp.html" title=" " alt="" coords="3437,93,3704,119"/>
+<area shape="poly" title=" " alt="" coords="3947,36,3631,96,3630,91,3946,31"/>
+<area shape="rect" href="_panzer___tpetra_linear_obj_factory__decl_8hpp.html" title=" " alt="" coords="4131,189,4354,229"/>
+<area shape="poly" title=" " alt="" coords="4046,38,4222,186,4219,191,4042,42"/>
+<area shape="rect" href="_panzer___tpetra_linear_obj_factory_8cpp.html" title=" " alt="" coords="4193,291,4441,317"/>
+<area shape="poly" title=" " alt="" coords="4060,34,4243,116,4327,156,4367,180,4374,195,4375,211,4366,243,4348,271,4331,293,4327,290,4344,268,4361,241,4370,211,4369,196,4363,183,4325,161,4241,120,4058,39"/>
+<area shape="rect" href="_panzer___tpetra_vector___read_only___global_evaluation_data_8cpp.html" title=" " alt="" coords="3059,181,3269,236"/>
+<area shape="poly" title=" " alt="" coords="3924,26,3635,45,3490,60,3431,70,3386,81,3333,103,3282,130,3199,184,3196,179,3279,125,3330,98,3385,76,3430,65,3489,55,3634,39,3924,21"/>
+<area shape="rect" href="_panzer___tpetra_vector___read_only___global_evaluation_data_8hpp.html" title=" " alt="" coords="2891,79,3101,133"/>
+<area shape="poly" title=" " alt="" coords="3924,28,3614,49,3227,81,3102,95,3101,89,3226,76,3614,44,3924,23"/>
+<area shape="rect" href="_panzer___blocked_d_o_f_manager_8cpp.html" title=" " alt="" coords="2215,291,2449,317"/>
+<area shape="poly" title=" " alt="" coords="2294,232,2328,290,2323,293,2290,235"/>
+<area shape="rect" href="_panzer___blocked_d_o_f_manager_factory_8cpp.html" title=" " alt="" coords="2740,284,2948,324"/>
+<area shape="poly" title=" " alt="" coords="2349,221,2415,233,2728,281,2740,283,2739,288,2728,287,2414,239,2349,227"/>
+<area shape="rect" href="_panzer___blocked_epetra_linear_obj_factory_8hpp.html" title=" " alt="" coords="2972,284,3177,324"/>
+<area shape="poly" title=" " alt="" coords="2345,221,2415,233,2568,251,2687,259,2807,266,2960,281,2972,283,2971,288,2960,287,2807,271,2687,264,2567,256,2414,239,2344,227"/>
+<area shape="rect" href="_panzer___blocked_tpetra_linear_obj_factory_8hpp.html" title=" " alt="" coords="100,284,305,324"/>
+<area shape="poly" title=" " alt="" coords="2148,215,1224,241,700,262,483,274,318,287,306,288,305,283,317,281,483,268,700,256,1224,236,2147,210"/>
+<area shape="poly" title=" " alt="" coords="2343,222,2415,233,2598,238,2947,244,3292,257,3411,267,3448,274,3467,282,3476,296,3477,310,3470,324,3459,336,3425,357,3386,374,3384,369,3423,352,3455,332,3466,320,3472,309,3471,298,3464,286,3447,279,3411,273,3292,262,2947,249,2598,243,2414,239,2342,227"/>
+<area shape="rect" href="_panzer___gather_solution___blocked_tpetra__impl_8hpp.html" title=" " alt="" coords="3740,284,3927,324"/>
+<area shape="poly" title=" " alt="" coords="2362,221,2466,233,2657,247,2820,253,3097,253,3231,253,3374,256,3537,264,3728,281,3740,283,3739,288,3728,287,3536,269,3374,261,3231,258,3097,259,2820,259,2657,252,2465,239,2361,226"/>
+<area shape="rect" href="_panzer___gather_tangent___blocked_tpetra__impl_8hpp.html" title=" " alt="" coords="3529,284,3716,324"/>
+<area shape="poly" title=" " alt="" coords="2343,222,2415,233,2581,250,2722,258,2962,259,3203,260,3344,267,3511,281,3530,284,3529,289,3510,287,3344,272,3203,266,2962,265,2722,263,2581,255,2414,239,2342,227"/>
+<area shape="rect" href="_panzer___response_evaluator_factory___functional__impl_8hpp.html" title=" " alt="" coords="1266,284,1473,324"/>
+<area shape="poly" title=" " alt="" coords="2148,222,1845,248,1486,287,1473,288,1473,283,1485,281,1844,243,2147,217"/>
+<area shape="rect" href="_panzer___response_scatter_evaluator___probe__impl_8hpp.html" title=" " alt="" coords="2473,284,2716,324"/>
+<area shape="poly" title=" " alt="" coords="2331,223,2532,281,2530,287,2330,228"/>
+<area shape="rect" href="_panzer___s_t_k___setup_l_o_w_s_factory_8hpp.html" title=" " alt="" coords="3202,291,3454,317"/>
+<area shape="poly" title=" " alt="" coords="2344,222,2415,233,2632,254,2802,261,2972,266,3190,281,3251,289,3251,294,3189,287,2971,271,2802,266,2632,260,2414,239,2343,227"/>
+<area shape="rect" href="_panzer___scatter_dirichlet_residual___blocked_epetra__impl_8hpp.html" title=" " alt="" coords="1497,284,1727,324"/>
+<area shape="poly" title=" " alt="" coords="2181,226,1739,287,1727,288,1727,283,1738,281,2180,221"/>
+<area shape="poly" title=" " alt="" coords="2243,229,2118,286,2116,282,2241,224"/>
+<area shape="poly" title=" " alt="" coords="2212,227,1932,287,1931,281,2211,222"/>
+<area shape="poly" title=" " alt="" coords="173,335,131,374,127,370,170,331"/>
+<area shape="poly" title=" " alt="" coords="320,321,600,340,966,354,1829,374,2663,384,3224,388,3224,393,2663,389,1829,379,966,359,600,345,319,327"/>
+<area shape="poly" title=" " alt="" coords="3331,330,3331,372,3325,372,3325,330"/>
+<area shape="poly" title=" " alt="" coords="1868,110,1554,112,1144,121,936,130,743,143,577,161,453,184,389,205,328,233,233,286,230,281,325,228,387,200,451,179,577,156,742,138,936,125,1144,116,1554,106,1868,104"/>
+<area shape="poly" title=" " alt="" coords="2101,115,2300,141,2392,158,2457,179,2476,193,2488,208,2499,222,2517,234,2549,242,2599,250,2739,260,2919,267,3119,271,3500,275,3643,277,3728,281,3740,283,3739,288,3728,287,3642,283,3500,280,3118,276,2919,273,2739,266,2598,255,2548,247,2515,238,2495,226,2484,211,2473,196,2455,184,2391,163,2299,146,2100,121"/>
+<area shape="poly" title=" " alt="" coords="2100,107,2172,114,2252,127,2333,148,2409,179,2428,193,2438,208,2449,222,2466,234,2493,241,2535,248,2654,258,2974,270,3296,276,3490,281,3529,286,3529,291,3489,287,3296,281,2974,275,2653,264,2534,253,2492,246,2464,238,2445,226,2434,211,2424,196,2407,184,2331,153,2251,132,2172,119,2100,112"/>
+<area shape="poly" title=" " alt="" coords="2001,137,2069,283,2065,285,1996,139"/>
+<area shape="poly" title=" " alt="" coords="1965,139,1860,285,1855,282,1960,136"/>
+<area shape="rect" href="_panzer___scatter_dirichlet_residual___blocked_tpetra_8hpp.html" title=" " alt="" coords="464,189,693,229"/>
+<area shape="poly" title=" " alt="" coords="1868,114,1382,136,1070,156,755,184,694,192,693,186,754,179,1070,151,1382,130,1867,108"/>
+<area shape="rect" href="_panzer___scatter_residual___blocked_tpetra_8hpp.html" title=" " alt="" coords="121,189,295,229"/>
+<area shape="poly" title=" " alt="" coords="1867,112,1530,121,1084,136,643,157,461,170,322,184,281,191,280,186,321,179,460,164,643,151,1084,130,1530,116,1867,107"/>
+<area shape="poly" title=" " alt="" coords="490,235,279,287,278,281,489,229"/>
+<area shape="poly" title=" " alt="" coords="209,242,206,284,201,284,203,242"/>
+<area shape="poly" title=" " alt="" coords="2494,126,2309,198,2307,194,2492,121"/>
+<area shape="poly" title=" " alt="" coords="2534,133,2533,158,2536,185,2545,212,2562,234,2594,249,2649,259,2722,265,2810,267,3019,263,3253,253,3486,244,3695,241,3782,244,3854,252,3908,264,3927,272,3941,282,3948,293,3950,304,3948,315,3940,326,3915,340,3869,351,3735,369,3576,382,3432,389,3432,384,3576,376,3735,364,3868,346,3913,335,3937,322,3943,313,3945,304,3943,295,3937,286,3924,277,3906,269,3853,257,3782,250,3695,247,3486,249,3253,259,3019,268,2810,273,2721,271,2648,265,2593,254,2558,238,2540,215,2531,187,2528,158,2529,132"/>
+<area shape="rect" href="_panzer___d_o_f_manager_8cpp.html" title=" " alt="" coords="330,291,513,317"/>
+<area shape="poly" title=" " alt="" coords="2429,117,2099,136,1832,143,1489,148,1146,159,999,169,882,184,832,195,794,208,756,223,706,239,476,294,474,289,705,233,754,218,792,203,830,190,881,179,999,164,1146,154,1489,142,1832,137,2099,131,2428,112"/>
+<area shape="rect" href="_panzer___d_o_f_manager_factory_8cpp.html" title=" " alt="" coords="1012,291,1241,317"/>
+<area shape="poly" title=" " alt="" coords="2437,123,1254,287,1203,294,1203,289,1253,281,2436,118"/>
+<area shape="rect" href="_panzer___gather_solution___tpetra__impl_8hpp.html" title=" " alt="" coords="2573,189,2742,229"/>
+<area shape="poly" title=" " alt="" coords="2561,125,2636,186,2633,191,2557,129"/>
+<area shape="rect" href="_panzer___gather_tangent___tpetra__impl_8hpp.html" title=" " alt="" coords="2766,189,2933,229"/>
+<area shape="poly" title=" " alt="" coords="2585,120,2791,186,2789,191,2583,125"/>
+<area shape="rect" href="_panzer___face_to_element_8cpp.html" title=" " alt="" coords="4730,291,4926,317"/>
+<area shape="poly" title=" " alt="" coords="4685,130,4713,180,4751,234,4783,265,4813,289,4810,293,4779,269,4747,238,4708,182,4681,132"/>
+<area shape="rect" href="_panzer___face_to_element__impl_8hpp.html" title=" " alt="" coords="4762,189,4931,229"/>
+<area shape="poly" title=" " alt="" coords="4705,123,4815,186,4812,191,4703,128"/>
+<area shape="poly" title=" " alt="" coords="4728,120,4976,186,4975,191,4727,125"/>
+<area shape="poly" title=" " alt="" coords="4759,118,5148,179,5228,193,5227,199,5148,184,4759,123"/>
+<area shape="poly" title=" " alt="" coords="4843,243,4833,292,4828,290,4838,242"/>
+<area shape="poly" title=" " alt="" coords="889,234,864,239,711,258,591,266,471,272,318,287,306,288,305,283,317,281,471,267,591,260,711,253,864,233,888,229"/>
+<area shape="poly" title=" " alt="" coords="975,242,980,285,988,305,1002,322,1035,334,1103,345,1322,362,1626,375,1980,383,2703,389,3224,389,3224,394,2703,394,1980,388,1626,380,1322,368,1102,350,1034,339,998,326,983,308,975,286,969,243"/>
+<area shape="poly" title=" " alt="" coords="1068,229,1290,281,1289,287,1067,234"/>
+<area shape="poly" title=" " alt="" coords="1070,221,1484,281,1498,283,1497,289,1484,287,1069,226"/>
+<area shape="poly" title=" " alt="" coords="886,234,864,239,770,255,695,264,526,287,483,294,482,289,525,281,695,259,769,249,864,233,885,229"/>
+<area shape="poly" title=" " alt="" coords="1019,234,1109,289,1107,294,1016,238"/>
+<area shape="rect" href="_panzer___gather_orientation__impl_8hpp.html" title=" " alt="" coords="748,284,937,324"/>
+<area shape="poly" title=" " alt="" coords="938,239,871,286,868,282,935,235"/>
+<area shape="rect" href="_panzer___gather_solution___blocked_epetra__impl_8hpp.html" title=" " alt="" coords="537,284,724,324"/>
+<area shape="poly" title=" " alt="" coords="893,235,701,287,699,281,891,230"/>
+<area shape="poly" title=" " alt="" coords="4511,120,4593,146,4627,162,4649,180,4657,195,4659,209,4657,223,4649,237,4629,263,4609,282,4588,295,4566,304,4516,314,4454,327,4365,343,4247,356,3961,376,3666,387,3432,392,3431,387,3665,382,3960,370,4246,351,4364,338,4453,321,4514,309,4564,299,4586,290,4606,278,4625,260,4644,235,4652,221,4654,208,4652,196,4645,183,4624,166,4591,151,4509,125"/>
+<area shape="poly" title=" " alt="" coords="4468,128,4518,187,4514,190,4464,131"/>
+<area shape="poly" title=" " alt="" coords="3424,120,3113,136,2895,140,2624,140,1995,137,1672,139,1367,146,1098,160,982,171,882,184,832,196,794,210,756,225,706,239,598,258,512,267,427,274,318,287,306,288,305,283,317,281,426,269,512,262,597,253,705,233,754,220,792,205,830,190,881,179,981,165,1097,155,1367,140,1672,134,1995,132,2624,135,2895,135,3113,131,3423,114"/>
+<area shape="poly" title=" " alt="" coords="3424,116,3114,137,2933,157,2754,184,2721,191,2720,186,2753,179,2932,152,3113,132,3423,110"/>
+<area shape="poly" title=" " alt="" coords="3476,123,2933,198,2933,193,3475,118"/>
+<area shape="poly" title=" " alt="" coords="3538,128,3416,191,3414,186,3535,123"/>
+<area shape="poly" title=" " alt="" coords="3573,132,3573,189,3568,189,3568,132"/>
+<area shape="poly" title=" " alt="" coords="3610,122,3753,186,3750,191,3608,127"/>
+<area shape="poly" title=" " alt="" coords="3642,119,3921,179,3950,186,3949,191,3919,184,3641,124"/>
+<area shape="poly" title=" " alt="" coords="3685,118,3888,143,4119,179,4158,186,4157,191,4118,184,3887,149,3684,123"/>
+<area shape="poly" title=" " alt="" coords="4269,238,4310,289,4306,293,4264,241"/>
+<area shape="poly" title=" " alt="" coords="3003,146,3017,194,3030,216,3048,234,3064,241,3091,248,3169,258,3382,271,3598,276,3728,281,3740,283,3739,288,3728,287,3598,282,3382,276,3168,264,3090,253,3063,246,3045,238,3026,219,3013,196,2998,148"/>
+<area shape="poly" title=" " alt="" coords="2989,147,2987,193,2992,215,3005,234,3015,241,3034,247,3091,257,3250,270,3511,281,3530,284,3529,289,3510,287,3250,275,3090,262,3033,252,3013,246,3001,238,2988,217,2981,194,2983,147"/>
+<area shape="poly" title=" " alt="" coords="2896,140,2722,191,2720,186,2894,135"/>
+<area shape="poly" title=" " alt="" coords="2948,143,2879,191,2876,186,2945,139"/>
+<area shape="poly" title=" " alt="" coords="3053,138,3121,179,3119,183,3050,143"/>
 </map>
 </div>
 </div>
 <p><a href="_panzer___node_type_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpanzer_1_1_tpetra_node_is_instantiated.html">panzer::TpetraNodeIsInstantiated&lt; Node &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether Tpetra explicitly instantiated its classes over <code>Node</code>.  <a href="structpanzer_1_1_tpetra_node_is_instantiated.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespacepanzer" id="r_namespacepanzer"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepanzer.html">panzer</a></td></tr>
@@ -245,9 +260,9 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a99d6c2e247dadbef989f9acd93e94960" id="r_a99d6c2e247dadbef989f9acd93e94960"><td class="memItemLeft" align="right" valign="top">typedef Tpetra::KokkosCompat::KokkosDeviceWrapperNode&lt; PHX::Device &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepanzer.html#a99d6c2e247dadbef989f9acd93e94960">panzer::TpetraNodeType</a></td></tr>
-<tr class="memdesc:a99d6c2e247dadbef989f9acd93e94960"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Kokkos node type used to instantiate all Tpetra objects (Map, MultiVector, CrsGraph, etc.) throughout panzer.  <br /></td></tr>
-<tr class="separator:a99d6c2e247dadbef989f9acd93e94960"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cdf40340055318465bd0a87fd5b9e52" id="r_a6cdf40340055318465bd0a87fd5b9e52"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepanzer.html#a6cdf40340055318465bd0a87fd5b9e52">panzer::TpetraNodeType</a> = Tpetra::KokkosCompat::KokkosDeviceWrapperNode&lt; PHX::ExecutionSpace, PHX::MemorySpace &gt;</td></tr>
+<tr class="memdesc:a6cdf40340055318465bd0a87fd5b9e52"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Kokkos node type used to instantiate all Tpetra objects (Map, MultiVector, CrsGraph, etc.) throughout panzer.  <br /></td></tr>
+<tr class="separator:a6cdf40340055318465bd0a87fd5b9e52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->

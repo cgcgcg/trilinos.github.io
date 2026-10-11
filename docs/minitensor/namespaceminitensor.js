@@ -254,6 +254,7 @@ var namespaceminitensor =
     [ "log_sym", "group__minitensor__matrix__functions.html#gaf5959778cb7da78e7cadc08523af14e7", null ],
     [ "log_eig_sym", "group__minitensor__matrix__functions.html#gadb45fca569d05f810dd5d848eab4d365", null ],
     [ "bch", "group__minitensor__matrix__functions.html#ga955e0a93f70ae1ff396ed21ddb5d650b", null ],
+    [ "binary_powering", "group__minitensor__matrix__functions.html#ga8b0a2cc3532c5bd2cf5ddc16debbd2c4", null ],
     [ "scaling_squaring_theta_ah09", "group__minitensor__matrix__functions.html#ga01de3b095380140edfab84fad3ef6b36", null ],
     [ "expm_ell", "group__minitensor__matrix__functions.html#ga3e35e74f241ef01e124669acc768d262", null ],
     [ "sqrt_dbp", "group__minitensor__matrix__functions.html#ga14a2623eac60288c851ef38177e61d08", null ],
@@ -276,7 +277,6 @@ var namespaceminitensor =
     [ "piola", "group__minitensor__mechanics.html#ga8865677006e408fddc4b24b47b121c04", null ],
     [ "piola_inverse", "group__minitensor__mechanics.html#gaab1bf840da9c43e8911d7f28edd1e9cd", null ],
     [ "smallest_eigenvalue", "group__minitensor__mechanics.html#ga8257439b963799a9989e28a6d62167a2", null ],
-    [ "check_strict_ellipticity", "group__minitensor__mechanics.html#gac56828c3f639a380d8b63d4998ab2535", null ],
     [ "check_strong_ellipticity", "group__minitensor__mechanics.html#ga0185ea1a87344fe8c70a11d699893031", null ],
     [ "norm", "group__minitensor__norms.html#ga2b5cf1a89baab379964c8222fa182c6d", null ],
     [ "norm_1", "group__minitensor__norms.html#ga7d174500938e454b3a750115de1c4dad", null ],
@@ -337,6 +337,7 @@ var namespaceminitensor =
     [ "num_digits< Index >", "group__minitensor__traits.html#ga08fa270cb72c44d8b63f27697f90a802", null ],
     [ "num_digits< LongIndex >", "group__minitensor__traits.html#ga51435b157e27d0171a06e5b19ddc2f9c", null ],
     [ "stepFactory", "group__minitensor__solvers.html#ga8bc7327fcf12bd66e7a2772ef29b0074", null ],
+    [ "bound_dimension", "group__minitensor__containers.html#ga216f7d8324d1d5894ed5ebe7e7faa0c2", null ],
     [ "check_dynamic", "group__minitensor__containers.html#ga8dc7c0824e22461edc93704d34c1d123", null ],
     [ "operator+", "group__minitensor__containers.html#ga25bf99b1c9c16cfb44415a0e7726bcc9", null ],
     [ "operator-", "group__minitensor__containers.html#gaed8d147601fd83e0300be5c8f771455d", null ],
@@ -509,5 +510,6 @@ var namespaceminitensor =
     [ "version", "namespaceminitensor.html#a9ab0b2ca9feb1b57a53d811915a31cbc", null ],
     [ "INDEX_SIZE", "group__minitensor__traits.html#ga627502469acb93b57127c01431be990b", null ],
     [ "LONG_INDEX_SIZE", "group__minitensor__traits.html#ga7618aa960dcaba3fcc1a947c6bd2dce9", null ],
-    [ "DYNAMIC", "group__minitensor__traits.html#ga6be6d3779f63b6610bdd350ecf51007c", null ]
+    [ "DYNAMIC", "group__minitensor__traits.html#ga6be6d3779f63b6610bdd350ecf51007c", null ],
+    [ "dimension_reachable", "group__minitensor__traits.html#ga10cf3f94ad5aafb0c93240d1dd277ba3", null ]
 ];
