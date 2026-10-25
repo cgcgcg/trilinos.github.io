@@ -336,22 +336,24 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>    problem.<a class="code hl_function" href="class_zoltan2_1_1_problem.html#a9eefe7e2cf59f6cb1927d858e1001eca">printTimers</a>();</div>
 <div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>  }</div>
 <div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span> </div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>  <span class="comment">// delete mesh</span></div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>  <span class="keywordflow">if</span> (me == 0) std::cout &lt;&lt; <span class="stringliteral">&quot;Deleting the mesh ... \n\n&quot;</span>;</div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span> </div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>  Delete_Pamgen_Mesh();</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>  <span class="keyword">delete</span> ia;</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span> </div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>  <span class="comment">// delete mesh</span></div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>  <span class="keywordflow">if</span> (me == 0) std::cout &lt;&lt; <span class="stringliteral">&quot;Deleting the mesh ... \n\n&quot;</span>;</div>
 <div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span> </div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>  <span class="keywordflow">if</span> (me == 0)</div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;PASS&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span> </div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>  Kokkos::finalize(); <span class="comment">// Test uses directory with kokkos</span></div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>  Delete_Pamgen_Mesh();</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span> </div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>  <span class="keywordflow">if</span> (me == 0)</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;PASS&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span> </div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>  <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>}</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>  Kokkos::finalize(); <span class="comment">// Test uses directory with kokkos</span></div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span> </div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>}</div>
 </div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span><span class="comment">/*****************************************************************************/</span></div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span><span class="comment">/********************************* END MAIN **********************************/</span></div>
 <div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span><span class="comment">/*****************************************************************************/</span></div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span><span class="comment">/********************************* END MAIN **********************************/</span></div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span><span class="comment">/*****************************************************************************/</span></div>
 <div class="ttc" id="a_task_mapping_test3_8cpp_html_a17f7a3a7ff4b2e5597ab1dd25340595c"><div class="ttname"><a href="_task_mapping_test3_8cpp.html#a17f7a3a7ff4b2e5597ab1dd25340595c">nParts</a></div><div class="ttdeci">#define nParts</div><div class="ttdef"><b>Definition</b> <a href="_task_mapping_test3_8cpp_source.html#l00021">TaskMappingTest3.cpp:21</a></div></div>
 <div class="ttc" id="a_zoltan2___coloring_problem_8hpp_html"><div class="ttname"><a href="_zoltan2___coloring_problem_8hpp.html">Zoltan2_ColoringProblem.hpp</a></div><div class="ttdoc">Defines the ColoringProblem class.</div></div>
 <div class="ttc" id="a_zoltan2___pamgen_mesh_adapter_8hpp_html"><div class="ttname"><a href="_zoltan2___pamgen_mesh_adapter_8hpp.html">Zoltan2_PamgenMeshAdapter.hpp</a></div><div class="ttdoc">Defines the PamgenMeshAdapter class.</div></div>

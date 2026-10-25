@@ -104,8 +104,8 @@ Public Member Functions</h2></td></tr>
 Private Types</h2></td></tr>
 <tr class="memitem:aaf5bd52937570f65547097240fb1ed10" id="r_aaf5bd52937570f65547097240fb1ed10"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_intrepid2_1_1_impl_1_1_f___integrate_point_value_cache.html#aaf5bd52937570f65547097240fb1ed10">ExecutionSpace</a> = typename DeviceType::execution_space</td></tr>
 <tr class="separator:aaf5bd52937570f65547097240fb1ed10"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a955029019671e2bccf87b1e6b485802c" id="r_a955029019671e2bccf87b1e6b485802c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_intrepid2_1_1_impl_1_1_f___integrate_point_value_cache.html#a955029019671e2bccf87b1e6b485802c">TeamPolicy</a> = Kokkos::TeamPolicy&lt; DeviceType &gt;</td></tr>
-<tr class="separator:a955029019671e2bccf87b1e6b485802c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac449bb3c3fc619d858c69366f4bc3f73" id="r_ac449bb3c3fc619d858c69366f4bc3f73"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_intrepid2_1_1_impl_1_1_f___integrate_point_value_cache.html#ac449bb3c3fc619d858c69366f4bc3f73">TeamPolicy</a> = Kokkos::TeamPolicy&lt; ExecutionSpace &gt;</td></tr>
+<tr class="separator:ac449bb3c3fc619d858c69366f4bc3f73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91ec7569037e8faaaef3e75986193ce5" id="r_a91ec7569037e8faaaef3e75986193ce5"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_intrepid2_1_1_impl_1_1_f___integrate_point_value_cache.html#a91ec7569037e8faaaef3e75986193ce5">TeamMember</a> = typename TeamPolicy::member_type</td></tr>
 <tr class="separator:a91ec7569037e8faaaef3e75986193ce5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9214a9ee8f6f02b41a3e6329ad6788c0" id="r_a9214a9ee8f6f02b41a3e6329ad6788c0"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_intrepid2_1_1_impl_1_1_f___integrate_point_value_cache.html#a9214a9ee8f6f02b41a3e6329ad6788c0">IntegralViewType</a> = Kokkos::View&lt; typename <a class="el" href="struct_intrepid2_1_1_rank_expander.html">RankExpander</a>&lt; Scalar, integralViewRank &gt;::value_type, DeviceType &gt;</td></tr>
@@ -237,8 +237,8 @@ template&lt;class Scalar , class DeviceType , int integralViewRank&gt; </div>
 
 </div>
 </div>
-<a id="a955029019671e2bccf87b1e6b485802c" name="a955029019671e2bccf87b1e6b485802c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a955029019671e2bccf87b1e6b485802c">&#9670;&#160;</a></span>TeamPolicy</h2>
+<a id="ac449bb3c3fc619d858c69366f4bc3f73" name="ac449bb3c3fc619d858c69366f4bc3f73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac449bb3c3fc619d858c69366f4bc3f73">&#9670;&#160;</a></span>TeamPolicy</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -249,7 +249,7 @@ template&lt;class Scalar , class DeviceType , int integralViewRank&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_intrepid2_1_1_impl_1_1_f___integrate_point_value_cache.html">Intrepid2::Impl::F_IntegratePointValueCache</a>&lt; Scalar, DeviceType, integralViewRank &gt;::TeamPolicy =  Kokkos::TeamPolicy&lt;DeviceType&gt;</td>
+          <td class="memname">using <a class="el" href="class_intrepid2_1_1_impl_1_1_f___integrate_point_value_cache.html">Intrepid2::Impl::F_IntegratePointValueCache</a>&lt; Scalar, DeviceType, integralViewRank &gt;::TeamPolicy =  Kokkos::TeamPolicy&lt;ExecutionSpace&gt;</td>
         </tr>
       </table>
   </td>

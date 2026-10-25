@@ -150,7 +150,7 @@ class Teuchos::MatrixMarket::CoordDataReaderBase&lt; Callback, Ordinal &gt;</div
 <p>The Callback object defines for itself what happens if one attempts to insert two entries at the same location. They must be "merged" in some way. Usually the right thing to do is to add the values of the two entries, but you may want to define different behavior. Your Callback implementation may defer merging entries at the same location for performance reasons. (<a class="el" href="class_teuchos_1_1_matrix_market_1_1_raw_1_1_adder.html" title="To be used with Checker for &quot;raw&quot; sparse matrix input.">Raw::Adder</a> does this. Its merge() method merges the entries.)</p>
 <p>Note that this class does not have the notion of the type of entries of the matrix, only the type of the indices in the matrix (Ordinal). The <a class="el" href="class_teuchos_1_1_matrix_market_1_1_coord_data_reader.html" title="Coordinate-format sparse matrix data reader.">CoordDataReader</a> subclass defines the type of matrix entries as its Scalar template parameter. The <a class="el" href="class_teuchos_1_1_matrix_market_1_1_coord_pattern_reader.html" title="Coordinate-format sparse graph data reader.">CoordPatternReader</a> subclass does not define the type of matrix entries, because it stores a graph (a "pattern matrix" in Matrix Market terms). </p>
 
-<p class="definition">Definition at line <a class="el" href="_teuchos___matrix_market___coord_data_reader_8hpp_source.html#l00068">68</a> of file <a class="el" href="_teuchos___matrix_market___coord_data_reader_8hpp_source.html">Teuchos_MatrixMarket_CoordDataReader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_teuchos___matrix_market___coord_data_reader_8hpp_source.html#l00069">69</a> of file <a class="el" href="_teuchos___matrix_market___coord_data_reader_8hpp_source.html">Teuchos_MatrixMarket_CoordDataReader.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a9cc5e7e7594966f518e34b7960d782c4" name="a9cc5e7e7594966f518e34b7960d782c4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9cc5e7e7594966f518e34b7960d782c4">&#9670;&#160;</a></span>CoordDataReaderBase() <span class="overload">[1/2]</span></h2>
@@ -187,7 +187,7 @@ template&lt;<a class="el" href="class_teuchos_1_1_r_c_p.html">class</a> <a class
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_teuchos___matrix_market___coord_data_reader_8hpp_source.html#l00084">84</a> of file <a class="el" href="_teuchos___matrix_market___coord_data_reader_8hpp_source.html">Teuchos_MatrixMarket_CoordDataReader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_teuchos___matrix_market___coord_data_reader_8hpp_source.html#l00085">85</a> of file <a class="el" href="_teuchos___matrix_market___coord_data_reader_8hpp_source.html">Teuchos_MatrixMarket_CoordDataReader.hpp</a>.</p>
 
 </div>
 </div>
@@ -219,7 +219,7 @@ template&lt;<a class="el" href="class_teuchos_1_1_r_c_p.html">class</a> <a class
 <p>No-argument constructor. </p>
 <p>We offer this option in case the adder's constructor needs the graph or matrix dimensions, so that it's necessary to call <a class="el" href="class_teuchos_1_1_matrix_market_1_1_coord_data_reader_base.html#a69a7616f88ece211f2091a1fff131983" title="Read (numRows, numCols, numNonzeros).">readDimensions()</a> first before constructing the adder. You should call <a class="el" href="class_teuchos_1_1_matrix_market_1_1_coord_data_reader_base.html#af81ad5b5b325649dccd9979c1c74330c" title="Set the Adder object.">setAdder()</a> with a non-null argument before calling <a class="el" href="class_teuchos_1_1_matrix_market_1_1_coord_data_reader_base.html#a661820bd2c70116eb022519a8a199b34" title="Read in all the data from the given input stream.">read()</a> or <a class="el" href="class_teuchos_1_1_matrix_market_1_1_coord_data_reader_base.html#adcff296b0f14c5371e56353604bc102d" title="Read in the data from a single line of the input stream.">readLine()</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="_teuchos___matrix_market___coord_data_reader_8hpp_source.html#l00094">94</a> of file <a class="el" href="_teuchos___matrix_market___coord_data_reader_8hpp_source.html">Teuchos_MatrixMarket_CoordDataReader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_teuchos___matrix_market___coord_data_reader_8hpp_source.html#l00095">95</a> of file <a class="el" href="_teuchos___matrix_market___coord_data_reader_8hpp_source.html">Teuchos_MatrixMarket_CoordDataReader.hpp</a>.</p>
 
 </div>
 </div>
@@ -250,7 +250,7 @@ template&lt;<a class="el" href="class_teuchos_1_1_r_c_p.html">class</a> <a class
 
 <p>Virtual destructor for safety and happy compilers. </p>
 
-<p class="definition">Definition at line <a class="el" href="_teuchos___matrix_market___coord_data_reader_8hpp_source.html#l00097">97</a> of file <a class="el" href="_teuchos___matrix_market___coord_data_reader_8hpp_source.html">Teuchos_MatrixMarket_CoordDataReader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_teuchos___matrix_market___coord_data_reader_8hpp_source.html#l00098">98</a> of file <a class="el" href="_teuchos___matrix_market___coord_data_reader_8hpp_source.html">Teuchos_MatrixMarket_CoordDataReader.hpp</a>.</p>
 
 </div>
 </div>
@@ -284,7 +284,7 @@ template&lt;<a class="el" href="class_teuchos_1_1_r_c_p.html">class</a> <a class
 <p>Set the Adder object. </p>
 <p>Please don't call this after calling <a class="el" href="class_teuchos_1_1_matrix_market_1_1_coord_data_reader_base.html#a661820bd2c70116eb022519a8a199b34" title="Read in all the data from the given input stream.">read()</a> or <a class="el" href="class_teuchos_1_1_matrix_market_1_1_coord_data_reader_base.html#adcff296b0f14c5371e56353604bc102d" title="Read in the data from a single line of the input stream.">readLine()</a>. The right time to call this is right after calling the no-argument constructor, if it's not possible to supply an Adder object before calling <a class="el" href="class_teuchos_1_1_matrix_market_1_1_coord_data_reader_base.html#a69a7616f88ece211f2091a1fff131983" title="Read (numRows, numCols, numNonzeros).">readDimensions()</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="_teuchos___matrix_market___coord_data_reader_8hpp_source.html#l00105">105</a> of file <a class="el" href="_teuchos___matrix_market___coord_data_reader_8hpp_source.html">Teuchos_MatrixMarket_CoordDataReader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_teuchos___matrix_market___coord_data_reader_8hpp_source.html#l00106">106</a> of file <a class="el" href="_teuchos___matrix_market___coord_data_reader_8hpp_source.html">Teuchos_MatrixMarket_CoordDataReader.hpp</a>.</p>
 
 </div>
 </div>
@@ -409,7 +409,7 @@ template&lt;<a class="el" href="class_teuchos_1_1_r_c_p.html">class</a> <a class
 <dl class="section return"><dt>Returns</dt><dd>If tolerant==false, the returned pair is always true and the empty vector. If tolerant==true, the first entry of the pair is whether all lines of data were read successfully, and the second entry is the list of line numbers containing bad data. The first entry of the pair is false if and only if the vector has nonzero size.</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>This method is virtual in case derived classes want to override the default behavior. The specific example we have in mind is a "pattern matrix" (i.e., a sparse graph), which we would represent with Scalar=void. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_teuchos___matrix_market___coord_data_reader_8hpp_source.html#l00171">171</a> of file <a class="el" href="_teuchos___matrix_market___coord_data_reader_8hpp_source.html">Teuchos_MatrixMarket_CoordDataReader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_teuchos___matrix_market___coord_data_reader_8hpp_source.html#l00172">172</a> of file <a class="el" href="_teuchos___matrix_market___coord_data_reader_8hpp_source.html">Teuchos_MatrixMarket_CoordDataReader.hpp</a>.</p>
 
 </div>
 </div>
@@ -467,7 +467,7 @@ template&lt;<a class="el" href="class_teuchos_1_1_r_c_p.html">class</a> <a class
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>((numRows, numCols, numNonzeros), success). In tolerant mode, success may be false, meaning that the read-in triple may not be valid. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_teuchos___matrix_market___coord_data_reader_8hpp_source.html#l00226">226</a> of file <a class="el" href="_teuchos___matrix_market___coord_data_reader_8hpp_source.html">Teuchos_MatrixMarket_CoordDataReader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_teuchos___matrix_market___coord_data_reader_8hpp_source.html#l00227">227</a> of file <a class="el" href="_teuchos___matrix_market___coord_data_reader_8hpp_source.html">Teuchos_MatrixMarket_CoordDataReader.hpp</a>.</p>
 
 </div>
 </div>
@@ -496,7 +496,7 @@ template&lt;<a class="el" href="class_teuchos_1_1_r_c_p.html">class</a> <a class
 
 <p>Closure that knows how to add entries to the sparse graph or matrix. </p>
 
-<p class="definition">Definition at line <a class="el" href="_teuchos___matrix_market___coord_data_reader_8hpp_source.html#l00071">71</a> of file <a class="el" href="_teuchos___matrix_market___coord_data_reader_8hpp_source.html">Teuchos_MatrixMarket_CoordDataReader.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_teuchos___matrix_market___coord_data_reader_8hpp_source.html#l00072">72</a> of file <a class="el" href="_teuchos___matrix_market___coord_data_reader_8hpp_source.html">Teuchos_MatrixMarket_CoordDataReader.hpp</a>.</p>
 
 </div>
 </div>

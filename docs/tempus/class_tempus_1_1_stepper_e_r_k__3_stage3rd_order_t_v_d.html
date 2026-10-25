@@ -338,7 +338,7 @@ class Tempus::StepperERK_3Stage3rdOrderTVD&lt; Scalar &gt;</div><p>RK Explicit 3
 <p> Reference: Sigal Gottlieb and Chi-Wang Shu, 'Total Variation Diminishing Runge-Kutta Schemes', Mathematics of Computation, Volume 67, Number 221, January 1998, pp. 73-85.</p>
 <p>This is also written in the following set of updates. </p><pre class="fragment">  u1 = u^n + dt L(u^n)
   u2 = 3 u^n/4 + u1/4 + dt L(u1)/4
-  u^(n+1) = u^n/3 + 2 u2/2 + 2 dt L(u2)/3
+  u^(n+1) = u^n/3 + 2 u2/3 + 2 dt L(u2)/3
 </pre><p>See <a class="el" href="class_tempus_1_1_stepper_explicit_r_k.html" title="Explicit Runge-Kutta time stepper.">StepperExplicitRK</a> for additional details. </p>
 
 <p class="definition">Definition at line <a class="el" href="_tempus___stepper_r_k_butcher_tableau_8hpp_source.html#l01183">1183</a> of file <a class="el" href="_tempus___stepper_r_k_butcher_tableau_8hpp_source.html">Tempus_StepperRKButcherTableau.hpp</a>.</p>

@@ -311,7 +311,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>  <span class="keyword">auto</span> ref_solution = solutions[lastElem];</div>
 <div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>  <span class="keywordflow">for</span> (std::size_t i = 0; i &lt; lastElem; ++i) {</div>
 <div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    dt.push_back(StepSize[i]);</div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    <span class="keyword">auto</span> tmp = solutions[i];</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    <span class="keyword">auto</span> tmp = solutions[i]-&gt;clone_v();</div>
 <div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    Thyra::Vp_StV(tmp.ptr(), -1.0, *ref_solution);</div>
 <div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    Scalar L2norm = Thyra::norm_2(*tmp);</div>
 <div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    xErrorNorm.push_back(L2norm);</div>
@@ -321,7 +321,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>  <span class="keywordflow">if</span> (!solutionsDot.empty()) {</div>
 <div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>    <span class="keyword">auto</span> ref_solutionDot = solutionsDot[lastElem];</div>
 <div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>    <span class="keywordflow">for</span> (std::size_t i = 0; i &lt; lastElem; ++i) {</div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>      <span class="keyword">auto</span> tmp = solutionsDot[i];</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>      <span class="keyword">auto</span> tmp = solutionsDot[i]-&gt;clone_v();</div>
 <div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>      Thyra::Vp_StV(tmp.ptr(), -1.0, *ref_solutionDot);</div>
 <div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>      Scalar L2norm = Thyra::norm_2(*tmp);</div>
 <div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>      xDotErrorNorm.push_back(L2norm);</div>
@@ -332,7 +332,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>  <span class="keywordflow">if</span> (!solutionsDotDot.empty()) {</div>
 <div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>    <span class="keyword">auto</span> ref_solutionDotDot = solutionsDotDot[solutions.size() - 1];</div>
 <div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    <span class="keywordflow">for</span> (std::size_t i = 0; i &lt; lastElem; ++i) {</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>      <span class="keyword">auto</span> tmp = solutionsDotDot[i];</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>      <span class="keyword">auto</span> tmp = solutionsDotDot[i]-&gt;clone_v();</div>
 <div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>      Thyra::Vp_StV(tmp.ptr(), -1.0, *ref_solutionDotDot);</div>
 <div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>      Scalar L2norm = Thyra::norm_2(*tmp);</div>
 <div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>      xDotDotErrorNorm.push_back(L2norm);</div>

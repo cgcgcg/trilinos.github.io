@@ -1,7 +1,9 @@
-<map id="Belos::MinresIteration&lt; ScalarType, MV, OP &gt;" name="Belos::MinresIteration&lt; ScalarType, MV, OP &gt;">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,93,183,133"/>
-<area shape="rect" id="Node000003" href="$class_belos_1_1_minres_iter.html" title="MINRES implementation." alt="" coords="11,181,177,221"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="97,147,97,181,91,181,91,147"/>
-<area shape="rect" id="Node000002" href="$class_belos_1_1_iteration.html" title=" " alt="" coords="6,5,182,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="97,59,97,93,91,93,91,59"/>
+<map id="Belos::MinresIteration&lt; ScalarType, MV, OP, DM &gt;" name="Belos::MinresIteration&lt; ScalarType, MV, OP, DM &gt;">
+<area shape="rect" id="Node000001" title=" " alt="" coords="231,45,437,85"/>
+<area shape="rect" id="Node000003" href="$class_belos_1_1_minres_iter.html" title="MINRES implementation." alt="" coords="635,5,831,45"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="451,43,461,41,634,27,634,32,462,47,451,48"/>
+<area shape="rect" id="Node000004" href="$class_belos_1_1_minres_iteration.html" title=" " alt="" coords="636,69,829,139"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="451,84,462,85,636,98,635,104,461,91,451,89"/>
+<area shape="rect" id="Node000002" href="$class_belos_1_1_iteration.html" title=" " alt="" coords="5,45,181,85"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="195,63,231,63,231,68,195,68"/>
 </map>

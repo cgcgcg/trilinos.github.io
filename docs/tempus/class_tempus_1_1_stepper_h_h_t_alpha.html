@@ -245,6 +245,19 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2f1c2b4a81ee6b0878eaed396cd7e689"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa72f2540c33db88b2e63c9476241aecf" id="r_aa72f2540c33db88b2e63c9476241aecf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tempus_1_1_stepper_h_h_t_alpha.html#aa72f2540c33db88b2e63c9476241aecf">setAlphaM</a> (Scalar alpha_m)</td></tr>
 <tr class="separator:aa72f2540c33db88b2e63c9476241aecf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63d6d066fe1797b07983771f666ea164" id="r_a63d6d066fe1797b07983771f666ea164"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tempus_1_1_stepper_h_h_t_alpha.html#a63d6d066fe1797b07983771f666ea164">getSchemeName</a> () const</td></tr>
+<tr class="separator:a63d6d066fe1797b07983771f666ea164"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44b2d4f561f65228c750f4b5d221fc93" id="r_a44b2d4f561f65228c750f4b5d221fc93"><td class="memItemLeft" align="right" valign="top">virtual Scalar&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tempus_1_1_stepper_h_h_t_alpha.html#a44b2d4f561f65228c750f4b5d221fc93">getBeta</a> () const</td></tr>
+<tr class="separator:a44b2d4f561f65228c750f4b5d221fc93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af27aa40a49deb33c381fa4773cf0279d" id="r_af27aa40a49deb33c381fa4773cf0279d"><td class="memItemLeft" align="right" valign="top">virtual Scalar&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tempus_1_1_stepper_h_h_t_alpha.html#af27aa40a49deb33c381fa4773cf0279d">getGamma</a> () const</td></tr>
+<tr class="separator:af27aa40a49deb33c381fa4773cf0279d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ec701b9f5b95eb28fa3c31dc9799179" id="r_a9ec701b9f5b95eb28fa3c31dc9799179"><td class="memItemLeft" align="right" valign="top">virtual Scalar&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tempus_1_1_stepper_h_h_t_alpha.html#a9ec701b9f5b95eb28fa3c31dc9799179">getAlphaF</a> () const</td></tr>
+<tr class="separator:a9ec701b9f5b95eb28fa3c31dc9799179"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3a648c079f02027ae26314710c379cd" id="r_af3a648c079f02027ae26314710c379cd"><td class="memItemLeft" align="right" valign="top">virtual Scalar&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tempus_1_1_stepper_h_h_t_alpha.html#af3a648c079f02027ae26314710c379cd">getAlphaM</a> () const</td></tr>
+<tr class="separator:af3a648c079f02027ae26314710c379cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8596ba922d4a18d1b9b20c9f5dbc982" id="r_af8596ba922d4a18d1b9b20c9f5dbc982"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tempus_1_1_stepper_h_h_t_alpha.html#af8596ba922d4a18d1b9b20c9f5dbc982">validateSchemeParameters</a> () const</td></tr>
+<tr class="memdesc:af8596ba922d4a18d1b9b20c9f5dbc982"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validate final scheme parameters and emit any consistency warnings.  <br /></td></tr>
+<tr class="separator:af8596ba922d4a18d1b9b20c9f5dbc982"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">Basic stepper methods</h2></td></tr>
 <tr class="memitem:a4600f4f0a5ae4c29708fca8d3e69d47a" id="r_a4600f4f0a5ae4c29708fca8d3e69d47a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tempus_1_1_stepper_h_h_t_alpha.html#a4600f4f0a5ae4c29708fca8d3e69d47a">setModel</a> (const Teuchos::RCP&lt; const <a class="elRef" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/tempus/doc/../../../packages/nox/doc/html/class_thyra_1_1_model_evaluator.html">Thyra::ModelEvaluator</a>&lt; Scalar &gt; &gt; &amp;appModel)</td></tr>
@@ -358,7 +371,7 @@ template&lt;class Scalar &gt; </div>
 <p>Default constructor. </p>
 <p>Requires subsequent <a class="el" href="class_tempus_1_1_stepper_h_h_t_alpha.html#a4600f4f0a5ae4c29708fca8d3e69d47a" title="Set the model.">setModel()</a>, <a class="el" href="class_tempus_1_1_stepper_implicit.html#a8ee1f32851dda418f800639ddd55573a" title="Set solver.">setSolver()</a> and <a class="el" href="class_tempus_1_1_stepper.html#a7505ce446b21375e42da37451f9ab746" title="Initialize after construction and changing input parameters.">initialize()</a> calls before calling <a class="el" href="class_tempus_1_1_stepper_h_h_t_alpha.html#ade19e4aa20cd0bb86f816793668a4b38" title="Take the specified timestep, dt, and return true if successful.">takeStep()</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html#l00229">229</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html">Tempus_StepperHHTAlpha_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html#l00293">293</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html">Tempus_StepperHHTAlpha_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -452,7 +465,7 @@ template&lt;class Scalar &gt; </div>
 
 <p>Constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html#l00250">250</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html">Tempus_StepperHHTAlpha_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html#l00314">314</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html">Tempus_StepperHHTAlpha_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -487,7 +500,7 @@ template&lt;class Scalar &gt; </div>
 
 <p>Reimplemented from <a class="el" href="class_tempus_1_1_stepper_implicit.html#abe6f431b9533cbe8eb98fdad89f0b13e">Tempus::StepperImplicit&lt; Scalar &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html#l00297">297</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html">Tempus_StepperHHTAlpha_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html#l00361">361</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html">Tempus_StepperHHTAlpha_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -517,7 +530,7 @@ template&lt;class Scalar &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html#l00283">283</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html">Tempus_StepperHHTAlpha_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html#l00347">347</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html">Tempus_StepperHHTAlpha_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -614,7 +627,7 @@ template&lt;class Scalar &gt; </div>
 
 <p>Implements <a class="el" href="class_tempus_1_1_stepper.html#ac62b66a2f8923225a81d5cd2e47a6577">Tempus::Stepper&lt; Scalar &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html#l00318">318</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html">Tempus_StepperHHTAlpha_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html#l00382">382</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html">Tempus_StepperHHTAlpha_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -648,7 +661,7 @@ template&lt;class Scalar &gt; </div>
 
 <p>Implements <a class="el" href="class_tempus_1_1_stepper.html#a0adf603427ccbd537d3451e308f296b3">Tempus::Stepper&lt; Scalar &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html#l00471">471</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html">Tempus_StepperHHTAlpha_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html#l00549">549</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html">Tempus_StepperHHTAlpha_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -998,7 +1011,7 @@ template&lt;class Scalar &gt; </div>
 </div>
 </div>
 <a id="ace90dce51ad0af5e3e54366c584f3272" name="ace90dce51ad0af5e3e54366c584f3272"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ace90dce51ad0af5e3e54366c584f3272">&#9670;&#160;</a></span>getBeta()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ace90dce51ad0af5e3e54366c584f3272">&#9670;&#160;</a></span>getBeta() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1058,7 +1071,7 @@ template&lt;class Scalar &gt; </div>
 
 <p>Reimplemented from <a class="el" href="class_tempus_1_1_stepper_implicit.html#a4e11c4f79602d60b52aa5109db10bff2">Tempus::StepperImplicit&lt; Scalar &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html#l00535">535</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html">Tempus_StepperHHTAlpha_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html#l00613">613</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html">Tempus_StepperHHTAlpha_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1100,7 +1113,7 @@ template&lt;class Scalar &gt; </div>
 
 <p>Reimplemented from <a class="el" href="class_tempus_1_1_stepper_implicit.html#aa93a15f0d30944d2fe4b722dd71617ce">Tempus::StepperImplicit&lt; Scalar &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html#l00482">482</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html">Tempus_StepperHHTAlpha_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html#l00560">560</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html">Tempus_StepperHHTAlpha_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1132,7 +1145,7 @@ template&lt;class Scalar &gt; </div>
 
 <p>Reimplemented from <a class="el" href="class_tempus_1_1_stepper_implicit.html#ad11bddf222b2172e078ba5b4866191a7">Tempus::StepperImplicit&lt; Scalar &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html#l00507">507</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html">Tempus_StepperHHTAlpha_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html#l00585">585</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html">Tempus_StepperHHTAlpha_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1176,7 +1189,7 @@ template&lt;class Scalar &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html#l00023">23</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html">Tempus_StepperHHTAlpha_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html#l00024">24</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html">Tempus_StepperHHTAlpha_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1226,7 +1239,7 @@ template&lt;class Scalar &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html#l00035">35</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html">Tempus_StepperHHTAlpha_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html#l00036">36</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html">Tempus_StepperHHTAlpha_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1258,7 +1271,7 @@ template&lt;class Scalar &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html#l00051">51</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html">Tempus_StepperHHTAlpha_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html#l00052">52</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html">Tempus_StepperHHTAlpha_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1290,7 +1303,7 @@ template&lt;class Scalar &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html#l00063">63</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html">Tempus_StepperHHTAlpha_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html#l00064">64</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html">Tempus_StepperHHTAlpha_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1322,7 +1335,7 @@ template&lt;class Scalar &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html#l00075">75</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html">Tempus_StepperHHTAlpha_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html#l00076">76</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html">Tempus_StepperHHTAlpha_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1366,7 +1379,7 @@ template&lt;class Scalar &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html#l00090">90</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html">Tempus_StepperHHTAlpha_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html#l00091">91</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html">Tempus_StepperHHTAlpha_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1410,7 +1423,7 @@ template&lt;class Scalar &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html#l00102">102</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html">Tempus_StepperHHTAlpha_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html#l00103">103</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html">Tempus_StepperHHTAlpha_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1432,7 +1445,7 @@ template&lt;class Scalar &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html#l00194">194</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html">Tempus_StepperHHTAlpha_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html#l00195">195</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html">Tempus_StepperHHTAlpha_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1454,7 +1467,7 @@ template&lt;class Scalar &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html#l00114">114</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html">Tempus_StepperHHTAlpha_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html#l00115">115</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html">Tempus_StepperHHTAlpha_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1476,7 +1489,7 @@ template&lt;class Scalar &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html#l00147">147</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html">Tempus_StepperHHTAlpha_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html#l00148">148</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html">Tempus_StepperHHTAlpha_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1498,7 +1511,7 @@ template&lt;class Scalar &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html#l00168">168</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html">Tempus_StepperHHTAlpha_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html#l00169">169</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html">Tempus_StepperHHTAlpha_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1520,7 +1533,175 @@ template&lt;class Scalar &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html#l00181">181</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html">Tempus_StepperHHTAlpha_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html#l00182">182</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html">Tempus_StepperHHTAlpha_impl.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a63d6d066fe1797b07983771f666ea164" name="a63d6d066fe1797b07983771f666ea164"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63d6d066fe1797b07983771f666ea164">&#9670;&#160;</a></span>getSchemeName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Scalar &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string <a class="el" href="class_tempus_1_1_stepper_h_h_t_alpha.html">Tempus::StepperHHTAlpha</a>&lt; Scalar &gt;::getSchemeName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__decl_8hpp_source.html#l00169">169</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__decl_8hpp_source.html">Tempus_StepperHHTAlpha_decl.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a44b2d4f561f65228c750f4b5d221fc93" name="a44b2d4f561f65228c750f4b5d221fc93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44b2d4f561f65228c750f4b5d221fc93">&#9670;&#160;</a></span>getBeta() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Scalar &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual Scalar <a class="el" href="class_tempus_1_1_stepper_h_h_t_alpha.html">Tempus::StepperHHTAlpha</a>&lt; Scalar &gt;::getBeta </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__decl_8hpp_source.html#l00170">170</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__decl_8hpp_source.html">Tempus_StepperHHTAlpha_decl.hpp</a>.</p>
+
+</div>
+</div>
+<a id="af27aa40a49deb33c381fa4773cf0279d" name="af27aa40a49deb33c381fa4773cf0279d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af27aa40a49deb33c381fa4773cf0279d">&#9670;&#160;</a></span>getGamma()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Scalar &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual Scalar <a class="el" href="class_tempus_1_1_stepper_h_h_t_alpha.html">Tempus::StepperHHTAlpha</a>&lt; Scalar &gt;::getGamma </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__decl_8hpp_source.html#l00171">171</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__decl_8hpp_source.html">Tempus_StepperHHTAlpha_decl.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a9ec701b9f5b95eb28fa3c31dc9799179" name="a9ec701b9f5b95eb28fa3c31dc9799179"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ec701b9f5b95eb28fa3c31dc9799179">&#9670;&#160;</a></span>getAlphaF()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Scalar &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual Scalar <a class="el" href="class_tempus_1_1_stepper_h_h_t_alpha.html">Tempus::StepperHHTAlpha</a>&lt; Scalar &gt;::getAlphaF </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__decl_8hpp_source.html#l00172">172</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__decl_8hpp_source.html">Tempus_StepperHHTAlpha_decl.hpp</a>.</p>
+
+</div>
+</div>
+<a id="af3a648c079f02027ae26314710c379cd" name="af3a648c079f02027ae26314710c379cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3a648c079f02027ae26314710c379cd">&#9670;&#160;</a></span>getAlphaM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Scalar &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual Scalar <a class="el" href="class_tempus_1_1_stepper_h_h_t_alpha.html">Tempus::StepperHHTAlpha</a>&lt; Scalar &gt;::getAlphaM </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__decl_8hpp_source.html#l00173">173</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__decl_8hpp_source.html">Tempus_StepperHHTAlpha_decl.hpp</a>.</p>
+
+</div>
+</div>
+<a id="af8596ba922d4a18d1b9b20c9f5dbc982" name="af8596ba922d4a18d1b9b20c9f5dbc982"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8596ba922d4a18d1b9b20c9f5dbc982">&#9670;&#160;</a></span>validateSchemeParameters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Scalar &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_tempus_1_1_stepper_h_h_t_alpha.html">Tempus::StepperHHTAlpha</a>&lt; Scalar &gt;::validateSchemeParameters </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Validate final scheme parameters and emit any consistency warnings. </p>
+
+<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html#l00230">230</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__impl_8hpp_source.html">Tempus_StepperHHTAlpha_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1547,7 +1728,7 @@ template&lt;class Scalar &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__decl_8hpp_source.html#l00171">171</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__decl_8hpp_source.html">Tempus_StepperHHTAlpha_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__decl_8hpp_source.html#l00179">179</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__decl_8hpp_source.html">Tempus_StepperHHTAlpha_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1573,7 +1754,7 @@ template&lt;class Scalar &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__decl_8hpp_source.html#l00173">173</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__decl_8hpp_source.html">Tempus_StepperHHTAlpha_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__decl_8hpp_source.html#l00181">181</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__decl_8hpp_source.html">Tempus_StepperHHTAlpha_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1599,7 +1780,7 @@ template&lt;class Scalar &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__decl_8hpp_source.html#l00174">174</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__decl_8hpp_source.html">Tempus_StepperHHTAlpha_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__decl_8hpp_source.html#l00182">182</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__decl_8hpp_source.html">Tempus_StepperHHTAlpha_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1625,7 +1806,7 @@ template&lt;class Scalar &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__decl_8hpp_source.html#l00175">175</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__decl_8hpp_source.html">Tempus_StepperHHTAlpha_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__decl_8hpp_source.html#l00183">183</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__decl_8hpp_source.html">Tempus_StepperHHTAlpha_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1651,7 +1832,7 @@ template&lt;class Scalar &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__decl_8hpp_source.html#l00176">176</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__decl_8hpp_source.html">Tempus_StepperHHTAlpha_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__decl_8hpp_source.html#l00184">184</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__decl_8hpp_source.html">Tempus_StepperHHTAlpha_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1677,7 +1858,7 @@ template&lt;class Scalar &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__decl_8hpp_source.html#l00177">177</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__decl_8hpp_source.html">Tempus_StepperHHTAlpha_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__decl_8hpp_source.html#l00185">185</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__decl_8hpp_source.html">Tempus_StepperHHTAlpha_decl.hpp</a>.</p>
 
 </div>
 </div>
@@ -1703,7 +1884,7 @@ template&lt;class Scalar &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__decl_8hpp_source.html#l00179">179</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__decl_8hpp_source.html">Tempus_StepperHHTAlpha_decl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_tempus___stepper_h_h_t_alpha__decl_8hpp_source.html#l00187">187</a> of file <a class="el" href="_tempus___stepper_h_h_t_alpha__decl_8hpp_source.html">Tempus_StepperHHTAlpha_decl.hpp</a>.</p>
 
 </div>
 </div>

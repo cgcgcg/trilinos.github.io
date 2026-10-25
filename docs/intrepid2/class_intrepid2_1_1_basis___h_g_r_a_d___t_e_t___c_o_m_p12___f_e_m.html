@@ -51,7 +51,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Implementation of the default H(grad)-compatible FEM basis of degree 2 on Tetrahedron cell.  
+<p>Implementation of the composite H(grad)-compatible FEM basis on Tetrahedron cell, with 10 nodes and 12 linear sub-tetrahedra.  
  <a href="class_intrepid2_1_1_basis___h_g_r_a_d___t_e_t___c_o_m_p12___f_e_m.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_intrepid2___h_g_r_a_d___t_e_t___c_o_m_p12___f_e_m_8hpp_source.html">Intrepid2_HGRAD_TET_COMP12_FEM.hpp</a>&gt;</code></p>
@@ -136,9 +136,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0dd11216943743e664a4192281975f95" id="r_a0dd11216943743e664a4192281975f95"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_intrepid2_1_1_basis___h_g_r_a_d___t_e_t___c_o_m_p12___f_e_m.html#a0dd11216943743e664a4192281975f95">getValues</a> (const <a class="el" href="class_intrepid2_1_1_basis.html#ae5850ad4ecab7d33f5f22b79d80a3255">ExecutionSpace</a> &amp;space, <a class="el" href="class_intrepid2_1_1_basis.html#a1162328aeba60e176a9ee52d73465a41">OutputViewType</a> outputValues, const <a class="el" href="class_intrepid2_1_1_basis.html#a08fcf7f132219cc3a54755f504836766">PointViewType</a> inputPoints, const EOperator operatorType=OPERATOR_VALUE) const override</td></tr>
 <tr class="memdesc:a0dd11216943743e664a4192281975f95"><td class="mdescLeft">&#160;</td><td class="mdescRight">FEM basis evaluation on a <b>reference Tetrahedron</b> cell.  <br /></td></tr>
 <tr class="separator:a0dd11216943743e664a4192281975f95"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e4f1ba0be0beecd94a1c8d160813463" id="r_a1e4f1ba0be0beecd94a1c8d160813463"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_intrepid2_1_1_basis___h_g_r_a_d___t_e_t___c_o_m_p12___f_e_m.html#a1e4f1ba0be0beecd94a1c8d160813463">getScratchSpaceSize</a> (ordinal_type &amp;perThreadSpaceSize, const <a class="el" href="class_intrepid2_1_1_basis.html#a08fcf7f132219cc3a54755f504836766">PointViewType</a> inputPointsconst, const EOperator operatorType=OPERATOR_VALUE) const override</td></tr>
-<tr class="memdesc:a1e4f1ba0be0beecd94a1c8d160813463"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the size of the scratch space, in bytes, needed for using the team-level implementation of getValues.  <br /></td></tr>
-<tr class="separator:a1e4f1ba0be0beecd94a1c8d160813463"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e97775754069fa92d2f6a5794a55c3e" id="r_a3e97775754069fa92d2f6a5794a55c3e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_intrepid2_1_1_basis___h_g_r_a_d___t_e_t___c_o_m_p12___f_e_m.html#a3e97775754069fa92d2f6a5794a55c3e">getScratchSpaceSize</a> (ordinal_type &amp;perThreadSpaceSize, const <a class="el" href="class_intrepid2_1_1_basis.html#a08fcf7f132219cc3a54755f504836766">PointViewType</a> inputPoints, const EOperator operatorType=OPERATOR_VALUE) const override</td></tr>
+<tr class="memdesc:a3e97775754069fa92d2f6a5794a55c3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the size of the scratch space, in bytes, needed for using the team-level implementation of getValues.  <br /></td></tr>
+<tr class="separator:a3e97775754069fa92d2f6a5794a55c3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab54dcb175aec1eaea65c73364a46d6bd" id="r_ab54dcb175aec1eaea65c73364a46d6bd"><td class="memItemLeft" align="right" valign="top"><a id="ab54dcb175aec1eaea65c73364a46d6bd" name="ab54dcb175aec1eaea65c73364a46d6bd"></a>
 virtual KOKKOS_INLINE_FUNCTION void&#160;</td><td class="memItemRight" valign="bottom"><b>getValues</b> (<a class="el" href="class_intrepid2_1_1_basis.html#a1162328aeba60e176a9ee52d73465a41">OutputViewType</a> outputValues, const <a class="el" href="class_intrepid2_1_1_basis.html#a08fcf7f132219cc3a54755f504836766">PointViewType</a> inputPoints, const EOperator operatorType, const typename Kokkos::TeamPolicy&lt; typename DeviceType::execution_space &gt;::member_type &amp;team_member, const int threadScratchLevel, const ordinal_type subcellDim=-1, const ordinal_type subcellOrdinal=-1) const override</td></tr>
 <tr class="separator:ab54dcb175aec1eaea65c73364a46d6bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -298,8 +298,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename <a class="el" href="class_intrepid2_1_1_basis.html#a79e59416ef09efd11f0f8b3193ad8975">DeviceType</a> = void, typename outputValueType = double, typename pointValueType = double&gt;<br />
-class Intrepid2::Basis_HGRAD_TET_COMP12_FEM&lt; DeviceType, outputValueType, pointValueType &gt;</div><p>Implementation of the default H(grad)-compatible FEM basis of degree 2 on Tetrahedron cell. </p>
-<p>Implements Lagrangian basis of degree 2 on the reference Tetrahedron cell. The basis has cardinality 10 and spans a COMPLETE quadratic polynomial space. <a class="el" href="class_intrepid2_1_1_basis.html" title="An abstract base class that defines interface for concrete basis implementations for Finite Element (...">Basis</a> functions are dual to a unisolvent set of degrees-of-freedom (DoF) defined and enumerated as follows:</p>
+class Intrepid2::Basis_HGRAD_TET_COMP12_FEM&lt; DeviceType, outputValueType, pointValueType &gt;</div><p>Implementation of the composite H(grad)-compatible FEM basis on Tetrahedron cell, with 10 nodes and 12 linear sub-tetrahedra. </p>
+<p>Implements the basis of the 10-node composite tetrahedral element on the reference Tetrahedron cell. The cell is split into 12 sub-tetrahedra: the 4 corner tetrahedra of the regular refinement, and 8 tetrahedra obtained by connecting the 8 faces of the remaining inner octahedron to an auxiliary node at the centroid (1/4,1/4,1/4). The basis functions are continuous and piecewise linear on the 12 sub-tetrahedra. The auxiliary node is not a degree-of-freedom: its value is the average of the values at the 6 edge midpoints.</p>
+<p>The basis has cardinality 10 and degree 1: it contains the COMPLETE linear polynomial space, but NOT the quadratic polynomials. <a class="el" href="class_intrepid2_1_1_basis.html" title="An abstract base class that defines interface for concrete basis implementations for Finite Element (...">Basis</a> functions are dual to a unisolvent set of degrees-of-freedom (DoF) defined and enumerated as follows:</p>
 <pre class="fragment">=================================================================================================
 |         |           degree-of-freedom-tag table                    |                           |
 |   DoF   |----------------------------------------------------------|      DoF definition       |
@@ -328,9 +329,15 @@ class Intrepid2::Basis_HGRAD_TET_COMP12_FEM&lt; DeviceType, outputValueType, poi
 |=========|==============|==============|==============|=============|===========================|
 |   MAX   |  maxScDim=0  |  maxScOrd=3  |  maxDfOrd=0  |     -       |                           |
 |=========|==============|==============|==============|=============|===========================|
-</pre><dl class="section remark"><dt>Remarks</dt><dd>Ordering of DoFs follows the node order in Tetrahedron&lt;10&gt; topology. Note that node order in this topology follows the natural order of k-subcells where the nodes are located, i.e., L_0 to L_3 correspond to 0-subcells (vertices) 0 to 3 and L_4 to L_9 correspond to 1-subcells (edges) 0 to 5. </dd></dl>
+</pre><dl class="section remark"><dt>Remarks</dt><dd>Ordering of DoFs follows the node order in Tetrahedron&lt;10&gt; topology. Note that node order in this topology follows the natural order of k-subcells where the nodes are located, i.e., L_0 to L_3 correspond to 0-subcells (vertices) 0 to 3 and L_4 to L_9 correspond to 1-subcells (edges) 0 to 5.</dd>
+<dd>
+OPERATOR_GRAD (and OPERATOR_D1) does NOT return the gradients of the functions returned by OPERATOR_VALUE. Those gradients are piecewise constant on the 12 sub-tetrahedra; OPERATOR_GRAD returns instead their L2 projection, over the parent tetrahedron, onto linear polynomials, which is the gradient used by the composite tetrahedral element, see J.T. Ostien et al., "A 10-node composite tetrahedral finite element for solid mechanics", Int. J. Numer. Meth. Engng. 107(13):1145-1170, 2016. As a consequence, a Galerkin discretization that uses OPERATOR_GRAD is a projected-gradient method, not the standard Galerkin method for the space spanned by OPERATOR_VALUE. OPERATOR_Dk, k &gt;= 2, returns zero, which is consistent with OPERATOR_VALUE but not with OPERATOR_GRAD. When this basis is used to define the cell geometry, Jacobians computed from OPERATOR_GRAD are the projected Jacobians, which are exact only for affine cells.</dd>
+<dd>
+OPERATOR_VALUE is only piecewise polynomial on the parent tetrahedron, so integrals involving it are computed exactly only by a composite cubature on the 12 sub-tetrahedra.</dd>
+<dd>
+OPERATOR_VALUE can be evaluated at points slightly outside the reference tetrahedron (e.g., boundary points perturbed by round-off): such points are assigned to an adjacent sub-tetrahedron and the basis functions are extended linearly from it, so the values are continuous across the boundary of the reference tetrahedron. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___h_g_r_a_d___t_e_t___c_o_m_p12___f_e_m_8hpp_source.html#l00150">150</a> of file <a class="el" href="_intrepid2___h_g_r_a_d___t_e_t___c_o_m_p12___f_e_m_8hpp_source.html">Intrepid2_HGRAD_TET_COMP12_FEM.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___h_g_r_a_d___t_e_t___c_o_m_p12___f_e_m_8hpp_source.html#l00180">180</a> of file <a class="el" href="_intrepid2___h_g_r_a_d___t_e_t___c_o_m_p12___f_e_m_8hpp_source.html">Intrepid2_HGRAD_TET_COMP12_FEM.hpp</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a4b160f5915ddb2ac5052f1c9ff146c0b" name="a4b160f5915ddb2ac5052f1c9ff146c0b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4b160f5915ddb2ac5052f1c9ff146c0b">&#9670;&#160;</a></span>BasisBase</h2>
@@ -346,7 +353,7 @@ template&lt;typename <a class="el" href="class_intrepid2_1_1_basis.html#a79e5941
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___h_g_r_a_d___t_e_t___c_o_m_p12___f_e_m_8hpp_source.html#l00152">152</a> of file <a class="el" href="_intrepid2___h_g_r_a_d___t_e_t___c_o_m_p12___f_e_m_8hpp_source.html">Intrepid2_HGRAD_TET_COMP12_FEM.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___h_g_r_a_d___t_e_t___c_o_m_p12___f_e_m_8hpp_source.html#l00182">182</a> of file <a class="el" href="_intrepid2___h_g_r_a_d___t_e_t___c_o_m_p12___f_e_m_8hpp_source.html">Intrepid2_HGRAD_TET_COMP12_FEM.hpp</a>.</p>
 
 </div>
 </div>
@@ -370,7 +377,7 @@ template&lt;typename DT , typename OT , typename PT &gt; </div>
 
 <p>Constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___h_g_r_a_d___t_e_t___c_o_m_p12___f_e_m_def_8hpp_source.html#l00346">346</a> of file <a class="el" href="_intrepid2___h_g_r_a_d___t_e_t___c_o_m_p12___f_e_m_def_8hpp_source.html">Intrepid2_HGRAD_TET_COMP12_FEMDef.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___h_g_r_a_d___t_e_t___c_o_m_p12___f_e_m_def_8hpp_source.html#l00292">292</a> of file <a class="el" href="_intrepid2___h_g_r_a_d___t_e_t___c_o_m_p12___f_e_m_def_8hpp_source.html">Intrepid2_HGRAD_TET_COMP12_FEMDef.hpp</a>.</p>
 
 </div>
 </div>
@@ -405,7 +412,7 @@ template&lt;typename <a class="el" href="class_intrepid2_1_1_basis.html#a79e5941
 
 <p>Reimplemented from <a class="el" href="class_intrepid2_1_1_basis.html#aacd773a457b85bbab371a053f67643cf">Intrepid2::Basis&lt; Device, outputValueType, pointValueType &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___h_g_r_a_d___t_e_t___c_o_m_p12___f_e_m_8hpp_source.html#l00219">219</a> of file <a class="el" href="_intrepid2___h_g_r_a_d___t_e_t___c_o_m_p12___f_e_m_8hpp_source.html">Intrepid2_HGRAD_TET_COMP12_FEM.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___h_g_r_a_d___t_e_t___c_o_m_p12___f_e_m_8hpp_source.html#l00249">249</a> of file <a class="el" href="_intrepid2___h_g_r_a_d___t_e_t___c_o_m_p12___f_e_m_8hpp_source.html">Intrepid2_HGRAD_TET_COMP12_FEM.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_intrepid2___basis_8hpp_source.html#l00285">Intrepid2::Basis&lt; Device, outputValueType, pointValueType &gt;::dofCoords_</a>.</p>
 
@@ -441,12 +448,12 @@ template&lt;typename <a class="el" href="class_intrepid2_1_1_basis.html#a79e5941
 
 <p>Reimplemented from <a class="el" href="class_intrepid2_1_1_basis.html#ae685cbac362f1df2ccfe62ef00c2e76b">Intrepid2::Basis&lt; Device, outputValueType, pointValueType &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___h_g_r_a_d___t_e_t___c_o_m_p12___f_e_m_8hpp_source.html#l00236">236</a> of file <a class="el" href="_intrepid2___h_g_r_a_d___t_e_t___c_o_m_p12___f_e_m_8hpp_source.html">Intrepid2_HGRAD_TET_COMP12_FEM.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___h_g_r_a_d___t_e_t___c_o_m_p12___f_e_m_8hpp_source.html#l00266">266</a> of file <a class="el" href="_intrepid2___h_g_r_a_d___t_e_t___c_o_m_p12___f_e_m_8hpp_source.html">Intrepid2_HGRAD_TET_COMP12_FEM.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a1e4f1ba0be0beecd94a1c8d160813463" name="a1e4f1ba0be0beecd94a1c8d160813463"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1e4f1ba0be0beecd94a1c8d160813463">&#9670;&#160;</a></span>getScratchSpaceSize()</h2>
+<a id="a3e97775754069fa92d2f6a5794a55c3e" name="a3e97775754069fa92d2f6a5794a55c3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e97775754069fa92d2f6a5794a55c3e">&#9670;&#160;</a></span>getScratchSpaceSize()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -500,7 +507,7 @@ template&lt;typename DT , typename OT , typename PT &gt; </div>
 
 <p>Reimplemented from <a class="el" href="class_intrepid2_1_1_basis.html#a331877340232cf77b7b8b9db926c3d88">Intrepid2::Basis&lt; Device, outputValueType, pointValueType &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___h_g_r_a_d___t_e_t___c_o_m_p12___f_e_m_def_8hpp_source.html#l00410">410</a> of file <a class="el" href="_intrepid2___h_g_r_a_d___t_e_t___c_o_m_p12___f_e_m_def_8hpp_source.html">Intrepid2_HGRAD_TET_COMP12_FEMDef.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___h_g_r_a_d___t_e_t___c_o_m_p12___f_e_m_def_8hpp_source.html#l00356">356</a> of file <a class="el" href="_intrepid2___h_g_r_a_d___t_e_t___c_o_m_p12___f_e_m_def_8hpp_source.html">Intrepid2_HGRAD_TET_COMP12_FEMDef.hpp</a>.</p>
 
 </div>
 </div>
@@ -566,7 +573,7 @@ template&lt;typename <a class="el" href="class_intrepid2_1_1_basis.html#a79e5941
 
 <p>Reimplemented from <a class="el" href="class_intrepid2_1_1_basis.html#a7b6120fc889459b1696d93418b45a7a4">Intrepid2::Basis&lt; Device, outputValueType, pointValueType &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___h_g_r_a_d___t_e_t___c_o_m_p12___f_e_m_8hpp_source.html#l00183">183</a> of file <a class="el" href="_intrepid2___h_g_r_a_d___t_e_t___c_o_m_p12___f_e_m_8hpp_source.html">Intrepid2_HGRAD_TET_COMP12_FEM.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___h_g_r_a_d___t_e_t___c_o_m_p12___f_e_m_8hpp_source.html#l00213">213</a> of file <a class="el" href="_intrepid2___h_g_r_a_d___t_e_t___c_o_m_p12___f_e_m_8hpp_source.html">Intrepid2_HGRAD_TET_COMP12_FEM.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_intrepid2___basis_8hpp_source.html#l00834">Intrepid2::Basis&lt; Device, outputValueType, pointValueType &gt;::getBaseCellTopology()</a>, <a class="el" href="_intrepid2___basis_8hpp_source.html#l00805">Intrepid2::Basis&lt; Device, outputValueType, pointValueType &gt;::getCardinality()</a>, and <a class="el" href="_intrepid2___basis_def_8hpp_source.html#l00442">Intrepid2::getValues_HGRAD_Args()</a>.</p>
 

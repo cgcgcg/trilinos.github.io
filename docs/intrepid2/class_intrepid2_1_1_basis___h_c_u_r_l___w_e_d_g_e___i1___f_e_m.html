@@ -344,14 +344,14 @@ class Intrepid2::Basis_HCURL_WEDGE_I1_FEM&lt; DeviceType, outputValueType, point
 |   MAX   |  maxScDim=1  |  maxScOrd=8  |  maxDfOrd=0  |      -      |                            |
 |=========|==============|==============|==============|=============|============================|
 </pre><dl class="section remark"><dt>Remarks</dt><dd><ul>
-<li>In the DoF functional <picture><source srcset="form_122_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="${\bf t}$" src="form_122.png" width="6" height="9"/></picture> is an edge tangent. Direction of edge tangents follows the vertex order of the edges in the cell topology and runs from edge vertex 0 to edge vertex 1, whereas their length is set equal to the edge length. For example, edge 8 of all Wedge reference cells has vertex order {2,5}, i.e., its tangent runs from vertex 2 of the reference Wedge to vertex 5 of that cell. On the reference Wedge the coordinates of these vertices are (0,1,-1) and (0,1,1), respectively. Therefore, the tangent to edge 8 is (0,1,1) - (0,1,-1) = (0, 0, 2). Because its length already equals edge length, no further rescaling of the edge tangent is needed.</li>
+<li>In the DoF functional <picture><source srcset="form_123_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="${\bf t}$" src="form_123.png" width="6" height="9"/></picture> is the reference edge tangent, i.e., the tangent returned by <a class="el" href="class_intrepid2_1_1_cell_tools.html#afa7e6b7811ff106bcdf2a3d298d6f27d" title="Computes constant tangent vectors to edges of 2D or 3D reference cells.">Intrepid2::CellTools::getReferenceEdgeTangent</a> and by getDofCoeffs(). Direction of edge tangents follows the vertex order of the edges in the cell topology and runs from edge vertex 0 to edge vertex 1, whereas their length is one-half the edge length, because reference edges are parametrized over [-1,1]. For example, edge 8 of all Wedge reference cells has vertex order {2,5}, i.e., its tangent runs from vertex 2 of the reference Wedge to vertex 5 of that cell. On the reference Wedge the coordinates of these vertices are (0,1,-1) and (0,1,1), respectively. Therefore, the tangent to edge 8 is ((0,1,1) - (0,1,-1))/2 = (0,0,1).</li>
 </ul>
 <ul>
-<li>The length of the edge tangent equals the edge length. As a result, the DoF functional is the value of the tangent component of a vector field at the edge midpoint times the edge length. The resulting basis is equivalent to a basis defined by using the edge circulation as a DoF functional. Note that edges 0, 2, 3 and 5 of reference Wedge&lt;&gt; cells have unit lengths; edges 1 and 4 have length Sqrt(2), and edges 6, 7, and 8 have length 2. </li>
+<li>For functions in the span of this basis, the tangent component is constant along each edge. On this space the DoF functional is therefore one-half of the edge circulation, <picture><source srcset="form_124_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$L_i({\bf u}) = \frac{1}{2}\int_{e_i} {\bf u}\cdot\hat{\bf t}_i\,ds$" src="form_124.png" width="115" height="19"/></picture>, where <picture><source srcset="form_125_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$\hat{\bf t}_i$" src="form_125.png" width="10" height="15"/></picture> is the unit tangent, and each basis function has circulation 2 along its own edge (and 0 along the other edges). Note that edges 0, 2, 3 and 5 of reference Wedge&lt;&gt; cells have unit lengths; edges 1 and 4 have length Sqrt(2), and edges 6, 7, and 8 have length 2. </li>
 </ul>
 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___h_c_u_r_l___w_e_d_g_e___i1___f_e_m_8hpp_source.html#l00147">147</a> of file <a class="el" href="_intrepid2___h_c_u_r_l___w_e_d_g_e___i1___f_e_m_8hpp_source.html">Intrepid2_HCURL_WEDGE_I1_FEM.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___h_c_u_r_l___w_e_d_g_e___i1___f_e_m_8hpp_source.html#l00149">149</a> of file <a class="el" href="_intrepid2___h_c_u_r_l___w_e_d_g_e___i1___f_e_m_8hpp_source.html">Intrepid2_HCURL_WEDGE_I1_FEM.hpp</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="ab6f491cc4506a2ff514b037437ba02fc" name="ab6f491cc4506a2ff514b037437ba02fc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab6f491cc4506a2ff514b037437ba02fc">&#9670;&#160;</a></span>OrdinalTypeArray1DHost</h2>
@@ -367,7 +367,7 @@ template&lt;typename <a class="el" href="class_intrepid2_1_1_basis.html#a79e5941
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___h_c_u_r_l___w_e_d_g_e___i1___f_e_m_8hpp_source.html#l00149">149</a> of file <a class="el" href="_intrepid2___h_c_u_r_l___w_e_d_g_e___i1___f_e_m_8hpp_source.html">Intrepid2_HCURL_WEDGE_I1_FEM.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___h_c_u_r_l___w_e_d_g_e___i1___f_e_m_8hpp_source.html#l00151">151</a> of file <a class="el" href="_intrepid2___h_c_u_r_l___w_e_d_g_e___i1___f_e_m_8hpp_source.html">Intrepid2_HCURL_WEDGE_I1_FEM.hpp</a>.</p>
 
 </div>
 </div>
@@ -385,7 +385,7 @@ template&lt;typename <a class="el" href="class_intrepid2_1_1_basis.html#a79e5941
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___h_c_u_r_l___w_e_d_g_e___i1___f_e_m_8hpp_source.html#l00150">150</a> of file <a class="el" href="_intrepid2___h_c_u_r_l___w_e_d_g_e___i1___f_e_m_8hpp_source.html">Intrepid2_HCURL_WEDGE_I1_FEM.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___h_c_u_r_l___w_e_d_g_e___i1___f_e_m_8hpp_source.html#l00152">152</a> of file <a class="el" href="_intrepid2___h_c_u_r_l___w_e_d_g_e___i1___f_e_m_8hpp_source.html">Intrepid2_HCURL_WEDGE_I1_FEM.hpp</a>.</p>
 
 </div>
 </div>
@@ -403,7 +403,7 @@ template&lt;typename <a class="el" href="class_intrepid2_1_1_basis.html#a79e5941
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___h_c_u_r_l___w_e_d_g_e___i1___f_e_m_8hpp_source.html#l00151">151</a> of file <a class="el" href="_intrepid2___h_c_u_r_l___w_e_d_g_e___i1___f_e_m_8hpp_source.html">Intrepid2_HCURL_WEDGE_I1_FEM.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___h_c_u_r_l___w_e_d_g_e___i1___f_e_m_8hpp_source.html#l00153">153</a> of file <a class="el" href="_intrepid2___h_c_u_r_l___w_e_d_g_e___i1___f_e_m_8hpp_source.html">Intrepid2_HCURL_WEDGE_I1_FEM.hpp</a>.</p>
 
 </div>
 </div>
@@ -421,7 +421,7 @@ template&lt;typename <a class="el" href="class_intrepid2_1_1_basis.html#a79e5941
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___h_c_u_r_l___w_e_d_g_e___i1___f_e_m_8hpp_source.html#l00157">157</a> of file <a class="el" href="_intrepid2___h_c_u_r_l___w_e_d_g_e___i1___f_e_m_8hpp_source.html">Intrepid2_HCURL_WEDGE_I1_FEM.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___h_c_u_r_l___w_e_d_g_e___i1___f_e_m_8hpp_source.html#l00159">159</a> of file <a class="el" href="_intrepid2___h_c_u_r_l___w_e_d_g_e___i1___f_e_m_8hpp_source.html">Intrepid2_HCURL_WEDGE_I1_FEM.hpp</a>.</p>
 
 </div>
 </div>
@@ -439,7 +439,7 @@ template&lt;typename <a class="el" href="class_intrepid2_1_1_basis.html#a79e5941
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___h_c_u_r_l___w_e_d_g_e___i1___f_e_m_8hpp_source.html#l00158">158</a> of file <a class="el" href="_intrepid2___h_c_u_r_l___w_e_d_g_e___i1___f_e_m_8hpp_source.html">Intrepid2_HCURL_WEDGE_I1_FEM.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___h_c_u_r_l___w_e_d_g_e___i1___f_e_m_8hpp_source.html#l00160">160</a> of file <a class="el" href="_intrepid2___h_c_u_r_l___w_e_d_g_e___i1___f_e_m_8hpp_source.html">Intrepid2_HCURL_WEDGE_I1_FEM.hpp</a>.</p>
 
 </div>
 </div>
@@ -457,7 +457,7 @@ template&lt;typename <a class="el" href="class_intrepid2_1_1_basis.html#a79e5941
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___h_c_u_r_l___w_e_d_g_e___i1___f_e_m_8hpp_source.html#l00159">159</a> of file <a class="el" href="_intrepid2___h_c_u_r_l___w_e_d_g_e___i1___f_e_m_8hpp_source.html">Intrepid2_HCURL_WEDGE_I1_FEM.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___h_c_u_r_l___w_e_d_g_e___i1___f_e_m_8hpp_source.html#l00161">161</a> of file <a class="el" href="_intrepid2___h_c_u_r_l___w_e_d_g_e___i1___f_e_m_8hpp_source.html">Intrepid2_HCURL_WEDGE_I1_FEM.hpp</a>.</p>
 
 </div>
 </div>
@@ -512,7 +512,7 @@ template&lt;typename <a class="el" href="class_intrepid2_1_1_basis.html#a79e5941
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___h_c_u_r_l___w_e_d_g_e___i1___f_e_m_8hpp_source.html#l00217">217</a> of file <a class="el" href="_intrepid2___h_c_u_r_l___w_e_d_g_e___i1___f_e_m_8hpp_source.html">Intrepid2_HCURL_WEDGE_I1_FEM.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___h_c_u_r_l___w_e_d_g_e___i1___f_e_m_8hpp_source.html#l00219">219</a> of file <a class="el" href="_intrepid2___h_c_u_r_l___w_e_d_g_e___i1___f_e_m_8hpp_source.html">Intrepid2_HCURL_WEDGE_I1_FEM.hpp</a>.</p>
 
 </div>
 </div>
@@ -542,7 +542,7 @@ template&lt;typename <a class="el" href="class_intrepid2_1_1_basis.html#a79e5941
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___h_c_u_r_l___w_e_d_g_e___i1___f_e_m_8hpp_source.html#l00200">200</a> of file <a class="el" href="_intrepid2___h_c_u_r_l___w_e_d_g_e___i1___f_e_m_8hpp_source.html">Intrepid2_HCURL_WEDGE_I1_FEM.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___h_c_u_r_l___w_e_d_g_e___i1___f_e_m_8hpp_source.html#l00202">202</a> of file <a class="el" href="_intrepid2___h_c_u_r_l___w_e_d_g_e___i1___f_e_m_8hpp_source.html">Intrepid2_HCURL_WEDGE_I1_FEM.hpp</a>.</p>
 
 </div>
 </div>
@@ -576,7 +576,7 @@ template&lt;typename <a class="el" href="class_intrepid2_1_1_basis.html#a79e5941
 
 <p>Reimplemented from <a class="el" href="class_intrepid2_1_1_basis.html#a42fa61322fb16e8bad7f97eac4332601">Intrepid2::Basis&lt; Device, outputValueType, pointValueType &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___h_c_u_r_l___w_e_d_g_e___i1___f_e_m_8hpp_source.html#l00272">272</a> of file <a class="el" href="_intrepid2___h_c_u_r_l___w_e_d_g_e___i1___f_e_m_8hpp_source.html">Intrepid2_HCURL_WEDGE_I1_FEM.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___h_c_u_r_l___w_e_d_g_e___i1___f_e_m_8hpp_source.html#l00274">274</a> of file <a class="el" href="_intrepid2___h_c_u_r_l___w_e_d_g_e___i1___f_e_m_8hpp_source.html">Intrepid2_HCURL_WEDGE_I1_FEM.hpp</a>.</p>
 
 </div>
 </div>
@@ -610,7 +610,7 @@ template&lt;typename <a class="el" href="class_intrepid2_1_1_basis.html#a79e5941
 
 <p>Reimplemented from <a class="el" href="class_intrepid2_1_1_basis.html#ae685cbac362f1df2ccfe62ef00c2e76b">Intrepid2::Basis&lt; Device, outputValueType, pointValueType &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___h_c_u_r_l___w_e_d_g_e___i1___f_e_m_8hpp_source.html#l00234">234</a> of file <a class="el" href="_intrepid2___h_c_u_r_l___w_e_d_g_e___i1___f_e_m_8hpp_source.html">Intrepid2_HCURL_WEDGE_I1_FEM.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___h_c_u_r_l___w_e_d_g_e___i1___f_e_m_8hpp_source.html#l00236">236</a> of file <a class="el" href="_intrepid2___h_c_u_r_l___w_e_d_g_e___i1___f_e_m_8hpp_source.html">Intrepid2_HCURL_WEDGE_I1_FEM.hpp</a>.</p>
 
 </div>
 </div>
@@ -709,7 +709,7 @@ template&lt;typename <a class="el" href="class_intrepid2_1_1_basis.html#a79e5941
 
 <p>Reimplemented from <a class="el" href="class_intrepid2_1_1_basis.html#af38951d8d5996252f32f428f2407bafc">Intrepid2::Basis&lt; Device, outputValueType, pointValueType &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___h_c_u_r_l___w_e_d_g_e___i1___f_e_m_8hpp_source.html#l00254">254</a> of file <a class="el" href="_intrepid2___h_c_u_r_l___w_e_d_g_e___i1___f_e_m_8hpp_source.html">Intrepid2_HCURL_WEDGE_I1_FEM.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___h_c_u_r_l___w_e_d_g_e___i1___f_e_m_8hpp_source.html#l00256">256</a> of file <a class="el" href="_intrepid2___h_c_u_r_l___w_e_d_g_e___i1___f_e_m_8hpp_source.html">Intrepid2_HCURL_WEDGE_I1_FEM.hpp</a>.</p>
 
 </div>
 </div>
@@ -755,7 +755,7 @@ template&lt;typename <a class="el" href="class_intrepid2_1_1_basis.html#a79e5941
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___h_c_u_r_l___w_e_d_g_e___i1___f_e_m_8hpp_source.html#l00165">165</a> of file <a class="el" href="_intrepid2___h_c_u_r_l___w_e_d_g_e___i1___f_e_m_8hpp_source.html">Intrepid2_HCURL_WEDGE_I1_FEM.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___h_c_u_r_l___w_e_d_g_e___i1___f_e_m_8hpp_source.html#l00167">167</a> of file <a class="el" href="_intrepid2___h_c_u_r_l___w_e_d_g_e___i1___f_e_m_8hpp_source.html">Intrepid2_HCURL_WEDGE_I1_FEM.hpp</a>.</p>
 
 </div>
 </div>
@@ -788,7 +788,7 @@ template&lt;typename <a class="el" href="class_intrepid2_1_1_basis.html#a79e5941
 
 <p>Reimplemented from <a class="el" href="class_intrepid2_1_1_basis.html#a6622ee449830dc41153d5a1288229fc4">Intrepid2::Basis&lt; Device, outputValueType, pointValueType &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_intrepid2___h_c_u_r_l___w_e_d_g_e___i1___f_e_m_8hpp_source.html#l00240">240</a> of file <a class="el" href="_intrepid2___h_c_u_r_l___w_e_d_g_e___i1___f_e_m_8hpp_source.html">Intrepid2_HCURL_WEDGE_I1_FEM.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_intrepid2___h_c_u_r_l___w_e_d_g_e___i1___f_e_m_8hpp_source.html#l00242">242</a> of file <a class="el" href="_intrepid2___h_c_u_r_l___w_e_d_g_e___i1___f_e_m_8hpp_source.html">Intrepid2_HCURL_WEDGE_I1_FEM.hpp</a>.</p>
 
 </div>
 </div>
