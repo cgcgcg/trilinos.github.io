@@ -87,9 +87,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a22285d61dfa0a1b7d58f4ea9cc19aa48" id="r_a22285d61dfa0a1b7d58f4ea9cc19aa48"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_zoltan2_1_1_debug_manager.html#a22285d61dfa0a1b7d58f4ea9cc19aa48">DebugManager</a> (int rank, bool doPrinting, std::ofstream &amp;debugOs, <a class="el" href="namespace_zoltan2.html#a6cae7ee10d21c7dada0507a5fec0fea4">MessageOutputLevel</a> debugLevel)</td></tr>
-<tr class="memdesc:a22285d61dfa0a1b7d58f4ea9cc19aa48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for output to an ofstream.  <br /></td></tr>
-<tr class="separator:a22285d61dfa0a1b7d58f4ea9cc19aa48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3572de16a72bb2056f5595a268f91389" id="r_a3572de16a72bb2056f5595a268f91389"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_zoltan2_1_1_debug_manager.html#a3572de16a72bb2056f5595a268f91389">DebugManager</a> (int rank, bool doPrinting, std::ofstream &amp;debugOs, <a class="el" href="namespace_zoltan2.html#a6cae7ee10d21c7dada0507a5fec0fea4">MessageOutputLevel</a> debugLevel, bool ownsFileOS=false)</td></tr>
+<tr class="memdesc:a3572de16a72bb2056f5595a268f91389"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for output to an ofstream.  <br /></td></tr>
+<tr class="separator:a3572de16a72bb2056f5595a268f91389"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abde0182ec98e4dfde717ebffd42eb232" id="r_abde0182ec98e4dfde717ebffd42eb232"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_zoltan2_1_1_debug_manager.html#abde0182ec98e4dfde717ebffd42eb232">DebugManager</a> (int rank, bool doPrinting, std::ostream &amp;debugOs, <a class="el" href="namespace_zoltan2.html#a6cae7ee10d21c7dada0507a5fec0fea4">MessageOutputLevel</a> debugLevel)</td></tr>
 <tr class="memdesc:abde0182ec98e4dfde717ebffd42eb232"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for output to an iostream.  <br /></td></tr>
 <tr class="separator:abde0182ec98e4dfde717ebffd42eb232"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -131,8 +131,8 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_zoltan2___debug_manager_8hpp_source.html#l00045">45</a> of file <a class="el" href="_zoltan2___debug_manager_8hpp_source.html">Zoltan2_DebugManager.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a22285d61dfa0a1b7d58f4ea9cc19aa48" name="a22285d61dfa0a1b7d58f4ea9cc19aa48"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a22285d61dfa0a1b7d58f4ea9cc19aa48">&#9670;&#160;</a></span>DebugManager() <span class="overload">[1/2]</span></h2>
+<a id="a3572de16a72bb2056f5595a268f91389" name="a3572de16a72bb2056f5595a268f91389"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3572de16a72bb2056f5595a268f91389">&#9670;&#160;</a></span>DebugManager() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -162,7 +162,13 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="namespace_zoltan2.html#a6cae7ee10d21c7dada0507a5fec0fea4">MessageOutputLevel</a>&#160;</td>
-          <td class="paramname"><em>debugLevel</em>&#160;</td>
+          <td class="paramname"><em>debugLevel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>ownsFileOS</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -309,7 +315,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Return the output stream for debug/status messages. </p>
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___debug_manager_8hpp_source.html#l00086">86</a> of file <a class="el" href="_zoltan2___debug_manager_8hpp_source.html">Zoltan2_DebugManager.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___debug_manager_8hpp_source.html#l00089">89</a> of file <a class="el" href="_zoltan2___debug_manager_8hpp_source.html">Zoltan2_DebugManager.hpp</a>.</p>
 
 </div>
 </div>
@@ -338,7 +344,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Return the highest level of message that will be printed. </p>
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___debug_manager_8hpp_source.html#l00090">90</a> of file <a class="el" href="_zoltan2___debug_manager_8hpp_source.html">Zoltan2_DebugManager.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___debug_manager_8hpp_source.html#l00093">93</a> of file <a class="el" href="_zoltan2___debug_manager_8hpp_source.html">Zoltan2_DebugManager.hpp</a>.</p>
 
 </div>
 </div>
@@ -385,7 +391,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___debug_manager_8hpp_source.html#l00100">100</a> of file <a class="el" href="_zoltan2___debug_manager_8hpp_source.html">Zoltan2_DebugManager.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___debug_manager_8hpp_source.html#l00103">103</a> of file <a class="el" href="_zoltan2___debug_manager_8hpp_source.html">Zoltan2_DebugManager.hpp</a>.</p>
 
 </div>
 </div>
@@ -432,7 +438,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___debug_manager_8hpp_source.html#l00116">116</a> of file <a class="el" href="_zoltan2___debug_manager_8hpp_source.html">Zoltan2_DebugManager.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___debug_manager_8hpp_source.html#l00119">119</a> of file <a class="el" href="_zoltan2___debug_manager_8hpp_source.html">Zoltan2_DebugManager.hpp</a>.</p>
 
 </div>
 </div>
@@ -479,7 +485,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___debug_manager_8hpp_source.html#l00131">131</a> of file <a class="el" href="_zoltan2___debug_manager_8hpp_source.html">Zoltan2_DebugManager.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___debug_manager_8hpp_source.html#l00134">134</a> of file <a class="el" href="_zoltan2___debug_manager_8hpp_source.html">Zoltan2_DebugManager.hpp</a>.</p>
 
 </div>
 </div>
@@ -526,7 +532,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_zoltan2___debug_manager_8hpp_source.html#l00146">146</a> of file <a class="el" href="_zoltan2___debug_manager_8hpp_source.html">Zoltan2_DebugManager.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_zoltan2___debug_manager_8hpp_source.html#l00149">149</a> of file <a class="el" href="_zoltan2___debug_manager_8hpp_source.html">Zoltan2_DebugManager.hpp</a>.</p>
 
 </div>
 </div>

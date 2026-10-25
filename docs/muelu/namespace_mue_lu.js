@@ -15,6 +15,7 @@ var namespace_mue_lu =
     [ "KokkosTuningParams", "namespace_mue_lu_1_1_kokkos_tuning_params.html", [
       [ "MAX_VALID_PARAMS", "namespace_mue_lu_1_1_kokkos_tuning_params.html#ad4cd1a5fe5e82f9a2212232882f7db65", null ]
     ] ],
+    [ "LocalQR", "namespace_mue_lu_1_1_local_q_r.html", "namespace_mue_lu_1_1_local_q_r" ],
     [ "MatrixConstruction", "namespace_mue_lu_1_1_matrix_construction.html", "namespace_mue_lu_1_1_matrix_construction" ],
     [ "MemUtils", "namespace_mue_lu_1_1_mem_utils.html", [
       [ "PrintMemoryUsage", "namespace_mue_lu_1_1_mem_utils.html#a11c27664227aac4e4dd39acfb87bb5af", null ],
@@ -46,6 +47,10 @@ var namespace_mue_lu =
       [ "pingpong_basic", "namespace_mue_lu_1_1_perf_details.html#a8623a7faff5b641d9736c340b1e29b6b", null ],
       [ "halopong_basic", "namespace_mue_lu_1_1_perf_details.html#a9f7199a9d920505f140e33a68955d236", null ],
       [ "GB", "namespace_mue_lu_1_1_perf_details.html#a8fa975d7c249a2f08ebd276cbccbd5cc", null ]
+    ] ],
+    [ "StructuredRAPFactoryDetails", "namespace_mue_lu_1_1_structured_r_a_p_factory_details.html", [
+      [ "getLocalNodeIndices", "namespace_mue_lu_1_1_structured_r_a_p_factory_details.html#ac6a3fda17f060645b825e2bce25f8fa4", null ],
+      [ "resolveNeighbor", "namespace_mue_lu_1_1_structured_r_a_p_factory_details.html#af4b09167feb8744f2b9618c89346e4fc", null ]
     ] ],
     [ "AdaptiveSaMLParameterListInterpreter", "class_mue_lu_1_1_adaptive_sa_m_l_parameter_list_interpreter.html", "class_mue_lu_1_1_adaptive_sa_m_l_parameter_list_interpreter" ],
     [ "AdvSmootherPrototype", "class_mue_lu_1_1_adv_smoother_prototype.html", "class_mue_lu_1_1_adv_smoother_prototype" ],
@@ -128,6 +133,11 @@ var namespace_mue_lu =
     [ "GeoInterpFactory", "class_mue_lu_1_1_geo_interp_factory.html", "class_mue_lu_1_1_geo_interp_factory" ],
     [ "GeometricInterpolationPFactory", "class_mue_lu_1_1_geometric_interpolation_p_factory.html", "class_mue_lu_1_1_geometric_interpolation_p_factory" ],
     [ "GeometricInterpolationPFactory_kokkos", "class_mue_lu_1_1_geometric_interpolation_p_factory__kokkos.html", "class_mue_lu_1_1_geometric_interpolation_p_factory__kokkos" ],
+    [ "GetThresholded_Functor", "struct_mue_lu_1_1_get_thresholded___functor.html", null ],
+    [ "GetThresholded_Functor< ViewType, EntriesType, Scalar, LocalOrdinal, GlobalOrdinal, Node, false, symScale, retainLower >", "struct_mue_lu_1_1_get_thresholded___functor_3_01_view_type_00_01_entries_type_00_01_scalar_00_01293ef034cf2ad9a3f6236394f9eb4c86.html", "struct_mue_lu_1_1_get_thresholded___functor_3_01_view_type_00_01_entries_type_00_01_scalar_00_01293ef034cf2ad9a3f6236394f9eb4c86" ],
+    [ "GetThresholded_Functor< ViewType, EntriesType, Scalar, LocalOrdinal, GlobalOrdinal, Node, true, symScale, retainLower >", "struct_mue_lu_1_1_get_thresholded___functor_3_01_view_type_00_01_entries_type_00_01_scalar_00_01e4011e113f11056d9c543eb3c8e52ff0.html", "struct_mue_lu_1_1_get_thresholded___functor_3_01_view_type_00_01_entries_type_00_01_scalar_00_01e4011e113f11056d9c543eb3c8e52ff0" ],
+    [ "GetThresholdedGraphCountScanFunctor", "struct_mue_lu_1_1_get_thresholded_graph_count_scan_functor.html", "struct_mue_lu_1_1_get_thresholded_graph_count_scan_functor" ],
+    [ "GetThresholdedGraphFillFunctor", "struct_mue_lu_1_1_get_thresholded_graph_fill_functor.html", "struct_mue_lu_1_1_get_thresholded_graph_fill_functor" ],
     [ "GlobalLexicographicIndexManager", "class_mue_lu_1_1_global_lexicographic_index_manager.html", "class_mue_lu_1_1_global_lexicographic_index_manager" ],
     [ "Graph", "class_mue_lu_1_1_graph.html", null ],
     [ "GraphBase", "class_mue_lu_1_1_graph_base.html", null ],
@@ -153,6 +163,7 @@ var namespace_mue_lu =
     [ "Level", "class_mue_lu_1_1_level.html", "class_mue_lu_1_1_level" ],
     [ "LineDetectionFactory", "class_mue_lu_1_1_line_detection_factory.html", "class_mue_lu_1_1_line_detection_factory" ],
     [ "LocalAggregationAlgorithm", "class_mue_lu_1_1_local_aggregation_algorithm.html", null ],
+    [ "LocalFSAIFunctor", "class_mue_lu_1_1_local_f_s_a_i_functor.html", "class_mue_lu_1_1_local_f_s_a_i_functor" ],
     [ "LocalLexicographicIndexManager", "class_mue_lu_1_1_local_lexicographic_index_manager.html", "class_mue_lu_1_1_local_lexicographic_index_manager" ],
     [ "LocalOrdinalTransferFactory", "class_mue_lu_1_1_local_ordinal_transfer_factory.html", "class_mue_lu_1_1_local_ordinal_transfer_factory" ],
     [ "LocalPermutationStrategy", "class_mue_lu_1_1_local_permutation_strategy.html", "class_mue_lu_1_1_local_permutation_strategy" ],
@@ -259,6 +270,7 @@ var namespace_mue_lu =
     [ "StructuredAggregationFactory", "class_mue_lu_1_1_structured_aggregation_factory.html", "class_mue_lu_1_1_structured_aggregation_factory" ],
     [ "StructuredAggregationFactory_kokkos", "class_mue_lu_1_1_structured_aggregation_factory__kokkos.html", "class_mue_lu_1_1_structured_aggregation_factory__kokkos" ],
     [ "StructuredLineDetectionFactory", "class_mue_lu_1_1_structured_line_detection_factory.html", "class_mue_lu_1_1_structured_line_detection_factory" ],
+    [ "StructuredRAPFactory", "class_mue_lu_1_1_structured_r_a_p_factory.html", "class_mue_lu_1_1_structured_r_a_p_factory" ],
     [ "SubBlockAFactory", "class_mue_lu_1_1_sub_block_a_factory.html", "class_mue_lu_1_1_sub_block_a_factory" ],
     [ "SubFactoryMonitor", "class_mue_lu_1_1_sub_factory_monitor.html", "class_mue_lu_1_1_sub_factory_monitor" ],
     [ "SubMonitor", "class_mue_lu_1_1_sub_monitor.html", "class_mue_lu_1_1_sub_monitor" ],
@@ -336,7 +348,8 @@ var namespace_mue_lu =
       [ "UNDECIDED", "namespace_mue_lu.html#a68ae14477561647a8c38a292b7fb6c59a482ff335ec48374518484e1af0428315", null ],
       [ "KEEP", "namespace_mue_lu.html#a68ae14477561647a8c38a292b7fb6c59ad7d908964a8c40518f58b80c4d2b3313", null ],
       [ "DROP", "namespace_mue_lu.html#a68ae14477561647a8c38a292b7fb6c59a49e6002b873efc347f57bea4aebb1422", null ],
-      [ "BOUNDARY", "namespace_mue_lu.html#a6885fdcb5195a495f93a25255638e911a4cc203a4812f8f710c7d2ed62289e4c5", null ]
+      [ "SYMDROP", "namespace_mue_lu.html#a68ae14477561647a8c38a292b7fb6c59a0641ed410a3ed0624dc14ec318f22cd9", null ],
+      [ "BOUNDARY_ENTRY", "namespace_mue_lu.html#a68ae14477561647a8c38a292b7fb6c59a260914c523c61e1d029e288a3b9124a4", null ]
     ] ],
     [ "CycleType", "namespace_mue_lu.html#ae3c686f4ee7f191c037cef47adc0c9d5", [
       [ "VCYCLE", "namespace_mue_lu.html#ae3c686f4ee7f191c037cef47adc0c9d5aac22bb2e2d8d8dd8ce3973719b59ecd7", null ],
@@ -353,7 +366,7 @@ var namespace_mue_lu =
       [ "AGGREGATED", "namespace_mue_lu.html#a6885fdcb5195a495f93a25255638e911ae74579d54f8f07c80658137176055ca7", null ],
       [ "ONEPT", "namespace_mue_lu.html#a6885fdcb5195a495f93a25255638e911a454af139db31b2baf5f1eed7dfaf1a5e", null ],
       [ "IGNORED", "namespace_mue_lu.html#a6885fdcb5195a495f93a25255638e911a632d712b1f0dce52ab1067f1e132df62", null ],
-      [ "BOUNDARY", "namespace_mue_lu.html#a6885fdcb5195a495f93a25255638e911a4cc203a4812f8f710c7d2ed62289e4c5", null ],
+      [ "BOUNDARY", "namespace_mue_lu.html#a6885fdcb5195a495f93a25255638e911a57536ec6aa30bd6df106563486d752d1", null ],
       [ "INTERFACE", "namespace_mue_lu.html#a6885fdcb5195a495f93a25255638e911a59cbdfb8e8afba4f8aff7369e823d8e2", null ]
     ] ],
     [ "IndexingType", "namespace_mue_lu.html#a01077b03f2e591becec32b504e9489dc", [
@@ -437,7 +450,7 @@ var namespace_mue_lu =
       [ "GRAPH", "namespace_mue_lu.html#a6da7829994ac1d91a749c3cbf89e2033ae60abe8a2ee424cd2d9fe77daaf7addf", null ]
     ] ],
     [ "runBoundaryFunctors", "namespace_mue_lu.html#a821fecc5fb7685ee448a5a433546d149", null ],
-    [ "translateOldAlgoParam", "namespace_mue_lu.html#af14c5312faa9c5f1493ea86075c42bd5", null ],
+    [ "translateOldAlgoParam", "namespace_mue_lu.html#aefeeccabe29f3d3f5141c9f7c7443579", null ],
     [ "Version", "namespace_mue_lu.html#ab643586a83060a7cf1a8d72e3f61ae14", null ],
     [ "ML_OverwriteDefaults", "namespace_mue_lu.html#acd7c18a1777d98cee691dc07e0a0ed82", null ],
     [ "UpdateList", "namespace_mue_lu.html#a263e20dd11c23a92b077ac52aae4f30f", null ],
@@ -468,6 +481,7 @@ var namespace_mue_lu =
     [ "scaleD0", "namespace_mue_lu.html#ab9f058e1d6085b06cb22dbebefa4a250", null ],
     [ "pop", "namespace_mue_lu.html#aa766d8240582d236652f036749fe9311", null ],
     [ "pop", "namespace_mue_lu.html#a21c35d07273bc907052103927827cfd6", null ],
+    [ "pop", "namespace_mue_lu.html#a1905f731516991d022dac1f3ac44d6fb", null ],
     [ "compareTriplets", "namespace_mue_lu.html#a1e11f0991e08e92080b0db5b4578dbce", null ],
     [ "allocateBlockDiagonalMatrix", "namespace_mue_lu.html#a65747e85b97630bac3cd282cb894fcaf", null ],
     [ "CreateCmpPairs", "namespace_mue_lu.html#accdd1d44a7f5c2620b7ce81fb21bea6b", null ],
@@ -485,11 +499,13 @@ var namespace_mue_lu =
     [ "importOffRankDroppingInfo", "namespace_mue_lu.html#adb88cec29d369ee2124d3002863833fa", null ],
     [ "leftRghtDofScalingWithinNode", "namespace_mue_lu.html#ae0ee0ff8b78707e2b0c568cf16ea92e3", null ],
     [ "toString", "namespace_mue_lu.html#adffcd9a4c5dd0a4b2cbf6c8e77f27e6b", null ],
+    [ "GetThresholded_Helper", "namespace_mue_lu.html#a7c9206ff8370e3d083bd7e11cdb94119", null ],
     [ "removeSmallEntries", "namespace_mue_lu.html#a95081a6a0dce52bbefe28d064fd880b4", null ],
     [ "isDirichletRow", "namespace_mue_lu.html#afd30dad2cb2f125aed9e5a8136540b10", null ],
     [ "DetectDirichletRows_kokkos", "namespace_mue_lu.html#a0ad62863a64ab14fcef41a102139656d", null ],
     [ "ApplyRowSumCriterion", "namespace_mue_lu.html#a50e710338a6f7c3645ca2ad3b6b9c59a", null ],
     [ "ApplyRowSumCriterion", "namespace_mue_lu.html#aaed7ec979eaa550da32df5b428867a84", null ],
+    [ "GetThresholded_Helper", "namespace_mue_lu.html#a4cf9dbd0eb754e4318f090e81bfb34dd", null ],
     [ "MueLu_AMGX_initialize", "namespace_mue_lu.html#a777b03e63f05219cab876f2843eaf1c8", null ],
     [ "MueLu_AMGX_initialize_plugins", "namespace_mue_lu.html#ae9cc809214b65e7d7cd3d9af1de06a4c", null ],
     [ "MueLu_AMGX_finalize", "namespace_mue_lu.html#a2a285fafe190c5d2fef4fcc1ee0aef08", null ],

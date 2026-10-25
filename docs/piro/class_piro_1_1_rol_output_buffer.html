@@ -80,6 +80,8 @@ $(function() {
   <div class="headertitle"><div class="title">Piro::RolOutputBuffer&lt; CharT, Traits &gt; Class Template Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;Piro_PerformAnalysis.hpp&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Piro::RolOutputBuffer&lt; CharT, Traits &gt;:</div>
 <div class="dyncontent">
@@ -103,6 +105,9 @@ Collaboration diagram for Piro::RolOutputBuffer&lt; CharT, Traits &gt;:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a2a0b06e5284022deee4cbed345409b91" id="r_a2a0b06e5284022deee4cbed345409b91"><td class="memItemLeft" align="right" valign="top"><a id="a2a0b06e5284022deee4cbed345409b91" name="a2a0b06e5284022deee4cbed345409b91"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>RolOutputBuffer</b> (bool echo=true)</td></tr>
+<tr class="separator:a2a0b06e5284022deee4cbed345409b91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b741acf651bfe5f549e56887886445e" id="r_a5b741acf651bfe5f549e56887886445e"><td class="memItemLeft" align="right" valign="top"><a id="a5b741acf651bfe5f549e56887886445e" name="a5b741acf651bfe5f549e56887886445e"></a>
 const std::stringstream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getStringStream</b> () const</td></tr>
 <tr class="separator:a5b741acf651bfe5f549e56887886445e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -113,7 +118,10 @@ Protected Member Functions</h2></td></tr>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>overflow</b> (int c=Traits::eof())</td></tr>
 <tr class="separator:a7429f9891e872c4c6345ff4df5da5711"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;class CharT, class Traits = std::char_traits&lt;CharT&gt;&gt;<br />
+class Piro::RolOutputBuffer&lt; CharT, Traits &gt;</div><p>Stream buffer that stores the ROL output and, if echo is true, also prints it to the standard output (with putchar, so it is not affected by redirections of std::cout). </p>
+</div><hr/>The documentation for this class was generated from the following files:<ul>
 <li><b>Piro_PerformAnalysis.hpp</b></li>
 <li><b>Piro_PerformAnalysis.cpp</b></li>
 </ul>

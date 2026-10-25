@@ -320,21 +320,21 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span> </div>
 <div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>      <span class="keywordflow">switch</span>(operatorType) {</div>
 <div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>        <span class="keywordflow">case</span> OPERATOR_VALUE:</div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>          Kokkos::parallel_for (Kokkos::TeamThreadRange (team_member, numPoints), [=] (ordinal_type&amp; pt) {</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>          Kokkos::parallel_for (Kokkos::TeamThreadRange (team_member, numPoints), [=] (<span class="keyword">const</span> ordinal_type pt) {</div>
 <div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>            <span class="keyword">auto</span>       output = Kokkos::subview( outputValues, Kokkos::ALL(), pt, Kokkos::ALL() );</div>
 <div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>            <span class="keyword">const</span> <span class="keyword">auto</span> input  = Kokkos::subview( inputPoints,                 pt, Kokkos::ALL() );</div>
 <div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>            <a class="code hl_struct" href="struct_intrepid2_1_1_impl_1_1_basis___h_g_r_a_d___q_u_a_d___c1___f_e_m_1_1_serial.html">Impl::Basis_HGRAD_QUAD_C1_FEM::Serial&lt;OPERATOR_VALUE&gt;::getValues</a>( output, input);</div>
 <div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>          });</div>
 <div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>          <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>        <span class="keywordflow">case</span> OPERATOR_GRAD:</div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>          Kokkos::parallel_for (Kokkos::TeamThreadRange (team_member, numPoints), [=] (ordinal_type&amp; pt) {</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>          Kokkos::parallel_for (Kokkos::TeamThreadRange (team_member, numPoints), [=] (<span class="keyword">const</span> ordinal_type pt) {</div>
 <div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>            <span class="keyword">auto</span>       output = Kokkos::subview( outputValues, Kokkos::ALL(), pt, Kokkos::ALL() );</div>
 <div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>            <span class="keyword">const</span> <span class="keyword">auto</span> input  = Kokkos::subview( inputPoints,                 pt, Kokkos::ALL() );</div>
 <div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>            Impl::Basis_HGRAD_QUAD_C1_FEM::Serial&lt;OPERATOR_GRAD&gt;::getValues( output, input);</div>
 <div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>          });</div>
 <div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>          <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>        <span class="keywordflow">case</span> OPERATOR_CURL:</div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>          Kokkos::parallel_for (Kokkos::TeamThreadRange (team_member, numPoints), [=] (ordinal_type&amp; pt) {</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>          Kokkos::parallel_for (Kokkos::TeamThreadRange (team_member, numPoints), [=] (<span class="keyword">const</span> ordinal_type pt) {</div>
 <div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>            <span class="keyword">auto</span>       output = Kokkos::subview( outputValues, Kokkos::ALL(), pt, Kokkos::ALL() );</div>
 <div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>            <span class="keyword">const</span> <span class="keyword">auto</span> input  = Kokkos::subview( inputPoints,                 pt, Kokkos::ALL() );</div>
 <div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>            Impl::Basis_HGRAD_QUAD_C1_FEM::Serial&lt;OPERATOR_CURL&gt;::getValues( output, input);</div>

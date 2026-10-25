@@ -6,7 +6,7 @@ var annotated_dup =
     [ "Belos", "namespace_belos.html", [
       [ "MueLuOp", "class_belos_1_1_mue_lu_op.html", "class_belos_1_1_mue_lu_op" ],
       [ "MueLuOpFailure", "class_belos_1_1_mue_lu_op_failure.html", "class_belos_1_1_mue_lu_op_failure" ],
-      [ "StatusTestGenResSubNorm< Scalar, Xpetra::MultiVector< Scalar, LocalOrdinal, GlobalOrdinal, Node >, Belos::OperatorT< Xpetra::MultiVector< Scalar, LocalOrdinal, GlobalOrdinal, Node > > >", "class_belos_1_1_status_test_gen_res_sub_norm_3_01_scalar_00_01_xpetra_1_1_multi_vector_3_01_scalb5dcf6a9ef93bfb0db805b34e83d96ba.html", "class_belos_1_1_status_test_gen_res_sub_norm_3_01_scalar_00_01_xpetra_1_1_multi_vector_3_01_scalb5dcf6a9ef93bfb0db805b34e83d96ba" ]
+      [ "StatusTestGenResSubNorm< Scalar, Xpetra::MultiVector< Scalar, LocalOrdinal, GlobalOrdinal, Node >, Belos::OperatorT< Xpetra::MultiVector< Scalar, LocalOrdinal, GlobalOrdinal, Node > >, Teuchos::SerialDenseMatrix< LocalOrdinal, Scalar > >", "class_belos_1_1_status_test_gen_res_sub_norm_3_01_scalar_00_01_xpetra_1_1_multi_vector_3_01_scal8e772064c09be5d4ee302f92ef6edb70.html", "class_belos_1_1_status_test_gen_res_sub_norm_3_01_scalar_00_01_xpetra_1_1_multi_vector_3_01_scal8e772064c09be5d4ee302f92ef6edb70" ]
     ] ],
     [ "MueLu", "namespace_mue_lu.html", [
       [ "BoundaryDetection", "namespace_mue_lu_1_1_boundary_detection.html", [
@@ -53,6 +53,10 @@ var annotated_dup =
         [ "NotImplemented", "class_mue_lu_1_1_exceptions_1_1_not_implemented.html", "class_mue_lu_1_1_exceptions_1_1_not_implemented" ],
         [ "Overflow", "class_mue_lu_1_1_exceptions_1_1_overflow.html", "class_mue_lu_1_1_exceptions_1_1_overflow" ],
         [ "RuntimeError", "class_mue_lu_1_1_exceptions_1_1_runtime_error.html", "class_mue_lu_1_1_exceptions_1_1_runtime_error" ]
+      ] ],
+      [ "LocalQR", "namespace_mue_lu_1_1_local_q_r.html", [
+        [ "LocalQRDecompFunctor", "class_mue_lu_1_1_local_q_r_1_1_local_q_r_decomp_functor.html", "class_mue_lu_1_1_local_q_r_1_1_local_q_r_decomp_functor" ],
+        [ "ReduceMaxFunctor", "class_mue_lu_1_1_local_q_r_1_1_reduce_max_functor.html", "class_mue_lu_1_1_local_q_r_1_1_reduce_max_functor" ]
       ] ],
       [ "MatrixConstruction", "namespace_mue_lu_1_1_matrix_construction.html", [
         [ "BlockRowComparison", "class_mue_lu_1_1_matrix_construction_1_1_block_row_comparison.html", "class_mue_lu_1_1_matrix_construction_1_1_block_row_comparison" ],
@@ -163,6 +167,11 @@ var annotated_dup =
       [ "GeoInterpFactory", "class_mue_lu_1_1_geo_interp_factory.html", "class_mue_lu_1_1_geo_interp_factory" ],
       [ "GeometricInterpolationPFactory", "class_mue_lu_1_1_geometric_interpolation_p_factory.html", "class_mue_lu_1_1_geometric_interpolation_p_factory" ],
       [ "GeometricInterpolationPFactory_kokkos", "class_mue_lu_1_1_geometric_interpolation_p_factory__kokkos.html", "class_mue_lu_1_1_geometric_interpolation_p_factory__kokkos" ],
+      [ "GetThresholded_Functor", "struct_mue_lu_1_1_get_thresholded___functor.html", null ],
+      [ "GetThresholded_Functor< ViewType, EntriesType, Scalar, LocalOrdinal, GlobalOrdinal, Node, false, symScale, retainLower >", "struct_mue_lu_1_1_get_thresholded___functor_3_01_view_type_00_01_entries_type_00_01_scalar_00_01293ef034cf2ad9a3f6236394f9eb4c86.html", "struct_mue_lu_1_1_get_thresholded___functor_3_01_view_type_00_01_entries_type_00_01_scalar_00_01293ef034cf2ad9a3f6236394f9eb4c86" ],
+      [ "GetThresholded_Functor< ViewType, EntriesType, Scalar, LocalOrdinal, GlobalOrdinal, Node, true, symScale, retainLower >", "struct_mue_lu_1_1_get_thresholded___functor_3_01_view_type_00_01_entries_type_00_01_scalar_00_01e4011e113f11056d9c543eb3c8e52ff0.html", "struct_mue_lu_1_1_get_thresholded___functor_3_01_view_type_00_01_entries_type_00_01_scalar_00_01e4011e113f11056d9c543eb3c8e52ff0" ],
+      [ "GetThresholdedGraphCountScanFunctor", "struct_mue_lu_1_1_get_thresholded_graph_count_scan_functor.html", "struct_mue_lu_1_1_get_thresholded_graph_count_scan_functor" ],
+      [ "GetThresholdedGraphFillFunctor", "struct_mue_lu_1_1_get_thresholded_graph_fill_functor.html", "struct_mue_lu_1_1_get_thresholded_graph_fill_functor" ],
       [ "GlobalLexicographicIndexManager", "class_mue_lu_1_1_global_lexicographic_index_manager.html", "class_mue_lu_1_1_global_lexicographic_index_manager" ],
       [ "Graph", "class_mue_lu_1_1_graph.html", null ],
       [ "GraphBase", "class_mue_lu_1_1_graph_base.html", null ],
@@ -188,6 +197,7 @@ var annotated_dup =
       [ "Level", "class_mue_lu_1_1_level.html", "class_mue_lu_1_1_level" ],
       [ "LineDetectionFactory", "class_mue_lu_1_1_line_detection_factory.html", "class_mue_lu_1_1_line_detection_factory" ],
       [ "LocalAggregationAlgorithm", "class_mue_lu_1_1_local_aggregation_algorithm.html", null ],
+      [ "LocalFSAIFunctor", "class_mue_lu_1_1_local_f_s_a_i_functor.html", "class_mue_lu_1_1_local_f_s_a_i_functor" ],
       [ "LocalLexicographicIndexManager", "class_mue_lu_1_1_local_lexicographic_index_manager.html", "class_mue_lu_1_1_local_lexicographic_index_manager" ],
       [ "LocalOrdinalTransferFactory", "class_mue_lu_1_1_local_ordinal_transfer_factory.html", "class_mue_lu_1_1_local_ordinal_transfer_factory" ],
       [ "LocalPermutationStrategy", "class_mue_lu_1_1_local_permutation_strategy.html", "class_mue_lu_1_1_local_permutation_strategy" ],
@@ -294,6 +304,7 @@ var annotated_dup =
       [ "StructuredAggregationFactory", "class_mue_lu_1_1_structured_aggregation_factory.html", "class_mue_lu_1_1_structured_aggregation_factory" ],
       [ "StructuredAggregationFactory_kokkos", "class_mue_lu_1_1_structured_aggregation_factory__kokkos.html", "class_mue_lu_1_1_structured_aggregation_factory__kokkos" ],
       [ "StructuredLineDetectionFactory", "class_mue_lu_1_1_structured_line_detection_factory.html", "class_mue_lu_1_1_structured_line_detection_factory" ],
+      [ "StructuredRAPFactory", "class_mue_lu_1_1_structured_r_a_p_factory.html", "class_mue_lu_1_1_structured_r_a_p_factory" ],
       [ "SubBlockAFactory", "class_mue_lu_1_1_sub_block_a_factory.html", "class_mue_lu_1_1_sub_block_a_factory" ],
       [ "SubFactoryMonitor", "class_mue_lu_1_1_sub_factory_monitor.html", "class_mue_lu_1_1_sub_factory_monitor" ],
       [ "SubMonitor", "class_mue_lu_1_1_sub_monitor.html", "class_mue_lu_1_1_sub_monitor" ],

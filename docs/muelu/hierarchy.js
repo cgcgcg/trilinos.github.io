@@ -217,6 +217,7 @@ var hierarchy =
                 [ "MueLu::RegionRFactory< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_region_r_factory.html", null ],
                 [ "MueLu::RegionRFactory_kokkos< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_region_r_factory__kokkos.html", null ],
                 [ "MueLu::RfromP_Or_TransP< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_rfrom_p___or___trans_p.html", null ],
+                [ "MueLu::StructuredRAPFactory< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_structured_r_a_p_factory.html", null ],
                 [ "MueLu::ToggleCoordinatesTransferFactory< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_toggle_coordinates_transfer_factory.html", null ],
                 [ "MueLu::TopRAPFactory< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_top_r_a_p_factory.html", null ],
                 [ "MueLu::TransPFactory< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_trans_p_factory.html", null ],
@@ -295,11 +296,18 @@ var hierarchy =
     [ "MueLu::AggregationStructuredAlgorithm< LocalOrdinal, GlobalOrdinal, Node >::fillAggregatesFunctor", "struct_mue_lu_1_1_aggregation_structured_algorithm_1_1fill_aggregates_functor.html", null ],
     [ "FineLevelInputData", "class_fine_level_input_data.html", null ],
     [ "MueLuTests::FineLevelInputDataFactoryTester< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_tests_1_1_fine_level_input_data_factory_tester.html", null ],
+    [ "MueLu::StructuredRAPFactory< Scalar, LocalOrdinal, GlobalOrdinal, Node >::FineStencilEntry", "struct_mue_lu_1_1_structured_r_a_p_factory_1_1_fine_stencil_entry.html", null ],
+    [ "MueLu::StructuredRAPFactory< Scalar, LocalOrdinal, GlobalOrdinal, Node >::FineStencilSpec", "struct_mue_lu_1_1_structured_r_a_p_factory_1_1_fine_stencil_spec.html", null ],
     [ "MueLu::FormattingHelper", "struct_mue_lu_1_1_formatting_helper.html", null ],
     [ "MueLuTests::GeneralGeometricPFactoryTester< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_tests_1_1_general_geometric_p_factory_tester.html", null ],
     [ "MueLu::GeneralGeometricPFactory< Scalar, LocalOrdinal, GlobalOrdinal, Node >::GeometricData", "struct_mue_lu_1_1_general_geometric_p_factory_1_1_geometric_data.html", null ],
     [ "MueLu::VariableContainer::Getter< T >", "struct_mue_lu_1_1_variable_container_1_1_getter.html", null ],
     [ "MueLu::VariableContainer::Getter< Teuchos::RCP< Xpetra::Operator< Scalar, LocalOrdinal, GlobalOrdinal, Node > > >", "struct_mue_lu_1_1_variable_container_1_1_getter_3_01_teuchos_1_1_r_c_p_3_01_xpetra_1_1_operator_4b62eec7e11992f03e326c42174f2a4a.html", null ],
+    [ "MueLu::GetThresholded_Functor< ViewType, EntriesType, Scalar, LocalOrdinal, GlobalOrdinal, Node, onlyCntNnzs, symScale, retainLower >", "struct_mue_lu_1_1_get_thresholded___functor.html", null ],
+    [ "MueLu::GetThresholded_Functor< ViewType, EntriesType, Scalar, LocalOrdinal, GlobalOrdinal, Node, false, symScale, retainLower >", "struct_mue_lu_1_1_get_thresholded___functor_3_01_view_type_00_01_entries_type_00_01_scalar_00_01293ef034cf2ad9a3f6236394f9eb4c86.html", null ],
+    [ "MueLu::GetThresholded_Functor< ViewType, EntriesType, Scalar, LocalOrdinal, GlobalOrdinal, Node, true, symScale, retainLower >", "struct_mue_lu_1_1_get_thresholded___functor_3_01_view_type_00_01_entries_type_00_01_scalar_00_01e4011e113f11056d9c543eb3c8e52ff0.html", null ],
+    [ "MueLu::GetThresholdedGraphCountScanFunctor< ViewType, Scalar, LocalOrdinal, GlobalOrdinal, Node, symScale, retainLower >", "struct_mue_lu_1_1_get_thresholded_graph_count_scan_functor.html", null ],
+    [ "MueLu::GetThresholdedGraphFillFunctor< ViewType, EntriesType, Scalar, LocalOrdinal, GlobalOrdinal, Node, symScale, retainLower >", "struct_mue_lu_1_1_get_thresholded_graph_fill_functor.html", null ],
     [ "MueLu::Graph< LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_graph.html", null ],
     [ "Zoltan2::GraphAdapter", null, [
       [ "MueLu::MueLuGraphBaseAdapter< User, UserCoord >", "class_mue_lu_1_1_mue_lu_graph_base_adapter.html", null ]
@@ -323,7 +331,9 @@ var hierarchy =
       [ "MueLu::Details::LinearSolverFactory< MV, OP, NormType >", "class_mue_lu_1_1_details_1_1_linear_solver_factory.html", null ]
     ] ],
     [ "MueLu::LocalAggregationAlgorithm< LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_local_aggregation_algorithm.html", null ],
+    [ "MueLu::LocalFSAIFunctor< local_matrix_type, global_ordinal_type >", "class_mue_lu_1_1_local_f_s_a_i_functor.html", null ],
     [ "LocalPermutationStrategy", "class_local_permutation_strategy.html", null ],
+    [ "MueLu::LocalQR::LocalQRDecompFunctor< LOType, GOType, SCType, DeviceType, NspType, aggRowsType, maxAggDofSizeType, agg2RowMapLOType, statusType, rowsType, rowsAuxType, colsAuxType, valsAuxType >", "class_mue_lu_1_1_local_q_r_1_1_local_q_r_decomp_functor.html", null ],
     [ "MueLu::LWGraphBase< LocalOrdinal, GlobalOrdinal, Node, OnHost >", "class_mue_lu_1_1_l_w_graph_base.html", [
       [ "MueLu::LWGraph< LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_l_w_graph.html", null ]
     ] ],
@@ -391,7 +401,7 @@ var hierarchy =
     [ "MueLu::MatrixConstruction::PointwiseCountingFunctor< local_matrix_type, functor_type, remaining_functor_types >", "class_mue_lu_1_1_matrix_construction_1_1_pointwise_counting_functor.html", null ],
     [ "MueLu::MatrixConstruction::PointwiseCountingFunctor< local_matrix_type, functor_type >", "class_mue_lu_1_1_matrix_construction_1_1_pointwise_counting_functor_3_01local__matrix__type_00_01functor__type_01_4.html", null ],
     [ "MueLu::Misc::PointwiseDropBoundaryFunctor< local_matrix_type >", "class_mue_lu_1_1_misc_1_1_pointwise_drop_boundary_functor.html", null ],
-    [ "MueLu::MatrixConstruction::PointwiseFillNoReuseFunctor< local_matrix_type, lumpingChoice >", "class_mue_lu_1_1_matrix_construction_1_1_pointwise_fill_no_reuse_functor.html", null ],
+    [ "MueLu::MatrixConstruction::PointwiseFillNoReuseFunctor< local_matrix_type, lumpingChoice, constructFilteredA >", "class_mue_lu_1_1_matrix_construction_1_1_pointwise_fill_no_reuse_functor.html", null ],
     [ "MueLu::MatrixConstruction::PointwiseFillReuseFunctor< local_matrix_type, local_graph_type, lumping >", "class_mue_lu_1_1_matrix_construction_1_1_pointwise_fill_reuse_functor.html", null ],
     [ "MueLu::Misc::PointwiseSymmetricDropBoundaryFunctor< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_misc_1_1_pointwise_symmetric_drop_boundary_functor.html", null ],
     [ "PreconditionerFactoryBase", null, [
@@ -399,6 +409,7 @@ var hierarchy =
     ] ],
     [ "MueLu::PRFactory< LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_p_r_factory.html", null ],
     [ "MueLu::Projection< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_projection.html", null ],
+    [ "MueLu::LocalQR::ReduceMaxFunctor< LocalOrdinal, View >", "class_mue_lu_1_1_local_q_r_1_1_reduce_max_functor.html", null ],
     [ "MueLu::RepartitionUtilities< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "struct_mue_lu_1_1_repartition_utilities.html", null ],
     [ "MueLuTests::ReplicatePFactoryTester< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_tests_1_1_replicate_p_factory_tester.html", null ],
     [ "Tpetra::RowMatrix", null, [
@@ -421,9 +432,11 @@ var hierarchy =
     [ "Amesos2::Solver< OP, MV >", "class_amesos2_1_1_solver.html", null ],
     [ "Sparse", "class_sparse.html", null ],
     [ "StatusTestResNorm", null, [
-      [ "Belos::StatusTestGenResSubNorm< Scalar, Xpetra::MultiVector< Scalar, LocalOrdinal, GlobalOrdinal, Node >, Belos::OperatorT< Xpetra::MultiVector< Scalar, LocalOrdinal, GlobalOrdinal, Node > > >", "class_belos_1_1_status_test_gen_res_sub_norm_3_01_scalar_00_01_xpetra_1_1_multi_vector_3_01_scalb5dcf6a9ef93bfb0db805b34e83d96ba.html", null ]
+      [ "Belos::StatusTestGenResSubNorm< Scalar, Xpetra::MultiVector< Scalar, LocalOrdinal, GlobalOrdinal, Node >, Belos::OperatorT< Xpetra::MultiVector< Scalar, LocalOrdinal, GlobalOrdinal, Node > >, Teuchos::SerialDenseMatrix< LocalOrdinal, Scalar > >", "class_belos_1_1_status_test_gen_res_sub_norm_3_01_scalar_00_01_xpetra_1_1_multi_vector_3_01_scal8e772064c09be5d4ee302f92ef6edb70.html", null ]
     ] ],
-    [ "MueLu::Misc::SymmetrizeFunctor< local_matrix_type >", "class_mue_lu_1_1_misc_1_1_symmetrize_functor.html", null ],
+    [ "MueLu::StructuredRAPFactory< Scalar, LocalOrdinal, GlobalOrdinal, Node >::StencilOffset", "struct_mue_lu_1_1_structured_r_a_p_factory_1_1_stencil_offset.html", null ],
+    [ "MueLu::StructuredRAPFactory< Scalar, LocalOrdinal, GlobalOrdinal, Node >::StructuredGraphSpec", "struct_mue_lu_1_1_structured_r_a_p_factory_1_1_structured_graph_spec.html", null ],
+    [ "MueLu::Misc::SymmetrizeFunctor< local_matrix_type, weakWins, offdiagNnzsCanBeReducedToZero >", "class_mue_lu_1_1_misc_1_1_symmetrize_functor.html", null ],
     [ "MueLu::BlockInverseFunctor< Scalar, LocalOrdinal, GlobalOrdinal, Node >::TagApply", "class_mue_lu_1_1_block_inverse_functor_1_1_tag_apply.html", null ],
     [ "MueLu::BlockInverseFunctor< Scalar, LocalOrdinal, GlobalOrdinal, Node >::TagCountSingularBlocks", "class_mue_lu_1_1_block_inverse_functor_1_1_tag_count_singular_blocks.html", null ],
     [ "MueLu::BlockInverseFunctor< Scalar, LocalOrdinal, GlobalOrdinal, Node >::TagFindSingularBlocks", "class_mue_lu_1_1_block_inverse_functor_1_1_tag_find_singular_blocks.html", null ],
@@ -447,7 +460,7 @@ var hierarchy =
       [ "MueLu::VectorDroppingClassical< Scalar, LocalOrdinal, GlobalOrdinal, Node, SoC >", "class_mue_lu_1_1_vector_dropping_classical.html", null ],
       [ "MueLu::VectorDroppingDistanceLaplacian< Scalar, LocalOrdinal, GlobalOrdinal, Node, SoC >", "class_mue_lu_1_1_vector_dropping_distance_laplacian.html", null ]
     ] ],
-    [ "MueLu::MatrixConstruction::VectorFillFunctor< local_matrix_type, lumping, reuse >", "class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html", null ],
+    [ "MueLu::MatrixConstruction::VectorFillFunctor< local_matrix_type, lumping, reuse, constructFilteredA >", "class_mue_lu_1_1_matrix_construction_1_1_vector_fill_functor.html", null ],
     [ "VectorFillNoReuseFunctor", "class_vector_fill_no_reuse_functor.html", null ],
     [ "MueLu::Misc::VectorSymmetricDropBoundaryFunctor< Scalar, LocalOrdinal, GlobalOrdinal, Node >", "class_mue_lu_1_1_misc_1_1_vector_symmetric_drop_boundary_functor.html", null ],
     [ "Teuchos::VerboseObject", null, [

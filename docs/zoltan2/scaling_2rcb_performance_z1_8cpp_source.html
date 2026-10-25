@@ -789,28 +789,32 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00694" name="l00694"></a><span class="lineno">  694</span>              &lt;&lt; <span class="stringliteral">&quot;   avg = &quot;</span> &lt;&lt; totWgt / numGlobalParts</div>
 <div class="line"><a id="l00695" name="l00695"></a><span class="lineno">  695</span>              &lt;&lt; std::endl &lt;&lt; std::endl &lt;&lt; std::endl;</div>
 <div class="line"><a id="l00696" name="l00696"></a><span class="lineno">  696</span> </div>
-<div class="line"><a id="l00697" name="l00697"></a><span class="lineno">  697</span>  <span class="keyword">delete</span> [] sumWgtPerPart;</div>
-<div class="line"><a id="l00698" name="l00698"></a><span class="lineno">  698</span>  <span class="keyword">delete</span> [] gsumWgtPerPart;</div>
-<div class="line"><a id="l00699" name="l00699"></a><span class="lineno">  699</span> </div>
-<div class="line"><a id="l00700" name="l00700"></a><span class="lineno">  700</span>  Zoltan_Destroy(&amp;zz);</div>
-<div class="line"><a id="l00701" name="l00701"></a><span class="lineno">  701</span>  <a class="code hl_define" href="_zoltan2___test_helpers_8hpp.html#a0fe9d653428caa876dd1bb654f26b323">MEMORY_CHECK</a>(doMemory &amp;&amp; rank==0, <span class="stringliteral">&quot;After Zoltan_Destroy&quot;</span>);</div>
-<div class="line"><a id="l00702" name="l00702"></a><span class="lineno">  702</span> </div>
-<div class="line"><a id="l00703" name="l00703"></a><span class="lineno">  703</span>  <span class="keyword">delete</span> <a class="code hl_struct" href="structdots.html">dots</a>.<a class="code hl_variable" href="structdots.html#abc78b794940c0998f130343a84df09df">coordinates</a>;</div>
-<div class="line"><a id="l00704" name="l00704"></a><span class="lineno">  704</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; nWeights; i++)</div>
-<div class="line"><a id="l00705" name="l00705"></a><span class="lineno">  705</span>    <a class="code hl_struct" href="structdots.html">dots</a>.<a class="code hl_variable" href="structdots.html#a2eeca5f95539e5553b9015d84b5b24da">weights</a>[i].clear();</div>
-<div class="line"><a id="l00706" name="l00706"></a><span class="lineno">  706</span>  <a class="code hl_struct" href="structdots.html">dots</a>.<a class="code hl_variable" href="structdots.html#a2eeca5f95539e5553b9015d84b5b24da">weights</a>.clear();</div>
-<div class="line"><a id="l00707" name="l00707"></a><span class="lineno">  707</span> </div>
-<div class="line"><a id="l00708" name="l00708"></a><span class="lineno">  708</span>  <a class="code hl_define" href="_zoltan2___test_helpers_8hpp.html#a0fe9d653428caa876dd1bb654f26b323">MEMORY_CHECK</a>(doMemory &amp;&amp; rank==0, <span class="stringliteral">&quot;After destroying input&quot;</span>);</div>
-<div class="line"><a id="l00709" name="l00709"></a><span class="lineno">  709</span> </div>
-<div class="line"><a id="l00710" name="l00710"></a><span class="lineno">  710</span>  <span class="keywordflow">if</span> (rank==0){</div>
-<div class="line"><a id="l00711" name="l00711"></a><span class="lineno">  711</span>    <span class="keywordflow">if</span> (aok != 0)</div>
-<div class="line"><a id="l00712" name="l00712"></a><span class="lineno">  712</span>      std::cout &lt;&lt; <span class="stringliteral">&quot;FAIL&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00713" name="l00713"></a><span class="lineno">  713</span>    <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00714" name="l00714"></a><span class="lineno">  714</span>      std::cout &lt;&lt; <span class="stringliteral">&quot;PASS&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00715" name="l00715"></a><span class="lineno">  715</span>  }</div>
-<div class="line"><a id="l00716" name="l00716"></a><span class="lineno">  716</span> </div>
-<div class="line"><a id="l00717" name="l00717"></a><span class="lineno">  717</span>  <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00718" name="l00718"></a><span class="lineno">  718</span>}</div>
+<div class="line"><a id="l00697" name="l00697"></a><span class="lineno">  697</span>  free(exportGlobalGids);</div>
+<div class="line"><a id="l00698" name="l00698"></a><span class="lineno">  698</span>  free(exportLocalGids);</div>
+<div class="line"><a id="l00699" name="l00699"></a><span class="lineno">  699</span>  free(exportProcs);</div>
+<div class="line"><a id="l00700" name="l00700"></a><span class="lineno">  700</span>  free(exportToPart);</div>
+<div class="line"><a id="l00701" name="l00701"></a><span class="lineno">  701</span>  <span class="keyword">delete</span> [] sumWgtPerPart;</div>
+<div class="line"><a id="l00702" name="l00702"></a><span class="lineno">  702</span>  <span class="keyword">delete</span> [] gsumWgtPerPart;</div>
+<div class="line"><a id="l00703" name="l00703"></a><span class="lineno">  703</span> </div>
+<div class="line"><a id="l00704" name="l00704"></a><span class="lineno">  704</span>  Zoltan_Destroy(&amp;zz);</div>
+<div class="line"><a id="l00705" name="l00705"></a><span class="lineno">  705</span>  <a class="code hl_define" href="_zoltan2___test_helpers_8hpp.html#a0fe9d653428caa876dd1bb654f26b323">MEMORY_CHECK</a>(doMemory &amp;&amp; rank==0, <span class="stringliteral">&quot;After Zoltan_Destroy&quot;</span>);</div>
+<div class="line"><a id="l00706" name="l00706"></a><span class="lineno">  706</span> </div>
+<div class="line"><a id="l00707" name="l00707"></a><span class="lineno">  707</span>  <span class="keyword">delete</span> <a class="code hl_struct" href="structdots.html">dots</a>.<a class="code hl_variable" href="structdots.html#abc78b794940c0998f130343a84df09df">coordinates</a>;</div>
+<div class="line"><a id="l00708" name="l00708"></a><span class="lineno">  708</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; nWeights; i++)</div>
+<div class="line"><a id="l00709" name="l00709"></a><span class="lineno">  709</span>    <a class="code hl_struct" href="structdots.html">dots</a>.<a class="code hl_variable" href="structdots.html#a2eeca5f95539e5553b9015d84b5b24da">weights</a>[i].clear();</div>
+<div class="line"><a id="l00710" name="l00710"></a><span class="lineno">  710</span>  <a class="code hl_struct" href="structdots.html">dots</a>.<a class="code hl_variable" href="structdots.html#a2eeca5f95539e5553b9015d84b5b24da">weights</a>.clear();</div>
+<div class="line"><a id="l00711" name="l00711"></a><span class="lineno">  711</span> </div>
+<div class="line"><a id="l00712" name="l00712"></a><span class="lineno">  712</span>  <a class="code hl_define" href="_zoltan2___test_helpers_8hpp.html#a0fe9d653428caa876dd1bb654f26b323">MEMORY_CHECK</a>(doMemory &amp;&amp; rank==0, <span class="stringliteral">&quot;After destroying input&quot;</span>);</div>
+<div class="line"><a id="l00713" name="l00713"></a><span class="lineno">  713</span> </div>
+<div class="line"><a id="l00714" name="l00714"></a><span class="lineno">  714</span>  <span class="keywordflow">if</span> (rank==0){</div>
+<div class="line"><a id="l00715" name="l00715"></a><span class="lineno">  715</span>    <span class="keywordflow">if</span> (aok != 0)</div>
+<div class="line"><a id="l00716" name="l00716"></a><span class="lineno">  716</span>      std::cout &lt;&lt; <span class="stringliteral">&quot;FAIL&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00717" name="l00717"></a><span class="lineno">  717</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00718" name="l00718"></a><span class="lineno">  718</span>      std::cout &lt;&lt; <span class="stringliteral">&quot;PASS&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00719" name="l00719"></a><span class="lineno">  719</span>  }</div>
+<div class="line"><a id="l00720" name="l00720"></a><span class="lineno">  720</span> </div>
+<div class="line"><a id="l00721" name="l00721"></a><span class="lineno">  721</span>  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00722" name="l00722"></a><span class="lineno">  722</span>}</div>
 </div>
 <div class="ttc" id="a_geometric_generator_8hpp_html"><div class="ttname"><a href="_geometric_generator_8hpp.html">GeometricGenerator.hpp</a></div></div>
 <div class="ttc" id="a_zoltan2___test_helpers_8hpp_html"><div class="ttname"><a href="_zoltan2___test_helpers_8hpp.html">Zoltan2_TestHelpers.hpp</a></div><div class="ttdoc">common code used by tests</div></div>
@@ -828,8 +832,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aclass_geometric_gen_1_1_geometric_generator_html_aaa54d1841f9e81d17bd867fd189ddc4a"><div class="ttname"><a href="class_geometric_gen_1_1_geometric_generator.html#aaa54d1841f9e81d17bd867fd189ddc4a">GeometricGen::GeometricGenerator::getLocalWeightsCopy</a></div><div class="ttdeci">void getLocalWeightsCopy(scalar_t **w)</div><div class="ttdef"><b>Definition</b> <a href="_geometric_generator_8hpp_source.html#l02664">GeometricGenerator.hpp:2664</a></div></div>
 <div class="ttc" id="aclass_geometric_gen_1_1_geometric_generator_html_ada07b976aad52c218ab6dcf463429ac7"><div class="ttname"><a href="class_geometric_gen_1_1_geometric_generator.html#ada07b976aad52c218ab6dcf463429ac7">GeometricGen::GeometricGenerator::getNumGlobalCoords</a></div><div class="ttdeci">gno_t getNumGlobalCoords()</div><div class="ttdef"><b>Definition</b> <a href="_geometric_generator_8hpp_source.html#l02641">GeometricGenerator.hpp:2641</a></div></div>
 <div class="ttc" id="aclass_geometric_gen_1_1_geometric_generator_html_ae9a329c539ab51625623463972450c82"><div class="ttname"><a href="class_geometric_gen_1_1_geometric_generator.html#ae9a329c539ab51625623463972450c82">GeometricGen::GeometricGenerator::getLocalCoordinatesCopy</a></div><div class="ttdeci">void getLocalCoordinatesCopy(scalar_t **c)</div><div class="ttdef"><b>Definition</b> <a href="_geometric_generator_8hpp_source.html#l02653">GeometricGenerator.hpp:2653</a></div></div>
-<div class="ttc" id="aclass_user_input_for_tests_html"><div class="ttname"><a href="class_user_input_for_tests.html">UserInputForTests</a></div><div class="ttdef"><b>Definition</b> <a href="_user_input_for_tests_8hpp_source.html#l00088">UserInputForTests.hpp:89</a></div></div>
-<div class="ttc" id="aclass_user_input_for_tests_html_a7229da77ceae20bbaa2d4421f0b0de04"><div class="ttname"><a href="class_user_input_for_tests.html#a7229da77ceae20bbaa2d4421f0b0de04">UserInputForTests::getUICoordinates</a></div><div class="ttdeci">RCP&lt; tMVector_t &gt; getUICoordinates()</div><div class="ttdef"><b>Definition</b> <a href="_user_input_for_tests_8hpp_source.html#l00460">UserInputForTests.hpp:460</a></div></div>
+<div class="ttc" id="aclass_user_input_for_tests_html"><div class="ttname"><a href="class_user_input_for_tests.html">UserInputForTests</a></div><div class="ttdef"><b>Definition</b> <a href="_user_input_for_tests_8hpp_source.html#l00089">UserInputForTests.hpp:90</a></div></div>
+<div class="ttc" id="aclass_user_input_for_tests_html_a7229da77ceae20bbaa2d4421f0b0de04"><div class="ttname"><a href="class_user_input_for_tests.html#a7229da77ceae20bbaa2d4421f0b0de04">UserInputForTests::getUICoordinates</a></div><div class="ttdeci">RCP&lt; tMVector_t &gt; getUICoordinates()</div><div class="ttdef"><b>Definition</b> <a href="_user_input_for_tests_8hpp_source.html#l00461">UserInputForTests.hpp:461</a></div></div>
 <div class="ttc" id="afind_unique_gids_8cpp_html_add6fff4ddfa3d0071f91409438fde65d"><div class="ttname"><a href="find_unique_gids_8cpp.html#add6fff4ddfa3d0071f91409438fde65d">fail</a></div><div class="ttdeci">static const std::string fail</div><div class="ttdef"><b>Definition</b> <a href="find_unique_gids_8cpp_source.html#l00045">findUniqueGids.cpp:45</a></div></div>
 <div class="ttc" id="anamespace_zoltan2___testing_framework_html_a98d1f62f1fa8f3edd310a5fd0fa8964a"><div class="ttname"><a href="namespace_zoltan2___testing_framework.html#a98d1f62f1fa8f3edd310a5fd0fa8964a">Zoltan2_TestingFramework::tMVector_t</a></div><div class="ttdeci">Tpetra::MultiVector&lt; zscalar_t, zlno_t, zgno_t, znode_t &gt; tMVector_t</div><div class="ttdef"><b>Definition</b> <a href="_zoltan2___typedefs_8hpp_source.html#l00120">Zoltan2_Typedefs.hpp:120</a></div></div>
 <div class="ttc" id="apartition_2rcb_performance_z1_8cpp_html_a4bbb8b2649154a4d4ea9e35cf7c8af34"><div class="ttname"><a href="partition_2rcb_performance_z1_8cpp.html#a4bbb8b2649154a4d4ea9e35cf7c8af34">coordinates</a></div><div class="ttdeci">static RCP&lt; tMVector_t &gt; coordinates</div><div class="ttdef"><b>Definition</b> <a href="partition_2rcb_performance_z1_8cpp_source.html#l00047">partition/rcbPerformanceZ1.cpp:47</a></div></div>
