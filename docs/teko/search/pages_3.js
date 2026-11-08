@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['physics_20based_20preconditioners_0',['Teko: For block and physics-based preconditioners',['../index.html',1,'']]],
-  ['preconditioners_1',['Teko: For block and physics-based preconditioners',['../index.html',1,'']]]
+  ['4_20—_20use_20it_20in_20a_20krylov_20solve_0',['Step 4 — Use it in a Krylov solve',['../teko_getting_started.html#autotoc_md7',1,'']]]
 ];

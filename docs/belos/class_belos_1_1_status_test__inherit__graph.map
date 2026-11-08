@@ -1,27 +1,57 @@
-<map id="Belos::StatusTest&lt; ScalarType, MV, OP &gt;" name="Belos::StatusTest&lt; ScalarType, MV, OP &gt;">
-<area shape="rect" id="Node000001" title="A pure virtual class for defining the status tests for the Belos iterative solvers." alt="" coords="5,165,172,205"/>
-<area shape="rect" id="Node000002" href="$class_belos_1_1_l_s_q_r_status_test.html" title="A Belos::StatusTest class for specifying convergence of LSQR. The outer status tests passes if an inn..." alt="" coords="239,5,417,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="112,153,158,103,187,77,219,55,243,43,246,48,221,60,190,81,162,107,116,156"/>
-<area shape="rect" id="Node000003" href="$class_belos_1_1_status_test_combo.html" title="A class for extending the status testing capabilities of Belos via logical combinations." alt="" coords="239,69,417,109"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="138,156,219,119,253,107,255,112,221,124,140,161"/>
-<area shape="rect" id="Node000004" href="$class_belos_1_1_status_test_log_res_norm.html" title="A Belos::StatusTest debugging class for storing the absolute residual norms generated during a solve." alt="" coords="220,133,436,173"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="185,170,219,165,220,170,186,175"/>
-<area shape="rect" id="Node000005" href="$class_belos_1_1_status_test_max_iters.html" title="A Belos::StatusTest class for specifying a maximum number of iterations." alt="" coords="233,197,423,237"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="186,196,233,202,232,207,185,201"/>
-<area shape="rect" id="Node000006" href="$class_belos_1_1_status_test_output.html" title="A virtual base class for StatusTest that print other status tests." alt="" coords="239,261,417,301"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="140,209,221,247,255,259,253,264,219,252,138,214"/>
-<area shape="rect" id="Node000010" href="$class_belos_1_1_status_test_res_norm.html" title="An abstract class of StatusTest for stopping criteria using residual norms." alt="" coords="231,357,425,397"/>
-<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="119,214,165,262,222,311,290,355,287,359,218,315,162,265,115,217"/>
-<area shape="rect" id="Node000007" href="$class_belos_1_1_status_test_general_output.html" title="A special StatusTest for printing other status tests." alt="" coords="484,149,705,189"/>
-<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="423,253,435,247,449,236,458,224,467,211,483,199,507,187,510,192,485,204,471,215,462,227,453,239,437,252,425,258"/>
-<area shape="rect" id="Node000008" href="$class_belos_1_1_status_test_res_norm_output.html" title="A special StatusTest for printing other status tests in a simple format." alt="" coords="484,213,705,253"/>
-<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="430,260,483,251,484,256,431,266"/>
-<area shape="rect" id="Node000009" href="$class_belos_1_1_status_test_user_output.html" title="A special StatusTest for printing other status tests in a simple format." alt="" coords="491,277,698,317"/>
-<area shape="poly" id="edge8_Node000006_Node000009" title=" " alt="" coords="431,285,491,288,491,294,430,290"/>
-<area shape="rect" id="Node000011" href="$class_belos_1_1_status_test_gen_res_norm.html" title="An implementation of StatusTestResNorm using a family of residual norms." alt="" coords="485,341,704,381"/>
-<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="438,368,485,365,485,371,439,373"/>
-<area shape="rect" id="Node000012" href="$class_belos_1_1_status_test_gen_res_sub_norm.html" title="An implementation of StatusTestResNorm using a family of norms of subvectors of the residual vectors." alt="" coords="488,405,701,445"/>
-<area shape="poly" id="edge11_Node000010_Node000012" title=" " alt="" coords="439,395,488,404,487,409,438,400"/>
-<area shape="rect" id="Node000013" href="$class_belos_1_1_status_test_imp_res_norm.html" title="Convergence test using the implicit residual norm(s), with an explicit residual norm(s) check for los..." alt="" coords="485,469,704,509"/>
-<area shape="poly" id="edge12_Node000010_Node000013" title=" " alt="" coords="377,402,428,429,485,455,518,467,517,472,483,460,426,434,374,406"/>
+<map id="Belos::StatusTest&lt; ScalarType, MV, OP, DM &gt;" name="Belos::StatusTest&lt; ScalarType, MV, OP, DM &gt;">
+<area shape="rect" id="Node000001" title="A pure virtual class for defining the status tests for the Belos iterative solvers." alt="" coords="5,476,201,521"/>
+<area shape="rect" id="Node000002" href="$class_belos_1_1_status_test_combo.html" title=" " alt="" coords="1375,48,1581,93"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="103,460,110,388,129,295,144,246,164,198,190,153,223,113,249,89,274,72,298,60,322,53,443,35,572,15,704,5,836,3,965,7,1086,15,1197,26,1377,52,1372,53,1197,31,1086,20,965,12,836,8,704,11,573,21,444,40,324,58,300,65,276,76,252,93,227,117,195,156,169,201,149,248,134,297,115,389,108,461"/>
+<area shape="rect" id="Node000003" href="$class_belos_1_1_status_test_max_iters.html" title=" " alt="" coords="907,48,1114,93"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="105,461,116,400,137,326,152,288,171,250,195,215,223,185,260,154,300,128,342,106,387,88,479,60,574,45,668,38,757,38,838,43,909,52,904,54,837,48,757,43,668,43,575,50,480,66,389,93,345,111,303,133,263,159,226,189,199,219,176,253,157,290,142,328,121,401,111,461"/>
+<area shape="rect" id="Node000004" href="$class_belos_1_1_status_test_res_norm.html" title=" " alt="" coords="1375,838,1581,882"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="111,534,127,584,149,641,182,697,202,722,226,743,266,767,316,787,376,804,444,819,598,841,768,855,941,863,1108,865,1377,864,1371,864,1108,870,941,868,767,861,598,847,443,824,375,809,314,792,263,771,223,748,198,726,177,700,144,644,122,586,111,539"/>
+<area shape="rect" id="Node000005" href="$class_belos_1_1_l_s_q_r_status_test.html" title="A Belos::StatusTest class for specifying convergence of LSQR. The outer status tests passes if an inn..." alt="" coords="448,902,654,946"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="104,534,111,611,128,705,143,754,164,801,191,844,226,881,250,898,276,911,333,928,392,935,450,938,445,938,392,941,332,933,274,916,248,902,223,885,187,847,159,804,138,756,122,706,106,611,103,539"/>
+<area shape="rect" id="Node000006" href="$class_belos_1_1_status_test_combo.html" title="A class for extending the status testing capabilities of Belos via logical combinations." alt="" coords="907,354,1114,398"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="130,463,171,425,196,407,224,394,281,379,357,368,445,362,543,360,740,361,909,369,905,371,740,367,543,365,446,368,357,374,282,384,226,399,199,412,175,429,135,466"/>
+<area shape="rect" id="Node000008" href="$class_belos_1_1_status_test_log_res_norm.html" title="A Belos::StatusTest debugging class for storing the absolute residual norms generated during a solve." alt="" coords="444,971,659,1016"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="110,533,127,633,151,755,167,816,185,870,205,913,227,942,249,960,275,973,330,992,388,1001,446,1005,440,1005,387,1006,329,997,273,978,247,964,223,946,200,916,180,872,162,817,146,756,122,633,109,539"/>
+<area shape="rect" id="Node000009" href="$class_belos_1_1_status_test_max_iters.html" title="A Belos::StatusTest class for specifying a maximum number of iterations." alt="" coords="448,140,654,185"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="109,460,122,410,144,350,177,290,198,263,223,239,275,206,333,184,392,170,450,163,446,167,393,175,334,189,277,211,226,244,202,267,182,293,149,352,127,412,114,461"/>
+<area shape="rect" id="Node000011" href="$class_belos_1_1_status_test_output.html" title="A virtual base class for StatusTest that print other status tests." alt="" coords="907,516,1114,561"/>
+<area shape="poly" id="edge13_Node000001_Node000011" title=" " alt="" coords="216,501,908,532,906,537,217,506"/>
+<area shape="rect" id="Node000016" href="$class_belos_1_1_status_test_res_norm.html" title="An abstract class of StatusTest for stopping criteria using residual norms." alt="" coords="907,730,1114,774"/>
+<area shape="poly" id="edge19_Node000001_Node000016" title=" " alt="" coords="119,532,139,567,162,603,191,637,226,664,311,706,401,735,494,755,588,767,679,773,764,773,910,766,904,767,764,778,679,778,588,773,494,761,400,741,309,710,223,669,187,641,157,606,134,569,119,538"/>
+<area shape="rect" id="Node000020" href="$class_belos_1_1_status_test.html" title=" " alt="" coords="469,218,634,262"/>
+<area shape="poly" id="edge25_Node000001_Node000020" title=" " alt="" coords="124,462,166,408,193,381,223,357,283,321,347,293,410,271,470,256,466,259,412,276,349,298,286,326,226,361,197,385,171,412,129,465"/>
+<area shape="rect" id="Node000021" href="$class_belos_1_1_status_test.html" title=" " alt="" coords="683,570,883,649"/>
+<area shape="poly" id="edge28_Node000001_Node000021" title=" " alt="" coords="126,531,169,581,196,604,226,621,283,640,344,653,405,659,467,660,583,651,685,635,680,637,584,656,467,665,405,664,343,658,282,645,224,626,193,608,166,585,127,537"/>
+<area shape="rect" id="Node000022" href="$class_belos_1_1_status_test.html" title=" " alt="" coords="468,418,635,497"/>
+<area shape="poly" id="edge30_Node000001_Node000022" title=" " alt="" coords="215,486,469,463,466,467,217,491"/>
+<area shape="poly" id="edge7_Node000006_Node000002" title=" " alt="" coords="1058,343,1440,95,1444,92,1061,347"/>
+<area shape="poly" id="edge8_Node000006_Node000006" title=" " alt="" coords="971,336,986,330,1010,327,1033,329,1047,335,1055,344,1053,355,1049,352,1050,345,1044,339,1031,334,1011,332,988,335,974,341"/>
+<area shape="rect" id="Node000007" href="$class_belos_1_1_status_test_combo.html" title=" " alt="" coords="1389,208,1567,253"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="1129,368,1257,358,1305,351,1331,343,1342,328,1343,310,1344,291,1355,272,1386,253,1391,250,1359,275,1349,293,1348,311,1347,329,1334,347,1307,356,1257,364,1130,373"/>
+<area shape="poly" id="edge12_Node000009_Node000003" title=" " alt="" coords="669,136,683,133,783,119,883,102,932,92,927,95,884,107,784,124,683,139,671,141"/>
+<area shape="rect" id="Node000010" href="$class_belos_1_1_status_test_max_iters.html" title=" " alt="" coords="916,140,1105,185"/>
+<area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="669,160,917,161,913,164,671,165"/>
+<area shape="poly" id="edge17_Node000011_Node000011" title=" " alt="" coords="972,499,986,492,1010,490,1033,492,1047,497,1055,506,1053,517,1049,514,1050,508,1044,502,1031,497,1011,495,988,497,974,504"/>
+<area shape="rect" id="Node000012" href="$class_belos_1_1_status_test_general_output.html" title="A special StatusTest for printing other status tests." alt="" coords="1386,285,1570,347"/>
+<area shape="poly" id="edge14_Node000011_Node000012" title=" " alt="" coords="1036,502,1080,456,1107,433,1136,414,1164,401,1189,393,1233,387,1278,384,1332,370,1356,356,1388,346,1383,348,1358,361,1334,375,1279,389,1234,393,1190,398,1166,406,1139,418,1110,437,1083,460,1040,506"/>
+<area shape="rect" id="Node000013" href="$class_belos_1_1_status_test_res_norm_output.html" title="A special StatusTest for printing other status tests in a simple format." alt="" coords="1382,371,1574,432"/>
+<area shape="poly" id="edge15_Node000011_Node000013" title=" " alt="" coords="1050,505,1090,478,1137,455,1198,435,1262,420,1384,406,1378,408,1263,426,1200,440,1139,460,1093,483,1052,510"/>
+<area shape="rect" id="Node000014" href="$class_belos_1_1_status_test_user_output.html" title="A special StatusTest for printing other status tests in a simple format." alt="" coords="1375,456,1581,501"/>
+<area shape="poly" id="edge16_Node000011_Node000014" title=" " alt="" coords="1065,507,1100,492,1137,481,1198,472,1260,467,1377,469,1372,471,1260,472,1198,477,1138,487,1102,497,1068,512"/>
+<area shape="rect" id="Node000015" href="$class_belos_1_1_status_test_output.html" title=" " alt="" coords="1378,525,1578,603"/>
+<area shape="poly" id="edge18_Node000011_Node000015" title=" " alt="" coords="1129,550,1138,551,1262,558,1380,563,1374,564,1262,563,1137,556,1130,556"/>
+<area shape="poly" id="edge23_Node000016_Node000004" title=" " alt="" coords="1057,781,1096,803,1138,821,1230,834,1377,851,1371,851,1230,839,1137,826,1094,808,1056,786"/>
+<area shape="poly" id="edge24_Node000016_Node000016" title=" " alt="" coords="972,712,986,706,1010,703,1033,705,1047,711,1055,720,1053,731,1049,727,1050,721,1044,715,1031,710,1011,708,988,711,974,717"/>
+<area shape="rect" id="Node000017" href="$class_belos_1_1_status_test_gen_res_norm.html" title="An implementation of StatusTestResNorm using a family of residual norms." alt="" coords="1369,696,1587,741"/>
+<area shape="poly" id="edge20_Node000016_Node000017" title=" " alt="" coords="1129,736,1137,735,1371,723,1365,724,1138,740,1130,741"/>
+<area shape="rect" id="Node000018" href="$class_belos_1_1_status_test_gen_res_sub_norm.html" title="An implementation of StatusTestResNorm using a family of norms of subvectors of the residual vectors." alt="" coords="1357,766,1599,810"/>
+<area shape="poly" id="edge21_Node000016_Node000018" title=" " alt="" coords="1129,755,1333,768,1359,773,1353,773,1332,773,1129,760"/>
+<area shape="rect" id="Node000019" href="$class_belos_1_1_status_test_imp_res_norm.html" title="Convergence test using the implicit residual norm(s), with an explicit residual norm(s) check for los..." alt="" coords="1369,627,1586,672"/>
+<area shape="poly" id="edge22_Node000016_Node000019" title=" " alt="" coords="1092,722,1137,709,1256,683,1371,665,1366,666,1257,689,1138,715,1094,727"/>
+<area shape="poly" id="edge26_Node000020_Node000007" title=" " alt="" coords="649,236,1390,230,1387,234,650,242"/>
+<area shape="poly" id="edge27_Node000020_Node000010" title=" " alt="" coords="648,221,917,177,913,180,650,226"/>
+<area shape="poly" id="edge29_Node000021_Node000015" title=" " alt="" coords="898,599,1380,570,1375,572,899,605"/>
+<area shape="poly" id="edge31_Node000022_Node000006" title=" " alt="" coords="649,438,909,393,904,396,651,443"/>
+<area shape="poly" id="edge32_Node000022_Node000011" title=" " alt="" coords="650,452,764,456,825,464,884,476,931,493,974,516,968,516,929,498,883,481,824,469,763,462,651,457"/>
+<area shape="poly" id="edge33_Node000022_Node000016" title=" " alt="" coords="650,476,785,513,844,534,885,555,927,596,961,644,986,690,1003,730,998,728,982,693,956,647,923,600,882,560,842,539,784,518,651,482"/>
 </map>
