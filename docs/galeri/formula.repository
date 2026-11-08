@@ -215,3 +215,152 @@ A_{i,j} = \left\{ \begin{array}{cc}
   \]
 \_form#66=59x14:$g(x, y) = 0$
 \_form#67=59x14:$g(x,y) = 1$
+\_form#68=138x14:\[- \epsilon \Delta u + (v_x,v_y) \cdot \nabla u = f
+\]
+\_form#69=358x14:\[  v_x = 2 conv x (x/2 - 1) (1 - 2y), \quad \quad \quad 
+  v_y =-4 conv y (y - 1) (1 - x)
+\]
+\_form#70=144x76:\[  \left[
+  \begin{tabular}{ccccc}
+    &     & ee  &     &   \\
+    &     &  e  &     &   \\
+ bb &  b  &  a  &  c  & cc \\
+    &     &  d  &     &   \\
+    &     & dd  &     &   \\
+  \end{tabular}
+  \right] .
+\]
+\_form#71=155x76:\[  \left[
+  \begin{tabular}{ccccc}
+    &     & ee  &     &   \\
+    & z3  &  e  & z4  &   \\
+ bb &  b  &  a  &  c  & cc \\
+    & z1  &  d  & z2  &   \\
+    &     & dd  &     &   \\
+  \end{tabular}
+  \right] .
+\]
+\_form#72=163x76:\[  \frac{1}{h^4} \;
+  \left[
+  \begin{tabular}{ccccc}
+    &     &  1  &     &   \\
+    &  2  & -8  &  2  &   \\
+  1 & -8  & 20  & -8  & 1  \\
+    &  2  & -8  &  2  &   \\
+    &     &  1  &     &   \\
+  \end{tabular}
+  \right] .
+\]
+\_form#73=83x46:\[  \left[
+  \begin{tabular}{ccc}
+  & e &  \\
+  b & a & c \\
+  & d &   \\
+  \end{tabular}
+  \right] .
+\]
+\_form#74=145x14:\[  - \nabla u - \sigma u = f \quad \quad (\sigma \geq 0)
+\]
+\_form#75=141x46:\[  \frac{1}{h^2} \;
+  \left[
+  \begin{tabular}{ccc}
+  & -1 &  \\
+  -1 & $4 -\sigma h^2$ & -1 \\
+  & -1 &   \\
+  \end{tabular}
+  \right] 
+\]
+\_form#76=209x31:\[A = \left[
+\begin{tabular}{cc} a * eye(n/2) & -diag(1:m) \\
+  diag(1:m) &     a * eye(n/2) \\
+  \end{tabular}
+  \right].
+\]
+\_form#77=118x46:\[  \frac{1}{h^2} \;
+  \left[
+  \begin{tabular}{ccc}
+  & -1 &  \\
+  -1 & 4 & -1 \\
+  & -1 &   \\
+  \end{tabular}
+  \right] .
+\]
+\_form#78=191x76:\[  \frac{1}{12 h^2} \;
+  \left[
+  \begin{tabular}{ccccc}
+    &     &   1 &     &   \\
+    &     & -16 &     &   \\
+  1 & -16 &  60 & -16 & 1  \\
+    &     & -16 &     &   \\
+    &     &   1 &     &   \\
+  \end{tabular}
+  \right] .
+\]
+\_form#79=146x34:\[  A_{i,j} = 
+  \left\{
+  \begin{array}{ll}
+  \frac{i}{j} & \mbox{ if } j \ge i \\
+  \frac{j}{i} & \mbox{ otherwise } \\
+  \end{array}
+  \right. .
+\]
+\_form#80=154x31:\[A_{i,j} = \left\{ \begin{array}{cc}
+\alpha + 1 & \mbox{ if } i \neq j \\
+  1  & \mbox{ if } i = j.
+  \end{array}
+  \right. .
+\]
+\_form#81=369x14:\[  v_x = conv \cdot 4 x (x - 1) (1 - 2y), \quad \quad \quad 
+  v_y = -conv \cdot 4 y (y - 1) (1 - 2x)
+\]
+\_form#82=94x46:\[   \left[
+  \begin{tabular}{ccc}
+  z3 & e & z4 \\
+  b & a & c \\
+  z1 & d & z2  \\
+  \end{tabular}
+  \right] .
+\]
+\_form#83=181x46:\[  \left[
+  \begin{tabular}{ccc}
+  -1.0           & $-4.0 + \epsilon$ & -1.0 \\
+  $2.0 - \epsilon$ & 8.0            & $2.0 - \epsilon$ \\
+  -1.0           & $-4.0 + \epsilon$ & -1.0 \\
+  \end{tabular}
+  \right] .
+\]
+\_form#84=78x16:\[  \left[
+  \begin{tabular}{ccc}
+  b & a & c \\ 
+  \end{tabular}
+  \right] .
+\]
+\_form#85=138x14:\[    - \epsilon \Delta u + (v_x,v_y) \cdot \nabla u = f
+\]
+\_form#86=189x14:\[    v_x = cos(\alpha) V, \quad \quad \quad v_y =  sin(\alpha) V 
+\]
+\_form#87=198x31:\begin{eqnarray*} - \epsilon \Delta u + b \cdot \nabla u + \sigma u & = & f  \mbox{ on }
+   \Omega\\
+  & u = & g \mbox{ on } \partial \Omega
+\end{eqnarray*}
+\_form#88=186x29:\[  \begin{tabular}{ r l c}
+  $- \epsilon \Delta u + \mathbf{b} \cdot \nabla u = 0$ & in $\Omega = (0, 1)$ \\
+  $u = g$ & on $\partial \Omega$
+  \end{tabular}
+\]
+\_form#89=294x28:\[  \begin{tabular}{ r l c}
+  $-\Delta u = f$ & in $\Omega = \forall (x, y) \; |  \;\sqrt{(x-1)^2 + (y-1)^2)} < 1$ \\
+  $u = 0$ & on $\partial \Omega$
+  \end{tabular}
+\]
+\_form#90=134x26:\[  \begin{tabular}{ r l c}
+  $-\Delta u = f$ & in $\Omega = (0, 1)$ \\
+  $u = 0$ & on $\partial \Omega$
+  \end{tabular}
+\]
+\_form#91=251x29:\[  \begin{tabular}{ r l c}
+  $-\Delta u = 1$ & in $\Omega = (0, 3) \times (0, 3) \backslash (1,2) \times
+  (1,2)$ \\
+  $u = g$ & on $\partial \Omega$
+  \end{tabular}
+\]

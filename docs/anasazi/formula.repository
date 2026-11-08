@@ -164,3 +164,45 @@
 \_form#117=88x14:$\alpha AB + \beta (*this)$
 \_form#118=63x15:$\alpha A^T(*this)$
 \_form#119=105x15:$ b[i] = A[i]^H(this[i])$
+\_form#120=175x28:\[  X_{out} = X_{in} - \sum_i Q[i] \langle Q[i], X_{in} \rangle
+\]
+\_form#121=140x14:\[   \langle Q[i], Q[j] \rangle = I \quad\textrm{if}\quad i=j
+\]
+\_form#122=148x14:\[   \langle Q[i], Q[j] \rangle = 0 \quad\textrm{if}\quad i \neq j\ .
+\]
+\_form#123=99x14:\[     \langle X[i], X[j] \rangle = \delta_{ij}\ .
+\]
+\_form#124=309x14:\[     X_{in}(1:m,1:n) = X_{out}(1:m,1:rank) B(1:rank,1:n)
+\]
+\_form#125=214x14:\[       \langle X[i], X[j] \rangle = \delta_{ij} \quad \textrm{and} \quad \langle X, Q[i] \rangle = 0\ .
+\]
+\_form#126=385x28:\[     X_{in}(1:m,1:n) = X_{out}(1:m,1:rank) B(1:rank,1:n) + \sum_i Q[i] C[i]
+\]
+\_form#127=174x16:\[  P_{X,Y} S = S - X \langle Y, X \rangle^{-1} \langle Y, S \rangle\ .
+\]
+\_form#128=241x18:\[     P_{X[i],Y[i]} S = S - X[i] \langle Y[i], X[i] \rangle^{-1} \langle Y[i], S \rangle\ .
+\]
+\_form#129=136x28:\[     S_{in} = S_{out} + \sum_i X[i] C[i]
+\]
+\_form#130=161x16:\[     C[i] = \langle Y[i], X[i] \rangle^{-1} \langle Y[i], S \rangle\ .
+\]
+\_form#131=83x14:\[     \langle Y[i], S_{out} \rangle = 0
+\]
+\_form#132=159x39:\[     \left( \prod_{i} P_{X[i],Y[i]} \right) S_{in} = S_{out} B\ ,
+\]
+\_form#133=146x28:\[     S_{in} = S_{out} B + \sum_i X[i] C[i]
+\]
+\_form#134=389x28:\[     S_{in}(1:m,1:n) = S_{out}(1:m,1:rank) B(1:rank,1:n) + \sum_i X[i] C[i]\ ,
+\]
+\_form#135=83x16:\[   \langle x, y \rangle = x^H M y
+\]
+\_form#136=96x18:\[   \|x\|_M = \sqrt{x^H M y}
+\]
+\_form#137=109x14:\[  Z(i,j) = \langle X[i], Y[i] \rangle
+\]
+\_form#138=85x14:\[     \langle Q[i], X_{out} \rangle = 0
+\]
+\_form#139=175x28:\[     X_{out} = X_{in} - \sum_i Q[i] \langle Q[i], X_{in} \rangle
+\]
+\_form#140=316x14:\[     X_{in}(1:m,1:n) = X_{out}(1:m,1:rank) B(1:rank,1:n)\ ,
+\]

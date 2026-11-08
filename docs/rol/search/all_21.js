@@ -63,7 +63,7 @@ var searchData=
   ['_7epolyhedralprojection_60',['~PolyhedralProjection',['../classROL_1_1PolyhedralProjection.html#a758136c4820b190484abc5a1c69001d2',1,'ROL::PolyhedralProjection']]],
   ['_7epositivefunction_61',['~PositiveFunction',['../classROL_1_1PositiveFunction.html#a8a58c491621f5bb66d8eae07ebc42e65',1,'ROL::PositiveFunction']]],
   ['_7eprimalscaledvector_62',['~PrimalScaledVector',['../classROL_1_1PrimalScaledVector.html#adcaf37da8b65f37777f93120e7ab675f',1,'ROL::PrimalScaledVector']]],
-  ['_7eproblem_63',['~problem',['../classROL_1_1Problem.html#acbac5875c6613ae3c2df3d298e7adf11',1,'ROL::Problem::~Problem()'],['../classROL_1_1Problem.html#acbac5875c6613ae3c2df3d298e7adf11',1,'ROL::Problem::~Problem()']]],
+  ['_7eproblem_63',['~Problem',['../classROL_1_1Problem.html#acbac5875c6613ae3c2df3d298e7adf11',1,'ROL::Problem']]],
   ['_7eprofiledvector_64',['~ProfiledVector',['../classROL_1_1ProfiledVector.html#a49e37a0cc36da5b5d47ab222b5c9573e',1,'ROL::ProfiledVector']]],
   ['_7eprojection_65',['~Projection',['../classROL_1_1Projection.html#a095dbb17a2e4a091b9d4fd256fec6840',1,'ROL::Projection']]],
   ['_7erandvarfunctional_66',['~RandVarFunctional',['../classROL_1_1RandVarFunctional.html#a306c75394a162e86c8af251e84bf9577',1,'ROL::RandVarFunctional']]],

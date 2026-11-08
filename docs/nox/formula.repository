@@ -1669,3 +1669,984 @@ a = abs(r)
 \_form#667=6x10:$ \delta$
 \_form#668=6x10:$ \delta $
 \_form#669=64x14:\[ \left[ \; 0.1 \; 2.34 \; 5 \; \right] \]
+\_form#670=81x13:\[x = \hat x + \mbox{step} \; d.
+\]
+\_form#671=109x68:\[F(x) = \left[ \begin{array}{c} F_1(x) \\ F_2(x) \\ \vdots \\ F_n(x) \\ \end{array} \right].
+\]
+\_form#672=74x31:\[J_{ij} = \frac{\partial F_i}{\partial x_j} (x).
+\]
+\_form#673=121x26:\[\min f(x) \equiv \frac{1}{2} \|F(x)\|_2^2.
+\]
+\_form#674=50x15:\[g \equiv J^T F.
+\]
+\_form#675=51x10:\[J s = -F.
+\]
+\_form#676=148x31:\[\frac{\| J s - (-F) \|_2}{\max \{ 1, \|F\|_2\} } < \mbox{Tolerance}
+\]
+\_form#677=145x31:\[\frac{\| J v - u \|_2}{\max \{ 1, \|u\|_2\} } < \mbox{Tolerance}
+\]
+\_form#678=145x31:\[\frac{\| M v - u \|_2}{\max \{ 1, \|u\|_2\} } < \mbox{Tolerance}
+\]
+\_form#679=61x14:$F(x,p)=0
+$
+\_form#680=49x14:$F(x)=0 $
+\_form#681=50x10:\[  Jd = -F
+\]
+\_form#682=121x31:\[  \frac{\|J_k d_k - (-F_k)\|}{\|F_k\|} \leq \eta_k.
+\]
+\_form#683=205x31:\[  \eta_k = \left\vert \frac{\| F_k \| - \|J_{k-1} d_{k-1} - (-F_{k-1}) \| }
+  {\|F_{k-1}\|} \right\vert
+\]
+\_form#684=166x23:\[  \max\{\eta_{k-1}^{\frac{1 + \sqrt{5}}{2}}, \eta_{\min} \} \leq \eta_k \leq \eta_{\max}
+\]
+\_form#685=106x33:\[  \eta_k = \gamma \left( \frac{\|F_k\|}{\|F_{k-1}\|} \right)^\alpha
+\]
+\_form#686=168x14:\[  \max\{\gamma \eta_{k-1}^{\alpha}, \eta_{\min} \} \leq \eta_k \leq \eta_{\max}
+\]
+\_form#687=153x16:\[d = - M^{-1}(x) F(x) + \beta d_{prev}
+\]
+\_form#688=166x16:\[  d = - \gamma \nabla f(x) = -\gamma J(x)^T F(x)
+\]
+\_form#689=13x9:$    \eta_k $
+\_form#690=95x13:\[  x_{\rm new} = x_{\rm old} + \lambda d.
+\]
+\_form#691=101x16:\[  f(x) = 0.5 \|F(x)\|^2
+\]
+\_form#692=224x16:\[  f(x+{\rm stp} \; s) - f(x) - {\rm ftol} \; {\rm stp} \; (\nabla f(x)^T s).
+\]
+\_form#693=224x16:\[  f(x + {\rm stp} \; s) \le f(x) + {\rm ftol} \; {\rm stp} \; (\nabla f(x)^T s),
+\]
+\_form#694=214x14:\[  F(x_{n-1}+ \lambda s) \le  F(x_{n-1})(1-\alpha(1-\eta))
+\]
+\_form#695=196x16:\[  \vert \nabla f(x + {\rm stp} \; s)^T s) \vert \le {\rm gtol} \;  |\nabla f(x)^T s|
+\]
+\_form#696=6x10:$  d $
+\_form#697=94x13:$  x_{new} = x_{old} + \lambda d $
+\_form#698=8x10:$ \lambda
+$
+\_form#699=95x33:\[    \lambda = - \frac{F(x_{old})^T d}{d^T J(x_{old})d}
+\]
+\_form#700=188x28:\[  J(x_{old})d \approx \frac{F(x_{old} + \delta d) - F(x_{old})}{\delta}
+\]
+\_form#701=130x19:\[    \min_\lambda \phi(\lambda)\equiv\phi (x_{old}+ \lambda d)
+\]
+\_form#702=271x16:\[    \phi ' (\lambda) = \nabla\phi (x_{old}+ \lambda d)^T d =
+    F(x_{old}+ \lambda d)^T d = 0~~.
+\]
+\_form#703=174x29:\[    \phi(\lambda)\approx\phi (0) + \phi ' (0)\lambda + \phi '' (0)
+    \frac{\lambda^2}{2}
+\]
+\_form#704=216x33:\[    \%lambda_{min} \approx - \frac{\phi ' (0)}{\phi '' (0)} =
+    - \frac{F(x_{old})^T d}{d^T J(x_{old})d}
+\]
+\_form#705=141x26:\[\phi(\lambda) \equiv \frac{1}{2}||F (x_{\rm old} + \lambda s)||^2,
+\]
+\_form#706=28x10:$k-1 $
+\_form#707=198x33:\[\lambda_{k} = \frac{-\phi'(0) \lambda_{k-1}^2 }{2 \left[ \phi(\lambda_{k-1}) - \phi(0)
+-\phi'(0) \lambda_{k-1} \right]}
+\]
+\_form#708=141x30:\[\lambda_k = \frac{-b+\sqrt{b^2-3a \phi'(0)}}{3a}
+\]
+\_form#709=454x48:\[    \left[ \begin{array}{c} a \\ \\ b \end{array} \right] =
+    \frac{1}{\lambda_{k-1} - \lambda_{k-2}} \left[ \begin{array}{cc}
+    \lambda_{k-1}^{-2} & -\lambda_{k-2}^{-2} \\ & \\
+    -\lambda_{k-2}\lambda_{k-1}^{-2} & \lambda_{k-1}\lambda_{k-2}^{-2}
+    \end{array} \right]
+    \left[ \begin{array}{c} \phi(\lambda_{k-1}) - \phi(0) -
+                            \phi'(0)\lambda_{k-1} \\ \\
+                            \phi(\lambda_{k-2}) - \phi(0) -
+                            \phi'(0)\lambda_{k-2} \end{array} \right]
+\]
+\_form#710=296x33:\[\lambda_k = - \frac{1}{2}
+\frac{\lambda_{k-1}^2 [\phi(\lambda_{k-2}) -\phi(0)]
+- \lambda_{k-2}^2 [\phi(\lambda_{k-1}) -\phi(0)]}
+{\lambda_{k-2} [\phi(\lambda_{k-1}) -\phi(0)]
+- \lambda_{k-1} [\phi(\lambda_{k-2}) -\phi(0)]}
+\]
+\_form#711=158x13:\[\gamma_{min} \; \lambda_{k-1} \leq \lambda_k \le \gamma_{max} \; \lambda_{k-1}
+\]
+\_form#712=129x15:\[\phi(\lambda) \leq \phi(0) + \alpha \; \lambda \; \phi'(0)
+\]
+\_form#713=226x14:\[\| F(x_{\rm old} + \lambda d )\| \leq \| F(x_{\rm old}) \| (1 - \alpha (1 - \eta))
+\]
+\_form#714=95x13:\[x_{\rm new} = x_{\rm old} + \lambda d,
+\]
+\_form#715=50x14:$ \sqrt{2 * {\rm oldf}} $
+\_form#716=55x14:$ \sqrt{2 * {\rm
+    newf}} $
+\_form#717=93x16:$    \phi(x) = \frac{1}{2} \|F(x)\|^2 $
+\_form#718=75x16:\[\zeta = d^T \nabla f(x).
+\]
+\_form#719=73x16:\[  \zeta = \nabla f(x)^T d
+\]
+\_form#720=256x16:\[  m(d) = f(x) + \nabla f(x)^T d + d^T \nabla^2 f(x) d + d^T \mathbf{B} d
+\]
+\_form#721=134x31:\[  result = -\frac{\nabla f^T \nabla f}{\nabla f^T B \nabla f} \nabla f
+\]
+\_form#722=78x26:\[  f = \frac{1}{2} \| F(x) \| ^2
+\]
+\_form#723=206x26:\[  m(d) = f(x) + (J(x)^T F)^T d + \frac{1}{2} d^T B d
+\]
+\_form#724=274x33:\[  result = \frac{\nabla f^T \nabla f}{\nabla f^T B \nabla f} \nabla f = -\frac{(J^T F)^T (J^T F)}{(J J^T F)^T (J J^T F)} J^T F
+\]
+\_form#725=129x16:\[  \zeta = d^T \nabla f(x) = d^TJ^TF
+\]
+\_form#726=131x16:\[  \zeta = d^T \nabla f(x) = (Jd)^TF
+\]
+\_form#727=120x16:$\min f(x) \equiv \frac{1}{2} \|F(x)\|^2_2.
+$
+\_form#728=323x16:$\min \; m_k(s) \equiv f_k + g_k^T d + \frac{1}{2} d^T B_k d,
+\mbox{ s.t. } \|d\| \leq \Delta_k
+\quad \mbox{(TRSP)}
+$
+\_form#729=124x31:$\rho = \displaystyle\frac{ f(x_k) - f(x_k + d) } { m_k(0) - m_k(d) }
+$
+\_form#730=215x29:$           \gamma = \displaystyle\frac
+           {-c^T a + \sqrt{ (c^Ta)^2 - (c^Tc - \Delta^2) a^Ta}}{a^Ta}
+$
+\_form#731=51x13:$k \geq k_{\rm max}.
+$
+\_form#732=125x16:\[  ||\delta x^k||_{wrms} < \mbox{tolerance}
+\]
+\_form#733=290x46:\[  ||\delta x^k||_{wrms} \equiv C \sqrt{ \frac{1}{N} \sum_{i=1}^N \left( \frac
+    {(x^k_i-x^{k-1}_i)}{RTOL |x^{k-1}_i| + ATOL_i} \right) ^2 }
+\]
+\_form#734=114x31:\[    \begin{bmatrix}
+         J & A    \\
+       B^T & C
+    \end{bmatrix}
+    \begin{bmatrix}
+       X \\
+       Y
+    \end{bmatrix} =
+    \begin{bmatrix}
+       F \\
+       G
+    \end{bmatrix}
+\]
+\_form#735=49x31:\[    \begin{bmatrix}
+         J & A    \\
+       B^T & C
+    \end{bmatrix}
+\]
+\_form#736=239x31:\[    \begin{bmatrix}
+       U \\
+       V
+    \end{bmatrix} =
+    \begin{bmatrix}
+         J & A    \\
+       B^T & C
+    \end{bmatrix}
+    \begin{bmatrix}
+       X \\
+       Y
+    \end{bmatrix} =
+    \begin{bmatrix}
+         J*X + A*Y \\
+       B^T*X + C*Y
+    \end{bmatrix}.
+\]
+\_form#737=246x31:\[    \begin{bmatrix}
+       U \\
+       V
+    \end{bmatrix} =
+    \begin{bmatrix}
+       J^T & B    \\
+       A^T & C
+    \end{bmatrix}
+    \begin{bmatrix}
+       X \\
+       Y
+    \end{bmatrix} =
+    \begin{bmatrix}
+       J^T*X + B*Y \\
+       A^T*X + C^T*Y
+    \end{bmatrix}.
+\]
+\_form#738=121x31:\[    \begin{bmatrix}
+         C & B^T    \\
+         A & J
+    \end{bmatrix}
+    \begin{bmatrix}
+       Y \\
+       X
+    \end{bmatrix} =
+    \begin{bmatrix}
+       G \\
+       F
+    \end{bmatrix}.
+\]
+\_form#739=88x31:\[    Q^T
+    \begin{bmatrix}
+       C^T \\
+       B
+    \end{bmatrix} =
+    \begin{bmatrix}
+       R \\
+       0
+    \end{bmatrix}
+\]
+\_form#740=94x31:\[    \begin{bmatrix}
+       Z_Y \\
+       Z_X
+    \end{bmatrix} = Q^T
+    \begin{bmatrix}
+       Y \\
+       X
+    \end{bmatrix},
+\]
+\_form#741=131x31:\[    \begin{bmatrix}
+         R^T & 0    \\
+         [A & J] Q
+    \end{bmatrix}
+    \begin{bmatrix}
+       Z_Y \\
+       Z_X
+    \end{bmatrix} =
+    \begin{bmatrix}
+       G \\
+       F
+    \end{bmatrix}
+\]
+\_form#742=194x53:\[  \begin{split}
+    Z_Y &= R^{-T} G \\
+    [A \;\; J] Q
+    \begin{bmatrix}
+       0 \\
+       Z_X
+    \end{bmatrix} &= F - [A \;\; J] Q
+    \begin{bmatrix}
+       Z_Y \\
+       0
+    \end{bmatrix}.
+  \end{split}
+\]
+\_form#743=54x15:\[    P Z_X = \tilde{F}
+\]
+\_form#744=116x31:\[    P Z_X = [A \;\; J] Q
+    \begin{bmatrix}
+       0 \\
+       Z_X
+    \end{bmatrix}
+\]
+\_form#745=130x31:\[    \tilde{F} = F - [A \;\; J] Q
+    \begin{bmatrix}
+       Z_Y \\
+       0
+    \end{bmatrix}.
+\]
+\_form#746=86x31:\[    \begin{bmatrix}
+      Y \\
+      X
+    \end{bmatrix} = Q
+    \begin{bmatrix}
+       Z_Y \\
+       Z_X
+    \end{bmatrix}.
+\]
+\_form#747=76x14:\[    P = J + U V^T
+\]
+\_form#748=64x10:\[     J z = \lambda M z
+*\]
+\_form#749=136x14:\[      (J - \sigma M) z = (J - \mu M) r
+\]
+\_form#750=90x14:\[     (J-\omega I)z = M r
+\]
+\_form#751=49x31:\[    \begin{bmatrix}
+       J & A \\
+       B^T & C
+    \end{bmatrix}
+\]
+\_form#752=114x31:\[    \begin{bmatrix}
+       J & A \\
+       B^T & C
+    \end{bmatrix}
+    \begin{bmatrix}
+      X \\
+      Y
+    \end{bmatrix} =
+    \begin{bmatrix}
+      F \\
+      G
+    \end{bmatrix}
+\]
+\_form#753=49x31:\[    \begin{bmatrix}
+       M & A \\
+       B^T & C
+    \end{bmatrix}
+\]
+\_form#754=169x31:\[    \begin{bmatrix}
+       J & A \\
+       B^T & C
+    \end{bmatrix}
+    \begin{bmatrix}
+      X \\
+      Y
+    \end{bmatrix} =
+    \begin{bmatrix}
+      JX + AY \\
+      B^T X + CY
+    \end{bmatrix}
+\]
+\_form#755=186x74:\[ \begin{split}
+   X_1 &= J^{-1} F, \\
+   X_2 &= J^{-1} A, \\
+   Y &= (C-B^T X_2)^{-1}(G-B^T X_1), \\
+   X &= X_1 - X_2 Y
+ \end{split}
+\]
+\_form#756=99x35:\[    \sum_{i=1}^n a_i*b_i*s_i*s_i.
+\]
+\_form#757=64x9:\[    x_i = a_i*s_i.
+\]
+\_form#758=105x14:\[      (J - \omega M) z = \lambda M z
+\]
+\_form#759=155x46:\[\sqrt{\frac{1}{N}\sum_{i=1}^N\left(\frac{|n_i-(n_0)_i|}{\epsilon_r|n_i| + \epsilon_a}\right)} < \tau
+\]
+\_form#760=75x31:\[\frac{|p-p_0|}{\epsilon_r|p| + \epsilon_a} < \tau
+\]
+\_form#761=78x31:\[\frac{|\sigma-\sigma_0|}{\epsilon_r|\sigma| + \epsilon_a} < \tau
+\]
+\_form#762=114x31:\[      \begin{bmatrix}
+           J & A    \\
+         B^T & C
+      \end{bmatrix}
+      \begin{bmatrix}
+         X \\
+         Y
+      \end{bmatrix} =
+      \begin{bmatrix}
+         F \\
+         G
+      \end{bmatrix}
+\]
+\_form#763=115x31:\[    \begin{bmatrix}
+       U \\
+       V
+    \end{bmatrix} =
+    \begin{bmatrix}
+         J & A    \\
+       B^T & C
+    \end{bmatrix}
+    \begin{bmatrix}
+       X \\
+       Y
+    \end{bmatrix}
+\]
+\_form#764=121x31:\[    \begin{bmatrix}
+       U \\
+       V
+    \end{bmatrix} =
+    \begin{bmatrix}
+       J^T & B    \\
+       A^T & C^T
+    \end{bmatrix}
+    \begin{bmatrix}
+       X \\
+       Y
+    \end{bmatrix}
+\]
+\_form#765=183x74:\[    \begin{aligned}
+       X_1 &= J^{-1} F \\
+       X_2 &= J^{-1} A \\
+       Y   &= (C-B^T X_2)^{-1}(G-B^T X_1) \\
+       X   &= X_1 - X_2 Y
+    \end{aligned}
+\]
+\_form#766=101x31:\[    Q^T
+    \begin{bmatrix}
+       op(C) \\
+       B
+    \end{bmatrix} =
+    \begin{bmatrix}
+       R \\
+       0
+    \end{bmatrix}
+\]
+\_form#767=149x31:\[    \begin{bmatrix}
+       op(J) &   0    \\
+       B^T   & op(C)
+    \end{bmatrix}
+    \begin{bmatrix}
+       X \\
+       Y
+    \end{bmatrix} =
+    \begin{bmatrix}
+       F \\
+       G
+    \end{bmatrix}
+\]
+\_form#768=136x36:\[    \begin{aligned}
+       X &= op(J)^{-1} F \\
+       Y &= op(C)^{-1}(G-B^T X)
+    \end{aligned}
+\]
+\_form#769=149x31:\[    \begin{bmatrix}
+       op(J) &   A    \\
+       0     & op(C)
+    \end{bmatrix}
+    \begin{bmatrix}
+       X \\
+       Y
+    \end{bmatrix} =
+    \begin{bmatrix}
+       F \\
+       G
+    \end{bmatrix}
+\]
+\_form#770=125x36:\[    \begin{aligned}
+       Y &= op(C)^{-1}G \\
+       X &= op(J)^{-1}(F - A Y)
+    \end{aligned}
+\]
+\_form#771=85x31:\[   \frac{|g|}{\epsilon_r|\Delta s| + \epsilon_a} < \tau
+\]
+\_form#772=83x31:\[   \frac{|p-p_0|}{\epsilon_r|p_0| + \epsilon_a} < \tau
+\]
+\_form#773=114x30:\[\frac{\partial F}{\partial p},\quad\frac{\partial Jn}{\partial p},\quad\frac{\partial Jn}{\partial x}a
+\]
+\_form#774=178x33:\[      \frac{d^2 T}{d x^2} + \alpha s \left(1 + \frac{x + 0.5 x^2}{1 + 0.01 x^2}\right) = 0
+\]
+\_form#775=113x46:\[G(z) = \left[
+\begin{array}{c}
+F(x,p) \\
+Jn \\
+n^Tn-1
+\end{array}
+\right]
+\]
+\_form#776=281x14:\[a = abs(r) * \mbox{scalarRandom} + x_o * \mbox{scalarInitialGuess}
+\]
+\_form#777=56x14:\[a = abs(r)
+\]
+\_form#778=149x31:\[    \begin{bmatrix}
+      J+i\omega M & a \\
+      b^H         & 0
+    \end{bmatrix}
+    \begin{bmatrix}
+      v \\
+      \sigma_1
+    \end{bmatrix} =
+    \begin{bmatrix}
+      0 \\
+      n
+    \end{bmatrix},
+\]
+\_form#779=164x31:\[    \begin{bmatrix}
+      J^T-i\omega M^T & b \\
+      a^H             & 0
+    \end{bmatrix}
+    \begin{bmatrix}
+      w \\
+      \sigma_2
+    \end{bmatrix} =
+    \begin{bmatrix}
+      0 \\
+      n
+    \end{bmatrix},
+\]
+\_form#780=113x16:\[    \sigma = w^H J+i\omega M v/n
+\]
+\_form#781=265x36:\[    \begin{split}
+       \sigma_x &= (w^H(J+i\omega M)v)_x/n = w^H(J+i\omega M)_x v/n \\
+       \sigma_p &= (w^H(J+i\omega M)v)_p/n = w^H(J+i\omega M)_p v/n
+    \end{split}
+\]
+\_form#782=129x31:\[    G(z) = \left[
+     \begin{array}{c}
+        F(x,p)\\
+        \sigma
+     \end{array}
+     \right] = 0
+\]
+\_form#783=149x76:\[    G(z) = \left[
+    \begin{array}{c}
+        F(x,p) \\
+        Jy-\omega Bz \\
+        Jz+\omega By \\
+        l^Ty-1 \\
+        l^Tz
+     \end{array}
+     \right] = 0
+\]
+\_form#784=360x76:\[    \begin{bmatrix}
+         J       &    0   &    0   &   0  &    f_p     \\
+      (Jy-wBz)_x &    J   &  -wB   & -Bz  & (Jy-wBz)_p \\
+      (Jz+wBy)_x &   wB   &    J   &  By  & (Jz+wBy)_p \\
+         0       & \phi^T &    0   &   0  &     0      \\
+         0       &    0   & \phi^T &   0  &     0
+    \end{bmatrix}
+    \begin{bmatrix}
+       X \\
+       Y \\
+       Z \\
+       \omega \\
+       \lambda
+    \end{bmatrix} =
+    \begin{bmatrix}
+       F \\
+       G \\
+       H \\
+       u \\
+       v
+    \end{bmatrix}.
+\]
+\_form#785=485x175:\[   \begin{split}
+      J [A \; b] &= [F \; f_p] \\
+      \begin{bmatrix}
+         J & -wB \\
+        wB &  J
+      \end{bmatrix}
+      \begin{bmatrix}
+         C & e & g \\
+         D & f & h
+      \end{bmatrix} &=
+      \begin{bmatrix}
+         G - (Jy-wBz)_x A & (Jy-wBz)_p - (Jy-wBz)_x b & -Bz \\
+         H - (Jz+wBy)_x A & (Jz+wBy)_p - (Jy-wBz)_x b &  By
+      \end{bmatrix} \\
+      \lambda &= \frac{(\phi^T h)(\phi^T C-u)-(\phi^T g)(\phi^T D-v)}
+                      {(\phi^T h)(\phi^T e)-(\phi^T g)(\phi^T f)} \\
+      \omega &= \frac{\phi^T D - v - (\phi^T f)\lambda}{\phi^T h} \\
+      X &= A - b \lambda \\
+      \begin{bmatrix}
+         Y \\
+         Z
+      \end{bmatrix} &=
+      \begin{bmatrix}
+         C \\
+         D
+      \end{bmatrix} -
+      \begin{bmatrix}
+         e \\
+         f
+      \end{bmatrix}\lambda -
+      \begin{bmatrix}
+         g \\
+         h
+      \end{bmatrix}\omega
+   \end{split}
+\]
+\_form#786=371x76:\[    \begin{bmatrix}
+         J       &    0   &    0   &   0  &    f_p     \\
+      (Jy-wBz)_x &    J   &  -wB   & -Bz  & (Jy-wBz)_p \\
+      (Jz+wBy)_x &   wB   &    J   &  By  & (Jz+wBy)_p \\
+         0       & \phi^T &    0   &   0  &     0      \\
+         0       &    0   & \phi^T &   0  &     0
+    \end{bmatrix}
+    \begin{bmatrix}
+       X \\
+       Y \\
+       Z \\
+       \Omega^T \\
+       \Lambda^T
+    \end{bmatrix} =
+    \begin{bmatrix}
+       F \\
+       G \\
+       H \\
+       U^T \\
+       V^T
+    \end{bmatrix}.
+\]
+\_form#787=324x16:\[    g(x,p,x_0,p_0,x^\ast,p^\ast,v,\Delta s)=
+        (x-x^\ast)^Tv_x + (p-p^\ast) v_p - \Delta s
+\]
+\_form#788=201x16:\[     (x-x^\ast)^Tv_x + \theta^2(p-p^\ast) v_p - \Delta s = 0
+\]
+\_form#789=59x33:\[    \begin{split}
+        f(x,p) &= 0 \\
+        g(x,p) &= 0
+    \end{split}
+\]
+\_form#790=118x14:\[     f(x,y) = 0
+     g(x,y) = 0
+\]
+\_form#791=174x29:\[     \begin{array}{cc}
+        F(x,p) &= 0 \\
+        g(x,p,x_0,p_0,x^\ast,p^\ast,v,\Delta s) &= 0
+     \end{array}
+\]
+\_form#792=234x14:\[    g(x,p,x_0,p_0,x^\ast,p^\ast,v,\Delta s)=
+        p-p_0-v_p \Delta s
+\]
+\_form#793=59x9:\[     v = x - x_o
+\]
+\_form#794=66x30:\[     J v_x = - \frac{\partial f}{\partial p}.
+\]
+\_form#795=114x31:\[    \begin{bmatrix}
+      J   & a \\
+      b^T & 0
+    \end{bmatrix}
+    \begin{bmatrix}
+      v \\
+      \sigma_1
+    \end{bmatrix} =
+    \begin{bmatrix}
+      0 \\
+      n
+    \end{bmatrix},
+\]
+\_form#796=116x31:\[    \begin{bmatrix}
+      J^T & b \\
+      a^T & 0
+    \end{bmatrix}
+    \begin{bmatrix}
+      w \\
+      \sigma_2
+    \end{bmatrix} =
+    \begin{bmatrix}
+      0 \\
+      n
+    \end{bmatrix},
+\]
+\_form#797=80x16:\[    \sigma = -w^T J v/n
+\]
+\_form#798=179x36:\[    \begin{split}
+       \sigma_x &= -(w^T J v)_x/n = -w^T J_x v/n \\
+       \sigma_p &= -(w^T J v)_p/n = -w^T J_p v/n
+    \end{split}
+\]
+\_form#799=163x46:\[    G(z) = \left[
+     \begin{array}{c}
+        F(x,p)+s\psi\\
+        \sigma \\
+        \langle x,\psi \rangle
+     \end{array}
+     \right] = 0
+\]
+\_form#800=70x16:\[    \sigma = w^T J v/n
+\]
+\_form#801=159x36:\[    \begin{split}
+       \sigma_x &= (w^T J v)_x/n = w^T J_x v/n \\
+       \sigma_p &= (w^T J v)_p/n = w^T J_p v/n
+    \end{split}
+\]
+\_form#802=164x61:\[    G(z) = \left[
+    \begin{array}{c}
+        F(x,p)+\sigma\psi \\
+        Jn \\
+        \langle x, \psi\rangle \\
+        l^Tn-1
+    \end{array}
+    \right] = 0
+\]
+\_form#803=173x64:\[    D_z G(z) =
+    \begin{bmatrix}
+       J & 0 & \psi & \frac{\partial F}{\partial p} \\
+       \frac{\partial Jn}{\partial x} & J & 0 &
+          \frac{\partial Jn}{\partial p} \\
+       \psi^T & 0 & 0 & 0 \\
+       0 & l^T & 0 & 0
+    \end{bmatrix}
+\]
+\_form#804=269x64:\[    \begin{bmatrix}
+       J & 0 & \psi & \frac{\partial F}{\partial p} \\
+       \frac{\partial Jn}{\partial x} & J & 0 &
+          \frac{\partial Jn}{\partial p} \\
+       \psi^T & 0 & 0 & 0 \\
+       0 & l^T & 0 & 0
+    \end{bmatrix}
+    \begin{bmatrix}
+       a \\
+     b \\
+     c \\
+       d
+    \end{bmatrix}
+     =
+    \begin{bmatrix}
+       Ja + \psi c + \frac{\partial F}{\partial p}d \\
+       \frac{\partial Jn}{\partial x}a + Jb +
+           \frac{\partial Jn}{\partial p}d \\
+       \langle a, \psi\rangle \\
+       l^T b
+    \end{bmatrix}
+\]
+\_form#805=204x61:\[    \begin{bmatrix}
+         J   &    0   & \psi &  f_p   \\
+      (Jv)_x &    J   &   0  & (Jv)_p \\
+      \psi^T &    0   &   0  &   0    \\
+         0   & \phi^T &   0  &   0
+    \end{bmatrix}
+    \begin{bmatrix}
+       X \\
+       Y \\
+       w \\
+       z
+    \end{bmatrix} =
+    \begin{bmatrix}
+       F \\
+       G \\
+       s \\
+       h
+    \end{bmatrix}
+\]
+\_form#806=528x168:\[   \begin{split}
+     \begin{bmatrix}
+        J   & u \\
+        v^T & 0
+     \end{bmatrix}
+     \begin{bmatrix}
+        A & B & C \\
+        a & b & c
+     \end{bmatrix} &=
+     \begin{bmatrix}
+        F & f_p & \psi \\
+        0 & 0   &  0
+     \end{bmatrix} \\
+     \begin{bmatrix}
+        J   & u \\
+        v^T & 0
+     \end{bmatrix}
+     \begin{bmatrix}
+        D & E & K & L \\
+        d & e & k & l
+     \end{bmatrix} &=
+     \begin{bmatrix}
+        G - (Jv)_x A & (Jv)_p - (Jv)_x B &  -(Jv)_x C & -(Jv)_x v \\
+               0     &          0        &       0    &      0
+     \end{bmatrix} \\
+     \begin{bmatrix}
+        \sigma & 0 & b & c \\
+         -l & \sigma & e & k \\
+         \langle v,\psi\rangle & 0 & -\langle B,\psi\rangle & -\langle C,\psi\rangle \\
+        \phi^T L & \phi^T v & -\phi^T E & -\phi^T K
+     \end{bmatrix}
+     \begin{bmatrix}
+        \alpha \\
+        \beta \\
+        z \\
+        w
+     \end{bmatrix} &=
+     \begin{bmatrix}
+        a \\
+        d \\
+        s - \langle A,\psi\rangle
+        h - \phi^T D
+     \end{bmatrix} \\
+      X &= A - B z - C w + v \alpha \\
+      Y &= D - E z - K w + L \alpha + v \beta
+   \end{split}
+\]
+\_form#807=251x141:\[   \begin{split}
+      J [A \; b \; c] &= [F \; f_p \; \psi] \\
+      J [D \; e \; g] &= [G \; (Jv)_p \; 0] - (Jv)_x[A \; b \; c] \\
+      w &= \frac{\phi^T e(\langle A, \psi\rangle - s) -
+                 \langle b, \psi\rangle(\phi^T D - h)}
+    {\phi^T e \langle c, \psi\rangle -
+     \phi^T g \langle b, \psi\rangle} \\
+      z &= \frac{\phi^T D - h - (\phi^T g) w}{\phi^T e} \\
+      X &= A - b z - c w \\
+      Y &= D - e z - g w
+   \end{split}
+\]
+\_form#808=213x61:\[    \begin{bmatrix}
+         J   &    0   & \psi &  f_p   \\
+      (Jv)_x &    J   &   0  & (Jv)_p \\
+      \psi^T &    0   &   0  &   0    \\
+         0   & \phi^T &   0  &   0
+    \end{bmatrix}
+    \begin{bmatrix}
+       X \\
+       Y \\
+       w \\
+       z
+    \end{bmatrix} =
+    \begin{bmatrix}
+       F \\
+       G \\
+       s \\
+       h
+    \end{bmatrix}.
+\]
+\_form#809=76x68:\[  \begin{aligned}
+    &\text{Solve}\; Jx_1 = b \\
+    &r = b - Jx_1 \\
+    &\text{Solve}\; Jx_2 = r \\
+    &x = x_1 + x_2
+  \end{aligned}
+\]
+\_form#810=89x83:\[  \begin{aligned}
+    &\tilde{b} = b - \frac{v^T b}{v^T J v} Jv \\
+    &\text{Solve}\; J\tilde{x} = \tilde{b} \\
+    &x = \tilde{x} + \frac{v^T b}{v^T J v} v
+  \end{aligned}
+\]
+\_form#811=106x83:\[  \begin{aligned}
+    &\tilde{b} = b - \frac{b^T J v}{v^T J^T J v} Jv \\
+    &\text{Solve}\; J\tilde{x} = \tilde{b} \\
+    &x = \tilde{x} + \frac{b^T J v}{v^T J^T J v} v
+  \end{aligned}
+\]
+\_form#812=216x39:\[   \Delta s_{new} = \Delta s_{old}\left(1 + a\left(\frac{N_{max} - N}{N_{max}}\right)^2\right)
+\]
+\_form#813=129x31:\[    G(z) = \left[
+     \begin{array}{c}
+        F(x,p) \\
+        \sigma
+     \end{array}
+     \right] = 0
+\]
+\_form#814=111x31:\[    G(z) = \left[
+    \begin{array}{c}
+       F(x,p) \\
+      \sigma
+   \end{array}
+    \right].
+\]
+\_form#815=109x31:\[   D_z G(z) =
+   \begin{bmatrix}
+      J        & F_p \\
+      \sigma_x & \sigma_p
+   \end{bmatrix}
+\]
+\_form#816=301x31:\[    \begin{bmatrix}
+      J   & a \\
+      b^T & 0
+    \end{bmatrix}
+    \begin{bmatrix}
+      \Delta v \\
+      \Delta \sigma_1
+    \end{bmatrix} = -
+    \begin{bmatrix}
+      J v + \sigma_1 a + (Jv)_x\Delta x + (Jv)_p \Delta p\\
+      b^T a - n
+    \end{bmatrix},
+\]
+\_form#817=336x31:\[    \begin{bmatrix}
+      J^T & b \\
+      a^T & 0
+    \end{bmatrix}
+    \begin{bmatrix}
+      \Delta w \\
+      \Delta \sigma_2
+    \end{bmatrix} = -
+    \begin{bmatrix}
+      J^T w + \sigma_2 b + (J^T w)_x \Delta x + (J^T w)_p \Delta p \\
+      a^T w - n
+    \end{bmatrix},
+\]
+\_form#818=135x46:\[    G(z) = \left[
+    \begin{array}{c}
+       F(x,p) \\
+       Jn \\
+       l^Tn-1
+    \end{array}
+    \right] = 0
+\]
+\_form#819=118x46:\[    G(z) = \left[
+    \begin{array}{c}
+       F(x,p) \\
+       Jn \\
+       l^Tn-1
+    \end{array}
+    \right].
+\]
+\_form#820=151x49:\[    D_z G(z) =
+    \begin{bmatrix}
+       J & 0 & \frac{\partial F}{\partial p} \\
+   \frac{\partial Jn}{\partial x} & J & \frac{\partial Jn}{\partial p} \\
+   0 & l^T & 0
+    \end{bmatrix}
+\]
+\_form#821=246x49:\[    \begin{bmatrix}
+       J & 0 & \frac{\partial F}{\partial p} \\
+   \frac{\partial Jn}{\partial x} & J & \frac{\partial Jn}{\partial p} \\
+   0 & l^T & 0
+    \end{bmatrix}
+    \begin{bmatrix}
+       a \\
+   b \\
+   c
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+       Ja + \frac{\partial F}{\partial p}c \\
+   \frac{\partial Jn}{\partial x}a + Jb + \frac{\partial Jn}{\partial p}c \\
+   l^T b
+    \end{bmatrix}
+\]
+\_form#822=184x46:\[    \begin{bmatrix}
+         J   &    0   &   f_p \\
+      (Jv)_x &    J   & (Jv)_p \\
+         0   & \phi^T &   0
+    \end{bmatrix}
+    \begin{bmatrix}
+       X \\
+       Y \\
+       z
+    \end{bmatrix} =
+    \begin{bmatrix}
+       F \\
+       G \\
+       h
+    \end{bmatrix}
+\]
+\_form#823=388x153:\[   \begin{split}
+     \begin{bmatrix}
+        J   & u \\
+        v^T & 0
+     \end{bmatrix}
+     \begin{bmatrix}
+        A & B \\
+        a & b
+     \end{bmatrix} &=
+     \begin{bmatrix}
+        F & f_p \\
+        0 & 0
+     \end{bmatrix} \\
+     \begin{bmatrix}
+        J   & u \\
+        v^T & 0
+     \end{bmatrix}
+     \begin{bmatrix}
+        C & D & E\\
+        c & d & e
+     \end{bmatrix} &=
+     \begin{bmatrix}
+        (Jv)_x A - G & (Jv)_x B - (Jv)_p & (Jv)_x v \\
+               0    &          0         &     0
+     \end{bmatrix} \\
+     \begin{bmatrix}
+        \sigma    &    0     &  b      \\
+           e      & \sigma   & -d      \\
+        -\phi^T E & \phi^T v & \phi^T D
+     \end{bmatrix}
+     \begin{bmatrix}
+        \alpha \\
+        \beta \\
+        z
+     \end{bmatrix} &=
+     \begin{bmatrix}
+        a \\
+        c \\
+        h + \phi^T C
+     \end{bmatrix} \\
+      X &= A - B z + v \alpha \\
+      Y &= -C + d z - E \alpha + v \beta
+   \end{split}
+\]
+\_form#824=171x89:\[   \begin{split}
+      J [A \; b] &= [F \; f_p] \\
+      J [C \; d] &= (Jv)_x[A \; b] - [G \; (Jv)_p] \\
+      z &= (h + \phi^T C) / \phi^T d \\
+      X &= A - b z \\
+      Y &= -C + d z
+   \end{split}
+\]
+\_form#825=193x46:\[    \begin{bmatrix}
+         J   &    0   &   f_p \\
+      (Jv)_x &    J   & (Jv)_p \\
+         0   & \phi^T &   0
+    \end{bmatrix}
+    \begin{bmatrix}
+       X \\
+       Y \\
+       z
+    \end{bmatrix} =
+    \begin{bmatrix}
+       F \\
+       G \\
+       h
+    \end{bmatrix}.
+\]

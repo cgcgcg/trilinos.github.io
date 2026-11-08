@@ -1,3 +1,15 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$class_teko_1_1_preconditioner.html" title="An extension of the Thyra::DefaultPreconditioner class with some specializations useful for use withi..." alt="" coords="5,5,159,31"/>
+<area shape="rect" id="Node000000" href="$class_teko_1_1_preconditioner_state.html" title="An implementation of a state object preconditioners." alt="" coords="5,115,192,142"/>
+<area shape="rect" id="Node000001" href="$class_teko_1_1_block_preconditioner_state.html" title="An implementation of a state object for block preconditioners." alt="" coords="247,76,435,120"/>
+<area shape="poly" id="edge23_Node000000_Node000001" title=" " alt="" coords="207,112,249,109,243,110,208,117"/>
+<area shape="rect" id="Node000006" href="$class_teko_1_1_diagonal_precond_state.html" title=" " alt="" coords="240,144,442,172"/>
+<area shape="poly" id="edge28_Node000000_Node000006" title=" " alt="" coords="207,139,242,145,237,146,207,144"/>
+<area shape="rect" id="Node000002" href="$class_teko_1_1_add_precond_state.html" title=" " alt="" coords="512,5,682,33"/>
+<area shape="poly" id="edge24_Node000001_Node000002" title=" " alt="" coords="417,67,489,43,537,33,532,34,491,48,418,72"/>
+<area shape="rect" id="Node000003" href="$class_teko_1_1_mult_precond_state.html" title=" " alt="" coords="510,57,684,85"/>
+<area shape="poly" id="edge25_Node000001_Node000003" title=" " alt="" coords="450,84,513,80,508,81,451,89"/>
+<area shape="rect" id="Node000004" href="$class_teko_1_1_n_s_1_1_l_s_c_precond_state.html" title="Preconditioner state for the LSC factory." alt="" coords="500,109,694,137"/>
+<area shape="poly" id="edge26_Node000001_Node000004" title=" " alt="" coords="450,106,502,113,497,114,450,111"/>
+<area shape="rect" id="Node000005" href="$class_teko_1_1_n_s_1_1_mod_a_l_precond_state.html" title="Class for saving state variables for ModALPreconditionerFactory." alt="" coords="490,161,704,189"/>
+<area shape="poly" id="edge27_Node000001_Node000005" title=" " alt="" coords="423,123,491,146,538,161,532,161,489,151,422,128"/>
 </map>
