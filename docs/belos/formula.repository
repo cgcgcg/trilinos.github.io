@@ -76,3 +76,5 @@ M_L^{-1} B$
 \_form#67=70x15:$\sum_{i=1}^{n}(|x_i w_i|)$
 \_form#68=103x16:$\sqrt(\sum_{i=1}^{n}((x_i w_i)^2))$
 \_form#69=84x14:$\max_{i=1}^{n}\{|x_i w_i|\}$
+\_form#70=48x30:\[ \frac{\|r_i\|}{\sigma_i} \le \tau
+\]

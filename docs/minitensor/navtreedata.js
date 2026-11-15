@@ -67,13 +67,14 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_mini_tensor_8h.html",
-"functions_func_f.html",
-"group__minitensor__containers.html#ga63bb88134d2418af25b42f049fc3e0c0",
-"group__minitensor__containers.html#gaf997ba5ccc09cbf3831e3d356f0b9d77",
-"group__minitensor__solvers.html#ga0aaecc26ab013708a49368b225737176",
-"struct_sacado_1_1_is_equal_3_01_matrix_3_01_t_00_01_m_00_01_n_01_4_01_4.html#a58779df8396044fa8a49286868d62721",
-"structminitensor_1_1_trust_region_dog_leg_value.html"
+"functions_b.html",
+"group__minitensor__containers.html#ga5f884fe7c62ce2a36c05a5ddd403dbe9",
+"group__minitensor__containers.html#gaf431f1f7e32bfbe68e70f91441ae8b27",
+"group__minitensor__rotations.html#gaf400cd3a656697b7877e3b67cf0ef6ea",
+"struct_sacado_1_1_is_a_d_type_3_01_tensor4_3_01_t_00_01_n_01_4_01_4.html",
+"struct_sacado_1_1_value_type_3_01_vector_3_01_t_00_01_n_01_4_01_4.html#a61a790c0df0c76fdf6a7ee885728f18b"
 ];
 
-var SYNCONMSG = 'click to disable panel synchronisation';
-var SYNCOFFMSG = 'click to enable panel synchronisation';
+var SYNCONMSG = 'click to disable panel synchronization';
+var SYNCOFFMSG = 'click to enable panel synchronization';
+var LISTOFALLMEMBERS = 'List of all members';
