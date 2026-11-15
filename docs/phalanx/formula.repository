@@ -23,3 +23,11 @@ R^n $
   + \int_{\Gamma} \phi \mathbf{n} \cdot \mathbf{q} 
   + \int_{\Omega} \phi s d\Omega = 0 
 \]
+\_form#15=109x14:\[  \nabla \cdot (-k \nabla T) + s = 0
+\]
+\_form#16=81x14:\[  \nabla \cdot (\mathbf{q}) + s = 0
+\]
+\_form#17=225x30:\[  - \int_{\Omega} \nabla \phi \cdot \mathbf{q} d\Omega 
+  + \int_{\Gamma} \phi \mathbf{n} \cdot \mathbf{q} 
+  + \int_{\Omega} \phi s d\Omega = 0 
+\]

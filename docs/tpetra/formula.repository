@@ -36,3 +36,11 @@
 \_form#27=125x15:$y^* x = \bar{y}^T x = \sum_i \bar{y}_i \cdot x_i$
 \_form#28=146x18:$Y = \alpha \cdot A^{\textrm{mode}} \cdot X + \beta \cdot Y$
 \_form#29=114x24:$\|A\|_F = \sqrt{ \sum_{i,j} |a_{ij}|^2 }$
+\_form#30=130x14:\[  A(i,j) := f(A(i,j), v_{ij}).
+\]
+\_form#31=144x29:\[  \|A\|_\infty = \max_{i}{\sum_{j} \|A(i,j)\|}.
+\]
+\_form#32=139x28:\[  \|A\|_1 = \max_{j}{\sum_{i} \|A(i,j)\|}.
+\]
+\_form#33=134x39:\[  \|A\|_F = \sqrt{\sum_{i,j} \|A(i,j)\|^2}.
+\]
