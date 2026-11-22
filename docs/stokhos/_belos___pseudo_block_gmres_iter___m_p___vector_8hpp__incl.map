@@ -1,5 +1,9 @@
 <map id="Belos_PseudoBlockGmresIter_MP_Vector.hpp" name="Belos_PseudoBlockGmresIter_MP_Vector.hpp">
-<area shape="rect" id="Node000001" title="Belos concrete class for performing the pseudo&#45;block GMRES iteration." alt="" coords="15,5,229,45"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,93,239,119"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="125,46,125,79,119,79,119,46"/>
+<area shape="rect" id="Node000001" title="Belos concrete class for performing the pseudo&#45;block GMRES iteration." alt="" coords="270,5,482,50"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,98,238,126"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="311,51,177,95,176,90,306,51"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="262,98,490,126"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="378,48,378,84,374,81,374,52"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="515,98,741,126"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="443,48,576,93,571,93,443,53"/>
 </map>

@@ -1,200 +1,192 @@
 <map id="BelosIteration.hpp" name="BelosIteration.hpp">
-<area shape="rect" id="Node000001" title="Pure virtual base class which describes the basic interface to the linear solver iteration." alt="" coords="3399,5,3541,31"/>
-<area shape="rect" id="Node000002" href="$_belos_c_g_iteration_8hpp.html" title="Pure virtual base class which augments the basic interface for a conjugate gradient linear solver ite..." alt="" coords="866,79,1026,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="3385,24,1026,90,1026,85,3385,19"/>
-<area shape="rect" id="Node000019" href="$_belos_stochastic_c_g_iteration_8hpp.html" title="Pure virtual base class which augments the basic interface for a stochastic conjugate gradient linear..." alt="" coords="3873,152,4099,177"/>
-<area shape="poly" id="edge147_Node000001_Node000019" title=" " alt="" coords="3554,20,3621,25,3697,36,3777,52,3855,76,3891,93,3924,113,3974,150,3971,154,3921,117,3888,97,3853,81,3776,57,3697,41,3620,31,3554,25"/>
-<area shape="rect" id="Node000022" href="$_belos_fixed_point_iteration_8hpp.html" title="Pure virtual base class which augments the basic interface for a fixed point linear solver iteration." alt="" coords="362,79,570,104"/>
-<area shape="poly" id="edge30_Node000001_Node000022" title=" " alt="" coords="3386,24,2371,45,854,81,570,89,570,84,854,76,2371,40,3386,18"/>
-<area shape="rect" id="Node000024" href="$_belos_gmres_iteration_8hpp.html" title="Pure virtual base class which augments the basic interface for a Gmres linear solver iteration." alt="" coords="3487,233,3671,258"/>
-<area shape="poly" id="edge33_Node000001_Node000024" title=" " alt="" coords="3555,24,3621,36,3692,60,3727,76,3759,97,3788,121,3812,151,3821,171,3818,189,3806,204,3786,216,3733,232,3672,241,3671,236,3732,227,3784,211,3802,200,3813,187,3816,172,3808,153,3784,125,3756,101,3724,81,3690,65,3620,42,3554,29"/>
-<area shape="rect" id="Node000031" href="$_belos_l_s_q_r_iteration_8hpp.html" title="IterationState contains the data that defines the state of the LSQR solver at any given time." alt="" coords="4591,79,4765,104"/>
-<area shape="poly" id="edge46_Node000001_Node000031" title=" " alt="" coords="3555,22,4590,82,4590,88,3554,27"/>
-<area shape="rect" id="Node000035" href="$_belos_minres_iteration_8hpp.html" title="Pure virtual base class which augments the basic interface for a minimal residual linear solver itera..." alt="" coords="4067,79,4252,104"/>
-<area shape="poly" id="edge54_Node000001_Node000035" title=" " alt="" coords="3555,25,4066,78,4066,83,3554,31"/>
-<area shape="rect" id="Node000038" href="$_belos_pseudo_block_gmres_iter_8hpp.html" title="Belos concrete class for performing the pseudo&#45;block GMRES iteration." alt="" coords="4349,152,4583,177"/>
-<area shape="poly" id="edge56_Node000001_Node000038" title=" " alt="" coords="3555,20,3926,38,4123,55,4204,65,4265,76,4318,92,4368,112,4446,149,4444,154,4366,117,4316,97,4264,81,4203,70,4122,60,3926,44,3555,25"/>
-<area shape="rect" id="Node000040" href="$_belos_pseudo_block_t_f_q_m_r_iter_8hpp.html" title="Belos concrete class for generating iterations with the preconditioned tranpose&#45;free QMR (TFQMR) meth..." alt="" coords="1513,152,1750,177"/>
-<area shape="poly" id="edge60_Node000001_Node000040" title=" " alt="" coords="3386,23,2893,38,2562,55,2225,81,2076,98,1929,118,1697,155,1696,149,1929,113,2076,93,2224,76,2562,50,2893,33,3386,18"/>
-<area shape="rect" id="Node000042" href="$_belos_status_test_8hpp.html" title="Pure virtual base class for defining the status testing capabilities of Belos." alt="" coords="2565,79,2719,104"/>
-<area shape="poly" id="edge64_Node000001_Node000042" title=" " alt="" coords="3386,29,2719,86,2719,81,3385,24"/>
-<area shape="rect" id="Node000054" href="$_belos_status_test_res_norm_output_8hpp.html" title="Special StatusTest for printing status tests in simple format for residuals." alt="" coords="2429,233,2687,258"/>
-<area shape="poly" id="edge145_Node000001_Node000054" title=" " alt="" coords="3386,21,3230,23,3022,31,2789,49,2670,63,2554,81,2478,88,2415,91,2387,97,2361,107,2336,125,2311,154,2302,171,2302,185,2311,197,2326,208,2372,224,2430,234,2429,239,2371,229,2323,213,2307,201,2297,187,2297,170,2306,150,2332,121,2359,103,2386,91,2415,86,2478,83,2554,76,2670,58,2788,44,3022,25,3230,17,3386,16"/>
-<area shape="rect" id="Node000056" href="$_belos_status_test_user_output_8hpp.html" title="Special StatusTest for printing status tests in simple format for residuals." alt="" coords="2711,233,2938,258"/>
-<area shape="poly" id="edge146_Node000001_Node000056" title=" " alt="" coords="3422,37,3280,86,3107,154,3058,180,2962,212,2876,235,2874,230,2960,207,3056,175,3105,150,3278,81,3421,32"/>
-<area shape="rect" id="Node000057" href="$_belos_status_test_general_output_8hpp.html" title="Special StatusTest for printing any kind of status test." alt="" coords="3013,233,3261,258"/>
-<area shape="poly" id="edge143_Node000001_Node000057" title=" " alt="" coords="3461,44,3419,111,3388,148,3352,179,3318,199,3282,215,3211,235,3210,230,3280,210,3316,195,3348,175,3384,144,3414,108,3456,41"/>
-<area shape="rect" id="Node000060" href="$_belos_status_test_output_8hpp.html" title="Virtual base class for StatusTest that printing status tests." alt="" coords="3118,152,3315,177"/>
-<area shape="poly" id="edge144_Node000001_Node000060" title=" " alt="" coords="3439,40,3238,154,3235,150,3437,35"/>
-<area shape="rect" id="Node000065" href="$_belos_t_f_q_m_r_iter_8hpp.html" title="Belos concrete class for generating iterations with the preconditioned tranpose&#45;free QMR (TFQMR) meth..." alt="" coords="3643,152,3798,177"/>
-<area shape="poly" id="edge148_Node000001_Node000065" title=" " alt="" coords="3503,35,3575,76,3702,149,3699,154,3573,81,3500,40"/>
-<area shape="rect" id="Node000003" href="$_belos_bi_c_g_stab_iter_8hpp.html" title="Belos concrete class for performing the pseudo&#45;block BiCGStab iteration." alt="" coords="1153,152,1321,177"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="1007,105,1190,149,1189,154,1005,110"/>
-<area shape="rect" id="Node000008" href="$_belos_block_c_g_iter_8hpp.html" title="Belos concrete class for performing the block conjugate&#45;gradient (CG) iteration." alt="" coords="966,152,1129,177"/>
-<area shape="poly" id="edge6_Node000002_Node000008" title=" " alt="" coords="975,110,1032,150,1029,154,972,114"/>
-<area shape="rect" id="Node000010" href="$_belos_c_g_iter_8hpp.html" title="Belos concrete class for performing the conjugate&#45;gradient (CG) iteration." alt="" coords="1163,313,1289,339"/>
-<area shape="poly" id="edge10_Node000002_Node000010" title=" " alt="" coords="852,97,698,102,523,112,374,129,324,141,297,154,293,165,298,176,322,199,357,220,400,239,450,255,567,281,698,299,833,311,962,318,1163,322,1163,328,961,324,832,317,698,304,566,286,449,260,398,244,355,225,319,203,293,179,287,164,293,150,322,136,373,124,523,107,698,97,852,92"/>
-<area shape="rect" id="Node000012" href="$_belos_pseudo_block_c_g_sol_mgr_8hpp.html" title="The Belos::PseudoBlockCGSolMgr provides a solver manager for the BlockCG linear solver." alt="" coords="1229,394,1461,419"/>
-<area shape="poly" id="edge26_Node000002_Node000012" title=" " alt="" coords="852,97,695,102,517,112,365,129,314,140,287,154,282,164,287,176,315,206,354,232,400,255,455,275,580,308,719,332,863,350,1000,363,1217,384,1268,391,1267,397,1216,389,1000,368,862,355,719,337,579,313,453,281,398,260,351,237,312,210,282,179,277,164,283,150,312,135,364,124,517,107,695,96,852,92"/>
-<area shape="rect" id="Node000013" href="$_belos_c_g_single_red_iter_8hpp.html" title="Belos concrete class for performing a single&#45;reduction conjugate&#45;gradient (CG) iteration." alt="" coords="751,152,941,177"/>
-<area shape="poly" id="edge18_Node000002_Node000013" title=" " alt="" coords="920,114,864,154,861,150,917,110"/>
-<area shape="rect" id="Node000014" href="$_belos_p_c_p_g_iter_8hpp.html" title="Belos concrete class to iterate Preconditioned Conjugate Projected Gradients." alt="" coords="1345,152,1488,177"/>
-<area shape="poly" id="edge20_Node000002_Node000014" title=" " alt="" coords="1035,103,1345,150,1345,155,1035,109"/>
-<area shape="rect" id="Node000016" href="$_belos_pseudo_block_c_g_iter_8hpp.html" title="Belos concrete class for performing the pseudo&#45;block CG iteration." alt="" coords="307,152,516,177"/>
-<area shape="poly" id="edge24_Node000002_Node000016" title=" " alt="" coords="853,108,498,155,497,149,852,102"/>
-<area shape="rect" id="Node000017" href="$_belos_r_c_g_iter_8hpp.html" title="Belos concrete class for performing the RCG iteration." alt="" coords="540,152,675,177"/>
-<area shape="poly" id="edge27_Node000002_Node000017" title=" " alt="" coords="879,109,663,155,662,149,878,104"/>
-<area shape="poly" id="edge28_Node000002_Node000019" title=" " alt="" coords="1040,90,1471,94,2151,103,2969,121,3810,149,3873,153,3872,158,3810,155,2968,126,2151,109,1471,99,1040,96"/>
-<area shape="rect" id="Node000004" href="$_belos_bi_c_g_stab_sol_mgr_8hpp.html" title="The Belos::BiCGStabSolMgr provides a solver manager for the BiCGStab linear solver." alt="" coords="1695,394,1885,419"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="1277,180,1765,391,1762,396,1274,185"/>
-<area shape="rect" id="Node000005" href="$_belos_solver_factory___generic_8hpp.html" title=" " alt="" coords="1945,475,2091,515"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="1834,422,1969,472,1967,477,1833,427"/>
-<area shape="rect" id="Node000007" href="$_belos___details__register_solver_factory_8cpp.html" title=" " alt="" coords="2117,475,2327,515"/>
-<area shape="poly" id="edge5_Node000004_Node000007" title=" " alt="" coords="1862,419,2128,472,2127,477,1861,425"/>
-<area shape="rect" id="Node000009" href="$_belos_block_c_g_sol_mgr_8hpp.html" title="The Belos::BlockCGSolMgr provides a solver manager for the BlockCG linear solver." alt="" coords="1485,394,1671,419"/>
-<area shape="poly" id="edge7_Node000008_Node000009" title=" " alt="" coords="1128,177,1237,199,1322,223,1360,243,1388,263,1449,311,1563,392,1560,396,1446,315,1385,267,1358,247,1320,228,1236,204,1127,182"/>
-<area shape="poly" id="edge8_Node000009_Node000005" title=" " alt="" coords="1651,419,1945,476,1944,482,1650,425"/>
-<area shape="poly" id="edge9_Node000009_Node000007" title=" " alt="" coords="1652,419,1684,424,1894,449,2104,472,2118,474,2117,479,2103,477,1893,454,1683,429,1651,424"/>
-<area shape="poly" id="edge11_Node000010_Node000009" title=" " alt="" coords="1291,339,1527,391,1526,397,1290,344"/>
-<area shape="rect" id="Node000011" href="$_belos_fixed_point_sol_mgr_8hpp.html" title="The Belos::FixedPointSolMgr provides a solver manager for the FixedPoint linear solver." alt="" coords="1007,394,1205,419"/>
-<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="1198,349,1125,396,1122,392,1195,344"/>
-<area shape="poly" id="edge15_Node000010_Node000012" title=" " alt="" coords="1257,344,1329,392,1326,396,1254,349"/>
-<area shape="poly" id="edge13_Node000011_Node000005" title=" " alt="" coords="1182,419,1217,424,1423,447,1628,465,1944,487,1944,492,1627,470,1423,452,1216,429,1181,424"/>
-<area shape="poly" id="edge14_Node000011_Node000007" title=" " alt="" coords="1180,419,1217,424,1351,437,1466,444,1660,449,1854,453,1969,460,2104,472,2118,474,2117,479,2103,477,1968,465,1854,458,1660,454,1465,449,1351,442,1216,429,1179,424"/>
-<area shape="poly" id="edge16_Node000012_Node000005" title=" " alt="" coords="1435,419,1474,424,1945,482,1944,487,1474,429,1435,424"/>
-<area shape="poly" id="edge17_Node000012_Node000007" title=" " alt="" coords="1431,419,1474,424,1651,440,1789,447,1927,455,2104,472,2118,474,2117,479,2103,477,1926,460,1789,453,1651,445,1474,429,1431,424"/>
-<area shape="poly" id="edge19_Node000013_Node000009" title=" " alt="" coords="895,179,1303,311,1545,391,1543,396,1301,316,894,184"/>
-<area shape="rect" id="Node000015" href="$_belos_p_c_p_g_sol_mgr_8hpp.html" title="Declaration and definition of Belos::PCPGSolMgr (PCPG iterative linear solver)." alt="" coords="2142,394,2307,419"/>
-<area shape="poly" id="edge21_Node000014_Node000015" title=" " alt="" coords="1469,179,2187,391,2185,396,1468,184"/>
-<area shape="poly" id="edge22_Node000015_Node000005" title=" " alt="" coords="2185,427,2065,477,2063,472,2183,422"/>
-<area shape="poly" id="edge23_Node000015_Node000007" title=" " alt="" coords="2227,433,2225,474,2220,474,2221,433"/>
-<area shape="poly" id="edge25_Node000016_Node000012" title=" " alt="" coords="453,180,562,220,695,263,858,305,1021,341,1279,391,1278,397,1020,347,857,310,693,268,560,225,451,185"/>
-<area shape="rect" id="Node000020" href="$_belos_pseudo_block_stochastic_c_g_iter_8hpp.html" title="Belos concrete class for performing the stochastic pseudo&#45;block CG iteration." alt="" coords="3898,225,4106,265"/>
-<area shape="poly" id="edge29_Node000019_Node000020" title=" " alt="" coords="3994,190,4001,225,3996,226,3988,191"/>
-<area shape="rect" id="Node000023" href="$_belos_fixed_point_iter_8hpp.html" title="Belos concrete class for performing fixed point iteration iteration." alt="" coords="5,152,180,177"/>
-<area shape="poly" id="edge31_Node000022_Node000023" title=" " alt="" coords="393,109,154,155,153,149,392,104"/>
-<area shape="poly" id="edge32_Node000023_Node000011" title=" " alt="" coords="155,178,1058,391,1057,396,153,183"/>
-<area shape="rect" id="Node000025" href="$_belos_block_f_gmres_iter_8hpp.html" title="Belos concrete class for performing the block, flexible GMRES iteration." alt="" coords="2905,313,3099,339"/>
-<area shape="poly" id="edge34_Node000024_Node000025" title=" " alt="" coords="3482,262,3086,316,3086,311,3482,257"/>
-<area shape="rect" id="Node000026" href="$_belos_block_g_c_r_o_d_r_sol_mgr_8hpp.html" title="A solver manager for the Block GCRO&#45;DR (Block Recycling GMRES) linear solver." alt="" coords="2891,394,3113,419"/>
-<area shape="poly" id="edge39_Node000024_Node000026" title=" " alt="" coords="3580,273,3570,308,3561,326,3548,341,3525,351,3486,360,3374,377,3114,401,3113,395,3373,371,3485,355,3523,346,3544,337,3557,323,3565,306,3575,272"/>
-<area shape="rect" id="Node000027" href="$_belos_block_gmres_sol_mgr_8hpp.html" title="The Belos::BlockGmresSolMgr provides a solver manager for the BlockGmres linear solver." alt="" coords="2533,394,2743,419"/>
-<area shape="poly" id="edge44_Node000024_Node000027" title=" " alt="" coords="3474,262,3418,268,3270,279,3154,282,3039,290,2893,316,2827,334,2763,356,2664,396,2662,391,2761,351,2826,329,2892,311,3038,285,3154,277,3270,273,3418,263,3474,257"/>
-<area shape="rect" id="Node000029" href="$_belos_block_gmres_iter_8hpp.html" title="Belos concrete class for performing the block GMRES iteration." alt="" coords="3347,313,3534,339"/>
-<area shape="poly" id="edge40_Node000024_Node000029" title=" " alt="" coords="3548,267,3463,315,3460,311,3546,262"/>
-<area shape="rect" id="Node000030" href="$_belos_gmres_poly_op_8hpp.html" title="Defines the GMRES polynomial operator hybrid&#45;GMRES iterative linear solver." alt="" coords="3353,394,3528,419"/>
-<area shape="poly" id="edge45_Node000024_Node000030" title=" " alt="" coords="3593,271,3600,305,3599,323,3592,340,3575,360,3553,376,3505,396,3503,392,3550,372,3571,357,3588,337,3594,322,3595,305,3588,272"/>
-<area shape="poly" id="edge35_Node000025_Node000026" title=" " alt="" coords="3005,352,3005,394,2999,394,2999,352"/>
-<area shape="poly" id="edge36_Node000025_Node000027" title=" " alt="" coords="2937,344,2692,397,2690,391,2935,339"/>
-<area shape="poly" id="edge37_Node000027_Node000005" title=" " alt="" coords="2558,424,2522,429,2405,443,2314,452,2223,461,2106,477,2092,480,2091,475,2106,472,2222,455,2313,446,2405,438,2522,424,2557,419"/>
-<area shape="poly" id="edge38_Node000027_Node000007" title=" " alt="" coords="2569,425,2314,477,2313,472,2568,420"/>
-<area shape="poly" id="edge41_Node000029_Node000026" title=" " alt="" coords="3364,344,3066,397,3065,391,3363,338"/>
-<area shape="poly" id="edge42_Node000029_Node000027" title=" " alt="" coords="3334,342,2743,398,2743,393,3333,336"/>
-<area shape="poly" id="edge43_Node000029_Node000030" title=" " alt="" coords="3443,352,3443,394,3438,394,3438,352"/>
-<area shape="rect" id="Node000032" href="$_belos_l_s_q_r_iter_8hpp.html" title="Belos concrete class that iterates LSQR." alt="" coords="4607,152,4749,177"/>
-<area shape="poly" id="edge47_Node000031_Node000032" title=" " alt="" coords="4681,118,4681,152,4675,152,4675,118"/>
-<area shape="rect" id="Node000033" href="$_belos_l_s_q_r_sol_mgr_8hpp.html" title="LSQRSolMgr: interface to the LSQR method." alt="" coords="3808,394,3972,419"/>
-<area shape="poly" id="edge53_Node000031_Node000033" title=" " alt="" coords="4717,108,4740,122,4759,139,4769,158,4768,169,4763,179,4740,203,4709,225,4671,245,4626,265,4522,299,4405,329,4284,353,4166,373,3972,399,3972,394,4165,368,4283,348,4404,324,4521,294,4624,260,4668,241,4706,220,4737,199,4758,176,4763,167,4763,159,4755,142,4737,126,4715,113"/>
-<area shape="poly" id="edge48_Node000032_Node000033" title=" " alt="" coords="4633,184,4380,268,4127,343,3933,397,3931,391,4125,337,4379,263,4631,179"/>
-<area shape="rect" id="Node000034" href="$_belos_l_s_q_r_status_test_8hpp.html" title="Belos::StatusTest class defining LSQR convergence." alt="" coords="4181,233,4367,258"/>
-<area shape="poly" id="edge51_Node000032_Node000034" title=" " alt="" coords="4606,183,4333,235,4332,230,4605,177"/>
-<area shape="poly" id="edge49_Node000033_Node000005" title=" " alt="" coords="3813,424,3769,429,3516,447,3302,453,3113,451,2936,446,2761,441,2572,442,2358,453,2106,477,2092,479,2091,474,2106,472,2358,448,2572,437,2761,436,2937,440,3113,446,3301,447,3516,442,3768,424,3812,419"/>
-<area shape="poly" id="edge50_Node000033_Node000007" title=" " alt="" coords="3812,424,3769,429,3562,447,3351,462,2939,481,2582,492,2327,495,2327,490,2582,486,2939,476,3350,456,3562,442,3768,424,3811,419"/>
-<area shape="poly" id="edge52_Node000034_Node000033" title=" " alt="" coords="4235,266,3919,396,3917,391,4233,261"/>
-<area shape="rect" id="Node000036" href="$_belos_minres_iter_8hpp.html" title="MINRES iteration implementation." alt="" coords="4175,152,4325,177"/>
-<area shape="poly" id="edge55_Node000035_Node000036" title=" " alt="" coords="4186,110,4237,150,4234,154,4183,115"/>
-<area shape="rect" id="Node000039" href="$_belos_pseudo_block_gmres_sol_mgr_8hpp.html" title="The Belos::PseudoBlockGmresSolMgr provides a solver manager for the BlockGmres linear solver." alt="" coords="3552,387,3756,427"/>
-<area shape="poly" id="edge57_Node000038_Node000039" title=" " alt="" coords="4336,181,4252,199,4210,212,4170,228,4155,237,4145,247,4135,257,4119,268,4026,310,3929,344,3836,370,3754,389,3753,384,3834,365,3927,339,4024,305,4117,263,4131,253,4141,243,4152,233,4167,223,4208,207,4251,194,4335,176"/>
-<area shape="poly" id="edge58_Node000039_Node000005" title=" " alt="" coords="3538,429,3320,446,3135,452,2972,451,2820,448,2668,445,2506,446,2322,456,2106,477,2092,479,2091,474,2106,472,2322,450,2506,441,2668,439,2820,442,2972,446,3135,447,3320,441,3538,424"/>
-<area shape="poly" id="edge59_Node000039_Node000007" title=" " alt="" coords="3538,430,3187,460,2844,479,2545,490,2327,495,2327,489,2545,484,2844,474,3187,454,3538,424"/>
-<area shape="rect" id="Node000041" href="$_belos_pseudo_block_t_f_q_m_r_sol_mgr_8hpp.html" title="The Belos::PseudoBlockTFQMRSolMgr provides a solver manager for the pseudo&#45;block TFQMR linear solver." alt="" coords="1910,387,2118,427"/>
-<area shape="poly" id="edge61_Node000040_Node000041" title=" " alt="" coords="1663,183,1985,384,1982,389,1660,187"/>
-<area shape="poly" id="edge62_Node000041_Node000005" title=" " alt="" coords="2018,440,2020,474,2014,475,2013,441"/>
-<area shape="poly" id="edge63_Node000041_Node000007" title=" " alt="" coords="2073,429,2177,472,2175,477,2071,434"/>
-<area shape="poly" id="edge65_Node000042_Node000003" title=" " alt="" coords="2552,97,2035,114,1687,131,1334,155,1321,156,1321,150,1334,149,1687,125,2034,109,2552,92"/>
-<area shape="poly" id="edge66_Node000042_Node000008" title=" " alt="" coords="2552,96,1959,111,1554,128,1141,155,1129,156,1129,150,1140,149,1554,123,1959,105,2552,91"/>
-<area shape="poly" id="edge71_Node000042_Node000010" title=" " alt="" coords="2552,96,1518,115,984,132,811,143,761,149,741,154,724,177,717,197,720,215,731,232,750,247,776,260,844,282,925,298,1011,309,1162,320,1162,325,1011,314,924,303,842,287,774,265,747,251,727,235,715,217,711,197,719,174,738,150,760,143,811,138,983,127,1518,110,2552,91"/>
-<area shape="poly" id="edge72_Node000042_Node000013" title=" " alt="" coords="2552,96,1886,111,1425,128,954,155,942,156,941,150,954,149,1425,123,1886,105,2551,91"/>
-<area shape="poly" id="edge78_Node000042_Node000014" title=" " alt="" coords="2552,98,2100,114,1802,131,1501,155,1488,156,1488,151,1500,149,1802,126,2100,109,2551,92"/>
-<area shape="poly" id="edge79_Node000042_Node000016" title=" " alt="" coords="2552,96,2222,99,1724,107,1134,125,529,155,516,156,516,150,529,149,1134,120,1724,102,2222,93,2552,90"/>
-<area shape="poly" id="edge83_Node000042_Node000017" title=" " alt="" coords="2552,95,2245,96,1787,103,1247,121,968,136,694,155,675,156,675,151,694,149,967,130,1246,116,1787,98,2245,91,2552,90"/>
-<area shape="poly" id="edge81_Node000042_Node000020" title=" " alt="" coords="2733,91,2884,96,3081,105,3302,123,3524,149,3578,161,3632,175,3898,224,3897,229,3631,180,3577,166,3523,155,3301,128,3080,111,2883,101,2733,97"/>
-<area shape="poly" id="edge73_Node000042_Node000023" title=" " alt="" coords="2552,97,1636,114,975,131,295,155,181,161,180,155,295,149,975,126,1636,109,2551,91"/>
-<area shape="poly" id="edge67_Node000042_Node000025" title=" " alt="" coords="2733,91,2900,95,3094,104,3262,122,3320,134,3340,142,3352,150,3357,162,3356,177,3339,209,3309,242,3274,268,3239,282,3190,295,3079,316,3078,311,3189,290,3237,277,3271,263,3305,238,3334,206,3351,175,3352,163,3348,154,3337,146,3318,139,3261,127,3094,110,2900,100,2733,96"/>
-<area shape="poly" id="edge70_Node000042_Node000029" title=" " alt="" coords="2733,91,2909,96,3116,106,3297,123,3360,135,3396,150,3413,168,3425,189,3440,236,3445,280,3444,313,3439,313,3439,281,3435,237,3420,191,3408,171,3392,154,3358,140,3296,129,3115,112,2908,102,2732,97"/>
-<area shape="poly" id="edge75_Node000042_Node000032" title=" " alt="" coords="2733,89,3040,90,3500,96,4041,115,4321,130,4596,149,4608,150,4607,156,4595,155,4321,135,4041,120,3500,102,3040,95,2733,95"/>
-<area shape="poly" id="edge76_Node000042_Node000034" title=" " alt="" coords="2733,91,3056,97,3485,108,3882,125,4027,136,4112,149,4176,183,4256,230,4254,235,4173,187,4110,155,4026,142,3882,130,3485,113,3056,102,2732,97"/>
-<area shape="poly" id="edge77_Node000042_Node000036" title=" " alt="" coords="2733,91,3330,105,3739,123,4156,149,4175,151,4174,156,4155,155,3739,128,3330,111,2732,96"/>
-<area shape="poly" id="edge80_Node000042_Node000038" title=" " alt="" coords="2733,91,3401,108,3864,125,4338,149,4349,150,4349,155,4338,155,3864,130,3400,113,2732,97"/>
-<area shape="poly" id="edge82_Node000042_Node000040" title=" " alt="" coords="2552,101,1762,155,1750,156,1750,150,1762,149,2551,96"/>
-<area shape="rect" id="Node000043" href="$_belos_block_g_c_r_o_d_r_iter_8hpp.html" title="Belos concrete class for performing the block GCRO&#45;DR (block GMRES with recycling) iteration." alt="" coords="3123,313,3323,339"/>
-<area shape="poly" id="edge68_Node000042_Node000043" title=" " alt="" coords="2733,91,2905,94,3105,104,3199,111,3279,121,3339,134,3359,141,3372,150,3385,174,3384,199,3371,223,3350,246,3297,287,3247,316,3245,311,3294,282,3347,242,3367,220,3378,197,3380,175,3368,154,3357,146,3337,139,3278,126,3198,116,3105,109,2904,100,2732,96"/>
-<area shape="rect" id="Node000044" href="$_belos_g_c_r_o_d_r_iter_8hpp.html" title="Belos concrete class for performing the GCRO&#45;DR iteration." alt="" coords="2620,152,2784,177"/>
-<area shape="poly" id="edge74_Node000042_Node000044" title=" " alt="" coords="2663,113,2694,150,2690,154,2659,116"/>
-<area shape="rect" id="Node000045" href="$_belos_status_test_combo_8hpp.html" title="Belos::StatusTest for logically combining several status tests." alt="" coords="1773,152,1972,177"/>
-<area shape="poly" id="edge84_Node000042_Node000045" title=" " alt="" coords="2552,103,1984,155,1972,156,1972,150,1983,149,2551,98"/>
-<area shape="poly" id="edge139_Node000042_Node000054" title=" " alt="" coords="2552,99,2484,106,2415,116,2357,132,2336,142,2321,154,2317,165,2321,176,2345,193,2385,208,2481,230,2480,235,2383,213,2343,198,2317,179,2311,165,2317,150,2333,138,2355,127,2414,111,2483,100,2551,94"/>
-<area shape="poly" id="edge140_Node000042_Node000056" title=" " alt="" coords="2624,116,2608,146,2606,162,2611,176,2633,192,2670,207,2760,230,2759,235,2669,212,2631,197,2607,179,2600,162,2602,145,2620,113"/>
-<area shape="poly" id="edge114_Node000042_Node000057" title=" " alt="" coords="2732,91,2895,96,3082,105,3243,123,3299,135,3329,150,3339,166,3339,182,3329,195,3314,206,3269,223,3218,235,3216,230,3268,218,3311,201,3326,191,3334,180,3334,168,3326,154,3297,140,3242,128,3081,111,2894,101,2732,97"/>
-<area shape="rect" id="Node000058" href="$_belos_status_test_log_res_norm_8hpp.html" title="Belos::StatusTest debugging class for storing the absolute residual norms generated during a solve." alt="" coords="2808,152,3044,177"/>
-<area shape="poly" id="edge116_Node000042_Node000058" title=" " alt="" coords="2701,105,2881,149,2879,154,2700,110"/>
-<area shape="rect" id="Node000059" href="$_belos_status_test_max_iters_8hpp.html" title="Belos::StatusTest class for specifying a maximum number of iterations." alt="" coords="1995,152,2206,177"/>
-<area shape="poly" id="edge117_Node000042_Node000059" title=" " alt="" coords="2552,107,2188,155,2187,149,2551,102"/>
-<area shape="poly" id="edge131_Node000042_Node000060" title=" " alt="" coords="2733,101,3124,149,3124,155,2732,106"/>
-<area shape="rect" id="Node000061" href="$_belos_status_test_res_norm_8hpp.html" title="Belos::StatusTest abstract class for specifying a residual norm stopping criteria." alt="" coords="2331,152,2545,177"/>
-<area shape="poly" id="edge136_Node000042_Node000061" title=" " alt="" coords="2597,111,2472,154,2470,149,2596,106"/>
-<area shape="poly" id="edge141_Node000042_Node000065" title=" " alt="" coords="2733,94,3121,113,3372,129,3625,149,3643,151,3643,156,3624,155,3371,135,3121,119,2733,99"/>
-<area shape="poly" id="edge69_Node000043_Node000026" title=" " alt="" coords="3179,346,3035,396,3033,391,3177,341"/>
-<area shape="poly" id="edge85_Node000045_Node000004" title=" " alt="" coords="1820,185,1790,202,1767,227,1758,248,1754,271,1759,319,1772,362,1786,393,1781,395,1767,364,1753,320,1749,271,1753,247,1762,224,1787,198,1817,180"/>
-<area shape="poly" id="edge86_Node000045_Node000009" title=" " alt="" coords="1828,185,1788,203,1748,227,1696,271,1650,319,1588,395,1584,392,1646,316,1692,267,1744,223,1785,199,1826,180"/>
-<area shape="poly" id="edge89_Node000045_Node000011" title=" " alt="" coords="1765,182,1584,205,1437,228,1384,235,1335,237,1250,238,1213,243,1177,255,1142,278,1108,315,1099,334,1098,355,1105,393,1099,394,1092,355,1094,332,1104,312,1139,274,1175,251,1211,238,1250,233,1335,232,1383,230,1436,223,1583,200,1765,176"/>
-<area shape="poly" id="edge93_Node000045_Node000012" title=" " alt="" coords="1786,182,1672,204,1545,234,1485,251,1432,271,1390,293,1361,315,1351,334,1345,355,1346,394,1340,394,1340,354,1346,332,1357,312,1387,288,1430,266,1483,246,1543,228,1670,198,1785,177"/>
-<area shape="poly" id="edge92_Node000045_Node000015" title=" " alt="" coords="1903,183,1956,223,1989,255,2012,283,2035,309,2070,336,2131,369,2188,391,2186,396,2129,374,2067,341,2032,313,2007,286,1985,259,1952,227,1900,187"/>
-<area shape="poly" id="edge87_Node000045_Node000026" title=" " alt="" coords="1931,178,2100,219,2309,263,2402,278,2474,286,2547,295,2640,311,2821,353,2963,391,2962,396,2820,358,2639,316,2546,300,2474,291,2401,283,2308,268,2099,224,1930,183"/>
-<area shape="poly" id="edge88_Node000045_Node000027" title=" " alt="" coords="1920,179,2040,223,2120,255,2181,283,2243,309,2324,336,2453,369,2568,391,2567,397,2451,374,2323,341,2241,314,2179,288,2118,260,2038,228,1918,184"/>
-<area shape="poly" id="edge90_Node000045_Node000030" title=" " alt="" coords="1986,174,2880,176,3167,180,3417,188,3600,202,3656,211,3685,223,3696,238,3702,253,3702,267,3697,281,3676,307,3644,330,3604,351,3561,370,3482,396,3481,391,3559,365,3602,346,3641,326,3673,303,3692,278,3697,266,3697,254,3692,241,3682,227,3655,217,3599,207,3417,193,3167,185,2879,181,1986,180"/>
-<area shape="poly" id="edge91_Node000045_Node000033" title=" " alt="" coords="1986,175,2333,176,2874,175,3153,178,3402,185,3597,200,3665,210,3711,223,3742,239,3772,260,3822,309,3861,357,3885,392,3881,395,3857,360,3819,312,3768,264,3740,244,3709,228,3664,215,3596,205,3402,191,3153,183,2874,180,2333,182,1986,180"/>
-<area shape="poly" id="edge94_Node000045_Node000041" title=" " alt="" coords="1887,188,1923,256,1970,337,2002,385,1998,388,1965,340,1918,259,1882,191"/>
-<area shape="poly" id="edge95_Node000045_Node000054" title=" " alt="" coords="1986,176,2459,230,2458,235,1985,181"/>
-<area shape="rect" id="Node000052" href="$_belos_t_f_q_m_r_sol_mgr_8hpp.html" title="The Belos::TFQMRSolMgr provides a solver manager for the TFQMR linear solver." alt="" coords="2332,394,2509,419"/>
-<area shape="poly" id="edge113_Node000045_Node000052" title=" " alt="" coords="1911,181,1993,223,2043,255,2081,283,2119,309,2171,336,2267,370,2357,391,2356,397,2266,375,2169,341,2116,314,2078,287,2040,259,1990,228,1908,186"/>
-<area shape="poly" id="edge111_Node000045_Node000056" title=" " alt="" coords="1986,175,2187,189,2344,196,2501,205,2700,223,2756,230,2755,235,2699,228,2500,210,2344,201,2187,194,1985,180"/>
-<area shape="rect" id="Node000055" href="$_belos_status_test_output_factory_8hpp.html" title="A factory class for generating StatusTestOutput objects." alt="" coords="2385,313,2627,339"/>
-<area shape="poly" id="edge96_Node000054_Node000055" title=" " alt="" coords="2545,271,2516,315,2511,312,2540,268"/>
-<area shape="poly" id="edge97_Node000055_Node000004" title=" " alt="" coords="2371,340,2149,360,1898,389,1851,397,1851,391,1898,384,2149,355,2371,335"/>
-<area shape="poly" id="edge98_Node000055_Node000009" title=" " alt="" coords="2371,335,2056,354,1870,369,1684,389,1636,397,1635,391,1683,384,1869,364,2056,349,2371,330"/>
-<area shape="poly" id="edge101_Node000055_Node000011" title=" " alt="" coords="2371,331,2150,335,1863,344,1541,362,1217,389,1166,397,1165,391,1216,384,1541,356,1863,339,2150,329,2371,326"/>
-<area shape="poly" id="edge105_Node000055_Node000012" title=" " alt="" coords="2371,334,1969,352,1722,368,1474,389,1416,397,1415,391,1474,384,1721,363,1968,347,2371,329"/>
-<area shape="poly" id="edge104_Node000055_Node000015" title=" " alt="" coords="2453,345,2266,397,2265,391,2451,340"/>
-<area shape="poly" id="edge99_Node000055_Node000026" title=" " alt="" coords="2592,338,2930,391,2929,397,2591,343"/>
-<area shape="poly" id="edge100_Node000055_Node000027" title=" " alt="" coords="2538,343,2620,391,2617,396,2536,348"/>
-<area shape="poly" id="edge102_Node000055_Node000030" title=" " alt="" coords="2642,336,3353,395,3353,401,2641,341"/>
-<area shape="poly" id="edge103_Node000055_Node000033" title=" " alt="" coords="2641,329,3229,352,3541,368,3769,384,3825,391,3824,397,3768,389,3541,373,3229,357,2641,335"/>
-<area shape="poly" id="edge106_Node000055_Node000039" title=" " alt="" coords="2641,328,3044,345,3292,361,3541,384,3552,385,3551,391,3540,389,3292,366,3044,350,2641,333"/>
-<area shape="poly" id="edge107_Node000055_Node000041" title=" " alt="" coords="2421,343,2130,389,2119,391,2118,386,2130,384,2420,338"/>
-<area shape="poly" id="edge108_Node000055_Node000052" title=" " alt="" coords="2485,350,2435,396,2432,392,2481,346"/>
-<area shape="poly" id="edge109_Node000052_Node000005" title=" " alt="" coords="2354,425,2107,477,2092,480,2091,475,2105,472,2353,420"/>
-<area shape="poly" id="edge110_Node000052_Node000007" title=" " alt="" coords="2382,427,2267,477,2265,472,2380,422"/>
-<area shape="poly" id="edge112_Node000056_Node000055" title=" " alt="" coords="2766,264,2553,316,2552,311,2765,259"/>
-<area shape="poly" id="edge115_Node000057_Node000055" title=" " alt="" coords="3032,262,2598,316,2597,311,3031,257"/>
-<area shape="poly" id="edge118_Node000059_Node000004" title=" " alt="" coords="2076,188,1806,396,1803,392,2073,184"/>
-<area shape="poly" id="edge119_Node000059_Node000009" title=" " alt="" coords="2063,185,1967,228,1604,396,1601,391,1965,223,2061,180"/>
-<area shape="poly" id="edge122_Node000059_Node000011" title=" " alt="" coords="1982,181,1761,206,1502,240,1276,278,1197,297,1153,316,1136,333,1124,354,1111,394,1106,393,1119,352,1132,330,1150,311,1195,292,1275,273,1501,235,1760,201,1982,176"/>
-<area shape="poly" id="edge126_Node000059_Node000012" title=" " alt="" coords="2041,183,1877,228,1586,323,1377,396,1375,391,1584,318,1876,223,2040,178"/>
-<area shape="poly" id="edge125_Node000059_Node000015" title=" " alt="" coords="2115,189,2221,393,2216,395,2111,191"/>
-<area shape="poly" id="edge120_Node000059_Node000026" title=" " alt="" coords="2144,180,2267,221,2419,263,2521,279,2602,284,2683,290,2785,311,2842,329,2897,351,2982,391,2979,396,2895,356,2841,334,2784,316,2683,295,2602,289,2520,284,2417,268,2265,226,2143,185"/>
-<area shape="poly" id="edge121_Node000059_Node000027" title=" " alt="" coords="2139,181,2218,223,2263,255,2295,283,2327,310,2374,336,2421,355,2469,371,2561,391,2560,397,2468,376,2419,360,2372,341,2324,314,2291,287,2259,259,2215,228,2137,186"/>
-<area shape="poly" id="edge123_Node000059_Node000030" title=" " alt="" coords="2220,170,2319,175,3032,179,3279,184,3496,192,3655,205,3704,213,3729,223,3749,252,3755,281,3748,310,3729,341,3701,351,3641,366,3498,397,3497,391,3640,361,3699,346,3726,337,3743,308,3750,281,3744,254,3726,227,3703,218,3654,210,3495,197,3278,189,3032,184,2319,180,2220,175"/>
-<area shape="poly" id="edge124_Node000059_Node000033" title=" " alt="" coords="2220,170,2319,175,3080,181,3344,186,3576,195,3748,206,3802,214,3830,223,3849,241,3864,263,3883,312,3891,359,3893,394,3888,394,3886,360,3878,314,3859,266,3845,245,3827,228,3801,219,3748,212,3576,200,3343,192,3080,187,2319,180,2220,175"/>
-<area shape="poly" id="edge127_Node000059_Node000041" title=" " alt="" coords="2094,191,2023,387,2018,385,2089,190"/>
-<area shape="poly" id="edge128_Node000059_Node000054" title=" " alt="" coords="2181,177,2492,230,2491,235,2180,182"/>
-<area shape="poly" id="edge130_Node000059_Node000052" title=" " alt="" coords="2127,184,2213,253,2324,337,2404,392,2401,396,2320,341,2210,257,2124,188"/>
-<area shape="poly" id="edge129_Node000059_Node000056" title=" " alt="" coords="2220,173,2443,194,2700,223,2753,230,2752,235,2699,228,2442,200,2219,179"/>
-<area shape="poly" id="edge132_Node000060_Node000027" title=" " alt="" coords="3136,183,3069,201,3002,228,2987,237,2977,247,2951,268,2911,285,2877,294,2843,301,2802,316,2720,358,2657,396,2654,392,2717,353,2800,311,2842,296,2876,289,2909,280,2949,263,2973,243,2984,233,2999,223,3068,196,3135,178"/>
-<area shape="poly" id="edge134_Node000060_Node000054" title=" " alt="" coords="3104,181,2700,228,2642,235,2642,230,2699,223,3104,176"/>
-<area shape="poly" id="edge135_Node000060_Node000056" title=" " alt="" coords="3147,183,2882,235,2881,230,3146,177"/>
-<area shape="poly" id="edge133_Node000060_Node000057" title=" " alt="" coords="3197,189,3150,234,3147,231,3193,185"/>
-<area shape="poly" id="edge137_Node000061_Node000054" title=" " alt="" coords="2469,183,2542,230,2539,235,2466,187"/>
-<area shape="poly" id="edge138_Node000061_Node000056" title=" " alt="" coords="2508,177,2769,230,2768,235,2507,183"/>
-<area shape="poly" id="edge142_Node000065_Node000052" title=" " alt="" coords="3660,183,3455,230,3273,268,3141,285,3037,291,2933,298,2801,316,2610,357,2461,396,2460,391,2608,352,2800,311,2933,293,3036,286,3140,279,3272,263,3454,225,3659,178"/>
+<area shape="rect" id="Node000001" title="Pure virtual base class which describes the basic interface to the linear solver iteration." alt="" coords="1069,5,1209,33"/>
+<area shape="rect" id="Node000002" href="$_belos_c_g_iteration_8hpp.html" title="Pure virtual base class which augments the basic interface for a conjugate gradient linear solver ite..." alt="" coords="3747,81,3906,109"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1224,20,3747,89,3746,94,1224,25"/>
+<area shape="rect" id="Node000019" href="$_belos_stochastic_c_g_iteration_8hpp.html" title="Pure virtual base class which augments the basic interface for a stochastic conjugate gradient linear..." alt="" coords="4334,157,4560,184"/>
+<area shape="poly" id="edge139_Node000001_Node000019" title=" " alt="" coords="1224,18,1741,21,2521,30,3326,48,3664,61,3919,78,4050,94,4180,114,4388,156,4383,156,4179,120,4050,99,3919,84,3664,67,3326,53,2521,35,1741,26,1224,23"/>
+<area shape="rect" id="Node000022" href="$_belos_fixed_point_iteration_8hpp.html" title="Pure virtual base class which augments the basic interface for a fixed point linear solver iteration." alt="" coords="464,81,672,109"/>
+<area shape="poly" id="edge25_Node000001_Node000022" title=" " alt="" coords="1051,33,672,83,670,78,1055,30"/>
+<area shape="rect" id="Node000024" href="$_belos_g_c_r_o_d_r_iteration_8hpp.html" title="Common interface for GCRODR&#45;like iteration classes." alt="" coords="2228,81,2426,109"/>
+<area shape="poly" id="edge28_Node000001_Node000024" title=" " alt="" coords="1224,23,2230,86,2226,89,1225,28"/>
+<area shape="rect" id="Node000028" href="$_belos_gmres_iteration_8hpp.html" title="Pure virtual base class which augments the basic interface for a Gmres linear solver iteration." alt="" coords="328,241,512,268"/>
+<area shape="poly" id="edge30_Node000001_Node000028" title=" " alt="" coords="1051,22,921,27,750,37,561,55,371,84,296,92,234,96,207,101,181,112,156,130,132,158,121,182,125,201,143,216,170,228,246,244,330,251,326,254,245,249,169,233,140,220,121,203,116,181,127,155,153,126,178,107,205,96,233,90,296,86,370,78,560,49,750,31,921,22,1056,20"/>
+<area shape="rect" id="Node000034" href="$_belos_pseudo_block_gmres_iter_8hpp.html" title="Belos concrete class for performing the pseudo&#45;block GMRES iteration." alt="" coords="5,325,238,353"/>
+<area shape="poly" id="edge53_Node000001_Node000034" title=" " alt="" coords="1051,23,834,31,562,42,317,59,230,70,180,83,140,110,127,125,117,142,106,182,99,233,97,255,99,276,107,302,117,324,112,325,102,304,94,278,91,255,94,232,100,181,113,140,123,122,136,106,178,79,229,65,317,54,562,36,834,25,1056,21"/>
+<area shape="rect" id="Node000036" href="$_belos_l_s_q_r_iteration_8hpp.html" title="IterationState contains the data that defines the state of the LSQR solver at any given time." alt="" coords="2798,81,2973,109"/>
+<area shape="poly" id="edge44_Node000001_Node000036" title=" " alt="" coords="1224,20,1855,38,2292,55,2739,78,2801,85,2795,85,2739,84,2292,60,1855,43,1225,25"/>
+<area shape="rect" id="Node000040" href="$_belos_minres_iteration_8hpp.html" title="Pure virtual base class which augments the basic interface for a minimal residual linear solver itera..." alt="" coords="2543,81,2727,109"/>
+<area shape="poly" id="edge51_Node000001_Node000040" title=" " alt="" coords="1224,21,1738,44,2438,78,2545,87,2540,88,2437,84,1738,49,1225,27"/>
+<area shape="rect" id="Node000043" href="$_belos_pseudo_block_t_f_q_m_r_iter_8hpp.html" title="Belos concrete class for generating iterations with the preconditioned tranpose&#45;free QMR (TFQMR) meth..." alt="" coords="142,157,378,184"/>
+<area shape="poly" id="edge54_Node000001_Node000043" title=" " alt="" coords="1051,26,735,47,571,63,453,84,404,100,357,120,283,158,280,154,354,115,402,95,452,78,570,58,735,42,1056,23"/>
+<area shape="rect" id="Node000045" href="$_belos_status_test_8hpp.html" title="Pure virtual base class for defining the status testing capabilities of Belos." alt="" coords="1789,81,1942,109"/>
+<area shape="poly" id="edge57_Node000001_Node000045" title=" " alt="" coords="1224,26,1792,85,1787,87,1224,32"/>
+<area shape="rect" id="Node000056" href="$_belos_status_test_res_norm_output_8hpp.html" title="Special StatusTest for printing status tests in simple format for residuals." alt="" coords="1261,241,1518,268"/>
+<area shape="poly" id="edge137_Node000001_Node000056" title=" " alt="" coords="1146,46,1171,115,1191,151,1217,182,1241,201,1269,217,1327,240,1322,240,1266,222,1238,206,1213,186,1186,154,1166,117,1144,51"/>
+<area shape="rect" id="Node000058" href="$_belos_status_test_user_output_8hpp.html" title="Special StatusTest for printing status tests in simple format for residuals." alt="" coords="1011,241,1237,268"/>
+<area shape="poly" id="edge138_Node000001_Node000058" title=" " alt="" coords="1130,45,1123,81,1119,127,1119,172,1125,242,1120,239,1114,172,1114,127,1118,81,1127,49"/>
+<area shape="rect" id="Node000059" href="$_belos_status_test_general_output_8hpp.html" title="Special StatusTest for printing any kind of status test." alt="" coords="739,241,986,268"/>
+<area shape="poly" id="edge135_Node000001_Node000059" title=" " alt="" coords="1051,28,986,43,914,67,879,84,846,104,817,129,793,158,788,169,788,180,800,202,820,222,844,241,838,240,817,226,795,205,783,181,783,168,789,155,814,125,843,100,876,79,912,62,985,38,1056,27"/>
+<area shape="rect" id="Node000062" href="$_belos_status_test_output_8hpp.html" title="Virtual base class for StatusTest that printing status tests." alt="" coords="803,157,1000,184"/>
+<area shape="poly" id="edge136_Node000001_Node000062" title=" " alt="" coords="1108,40,924,158,921,154,1103,43"/>
+<area shape="rect" id="Node000067" href="$_belos_t_f_q_m_r_iter_8hpp.html" title="Belos concrete class for generating iterations with the preconditioned tranpose&#45;free QMR (TFQMR) meth..." alt="" coords="2281,157,2434,184"/>
+<area shape="poly" id="edge140_Node000001_Node000067" title=" " alt="" coords="1224,20,1546,37,1749,54,1954,78,2053,95,2152,116,2311,156,2305,156,2150,121,2052,101,1953,84,1749,59,1546,42,1225,26"/>
+<area shape="rect" id="Node000003" href="$_belos_bi_c_g_stab_iter_8hpp.html" title="Belos concrete class for performing the pseudo&#45;block BiCGStab iteration." alt="" coords="2458,157,2625,184"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="3729,99,3261,119,2951,136,2638,159,2626,160,2625,155,2637,154,2951,130,3261,113,3734,98"/>
+<area shape="rect" id="Node000008" href="$_belos_block_c_g_iter_8hpp.html" title="Belos concrete class for performing the block conjugate&#45;gradient (CG) iteration." alt="" coords="4149,157,4310,184"/>
+<area shape="poly" id="edge5_Node000002_Node000008" title=" " alt="" coords="3914,109,4160,156,4154,156,3914,115"/>
+<area shape="rect" id="Node000010" href="$_belos_c_g_iter_8hpp.html" title="Belos concrete class for performing the conjugate&#45;gradient (CG) iteration." alt="" coords="3026,325,3151,353"/>
+<area shape="poly" id="edge8_Node000002_Node000010" title=" " alt="" coords="3854,117,3868,133,3878,151,3882,169,3874,186,3856,201,3833,212,3775,227,3704,233,3626,233,3472,228,3406,229,3355,235,3242,275,3119,327,3118,322,3240,270,3354,230,3406,223,3472,223,3626,228,3704,227,3774,221,3831,207,3853,196,3870,183,3876,169,3873,153,3864,136,3852,122"/>
+<area shape="rect" id="Node000012" href="$_belos_pseudo_block_c_g_sol_mgr_8hpp.html" title="The Belos::PseudoBlockCGSolMgr provides a solver manager for the BlockCG linear solver." alt="" coords="2751,409,2982,437"/>
+<area shape="poly" id="edge21_Node000002_Node000012" title=" " alt="" coords="3922,94,4098,98,4303,107,4398,115,4480,125,4540,138,4561,146,4574,155,4581,170,4574,186,4550,210,4521,232,4453,270,4371,301,4277,326,4174,345,4063,359,3828,375,3586,382,3356,385,3154,390,3068,395,2995,403,2945,411,2945,406,2994,398,3067,390,3153,385,3356,379,3586,377,3827,370,4063,353,4173,339,4276,321,4369,296,4451,266,4519,228,4546,206,4570,183,4576,170,4570,158,4559,151,4539,143,4479,131,4398,120,4302,113,4098,103,3922,100"/>
+<area shape="rect" id="Node000013" href="$_belos_c_g_single_red_iter_8hpp.html" title="Belos concrete class for performing a single&#45;reduction conjugate&#45;gradient (CG) iteration." alt="" coords="3934,157,4125,184"/>
+<area shape="poly" id="edge14_Node000002_Node000013" title=" " alt="" coords="3878,112,3996,156,3991,156,3877,117"/>
+<area shape="rect" id="Node000014" href="$_belos_p_c_p_g_iter_8hpp.html" title="Belos concrete class to iterate Preconditioned Conjugate Projected Gradients." alt="" coords="2650,157,2791,184"/>
+<area shape="poly" id="edge16_Node000002_Node000014" title=" " alt="" coords="3729,99,3327,119,3066,136,2803,159,2792,161,2791,155,2803,154,3066,131,3327,114,3734,99"/>
+<area shape="rect" id="Node000016" href="$_belos_pseudo_block_c_g_iter_8hpp.html" title="Belos concrete class for performing the pseudo&#45;block CG iteration." alt="" coords="3652,157,3860,184"/>
+<area shape="poly" id="edge19_Node000002_Node000016" title=" " alt="" coords="3806,119,3770,159,3768,154,3801,121"/>
+<area shape="rect" id="Node000017" href="$_belos_r_c_g_iter_8hpp.html" title="Belos concrete class for performing the RCG iteration." alt="" coords="3493,157,3627,184"/>
+<area shape="poly" id="edge22_Node000002_Node000017" title=" " alt="" coords="3768,113,3608,159,3607,153,3762,114"/>
+<area shape="poly" id="edge23_Node000002_Node000019" title=" " alt="" coords="3922,105,4338,156,4333,156,3922,110"/>
+<area shape="rect" id="Node000004" href="$_belos_bi_c_g_stab_sol_mgr_8hpp.html" title="The Belos::BiCGStabSolMgr provides a solver manager for the BiCGStab linear solver." alt="" coords="1925,409,2115,437"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="2504,191,2048,411,2046,406,2498,192"/>
+<area shape="rect" id="Node000005" href="$_belos_solver_factory___generic_8hpp.html" title=" " alt="" coords="2048,493,2193,538"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="2047,445,2099,494,2094,492,2045,450"/>
+<area shape="rect" id="Node000009" href="$_belos_block_c_g_sol_mgr_8hpp.html" title="The Belos::BlockCGSolMgr provides a solver manager for the BlockCG linear solver." alt="" coords="3007,409,3191,437"/>
+<area shape="poly" id="edge6_Node000008_Node000009" title=" " alt="" coords="4162,188,3846,264,3435,355,3165,411,3164,406,3434,350,3845,258,4156,189"/>
+<area shape="poly" id="edge7_Node000009_Node000005" title=" " alt="" coords="3028,440,2995,448,2766,475,2540,494,2193,514,2193,509,2539,489,2766,470,2994,443,3023,441"/>
+<area shape="poly" id="edge9_Node000010_Node000009" title=" " alt="" coords="3094,366,3099,411,3095,407,3090,370"/>
+<area shape="rect" id="Node000011" href="$_belos_fixed_point_sol_mgr_8hpp.html" title="The Belos::FixedPointSolMgr provides a solver manager for the FixedPoint linear solver." alt="" coords="1705,409,1901,437"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="3007,341,2816,346,2545,355,2232,373,1914,403,1864,411,1864,406,1913,398,2231,368,2544,350,2816,341,3012,340"/>
+<area shape="poly" id="edge12_Node000010_Node000012" title=" " alt="" coords="3041,358,2903,411,2902,406,3036,359"/>
+<area shape="poly" id="edge11_Node000011_Node000005" title=" " alt="" coords="1864,439,2050,494,2044,493,1863,444"/>
+<area shape="poly" id="edge13_Node000012_Node000005" title=" " alt="" coords="2753,439,2703,448,2194,509,2193,503,2703,443,2748,440"/>
+<area shape="poly" id="edge15_Node000013_Node000009" title=" " alt="" coords="3971,188,3648,280,3150,411,3149,406,3646,274,3965,189"/>
+<area shape="rect" id="Node000015" href="$_belos_p_c_p_g_sol_mgr_8hpp.html" title="Declaration and definition of Belos::PCPGSolMgr (PCPG iterative linear solver)." alt="" coords="2139,409,2304,437"/>
+<area shape="poly" id="edge17_Node000014_Node000015" title=" " alt="" coords="2683,191,2248,411,2247,406,2678,192"/>
+<area shape="poly" id="edge18_Node000015_Node000005" title=" " alt="" coords="2198,446,2145,495,2143,490,2193,448"/>
+<area shape="poly" id="edge20_Node000016_Node000012" title=" " alt="" coords="3730,193,3667,239,3628,261,3588,280,3485,306,3305,343,2940,411,2939,406,3304,337,3484,301,3586,274,3626,256,3664,234,3725,195"/>
+<area shape="rect" id="Node000020" href="$_belos_pseudo_block_stochastic_c_g_iter_8hpp.html" title="Belos concrete class for performing the stochastic pseudo&#45;block CG iteration." alt="" coords="3367,232,3574,277"/>
+<area shape="poly" id="edge24_Node000019_Node000020" title=" " alt="" coords="4315,185,3575,248,3575,243,4321,185"/>
+<area shape="rect" id="Node000023" href="$_belos_fixed_point_iter_8hpp.html" title="Belos concrete class for performing fixed point iteration iteration." alt="" coords="403,157,576,184"/>
+<area shape="poly" id="edge26_Node000022_Node000023" title=" " alt="" coords="545,118,505,158,502,154,541,121"/>
+<area shape="poly" id="edge27_Node000023_Node000011" title=" " alt="" coords="525,190,616,234,671,257,728,274,829,296,916,306,993,309,1065,308,1217,305,1305,310,1409,322,1508,341,1607,364,1763,409,1757,408,1605,369,1507,346,1408,328,1305,315,1217,311,1066,314,993,315,915,311,828,301,726,280,669,262,613,239,525,195"/>
+<area shape="rect" id="Node000025" href="$_belos_g_c_r_o_d_r_iter_8hpp.html" title="Belos concrete class for performing the GCRO&#45;DR iteration." alt="" coords="3081,157,3244,184"/>
+<area shape="poly" id="edge29_Node000024_Node000025" title=" " alt="" coords="2441,101,2724,123,3063,154,3084,159,3078,159,3063,159,2723,128,2441,107"/>
+<area shape="rect" id="Node000029" href="$_belos_block_f_gmres_iter_8hpp.html" title="Belos concrete class for performing the block, flexible GMRES iteration." alt="" coords="329,325,522,353"/>
+<area shape="poly" id="edge31_Node000028_Node000029" title=" " alt="" coords="423,282,427,326,422,324,421,287"/>
+<area shape="rect" id="Node000030" href="$_belos_block_gmres_sol_mgr_8hpp.html" title="The Belos::BlockGmresSolMgr provides a solver manager for the BlockGmres linear solver." alt="" coords="728,409,936,437"/>
+<area shape="poly" id="edge39_Node000028_Node000030" title=" " alt="" coords="459,273,535,311,624,350,711,382,790,409,784,409,709,387,622,355,533,316,458,279"/>
+<area shape="rect" id="Node000031" href="$_belos_block_g_c_r_o_d_r_sol_mgr_8hpp.html" title="A solver manager for the Block GCRO&#45;DR (Block Recycling GMRES) linear solver." alt="" coords="1202,409,1425,437"/>
+<area shape="poly" id="edge34_Node000028_Node000031" title=" " alt="" coords="500,269,531,274,645,289,734,296,823,305,937,322,1124,365,1273,409,1268,409,1122,370,936,328,822,310,734,302,644,294,530,280,500,274"/>
+<area shape="rect" id="Node000032" href="$_belos_block_gmres_iter_8hpp.html" title="Belos concrete class for performing the block GMRES iteration." alt="" coords="740,325,925,353"/>
+<area shape="poly" id="edge35_Node000028_Node000032" title=" " alt="" coords="501,269,768,323,763,325,501,275"/>
+<area shape="rect" id="Node000033" href="$_belos_gmres_poly_op_8hpp.html" title="Defines the GMRES polynomial operator hybrid&#45;GMRES iterative linear solver." alt="" coords="977,409,1151,437"/>
+<area shape="poly" id="edge40_Node000028_Node000033" title=" " alt="" coords="472,271,589,310,727,350,998,408,993,409,726,355,587,315,471,277"/>
+<area shape="poly" id="edge41_Node000028_Node000034" title=" " alt="" coords="356,275,170,327,168,322,359,271"/>
+<area shape="poly" id="edge32_Node000029_Node000030" title=" " alt="" coords="506,354,769,408,764,409,505,359"/>
+<area shape="poly" id="edge33_Node000030_Node000005" title=" " alt="" coords="922,437,966,443,1281,471,1591,491,2050,512,2044,512,1590,496,1280,476,965,448,922,442"/>
+<area shape="poly" id="edge37_Node000032_Node000030" title=" " alt="" coords="834,367,834,411,830,407,830,371"/>
+<area shape="poly" id="edge36_Node000032_Node000031" title=" " alt="" coords="924,353,1239,408,1233,409,924,358"/>
+<area shape="poly" id="edge38_Node000032_Node000033" title=" " alt="" coords="884,356,1030,409,1024,409,883,361"/>
+<area shape="rect" id="Node000035" href="$_belos_pseudo_block_gmres_sol_mgr_8hpp.html" title="The Belos::PseudoBlockGmresSolMgr provides a solver manager for the BlockGmres linear solver." alt="" coords="501,401,704,445"/>
+<area shape="poly" id="edge42_Node000034_Node000035" title=" " alt="" coords="214,353,502,402,499,406,214,358"/>
+<area shape="poly" id="edge43_Node000035_Node000005" title=" " alt="" coords="720,443,917,463,1116,478,1499,499,1825,509,2050,514,2045,514,1825,514,1499,504,1115,484,916,468,720,448"/>
+<area shape="rect" id="Node000037" href="$_belos_l_s_q_r_iter_8hpp.html" title="Belos concrete class that iterates LSQR." alt="" coords="2815,157,2956,184"/>
+<area shape="poly" id="edge45_Node000036_Node000037" title=" " alt="" coords="2887,123,2888,158,2883,154,2884,126"/>
+<area shape="rect" id="Node000038" href="$_belos_l_s_q_r_sol_mgr_8hpp.html" title="LSQRSolMgr: interface to the LSQR method." alt="" coords="2528,409,2691,437"/>
+<area shape="poly" id="edge50_Node000036_Node000038" title=" " alt="" coords="2988,94,3138,99,3296,112,3362,123,3411,138,3427,148,3437,159,3440,172,3433,186,3411,208,3389,221,3366,227,3342,228,3290,226,3261,228,3230,235,3143,266,3077,295,3010,324,2922,355,2797,388,2684,411,2684,406,2796,383,2921,350,3008,320,3075,290,3141,261,3229,230,3261,223,3290,221,3342,222,3365,221,3387,216,3408,204,3429,183,3434,171,3433,161,3424,152,3409,143,3361,128,3295,117,3138,104,2988,99"/>
+<area shape="poly" id="edge46_Node000037_Node000038" title=" " alt="" coords="2955,188,2985,205,3009,231,3018,255,3009,278,2987,300,2953,321,2862,358,2760,389,2670,411,2670,406,2759,384,2861,353,2950,316,2983,296,3005,276,3012,255,3005,234,2982,210,2954,193"/>
+<area shape="rect" id="Node000039" href="$_belos_l_s_q_r_status_test_8hpp.html" title="Belos::StatusTest class defining LSQR convergence." alt="" coords="2808,241,2995,268"/>
+<area shape="poly" id="edge48_Node000037_Node000039" title=" " alt="" coords="2893,198,2901,242,2897,239,2889,202"/>
+<area shape="poly" id="edge47_Node000038_Node000005" title=" " alt="" coords="2541,440,2517,448,2194,505,2193,500,2516,443,2536,441"/>
+<area shape="poly" id="edge49_Node000039_Node000038" title=" " alt="" coords="2868,276,2633,411,2631,406,2863,277"/>
+<area shape="rect" id="Node000041" href="$_belos_minres_iter_8hpp.html" title="MINRES iteration implementation." alt="" coords="3269,157,3419,184"/>
+<area shape="poly" id="edge52_Node000040_Node000041" title=" " alt="" coords="2743,103,2979,124,3256,154,3271,158,3266,158,3256,159,2978,130,2743,108"/>
+<area shape="rect" id="Node000044" href="$_belos_pseudo_block_t_f_q_m_r_sol_mgr_8hpp.html" title="The Belos::PseudoBlockTFQMRSolMgr provides a solver manager for the pseudo&#45;block TFQMR linear solver." alt="" coords="1474,401,1681,445"/>
+<area shape="poly" id="edge55_Node000043_Node000044" title=" " alt="" coords="360,185,442,203,525,230,548,242,565,254,581,265,604,274,716,301,813,311,900,310,982,304,1064,297,1152,294,1251,301,1365,322,1414,338,1463,358,1543,400,1538,400,1460,362,1413,343,1364,328,1250,306,1152,299,1065,302,982,309,900,316,812,316,715,306,602,280,578,270,562,258,545,246,523,235,441,209,361,190"/>
+<area shape="poly" id="edge56_Node000044_Node000005" title=" " alt="" coords="1697,443,2050,503,2044,503,1696,449"/>
+<area shape="poly" id="edge58_Node000045_Node000003" title=" " alt="" coords="1957,102,2447,154,2460,158,2455,158,2447,159,1957,108"/>
+<area shape="poly" id="edge59_Node000045_Node000008" title=" " alt="" coords="1957,97,2216,106,2509,113,2756,115,3177,114,3380,116,3597,122,3845,134,4136,154,4151,158,4146,158,4136,159,3844,139,3597,127,3380,121,3177,120,2756,120,2509,118,2216,111,1957,102"/>
+<area shape="poly" id="edge64_Node000045_Node000010" title=" " alt="" coords="1957,98,2552,126,2838,142,2969,154,2994,171,3016,191,3051,239,3074,287,3087,326,3082,323,3069,290,3046,242,3012,195,2991,175,2967,159,2837,147,2552,131,1957,103"/>
+<area shape="poly" id="edge65_Node000045_Node000013" title=" " alt="" coords="1957,97,2216,106,2682,118,3044,124,3407,133,3872,154,3937,161,3931,161,3872,159,3407,138,3044,129,2682,123,2216,111,1957,102"/>
+<area shape="poly" id="edge71_Node000045_Node000014" title=" " alt="" coords="1957,99,2260,119,2638,154,2652,158,2646,158,2637,159,2259,124,1957,104"/>
+<area shape="poly" id="edge72_Node000045_Node000016" title=" " alt="" coords="1957,97,2216,106,2617,117,2928,122,3239,131,3639,154,3655,158,3649,158,3639,159,3239,136,2928,127,2616,122,2216,111,1957,102"/>
+<area shape="poly" id="edge76_Node000045_Node000017" title=" " alt="" coords="1957,97,3431,154,3495,162,3490,162,3431,159,1957,102"/>
+<area shape="poly" id="edge74_Node000045_Node000020" title=" " alt="" coords="1957,97,2564,125,2863,141,3013,154,3042,167,3070,182,3146,203,3225,219,3369,244,3364,243,3224,225,3145,208,3069,187,3040,172,3011,159,2863,147,2564,130,1957,103"/>
+<area shape="poly" id="edge66_Node000045_Node000023" title=" " alt="" coords="1771,99,1271,118,936,136,595,159,578,161,576,156,595,154,935,130,1271,113,1776,98"/>
+<area shape="poly" id="edge67_Node000045_Node000025" title=" " alt="" coords="1957,97,2520,122,2834,139,3063,154,3084,158,3078,158,3063,159,2833,144,2520,128,1957,103"/>
+<area shape="poly" id="edge60_Node000045_Node000029" title=" " alt="" coords="1771,96,1580,101,1317,109,1016,127,863,141,713,159,651,172,589,187,526,193,445,198,367,209,338,220,318,234,312,244,310,254,318,276,331,291,346,304,382,324,377,325,343,308,327,295,314,278,305,254,307,242,314,231,335,215,366,204,444,193,526,188,588,182,649,167,712,154,862,136,1016,122,1316,104,1580,95,1776,95"/>
+<area shape="poly" id="edge63_Node000045_Node000032" title=" " alt="" coords="1771,96,1519,100,1197,107,1042,115,907,125,805,140,770,149,748,159,720,184,705,212,703,242,716,276,728,291,744,304,782,325,777,324,741,308,725,295,711,278,697,243,700,210,716,180,745,154,768,144,804,135,907,120,1042,109,1197,102,1519,94,1776,95"/>
+<area shape="poly" id="edge73_Node000045_Node000034" title=" " alt="" coords="1772,100,830,121,349,139,194,149,149,154,131,159,118,177,109,198,105,245,111,290,120,325,114,325,105,291,99,245,104,197,113,174,128,154,148,149,194,143,349,133,830,116,1775,96"/>
+<area shape="poly" id="edge68_Node000045_Node000037" title=" " alt="" coords="1957,97,2327,115,2564,132,2803,154,2817,158,2812,158,2803,159,2564,137,2327,121,1958,102"/>
+<area shape="poly" id="edge69_Node000045_Node000039" title=" " alt="" coords="1957,106,2103,129,2170,142,2218,154,2245,169,2270,182,2347,202,2413,213,2471,218,2527,219,2643,218,2710,221,2790,230,2840,240,2834,240,2789,235,2710,226,2642,223,2527,224,2471,223,2412,218,2346,207,2269,187,2242,173,2217,159,2169,147,2102,134,1957,111"/>
+<area shape="poly" id="edge70_Node000045_Node000041" title=" " alt="" coords="1957,97,2667,125,3040,142,3256,154,3271,158,3266,158,3256,159,3039,147,2667,130,1957,102"/>
+<area shape="poly" id="edge75_Node000045_Node000043" title=" " alt="" coords="1772,99,1192,119,795,136,391,159,380,160,378,155,391,154,795,131,1192,113,1777,97"/>
+<area shape="rect" id="Node000046" href="$_belos_block_g_c_r_o_d_r_iter_8hpp.html" title="Belos concrete class for performing the block GCRO&#45;DR (block GMRES with recycling) iteration." alt="" coords="1152,325,1352,353"/>
+<area shape="poly" id="edge61_Node000045_Node000046" title=" " alt="" coords="1771,98,1530,104,1224,115,947,132,848,144,792,159,768,173,752,188,740,207,729,233,722,256,723,266,729,275,748,286,785,295,896,311,1029,323,1155,333,1150,333,1029,328,895,317,784,300,746,291,725,279,718,267,717,256,724,231,735,205,748,185,765,169,790,154,847,139,947,127,1223,109,1530,99,1777,97"/>
+<area shape="rect" id="Node000047" href="$_belos_status_test_combo_8hpp.html" title="Belos::StatusTest for logically combining several status tests." alt="" coords="1514,157,1713,184"/>
+<area shape="poly" id="edge77_Node000045_Node000047" title=" " alt="" coords="1808,113,1659,159,1658,154,1803,114"/>
+<area shape="poly" id="edge131_Node000045_Node000056" title=" " alt="" coords="1771,98,1712,106,1643,117,1572,134,1504,159,1472,178,1444,200,1402,243,1399,238,1440,196,1469,173,1502,154,1570,129,1642,111,1711,101,1776,98"/>
+<area shape="poly" id="edge132_Node000045_Node000058" title=" " alt="" coords="1772,97,1635,103,1473,113,1321,130,1261,143,1216,159,1189,177,1166,199,1134,242,1130,238,1162,196,1186,173,1214,154,1259,138,1321,125,1472,107,1635,98,1777,96"/>
+<area shape="poly" id="edge106_Node000045_Node000059" title=" " alt="" coords="1771,98,1653,105,1503,116,1337,133,1173,159,1094,178,1017,201,897,243,895,238,1016,196,1093,173,1172,154,1337,128,1502,110,1653,100,1776,97"/>
+<area shape="rect" id="Node000060" href="$_belos_status_test_log_res_norm_8hpp.html" title="Belos::StatusTest debugging class for storing the absolute residual norms generated during a solve." alt="" coords="1970,157,2206,184"/>
+<area shape="poly" id="edge108_Node000045_Node000060" title=" " alt="" coords="1920,111,2051,156,2046,156,1920,117"/>
+<area shape="rect" id="Node000061" href="$_belos_status_test_max_iters_8hpp.html" title="Belos::StatusTest class for specifying a maximum number of iterations." alt="" coords="1737,157,1946,184"/>
+<area shape="poly" id="edge109_Node000045_Node000061" title=" " alt="" coords="1858,122,1848,158,1844,154,1854,125"/>
+<area shape="poly" id="edge123_Node000045_Node000062" title=" " alt="" coords="1771,102,1441,126,1019,159,1001,161,999,156,1019,154,1441,121,1777,101"/>
+<area shape="rect" id="Node000063" href="$_belos_status_test_res_norm_8hpp.html" title="Belos::StatusTest abstract class for specifying a residual norm stopping criteria." alt="" coords="1227,157,1440,184"/>
+<area shape="poly" id="edge128_Node000045_Node000063" title=" " alt="" coords="1771,109,1430,159,1429,153,1776,108"/>
+<area shape="poly" id="edge133_Node000045_Node000067" title=" " alt="" coords="1957,107,2283,158,2278,158,1957,112"/>
+<area shape="poly" id="edge62_Node000046_Node000031" title=" " alt="" coords="1272,363,1306,410,1301,408,1270,368"/>
+<area shape="poly" id="edge78_Node000047_Node000004" title=" " alt="" coords="1714,186,1775,203,1834,230,1893,273,1946,324,1987,372,2014,410,2009,408,1982,375,1942,328,1890,278,1831,235,1773,208,1714,191"/>
+<area shape="poly" id="edge79_Node000047_Node000009" title=" " alt="" coords="1728,182,1877,194,1993,201,2108,210,2253,230,2489,273,2719,323,3053,409,3048,408,2718,328,2488,278,2252,235,2107,216,1992,206,1877,199,1728,187"/>
+<area shape="poly" id="edge82_Node000047_Node000011" title=" " alt="" coords="1683,187,1736,206,1793,235,1845,273,1868,297,1887,324,1891,337,1890,350,1877,374,1854,395,1829,411,1827,406,1851,391,1873,371,1885,349,1886,338,1882,326,1864,300,1842,277,1790,239,1734,211,1682,192"/>
+<area shape="poly" id="edge86_Node000047_Node000012" title=" " alt="" coords="1728,182,2131,230,2337,273,2536,324,2827,409,2821,408,2535,329,2335,279,2130,235,1728,188"/>
+<area shape="poly" id="edge85_Node000047_Node000015" title=" " alt="" coords="1714,185,1797,203,1881,230,1980,274,2073,324,2205,409,2200,408,2070,329,1977,278,1879,235,1796,209,1714,190"/>
+<area shape="poly" id="edge81_Node000047_Node000030" title=" " alt="" coords="1599,196,1565,246,1547,267,1531,279,1509,286,1475,291,1379,295,1121,295,987,295,867,299,776,309,746,317,729,327,722,338,722,348,728,359,738,370,768,390,802,409,796,408,765,395,735,374,723,362,717,350,717,336,725,323,744,312,775,303,867,293,987,289,1121,289,1379,290,1475,286,1508,281,1528,275,1543,263,1561,243,1595,199"/>
+<area shape="poly" id="edge80_Node000047_Node000031" title=" " alt="" coords="1626,196,1636,237,1634,259,1626,278,1605,306,1580,330,1551,351,1520,368,1457,394,1396,411,1395,406,1455,389,1518,363,1548,346,1576,326,1601,303,1622,276,1629,257,1630,238,1623,201"/>
+<area shape="poly" id="edge83_Node000047_Node000033" title=" " alt="" coords="1613,198,1602,242,1591,262,1575,279,1543,300,1512,313,1481,321,1451,323,1391,317,1333,302,1275,288,1217,282,1188,285,1158,292,1128,306,1098,327,1083,345,1074,367,1066,410,1062,407,1068,366,1078,342,1094,323,1126,302,1157,287,1187,280,1217,277,1276,283,1334,297,1392,311,1451,318,1480,316,1510,308,1541,295,1572,275,1587,259,1597,240,1609,202"/>
+<area shape="poly" id="edge84_Node000047_Node000038" title=" " alt="" coords="1728,183,1898,207,2033,230,2195,274,2352,324,2580,409,2574,408,2351,329,2194,279,2032,235,1898,212,1728,189"/>
+<area shape="poly" id="edge87_Node000047_Node000044" title=" " alt="" coords="1646,192,1664,210,1677,231,1683,255,1677,278,1665,295,1650,305,1635,313,1621,327,1600,365,1585,402,1582,398,1595,362,1617,323,1632,308,1648,300,1661,291,1672,276,1678,255,1672,233,1660,213,1644,197"/>
+<area shape="poly" id="edge88_Node000047_Node000056" title=" " alt="" coords="1566,189,1426,243,1425,238,1561,191"/>
+<area shape="rect" id="Node000054" href="$_belos_t_f_q_m_r_sol_mgr_8hpp.html" title="The Belos::TFQMRSolMgr provides a solver manager for the TFQMR linear solver." alt="" coords="2328,409,2504,437"/>
+<area shape="poly" id="edge105_Node000047_Node000054" title=" " alt="" coords="1728,184,1836,203,1949,230,2081,274,2208,324,2392,409,2387,408,2206,329,2079,279,1947,235,1835,208,1728,189"/>
+<area shape="poly" id="edge103_Node000047_Node000058" title=" " alt="" coords="1517,188,1250,235,1203,243,1202,238,1249,230,1522,187"/>
+<area shape="rect" id="Node000057" href="$_belos_status_test_output_factory_8hpp.html" title="A factory class for generating StatusTestOutput objects." alt="" coords="1630,325,1872,353"/>
+<area shape="poly" id="edge89_Node000056_Node000057" title=" " alt="" coords="1463,270,1696,324,1690,324,1462,275"/>
+<area shape="poly" id="edge90_Node000057_Node000004" title=" " alt="" coords="1809,355,1980,409,1974,408,1808,360"/>
+<area shape="poly" id="edge91_Node000057_Node000009" title=" " alt="" coords="1887,337,2101,340,2377,350,2685,368,2995,398,3045,409,3039,408,2994,403,2685,373,2377,355,2100,346,1887,343"/>
+<area shape="poly" id="edge94_Node000057_Node000011" title=" " alt="" coords="1768,363,1797,410,1792,408,1766,368"/>
+<area shape="poly" id="edge98_Node000057_Node000012" title=" " alt="" coords="1887,343,2256,364,2479,379,2703,398,2775,409,2770,408,2703,403,2479,384,2256,369,1887,349"/>
+<area shape="poly" id="edge97_Node000057_Node000015" title=" " alt="" coords="1857,353,2127,398,2168,409,2162,408,2126,403,1856,358"/>
+<area shape="poly" id="edge93_Node000057_Node000030" title=" " alt="" coords="1612,348,1316,370,966,403,909,411,909,406,965,398,1316,365,1617,347"/>
+<area shape="poly" id="edge92_Node000057_Node000031" title=" " alt="" coords="1668,356,1384,411,1384,406,1663,356"/>
+<area shape="poly" id="edge95_Node000057_Node000033" title=" " alt="" coords="1612,353,1415,376,1191,403,1139,411,1139,406,1190,398,1414,371,1618,352"/>
+<area shape="poly" id="edge99_Node000057_Node000035" title=" " alt="" coords="1612,346,1139,372,895,388,716,403,705,405,704,400,716,398,894,382,1139,367,1617,346"/>
+<area shape="poly" id="edge96_Node000057_Node000038" title=" " alt="" coords="1887,342,2177,360,2347,376,2517,398,2560,409,2555,408,2516,403,2347,382,2177,366,1887,348"/>
+<area shape="poly" id="edge100_Node000057_Node000044" title=" " alt="" coords="1712,359,1624,403,1623,397,1707,360"/>
+<area shape="poly" id="edge101_Node000057_Node000054" title=" " alt="" coords="1887,348,2090,368,2317,398,2361,409,2356,408,2316,403,2090,374,1887,354"/>
+<area shape="poly" id="edge102_Node000054_Node000005" title=" " alt="" coords="2362,441,2192,495,2191,490,2356,442"/>
+<area shape="poly" id="edge104_Node000058_Node000057" title=" " alt="" coords="1214,269,1250,274,1632,324,1627,325,1249,280,1214,274"/>
+<area shape="poly" id="edge107_Node000059_Node000057" title=" " alt="" coords="956,269,999,274,1291,301,1632,329,1627,329,1291,306,999,280,957,274"/>
+<area shape="poly" id="edge110_Node000061_Node000004" title=" " alt="" coords="1938,185,2047,207,2089,219,2112,231,2117,252,2118,289,2115,327,2109,354,2097,372,2082,388,2048,411,2046,406,2078,384,2093,369,2104,352,2110,327,2112,289,2111,253,2107,234,2087,224,2046,212,1938,190"/>
+<area shape="poly" id="edge111_Node000061_Node000009" title=" " alt="" coords="1961,182,2209,205,2452,230,3164,323,3171,335,3172,347,3162,371,3142,393,3119,411,3117,406,3138,389,3157,368,3167,346,3166,336,3161,327,2452,235,2208,210,1961,187"/>
+<area shape="poly" id="edge114_Node000061_Node000011" title=" " alt="" coords="1958,185,2034,204,2063,216,2082,231,2101,262,2108,293,2101,323,2082,355,2055,365,2000,380,1864,411,1863,406,1998,375,2054,360,2078,351,2096,321,2102,293,2096,264,2078,234,2060,220,2032,209,1958,190"/>
+<area shape="poly" id="edge118_Node000061_Node000012" title=" " alt="" coords="1962,183,2162,207,2323,230,2509,265,2589,287,2689,323,2779,366,2849,409,2844,408,2777,370,2687,327,2588,292,2508,270,2322,235,2162,212,1962,188"/>
+<area shape="poly" id="edge117_Node000061_Node000015" title=" " alt="" coords="1962,183,2062,203,2104,215,2132,230,2153,250,2171,273,2197,324,2214,372,2221,410,2217,407,2209,374,2192,326,2167,276,2149,254,2129,235,2102,220,2061,208,1962,189"/>
+<area shape="poly" id="edge113_Node000061_Node000030" title=" " alt="" coords="1804,191,1698,238,1634,261,1569,280,1499,294,1439,301,1335,305,1232,307,1172,314,1102,328,1034,346,967,369,862,411,861,406,965,364,1032,341,1101,322,1171,309,1231,302,1335,299,1438,296,1498,288,1568,274,1633,256,1696,233,1799,192"/>
+<area shape="poly" id="edge112_Node000061_Node000031" title=" " alt="" coords="1863,194,1877,214,1886,236,1888,258,1880,279,1851,305,1822,319,1792,323,1761,322,1695,315,1659,317,1620,327,1597,341,1575,355,1477,389,1385,411,1384,406,1475,384,1572,350,1595,336,1618,323,1658,312,1695,310,1761,316,1791,318,1820,314,1848,301,1875,275,1883,257,1881,237,1872,217,1861,199"/>
+<area shape="poly" id="edge115_Node000061_Node000033" title=" " alt="" coords="1835,198,1814,242,1798,263,1778,279,1751,291,1720,300,1643,309,1555,310,1460,306,1364,303,1275,302,1199,309,1167,317,1141,327,1118,345,1098,367,1071,411,1068,407,1094,364,1114,341,1139,323,1166,312,1198,304,1275,297,1364,297,1460,301,1555,304,1643,303,1719,295,1750,286,1775,275,1794,259,1809,239,1830,201"/>
+<area shape="poly" id="edge116_Node000061_Node000038" title=" " alt="" coords="1961,182,2089,201,2225,230,2360,265,2417,287,2487,323,2551,366,2599,410,2594,408,2548,370,2484,327,2415,292,2358,270,2224,235,2088,207,1961,188"/>
+<area shape="poly" id="edge119_Node000061_Node000044" title=" " alt="" coords="1962,184,2001,202,2017,215,2032,231,2040,254,2032,278,2017,299,2002,314,1969,331,1931,342,1885,355,1797,379,1682,404,1681,399,1796,374,1883,350,1930,336,1967,326,1999,309,2013,295,2027,276,2035,254,2027,234,2014,219,1998,206,1961,189"/>
+<area shape="poly" id="edge120_Node000061_Node000056" title=" " alt="" coords="1751,188,1463,243,1462,238,1757,187"/>
+<area shape="poly" id="edge122_Node000061_Node000054" title=" " alt="" coords="1955,185,2078,205,2131,217,2169,230,2245,272,2313,322,2369,371,2406,409,2401,408,2365,375,2310,326,2242,276,2167,235,2129,222,2077,211,1955,190"/>
+<area shape="poly" id="edge121_Node000061_Node000058" title=" " alt="" coords="1719,185,1484,209,1250,235,1198,243,1197,238,1249,230,1483,204,1724,184"/>
+<area shape="poly" id="edge124_Node000062_Node000030" title=" " alt="" coords="785,176,651,185,503,196,381,213,340,223,318,234,299,263,292,292,299,322,318,351,331,362,348,371,392,384,446,391,505,394,625,394,716,398,766,408,761,409,716,403,625,400,505,399,445,396,391,389,346,376,328,366,314,354,294,324,287,292,294,261,314,230,338,218,380,207,503,191,650,180,790,175"/>
+<area shape="poly" id="edge126_Node000062_Node000056" title=" " alt="" coords="995,185,1314,240,1308,241,995,190"/>
+<area shape="poly" id="edge127_Node000062_Node000058" title=" " alt="" coords="951,187,1091,240,1086,240,951,193"/>
+<area shape="poly" id="edge125_Node000062_Node000059" title=" " alt="" coords="891,197,871,242,867,239,887,200"/>
+<area shape="poly" id="edge129_Node000063_Node000056" title=" " alt="" coords="1352,195,1383,241,1378,240,1350,200"/>
+<area shape="poly" id="edge130_Node000063_Node000058" title=" " alt="" coords="1288,190,1159,243,1157,238,1283,191"/>
+<area shape="poly" id="edge134_Node000067_Node000054" title=" " alt="" coords="2398,190,2421,208,2437,231,2446,255,2450,281,2447,332,2436,377,2423,411,2420,407,2431,376,2442,331,2444,281,2441,257,2432,234,2417,212,2397,196"/>
 </map>

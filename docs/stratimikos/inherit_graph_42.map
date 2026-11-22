@@ -1,3 +1,9 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/common/tag_files/belos.tag$class_belos_1_1_operator_t.html" title=" " alt="" coords="5,5,224,31"/>
+<area shape="rect" id="Node000000" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/common/tag_files/belos.tag$class_belos_1_1_details_1_1_solver_manager_requires_lapack_3_01_scalar_type_00_01_m_v_00_01_o_p_00_01_d_m_00_01true_01_4.html" title=" " alt="" coords="5,91,223,152"/>
+<area shape="rect" id="Node000001" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/common/tag_files/belos.tag$class_belos_1_1_block_c_g_sol_mgr_3_01_scalar_type_00_01_m_v_00_01_o_p_00_01_d_m_00_01true_01_4.html" title=" " alt="" coords="294,5,460,67"/>
+<area shape="poly" id="edge57_Node000000_Node000001" title=" " alt="" coords="224,83,296,62,291,64,226,88"/>
+<area shape="rect" id="Node000002" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/common/tag_files/belos.tag$class_belos_1_1_g_c_r_o_d_r_sol_mgr_3_01_scalar_type_00_01_m_v_00_01_o_p_00_01_d_m_00_01true_01_4.html" title=" " alt="" coords="293,91,460,152"/>
+<area shape="poly" id="edge58_Node000000_Node000002" title=" " alt="" coords="238,119,295,121,290,122,239,124"/>
+<area shape="rect" id="Node000003" href="/home/runner/work/trilinos.github.io/trilinos.github.io/Trilinos/packages/common/tag_files/belos.tag$class_belos_1_1_pseudo_block_c_g_sol_mgr_3_01_scalar_type_00_01_m_v_00_01_o_p_00_01_d_m_00_01true_01_4.html" title=" " alt="" coords="271,176,483,238"/>
+<area shape="poly" id="edge59_Node000000_Node000003" title=" " alt="" coords="226,155,282,175,277,176,225,160"/>
 </map>

@@ -1,115 +1,125 @@
 <map id="BelosSolverFactory.hpp" name="BelosSolverFactory.hpp">
-<area shape="rect" id="Node000001" title=" " alt="" coords="1674,5,1846,31"/>
-<area shape="rect" id="Node000002" href="$_belos_config_defs_8hpp.html" title="Belos header file which uses auto&#45;configuration information to include necessary C++ headers." alt="" coords="405,482,563,507"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1674,22,1319,23,836,30,596,37,385,48,222,62,165,71,127,81,81,99,42,117,28,129,17,143,10,162,8,185,8,342,10,362,17,376,27,387,41,396,117,424,186,449,259,467,329,479,392,486,391,491,328,484,258,472,185,454,115,429,38,401,24,391,12,379,5,363,3,342,3,185,5,161,13,141,24,125,40,113,79,94,126,76,164,66,221,57,384,42,596,32,836,25,1319,17,1674,16"/>
-<area shape="rect" id="Node000006" href="$_belos_output_manager_8hpp.html" title="Class which manages the output and verbosity of the Belos solvers." alt="" coords="176,328,363,353"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="1674,23,1394,27,1017,37,642,54,486,66,368,81,280,90,206,94,174,100,143,113,114,135,85,168,75,192,77,214,90,236,111,257,168,294,226,320,224,325,165,298,108,261,86,239,72,216,69,191,80,165,110,131,141,109,172,95,205,88,279,84,368,76,486,61,641,49,1017,31,1394,22,1674,17"/>
-<area shape="rect" id="Node000011" href="$_belos_solver_manager_8hpp.html" title="Pure virtual base class which describes the basic interface for a solver manager." alt="" coords="1165,86,1347,111"/>
-<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="1687,33,1343,87,1342,81,1686,28"/>
-<area shape="rect" id="Node000018" title=" " alt="" coords="1812,482,2025,507"/>
-<area shape="poly" id="edge59_Node000001_Node000018" title=" " alt="" coords="1847,18,1939,29,1987,40,2034,56,2075,78,2108,106,2131,141,2137,162,2139,185,2139,342,2135,370,2123,394,2106,415,2085,433,2034,462,1983,481,1981,476,2032,457,2082,429,2102,411,2119,391,2129,368,2133,342,2133,185,2131,163,2126,143,2104,109,2072,82,2032,61,1986,46,1938,35,1846,24"/>
-<area shape="rect" id="Node000019" title=" " alt="" coords="2097,482,2183,507"/>
-<area shape="poly" id="edge62_Node000001_Node000019" title=" " alt="" coords="1847,24,1996,43,2063,58,2111,76,2144,98,2169,120,2184,147,2189,185,2189,342,2186,378,2177,413,2155,471,2150,469,2172,412,2181,377,2184,342,2184,186,2179,149,2165,123,2141,102,2108,81,2062,63,1995,48,1846,29"/>
-<area shape="rect" id="Node000028" title=" " alt="" coords="1527,328,1713,353"/>
-<area shape="poly" id="edge57_Node000001_Node000028" title=" " alt="" coords="1729,33,1693,52,1659,80,1641,108,1628,138,1620,171,1615,204,1614,266,1618,314,1613,315,1609,266,1610,203,1615,170,1623,137,1637,105,1655,77,1690,48,1727,28"/>
-<area shape="rect" id="Node000029" title=" " alt="" coords="1650,255,1713,280"/>
-<area shape="poly" id="edge63_Node000001_Node000029" title=" " alt="" coords="1747,33,1691,86,1662,125,1640,168,1636,187,1640,206,1649,225,1662,243,1658,246,1645,228,1635,208,1630,187,1635,166,1657,122,1687,83,1743,29"/>
-<area shape="rect" id="Node000030" href="$_belos___details___e_belos_solver_type_8hpp.html" title="Declaration of alias functions for solver names." alt="" coords="1896,167,2099,207"/>
-<area shape="poly" id="edge49_Node000001_Node000030" title=" " alt="" coords="1778,29,1961,156,1958,161,1775,33"/>
-<area shape="rect" id="Node000033" href="$_belos_custom_solver_factory_8hpp.html" title=" " alt="" coords="1649,174,1871,199"/>
-<area shape="poly" id="edge53_Node000001_Node000033" title=" " alt="" coords="1763,31,1763,160,1757,160,1757,31"/>
-<area shape="rect" id="Node000034" title=" " alt="" coords="2224,86,2475,111"/>
-<area shape="poly" id="edge58_Node000001_Node000034" title=" " alt="" coords="1846,28,2250,82,2250,87,1845,33"/>
-<area shape="rect" id="Node000035" title=" " alt="" coords="2499,86,2549,111"/>
-<area shape="poly" id="edge60_Node000001_Node000035" title=" " alt="" coords="1847,20,2185,38,2360,54,2432,64,2487,76,2493,78,2492,83,2486,81,2432,70,2360,59,2184,43,1846,25"/>
-<area shape="rect" id="Node000036" title=" " alt="" coords="2573,86,2648,111"/>
-<area shape="poly" id="edge61_Node000001_Node000036" title=" " alt="" coords="1846,20,2220,40,2418,56,2562,76,2572,79,2571,84,2561,81,2418,61,2220,45,1846,25"/>
-<area shape="rect" id="Node000037" href="$_belos_solver_factory___belos_8hpp.html" title=" " alt="" coords="380,79,527,119"/>
-<area shape="poly" id="edge64_Node000001_Node000037" title=" " alt="" coords="1674,27,540,95,540,89,1674,22"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="254,570,370,595"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="462,510,349,566,346,561,460,505"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="394,570,574,595"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="487,508,487,556,481,556,481,508"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="598,563,813,603"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="515,505,645,555,643,560,513,510"/>
-<area shape="poly" id="edge6_Node000006_Node000002" title=" " alt="" coords="310,351,359,370,410,399,445,434,472,469,467,472,441,437,406,403,357,375,308,356"/>
-<area shape="rect" id="Node000007" href="$_belos_types_8hpp.html" title="Collection of types and exceptions used within the Belos solvers." alt="" coords="595,401,717,427"/>
-<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="332,351,581,396,580,402,331,356"/>
-<area shape="rect" id="Node000009" title=" " alt="" coords="169,401,396,427"/>
-<area shape="poly" id="edge10_Node000006_Node000009" title=" " alt="" coords="274,353,281,387,275,388,269,354"/>
-<area shape="rect" id="Node000010" title=" " alt="" coords="1035,401,1168,427"/>
-<area shape="poly" id="edge11_Node000006_Node000010" title=" " alt="" coords="363,347,972,399,1021,403,1021,408,972,404,363,352"/>
-<area shape="poly" id="edge8_Node000007_Node000002" title=" " alt="" coords="632,429,523,479,520,474,630,424"/>
-<area shape="rect" id="Node000008" title=" " alt="" coords="587,482,738,507"/>
-<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="660,427,663,468,658,468,654,427"/>
-<area shape="poly" id="edge13_Node000011_Node000002" title=" " alt="" coords="1208,114,986,169,704,247,516,300,427,330,425,340,428,353,448,417,473,469,468,471,443,419,423,354,419,340,423,326,514,295,702,241,985,164,1207,109"/>
-<area shape="poly" id="edge14_Node000011_Node000007" title=" " alt="" coords="1224,114,1139,145,1020,194,887,256,756,330,714,362,679,393,675,389,711,358,753,326,884,252,1018,189,1137,140,1222,109"/>
-<area shape="poly" id="edge47_Node000011_Node000010" title=" " alt="" coords="1248,113,1231,137,1216,168,1209,195,1208,219,1214,263,1217,306,1212,329,1200,355,1177,380,1149,397,1146,393,1173,376,1195,352,1207,327,1212,305,1209,263,1203,219,1204,194,1211,166,1226,134,1244,110"/>
-<area shape="rect" id="Node000012" href="$_belos_linear_problem_8hpp.html" title="Class which describes the linear problem to be solved by the iterative solver." alt="" coords="995,255,1175,280"/>
-<area shape="poly" id="edge15_Node000011_Node000012" title=" " alt="" coords="1240,114,1207,138,1171,169,1134,208,1104,245,1100,242,1130,204,1167,165,1204,134,1237,109"/>
-<area shape="rect" id="Node000022" title=" " alt="" coords="1675,401,1874,427"/>
-<area shape="poly" id="edge46_Node000011_Node000022" title=" " alt="" coords="1311,109,1391,131,1477,164,1526,192,1561,218,1594,246,1640,278,1665,291,1685,299,1705,309,1727,326,1751,356,1767,387,1762,390,1746,359,1723,330,1702,313,1683,304,1662,295,1637,282,1591,250,1557,222,1523,196,1475,169,1389,136,1310,114"/>
-<area shape="rect" id="Node000024" href="$_belos_status_test_combo_8hpp.html" title="Belos::StatusTest for logically combining several status tests." alt="" coords="1225,174,1423,199"/>
-<area shape="poly" id="edge33_Node000011_Node000024" title=" " alt="" coords="1267,110,1308,161,1304,164,1263,113"/>
-<area shape="poly" id="edge48_Node000011_Node000028" title=" " alt="" coords="1305,109,1370,130,1405,146,1438,164,1472,192,1494,219,1515,246,1544,278,1594,318,1591,322,1541,282,1510,250,1490,222,1468,196,1434,169,1402,150,1368,135,1303,114"/>
-<area shape="rect" id="Node000013" href="$_belos_multi_vec_traits_8hpp.html" title="Declaration of basic traits for the multivector type." alt="" coords="793,328,970,353"/>
-<area shape="poly" id="edge16_Node000012_Node000013" title=" " alt="" coords="1053,283,928,326,926,321,1052,278"/>
-<area shape="rect" id="Node000021" href="$_belos_operator_traits_8hpp.html" title="Class which defines basic traits for the operator type." alt="" coords="437,328,616,353"/>
-<area shape="poly" id="edge28_Node000012_Node000021" title=" " alt="" coords="996,283,630,329,630,324,995,277"/>
-<area shape="poly" id="edge31_Node000012_Node000022" title=" " alt="" coords="1176,272,1313,290,1390,305,1465,326,1491,338,1516,351,1605,377,1691,396,1690,401,1604,383,1514,356,1488,343,1463,330,1389,310,1313,295,1175,278"/>
-<area shape="rect" id="Node000023" title=" " alt="" coords="994,328,1185,353"/>
-<area shape="poly" id="edge32_Node000012_Node000023" title=" " alt="" coords="1089,280,1091,314,1085,315,1083,280"/>
-<area shape="poly" id="edge17_Node000013_Node000007" title=" " alt="" coords="846,356,706,400,705,395,844,351"/>
-<area shape="poly" id="edge26_Node000013_Node000010" title=" " alt="" coords="917,351,1054,395,1052,400,916,356"/>
-<area shape="rect" id="Node000014" href="$_belos_stub_tsqr_adapter_8hpp.html" title="&quot;Stub&quot; TSQR adapter for unsupported multivector types." alt="" coords="1243,401,1434,427"/>
-<area shape="poly" id="edge18_Node000013_Node000014" title=" " alt="" coords="955,351,1252,397,1251,402,954,356"/>
-<area shape="rect" id="Node000017" title=" " alt="" coords="927,482,1156,507"/>
-<area shape="poly" id="edge27_Node000013_Node000017" title=" " alt="" coords="905,351,939,372,974,399,1005,434,1029,468,1025,472,1001,438,970,403,936,376,902,356"/>
-<area shape="rect" id="Node000020" title=" " alt="" coords="792,401,960,427"/>
-<area shape="poly" id="edge25_Node000013_Node000020" title=" " alt="" coords="883,354,881,388,875,388,878,353"/>
-<area shape="poly" id="edge19_Node000014_Node000002" title=" " alt="" coords="1243,428,1224,429,1042,442,900,448,758,457,576,477,548,482,548,477,576,472,757,451,899,443,1041,436,1224,424,1243,422"/>
-<area shape="rect" id="Node000015" title=" " alt="" coords="1225,475,1453,515"/>
-<area shape="poly" id="edge20_Node000014_Node000015" title=" " alt="" coords="1341,427,1341,461,1336,461,1336,427"/>
-<area shape="rect" id="Node000016" title=" " alt="" coords="1512,482,1696,507"/>
-<area shape="poly" id="edge21_Node000014_Node000016" title=" " alt="" coords="1378,424,1553,476,1552,481,1376,429"/>
-<area shape="poly" id="edge22_Node000014_Node000017" title=" " alt="" coords="1296,429,1099,481,1097,476,1295,424"/>
-<area shape="poly" id="edge23_Node000014_Node000018" title=" " alt="" coords="1423,424,1821,478,1821,483,1423,429"/>
-<area shape="poly" id="edge24_Node000014_Node000019" title=" " alt="" coords="1434,423,1447,424,1613,437,1743,444,1872,453,2038,472,2083,479,2083,485,2037,477,1872,459,1742,450,1613,442,1446,429,1434,428"/>
-<area shape="poly" id="edge29_Node000021_Node000002" title=" " alt="" coords="526,354,493,470,488,468,521,353"/>
-<area shape="poly" id="edge30_Node000021_Node000007" title=" " alt="" coords="549,351,624,392,621,397,546,356"/>
-<area shape="rect" id="Node000025" href="$_belos_status_test_8hpp.html" title="Pure virtual base class for defining the status testing capabilities of Belos." alt="" coords="1251,255,1405,280"/>
-<area shape="poly" id="edge34_Node000024_Node000025" title=" " alt="" coords="1327,199,1329,241,1324,241,1322,200"/>
-<area shape="poly" id="edge45_Node000024_Node000029" title=" " alt="" coords="1377,197,1637,254,1636,259,1375,202"/>
-<area shape="poly" id="edge43_Node000025_Node000002" title=" " alt="" coords="1252,278,969,304,843,319,783,330,771,341,764,352,757,377,750,403,743,416,731,429,705,440,659,454,548,481,547,476,658,449,703,435,728,424,739,413,746,401,752,375,759,350,767,337,780,326,842,313,968,299,1251,272"/>
-<area shape="poly" id="edge35_Node000025_Node000007" title=" " alt="" coords="1317,282,1267,320,1234,340,1198,356,1010,380,731,408,731,403,1010,374,1197,351,1231,335,1264,315,1313,278"/>
-<area shape="rect" id="Node000026" href="$_belos_iteration_8hpp.html" title="Pure virtual base class which describes the basic interface to the linear solver iteration." alt="" coords="1311,328,1452,353"/>
-<area shape="poly" id="edge36_Node000025_Node000026" title=" " alt="" coords="1339,279,1367,316,1362,319,1335,282"/>
-<area shape="poly" id="edge44_Node000025_Node000028" title=" " alt="" coords="1376,277,1560,322,1559,327,1374,283"/>
-<area shape="poly" id="edge37_Node000026_Node000002" title=" " alt="" coords="1352,356,1233,404,1208,418,1181,429,1091,450,1014,461,945,466,881,466,746,464,668,467,576,477,548,482,548,477,576,472,668,462,746,459,881,461,945,460,1013,456,1090,445,1179,424,1205,413,1231,399,1350,351"/>
-<area shape="poly" id="edge38_Node000026_Node000007" title=" " alt="" coords="1311,352,732,408,731,403,1310,346"/>
-<area shape="poly" id="edge41_Node000026_Node000010" title=" " alt="" coords="1337,356,1160,400,1159,395,1336,351"/>
-<area shape="poly" id="edge42_Node000026_Node000016" title=" " alt="" coords="1453,348,1549,367,1590,382,1615,400,1623,416,1625,435,1618,470,1612,469,1620,435,1618,418,1611,403,1587,386,1548,372,1452,353"/>
-<area shape="poly" id="edge40_Node000026_Node000022" title=" " alt="" coords="1445,351,1698,396,1697,401,1444,356"/>
-<area shape="rect" id="Node000027" title=" " alt="" coords="1458,401,1601,427"/>
-<area shape="poly" id="edge39_Node000026_Node000027" title=" " alt="" coords="1406,351,1494,393,1492,398,1404,356"/>
-<area shape="poly" id="edge52_Node000030_Node000029" title=" " alt="" coords="1922,209,1727,257,1726,252,1921,204"/>
-<area shape="rect" id="Node000031" title=" " alt="" coords="1836,255,1895,280"/>
-<area shape="poly" id="edge50_Node000030_Node000031" title=" " alt="" coords="1967,209,1898,250,1896,245,1964,204"/>
-<area shape="rect" id="Node000032" title=" " alt="" coords="1967,255,2027,280"/>
-<area shape="poly" id="edge51_Node000030_Node000032" title=" " alt="" coords="2000,207,2000,241,1995,241,1995,207"/>
-<area shape="poly" id="edge56_Node000033_Node000010" title=" " alt="" coords="1764,199,1767,231,1764,273,1753,317,1742,338,1727,356,1515,378,1182,408,1181,403,1514,373,1724,351,1738,335,1748,316,1759,272,1761,231,1759,200"/>
-<area shape="poly" id="edge55_Node000033_Node000029" title=" " alt="" coords="1750,201,1705,247,1701,243,1747,198"/>
-<area shape="poly" id="edge54_Node000033_Node000031" title=" " alt="" coords="1777,197,1840,244,1837,249,1774,202"/>
-<area shape="rect" id="Node000038" href="$_belos___details__register_solver_factory_8hpp.html" title=" " alt="" coords="94,167,303,207"/>
-<area shape="poly" id="edge65_Node000037_Node000038" title=" " alt="" coords="398,121,268,165,266,160,397,116"/>
-<area shape="rect" id="Node000039" href="$_belos_multi_vec_8hpp.html" title="Interface for multivectors used by Belos&#39; linear solvers." alt="" coords="407,255,550,280"/>
-<area shape="poly" id="edge66_Node000037_Node000039" title=" " alt="" coords="467,118,477,140,485,166,489,205,486,241,480,240,483,205,480,167,472,142,462,120"/>
-<area shape="rect" id="Node000040" href="$_belos_operator_8hpp.html" title="Alternative run&#45;time polymorphic interface for operators." alt="" coords="327,174,470,199"/>
-<area shape="poly" id="edge70_Node000037_Node000040" title=" " alt="" coords="443,120,416,164,411,161,439,117"/>
-<area shape="poly" id="edge69_Node000039_Node000002" title=" " alt="" coords="407,275,339,281,267,292,205,308,182,318,166,330,149,354,142,377,145,401,159,425,174,437,195,448,254,465,323,477,392,485,391,490,323,482,253,470,193,453,171,441,155,428,140,402,137,377,144,351,162,326,179,313,203,303,266,287,338,276,407,270"/>
-<area shape="poly" id="edge68_Node000039_Node000007" title=" " alt="" coords="540,278,587,296,610,309,630,326,648,356,656,387,651,389,643,358,626,330,607,313,585,300,538,283"/>
-<area shape="poly" id="edge67_Node000039_Node000013" title=" " alt="" coords="544,277,804,323,803,328,543,283"/>
-<area shape="poly" id="edge71_Node000040_Node000002" title=" " alt="" coords="349,202,297,219,240,244,185,281,162,304,142,329,128,355,122,379,125,401,139,425,155,438,178,449,242,467,318,479,391,486,391,491,317,484,241,472,177,454,152,442,135,428,120,403,117,378,123,353,138,327,158,300,182,277,237,240,295,214,347,197"/>
-<area shape="poly" id="edge72_Node000040_Node000021" title=" " alt="" coords="397,200,390,238,391,259,398,279,424,304,457,321,454,326,421,308,394,281,386,260,384,237,392,199"/>
-<area shape="poly" id="edge73_Node000040_Node000039" title=" " alt="" coords="412,198,459,243,455,247,409,201"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="1890,5,2062,33"/>
+<area shape="rect" id="Node000002" href="$_belos_config_defs_8hpp.html" title="Belos header file which uses auto&#45;configuration information to include necessary C++ headers." alt="" coords="639,502,796,530"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1887,21,1671,24,1360,32,1002,50,818,65,638,84,588,87,537,87,436,78,338,64,248,54,208,52,171,54,139,60,112,73,89,91,73,117,62,151,59,195,59,357,63,377,75,395,94,411,120,426,188,452,272,472,365,487,459,498,627,511,621,512,458,503,364,492,271,477,187,457,118,431,91,416,71,398,58,379,53,357,53,195,57,150,68,114,85,87,109,68,137,55,171,49,208,47,249,48,339,59,437,72,537,81,588,82,637,78,817,60,1001,45,1360,27,1670,19,1893,19"/>
+<area shape="rect" id="Node000007" href="$_belos_output_manager_8hpp.html" title="Class which manages the output and verbosity of the Belos solvers." alt="" coords="2039,342,2225,370"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="1991,31,2046,89,2076,129,2101,173,2116,213,2125,255,2133,328,2129,325,2120,256,2111,215,2096,175,2072,132,2042,92,1990,36"/>
+<area shape="rect" id="Node000013" href="$_belos_solver_manager_8hpp.html" title="Pure virtual base class which describes the basic interface for a solver manager." alt="" coords="649,90,831,117"/>
+<area shape="poly" id="edge14_Node000001_Node000013" title=" " alt="" coords="1889,28,847,98,846,92,1892,24"/>
+<area shape="rect" id="Node000019" title=" " alt="" coords="2166,502,2378,530"/>
+<area shape="poly" id="edge65_Node000001_Node000019" title=" " alt="" coords="2004,31,2039,52,2074,79,2131,144,2168,202,2199,264,2240,341,2263,377,2272,394,2280,417,2281,431,2280,446,2277,488,2273,485,2275,445,2276,431,2275,418,2268,396,2259,380,2235,343,2194,266,2163,205,2127,148,2070,83,2036,56,2003,36"/>
+<area shape="rect" id="Node000020" title=" " alt="" coords="2568,502,2653,530"/>
+<area shape="poly" id="edge68_Node000001_Node000020" title=" " alt="" coords="2062,20,2220,26,2404,37,2563,54,2618,65,2650,79,2671,105,2678,131,2676,195,2676,357,2672,395,2660,431,2630,491,2627,486,2655,429,2666,394,2671,357,2671,195,2673,132,2666,107,2646,83,2617,70,2562,59,2403,42,2220,31,2063,25"/>
+<area shape="rect" id="Node000032" title=" " alt="" coords="94,342,279,370"/>
+<area shape="poly" id="edge63_Node000001_Node000032" title=" " alt="" coords="1887,23,1259,42,900,59,751,71,638,84,534,96,453,105,415,113,376,127,335,147,288,176,253,209,227,250,208,292,196,328,191,326,203,290,222,248,249,206,285,172,332,142,374,122,413,108,452,100,534,90,637,78,750,65,899,54,1259,37,1892,21"/>
+<area shape="rect" id="Node000033" title=" " alt="" coords="1597,266,1659,294"/>
+<area shape="poly" id="edge69_Node000001_Node000033" title=" " alt="" coords="1887,32,1822,50,1750,77,1715,96,1682,118,1653,144,1629,175,1621,193,1619,213,1622,253,1618,250,1613,213,1616,192,1624,172,1649,141,1679,114,1712,91,1747,73,1821,45,1892,31"/>
+<area shape="rect" id="Node000034" href="$_belos___details___e_belos_solver_type_8hpp.html" title="Declaration of alias functions for solver names." alt="" coords="1639,174,1841,218"/>
+<area shape="poly" id="edge55_Node000001_Node000034" title=" " alt="" coords="1961,33,1782,167,1780,162,1956,35"/>
+<area shape="rect" id="Node000037" href="$_belos_custom_solver_factory_8hpp.html" title=" " alt="" coords="1865,182,2087,210"/>
+<area shape="poly" id="edge59_Node000001_Node000037" title=" " alt="" coords="1978,32,1978,168,1974,165,1974,36"/>
+<area shape="rect" id="Node000038" title=" " alt="" coords="2212,90,2463,117"/>
+<area shape="poly" id="edge64_Node000001_Node000038" title=" " alt="" coords="2034,31,2267,85,2262,86,2034,36"/>
+<area shape="rect" id="Node000039" title=" " alt="" coords="2487,90,2537,117"/>
+<area shape="poly" id="edge66_Node000001_Node000039" title=" " alt="" coords="2062,18,2150,22,2254,32,2366,50,2476,78,2481,83,2476,82,2474,84,2365,55,2254,37,2149,28,2062,23"/>
+<area shape="rect" id="Node000040" title=" " alt="" coords="2562,90,2636,117"/>
+<area shape="poly" id="edge67_Node000001_Node000040" title=" " alt="" coords="2062,19,2162,23,2285,33,2418,51,2550,78,2561,84,2555,83,2549,84,2417,56,2285,39,2162,29,2062,24"/>
+<area shape="rect" id="Node000041" href="$_belos_solver_factory___belos_8hpp.html" title=" " alt="" coords="1309,81,1454,126"/>
+<area shape="poly" id="edge70_Node000001_Node000041" title=" " alt="" coords="1888,33,1470,93,1469,87,1893,32"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="385,594,500,622"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="680,530,498,592,497,587,675,530"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="525,594,704,622"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="705,529,642,586,640,582,700,531"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="729,594,911,622"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="733,527,796,585,791,583,731,532"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="935,586,1148,631"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="765,527,952,581,946,581,764,533"/>
+<area shape="poly" id="edge7_Node000007_Node000002" title=" " alt="" coords="2036,363,1816,383,1684,399,1553,420,1502,434,1451,448,1177,477,811,509,810,504,1176,472,1450,443,1501,429,1551,415,1683,394,1816,378,2042,362"/>
+<area shape="rect" id="Node000008" href="$_belos_types_8hpp.html" title="Collection of types and exceptions used within the Belos solvers." alt="" coords="1124,418,1247,445"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="2037,361,1701,381,1485,398,1262,420,1262,415,1484,392,1701,376,2042,360"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="2039,418,2265,445"/>
+<area shape="poly" id="edge12_Node000007_Node000011" title=" " alt="" coords="2137,368,2147,404,2142,401,2134,372"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="1589,594,1721,622"/>
+<area shape="poly" id="edge13_Node000007_Node000012" title=" " alt="" coords="2199,368,2294,392,2344,409,2389,429,2426,452,2449,478,2455,493,2455,508,2449,524,2437,540,2420,550,2393,559,2314,570,2210,578,2093,581,1868,584,1734,589,1712,593,1712,588,1733,583,1868,578,2093,576,2210,572,2313,565,2392,553,2418,545,2433,536,2444,521,2449,507,2449,494,2445,481,2422,456,2387,434,2342,414,2293,397,2199,373"/>
+<area shape="poly" id="edge9_Node000008_Node000002" title=" " alt="" coords="1126,443,808,501,807,496,1121,444"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="1241,502,1391,530"/>
+<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="1207,443,1285,494,1280,493,1206,449"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="989,502,1217,530"/>
+<area shape="poly" id="edge11_Node000008_Node000010" title=" " alt="" coords="1175,445,1128,493,1125,488,1170,447"/>
+<area shape="poly" id="edge15_Node000013_Node000002" title=" " alt="" coords="646,109,465,122,359,133,254,150,158,172,79,200,49,217,27,236,13,257,8,279,8,357,8,385,12,406,21,425,39,443,69,455,124,467,282,485,465,499,627,510,621,511,464,504,282,491,123,472,68,460,36,448,16,428,7,408,3,385,3,357,3,279,8,254,23,232,46,213,77,196,156,167,253,144,358,128,465,116,651,106"/>
+<area shape="poly" id="edge16_Node000013_Node000008" title=" " alt="" coords="831,103,928,108,1031,120,1122,140,1156,154,1179,172,1197,199,1209,229,1215,261,1216,293,1209,355,1196,405,1193,401,1204,354,1210,293,1209,261,1204,230,1193,201,1175,176,1153,159,1120,145,1031,125,928,114,832,109"/>
+<area shape="poly" id="edge53_Node000013_Node000012" title=" " alt="" coords="743,115,760,165,773,193,793,216,814,234,836,247,880,262,924,268,968,269,1011,272,1052,281,1091,302,1110,319,1128,341,1136,357,1137,373,1131,388,1120,401,1088,424,1048,446,1009,466,979,488,970,499,967,510,969,522,978,536,1007,551,1062,563,1225,583,1413,595,1576,605,1571,605,1413,601,1225,588,1061,569,1005,556,974,540,964,524,961,510,966,496,975,484,1006,462,1045,441,1085,420,1116,397,1126,385,1131,372,1131,359,1123,343,1106,322,1088,306,1050,286,1010,277,967,275,923,273,878,268,833,252,811,238,789,220,769,195,755,167,741,120"/>
+<area shape="rect" id="Node000014" href="$_belos_linear_problem_8hpp.html" title="Class which describes the linear problem to be solved by the iterative solver." alt="" coords="677,266,856,294"/>
+<area shape="poly" id="edge17_Node000013_Node000014" title=" " alt="" coords="741,115,743,162,749,218,759,253,754,251,744,219,738,163,738,120"/>
+<area shape="rect" id="Node000026" title=" " alt="" coords="354,418,553,445"/>
+<area shape="poly" id="edge52_Node000013_Node000026" title=" " alt="" coords="682,119,626,140,559,170,493,212,465,238,441,268,428,293,424,315,432,369,443,404,438,402,427,370,418,315,423,291,436,265,461,235,490,208,556,165,624,135,687,116"/>
+<area shape="rect" id="Node000028" href="$_belos_status_test_combo_8hpp.html" title="Belos::StatusTest for logically combining several status tests." alt="" coords="802,182,1001,210"/>
+<area shape="poly" id="edge39_Node000013_Node000028" title=" " alt="" coords="764,115,867,174,862,174,763,120"/>
+<area shape="poly" id="edge54_Node000013_Node000032" title=" " alt="" coords="646,105,580,112,503,123,425,144,351,176,303,210,261,252,228,294,204,330,200,327,224,291,257,249,299,206,348,171,423,139,502,118,579,107,651,103"/>
+<area shape="rect" id="Node000015" href="$_belos_multi_vec_traits_8hpp.html" title="Declaration of basic traits for the multivector type." alt="" coords="1341,342,1518,370"/>
+<area shape="poly" id="edge18_Node000014_Node000015" title=" " alt="" coords="857,289,1328,342,1323,344,857,294"/>
+<area shape="rect" id="Node000025" href="$_belos_operator_traits_8hpp.html" title="Class which defines basic traits for the operator type." alt="" coords="937,342,1114,370"/>
+<area shape="poly" id="edge34_Node000014_Node000025" title=" " alt="" coords="813,292,967,337,962,338,813,297"/>
+<area shape="poly" id="edge37_Node000014_Node000026" title=" " alt="" coords="674,294,533,318,475,331,446,344,439,357,438,372,444,404,439,402,432,372,434,355,442,340,473,326,532,312,679,291"/>
+<area shape="rect" id="Node000027" title=" " alt="" coords="672,342,862,370"/>
+<area shape="poly" id="edge38_Node000014_Node000027" title=" " alt="" coords="768,292,769,328,764,325,765,297"/>
+<area shape="poly" id="edge19_Node000015_Node000008" title=" " alt="" coords="1388,370,1244,415,1243,410,1383,371"/>
+<area shape="poly" id="edge27_Node000015_Node000012" title=" " alt="" coords="1437,368,1453,417,1453,453,1446,482,1444,508,1447,522,1456,536,1479,560,1509,578,1541,590,1576,601,1570,601,1539,595,1506,583,1476,565,1451,540,1442,524,1438,509,1441,481,1448,452,1448,418,1434,373"/>
+<area shape="rect" id="Node000016" href="$_belos_stub_tsqr_adapter_8hpp.html" title="&quot;Stub&quot; TSQR adapter for unsupported multivector types." alt="" coords="1774,418,1965,445"/>
+<area shape="poly" id="edge20_Node000015_Node000016" title=" " alt="" coords="1509,368,1778,414,1773,415,1508,373"/>
+<area shape="rect" id="Node000021" title=" " alt="" coords="1271,418,1438,445"/>
+<area shape="poly" id="edge26_Node000015_Node000021" title=" " alt="" coords="1418,369,1380,409,1378,404,1414,371"/>
+<area shape="rect" id="Node000022" href="$_belos_dense_mat_traits_8hpp.html" title=" " alt="" coords="1564,418,1751,445"/>
+<area shape="poly" id="edge28_Node000015_Node000022" title=" " alt="" coords="1470,368,1605,413,1600,412,1470,373"/>
+<area shape="poly" id="edge21_Node000016_Node000002" title=" " alt="" coords="1771,445,1763,448,1542,465,1370,474,1197,482,976,496,811,509,811,504,976,491,1197,477,1369,469,1542,460,1762,443,1777,444"/>
+<area shape="rect" id="Node000017" title=" " alt="" coords="1914,493,2142,538"/>
+<area shape="poly" id="edge22_Node000016_Node000017" title=" " alt="" coords="1895,443,1975,486,1970,485,1894,449"/>
+<area shape="rect" id="Node000018" title=" " alt="" coords="1466,502,1649,530"/>
+<area shape="poly" id="edge23_Node000016_Node000018" title=" " alt="" coords="1822,446,1623,500,1622,495,1817,446"/>
+<area shape="poly" id="edge24_Node000016_Node000019" title=" " alt="" coords="1934,443,2195,498,2190,498,1934,449"/>
+<area shape="poly" id="edge25_Node000016_Node000020" title=" " alt="" coords="1965,441,2555,508,2550,508,1965,446"/>
+<area shape="poly" id="edge29_Node000022_Node000012" title=" " alt="" coords="1660,444,1664,493,1664,538,1660,581,1656,577,1659,538,1659,493,1657,448"/>
+<area shape="poly" id="edge30_Node000022_Node000018" title=" " alt="" coords="1644,445,1586,495,1584,490,1639,447"/>
+<area shape="rect" id="Node000023" href="$_belos_dense_solver_8hpp.html" title="Virtual base class which defines solvers for dense matrix type." alt="" coords="1724,502,1890,530"/>
+<area shape="poly" id="edge31_Node000022_Node000023" title=" " alt="" coords="1682,443,1772,494,1767,493,1681,449"/>
+<area shape="poly" id="edge32_Node000023_Node000012" title=" " alt="" coords="1788,529,1691,589,1689,584,1782,531"/>
+<area shape="rect" id="Node000024" title=" " alt="" coords="1745,594,1930,622"/>
+<area shape="poly" id="edge33_Node000023_Node000024" title=" " alt="" coords="1813,528,1830,581,1826,578,1810,532"/>
+<area shape="poly" id="edge35_Node000025_Node000002" title=" " alt="" coords="1012,369,965,409,904,448,840,477,778,499,776,494,838,472,901,443,962,404,1008,371"/>
+<area shape="poly" id="edge36_Node000025_Node000008" title=" " alt="" coords="1054,368,1146,411,1140,411,1054,373"/>
+<area shape="rect" id="Node000029" href="$_belos_status_test_8hpp.html" title="Pure virtual base class for defining the status testing capabilities of Belos." alt="" coords="451,266,603,294"/>
+<area shape="poly" id="edge40_Node000028_Node000029" title=" " alt="" coords="839,212,603,265,601,260,844,209"/>
+<area shape="poly" id="edge51_Node000028_Node000033" title=" " alt="" coords="965,208,1012,216,1176,236,1338,253,1584,275,1579,276,1337,258,1175,242,1012,221,965,213"/>
+<area shape="poly" id="edge49_Node000029_Node000002" title=" " alt="" coords="487,296,432,323,373,358,350,378,336,400,334,421,345,444,362,458,388,470,460,489,544,501,627,510,621,511,543,506,459,494,387,475,359,462,341,447,328,422,331,398,346,375,369,354,430,318,492,293"/>
+<area shape="poly" id="edge41_Node000029_Node000008" title=" " alt="" coords="545,292,606,335,661,367,747,387,868,403,1112,425,1106,426,867,408,746,392,659,372,603,339,544,297"/>
+<area shape="rect" id="Node000030" href="$_belos_iteration_8hpp.html" title="Pure virtual base class which describes the basic interface to the linear solver iteration." alt="" coords="457,342,597,370"/>
+<area shape="poly" id="edge42_Node000029_Node000030" title=" " alt="" coords="528,292,529,328,524,325,525,297"/>
+<area shape="poly" id="edge50_Node000029_Node000032" title=" " alt="" coords="464,297,264,341,262,336,467,293"/>
+<area shape="poly" id="edge43_Node000030_Node000002" title=" " alt="" coords="539,367,573,403,616,443,685,494,680,493,613,447,569,407,537,372"/>
+<area shape="poly" id="edge44_Node000030_Node000008" title=" " alt="" coords="597,365,616,367,1111,421,1106,424,616,372,598,370"/>
+<area shape="poly" id="edge47_Node000030_Node000012" title=" " alt="" coords="596,368,700,390,748,403,781,415,807,430,827,446,857,478,887,509,907,523,933,536,986,551,1058,565,1234,584,1420,596,1576,605,1570,605,1420,602,1234,590,1057,570,985,556,931,540,904,527,884,513,853,482,823,450,804,435,779,420,746,408,699,395,596,373"/>
+<area shape="poly" id="edge48_Node000030_Node000018" title=" " alt="" coords="597,365,608,367,1458,497,1455,501,608,372,598,371"/>
+<area shape="poly" id="edge46_Node000030_Node000026" title=" " alt="" coords="516,369,479,409,476,404,511,372"/>
+<area shape="rect" id="Node000031" title=" " alt="" coords="627,418,768,445"/>
+<area shape="poly" id="edge45_Node000030_Node000031" title=" " alt="" coords="557,368,656,411,651,411,557,373"/>
+<area shape="poly" id="edge58_Node000034_Node000033" title=" " alt="" coords="1713,218,1659,259,1657,254,1708,220"/>
+<area shape="rect" id="Node000035" title=" " alt="" coords="1850,266,1908,294"/>
+<area shape="poly" id="edge56_Node000034_Node000035" title=" " alt="" coords="1777,216,1846,258,1841,258,1776,222"/>
+<area shape="rect" id="Node000036" title=" " alt="" coords="1710,266,1770,294"/>
+<area shape="poly" id="edge57_Node000034_Node000036" title=" " alt="" coords="1742,217,1742,252,1738,249,1738,221"/>
+<area shape="poly" id="edge62_Node000037_Node000012" title=" " alt="" coords="1976,208,1973,255,1976,319,1982,353,1992,386,2008,417,2030,443,2055,461,2084,474,2117,483,2152,488,2226,490,2297,486,2358,482,2400,485,2412,492,2415,504,2409,519,2392,540,2377,550,2352,558,2277,569,2180,576,2071,580,1860,584,1734,589,1713,593,1713,588,1733,583,1859,578,2070,575,2180,571,2277,564,2351,552,2375,545,2389,536,2404,517,2410,504,2408,496,2398,491,2358,488,2298,491,2226,495,2152,493,2116,488,2082,479,2052,466,2026,447,2003,420,1987,388,1977,354,1971,319,1968,255,1972,212"/>
+<area shape="poly" id="edge61_Node000037_Node000033" title=" " alt="" coords="1923,210,1675,271,1674,265,1918,211"/>
+<area shape="poly" id="edge60_Node000037_Node000035" title=" " alt="" coords="1963,209,1906,259,1904,254,1958,212"/>
+<area shape="rect" id="Node000042" href="$_belos___details__register_solver_factory_8hpp.html" title=" " alt="" coords="1348,174,1556,218"/>
+<area shape="poly" id="edge71_Node000041_Node000042" title=" " alt="" coords="1399,123,1429,162,1424,161,1397,129"/>
+<area shape="rect" id="Node000043" href="$_belos_multi_vec_8hpp.html" title="Interface for multivectors used by Belos&#39; linear solvers." alt="" coords="1240,266,1381,294"/>
+<area shape="poly" id="edge72_Node000041_Node000043" title=" " alt="" coords="1367,124,1338,175,1325,214,1317,253,1313,249,1320,213,1334,173,1363,128"/>
+<area shape="rect" id="Node000044" href="$_belos_operator_8hpp.html" title="Alternative run&#45;time polymorphic interface for operators." alt="" coords="1024,182,1165,210"/>
+<area shape="poly" id="edge76_Node000041_Node000044" title=" " alt="" coords="1310,127,1152,180,1150,174,1315,125"/>
+<area shape="poly" id="edge75_Node000043_Node000002" title=" " alt="" coords="1287,294,1126,372,1036,412,944,448,780,500,779,494,942,443,1034,407,1124,367,1282,295"/>
+<area shape="poly" id="edge74_Node000043_Node000008" title=" " alt="" coords="1309,293,1297,332,1274,371,1251,394,1226,412,1223,407,1248,390,1270,368,1292,329,1305,296"/>
+<area shape="poly" id="edge73_Node000043_Node000015" title=" " alt="" coords="1332,292,1398,334,1393,333,1331,297"/>
+<area shape="poly" id="edge77_Node000044_Node000002" title=" " alt="" coords="1082,210,746,494,743,490,1077,211"/>
+<area shape="poly" id="edge78_Node000044_Node000025" title=" " alt="" coords="1091,209,1039,329,1035,326,1087,212"/>
+<area shape="poly" id="edge79_Node000044_Node000043" title=" " alt="" coords="1130,208,1265,260,1259,261,1129,213"/>
 </map>

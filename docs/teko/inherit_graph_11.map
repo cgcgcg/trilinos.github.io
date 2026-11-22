@@ -1,7 +1,15 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$class_teko_1_1_implicit_linear_op.html" title="A virtual class that simplifies the construction of custom operators." alt="" coords="5,31,172,56"/>
-<area shape="rect" id="Node000001" href="$class_teko_1_1_diagnostic_linear_op.html" title="This linear operator prints diagnostics about operator application and creation times...." alt="" coords="220,5,407,31"/>
-<area shape="poly" id="edge14_Node000000_Node000001" title=" " alt="" coords="185,30,220,26,220,31,186,35"/>
-<area shape="rect" id="Node000002" href="$class_teko_1_1_reordered_linear_op.html" title="This class takes a blocked linear op and represents it in a flattened form." alt="" coords="221,55,405,80"/>
-<area shape="poly" id="edge15_Node000000_Node000002" title=" " alt="" coords="186,51,221,55,221,60,185,56"/>
+<area shape="rect" id="Node000000" href="$class_teko_1_1_preconditioner_state.html" title="An implementation of a state object preconditioners." alt="" coords="5,115,192,142"/>
+<area shape="rect" id="Node000001" href="$class_teko_1_1_block_preconditioner_state.html" title="An implementation of a state object for block preconditioners." alt="" coords="247,76,435,120"/>
+<area shape="poly" id="edge20_Node000000_Node000001" title=" " alt="" coords="207,112,249,109,243,110,208,117"/>
+<area shape="rect" id="Node000006" href="$class_teko_1_1_diagonal_precond_state.html" title=" " alt="" coords="240,144,442,172"/>
+<area shape="poly" id="edge25_Node000000_Node000006" title=" " alt="" coords="207,139,242,145,237,146,207,144"/>
+<area shape="rect" id="Node000002" href="$class_teko_1_1_add_precond_state.html" title=" " alt="" coords="512,5,682,33"/>
+<area shape="poly" id="edge21_Node000001_Node000002" title=" " alt="" coords="417,67,489,43,537,33,532,34,491,48,418,72"/>
+<area shape="rect" id="Node000003" href="$class_teko_1_1_mult_precond_state.html" title=" " alt="" coords="510,57,684,85"/>
+<area shape="poly" id="edge22_Node000001_Node000003" title=" " alt="" coords="450,84,513,80,508,81,451,89"/>
+<area shape="rect" id="Node000004" href="$class_teko_1_1_n_s_1_1_l_s_c_precond_state.html" title="Preconditioner state for the LSC factory." alt="" coords="500,109,694,137"/>
+<area shape="poly" id="edge23_Node000001_Node000004" title=" " alt="" coords="450,106,502,113,497,114,450,111"/>
+<area shape="rect" id="Node000005" href="$class_teko_1_1_n_s_1_1_mod_a_l_precond_state.html" title="Class for saving state variables for ModALPreconditionerFactory." alt="" coords="490,161,704,189"/>
+<area shape="poly" id="edge24_Node000001_Node000005" title=" " alt="" coords="423,123,491,146,538,161,532,161,489,151,422,128"/>
 </map>
